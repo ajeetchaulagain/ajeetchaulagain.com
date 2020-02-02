@@ -7,7 +7,8 @@ const AboutPage = () => {
     return (
             <Layout>
             <h1>About Me</h1>
-            <p>I am software engineer passionate about developing android applications</p>
+            <p>I am software engineer passionate about developing android applications lorem </p>
+            <p>lorem</p>
             <p>Have a project idea? <Link to="/contact">Contact Me</Link></p> 
             </Layout>
     )

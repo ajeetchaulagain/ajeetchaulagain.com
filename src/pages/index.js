@@ -2,14 +2,19 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
+import Action from '../components/callltoaction'
 
 const IndexPage = () => {
 
     return (
         <Layout>
             <h1>Hello there.</h1>
-            <h2>I am software engineer passionate about developing android and web applications. </h2>
-            <p>Have a project idea? <Link to="/contact">Contact Me</Link></p>
+            <p>I am software engineer passionate about developing android and web applications.</p>
+            <p>Currently, I am working on <strong>full stack javascript development </strong>with react, mongo, node and express.</p>
+
+            <Action title="Say Hello to me" desc=" Need a developer for your project." url="contact" />
+               
+            
         </Layout>
     )
 }
