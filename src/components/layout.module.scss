@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Parisienne|Roboto+Condensed:300,300i,400,700&display=swap');
 .container{
     margin:0 auto;
-    max-width: 750px;
+    max-width: 850px;
     padding: 1rem;
 
     display:flex;
     flex-direction: column;
     min-height: 100vh;
-
     text-align: justify;
 }
 
 .content{
+    
     flex-grow: 1;
     font-family: 'Roboto Condensed', serif;
     // font-size: 1rem;
-    font-weight: 300;
+    font-weight: 200;
 }

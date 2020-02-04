@@ -35,13 +35,13 @@
     display:flex;
     list-style-type: none;
     margin:0;
+    font-weight: 700;
 
 }
 
 .active-nav-item{
-    color: rgb(50, 50, 51);
+    color: #666666;
     // background-color:rgb(247, 245, 245);
     padding-bottom: 5px;
-    border-bottom:2px solid rgb(196, 193, 193);
-
+    border-bottom:2px solid #BFB304;
 }
