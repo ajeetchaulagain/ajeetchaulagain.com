@@ -24,9 +24,10 @@ const BlogPage = () => {
       console.log(data)
     return (
         <Layout>
-        <h1> Blog</h1>
+        <h1>Stay tune!</h1>
+        <p>This page is under construction</p>
         <ol>
-            <li></li>
+          
         </ol>
         </Layout>
     )

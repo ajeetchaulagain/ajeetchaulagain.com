@@ -13,8 +13,8 @@ const Footer = () => {
       }`)
 
     return (
-        <footer>
-            <p>Developed by <strong>{data.site.siteMetadata.author}</strong>. © 2020. Proudly powered by <strong>Gatsby</strong></p> 
+        <footer className="main-footer">
+            <p>Developed by <strong>{data.site.siteMetadata.author}</strong>. ©2020. Built with <strong>React</strong></p> 
             <p></p>
         </footer>
     )

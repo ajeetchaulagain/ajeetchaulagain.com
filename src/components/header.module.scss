@@ -9,7 +9,7 @@
 
 .nav-item {
     color:#0D0D0D;
-    font-size: .9rem;
+    font-size: 1.2rem;
     margin-right: 1.3rem;
     text-decoration: none;
 }
@@ -20,10 +20,9 @@
 
 .title{
     color:#0D0D0D;
-    font-size:2rem;
+    font-size:2.2rem;
     font-family: 'Parisienne', cursive;
     text-decoration:none;
-
 }
 
 .title-alternate{
@@ -35,8 +34,8 @@
     display:flex;
     list-style-type: none;
     margin:0;
-    font-weight: 700;
-
+    font-weight: 500;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .active-nav-item{
