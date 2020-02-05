@@ -5,21 +5,20 @@
  */
 
 module.exports = {
-
-  siteMetadata:{
-      title: ' Ajeet Chaulagain',
-      author:'Ajeet Chaulagain'
+  siteMetadata: {
+    title: " Ajeet Chaulagain",
+    author: "Ajeet Chaulagain",
   },
-  plugins:[
-      'gatsby-plugin-sass',
-      {
-        resolve:'gatsby-source-filesystem',
-        options: {
-          name: 'src',
-          path: `${__dirname}/src/`
-        }
+  plugins: [
+    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "src",
+        path: `${__dirname}/src/`,
       },
-      'gatsby-transformer-remark'
+    },
+    "gatsby-transformer-remark",
   ],
 
   pathPrefix: "/gatsby-portfolio",

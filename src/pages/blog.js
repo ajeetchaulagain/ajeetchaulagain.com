@@ -1,36 +1,44 @@
-import React from 'react'
+import React from "react"
 
-import {graphql, useStaticQuery} from 'gatsby'
+import { graphql, useStaticQuery } from "gatsby"
 
-
-import Layout from '../components/layout'
+import Layout from "../components/layout"
 
 const BlogPage = () => {
-
-    const data = useStaticQuery(graphql`
-    query{
-        allMarkdownRemark{
-          edges{
-            node{
-              frontmatter{
-                title
-                date
-              }
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              title
+              date
             }
           }
         }
       }
-    `)
-      console.log(data)
-    return (
-        <Layout>
-        <h1>Stay tune!</h1>
-        <p>This page is under construction</p>
-        <ol>
-          
-        </ol>
-        </Layout>
-    )
+    }
+  `)
+  console.log(data)
+  return (
+    <Layout>
+      <h1>How I setup my CI/CD pipeline to develop the portfolio site in Gatsby</h1>
+      <p>Read Time: 5 min Read. Author: Ajeet Chaulagain</p>
+      <p>In this article, I will explain you guys about the process I followed to implement CI/CD in my gatsby portfolio project.In this article, I will explain you guys about the process I followed to implement CI/CD in my gatsby portfolio project.
+      In this article, I will explain you guys about the process I followed to implement CI/CD in my gatsby portfolio project.
+      </p>
+      <p>In this article, I will explain you guys about the process I followed to implement CI/CD in my gatsby portfolio project.In this article, I will explain you guys about the process I followed to implement CI/CD in my gatsby portfolio project.
+      In this article, I will explain you guys about the process I followed to implement CI/CD in my gatsby portfolio project.
+      <p>In this article, I will explain you guys about the process I followed to implement CI/CD in my gatsby portfolio project.In this article, I will explain you guys about the process I followed to implement CI/CD in my gatsby portfolio project.
+      In this article, I will explain you guys about the process I followed to implement CI/CD in my gatsby portfolio project.
+      </p>
+      <p>In this article, I will explain you guys about the process I followed to implement CI/CD in my gatsby portfolio project.In this article, I will explain you guys about the process I followed to implement CI/CD in my gatsby portfolio project.
+      In this article, I will explain you guys about the process I followed to implement CI/CD in my gatsby portfolio project.
+      </p>
+      </p>
+      <ol></ol>
+    </Layout>
+  )
 }
 
 export default BlogPage

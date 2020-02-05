@@ -9,9 +9,11 @@
 
 .nav-item {
     color:#0D0D0D;
-    font-size: 1.2rem;
-    margin-right: 1.3rem;
+    font-size: 1rem;
+    margin-right: 1rem;
     text-decoration: none;
+    font-weight: 500;
+
 }
 
 .nav-item:hover{
@@ -32,10 +34,12 @@
 
 .nav-list{
     display:flex;
+    flex-wrap: wrap;
+
     list-style-type: none;
     margin:0;
     font-weight: 500;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .active-nav-item{
