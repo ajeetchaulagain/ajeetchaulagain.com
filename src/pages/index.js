@@ -9,8 +9,6 @@ import { assertObjectType } from 'graphql'
 import image from '../images/ajeet.jpeg'
 
 
-
-
 const IndexPage = () => {
 
     return (
