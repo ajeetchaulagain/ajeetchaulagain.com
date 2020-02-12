@@ -13,12 +13,13 @@ const Footer = () => {
   `)
 
   return (
-    <footer className="main-footer">
-      <p>
-        Developed by <strong>{data.site.siteMetadata.author}</strong>. ©2020.
-        Built with <strong>React</strong>
-      </p>
-      <p></p>
+    <footer class="flex-container main-footer">
+      <div class="footer-content">
+        <p>
+          Developed by Ajeet Chaulagain, © 2020. Proudly built with React,
+          Gatsby, Contentful, Github Pages
+        </p>
+      </div>
     </footer>
   )
 }

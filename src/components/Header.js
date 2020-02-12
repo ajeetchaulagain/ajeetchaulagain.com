@@ -1,7 +1,14 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
-// import './header.module.scss'
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaGithub,
+  FaInstagram,
+} from "react-icons/fa"
+
 import headerStyles from "./header.module.scss"
 
 const Header = () => {
@@ -16,70 +23,63 @@ const Header = () => {
   `)
 
   return (
-    <header className={headerStyles.header}>
-      <h1>
-        <Link to="/" className={headerStyles.title}>
-          {data.site.siteMetadata.title}
-        </Link>
-      </h1>
-      <nav>
-        <ul className={headerStyles.navList}>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              to="/"
-              activeClassName={headerStyles.activeNavItem}
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              to="/blog"
-              activeClassName={headerStyles.activeNavItem}
-            >
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              to="/about"
-              activeClassName={headerStyles.activeNavItem}
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              to="/contact"
-              activeClassName={headerStyles.activeNavItem}
-            >
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              to="/skills"
-              activeClassName={headerStyles.activeNavItem}
-            >
-              Skills
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              to="/portfolio"
-              activeClassName={headerStyles.activeNavItem}
-            >
-              Portfolio
-            </Link>
-          </li>
-        </ul>
-      </nav>
+    <header className="main-header flex-container">
+      <div className="header-content">
+        <div className="logo-section">
+          <h1>Ajeet Chaulagain</h1>
+        </div>
+        <nav className="main-navigation">
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <a href="#">Portfolio</a>
+            </li>
+            <li>
+              <a href="#">Projects</a>
+            </li>
+            <li>
+              <a href="#">Resume</a>
+            </li>
+          </ul>
+        </nav>
+        <div className="social-media">
+          <ul>
+            <li>
+              <a href="#">
+                <FaFacebookF />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FaTwitter />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FaLinkedinIn />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FaGithub />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FaInstagram />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
   )
 }
