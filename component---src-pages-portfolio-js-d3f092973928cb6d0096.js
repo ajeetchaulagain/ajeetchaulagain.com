@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{E6xs:function(e,l,n){"use strict";n.r(l);var t=n("q1tI"),a=n.n(t),u=n("Bl7J");l.default=function(){return a.a.createElement(u.a,null,a.a.createElement("h1",null,"My Portfolio."),a.a.createElement("ul",null,a.a.createElement("li",null,"HTML & CSS"),a.a.createElement("li",null,"PHP"),a.a.createElement("li",null,"Full Stack Javascript Development")))}}}]);
+//# sourceMappingURL=component---src-pages-portfolio-js-d3f092973928cb6d0096.js.map

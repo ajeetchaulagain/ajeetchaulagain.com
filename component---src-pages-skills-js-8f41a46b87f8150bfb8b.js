@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{VfgA:function(e,l,n){"use strict";n.r(l);var t=n("q1tI"),a=n.n(t),u=n("Bl7J");l.default=function(){return a.a.createElement(u.a,null,a.a.createElement("h1",null,"My Skills."),a.a.createElement("ul",null,a.a.createElement("li",null,"HTML & CSS"),a.a.createElement("li",null,"PHP"),a.a.createElement("li",null,"Full Stack Javascript Development")))}}}]);
+//# sourceMappingURL=component---src-pages-skills-js-8f41a46b87f8150bfb8b.js.map
