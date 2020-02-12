@@ -5,21 +5,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 
 const BlogPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              title
-              date
-            }
-          }
-        }
-      }
-    }
-  `)
-  console.log(data)
+
   return (
     <Layout>
       <h1>How I setup my CI/CD pipeline to develop the portfolio site in Gatsby</h1>

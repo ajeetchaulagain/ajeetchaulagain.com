@@ -13,7 +13,6 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
-    
   },
   "dependencies": {
     "gatsby": "^2.19.7",
@@ -21,10 +20,12 @@
     "gatsby-source-filesystem": "^2.0.28",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-icons": "^3.9.0"
   },
   "devDependencies": {
     "env-cmd": "^10.0.1",
+    "gh-pages": "^2.2.0",
     "prettier": "^1.19.1"
   },
   "repository": {
