@@ -14,11 +14,13 @@ const Footer = () => {
 
   return (
     <footer class="flex-container main-footer">
-    <div class="footer-content">
-        <p>Developed by Ajeet Chaulagain, © 2020. Proudly built with React, Gatsby, Contentful, Github Pages</p>
-    </div>
+      <div class="footer-content">
+        <p>
+          Developed by Ajeet Chaulagain, © 2020. Proudly built with React,
+          Gatsby, Contentful, Github Pages
+        </p>
+      </div>
     </footer>
-
   )
 }
 

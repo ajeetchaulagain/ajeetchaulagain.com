@@ -43,9 +43,8 @@ a{
 }
 
 
-
 /* box button made for anchor tags */
-.btn{ 
+.welcome-button{ 
     /* background-color:black; */
     padding:0.8rem 2rem;
     display:inline-block;
@@ -129,51 +128,51 @@ a{
 }
 
 
-/*--------------------------------------------------------------
-## Welcome Section
---------------------------------------------------------------*/
-.welcome-section{
-    justify-content:center;
-    background-color:#5C257F;
-    color:rgb(231, 222, 236);
-    /* background-color: black; */
-}
-.welcome-content{
-    text-align: center;
-    padding:2.5rem;
-}
+// /*--------------------------------------------------------------
+// ## Welcome Section
+// --------------------------------------------------------------*/
+// .welcome-section{
+//     justify-content:center;
+//     background-color:#5C257F;
+//     color:rgb(231, 222, 236);
+//     /* background-color: black; */
+// }
+// .welcome-content{
+//     text-align: center;
+//     padding:2.5rem;
+// }
 
-.welcome-section .image-holder img{
-    width:150px;
-    border-radius: 150px;
-    opacity:1;
-    border:1px dotted white;
-}
+// .welcome-section .image-holder img{
+//     width:150px;
+//     border-radius: 150px;
+//     opacity:1;
+//     border:1px dotted white;
+// }
 
-.welcome-section h1{
-    font-family: 'Roboto', sans-serif;
-    font-size:4rem;
-    font-weight: 600;
-    padding:1.5rem 0 0rem;
-    /* background-color: black; */
-}
+// .welcome-section h1{
+//     font-family: 'Roboto', sans-serif;
+//     font-size:4rem;
+//     font-weight: 600;
+//     padding:1.5rem 0 0rem;
+//     /* background-color: black; */
+// }
 
-.welcome-section p{
-    font-size:1.3rem;
-    font-weight: 200;
-    margin-bottom: 1rem;
-}
+// .welcome-section p{
+//     font-size:1.3rem;
+//     font-weight: 200;
+//     margin-bottom: 1rem;
+// }
 
-.welcome-section .btn{
-    color:inherit;
-    border:1px solid rgb(231, 222, 236);
-    font-weight: 500;
-}
+// .welcome-section .btn{
+//     color:inherit;
+//     border:1px solid rgb(231, 222, 236);
+//     font-weight: 500;
+// }
 
-.welcome-section .btn:hover{
-    background-color:rgb(231, 222, 236);
-    color:#5C257F;
-}
+// .welcome-section .btn:hover{
+//     background-color:rgb(231, 222, 236);
+//     color:#5C257F;
+// }
 
 /*--------------------------------------------------------------
 ## Project Section
@@ -371,16 +370,16 @@ a{
         font-weight: 500;
     }
 
-    .welcome-section{
-        height:80vh;
-    }
-    /* -------------------------------------------*/
+    // .welcome-section{
+    //     height:80vh;
+    // }
+    // /* -------------------------------------------*/
 
-    /* Welcome Section ------------------------------- */
+    // /* Welcome Section ------------------------------- */
     
-    .welcome-section h1{
-        font-size:3rem;
-    }
+    // .welcome-section h1{
+    //     font-size:3rem;
+    // }
    
     /* -------------------------------------------*/
 
@@ -413,11 +412,11 @@ a{
 
   @media only screen and (min-width: 961px) {
 
-    .welcome-section{
-        padding-bottom: 9rem;
-    }
+    // .welcome-section{
+    //     padding-bottom: 9rem;
+    // }
       
-    .header-content,.welcome-content, .project-content, .blog-content, .footer-content{
+    .header-content, .project-content, .blog-content, .footer-content{
         width:960px;
         margin:0 auto;
     }
@@ -457,13 +456,14 @@ a{
  }
 
  @media only screen and (min-width: 1200px){
-    .header-content,.welcome-content,.project-content,.blog-content{
+
+    .header-content,.project-content,.blog-content{
         width:1200px;
         margin:0 auto;
     }  
 
     .project-content {
-        display:block;
+        // display:block;
         margin-top:-100px;
         // z-index:1;
     }

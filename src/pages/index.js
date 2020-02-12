@@ -5,11 +5,8 @@ import Layout from "../components/layout"
 
 import image from "../images/ajeet.jpeg"
 
-
 const IndexPage = () => {
-  return (
-    <Layout/>
-  )
+  return <Layout />
 }
 
 export default IndexPage
