@@ -1,15 +1,16 @@
 import React from "react"
 import Layout from "../components/layout"
+import PlainWelcome from "../components/plainWelcome"
+import Projects from "../components/projects"
 
 const Portfolio = () => {
   return (
     <Layout>
-      <h1>My Portfolio.</h1>
-      <ul>
-        <li>HTML & CSS</li>
-        <li>PHP</li>
-        <li>Full Stack Javascript Development</li>
-      </ul>
+      <PlainWelcome>
+          My portfolio
+      </PlainWelcome>
+      <Projects/>
+      
     </Layout>
   )
 }

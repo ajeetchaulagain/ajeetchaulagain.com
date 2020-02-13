@@ -20,7 +20,7 @@ const Projects = () => {
           <Project />
           <Project />
           <a href="#" className={projectStyles.boxButton}>
-             View More Projects
+            View More Projects
           </a>
         </div>
       </div>

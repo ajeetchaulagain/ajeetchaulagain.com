@@ -1,21 +1,15 @@
 import React from "react"
 
-import Header from "./header"
-import Footer from "../components/footer"
-import Welcome from "../components/welcome"
-import Projects from "../components/projects"
-import Blogs from "../components/blogs"
+import Header from "./Header"
+import Welcome from "./welcome"
+import Footer from "./footer"
 
-import layoutStyles from "./layout.module.scss"
-
-const Layout = () => {
+const Layout = (props) => {
   return (
     <div className="main">
-      <Header />
-      <Welcome />
-      <Projects />
-      <Blogs />
-      <Footer />
+      <Header/>
+        {props.children}
+      <Footer/>
     </div>
   )
 }

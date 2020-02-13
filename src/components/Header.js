@@ -56,7 +56,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/resume" activeClassName={headerStyles.activeList}>
+              <Link to="/skills" activeClassName={headerStyles.activeList}>
                 Resume
               </Link>
             </li>

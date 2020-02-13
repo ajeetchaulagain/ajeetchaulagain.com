@@ -1,11 +1,16 @@
 import React from "react"
 import Layout from "../components/layout"
+import PlainWelcome from "../components/plainWelcome"
+import Projects from "../components/projects"
 
 const ContactPage = () => {
   return (
     <Layout>
-      <h1>Contact Me</h1>
-      <p>Say hello to me via</p>
+      <PlainWelcome>
+          Contact
+      </PlainWelcome>
+      <Projects/>
+    
     </Layout>
   )
 }
