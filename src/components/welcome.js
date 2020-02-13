@@ -13,28 +13,14 @@ const Welcome = () => {
           <img src={img} className={welcomeStyles.image} />
         </div>
         <h1 className={welcomeStyles.heading}>
-          <span style={{ fontWeight: "100" }}>Hello.I'm</span>Ajeet Chaulagain
+          <span style={{ fontWeight: "100" }}>Hello.I'm </span>Ajeet Chaulagain
         </h1>
         <p className={welcomeStyles.paragraph}>Full Stack Software Engineer</p>
-        <a href="#" className={welcomeStyles.welcomeButton}>
+        <Link to="/about" className={welcomeStyles.welcomeButton}>
           More about me
-        </a>
+        </Link>
       </div>
     </section>
-
-    // <section className={welcomeStyles.welcomeSection}>
-    //   <div className={welcomeStyles.welcomeContent}>
-    //       <div>
-    //             <img src={img} className={welcomeStyles.image}/>
-    //       </div>
-    //       <h1 className={welcomeStyles.heading}><span style={{fontWeight:"300"}}>Hello.I'm </span>
-    //        Ajeet Chaulagain</h1>
-
-    //       <p className={welcomeStyles.paragraph}>Full Stack Software Engineer</p>
-
-    //       <a href="#" className={welcomeStyles.button}>More about me</a>
-    //     </div>
-    //   </section>
   )
 }
 

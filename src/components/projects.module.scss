@@ -1,0 +1,130 @@
+.project-section{
+    background-color:rgb(246, 242, 250);
+    width: 100%;
+}
+.project-content{
+    padding:2.5rem;
+    background-color:white;
+    width: 100%;
+    border:1px solid rgb(210, 210, 210);
+}
+
+.project-content>p{
+    font-size:1.2rem;
+    margin-bottom: 2rem;
+} 
+
+.project-content h1{
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size:2rem;
+}
+
+.project{
+    
+    padding:2rem 2rem;
+    /* background-color: green; */
+    /* border-bottom:1px dotted black; */
+    margin-bottom:1rem;
+    background-color: rgba(186, 145, 211, 0.126);
+    border:1px solid rgb(218, 215, 215);
+    /* transition: all 0.3s ease; */
+    
+    
+}
+
+/* .project:hover{
+    background-color: rgba(119, 62, 155, 0.208);
+} */
+
+.project p{
+    font-size:1.1rem;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+.project>a{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:1.2rem;
+    font-weight:600;
+    
+    /* font-style: italic; */
+}
+
+.project a:hover{
+    color:#5C257F;
+}
+.projects .btn{
+    border:1px solid black;
+}
+
+
+.project .project-meta a{
+    /* border:1px solid rgb(187, 185, 187); */
+    /* padding:.2rem; */
+    color:#5C257F;
+    font-weight:400;
+    font-size:1rem;
+}
+
+.box-button{ 
+    // background-color:black;
+    padding:0.8rem 2rem;
+    display:inline-block;
+    text-decoration: none;
+    color:inherit;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-radius:2px;
+    transition: all 0.3s ease;
+    border:1px solid black;
+}
+
+
+.projects .box-button:hover{
+    background-color:black;
+    color:white;
+}
+
+
+
+
+// Media Queries------------------------------------------------
+
+
+@media only screen and (max-width: 599px) {
+    .project-section h1{
+        font-size:2rem;
+    }
+    .projects {
+        display: block;
+    }
+    .project {
+        width:100%;
+    }
+}
+
+@media only screen and (min-width: 961px) {
+    .project-content{
+        width:960px;
+        margin:0 auto;
+        margin-top:-100px;
+        padding:10rem;
+    }
+    .projects{
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+    }
+    .project{
+        width:49%;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .project-content{
+        width:1200px;
+        margin:0 auto;
+        margin-top:-100px;
+    }
+}
