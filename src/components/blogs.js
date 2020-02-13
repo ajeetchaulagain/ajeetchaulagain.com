@@ -1,54 +1,23 @@
 import React from "react"
 
+import blogStyles from "./blogs.module.scss"
+import Blog from "./blog"
+
 const Blogs = () => {
   return (
-    <section class="blog-section flex-container">
-      <div class="blog-content">
+    <section className = {blogStyles.blogSection}>
+      <div className={blogStyles.blogContent}>
         <h1> From my blog</h1>
         <p>
           Here are some of my recent projects. I love to share all the process I
           went while doing the project
         </p>
-        <div class="blogs">
-          <div class="blog">
-            <a href="#">
-              How to Setup a CI/CD pipeline for MERN stack development
-            </a>
-            <p>
-              In this article, I will explain how to setup a MERN stack
-              development with the CI/CD pipeline
-            </p>
-          </div>
-          <div class="blog">
-            <a href="#">
-              How to Setup a CI/CD pipeline for MERN stack development
-            </a>
-            <p>
-              In this article, I will explain how to setup a MERN stack
-              development with the CI/CD pipeline
-            </p>
-          </div>
-          <div class="blog">
-            <a href="#">
-              How to Setup a CI/CD pipeline for MERN stack development
-            </a>
-            <p>
-              In this article, I will explain how to setup a MERN stack
-              development with the CI/CD pipeline
-            </p>
-          </div>
-
-          <div class="blog">
-            <a href="#">
-              How to Setup a CI/CD pipeline for MERN stack development
-            </a>
-            <p>
-              In this article, I will explain how to setup a MERN stack
-              development with the CI/CD pipeline
-            </p>
-          </div>
+        <div class={blogStyles.blogs}>
+          <Blog/>
+          <Blog/>
+          <Blog/>
         </div>
-        <a href="#" class="btn">
+        <a href="#" className={blogStyles.boxButton}>
           View More Projects
         </a>
       </div>
