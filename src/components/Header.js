@@ -11,6 +11,7 @@ import {
 
 import headerStyles from "./header.module.scss"
 
+
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -23,35 +24,48 @@ const Header = () => {
   `)
 
   return (
-    <header className="main-header flex-container">
-      <div className="header-content">
-        <div className="logo-section">
+    <header className={headerStyles.mainHeader}>
+      <div className={headerStyles.headerContent}>
+        <div className={headerStyles.logoSection}>
           <h1>Ajeet Chaulagain</h1>
         </div>
-        <nav className="main-navigation">
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
+        <nav>
+          <ul className={headerStyles.navList}>
+            <li className={headerStyles.list}>
+              <Link to="/" activeClassName={headerStyles.activeList}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about" activeClassName={headerStyles.activeList}>
+                About
+              </Link>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <Link to="/portfolio" activeClassName={headerStyles.activeList}>
+                Portfolio
+              </Link>
             </li>
             <li>
-              <a href="#">Portfolio</a>
+              <Link to="/blog" activeClassName={headerStyles.activeList}>
+                Blog
+              </Link>
             </li>
             <li>
-              <a href="#">Projects</a>
+              <Link to="/contact" activeClassName={headerStyles.activeList}>
+                Contact
+              </Link>
             </li>
             <li>
-              <a href="#">Resume</a>
+              <Link to="/resume" activeClassName={headerStyles.activeList}>
+                Resume
+              </Link>
             </li>
           </ul>
         </nav>
-        <div className="social-media">
-          <ul>
+
+        <div>
+          <ul className={headerStyles.socialMediaLists}>
             <li>
               <a href="#">
                 <FaFacebookF />
