@@ -5,11 +5,14 @@
     color:rgb(231, 222, 236);
     display: flex;
     width:100%;
+
+    
     /* background-color: black; */
 }
 .welcome-content{
     text-align: center;
     padding:2.5rem;
+    // position: relative;
 }
 
 .image{
@@ -17,6 +20,7 @@
     border-radius: 150px;
     opacity:1;
     border:1px dotted white;
+    z-index: 1;
 }
 
 .heading{
@@ -48,16 +52,29 @@
 
 .welcome-button:hover{
     background-color:rgb(231, 222, 236);
-    color:#5C257F;
+    color:#5c257f;
+    color:#28083c;
 }
 
 
+.particles{
+    position: absolute;
+    z-index: 0;
+    top:10;
+    left:0;
+    right:0;
+    height:20rem;
+}
+
 @media only screen and (max-width: 599px) {
-    .welcome-section{
-        height:80vh;
-    }    
+    // .welcome-section{
+    //     height:80vh;
+    // }    
     .heading{
         font-size:3rem;
+    }
+    .particles{
+        display: none;
     }
 }
 
