@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{"Cuy+":function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),l=t.n(a),c=t("Bl7J"),u=t("139L"),r=t("lKmJ");n.default=function(){return l.a.createElement(c.a,null,l.a.createElement(u.a,null,l.a.createElement("h1",null,"Contact"),l.a.createElement("p",null,"Lets Get Connected! ")),l.a.createElement(r.a,null))}}}]);
+//# sourceMappingURL=component---src-pages-contact-js-aa6c71032384b6ddf8b4.js.map
