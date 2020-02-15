@@ -5,18 +5,16 @@ import Project from "./project"
 
 const Projects = () => {
   return (
-    
-        <div className={projectStyles.projects}>
-          <Project />
-          <Project />
-          <Project/>
-          <Project />
-          
-          <a href="#" className={projectStyles.boxButton}>
-            View More Projects
-          </a>
-        </div>
+    <div className={projectStyles.projects}>
+      <Project />
+      <Project />
+      <Project />
+      <Project />
 
+      <a href="#" className={projectStyles.boxButton}>
+        View More Projects
+      </a>
+    </div>
   )
 }
 

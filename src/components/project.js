@@ -10,7 +10,6 @@ const Project = () => {
         Java XML, Java FX and more.
       </p>
       <div className={projectStyles.projectMeta}>
-
         <ul>
           <li>Technologies</li>
           <li>NodeJS</li>
@@ -18,8 +17,7 @@ const Project = () => {
           <li>Gatsby</li>
           <li>Contentful</li>
           <li>Javascript</li>
-          <li>Babel</li>
-          <li>WebPack</li>
+          <li>Babel</li>∂<li>WebPack</li>
         </ul>
       </div>
     </div>

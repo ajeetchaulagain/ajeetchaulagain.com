@@ -6,13 +6,12 @@ import ContentLayout from "../components/content-layout"
 const BlogPage = () => {
   return (
     <MasterLayout>
-      <IntroSection>
-          Checkout my blog content
-      </IntroSection>
+      <IntroSection>Checkout my blog content</IntroSection>
       <ContentLayout>
-          <h1>Blog Page is under construction. Sorry for the inconvenience. Thanks</h1>
+        <h1>
+          Blog Page is under construction. Sorry for the inconvenience. Thanks
+        </h1>
       </ContentLayout>
-    
     </MasterLayout>
   )
 }

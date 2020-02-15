@@ -17,6 +17,7 @@ const Header = () => {
       site {
         siteMetadata {
           title
+          author
         }
       }
     }
@@ -27,9 +28,9 @@ const Header = () => {
       <div className={headerStyles.headerContent}>
         <div className={headerStyles.logoSection}>
           <h1>
-          <Link to = "/" className={headerStyles.title}>
-            Ajeet Chaulagain
-          </Link>
+            <Link to="/" className={headerStyles.title}>
+              {data.site.siteMetadata.title}
+            </Link>
           </h1>
         </div>
         <nav>

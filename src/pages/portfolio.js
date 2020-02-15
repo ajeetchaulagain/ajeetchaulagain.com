@@ -4,18 +4,14 @@ import MasterLayout from "../components/master-layout"
 import IntroSection from "../components/intro-section"
 import ContentLayout from "../components/content-layout"
 
-
-
 const Portfolio = () => {
   return (
     <MasterLayout>
-      <IntroSection>
-          Some of the featured projects of mine
-      </IntroSection>
+      <IntroSection>Some of the featured projects of mine</IntroSection>
 
       <ContentLayout>
         <h1>Projects: List of all Projects</h1>
-        <Projects/>        
+        <Projects />
       </ContentLayout>
     </MasterLayout>
   )
