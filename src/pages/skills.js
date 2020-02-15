@@ -1,17 +1,17 @@
 import React from "react"
-import Layout from "../components/layout"
-import PlainWelcome from "../components/plainWelcome"
+import MasterLayout from "../components/master-layout"
 import Projects from "../components/projects"
+import IntroSection from "../components/intro-section"
 
 const Skills = () => {
   return (
-    <Layout>
-      <PlainWelcome>
-          My Skills
-      </PlainWelcome>
+    <MasterLayout>
+      <IntroSection>
+          My Biography
+      </IntroSection>
       <Projects/>
     
-    </Layout>
+    </MasterLayout>
   )
 }
 

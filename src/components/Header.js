@@ -26,11 +26,15 @@ const Header = () => {
     <header className={headerStyles.mainHeader}>
       <div className={headerStyles.headerContent}>
         <div className={headerStyles.logoSection}>
-          <h1>Ajeet Chaulagain</h1>
+          <h1>
+          <Link to = "/" className={headerStyles.title}>
+            Ajeet Chaulagain
+          </Link>
+          </h1>
         </div>
         <nav>
           <ul className={headerStyles.navList}>
-            <li className={headerStyles.list}>
+            <li>
               <Link to="/" activeClassName={headerStyles.activeList}>
                 Home
               </Link>

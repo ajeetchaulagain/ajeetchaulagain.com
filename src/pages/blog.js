@@ -2,19 +2,19 @@ import React from "react"
 
 import { graphql, useStaticQuery } from "gatsby"
 
-import Layout from "../components/layout"
-import PlainWelcome from "../components/plainWelcome"
+import MasterLayout from "../components/master-layout"
 import Projects from "../components/projects"
+import IntroSection from "../components/intro-section"
 
 const BlogPage = () => {
   return (
-    <Layout>
-      <PlainWelcome>
-          Blog Page
-      </PlainWelcome>
+    <MasterLayout>
+      <IntroSection>
+          Checkout my blog content
+      </IntroSection>
       <Projects/>
     
-    </Layout>
+    </MasterLayout>
   )
 }
 

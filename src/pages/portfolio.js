@@ -1,17 +1,16 @@
 import React from "react"
-import Layout from "../components/layout"
-import PlainWelcome from "../components/plainWelcome"
 import Projects from "../components/projects"
+import MasterLayout from "../components/master-layout"
+import IntroSection from "../components/intro-section"
 
 const Portfolio = () => {
   return (
-    <Layout>
-      <PlainWelcome>
-          My portfolio
-      </PlainWelcome>
+    <MasterLayout>
+      <IntroSection>
+          Some of the featured projects of mine
+      </IntroSection>
       <Projects/>
-      
-    </Layout>
+    </MasterLayout>
   )
 }
 

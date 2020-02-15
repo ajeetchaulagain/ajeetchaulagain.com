@@ -1,17 +1,17 @@
 import React from "react"
-import Layout from "../components/layout"
-import PlainWelcome from "../components/plainWelcome"
 import Projects from "../components/projects"
+import MasterLayout from "../components/master-layout"
+import IntroSection from "../components/intro-section"
 
 const ContactPage = () => {
   return (
-    <Layout>
-      <PlainWelcome>
-          Contact
-      </PlainWelcome>
+    <MasterLayout>
+      <IntroSection>
+          Say a friendly hello to me :) 
+      </IntroSection>
       <Projects/>
     
-    </Layout>
+    </MasterLayout>
   )
 }
 

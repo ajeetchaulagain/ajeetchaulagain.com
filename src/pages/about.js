@@ -1,20 +1,18 @@
 import React from "react"
-import { Link } from "gatsby"
-import Layout from "../components/layout"
+import MasterLayout from "../components/master-layout"
 import Projects from "../components/projects"
-
-import PlainWelcome from "../components/plainWelcome"
+import IntroSection from "../components/intro-section"
 
 
 const AboutPage = () => {
   return (
-    <Layout>
-      <PlainWelcome>
-          About Me
-      </PlainWelcome>
+    <MasterLayout>
+      <IntroSection>
+          Get to know more about me
+      </IntroSection>
       <Projects/>
       
-    </Layout>
+    </MasterLayout>
   )
 }
 

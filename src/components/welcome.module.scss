@@ -6,21 +6,16 @@
     display: flex;
     width:100%;
 
-    
-    /* background-color: black; */
 }
 .welcome-content{
     text-align: center;
     padding:2.5rem;
-    // position: relative;
 }
 
 .image{
     width:150px;
     border-radius: 150px;
-    opacity:1;
     border:1px dotted white;
-    z-index: 1;
 }
 
 .heading{
@@ -29,6 +24,12 @@
     font-weight: 600;
     padding:1.5rem 0 0rem;
     /* background-color: black; */
+}
+
+.heading-light {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:4rem;
+    font-weight: 100;
 }
 
 .paragraph{
@@ -53,7 +54,6 @@
 .welcome-button:hover{
     background-color:rgb(231, 222, 236);
     color:#5c257f;
-    color:#28083c;
 }
 
 
