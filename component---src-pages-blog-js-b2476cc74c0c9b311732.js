@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{vx99:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),c=t.n(a),l=t("kDM7"),o=t("ViTF"),r=t("RTzZ");n.default=function(){return c.a.createElement(l.a,null,c.a.createElement(o.a,null,"Checkout my blog content"),c.a.createElement(r.a,null,c.a.createElement("h1",null,"Blog Page is under construction. Sorry for the inconvenience. Thanks")))}}}]);
+//# sourceMappingURL=component---src-pages-blog-js-b2476cc74c0c9b311732.js.map
