@@ -1,10 +1,7 @@
 import React from "react"
-
-import { graphql, useStaticQuery } from "gatsby"
-
 import MasterLayout from "../components/master-layout"
-import Projects from "../components/projects"
 import IntroSection from "../components/intro-section"
+import ContentLayout from "../components/content-layout"
 
 const BlogPage = () => {
   return (
@@ -12,7 +9,9 @@ const BlogPage = () => {
       <IntroSection>
           Checkout my blog content
       </IntroSection>
-      <Projects/>
+      <ContentLayout>
+          <h1>Blog Page is under construction. Sorry for the inconvenience. Thanks</h1>
+      </ContentLayout>
     
     </MasterLayout>
   )
