@@ -1,0 +1,46 @@
+.content-section{
+    background-color:rgb(246, 242, 250);
+    width: 100%;
+}
+.content{
+    padding:2.5rem;
+    background-color:white;
+    width: 100%;
+    border:1px solid rgb(235, 233, 233);
+}
+
+.content p{
+    font-size:1rem;
+    margin-bottom:1rem;
+    line-height: 1.6;
+} 
+.content>p {
+    font-size:1.2rem;
+    margin-bottom:2rem;
+}
+.content h1{
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size:2rem;
+    // font-style: italic;
+    // margin-bottom:2rem;
+}
+
+// / Media Queries------------------------------------------------ 
+@media only screen and (max-width: 599px) {
+}
+
+@media only screen and (min-width: 961px) {
+    .content{
+        width:960px;
+        margin:-100px auto 2rem;
+        padding:8rem;
+    }
+    
+}
+
+@media only screen and (min-width: 1200px){
+    .content{
+        width:1200px;
+    }
+}

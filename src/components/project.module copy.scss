@@ -1,3 +1,24 @@
+.project-section{
+    background-color:rgb(246, 242, 250);
+    width: 100%;
+}
+.project-content{
+    padding:2.5rem;
+    background-color:white;
+    width: 100%;
+    border:1px solid rgb(235, 233, 233);
+}
+
+.project-content>p{
+    font-size:1.2rem;
+    margin-bottom: 2rem;
+} 
+
+.project-content h1{
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size:2rem;
+}
 
 .project{
     padding:1.5rem;
@@ -7,6 +28,10 @@
     /* transition: all 0.3s ease; */
     // text-align: justify;
 }
+
+/* .project:hover{
+    background-color: rgba(119, 62, 155, 0.208);
+} */
 
 .project p{
     font-weight: 400;
@@ -51,6 +76,9 @@
     border-radius: 3px;
 }
 
+
+
+
 .box-button{ 
     // background-color:black;
     padding:0.8rem 2rem;
@@ -77,7 +105,9 @@
 
 
 @media only screen and (max-width: 599px) {
-   
+    .project-section h1{
+        font-size:2rem;
+    }
     .projects {
         display: block;
     }
@@ -87,7 +117,12 @@
 }
 
 @media only screen and (min-width: 961px) {
-  
+    .project-content{
+        width:960px;
+        margin:0 auto;
+        margin-top:-100px;
+        padding:8rem;
+    }
     
     .projects{
         display: flex;
@@ -100,5 +135,9 @@
 }
 
 @media only screen and (min-width: 1200px){
- 
+    .project-content{
+        width:1200px;
+        margin:0 auto;
+        margin-top:-100px;
+    }
 }

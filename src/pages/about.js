@@ -1,31 +1,46 @@
 import React from "react"
-import { Link } from "gatsby"
-import Layout from "../components/layout"
-
-import image from "../images/ajeet.jpeg"
+import MasterLayout from "../components/master-layout"
+import IntroSection from "../components/intro-section"
+import ContentLayout from "../components/content-layout"
 
 const AboutPage = () => {
   return (
-    <Layout>
-      <img src={image} />
-      <h1>About Me</h1>
-      <p>
-        I am software engineer passionate about developing android and web
-        applications.Currently, I am working on{" "}
-        <strong>full stack javascript development </strong>with react, mongo,
-        node and express.
-      </p>
-      <p>
-        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
-        and typesetting industry. Lorem Ipsum h as been the industry's standard
-        dummy text ever since the 1500s, when an unknown printer took a galley
-        of type and scrambled it to make a type specimen book. It has survived
-        not only five centuries, but also t
-      </p>
-      <p>
-        Have a project idea? <Link to="/contact">Contact Me</Link>
-      </p>
-    </Layout>
+    <MasterLayout>
+      <IntroSection>Get to know more about me</IntroSection>
+
+      <ContentLayout>
+        <h1>About Me</h1>
+        <p>
+          Hello. I'm Ajeet Chaulagain, full stack developer born in Nepal and
+          currently living in Melbourne. As a IT graduate with the
+          specialization in software development, I have been working with
+          various tools and technologies for past few year. Currently, I am
+          working on full stack javascript development with React, Node, Express
+          and Mongo
+        </p>
+        <p>
+          Hello. I'm Ajeet Chaulagain, full stack developer born in Nepal and
+          currently living in Melbourne. As a IT graduate with the
+          specialization in software development, I have been working with
+          various tools and technologies for past few year. Currently, I am
+          working on full stack javascript development with React, Node, Express
+          and Mongo
+        </p>
+        <p>
+          Hello. I'm Ajeet Chaulagain, full stack developer born in Nepal and
+          currently living in Melbourne. As a IT graduate with the
+          specialization in software development, I have been working with
+          various tools and technologies for past few year. Currently, I am
+          working on full stack javascript development with React, Node, Express
+          and Mongo Hello. I'm Ajeet Chaulagain, full stack developer born in
+          Nepal and currently living in Melbourne. As a IT graduate with the
+          specialization in software development, I have been working with
+          various tools and technologies for past few year. Currently, I am
+          working on full stack javascript development with React, Node, Express
+          and Mongo
+        </p>
+      </ContentLayout>
+    </MasterLayout>
   )
 }
 

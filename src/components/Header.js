@@ -17,6 +17,7 @@ const Header = () => {
       site {
         siteMetadata {
           title
+          author
         }
       }
     }
@@ -26,11 +27,15 @@ const Header = () => {
     <header className={headerStyles.mainHeader}>
       <div className={headerStyles.headerContent}>
         <div className={headerStyles.logoSection}>
-          <h1>Ajeet Chaulagain</h1>
+          <h1>
+            <Link to="/" className={headerStyles.title}>
+              {data.site.siteMetadata.title}
+            </Link>
+          </h1>
         </div>
         <nav>
           <ul className={headerStyles.navList}>
-            <li className={headerStyles.list}>
+            <li>
               <Link to="/" activeClassName={headerStyles.activeList}>
                 Home
               </Link>
@@ -56,7 +61,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/resume" activeClassName={headerStyles.activeList}>
+              <Link to="/skills" activeClassName={headerStyles.activeList}>
                 Resume
               </Link>
             </li>

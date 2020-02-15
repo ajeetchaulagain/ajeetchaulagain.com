@@ -2,14 +2,14 @@
     display: flex;
     width:100%;
     background-color:rgba(180, 171, 186, 0.126);
-    width: 100%;
+    // width: 100%;
 }
 
 .blog-content{
     padding:2.5rem;
     background-color:white;
     width: 100%;
-    border:1px solid rgb(125, 121, 121);
+    border:1px solid rgb(235, 233, 233);
 }
 .blog-content>p{
     font-size:1.2rem;
@@ -39,7 +39,6 @@
     font-family: 'Source Sans Pro', sans-serif;
     font-size:1.2rem;
     font-weight:600;
-    
     /* font-style: italic; */
 }
 
@@ -89,7 +88,8 @@
     .blog-content{
         width:960px;
         padding:10rem;
-        margin:0 auto;
+        margin:1rem auto;
+        
     }
 
     .blogs{
@@ -107,7 +107,8 @@
     .blog-content{
         width:1200px;
         margin:0 auto;
-        margin-top:3rem;
+        margin-top:1rem;
+        margin-bottom:1rem;
     }
 }
 

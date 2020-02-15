@@ -1,0 +1,41 @@
+.intro-section{
+    justify-content:center;
+    background-color:#5C257F;
+    color:rgb(231, 222, 236);
+    display: flex;
+    width:100%;
+}
+
+.intro-content{
+    text-align: center;
+    height: auto;
+    padding:1rem;
+}
+
+.heading-light {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:3rem;
+    font-weight: 100;
+}
+
+
+@media only screen and (min-width: 599px) and (max-width:960px) {
+    .intro-content {
+        height:8rem;
+    } 
+}
+@media only screen and (min-width: 961px) {
+    .intro-content {
+        width:960px;
+        margin:0 auto;
+        height:20rem;
+        padding-top:3rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .intro-content {
+        width:1200px;
+        margin:0 auto;
+    }
+}

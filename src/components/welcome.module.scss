@@ -5,7 +5,7 @@
     color:rgb(231, 222, 236);
     display: flex;
     width:100%;
-    /* background-color: black; */
+
 }
 .welcome-content{
     text-align: center;
@@ -15,7 +15,6 @@
 .image{
     width:150px;
     border-radius: 150px;
-    opacity:1;
     border:1px dotted white;
 }
 
@@ -25,6 +24,12 @@
     font-weight: 600;
     padding:1.5rem 0 0rem;
     /* background-color: black; */
+}
+
+.heading-light {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:4rem;
+    font-weight: 100;
 }
 
 .paragraph{
@@ -48,16 +53,28 @@
 
 .welcome-button:hover{
     background-color:rgb(231, 222, 236);
-    color:#5C257F;
+    color:#5c257f;
 }
 
 
+.particles{
+    position: absolute;
+    z-index: 0;
+    top:10;
+    left:0;
+    right:0;
+    height:20rem;
+}
+
 @media only screen and (max-width: 599px) {
-    .welcome-section{
-        height:80vh;
-    }    
+    // .welcome-section{
+    //     height:80vh;
+    // }    
     .heading{
         font-size:3rem;
+    }
+    .particles{
+        display: none;
     }
 }
 
