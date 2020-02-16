@@ -46,7 +46,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/portfolio" activeClassName={headerStyles.activeList}>
+              <Link to="/projects" activeClassName={headerStyles.activeList}>
                 Portfolio
               </Link>
             </li>

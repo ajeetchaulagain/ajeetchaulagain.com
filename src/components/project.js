@@ -17,7 +17,7 @@ const Project = () => {
           <li>Gatsby</li>
           <li>Contentful</li>
           <li>Javascript</li>
-          <li>Babel</li>∂<li>WebPack</li>
+          <li>Babel</li><li>WebPack</li>
         </ul>
       </div>
     </div>

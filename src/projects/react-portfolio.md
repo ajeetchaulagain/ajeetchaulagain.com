@@ -1,5 +1,5 @@
 ---
-title: "XML Keyword Search System"
+title: "React Portfolio"
 ---
 
 A simple Java based keyword search system utilising various technologies such as
