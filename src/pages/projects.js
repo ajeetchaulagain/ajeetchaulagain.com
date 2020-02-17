@@ -37,7 +37,8 @@ const Portfolio = () => {
     <MasterLayout>
       <IntroSection>Some of the featured projects of mine</IntroSection>
       <ContentLayout>
-        <h1>Projects: List of all Projects</h1>
+        <h1>List of all Projects</h1>
+        
         <ol>
         {data.allMarkdownRemark.edges.map((edge)=>{
               return(
@@ -49,7 +50,6 @@ const Portfolio = () => {
               )
         })}
         </ol>
-
         <Projects />
       </ContentLayout>
     </MasterLayout>

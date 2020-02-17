@@ -5,17 +5,40 @@ import MasterLayout from '../components/master-layout'
 import IntroSection from '../components/intro-section'
 import ContentLayout from '../components/content-layout'
 
-const Project = () => {
+import {graphql} from 'gatsby'
+
+export const query = graphql`
+    query(
+        $slug:String!
+    ){
+        markdownRemark(
+        fields: {
+            slug:{
+            eq:$slug
+            }
+        }
+        ){
+        frontmatter{
+            title
+        }
+        html
+        }
+    }
+`
+const Project = (props) => {
     return (
         <MasterLayout>
+
             <IntroSection>
-                Some of my projects
+                <b>Get Insight of a project</b>
             </IntroSection>
             <ContentLayout>
-                This is blog template
+                <h1>{props.data.markdownRemark.frontmatter.title}</h1>
+                <div dangerouslySetInnerHTML={{__html: props.data.markdownRemark.html }}>
+                </div>
             </ContentLayout>
-        </MasterLayout>
-        
+
+        </MasterLayout>   
     )
 }
 
