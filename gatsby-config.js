@@ -19,7 +19,15 @@ module.exports = {
       },
     },
     "gatsby-transformer-remark",
+
+    {
+      resolve: `gatsby-plugin-breadcrumb`,
+      
+    }
+
   ],
 
   pathPrefix: "/gatsby-portfolio",
+
+
 }

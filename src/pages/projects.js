@@ -12,9 +12,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 // 2. Use slug to generate a link to the post page
 // 3. Test your work!
 
-
-
-const Portfolio = () => {
+const ProjectsPage = () => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark {
@@ -23,8 +21,8 @@ const Portfolio = () => {
             frontmatter {
               title
             }
-            fields{
-                slug
+            fields {
+              slug
             }
           }
         }
@@ -32,28 +30,20 @@ const Portfolio = () => {
     }
   `)
 
-  console.log(data);
+  // console.log(data);
   return (
     <MasterLayout>
       <IntroSection>Some of the featured projects of mine</IntroSection>
       <ContentLayout>
         <h1>List of all Projects</h1>
-        
-        <ol>
-        {data.allMarkdownRemark.edges.map((edge)=>{
-              return(
-                <Link to ={`/projects/${edge.node.fields.slug}`}>
-                  <li key={edge.node.frontmatter.title}>
-                    <h2>{edge.node.frontmatter.title}</h2>
-                  </li>
-                </Link>
-              )
-        })}
-        </ol>
+        <p>
+          Here are the list of projects I have done. Checkout the detail about
+          the project where I share my learning process to complete the project.
+        </p>
         <Projects />
       </ContentLayout>
     </MasterLayout>
   )
 }
 
-export default Portfolio
+export default ProjectsPage

@@ -9,7 +9,7 @@
 }
 .welcome-content{
     text-align: center;
-    padding:2.5rem;
+    padding:5rem 2.5rem 2.5rem;
 }
 
 .image{
@@ -20,6 +20,7 @@
 
 .heading{
     font-family: 'Roboto', sans-serif;
+    // font-family: 'Source Sans Pro', sans-serif;
     font-size:4rem;
     font-weight: 600;
     padding:1.5rem 0 0rem;
@@ -34,12 +35,11 @@
 
 .paragraph{
     font-size:1.3rem;
-    font-weight: 200;
-    margin-bottom: 1rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
 }
 
 .welcome-button{ 
-    color:inherit;
     border:1px solid rgb(231, 222, 236);
     padding:0.8rem 2rem;
     display:inline-block;
@@ -75,6 +75,9 @@
     }
     .particles{
         display: none;
+    }
+    .welcome-content{
+        padding-top:2.5rem;
     }
 }
 

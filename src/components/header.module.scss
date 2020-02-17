@@ -24,6 +24,9 @@
     margin-right:1rem;
 }
 
+.main-header h1{
+    font-size:2rem;
+}
 
 
 .main-header a:hover{
@@ -35,18 +38,24 @@
     font-weight:200;
 }
 
+// .main-header h1{
+//     // font-size:2rem;
+// }
+
+
+
 .nav-list{
     display: flex;
     justify-content:space-between;
     flex-wrap: wrap;
+    font-size:0.8rem;
+    font-weight: 400;
 }
 
 
 .nav-list li{
     margin:0rem 0.5rem;
-    font-size:0.8rem;
     text-transform: uppercase;
-    font-weight: 400;
     justify-content: space-between;
 }
 
@@ -72,7 +81,7 @@
     justify-content:space-between;
     flex-wrap: wrap;
     font-size:0.9rem;
-    font-weight: 500;
+    font-weight: 400;
 }
 .social-media-lists li{
     margin:0rem 0.3rem; 

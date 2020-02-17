@@ -11,36 +11,12 @@ const ContactPage = () => {
         Say a friendly hello to me <FaSmile />
       </IntroSection>
       <ContentLayout>
-        <h1>About Me</h1>
+        <h1>Contact Me</h1>
         <p>
-          Hello. I'm Ajeet Chaulagain, full stack developer born in Nepal and
-          currently living in Melbourne. As a IT graduate with the
-          specialization in software development, I have been working with
-          various tools and technologies for past few year. Currently, I am
-          working on full stack javascript development with React, Node, Express
-          and Mongo
+           Say a friendly hello to me either throug social media or the contact form
+           available below.
         </p>
-        <p>
-          Hello. I'm Ajeet Chaulagain, full stack developer born in Nepal and
-          currently living in Melbourne. As a IT graduate with the
-          specialization in software development, I have been working with
-          various tools and technologies for past few year. Currently, I am
-          working on full stack javascript development with React, Node, Express
-          and Mongo
-        </p>
-        <p>
-          Hello. I'm Ajeet Chaulagain, full stack developer born in Nepal and
-          currently living in Melbourne. As a IT graduate with the
-          specialization in software development, I have been working with
-          various tools and technologies for past few year. Currently, I am
-          working on full stack javascript development with React, Node, Express
-          and Mongo Hello. I'm Ajeet Chaulagain, full stack developer born in
-          Nepal and currently living in Melbourne. As a IT graduate with the
-          specialization in software development, I have been working with
-          various tools and technologies for past few year. Currently, I am
-          working on full stack javascript development with React, Node, Express
-          and Mongo
-        </p>
+        <p>Contact me, if you have got project in mind</p>
       </ContentLayout>
     </MasterLayout>
   )

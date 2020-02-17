@@ -1,30 +1,30 @@
 
 .project{
-    padding:1.5rem;
+    padding:.8rem 1.5rem;
     margin-bottom:1rem;
-    background-color: rgba(225, 205, 238, 0.126);
-    border:1px solid rgb(218, 215, 215);
-    /* transition: all 0.3s ease; */
-    // text-align: justify;
-}
-
-.project p{
-    font-weight: 400;
-    margin-top: 1rem;
+    background-color: rgba(232, 217, 242, 0.126);
+    border:1px solid rgb(234, 234, 234);
 }
 
 .project>a{
-    font-family: 'Roboto', sans-serif;
-    font-size:1.2rem;
-    font-weight:600;
+    // font-family: 'Roboto', sans-serif;
+    font-family: inherit;
+    font-size:1.5rem;
+    font-weight:700;
     /* font-style: italic; */
 }
 
 .project a{
     text-decoration: underline;
 }
+
+.project p{
+    margin-bottom:1rem;
+}
+
 .project a:hover{
-    color:rgb(219, 148, 60);
+    // color:rgb(219, 148, 60);
+    text-decoration: none;
 }
 
 .projects .btn{
@@ -33,7 +33,7 @@
 
 
 .project .project-meta ul {
-    margin-top:.5rem;
+    // margin-top:.5rem;
     display: flex;
     font-size:.7rem;
     font-weight: 500;
@@ -49,6 +49,12 @@
     margin-top:.5rem;
     padding:.1rem .2rem;
     border-radius: 3px;
+}
+
+.project .small-paragraph{
+    font-size:0.8rem;
+    text-align: right;
+    // background-color: rgb(236, 235, 238);
 }
 
 .box-button{ 
