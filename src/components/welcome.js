@@ -10,7 +10,7 @@ import Particles from "react-particles-js"
 const particlesParam = {
   particles: {
     number: {
-      value: 100,
+      value: 90,
       density: {
         enable: true,
         value_area: 800,
@@ -45,7 +45,7 @@ const particlesParam = {
       },
     },
     size: {
-      value: 5,
+      value: 6,
       random: true,
       anim: {
         enable: false,
@@ -63,7 +63,7 @@ const particlesParam = {
     },
     move: {
       enable: true,
-      speed: 6,
+      speed: 5,
       direction: "none",
       random: false,
       straight: false,
@@ -121,10 +121,12 @@ const particlesParam = {
 const Welcome = () => {
   return (
     <section className={welcomeStyles.welcomeSection}>
-      <Particles className={welcomeStyles.particles} params={particlesParam} />
+      <Particles className={welcomeStyles.particles} params={particlesParam} height="100vh" />
       <div className={welcomeStyles.welcomeContent}>
-        <div>
-          <img src={img} className={welcomeStyles.image} alt="profile" />
+        <div className={welcomeStyles.imageHolder}>
+        <span>
+          <img src={img} alt="profile" />
+        </span>
         </div>
         <h1 className={welcomeStyles.heading}>
           <span style={{ fontWeight: "100" }}>Hello.I'm </span>Ajeet Chaulagain

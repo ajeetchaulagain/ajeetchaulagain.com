@@ -1,8 +1,12 @@
 .main-header{
     background-color:#5C257F;
     color:rgb(231, 222, 236);
-    padding:2rem 1.2rem 1rem;
+    padding:2rem 1.2rem 0rem;
     width:100%;
+    position: absolute;;
+    z-index:2;
+    // background-color:black;
+    background-color:transparent;
 }
 
 .header-content{
@@ -12,6 +16,7 @@
     justify-content: space-between;
     align-items: center;
 }
+
 
 .logo-section {
     flex:auto;
@@ -91,6 +96,11 @@
 // Media Queries -------------------------
 
 @media only screen and (max-width: 599px) {
+    .main-header{
+        position: relative;
+        background-color: #5C257F;
+    }
+    
     .header-content{
         flex-direction: column;
     }

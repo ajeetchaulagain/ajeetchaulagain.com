@@ -3,13 +3,17 @@
     justify-content:center;
     background-color:#5C257F;
     color:rgb(231, 222, 236);
-    display: flex;
-    width:100%;
-
+    width:100vw;
+    // height: 90vh;
+    position: relative;
 }
 .welcome-content{
+    
+    padding: 12rem 0 10rem;
+    z-index: 1;
+    line-height: 1.5;
+    position: relative;
     text-align: center;
-    padding:5rem 2.5rem 2.5rem;
 }
 
 .image{
@@ -17,14 +21,30 @@
     border-radius: 150px;
     border:1px dotted white;
 }
+.image-holder img{
+    width:100%;
+    height: auto;
+    border-radius: 50%;
+}
+.image-holder span{
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    border:1px solid #fff;
+    padding:5px;
+    width:120px;
+    height: 120px;
+}
+
 
 .heading{
     font-family: 'Roboto', sans-serif;
     // font-family: 'Source Sans Pro', sans-serif;
-    font-size:4rem;
+    font-size:3.5rem;
     font-weight: 600;
-    padding:1.5rem 0 0rem;
     /* background-color: black; */
+    // background-color: green;
 }
 
 .heading-light {
@@ -37,11 +57,12 @@
     font-size:1.3rem;
     font-weight: 300;
     margin-bottom: 1.5rem;
+    // background-color:black;
 }
 
 .welcome-button{ 
     border:1px solid rgb(231, 222, 236);
-    padding:0.8rem 2rem;
+    padding:0.8rem 2rem;    
     display:inline-block;
     text-decoration: none;
     color:inherit;
@@ -63,28 +84,29 @@
     top:10;
     left:0;
     right:0;
-    height:20rem;
+    height:100vh;
 }
 
 @media only screen and (max-width: 599px) {
-    // .welcome-section{
-    //     height:80vh;
-    // }    
+    .welcome-section{
+        height:calc(100vh - 150px);
+    }    
     .heading{
-        font-size:3rem;
+        font-size:2.5rem;
+        line-height: 1.5
     }
     .particles{
         display: none;
     }
     .welcome-content{
-        padding-top:2.5rem;
+        padding-top:2rem;
     }
 }
 
 @media only screen and (min-width: 961px) {
-    .welcome-section{
-        padding-bottom: 9rem;
-    }
+    // .welcome-section{
+    //     // padding-bottom: 9rem;
+    // }
     .welcome-content{
         width:960px;
         margin:0 auto;
