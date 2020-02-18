@@ -10,3 +10,19 @@ Java XML, Java FX, Advance data structures such as HashMap, HashSet and ArrayLis
 1. Java XML
 2. JavaFX
 3. Advance Data Structure
+
+---
+
+```javascript
+// In your gatsby-config.js
+plugins: [
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        `gatsby-remark-prismjs`,
+      ]
+    }
+  }
+]
+```

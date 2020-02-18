@@ -7,7 +7,7 @@ import { Link } from "gatsby";
 const AboutPage = () => {
   return (
     <MasterLayout>
-      <IntroSection>Get to know more about me</IntroSection>
+      <IntroSection>Thankyou for stepping by to know me</IntroSection>
 
       <ContentLayout>
       <div>

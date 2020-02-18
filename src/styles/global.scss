@@ -2,6 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i&display=swap');
 
+@import url('http://css.wikidot.com/cssnippet:better-code-blocks/code_');
+
+
 
 @import url(./reset.scss);
 
@@ -30,6 +33,17 @@ body{
     flex-wrap: wrap;
 }
 
+.test{
+    .gatsby-highlight-code-line {
+        background-color: #feb;
+        display: block;
+        margin-right: -1em;
+        margin-left: -1em;
+        padding-right: 1em;
+        padding-left: 0.75em;
+        border-left: 0.25em solid #f99;
+      }
+}
 
 h1{
        font-family: 'Merriweather', serif;

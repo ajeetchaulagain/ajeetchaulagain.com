@@ -10,6 +10,9 @@ const BlogPage = () => {
       <ContentLayout>
         <h1>
           Blog Page is under construction. Sorry for the inconvenience. Thanks
+          <div class="test">
+              
+          </div>
         </h1>
       </ContentLayout>
     </MasterLayout>
