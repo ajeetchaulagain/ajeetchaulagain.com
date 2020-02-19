@@ -12,4 +12,3 @@ Cloud Decision Support tools developed for the Telstra. This project was done as
 3. Firebase
 4. Heroku
 5. Next.js
-

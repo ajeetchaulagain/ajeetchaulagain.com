@@ -9,7 +9,7 @@ const BlogPage = () => {
     <MasterLayout>
       <IntroSection>Checkout my blog content</IntroSection>
       <ContentLayout>
-          <Blogs/>
+        <Blogs />
       </ContentLayout>
     </MasterLayout>
   )

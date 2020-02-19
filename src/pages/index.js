@@ -5,13 +5,11 @@ import MasterLayout from "../components/master-layout"
 import ContentLayout from "../components/content-layout"
 import { Link } from "gatsby"
 
-
-const IndexPage = ({location}) => {
+const IndexPage = ({ location }) => {
   return (
     <MasterLayout>
       <Welcome />
       <ContentLayout>
-      
         <h1>Some of my Projects</h1>
         <p>
           Some of the featured project of mine. I have wrote the article on

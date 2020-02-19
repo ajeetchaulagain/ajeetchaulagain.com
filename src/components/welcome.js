@@ -121,12 +121,16 @@ const particlesParam = {
 const Welcome = () => {
   return (
     <section className={welcomeStyles.welcomeSection}>
-      <Particles className={welcomeStyles.particles} params={particlesParam} height="100vh" />
+      <Particles
+        className={welcomeStyles.particles}
+        params={particlesParam}
+        height="100vh"
+      />
       <div className={welcomeStyles.welcomeContent}>
         <div className={welcomeStyles.imageHolder}>
-        <span>
-          <img src={img} alt="profile" />
-        </span>
+          <span>
+            <img src={img} alt="profile" />
+          </span>
         </div>
         <h1 className={welcomeStyles.heading}>
           <span style={{ fontWeight: "100" }}>Hello.I'm </span>Ajeet Chaulagain
