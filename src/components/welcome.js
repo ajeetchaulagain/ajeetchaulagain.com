@@ -20,13 +20,13 @@ const particlesParam = {
       value: "#ffffff",
     },
     shape: {
-      type: "circle",
+      type: "polygon",
       stroke: {
         width: 0,
         color: "#000000",
       },
       polygon: {
-        nb_sides: 5,
+        nb_sides: 6,
       },
       image: {
         src: "img/github.svg",
@@ -35,7 +35,7 @@ const particlesParam = {
       },
     },
     opacity: {
-      value: 0.5,
+      value: 0.3,
       random: false,
       anim: {
         enable: false,
@@ -45,8 +45,8 @@ const particlesParam = {
       },
     },
     size: {
-      value: 6,
-      random: true,
+      value: 3,
+      random: false,
       anim: {
         enable: false,
         speed: 40,
@@ -58,7 +58,7 @@ const particlesParam = {
       enable: true,
       distance: 120,
       color: "#ffffff",
-      opacity: 0.4,
+      opacity: 0.2,
       width: 1,
     },
     move: {

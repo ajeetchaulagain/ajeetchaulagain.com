@@ -1,7 +1,16 @@
 import React from "react"
 import projectStyles from "./projects.module.scss"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import { extendByFieldProjection } from "graphql-compose/lib/utils/projection"
+
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaGithub,
+  FaInstagram,
+  FaJava,
+} from "react-icons/fa"
+
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -36,13 +45,13 @@ const Projects = () => {
             <p>{edge.node.excerpt}</p>
             <div className={projectStyles.projectMeta}>
               <ul>
-                <li>Technologies</li>
-                <li>NodeJS</li>
-                <li>React</li>
-                <li>Gatsby</li>
+                <li><FaLinkedinIn /></li>
+                <li><FaTwitter/></li>
+                <li><FaFacebookF/></li>
+                <li><FaJava/></li>
                 <li>Contentful</li>
                 <li>Javascript</li>
-                <li>Babel</li>
+                <li>Babel</li>  
                 <li>WebPack</li>
               </ul>
             </div>

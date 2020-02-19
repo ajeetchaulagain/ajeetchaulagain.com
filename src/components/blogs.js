@@ -5,8 +5,7 @@ import Blog from "./blog"
 
 const Blogs = () => {
   return (
-    <section className={blogStyles.blogSection}>
-      <div className={blogStyles.blogContent}>
+    <div>
         <h1> From my blog</h1>
         <p>
           Here are some of my recent projects. I love to share all the process I
@@ -20,8 +19,7 @@ const Blogs = () => {
         <a href="#" className={blogStyles.boxButton}>
           View More Projects
         </a>
-      </div>
-    </section>
+        </div>
   )
 }
 
