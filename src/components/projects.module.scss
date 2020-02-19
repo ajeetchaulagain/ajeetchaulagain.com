@@ -1,110 +1,98 @@
-
-.project{
-    padding:.8rem 1.5rem;
-    margin-bottom:1rem;
-    background-color: rgba(232, 217, 242, 0.126);
-    border:1px solid rgb(234, 234, 234);
+.project {
+  padding: 1.25rem 2.25rem;
+  margin-bottom: 2rem;
+  background-color: rgba(232, 217, 242, 0.126);
+  border: 1px solid rgb(234, 234, 234);
 }
 
-.project>a{
-    // font-family: 'Roboto', sans-serif;
-    font-family: inherit;
-    font-size:1.5rem;
-    font-weight:700;
-    /* font-style: italic; */
+.project > a {
+  // font-family: 'Roboto', sans-serif;
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 700;
+  /* font-style: italic; */
 }
 
-.project a{
-    text-decoration: underline;
+.project a {
+  text-decoration: underline;
 }
 
-.project p{
-    margin-bottom:1rem;
+.project p {
+  margin-bottom: 1rem;
 }
 
-.project a:hover{
-    // color:rgb(219, 148, 60);
-    text-decoration: none;
+.project a:hover {
+  // color:rgb(219, 148, 60);
+  text-decoration: none;
 }
 
-.projects .btn{
-    border:1px solid black;
+.projects .btn {
+  border: 1px solid black;
 }
 
-
-.project .project-meta ul {
+.project {
+  .project-meta ul {
     // margin-top:.5rem;
     display: flex;
-    font-size:.7rem;
+    font-size: 0.7rem;
     font-weight: 500;
     justify-content: flex-start;
-    color:#5C257F;
+    color: #5c257f;
     flex-wrap: wrap;
-}
-
-
-.project .project-meta ul li{
-    background-color: rgb(236, 235, 238);
-    margin-right: .5rem;
-    margin-top:.5rem;
-    padding:.1rem .2rem;
-    border-radius: 3px;
-}
-
-.project .small-paragraph{
-    font-size:0.8rem;
+    li {
+      background-color: rgb(236, 235, 238);
+      margin-right: 0.5rem;
+      margin-top: 0.5rem;
+      padding: 0.1rem 0.5rem;
+      border-radius: 3px;
+    }
+  }
+  .small-paragraph {
+    font-size: 0.9rem;
     text-align: right;
-    // background-color: rgb(236, 235, 238);
+    font-style: italic;
+  }
 }
 
-.box-button{ 
-    // background-color:black;
-    padding:0.8rem 2rem;
-    display:inline-block;
-    text-decoration: none;
-    color:inherit;
-    text-transform: uppercase;
-    font-weight: 400;
-    border-radius:2px;
-    transition: all 0.3s ease;
-    border:1px solid black;
+.box-button {
+  // background-color:black;
+  padding: 0.8rem 2rem;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  font-weight: 400;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  border: 1px solid black;
 }
 
-
-.projects .box-button:hover{
-    background-color:black;
-    color:white;
+.projects .box-button:hover {
+  background-color: black;
+  color: white;
 }
-
-
-
 
 // Media Queries------------------------------------------------
 
-
 @media only screen and (max-width: 599px) {
-   
-    .projects {
-        display: block;
-    }
-    .project {
-        width:100%;
-    }
+  .projects {
+    display: block;
+  }
+  .project {
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 961px) {
-  
-    
-    .projects{
-        display: flex;
-        flex-wrap:wrap;
-        justify-content: space-between;
-    }
-    .project{
-        width:49%;
-    }
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .project {
+    width: 48%;
+  }
 }
 
-@media only screen and (min-width: 1200px){
- 
+@media only screen and (min-width: 1200px) {
 }

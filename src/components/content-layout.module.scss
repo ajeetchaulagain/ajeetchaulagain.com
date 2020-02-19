@@ -1,70 +1,50 @@
-.content-section{
-    background-color:rgb(246, 242, 250);
-    width: 100%;
-    position: relative;
+.content-section {
+  background-color: rgb(246, 242, 250);
+  width: 100%;
+  position: relative;
 }
-.content{
-    padding:2.5rem;
-    background-color:white;
-    width: 100%;
-    border:1px solid rgb(235, 233, 233);
-    min-height: 50rem;
-    line-height: 1.9;
-    font-weight: 400;
-}
-
-.content p{
-    font-size:1.1rem;
-    margin-bottom:2rem;
-    text-align: justify;
-
-} 
-
-
-.content h1{
-    font-family: 'Merriweather', serif;
-    font-weight: 700;
-    font-size:2rem;
-    margin-bottom:1rem;
-    color:#333;
+.content {
+  padding: 2.5rem;
+  background-color: white;
+  width: 100%;
+  border: 1px solid rgb(235, 233, 233);
+  min-height: 50rem;
+  line-height: 1.9;
+  font-weight: 400;
 }
 
-.content a{
-  
-    color:#333;
-    text-decoration: underline;
+.content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  text-align: justify;
 }
 
-.content a:hover{
-    // color:#5C257F;
-    text-decoration: underline;
-    color:#5C257F;
+.content h1 {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
 }
 
-
-
-
-
-
-// / Media Queries------------------------------------------------ 
+// / Media Queries------------------------------------------------
 @media only screen and (max-width: 599px) {
-    .content p{
-        font-size:1.1rem;
-    }
+  .content p {
+    font-size: 1.1rem;
+  }
 }
 
 @media only screen and (min-width: 961px) {
-    .content{
-        width:960px;
-        margin:-100px auto 2rem;
-        padding:6rem 8rem;
-        
-    }
+  .content {
+    width: 960px;
+    margin: -100px auto 2rem;
+    padding: 6rem 8rem;
+  }
 }
 
-@media only screen and (min-width: 1180px){
-    .content{
-        width:1180px;
-        padding:8rem 13rem;
-    }
+@media only screen and (min-width: 1180px) {
+  .content {
+    width: 1180px;
+    padding: 8rem 10rem;
+  }
 }

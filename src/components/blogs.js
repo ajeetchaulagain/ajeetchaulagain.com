@@ -6,20 +6,20 @@ import Blog from "./blog"
 const Blogs = () => {
   return (
     <div>
-        <h1> From my blog</h1>
-        <p>
-          Here are some of my recent projects. I love to share all the process I
-          went while doing the project
-        </p>
-        <div class={blogStyles.blogs}>
-          <Blog />
-          <Blog />
-          <Blog />
-        </div>
-        <a href="#" className={blogStyles.boxButton}>
-          View More Projects
-        </a>
-        </div>
+      <h1> From my blog</h1>
+      <p>
+        Here are some of my recent projects. I love to share all the process I
+        went while doing the project
+      </p>
+      <div class={blogStyles.blogs}>
+        <Blog />
+        <Blog />
+        <Blog />
+      </div>
+      <a href="#" className={blogStyles.boxButton}>
+        View More Projects
+      </a>
+    </div>
   )
 }
 
