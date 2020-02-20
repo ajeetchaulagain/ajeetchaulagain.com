@@ -1,0 +1,14 @@
+.contactFormWrap{
+    .formRow{
+        margin-top: 2rem;
+    }
+    label{
+        width: 100%;
+        font-weight: bold;
+        display: block;
+    }
+    input,
+    textarea{
+        width: 100%;
+    }
+}
