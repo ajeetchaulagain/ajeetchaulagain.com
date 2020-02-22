@@ -3,6 +3,7 @@ import MasterLayout from "../components/master-layout"
 import IntroSection from "../components/intro-section"
 import { FaSmile } from "react-icons/fa"
 import ContentLayout from "../components/content-layout"
+import ContactForm from "../components/contact-form"
 
 const ContactPage = () => {
   return (
@@ -17,6 +18,8 @@ const ContactPage = () => {
           form available below.
         </p>
         <p>Contact me, if you have got project in mind</p>
+
+        <ContactForm/>
       </ContentLayout>
     </MasterLayout>
   )
