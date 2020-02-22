@@ -18,6 +18,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 991px){
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
 }
 
 .logo-section {
