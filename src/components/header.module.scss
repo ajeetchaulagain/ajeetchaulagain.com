@@ -1,12 +1,15 @@
 .main-header {
   background-color: #5c257f;
   color: rgb(231, 222, 236);
-  padding: 1rem 1.2rem 0rem;
+  padding: 1rem 1.2rem;
   width: 100%;
   position: absolute;
   z-index: 2;
   // background-color:black;
   background-color: transparent;
+  @media (max-width: 767px){
+    
+  }
 }
 
 .header-content {
@@ -53,6 +56,10 @@
   flex-wrap: wrap;
   font-size: 0.8rem;
   font-weight: 400;
+  letter-spacing: .05rem;
+  @media (max-width: 567px){
+    letter-spacing: 0.02rem;
+  }
 }
 
 .nav-list li {
@@ -76,18 +83,25 @@
 
 .social-media-lists {
   display: flex;
-  padding: 0.4rem 1rem 0;
+  padding: 0.4rem .5rem 0;
   border: 1px solid rgba(231, 222, 236, 0.3);
   justify-content: space-between;
   flex-wrap: wrap;
   font-size: 0.9rem;
   font-weight: 400;
-}
-.social-media-lists li {
+  a{
+    &:hover{
+      color: #fffcb0;
+    }
+  }
+  li{
   margin: 0rem 0.3rem;
   justify-content: space-between;
+    a{
+      display: inline-flex;
+    }
+  }
 }
-
 // Media Queries -------------------------
 
 @media only screen and (max-width: 599px) {

@@ -7,7 +7,7 @@ const ContactForm = () => {
         method="post"
         action="https://getform.io/f/72e8bdf4-8f90-40f5-9a5c-62c9f7a4bd70"
       >
-        <div className={contactLayoutStyles.contactRow}>
+        <div className={contactLayoutStyles.formRow}>
           <label for="email">Email</label>
           <input
             type="email"
@@ -16,11 +16,11 @@ const ContactForm = () => {
             placeholder="Your Email"
           />
         </div>
-        <div className={contactLayoutStyles.contactRow}>
+        <div className={contactLayoutStyles.formRow}>
           <label for="name">Name</label>
           <input type="text" name="name" id="name" placeholder="Your Name" />
         </div>
-        <div className={contactLayoutStyles.contactRow}>
+        <div className={contactLayoutStyles.formRow}>
           <label for="message">Message</label>
           <input
             type="text"
@@ -29,11 +29,11 @@ const ContactForm = () => {
             placeholder="Your Message"
           />
         </div>
-        <div className={contactLayoutStyles.contactRow}>
+        <div className={contactLayoutStyles.formRow}>
           <button type="submit" class="box-button solid">
             Send
           </button>
-          <input type="reset" value="Clear" class="box-button" />
+          {/* <input type="reset" value="Clear" class="box-button" /> */}
         </div>
       </form>
     </div>

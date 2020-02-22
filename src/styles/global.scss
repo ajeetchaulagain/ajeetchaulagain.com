@@ -39,11 +39,34 @@ $color__brandSecond: #f0f0f0;
 
 // font
 
-$font__main: sans-serif;
+$font__main: "Source Sans Pro", serif;
+$font__title: "Merriweather", serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+
+//Mixins
+@mixin transition($value) {
+  transition: all $value ease-in-out;
+}
+@mixin placeholder {
+  @include optional-at-root("::-webkit-input-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root(":-moz-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root("::-moz-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root(":-ms-input-placeholder") {
+    @content;
+  }
+}
 
 body {
   font-size: 16px;
@@ -98,11 +121,23 @@ a {
   font-weight: 400;
   border-radius: 2px;
   letter-spacing: 2px;
+  @include transition(0.2s);
   &:hover {
     color: #fff;
     background-color: #5c257f;
     text-decoration: none;
     border-color: #5c257f;
+  }
+  &.solid {
+    color: #fff;
+    background-color: #5c257f;
+    text-decoration: none;
+    border-color: #5c257f;
+    &:hover {
+      color: #333;
+      border-color: rgb(217, 216, 218);
+      background-color: transparent;
+    }
   }
 }
 
@@ -133,9 +168,26 @@ textarea {
   font-weight: 400;
   border-radius: 2px;
   letter-spacing: 2px;
-
+  @include transition(0.2s);
   &:focus {
     color: $color__text-input-focus;
+    border-color: #5c257f;
+    box-shadow: none;
+    outline: none;
+    color: #5c257f;
+  }
+}
+input[type="submit"],
+button{
+  cursor: pointer;
+}
+
+form {
+  label {
+    width: 100%;
+    display: block;
+    color: #333;
+    font-family: $font__title;
   }
 }
 
