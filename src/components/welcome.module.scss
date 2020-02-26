@@ -40,8 +40,19 @@
   // font-family: 'Source Sans Pro', sans-serif;
   font-size: 3.5rem;
   font-weight: 600;
-  /* background-color: black; */
-  // background-color: green;
+  @media (max-width: 1200px){
+    font-size: 3rem;
+  }
+  @media (max-width: 991px){
+    font-size: 2.5rem;
+  }
+  @media (max-width: 567px){
+    font-size: 2rem;
+    line-height: 1.5;
+    span{
+      display: block;
+    }
+  }
 }
 
 .heading-light {
@@ -54,7 +65,9 @@
   font-size: 1.3rem;
   font-weight: 300;
   margin-bottom: 1.5rem;
-  // background-color:black;
+  @media (max-width: 991px){
+    font-size: 1.1rem;
+  }
 }
 
 .welcome-button {
@@ -85,17 +98,13 @@
 
 @media only screen and (max-width: 599px) {
   .welcome-section {
-    height: calc(100vh - 150px);
-  }
-  .heading {
-    font-size: 3rem;
-    line-height: 1.5;
+    height: auto;
   }
   .particles {
     display: none;
   }
   .welcome-content {
-    padding-top: 3rem;
+    padding: 4rem 0 3.5rem;
   }
 }
 

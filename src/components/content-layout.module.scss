@@ -2,6 +2,9 @@
   background-color: rgb(246, 242, 250);
   width: 100%;
   position: relative;
+  @media only screen and (max-width: 599px) {
+    // margin-top: 25px;
+  }
 }
 .content {
   padding: 2.5rem;
@@ -9,15 +12,18 @@
   width: 100%;
   border: 1px solid rgb(235, 233, 233);
   min-height: 50rem;
-  line-height: 1.9;
+  // line-height: 1.9;
   font-weight: 400;
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+  }
+  @media (max-width: 599px){
+    padding: 40px 20px;
+  }
 }
 
-.content p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  text-align: justify;
-}
 
 .content h1 {
   font-family: "Merriweather", serif;
@@ -25,6 +31,9 @@
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #333;
+  @media only screen and (max-width: 599px) {
+    font-size: 1.75rem;
+  }
 }
 
 // / Media Queries------------------------------------------------
