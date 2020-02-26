@@ -99,6 +99,7 @@
 @media only screen and (max-width: 599px) {
   .welcome-section {
     height: calc(100vh - 180px);
+    min-height: 80vh;
   }
   .particles {
     display: none;
