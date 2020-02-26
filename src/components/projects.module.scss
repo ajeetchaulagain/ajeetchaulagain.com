@@ -36,8 +36,10 @@
     display: flex;
     font-size: 0.7rem;
     font-weight: 500;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
-    color: #5c257f;
+    // color: #5c257f;
     flex-wrap: wrap;
     li {
       background-color: rgb(236, 235, 238);
@@ -80,6 +82,7 @@
   }
   .project {
     width: 100%;
+    padding: 25px;
   }
 }
 
