@@ -4,8 +4,6 @@ import MasterLayout from "../components/master-layout"
 import IntroSection from "../components/intro-section"
 import ContentLayout from "../components/content-layout"
 
-import { Link, graphql, useStaticQuery } from "gatsby"
-
 // Goal: Link to blog posts
 
 // 1. Fetch the slug for posts
@@ -13,22 +11,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 // 3. Test your work!
 
 const ProjectsPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              title
-            }
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `)
+  
 
   // console.log(data);
   return (

@@ -5,7 +5,7 @@ module.exports.onCreateNode = ({ node, actions }) => {
   // Transform the new node here and create a new node or
   // create a new node field.
 
-  if (node.internal.type === "MarkdownRemark") {
+  if (node.internal.type === "Mdx") {
     const slug = path.basename(node.fileAbsolutePath, ".md")
 
     createNodeField({
@@ -22,7 +22,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   const res = await graphql(`
     query {
-      allMarkdownRemark {
+      allMdx {
         edges {
           node {
             fields {
@@ -34,7 +34,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  res.data.allMarkdownRemark.edges.forEach(edge => {
+  res.data.allMdx.edges.forEach(edge => {
     createPage({
       component: projectTemplate,
       path: `/projects/${edge.node.fields.slug}`,

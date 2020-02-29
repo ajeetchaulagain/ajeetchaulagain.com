@@ -19,7 +19,7 @@ const ContactPage = () => {
         </p>
         <p>Contact me, if you have got project in mind</p>
 
-        <ContactForm/>
+        <ContactForm />
       </ContentLayout>
     </MasterLayout>
   )

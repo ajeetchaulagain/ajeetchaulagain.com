@@ -5,7 +5,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 const Projects = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allMdx {
         edges {
           node {
             frontmatter {
@@ -26,7 +26,7 @@ const Projects = () => {
 
   return (
     <div className={projectStyles.projects}>
-      {data.allMarkdownRemark.edges.map(edge => {
+      {data.allMdx.edges.map(edge => {
         return (
           <div className={projectStyles.project}>
             <Link to={`/projects/${edge.node.fields.slug}`}>
@@ -46,7 +46,7 @@ const Projects = () => {
             </div>
             <br />
             <p className={projectStyles.smallParagraph}>
-              <strong>Time to Read:</strong> {edge.node.timeToRead}min.
+              <strong>Time to Read: </strong> {edge.node.timeToRead}min.
             </p>
           </div>
         )

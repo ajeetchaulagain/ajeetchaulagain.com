@@ -1,6 +1,6 @@
 import React from "react"
 import Welcome from "../components/welcome"
-import Project from "../components/projects"
+import Projects from "../components/projects"
 import MasterLayout from "../components/master-layout"
 import ContentLayout from "../components/content-layout"
 import { Link } from "gatsby"
@@ -15,7 +15,7 @@ const IndexPage = ({ location }) => {
           Some of the featured project of mine. I have wrote the article on
           architecture of the project.
         </p>
-        <Project />
+        <Projects />
         <Link to="/projects" className="box-button">
           View More Projects
         </Link>
