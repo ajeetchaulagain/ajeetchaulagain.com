@@ -4,9 +4,7 @@ const ContactForm = () => {
   return (
     <div className={contactLayoutStyles.contactFormWrap}>
       <form
-        method="post"
-        action="https://getform.io/f/72e8bdf4-8f90-40f5-9a5c-62c9f7a4bd70"
-      >
+      name="contact" method="POST" netlify>
         <div className={contactLayoutStyles.formRow}>
           <label for="email">Email</label>
           <input
