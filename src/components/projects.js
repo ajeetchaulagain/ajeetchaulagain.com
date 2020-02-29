@@ -12,7 +12,7 @@ import {
 const Projects = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allMdx {
         edges {
           node {
             frontmatter {
@@ -33,7 +33,7 @@ const Projects = () => {
 
   return (
     <div className={projectStyles.projects}>
-      {data.allMarkdownRemark.edges.map(edge => {
+      {data.allMdx.edges.map(edge => {
         return (
           <div className={projectStyles.project}>
             <figure>
