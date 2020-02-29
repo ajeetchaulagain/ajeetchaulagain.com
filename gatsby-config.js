@@ -94,7 +94,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-breadcrumb`,
     },
+
+    `gatsby-plugin-mdx`,
   ],
 
   pathPrefix: "/gatsby-portfolio",
+
 }
