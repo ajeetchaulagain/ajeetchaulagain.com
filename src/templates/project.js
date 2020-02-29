@@ -24,10 +24,12 @@ const Project = props => {
         <b>Get Insight of a project</b>
       </IntroSection>
       <ContentLayout>
-        <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-        <div
-          dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
-        ></div>
+          <h1></h1>
+         { /* <h1>{props.data.markdownRemark.frontmatter.title}</h1>
+        
+        <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}>
+  </div> */}
+
       </ContentLayout>
     </MasterLayout>
   )
