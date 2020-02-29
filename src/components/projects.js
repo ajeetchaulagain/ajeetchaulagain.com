@@ -1,6 +1,13 @@
 import React from "react"
 import projectStyles from "./projects.module.scss"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import img from "../images/ajeet.jpeg"
+
+import {
+  FaAngleRight,
+} from "react-icons/fa"
+
+
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -29,25 +36,35 @@ const Projects = () => {
       {data.allMarkdownRemark.edges.map(edge => {
         return (
           <div className={projectStyles.project}>
-            <Link to={`/projects/${edge.node.fields.slug}`}>
-              <a>{edge.node.frontmatter.title}</a>
-            </Link>
-            <p>{edge.node.excerpt}</p>
-            <div className={projectStyles.projectMeta}>
-              <ul>
-                <li>NodeJS</li>
-                <li>React</li>
-                <li>Gatsby</li>
-                <li>Contentful</li>
-                <li>Javascript</li>
-                <li>Babel</li>
-                <li>WebPack</li>
-              </ul>
+            <figure>
+              <div className={projectStyles.projectMeta}>
+                <ul>
+                  <li>NodeJS</li>
+                  <li>React</li>
+                  <li>Gatsby</li>
+                  <li>Contentful</li>
+                  <li>Javascript</li>
+                  <li>Babel</li>
+                  <li>WebPack</li>
+                </ul>
+              </div>
+              <img src={img} alt="profile" />
+              <figcaption>
+                <Link to={`/projects/${edge.node.fields.slug}`} className="box-button solid">
+                  Case Study <i><FaAngleRight/></i>
+                </Link>
+              </figcaption>
+            </figure>
+            <div className={projectStyles.projectContent}>
+              <h3>
+                <Link to={`/projects/${edge.node.fields.slug}`}>
+                  {edge.node.frontmatter.title}
+                </Link>
+              </h3>
+              <p className={projectStyles.smallParagraph}>
+                <strong>Time to Read:</strong> {edge.node.timeToRead}min.
+              </p>
             </div>
-            <br />
-            <p className={projectStyles.smallParagraph}>
-              <strong>Time to Read:</strong> {edge.node.timeToRead}min.
-            </p>
           </div>
         )
       })}
