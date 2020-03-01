@@ -85,7 +85,7 @@
       .project-content {
         color: #fff;
       }
-      @media (max-width: 1199px) {
+      @media (min-width: 768px) {
         &::after {
           background-color: rgba(92, 37, 127, 0.95);
           -webkit-transform: scale(23);
@@ -243,7 +243,7 @@
   .project {
     max-width: 100%;
     // padding: 25px;
-    width: 350px;
+    width: 410px;
     margin-left: auto;
     margin-right: auto;
   }
