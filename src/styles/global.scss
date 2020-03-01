@@ -143,6 +143,9 @@ a {
       background-color: transparent;
     }
   }
+  @media (max-width: 991px){
+    padding: 0.5rem 1.25rem;
+  }
 }
 
 main > header:first-child h1 {
