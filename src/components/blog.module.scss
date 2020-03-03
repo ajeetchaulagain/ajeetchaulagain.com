@@ -1,6 +1,5 @@
 .blog-wrapper {
-  
-  article{
+  article {
     margin-bottom: 1.75rem;
   }
   .blog-item {
@@ -8,8 +7,8 @@
     background-color: white;
     width: 100%;
     border: 1px solid rgb(235, 233, 233);
-    &::after{
-      content: '';
+    &::after {
+      content: "";
       clear: both;
       display: table;
     }
@@ -23,7 +22,7 @@
       img {
         width: 100%;
       }
-      @media (max-width: 767px){
+      @media (max-width: 767px) {
         width: 100%;
         margin-right: 0;
         margin-bottom: 10px;
@@ -33,7 +32,7 @@
       width: calc(100% - 270px);
       float: left;
       min-height: 1px;
-      @media (max-width: 767px){
+      @media (max-width: 767px) {
         width: 100%;
       }
     }

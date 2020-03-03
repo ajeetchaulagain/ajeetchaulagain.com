@@ -11,8 +11,6 @@ import ContentLayout from "../components/content-layout"
 // 3. Test your work!
 
 const ProjectsPage = () => {
-  
-
   // console.log(data);
   return (
     <MasterLayout>

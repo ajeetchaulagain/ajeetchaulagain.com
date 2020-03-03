@@ -1,6 +1,15 @@
 ---
 title: "Speed Meter"
-technologies: ["React","Next.js", "Node.js", "Firebase", "Express.js", "Ant Design","Heroku"]
+technologies:
+  [
+    "React",
+    "Next.js",
+    "Node.js",
+    "Firebase",
+    "Express.js",
+    "Ant Design",
+    "Heroku",
+  ]
 ---
 
 Online Speed monitoring tools to determine the page speed of your site. Online Speed monitoring tools to determine the page speed of your site. Online Speed monitoring tools to determine the page speed of your site. Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site. Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.

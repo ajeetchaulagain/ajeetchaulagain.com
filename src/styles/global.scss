@@ -104,7 +104,12 @@ h1 {
   font-weight: 700;
   font-size: 5rem;
 }
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700 !important;
 }
 a {
@@ -143,7 +148,7 @@ a {
       background-color: transparent;
     }
   }
-  @media (max-width: 991px){
+  @media (max-width: 991px) {
     padding: 0.5rem 1.25rem;
   }
 }
