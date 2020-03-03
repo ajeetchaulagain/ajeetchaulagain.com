@@ -34,6 +34,7 @@ const Projects = () => {
       {data.allMdx.edges.map(edge => {
         return (
           <div className={projectStyles.project}>
+          <div className={projectStyles.projectItem}>
             <figure>
               <div className={projectStyles.projectMeta}>
                 <ul>
@@ -63,6 +64,7 @@ const Projects = () => {
               <p className={projectStyles.smallParagraph}>
                 <strong>Time to Read: </strong> {edge.node.timeToRead} min.
               </p>
+            </div>
             </div>
           </div>
         )
