@@ -2,6 +2,8 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import "../scripts/sticky.js"
 
+import "../scripts/sticky.js";
+
 import {
   FaFacebookF,
   FaTwitter,
