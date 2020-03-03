@@ -12,11 +12,12 @@ import {
 const Projects = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMdx(filter: {fields: {contentType: {eq: "projects"}}} limit: 4){
+      allMdx(filter: {fields: {contentType: {eq: "projects"}}} limit: 5){
         edges {
           node {
             frontmatter {
-              title
+              title,
+              technologies
             }
             excerpt
             timeToRead
@@ -40,13 +41,14 @@ const Projects = () => {
             <figure>
               <div className={projectStyles.projectMeta}>
                 <ul>
-                  <li>NodeJS</li>
-                  <li>React</li>
-                  <li>Gatsby</li>
-                  <li>Contentful</li>
-                  <li>Javascript</li>
-                  <li>Babel</li>
-                  <li>WebPack</li>
+                  {edge.node.frontmatter.technologies.map(technology => {
+                    return (
+                      <li>{technology}</li>
+                    )
+  
+                  })}
+                  
+                  
                 </ul>
               </div>
               <img src={img} alt="profile" />
@@ -63,7 +65,7 @@ const Projects = () => {
                 </Link>
               </h3>
               <p className={projectStyles.smallParagraph}>
-                <strong>Time to Read:</strong> {edge.node.timeToRead}min.
+                <strong>Time to Read: </strong> {edge.node.timeToRead} min.
               </p>
             </div>
           </div>
