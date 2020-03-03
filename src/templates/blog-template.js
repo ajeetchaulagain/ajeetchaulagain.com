@@ -13,27 +13,28 @@ export const query = graphql`
   query($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       frontmatter {
-        title
+        title 
       }
       body
     }
   }
 `
-const Blog = props => {
+const BlogTemplate = props => {
+
+
   return (
     <MasterLayout>
       <IntroSection>
-        <b>Get Insight of a project</b>
+        <b>Get Insight of a project {props.pageContext.slug}</b>
       </IntroSection>
       <ContentLayout>
         <h1>{props.data.mdx.frontmatter.title}</h1>
         
-        <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
+         { /* <MDXRenderer>{props.data.mdx.body}</MDXRenderer> */}
         
-
       </ContentLayout>
     </MasterLayout>
   )
 }
 
-export default BlogPage
+export default BlogTemplate

@@ -12,7 +12,7 @@ import {
 const Projects = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMdx {
+      allMdx(filter: {fields: {contentType: {eq: "projects"}}} limit: 4){
         edges {
           node {
             frontmatter {
@@ -32,6 +32,7 @@ const Projects = () => {
   console.log("object data", data)
 
   return (
+    
     <div className={projectStyles.projects}>
       {data.allMdx.edges.map(edge => {
         return (
