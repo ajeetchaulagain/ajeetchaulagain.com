@@ -1,10 +1,11 @@
 ---
 title: "React Portfolio"
+technologies: ["React","Next.js", "Node.js", "Firebase", "Express.js", "Ant Design","Heroku"]
 ---
 
 import { MdxTest } from "../components/mdx-test.js"
 
-<MdxTest> Hi and this is from .mdx file</MdxTest>
+<MdxTest>
 
 A simple Java based keyword search system utilising various technologies such as
 Java XML, Java FX, Advance data structures such as HashMap, HashSet and ArrayList.
@@ -14,6 +15,8 @@ Java XML, Java FX, Advance data structures such as HashMap, HashSet and ArrayLis
 1. Java XML
 2. JavaFX
 3. Advance Data Structure
+
+</MdxTest>
 
 
 
