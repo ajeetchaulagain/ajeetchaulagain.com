@@ -30,7 +30,7 @@ const BlogTemplate = props => {
       <ContentLayout>
         <h1>{props.data.mdx.frontmatter.title}</h1>
         
-         { /* <MDXRenderer>{props.data.mdx.body}</MDXRenderer> */}
+         <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
         
       </ContentLayout>
     </MasterLayout>

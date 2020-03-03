@@ -39,7 +39,7 @@ module.exports.onCreateNode = ({ node, actions }) => {
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   
-  const blogTemplate = path.resolve(".src/templates/blog-template.js")
+  const blogTemplate = path.resolve("./src/templates/blog-template.js")
   const projectTemplate = path.resolve("./src/templates/project-template.js")
   // const blogTemplate = path.resolve("./src/templates/project-template.js")
   
@@ -82,7 +82,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
     if(contentType==="posts"){
     createPage({
-      component: projectTemplate,
+      component: blogTemplate,
       path: `/blog/${edge.node.fields.slug}`,
       context: {
         slug: edge.node.fields.slug,
