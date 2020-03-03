@@ -1,6 +1,15 @@
 ---
 title: "React Portfolio"
-technologies: ["React","Next.js", "Node.js", "Firebase", "Express.js", "Ant Design","Heroku"]
+technologies:
+  [
+    "React",
+    "Next.js",
+    "Node.js",
+    "Firebase",
+    "Express.js",
+    "Ant Design",
+    "Heroku",
+  ]
 ---
 
 A simple Java based keyword search system utilising various technologies such as

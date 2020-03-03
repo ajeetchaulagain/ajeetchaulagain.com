@@ -8,11 +8,14 @@ import { FaAngleRight } from "react-icons/fa"
 const Projects = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMdx(filter: {fields: {contentType: {eq: "projects"}}} limit: 5){
+      allMdx(
+        filter: { fields: { contentType: { eq: "projects" } } }
+        limit: 5
+      ) {
         edges {
           node {
             frontmatter {
-              title,
+              title
               technologies
             }
             excerpt
@@ -29,42 +32,42 @@ const Projects = () => {
   console.log("object data", data)
 
   return (
-    
     <div className={projectStyles.projects}>
       {data.allMdx.edges.map(edge => {
         return (
           <div className={projectStyles.project}>
-          <div className={projectStyles.projectItem}>
-            <figure>
-              <div className={projectStyles.projectMeta}>
-                <ul>
-                  {edge.node.frontmatter.technologies.map(technology => {
-                    return (
-                      <li>{technology}</li>
-                    )
-  
-                  })}
-                  
-                  
-                </ul>
+            <div className={projectStyles.projectItem}>
+              <figure>
+                <div className={projectStyles.projectMeta}>
+                  <ul>
+                    {edge.node.frontmatter.technologies.map(technology => {
+                      return <li>{technology}</li>
+                    })}
+                  </ul>
+                </div>
+                <img src={img} alt="profile" />
+                <figcaption>
+                  <Link
+                    to={`/projects/${edge.node.fields.slug}`}
+                    className="box-button solid"
+                  >
+                    Case Study{" "}
+                    <i>
+                      <FaAngleRight />
+                    </i>
+                  </Link>
+                </figcaption>
+              </figure>
+              <div className={projectStyles.projectContent}>
+                <h3>
+                  <Link to={`/projects/${edge.node.fields.slug}`}>
+                    {edge.node.frontmatter.title}
+                  </Link>
+                </h3>
+                <p className={projectStyles.smallParagraph}>
+                  <strong>Time to Read: </strong> {edge.node.timeToRead} min.
+                </p>
               </div>
-              <img src={img} alt="profile" />
-              <figcaption>
-                <Link to={`/projects/${edge.node.fields.slug}`} className="box-button solid">
-                  Case Study <i><FaAngleRight/></i>
-                </Link>
-              </figcaption>
-            </figure>
-            <div className={projectStyles.projectContent}>
-              <h3>
-                <Link to={`/projects/${edge.node.fields.slug}`}>
-                  {edge.node.frontmatter.title}
-                </Link>
-              </h3>
-              <p className={projectStyles.smallParagraph}>
-                <strong>Time to Read: </strong> {edge.node.timeToRead} min.
-              </p>
-            </div>
             </div>
           </div>
         )

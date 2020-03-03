@@ -13,25 +13,20 @@ export const query = graphql`
   query($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       frontmatter {
-        title,
+        title
       }
       body
     }
   }
 `
 const ProjectTemplate = props => {
- 
   return (
     <MasterLayout>
-      <IntroSection>
-        Project Case Study
-      </IntroSection>
+      <IntroSection>Project Case Study</IntroSection>
       <ContentLayout>
         <h1>{props.data.mdx.frontmatter.title}</h1>
-      
-        <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
-        
 
+        <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
       </ContentLayout>
     </MasterLayout>
   )

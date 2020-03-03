@@ -1,6 +1,15 @@
 ---
 title: "React Portfolio"
-technologies: ["React","Next.js", "Node.js", "Firebase", "Express.js", "Ant Design","Heroku"]
+technologies:
+  [
+    "React",
+    "Next.js",
+    "Node.js",
+    "Firebase",
+    "Express.js",
+    "Ant Design",
+    "Heroku",
+  ]
 ---
 
 import { MdxTest } from "../components/mdx-test.js"
@@ -18,8 +27,4 @@ Java XML, Java FX, Advance data structures such as HashMap, HashSet and ArrayLis
 
 </MdxTest>
 
-
-
 <!-- <Header> -->
-
-
