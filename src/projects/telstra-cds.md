@@ -13,7 +13,6 @@ technologies:
 featuredImage: ../images/cloud-decision-support.jpeg
 ---
 
-
 ## Overview of Project
 
 Cloud Decision Support Tools was developed in order to assist various business to choose a correct cloud-based platform based on their needs. This project was done

@@ -4,7 +4,6 @@ technologies: ["JavaFX", "Data Structure", "Java XML"]
 featuredImage: ../images/new-arrival-travel.png
 ---
 
-
 A simple Java based keyword search system utilising various technologies such as
 Java XML, Java FX, Advance data structures such as HashMap, HashSet and ArrayList.
 

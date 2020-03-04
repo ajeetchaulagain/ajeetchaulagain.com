@@ -18,7 +18,6 @@ Java XML, Java FX, Advance data structures such as HashMap, HashSet and ArrayLis
 
 ![React/Gatsby Developer Portfolio (Personal Site)](../images/react-developer-portfolio.png)
 
-
 ## Skills I have learned from the project
 
 1. Java XML

@@ -13,16 +13,15 @@ technologies:
 featuredImage: ../images/speed-meter.jpg
 ---
 
-
 ## Overview
-Online Speed monitoring tools to determine the page speed of your site. Online Speed monitoring tools to determine the page speed of your site. 
+
+Online Speed monitoring tools to determine the page speed of your site. Online Speed monitoring tools to determine the page speed of your site.
 
 ![Speed Monitoring Tool](../images/speed-meter.jpg)
 
 ## Architecture
 
 Here goes the architecture of the system
-
 
 ## Skills I have learned from the project
 

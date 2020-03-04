@@ -6,7 +6,7 @@ import { MDXProvider } from "@mdx-js/react"
 import ContactForm from "./contact-form"
 import Img from "gatsby-image"
 
-const shortCodes = { ContactForm, Img}
+const shortCodes = { ContactForm, Img }
 
 const ContentLayout = props => {
   return (

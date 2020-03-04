@@ -5,6 +5,9 @@ import MasterLayout from "../components/master-layout"
 import IntroSection from "../components/intro-section"
 import ContentLayout from "../components/content-layout"
 
+import blogTemplateStyles from "./blog-template.module.scss"
+
+
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Img from "gatsby-image"
 
@@ -15,43 +18,31 @@ export const query = graphql`
     mdx(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
-        featuredImage {
-          childImageSharp {
-            fluid(maxWidth: 800) {
-              base64
-                tracedSVG
-                srcWebp
-                srcSetWebp
-                originalImg
-                originalName
-                presentationWidth
-                presentationHeight
-            }
-          }
-        }
+        tags
+        date
       }
       body
     }
   }
 `
 const BlogTemplate = props => {
-
-  
- 
-
   return (
     <MasterLayout>
       <IntroSection>
-        <b>Get Insight of a project {props.pageContext.slug}</b>
+        <b>Blog Article</b>
       </IntroSection>
       <ContentLayout>
         <h1>{props.data.mdx.frontmatter.title}</h1>
-         
-      
-        
-        <MDXRenderer>
-        
-        {props.data.mdx.body}</MDXRenderer>
+        <div className={blogTemplateStyles.postMeta}>
+        <time>{props.data.mdx.frontmatter.date}</time>
+        <ul className={blogTemplateStyles.tagList}>
+          {props.data.mdx.frontmatter.tags.map(tag => {
+            return <li>{tag}</li>
+          })}
+        </ul>
+        </div>
+
+        <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
       </ContentLayout>
     </MasterLayout>
   )

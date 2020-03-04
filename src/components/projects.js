@@ -10,9 +10,7 @@ import { FaAngleRight } from "react-icons/fa"
 const Projects = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMdx(
-        filter: { fields: { contentType: { eq: "projects" } } }
-      ) {
+      allMdx(filter: { fields: { contentType: { eq: "projects" } } }) {
         edges {
           node {
             frontmatter {
@@ -20,11 +18,11 @@ const Projects = () => {
               technologies
               featuredImage {
                 childImageSharp {
-                  fluid{
+                  fluid {
                     ...GatsbyImageSharpFluid
                   }
                 }
-              } 
+              }
             }
             excerpt
             timeToRead
@@ -53,7 +51,12 @@ const Projects = () => {
                     })}
                   </ul>
                 </div>
-                <Img fluid={edge.node.frontmatter.featuredImage.childImageSharp.fluid} alt="profile" />
+                <Img
+                  fluid={
+                    edge.node.frontmatter.featuredImage.childImageSharp.fluid
+                  }
+                  alt="profile"
+                />
                 <figcaption>
                   <Link
                     to={`/projects/${edge.node.fields.slug}`}

@@ -15,21 +15,12 @@ export const query = graphql`
     mdx(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
-        featuredImage {
-          childImageSharp {
-            fluid(maxWidth: 1200) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
       body
     }
   }
 `
 const ProjectTemplate = props => {
-
-  let featuredImgFluid = props.data.mdx.frontmatter.featuredImage.childImageSharp.fluid
   return (
     <MasterLayout>
       <IntroSection>Project Case Study</IntroSection>
