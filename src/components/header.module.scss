@@ -1,7 +1,6 @@
 .main-header {
-  background-color: #5c257f;
+  background-color: #745489;
   color: rgb(231, 222, 236);
-  padding: 1rem 1.2rem;
   width: 100%;
   position: absolute;
   z-index: 2;
@@ -13,6 +12,7 @@
 
 .header-content {
   display: flex;
+  padding: 1rem;
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -143,12 +143,13 @@
   .header-content {
     width: 960px;
     margin: 0 auto;
+    padding-top: 2rem;
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1180px) {
   .header-content {
-    width: 1200px;
+    width: 1180px;
     margin: 0 auto;
   }
 }

@@ -7,27 +7,36 @@ import ContentLayout from "../components/content-layout"
 import { Link } from "gatsby"
 
 const IndexPage = ({ location }) => {
+  const headingStyle = {
+    marginBottom: "0rem",
+  }
+
+  const subHeadingStyle = {
+    marginBottom: "3rem",
+    lineHeight: "1",
+    // fontFamily:"Lora",
+    // fontStyle:"italic",
+  }
+
+  // const wordCap = {
+  //   fontSize: "5rem",
+  // }
+
   return (
     <MasterLayout>
       <Welcome />
       <ContentLayout>
-        <h1>Open Source and Private Projects</h1>
-        <p>
-          Some of the featured project of mine. I have wrote the article on
-          architecture of the project.
-        </p>
+        <h1 style={headingStyle}>Projects</h1>
+        <p style={subHeadingStyle}>Projects with case study</p>
         <Projects />
         <Link to="/projects" className="box-button">
-          View More Projects
+          View All Projects
         </Link>
       </ContentLayout>
 
       <ContentLayout>
-        <h1>From my blog</h1>
-        <p>
-          Some of the featured project of mine. I have wrote the article on
-          architecture of the project.
-        </p>
+        <h1 style={headingStyle}>From my blog</h1>
+        <p style={subHeadingStyle}>See the recent on my article list</p>
         <Blog />
         <Link to="/blog" className="box-button">
           View all Articles

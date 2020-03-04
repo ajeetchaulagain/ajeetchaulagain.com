@@ -7,20 +7,21 @@
   }
 }
 .content {
-  padding: 2rem;
+  padding: 1rem;
   background-color: white;
   width: 100%;
   border: 1px solid rgb(235, 233, 233);
   min-height: 50rem;
-  line-height: 1.88;
+  line-height: 1.6;
   font-weight: 400;
   p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
-    text-align: justify; 
+    text-align: justify;
+    line-height: 1.9;
   }
   @media (max-width: 599px) {
-    padding: 40px 2rem;
+    padding: 1.5rem;
   }
 }
 
@@ -41,11 +42,11 @@
 }
 
 .content h1 {
-  font-family: "Merriweather ", sans-serif;
-  font-weight: 1000;
-  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: rgb(68, 67, 67);
   @media only screen and (max-width: 599px) {
     font-size: 1.75rem;
   }
@@ -69,7 +70,7 @@
 @media only screen and (min-width: 1180px) {
   .content {
     width: 1180px;
-    padding: 8rem 14rem;
+    padding: 8rem 12rem;
     // box-shadow:1px 1px 3px rgb(44, 43, 43);
   }
 }
