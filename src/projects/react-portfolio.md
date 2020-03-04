@@ -1,5 +1,5 @@
 ---
-title: "React Portfolio"
+title: React/Gatsby Developer Portfolio (Personal Site)
 technologies:
   [
     "React",
@@ -10,14 +10,13 @@ technologies:
     "Ant Design",
     "Heroku",
   ]
+featuredImage: ../images/react-developer-portfolio.png
 ---
-
-import { MdxTest } from "../components/mdx-wrapper.js"
-
-<MdxWrapper>
 
 A simple Java based keyword search system utilising various technologies such as
 Java XML, Java FX, Advance data structures such as HashMap, HashSet and ArrayList.
+
+![React/Gatsby Developer Portfolio (Personal Site)](../images/react-developer-portfolio.png)
 
 ## Skills I have learned from the project
 
@@ -25,6 +24,14 @@ Java XML, Java FX, Advance data structures such as HashMap, HashSet and ArrayLis
 2. JavaFX
 3. Advance Data Structure
 
-</MdxWrapper>
-
-<!-- <Header> -->
+```javascript
+// In your gatsby-config.js
+plugins: [
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [`gatsby-remark-prismjs`],
+    },
+  },
+]
+```

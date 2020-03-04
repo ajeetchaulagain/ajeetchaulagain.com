@@ -10,21 +10,18 @@ technologies:
     "Ant Design",
     "Heroku",
   ]
+featuredImage: ../images/speed-meter.jpg
 ---
 
-Online Speed monitoring tools to determine the page speed of your site. Online Speed monitoring tools to determine the page speed of your site. Online Speed monitoring tools to determine the page speed of your site. Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site. Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.
+## Overview
 
-Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.
-Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.
+Online Speed monitoring tools to determine the page speed of your site. Online Speed monitoring tools to determine the page speed of your site.
 
-Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.
+![Speed Monitoring Tool](../images/speed-meter.jpg)
 
-Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.
+## Architecture
 
-Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.
-
-Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.
-Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.Online Speed monitoring tools to determine the page speed of your site.
+Here goes the architecture of the system
 
 ## Skills I have learned from the project
 

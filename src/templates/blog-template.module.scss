@@ -1,0 +1,19 @@
+.post-meta{
+    // background-color:rgb(236, 232, 232);
+    border:1px solid rgb(209, 204, 204);
+    margin-bottom:1rem;
+}
+.tag-list{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom:2rem;
+}
+
+.tag-list li{
+    padding:.2rem 1rem;
+    background-color:rgb(236, 232, 232);
+    margin:.5rem;
+    // border:1px solid black;
+    border-radius: 5px;
+    font-size: .7rem;
+}   

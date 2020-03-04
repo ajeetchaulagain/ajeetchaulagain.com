@@ -1,6 +1,7 @@
 ---
 title: "XML Keyword Search System"
-technologies: ["JavaFX", "Data Structure", "Java XML"]
+technologies: ["JavaFX GUI", " JavaFX Graphics", "Data Structure", "Java XML"]
+featuredImage: ../images/xml-keyword-search.jpeg
 ---
 
 A simple Java based keyword search system utilising various technologies such as

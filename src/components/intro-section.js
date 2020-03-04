@@ -10,5 +10,4 @@ const IntroSection = props => {
     </section>
   )
 }
-
 export default IntroSection

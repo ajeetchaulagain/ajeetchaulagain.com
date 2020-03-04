@@ -1,5 +1,5 @@
 ---
-title: "Telstra Cloud Decision Support System"
+title: "AI-Enabled Cloud Decision Support System - Telstra"
 technologies:
   [
     "React",
@@ -10,11 +10,14 @@ technologies:
     "Ant Design",
     "Heroku",
   ]
+featuredImage: ../images/cloud-decision-support.jpeg
 ---
 
 ## Overview of Project
 
 Cloud Decision Support Tools was developed in order to assist various business to choose a correct cloud-based platform based on their needs. This project was done
+
+![AI-Enabled Cloud Decision Support System](../images/cloud-decision-support.jpeg)
 
 ## Architecture of the Project
 
