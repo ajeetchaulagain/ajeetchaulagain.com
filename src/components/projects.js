@@ -3,6 +3,8 @@ import projectStyles from "./projects.module.scss"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import img from "../images/ajeet.jpeg"
 
+import Img from "gatsby-image"
+
 import { FaAngleRight } from "react-icons/fa"
 
 const Projects = () => {
@@ -10,13 +12,19 @@ const Projects = () => {
     query {
       allMdx(
         filter: { fields: { contentType: { eq: "projects" } } }
-        limit: 5
       ) {
         edges {
           node {
             frontmatter {
               title
               technologies
+              featuredImage {
+                childImageSharp {
+                  fluid{
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              } 
             }
             excerpt
             timeToRead
@@ -45,7 +53,7 @@ const Projects = () => {
                     })}
                   </ul>
                 </div>
-                <img src={img} alt="profile" />
+                <Img fluid={edge.node.frontmatter.featuredImage.childImageSharp.fluid} alt="profile" />
                 <figcaption>
                   <Link
                     to={`/projects/${edge.node.fields.slug}`}

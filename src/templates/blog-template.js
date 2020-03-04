@@ -6,6 +6,7 @@ import IntroSection from "../components/intro-section"
 import ContentLayout from "../components/content-layout"
 
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import Img from "gatsby-image"
 
 import { graphql } from "gatsby"
 
@@ -14,12 +15,30 @@ export const query = graphql`
     mdx(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              base64
+                tracedSVG
+                srcWebp
+                srcSetWebp
+                originalImg
+                originalName
+                presentationWidth
+                presentationHeight
+            }
+          }
+        }
       }
       body
     }
   }
 `
 const BlogTemplate = props => {
+
+  
+ 
+
   return (
     <MasterLayout>
       <IntroSection>
@@ -27,8 +46,12 @@ const BlogTemplate = props => {
       </IntroSection>
       <ContentLayout>
         <h1>{props.data.mdx.frontmatter.title}</h1>
-
-        <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
+         
+      
+        
+        <MDXRenderer>
+        
+        {props.data.mdx.body}</MDXRenderer>
       </ContentLayout>
     </MasterLayout>
   )

@@ -6,6 +6,8 @@
   width: 100%;
 }
 
+
+
 .intro-content {
   text-align: center;
   // height: auto;
@@ -13,9 +15,10 @@
 }
 
 .heading-light {
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 2rem;
-  font-weight: 200;
+  font-family: "Lora", sans-serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 200 !important;
   line-height: 1.25;
   padding: 45px 15px;
 }
@@ -31,8 +34,8 @@
   .intro-content {
     width: 960px;
     margin: 0 auto;
-    height: 25rem;
-    padding-top: 9rem;
+    height: 20rem;
+    padding-top: 6rem;
   }
 }
 

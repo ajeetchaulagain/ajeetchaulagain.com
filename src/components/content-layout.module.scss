@@ -7,12 +7,12 @@
   }
 }
 .content {
-  padding: 2.5rem;
+  padding: 2rem;
   background-color: white;
   width: 100%;
   border: 1px solid rgb(235, 233, 233);
   min-height: 50rem;
-  // line-height: 1.9;
+  line-height: 1.88;
   font-weight: 400;
   p {
     font-size: 1.1rem;
@@ -24,8 +24,24 @@
   }
 }
 
+.content img{
+  border:1px solid rgb(110, 110, 116);
+  box-shadow:1px 1px 5px rgb(101, 100, 100);
+}
+
+.content-section input[type="text"]{
+  width:100%;
+  padding:1.5rem;
+  // margin-top:-4rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  // background-color: #c7c7c7;
+  margin-bottom: 2rem;
+  border:1px solid rgb(230, 228, 228);
+}
+
 .content h1 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Merriweather ", sans-serif;
   font-weight: 1000;
   font-size: 2rem;
   margin-bottom: 1rem;
