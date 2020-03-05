@@ -17,7 +17,7 @@
   p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
-    text-align: justify;
+    // text-align: justify;
     line-height: 1.9;
   }
   @media (max-width: 599px) {
@@ -43,13 +43,21 @@
 
 .content h1 {
   font-family: "Roboto", sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 2.2rem;
   margin-bottom: 1rem;
-  color: rgb(68, 67, 67);
+  color: #333;
   @media only screen and (max-width: 599px) {
     font-size: 1.75rem;
   }
+}
+
+.content a {
+  color: rgb(82, 47, 132);
+  text-decoration: underline;
+}
+.content a:hover {
+  text-decoration: none;
 }
 
 // / Media Queries------------------------------------------------

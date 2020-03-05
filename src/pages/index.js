@@ -5,6 +5,9 @@ import Blog from "../components/blog"
 import MasterLayout from "../components/master-layout"
 import ContentLayout from "../components/content-layout"
 import { Link } from "gatsby"
+import {
+  FaBook,
+} from "react-icons/fa"
 
 const IndexPage = ({ location }) => {
   const headingStyle = {
@@ -35,7 +38,7 @@ const IndexPage = ({ location }) => {
       </ContentLayout>
 
       <ContentLayout>
-        <h1 style={headingStyle}>From my blog</h1>
+        <h1 style={headingStyle}> <FaBook/> From my blog </h1> 
         <p style={subHeadingStyle}>See the recent on my article list</p>
         <Blog />
         <Link to="/blog" className="box-button">
