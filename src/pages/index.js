@@ -5,41 +5,38 @@ import Blog from "../components/blog"
 import MasterLayout from "../components/master-layout"
 import ContentLayout from "../components/content-layout"
 import { Link } from "gatsby"
-import {
-  FaBook,
-} from "react-icons/fa"
+import { FaBook } from "react-icons/fa"
 
-const IndexPage = ({ location }) => {
-  const headingStyle = {
-    marginBottom: "0rem",
-  }
+export const indexHeadingStyle = {
+  marginBottom: "0rem",
+}
 
-  const subHeadingStyle = {
-    marginBottom: "3rem",
-    lineHeight: "1",
-    // fontFamily:"Lora",
-    // fontStyle:"italic",
-  }
+export const indexSubHeadingStyle = {
+  marginBottom: "3rem",
+  lineHeight: "1",  
+}
 
-  // const wordCap = {
-  //   fontSize: "5rem",
-  // }
+const IndexPage = () => {
 
   return (
     <MasterLayout>
       <Welcome />
       <ContentLayout>
-        <h1 style={headingStyle}>Projects</h1>
-        <p style={subHeadingStyle}>Projects with case study</p>
+        <h1 style={indexHeadingStyle}>Projects</h1>
+        <p style={indexSubHeadingStyle}>Checkout some of my projects with case study</p>
         <Projects />
         <Link to="/projects" className="box-button">
-          View All Projects
+          View All Projects ->
         </Link>
+
       </ContentLayout>
 
       <ContentLayout>
-        <h1 style={headingStyle}> <FaBook/> From my blog </h1> 
-        <p style={subHeadingStyle}>See the recent on my article list</p>
+        <h1 style={indexHeadingStyle}>
+          {" "}
+          <FaBook /> From my blog{" "}
+        </h1>
+        <p style={indexSubHeadingStyle}>See the recent on my article list</p>
         <Blog />
         <Link to="/blog" className="box-button">
           View all Articles

@@ -4,8 +4,6 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 
 import thumbnail from "../images/ajeet.jpeg"
 
-
-
 const Blog = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -26,13 +24,16 @@ const Blog = () => {
     }
   `)
 
+ 
+
+
   return (
     <div className={blogStyles.blogWrapper}>
       {data.allMdx.edges.map(edge => {
         return (
           <article className={blogStyles.blogItem}>
             <figure>
-              <img src= {thumbnail} />
+              <img src={thumbnail} />
             </figure>
 
             <div className={blogStyles.content}>
