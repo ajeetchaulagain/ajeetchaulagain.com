@@ -8,13 +8,19 @@ import { Link } from "gatsby"
 import { FaBook } from "react-icons/fa"
 
 export const indexHeadingStyle = {
-  marginBottom: "0rem",
+  marginBottom: ".5rem",
 }
 
 export const indexSubHeadingStyle = {
   marginBottom: "3rem",
   lineHeight: "1",  
 }
+
+export const contentBoxButton = {
+  textDecoration: "none",
+  color: "#fff",
+}
+
 
 const IndexPage = () => {
 
@@ -25,10 +31,9 @@ const IndexPage = () => {
         <h1 style={indexHeadingStyle}>Projects</h1>
         <p style={indexSubHeadingStyle}>Checkout some of my projects with case study</p>
         <Projects />
-        <Link to="/projects" className="box-button">
-          View All Projects ->
+        <Link to="/projects" className="box-button" style={contentBoxButton}>
+          View All Projects
         </Link>
-
       </ContentLayout>
 
       <ContentLayout>
@@ -38,7 +43,7 @@ const IndexPage = () => {
         </h1>
         <p style={indexSubHeadingStyle}>See the recent on my article list</p>
         <Blog />
-        <Link to="/blog" className="box-button">
+        <Link to="/blog" className="box-button" style={contentBoxButton}>
           View all Articles
         </Link>
       </ContentLayout>

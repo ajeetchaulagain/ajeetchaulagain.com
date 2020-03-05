@@ -21,12 +21,14 @@
 
   h1 {
     font-family: 'Roboto', sans-serif;
-    font-weight: 800;
-    font-size: 2.5rem;
+    font-weight: 700;
+    font-size: 2.4rem;
     margin-bottom: 1rem;
+    line-height: 1.2;
     color: #333;
     @media only screen and (max-width: 599px) {
-      font-size: 2.2rem;
+      font-size: 2rem;
+  
     }
   }
 
@@ -50,10 +52,14 @@
   box-shadow: 1px 1px 5px rgb(101, 100, 100);
 }
 
-
 .content a {
-  color: rgb(82, 47, 132);
+  color: #5c257f;
   text-decoration: underline;
+  font-weight: 600;
+}
+
+.content-button{
+    text-decoration: none;
 }
 .content a:hover {
   text-decoration: none;

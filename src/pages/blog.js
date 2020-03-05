@@ -19,7 +19,9 @@ const BlogPage = () => {
 
   return (
     <MasterLayout>
-      <IntroSection>Checkout my blog content</IntroSection>
+      <IntroSection>Blog section under work!. Sorry for the inconvenience.<br/>
+      Dummy content is populated for now.
+      </IntroSection>
       <ContentLayout>
         <h1>Articles</h1> 
         <input type="text" placeholder="Type here to filter articles" style={searchBoxStyle} />

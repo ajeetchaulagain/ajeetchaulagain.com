@@ -24,8 +24,6 @@ const Blog = () => {
     }
   `)
 
- 
-
 
   return (
     <div className={blogStyles.blogWrapper}>
@@ -43,9 +41,9 @@ const Blog = () => {
                 </Link>
               </h2>
               <div className={blogStyles.metaData}>
-                <date>Published on 2014/12/12 . </date>
+                <date><strong>Published on: </strong>2014/12/12 </date>
                 <span>
-                  Read Time: <strong>2min.</strong>
+                 <strong> | Read Time: </strong> 2min | <strong>By: </strong> Ajeet Chaulagain
                 </span>
                 <ul>
                   <li> Nodejs</li>

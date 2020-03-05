@@ -30,9 +30,6 @@ export const query = graphql`
 
 const BlogTemplate = props => {
   const blogTitle = {
-    fontSize: "2.2rem",
-    fontWeight: "700",
-    fontFamily: "Roboto",
     lineHeight: "1.2",
   }
   return (
