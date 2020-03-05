@@ -18,7 +18,7 @@
 
     @media only screen and (max-width: 599px) {
       padding: 1rem;
-      
+
       figure {
         padding-right: 1rem;
         img {
@@ -27,8 +27,8 @@
       }
     }
 
-    @media only screen and (min-width: 600px){
-        padding:2rem;
+    @media only screen and (min-width: 600px) {
+      padding: 2rem;
     }
     // flex-wrap: wrap;
     padding: 2rem 2rem;
@@ -55,7 +55,6 @@
         color: #333;
         text-decoration: none;
       }
-
     }
     .meta-data {
       date,

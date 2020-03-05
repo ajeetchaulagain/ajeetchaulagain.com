@@ -5,26 +5,32 @@ import ContentLayout from "../components/content-layout"
 import Blog from "../components/blog"
 
 const BlogPage = () => {
-
-
   const searchBoxStyle = {
     width: "100%",
-  padding: "1.2rem",
-  borderRadius:"10px",
-  fontSize: "1.2rem",
-  marginBottom: "2rem",
-  border: "1px solid rgb(230, 228, 228)",
-}
-
+    padding: "1rem",
+    borderRadius: "5px",
+    fontSize: "1rem",
+    marginBottom: "3rem",
+    fontFamily: "Roboto",
+    fontWeight: "500",
+    letterSpacing: "1px",
+    border: "1px solid rgb(230, 228, 228)",
+  }
 
   return (
     <MasterLayout>
-      <IntroSection>Blog section under work!. Sorry for the inconvenience.<br/>
-      Dummy content is populated for now.
+      <IntroSection>
+        Blog section under work!. Sorry for the inconvenience.
+        <br />
+        Dummy content is populated for now.
       </IntroSection>
       <ContentLayout>
-        <h1>Articles</h1> 
-        <input type="text" placeholder="Type here to filter articles" style={searchBoxStyle} />
+        <h1>Articles</h1>
+        <input
+          type="text"
+          placeholder="Type here to filter articles"
+          style={searchBoxStyle}
+        />
         <Blog />
       </ContentLayout>
     </MasterLayout>

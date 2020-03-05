@@ -1,6 +1,7 @@
 .intro-section {
   justify-content: center;
   background-color: #5c257f;
+
   color: rgb(231, 222, 236);
   display: flex;
   width: 100%;
@@ -21,11 +22,16 @@
   padding: 45px 15px;
 }
 
-@media only screen and (min-width: 599px) and (max-width: 960px) {
+@media only screen and (min-width: 600px) and (max-width: 960px) {
   .intro-content {
-    height: 8rem;
-    height: 15rem;
-    padding-top: 7rem;
+    height: 12rem;
+    padding-top: 6rem;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .intro-content {
+    padding: 0;
   }
 }
 @media only screen and (min-width: 961px) {

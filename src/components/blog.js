@@ -24,7 +24,6 @@ const Blog = () => {
     }
   `)
 
-
   return (
     <div className={blogStyles.blogWrapper}>
       {data.allMdx.edges.map(edge => {
@@ -41,9 +40,12 @@ const Blog = () => {
                 </Link>
               </h2>
               <div className={blogStyles.metaData}>
-                <date><strong>Published on: </strong>2014/12/12 </date>
+                <date>
+                  <strong>Published on: </strong>2014/12/12{" "}
+                </date>
                 <span>
-                 <strong> | Read Time: </strong> 2min | <strong>By: </strong> Ajeet Chaulagain
+                  <strong> | Read Time: </strong> 2min | <strong>By: </strong>{" "}
+                  Ajeet Chaulagain
                 </span>
                 <ul>
                   <li> Nodejs</li>

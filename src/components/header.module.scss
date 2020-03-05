@@ -1,11 +1,10 @@
 .main-header {
-  background-color: #745489;
+  // background-color: #000000;
   color: rgb(231, 222, 236);
   width: 100%;
   position: absolute;
   z-index: 2;
   // background-color:black;
-  background-color: transparent;
   @media (max-width: 767px) {
   }
 }
@@ -110,8 +109,8 @@
 
 @media only screen and (max-width: 599px) {
   .main-header {
-    position: relative;
     background-color: #5c257f;
+    position: relative;
   }
 
   .header-content {

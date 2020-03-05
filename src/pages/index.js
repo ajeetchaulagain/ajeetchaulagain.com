@@ -7,13 +7,15 @@ import ContentLayout from "../components/content-layout"
 import { Link } from "gatsby"
 import { FaBook } from "react-icons/fa"
 
+import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
+
 export const indexHeadingStyle = {
   marginBottom: ".5rem",
 }
 
 export const indexSubHeadingStyle = {
   marginBottom: "3rem",
-  lineHeight: "1",  
+  lineHeight: "1",
 }
 
 export const contentBoxButton = {
@@ -21,15 +23,15 @@ export const contentBoxButton = {
   color: "#fff",
 }
 
-
 const IndexPage = () => {
-
   return (
     <MasterLayout>
       <Welcome />
       <ContentLayout>
         <h1 style={indexHeadingStyle}>Projects</h1>
-        <p style={indexSubHeadingStyle}>Checkout some of my projects with case study</p>
+        <p style={indexSubHeadingStyle}>
+          Checkout some of my projects with case study
+        </p>
         <Projects />
         <Link to="/projects" className="box-button" style={contentBoxButton}>
           View All Projects
