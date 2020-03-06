@@ -28,6 +28,7 @@ const Blog = () => {
     <div className={blogStyles.blogWrapper}>
       {data.allMdx.edges.map(edge => {
         return (
+          
           <article className={blogStyles.blogItem}>
             <figure>
               <img src={thumbnail} />

@@ -138,6 +138,12 @@
   }
 }
 
+@media only screen and (min-width: 600px){
+  .header-content {
+    padding:1rem 3rem;
+  }
+}
+
 @media only screen and (min-width: 961px) {
   .header-content {
     width: 960px;

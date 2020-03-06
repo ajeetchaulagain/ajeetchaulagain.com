@@ -1,4 +1,5 @@
 .blog-wrapper {
+  // background-color: green;
   :hover {
     background-color: rgb(242, 242, 242);
 
@@ -17,12 +18,18 @@
     display: flex;
 
     @media only screen and (max-width: 599px) {
-      padding: 1rem;
 
+      padding: 1rem .5rem;
+      // flex-direction: column;
+      align-items: flex-start;
       figure {
         padding-right: 1rem;
+        // order:2;
+        // margin-top:-.5rem;
+        // margin-left:-.5rem;
         img {
-          width: 60px;
+          width: 50px;
+          // margin-top:.3rem;
         }
       }
     }
@@ -47,10 +54,11 @@
   }
 
   .content {
+    line-height: 1.4;
     padding: 0rem;
     h2 {
       font-weight: 700;
-      line-height: 1.3;
+      line-height: 1.25;
       a {
         color: #333;
         text-decoration: none;
@@ -61,19 +69,21 @@
       span {
         font-size: 0.9rem;
         // color: rgb(109, 41, 119);
-        font-weight: 400;
-        margin-bottom: 1rem;
+        font-weight: 500;
+        margin-bottom: 3rem;
       }
       ul {
         display: flex;
-        margin-top: 1rem;
+        margin-top: .5rem;
+        // align-items:flex-end;
         li {
           background-color: rgb(100, 43, 140);
           color: white;
           margin: 0 0.3rem 0 0;
-          padding: 0.1rem 0.4rem;
+          padding: 0.15rem 0.4rem;
+          // align-items: flex-end;
           border-radius: 2px;
-          font-size: 0.7rem;
+          font-size: 0.8rem;
         }
       }
     }

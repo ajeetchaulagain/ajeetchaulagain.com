@@ -7,14 +7,13 @@ import ContentLayout from "../components/content-layout"
 import { Link } from "gatsby"
 import { FaBook } from "react-icons/fa"
 
-import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 
 export const indexHeadingStyle = {
   marginBottom: ".5rem",
 }
 
 export const indexSubHeadingStyle = {
-  marginBottom: "3rem",
+  marginBottom: "2.5rem",
   lineHeight: "1",
 }
 
