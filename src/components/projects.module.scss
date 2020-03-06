@@ -37,6 +37,7 @@
   max-width: 500px;
   width: 50%;
   padding: 0 2rem;
+
   .project-item {
     background-color: rgba(232, 217, 242, 0.126);
     border: 1px solid rgb(234, 234, 234);
@@ -161,20 +162,18 @@
     position: relative;
     z-index: 1;
   }
-  h3 {
-    font-family: inherit;
-    font-size: 1.4rem;
-    font-weight: 700;
-    line-height: 1.1;
+  h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 1000;
+    line-height: 1.4;
     margin-bottom: 5px;
     @media (max-width: 991px) {
       font-size: 1.25rem;
     }
   }
 
-  h2 {
-    font-size: 1.5rem;
-  }
   a {
     text-decoration: underline;
     &:hover {
@@ -196,11 +195,12 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     li {
-      background-color: rgb(236, 235, 238);
+      background-color: rgb(80, 21, 131);
       margin-right: 0.5rem;
       margin-top: 0.5rem;
       padding: 0.1rem 0.5rem;
       border-radius: 3px;
+      color: #ffffff;
     }
   }
   .small-paragraph {

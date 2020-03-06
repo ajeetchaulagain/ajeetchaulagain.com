@@ -70,11 +70,10 @@ const Projects = () => {
                 </figcaption>
               </figure>
               <div className={projectStyles.projectContent}>
-                <h3>
-                  <Link to={`/projects/${edge.node.fields.slug}`}>
-                    {edge.node.frontmatter.title}
-                  </Link>
-                </h3>
+                <Link to={`/projects/${edge.node.fields.slug}`}>
+                  <h2>{edge.node.frontmatter.title}</h2>
+                </Link>
+
                 <p className={projectStyles.smallParagraph}>
                   <strong>Time to Read: </strong> {edge.node.timeToRead} min.
                 </p>

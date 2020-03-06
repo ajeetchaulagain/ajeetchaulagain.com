@@ -5,31 +5,46 @@ import Blog from "../components/blog"
 import MasterLayout from "../components/master-layout"
 import ContentLayout from "../components/content-layout"
 import { Link } from "gatsby"
+import { FaBook } from "react-icons/fa"
 
-const IndexPage = ({ location }) => {
+
+export const indexHeadingStyle = {
+  marginBottom: ".5rem",
+}
+
+export const indexSubHeadingStyle = {
+  marginBottom: "2.5rem",
+  lineHeight: "1",
+}
+
+export const contentBoxButton = {
+  textDecoration: "none",
+  color: "#fff",
+}
+
+const IndexPage = () => {
   return (
     <MasterLayout>
       <Welcome />
       <ContentLayout>
-        <h1>Open Source and Private Projects</h1>
-        <p>
-          Some of the featured project of mine. I have wrote the article on
-          architecture of the project.
+        <h1 style={indexHeadingStyle}>Projects</h1>
+        <p style={indexSubHeadingStyle}>
+          Checkout some of my projects with case study
         </p>
         <Projects />
-        <Link to="/projects" className="box-button">
-          View More Projects
+        <Link to="/projects" className="box-button" style={contentBoxButton}>
+          View All Projects
         </Link>
       </ContentLayout>
 
       <ContentLayout>
-        <h1>From my blog</h1>
-        <p>
-          Some of the featured project of mine. I have wrote the article on
-          architecture of the project.
-        </p>
+        <h1 style={indexHeadingStyle}>
+          {" "}
+          <FaBook /> From my blog{" "}
+        </h1>
+        <p style={indexSubHeadingStyle}>See the recent on my article list</p>
         <Blog />
-        <Link to="/blog" className="box-button">
+        <Link to="/blog" className="box-button" style={contentBoxButton}>
           View all Articles
         </Link>
       </ContentLayout>

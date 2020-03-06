@@ -1,4 +1,5 @@
 .content-section {
+
   background-color: rgb(246, 242, 250);
   width: 100%;
   position: relative;
@@ -7,20 +8,48 @@
   }
 }
 .content {
-  padding: 2rem;
+  padding: 1rem;
   background-color: white;
   width: 100%;
   border: 1px solid rgb(235, 233, 233);
   min-height: 50rem;
-  line-height: 1.88;
+  line-height: 1.75;
   font-weight: 400;
   p {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     margin-bottom: 1.5rem;
-    text-align: justify; 
+    // text-align: justify;
   }
+
+  h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    color: #333;
+    @media only screen and (max-width: 599px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    @media only screen and (max-width: 599px) {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+  }
+
+  h3{
+    font-family: "Roboto", sans-serif;
+
+  }
+
   @media (max-width: 599px) {
-    padding: 40px 2rem;
+    padding: 1.5rem;
   }
 }
 
@@ -29,32 +58,29 @@
   box-shadow: 1px 1px 5px rgb(101, 100, 100);
 }
 
-.content-section input[type="text"] {
-  width: 100%;
-  padding: 1.2rem;
-  // margin-top:-4rem;
-  border-radius: 10px;
-  font-size: 1.2rem;
-  // background-color: #c7c7c7;
-  margin-bottom: 2rem;
-  border: 1px solid rgb(230, 228, 228);
+.content a {
+  color: #5c257f;
+  text-decoration: underline;
+  font-weight: 600;
 }
 
-.content h1 {
-  font-family: "Merriweather ", sans-serif;
-  font-weight: 1000;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #333;
-  @media only screen and (max-width: 599px) {
-    font-size: 1.75rem;
-  }
+.content-button {
+  text-decoration: none;
+}
+.content a:hover {
+  text-decoration: none;
 }
 
 // / Media Queries------------------------------------------------
 @media only screen and (max-width: 599px) {
   .content p {
-    font-size: 1.1rem;
+    font-size: 1.125rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .content {
+    padding: 3rem 3rem;
   }
 }
 
@@ -69,7 +95,7 @@
 @media only screen and (min-width: 1180px) {
   .content {
     width: 1180px;
-    padding: 8rem 14rem;
+    padding: 8rem 12rem;
     // box-shadow:1px 1px 3px rgb(44, 43, 43);
   }
 }

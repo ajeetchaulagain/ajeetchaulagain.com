@@ -21,10 +21,14 @@ Online Speed monitoring tools to determine the page speed of your site. Online S
 
 ## Architecture
 
-Here goes the architecture of the system
+Here goes the architecture of the system 
 
 ## Skills I have learned from the project
 
 1. Java XML
 2. JavaFX
 3. Advance Data Structure
+
+## Thanks to these guys
+
+I want to give thanks to contributor of this project

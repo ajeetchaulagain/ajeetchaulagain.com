@@ -3,6 +3,7 @@ import Projects from "../components/projects"
 import MasterLayout from "../components/master-layout"
 import IntroSection from "../components/intro-section"
 import ContentLayout from "../components/content-layout"
+import { indexHeadingStyle, indexSubHeadingStyle } from "."
 
 // Goal: Link to blog posts
 
@@ -16,11 +17,8 @@ const ProjectsPage = () => {
     <MasterLayout>
       <IntroSection>Some of the featured projects of mine</IntroSection>
       <ContentLayout>
-        <h1>List of all Projects</h1>
-        <p>
-          Here are the list of projects I have done. Checkout the detail about
-          the project where I share my learning process to complete the project.
-        </p>
+        <h1 style={indexHeadingStyle}>Projects</h1>
+        <p style={indexSubHeadingStyle}>List of all projects with case study</p>
         <Projects />
       </ContentLayout>
     </MasterLayout>
