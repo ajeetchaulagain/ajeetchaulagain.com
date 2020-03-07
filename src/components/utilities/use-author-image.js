@@ -8,7 +8,7 @@ export const useAuthorImage = () =>{
         file(relativePath: {eq: "images/ajeet.jpeg"}) {
             id
             childImageSharp {
-            fixed(webpQuality: 30, toFormat: PNG, width: 108) {
+            fixed(webpQuality: 30, toFormat: WEBP, width: 108) {
                 ...GatsbyImageSharpFixed
             }
             }
