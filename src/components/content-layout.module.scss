@@ -4,6 +4,7 @@
   &::after,
   &::before {
     content: "";
+    color:white;
     width: 25px;
     height: 25px;
     position: absolute;
@@ -14,17 +15,18 @@
     
   }
   &::after{
-    border: 1px solid rgba(255,255,255,.75)
+    border: 1px solid rgba(255,255,255,.75);
   }
   &::before{
     width: 50px;
     height: 50px;
-    opacity: .7;
+    opacity: .8;
+    // background-color: rgb(94, 94, 92);
     right: 35px;
     bottom: 31px;
   }
   }
-  background-color: rgb(246, 242, 250);
+  background-color: rgb(250, 248, 242);
   width: 100%;
   position: relative;
   @media only screen and (max-width: 599px) {
@@ -73,8 +75,9 @@
 
   }
 
-  @media (max-width: 599px) {
-    padding: 1.5rem;
+  @media (max-width: 960px) {
+    padding: 2rem 1.5rem 3rem;
+    margin-bottom:2rem;
   }
 }
 
