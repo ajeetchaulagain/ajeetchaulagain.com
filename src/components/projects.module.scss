@@ -43,6 +43,10 @@
     border: 1px solid rgb(234, 234, 234);
     position: relative;
     overflow: hidden;
+    height: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     &::after {
       content: "";
       width: 25px;
@@ -52,47 +56,18 @@
       bottom: 15px;
       background-color: rgba(92, 37, 127, 1);
       border-radius: 50%;
-      -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-      transform: scale(1);
-      -webkit-transition: all 0.3s ease-in-out;
-      -o-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
-      @media (max-width: 767px) {
-        background-color: rgba(92, 37, 127, 0.95);
-        -webkit-transform: scale(23);
-        -ms-transform: scale(23);
-        transform: scale(23);
-      }
-      @media (max-width: 567px) {
-        -webkit-transform: scale(27);
-        -ms-transform: scale(27);
-        transform: scale(27);
-      }
     }
     &:hover {
       .project-meta,
       figcaption {
         opacity: 1;
       }
-      @media (min-width: 768px) {
-        &::after {
-          background-color: rgba(92, 37, 127, 0.95);
-          -webkit-transform: scale(32);
-          -ms-transform: scale(32);
-          transform: scale(32);
-        }
+      background-color: #5c257f;
+      h2{
+        color: #fff;
       }
       .project-content {
         color: #fff;
-      }
-      @media (min-width: 768px) {
-        &::after {
-          background-color: rgba(92, 37, 127, 0.95);
-          -webkit-transform: scale(23);
-          -ms-transform: scale(23);
-          transform: scale(23);
-        }
       }
     }
   }
@@ -123,11 +98,9 @@
       transition: all 0.3s ease-in-out;
       z-index: 1;
       a {
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: #fff !important;
-        border-color: #fff !important;
-        background-color: transparent !important;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        font-weight: 500;
         i {
           -webkit-animation: arrowMove 1.25s infinite;
           animation: arrowMove 1.25s infinite;
@@ -136,7 +109,9 @@
           top: 3px;
         }
         &:hover {
-          color: #fff !important;
+          border-color: #fff !important;
+          background-color: #fff !important;
+          color: #501583 !important;
         }
       }
     }
@@ -164,9 +139,9 @@
   }
   h2 {
     font-family: "Roboto", sans-serif;
-    font-size: 1.5rem;
-    color: #333;
-    font-weight: 1000;
+    font-size: 1.25rem;
+    // color: #333;
+    font-weight: 500;
     line-height: 1.4;
     margin-bottom: 5px;
     @media (max-width: 991px) {
@@ -175,7 +150,7 @@
   }
 
   a {
-    text-decoration: underline;
+    text-decoration: none;
     &:hover {
       text-decoration: none;
     }
@@ -213,6 +188,12 @@
   @media (max-width: 767px) {
     .project-content {
       color: #fff;
+      a{
+        color: #fff !important;
+      }
+    }
+    > div{
+      background-color: #501583 !important;
     }
   }
   @media (max-width: 567px) {
@@ -240,7 +221,7 @@
 
 // Media Queries------------------------------------------------
 
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 767px) {
   .projects {
     display: block;
   }
