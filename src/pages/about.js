@@ -11,41 +11,37 @@ const AboutPage = () => {
 
       <ContentLayout>
         <div>
-          <h1>About Me</h1>
-          <p>
-            Hello. I'm Ajeet Chaulagain, full stack developer born in Nepal and
-            currently living in Melbourne. As a IT graduate with the
-            specialization in software development, I have been working with
-            various tools and technologies for past few year. Currently, I am
-            working on full stack javascript development with React, Node,
-            Express and Mongo. <Link to="/contact">Contact Me</Link> for a
-            project.
-          </p>
-          <p>
-            Hello. I'm Ajeet Chaulagain, full stack developer born in Nepal and
-            currently living in Melbourne. As a IT graduate with the{" "}
-            <Link to="/contact">Contact Me</Link> for a project. <br/> specialization
-            in software development, <br/>I have been working with various tools and
-            technologies for past few year. Currently, I am working on full
-            stack javascript development with React, Node, Express and Mongo
-          </p>
-          <p>
-            Hello. I'm Ajeet Chaulagain, full stack developer born in Nepal and
-            currently living in Melbourne. <br/>As a IT graduate with the
-            specialization in software development, I have been working with
-            various tools and technologies for past few year. Currently, I am
-            working on 
-            <p>
-            full stack javascript development with React, Node,
-            Express and Mongo Hello. I'm Ajeet Chaulagain, full stack developer
-            born in Nepal and currently living in Melbourne. 
-            </p>
-            As a IT graduate
-            with the specialization in software development, I have been working
-            with various tools and technologies for past few year. Currently, I
-            am working on full stack javascript development with React, Node,
-            Express and Mongo
-          </p>
+        <h1>About Me</h1>
+        <p>
+          Hello. I'm Ajeet Chaulagain, full stack developer born in Nepal and
+          currently living in Melbourne. As a IT graduate with the
+          specialization in software development, I have been working with
+          various tools and technologies for past few year. Currently, I am
+          working on full stack javascript development with React, Node, Express
+          and Mongo
+        </p>
+        <p>
+          Hello. I'm Ajeet Chaulagain, full stack developer born in Nepal and
+          currently living in Melbourne. As a IT graduate with the
+          specialization in software development, I have been working with
+          various tools and technologies for past few year. Currently, I am
+          working on full stack javascript development with React, Node, Express
+          and Mongo
+        </p>
+        <p>
+          Hello. I'm Ajeet Chaulagain, full stack developer born in Nepal and
+          currently living in Melbourne. As a IT graduate with the
+          specialization in software development, I have been working with
+          various tools and technologies for past few year. </p>
+          
+          <p>Currently, I am working on full stack javascript development with React, Node, Express
+          and Mongo Hello. I'm Ajeet Chaulagain, full stack developer born in
+          Nepal and currently living in Melbourne. As a IT graduate with the
+          specialization in software development, I have been working with
+          various tools and technologies for past few year. Currently, I am
+          working on full stack javascript development with React, Node, Express
+          and Mongo
+        </p>
         </div>
       </ContentLayout>
     </MasterLayout>
