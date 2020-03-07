@@ -29,6 +29,9 @@ module.exports = {
             options: {
               maxWidth: 800,
               withWebp: true,
+              linkImagesToOriginal: false,
+              quality:30,
+              loading:lazy,
             },
           },
         ],
