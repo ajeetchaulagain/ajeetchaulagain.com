@@ -39,9 +39,12 @@
   padding: 0 2rem;
 
   .project-item {
-    background-color: rgba(232, 217, 242, 0.126);
+    background-color: rgba(232, 217, 242, 0.475);
     border-radius: 5px;
-    border: 1px solid rgb(234, 234, 234);
+    
+    border: 1px solid rgb(188, 187, 189);
+    border-top:15px solid #3c3b3c;
+    box-shadow:1px 1px 3px rgba(182, 179, 179, 0.708);
     position: relative;
     overflow: hidden;
     height: 100%;
@@ -53,13 +56,13 @@
       figcaption {
         opacity: 1;
       }
-      background-color: #5c257f;
+      // background-color: #5c257f;
       h2{
-        color: #fff;
+        color: #5c257f;
       }
-      .project-content {
-        color: #fff;
-      }
+      // .project-content {
+      //   // color: #fff;
+      // }
     }
   }
   figure {
@@ -131,7 +134,7 @@
   h2 {
     font-family: "Roboto", sans-serif;
     font-size: 1.25rem !important;
-    // color: #333;
+    color: #333;
     font-weight: 500;
     line-height: 1.4;
     margin-bottom: 5px;
@@ -179,14 +182,13 @@
   }
   @media (max-width: 767px) {
     .project-content {
-      color: #fff;
+      // color: #fff;
       a{
-        color: #fff !important;
+        // color: #fff !important;
       }
     }
     > div{
-      background-color:
-       #5c257f !important;
+      // background-color: #ac9bb6 !important;
     }
   }
   @media (max-width: 567px) {
