@@ -20,9 +20,7 @@ const BlogPage = () => {
   return (
     <MasterLayout>
       <IntroSection>
-        Blog section under work!. Sorry for the inconvenience.
-        <br />
-        Dummy content is populated for now.
+          Checkout my blog content
       </IntroSection>
       <ContentLayout>
         <h1>Articles</h1>

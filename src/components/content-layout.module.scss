@@ -37,7 +37,7 @@
   width: 100%;
   border: 1px solid rgb(235, 233, 233);
   min-height: 50rem;
-  line-height: 1.6;
+  line-height: 1.7;
   font-weight: 400;
   p {
     font-size: 1.1rem;
@@ -113,10 +113,10 @@
   }
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1160px) {
   .content {
-    width: 1180px;
-    padding: 8rem 12rem;
+    width: 1160px;
+    padding: 8rem 11rem;
     // box-shadow:1px 1px 3px rgb(44, 43, 43);
   }
 }

@@ -140,11 +140,12 @@
   }
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (max-width: 600px){
   .header-content {
-    padding:1rem 3rem;
+    padding:1.5rem 2rem;
   }
 }
+
 
 @media only screen and (min-width: 961px) {
   .header-content {
@@ -154,9 +155,10 @@
   }
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1160px) {
   .header-content {
-    width: 1180px;
+    width: 1160px;
+    padding-top:2rem;
     margin: 0 auto;
   }
 }
