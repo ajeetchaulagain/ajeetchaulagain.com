@@ -18,8 +18,8 @@ const Projects = () => {
               technologies
               featuredImage {
                 childImageSharp {
-                  fixed(toFormat: WEBP, width: 410, height:250, quality:40) {
-                    ...GatsbyImageSharpFixed
+                  fluid(toFormat: WEBP, maxWidth: 410, quality:40) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -52,8 +52,8 @@ const Projects = () => {
                   </ul>
                 </div>
                 <Img
-                  fixed={
-                    edge.node.frontmatter.featuredImage.childImageSharp.fixed
+                  fluid={
+                    edge.node.frontmatter.featuredImage.childImageSharp.fluid
                   }
                   alt="profile"
                 />
