@@ -55,7 +55,7 @@ const Projects = () => {
                   fluid={
                     edge.node.frontmatter.featuredImage.childImageSharp.fluid
                   }
-                  alt="profile"
+                  alt="project"
                 />
                 <figcaption>
                   <Link

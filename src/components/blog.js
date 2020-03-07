@@ -5,6 +5,9 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import thumbnail from "../images/ajeet.jpeg"
 
 const Blog = () => {
+
+  
+
   const data = useStaticQuery(graphql`
     query {
       allMdx(filter: { fields: { contentType: { eq: "posts" } } }) {

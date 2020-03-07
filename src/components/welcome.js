@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 
-import img from "../images/ajeet.jpeg"
 
 import welcomeStyles from "./welcome.module.scss"
 
@@ -118,7 +118,23 @@ const particlesParam = {
   retina_detect: true,
 }
 
+
+
 const Welcome = () => {
+
+  export const authorImage = useStaticQuery(graphql`
+  query MyQuery {
+  file(relativePath: {eq: "images/ajeet.jpeg"}) {
+    id
+    childImageSharp {
+      fixed(webpQuality: 30, toFormat: PNG, width: 108) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+}
+`)
+
   return (
     <section className={welcomeStyles.welcomeSection}>
       <Particles
@@ -129,7 +145,7 @@ const Welcome = () => {
       <div className={welcomeStyles.welcomeContent}>
         <div className={welcomeStyles.imageHolder}>
           <span>
-            <img src={img} alt="profile" />
+            <Img fixed={authorImage.file.childImageSharp.fixed} className={welcomeStyles.image} />
           </span>
         </div>
         <h1 className={welcomeStyles.heading}>
