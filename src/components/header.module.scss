@@ -69,11 +69,13 @@
   margin: 0rem 0.5rem;
   text-transform: uppercase;
   justify-content: space-between;
+  font-weight: 600;
 }
 
 .activeList {
   color: rgb(255, 252, 176);
-  text-decoration: underline;
+  // text-decoration: underline;
+
 }
 
 .nav-list li:first-child {

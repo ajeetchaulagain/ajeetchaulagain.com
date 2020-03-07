@@ -47,16 +47,6 @@
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    &::after {
-      content: "";
-      width: 25px;
-      height: 25px;
-      position: absolute;
-      right: 15px;
-      bottom: 15px;
-      background-color: rgba(92, 37, 127, 1);
-      border-radius: 50%;
-    }
     &:hover {
       .project-meta,
       figcaption {
@@ -181,6 +171,7 @@
   .small-paragraph {
     font-size: 0.9rem;
     font-style: italic;
+    margin-bottom: 2px;
   }
   @media (max-width: 991px) {
     padding: 0 1.5rem;
@@ -193,7 +184,8 @@
       }
     }
     > div{
-      background-color: #501583 !important;
+      background-color:
+       #5c257f !important;
     }
   }
   @media (max-width: 567px) {
