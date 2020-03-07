@@ -2,11 +2,14 @@ import React from "react"
 import blogStyles from "./blog.module.scss"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
-import thumbnail from "../images/ajeet.jpeg"
+import Img from "gatsby-image"
+
+import { useAuthorImage } from "./utilities/use-author-image"
+
 
 const Blog = () => {
 
-  
+  const { ...GatsbyImageSharpFixed } = useAuthorImage()
 
   const data = useStaticQuery(graphql`
     query {
@@ -27,6 +30,8 @@ const Blog = () => {
     }
   `)
 
+
+
   return (
     <div className={blogStyles.blogWrapper}>
       {data.allMdx.edges.map(edge => {
@@ -34,7 +39,10 @@ const Blog = () => {
           
           <article className={blogStyles.blogItem}>
             <figure>
-              <img src={thumbnail} />
+              <Img 
+                fixed = {GatsbyImageSharpFixed} 
+                alte="blog-thumbnail"
+                />
             </figure>
 
             <div className={blogStyles.content}>

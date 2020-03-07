@@ -8,10 +8,10 @@ import ContentLayout from "../components/content-layout"
 import blogTemplateStyles from "./blog-template.module.scss"
 
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 // import featured from "../images/ajeet.jpeg"
 
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaDocker } from "react-icons/fa"
+import { FaDocker } from "react-icons/fa"
 
 import { graphql } from "gatsby"
 

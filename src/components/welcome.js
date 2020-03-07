@@ -7,6 +7,8 @@ import welcomeStyles from "./welcome.module.scss"
 
 import Particles from "react-particles-js"
 
+import { useAuthorImage } from "./utilities/use-author-image"
+
 const particlesParam = {
   particles: {
     number: {
@@ -122,18 +124,7 @@ const particlesParam = {
 
 const Welcome = () => {
 
-  const authorImage = useStaticQuery(graphql`
-  query MyQuery {
-  file(relativePath: {eq: "images/ajeet.jpeg"}) {
-    id
-    childImageSharp {
-      fixed(webpQuality: 30, toFormat: PNG, width: 108) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-  }
-}
-`)
+  const { ...GatsbyImageSharpFixed } = useAuthorImage()
 
   return (
     <section className={welcomeStyles.welcomeSection}>
@@ -145,7 +136,7 @@ const Welcome = () => {
       <div className={welcomeStyles.welcomeContent}>
         <div className={welcomeStyles.imageHolder}>
           <span>
-            <Img fixed={authorImage.file.childImageSharp.fixed} className={welcomeStyles.image} />
+            <Img fixed={GatsbyImageSharpFixed} className={welcomeStyles.image} />
           </span>
         </div>
         <h1 className={welcomeStyles.heading}>
@@ -155,7 +146,7 @@ const Welcome = () => {
         <Link to="/about" className={welcomeStyles.welcomeButton}>
           More about me
         </Link>
-        <p>Beta Site 2</p>
+        <p>Beta Site 3</p>
       </div>
     </section>
   )
