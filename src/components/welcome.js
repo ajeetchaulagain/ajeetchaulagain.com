@@ -122,7 +122,7 @@ const particlesParam = {
 
 const Welcome = () => {
 
-  export const authorImage = useStaticQuery(graphql`
+  const authorImage = useStaticQuery(graphql`
   query MyQuery {
   file(relativePath: {eq: "images/ajeet.jpeg"}) {
     id
@@ -155,7 +155,7 @@ const Welcome = () => {
         <Link to="/about" className={welcomeStyles.welcomeButton}>
           More about me
         </Link>
-        <p>Beta Site</p>
+        <p>Beta Site 2</p>
       </div>
     </section>
   )
