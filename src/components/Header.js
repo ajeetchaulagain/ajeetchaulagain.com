@@ -73,26 +73,26 @@ const Header = () => {
             <li>
               <a
                 href="https://www.facebook.com/chaulagain.ajeet"
-                target="_blank"
+                target="_blank" rel="noopener"
               >
                 <FaFacebookF />
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/ajeetsweb" target="_blank">
+              <a href="https://twitter.com/ajeetsweb" target="_blank" rel="noopener">
                 <FaTwitter />
               </a>
             </li>
             <li>
               <a
                 href="https://www.linkedin.com/in/ajeet-chaulagain/"
-                target="_blank"
+                target="_blank" rel="noopener"
               >
                 <FaLinkedinIn />
               </a>
             </li>
             <li>
-              <a href="https://github.com/ajeetchaulagain" target="_blank">
+              <a href="https://github.com/ajeetchaulagain" target="_blank" rel="noopener">
                 <FaGithub />
               </a>
             </li>
