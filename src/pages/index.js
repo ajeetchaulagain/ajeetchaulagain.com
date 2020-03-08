@@ -7,7 +7,6 @@ import ContentLayout from "../components/content-layout"
 import { Link } from "gatsby"
 import { FaBook } from "react-icons/fa"
 
-
 export const indexHeadingStyle = {
   marginBottom: ".5rem",
 }

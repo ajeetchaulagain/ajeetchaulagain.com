@@ -1,30 +1,29 @@
 .content-section {
-  > div{
-  position: relative;
-  &::after,
-  &::before {
-    content: "";
-    color:white;
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    right: 30px;
-    bottom: 30px;
-    background-color: rgba(92, 37, 127, 1);
-    border-radius: 50%;
-    
-  }
-  &::after{
-    border: 1px solid rgba(255,255,255,.75);
-  }
-  &::before{
-    width: 50px;
-    height: 50px;
-    opacity: .8;
-    // background-color: rgb(94, 94, 92);
-    right: 35px;
-    bottom: 31px;
-  }
+  > div {
+    position: relative;
+    &::after,
+    &::before {
+      content: "";
+      color: white;
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+      background-color: rgba(92, 37, 127, 1);
+      border-radius: 50%;
+    }
+    &::after {
+      border: 1px solid rgba(255, 255, 255, 0.75);
+    }
+    &::before {
+      width: 50px;
+      height: 50px;
+      opacity: 0.8;
+      // background-color: rgb(94, 94, 92);
+      right: 35px;
+      bottom: 31px;
+    }
   }
   background-color: rgb(250, 248, 242);
   width: 100%;
@@ -64,20 +63,20 @@
     font-family: "Roboto", sans-serif;
     font-weight: 700 !important;
     font-size: 1.4rem;
-    margin-bottom:.3rem;
-    margin-top:2.5rem;
+    margin-bottom: 0.3rem;
+    margin-top: 2.5rem;
     // text-decoration:underline;
     @media only screen and (max-width: 599px) {
       font-size: 1.3rem;
     }
   }
 
-  h3{
+  h3 {
     font-family: "Roboto", sans-serif;
-    font-size:1.3rem;
+    font-size: 1.3rem;
     font-weight: 700;
-    margin-bottom:.3rem;
-    margin-top:2rem;
+    margin-bottom: 0.3rem;
+    margin-top: 2rem;
     @media only screen and (max-width: 599px) {
       font-size: 1.2rem;
     }
@@ -85,10 +84,9 @@
 
   @media (max-width: 960px) {
     padding: 2.5rem 1.2rem 5rem;
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
   }
 }
-
 
 .content a {
   color: #5c257f;

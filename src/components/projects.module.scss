@@ -42,10 +42,10 @@
   .project-item {
     background-color: rgb(245, 245, 255);
     border-radius: 3px;
-    
+
     border: 1px solid rgb(188, 187, 189);
-    border-top:15px solid #3c3b3c;
-    box-shadow:1px 1px 3px rgba(182, 179, 179, 0.708);
+    border-top: 15px solid #3c3b3c;
+    box-shadow: 1px 1px 3px rgba(182, 179, 179, 0.708);
     position: relative;
     overflow: hidden;
     height: 100%;
@@ -88,7 +88,7 @@
       transition: all 0.3s ease-in-out;
       z-index: 1;
       a {
-        padding: .5rem 1rem;
+        padding: 0.5rem 1rem;
         font-size: 1rem;
         font-weight: 500;
         i {
@@ -133,7 +133,7 @@
     color: #333;
     font-weight: 600 !important;
     line-height: 1.3;
-    margin-top:0rem !important;
+    margin-top: 0rem !important;
     margin-bottom: 5px !important;
     @media (max-width: 991px) {
       font-size: 1.2rem;
@@ -180,11 +180,11 @@
   @media (max-width: 767px) {
     .project-content {
       // color: #fff;
-      a{
+      a {
         // color: #fff !important;
       }
     }
-    > div{
+    > div {
       // background-color: #ac9bb6 !important;
     }
   }

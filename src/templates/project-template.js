@@ -9,7 +9,6 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import { graphql } from "gatsby"
 
-
 export const query = graphql`
   query($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {

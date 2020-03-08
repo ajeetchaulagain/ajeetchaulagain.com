@@ -38,28 +38,28 @@ const BlogTemplate = props => {
         <b>Blog Article</b>
       </IntroSection>
       <ContentLayout>
-      <div className={blogTemplateStyles.postWrapper}>
-        <header className={blogTemplateStyles.postHeader}>
-          <div className={blogTemplateStyles.headerContent}>
-            <h1 style={blogTitle}>{props.data.mdx.frontmatter.title}</h1>
-            <div className={blogTemplateStyles.postMeta}>
-              <span>
-                Published on: <time>{props.data.mdx.frontmatter.date}</time> /
-                By: Ajeet Chaulagain
-              </span>
-              <ul className={blogTemplateStyles.tagList}>
-                {props.data.mdx.frontmatter.tags.map(tag => {
-                  return <li>{tag}</li>
-                })}
-              </ul>
+        <div className={blogTemplateStyles.postWrapper}>
+          <header className={blogTemplateStyles.postHeader}>
+            <div className={blogTemplateStyles.headerContent}>
+              <h1 style={blogTitle}>{props.data.mdx.frontmatter.title}</h1>
+              <div className={blogTemplateStyles.postMeta}>
+                <span>
+                  Published on: <time>{props.data.mdx.frontmatter.date}</time> /
+                  By: Ajeet Chaulagain
+                </span>
+                <ul className={blogTemplateStyles.tagList}>
+                  {props.data.mdx.frontmatter.tags.map(tag => {
+                    return <li>{tag}</li>
+                  })}
+                </ul>
+              </div>
             </div>
-          </div>
-          <div className={blogTemplateStyles.featuredIcons}>
-            <FaDocker />
-          </div>
-        </header>
+            <div className={blogTemplateStyles.featuredIcons}>
+              <FaDocker />
+            </div>
+          </header>
 
-        <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
+          <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
         </div>
       </ContentLayout>
     </MasterLayout>

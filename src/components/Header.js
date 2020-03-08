@@ -12,7 +12,6 @@ import {
 import headerStyles from "./header.module.scss"
 
 const Header = () => {
-
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -72,7 +71,10 @@ const Header = () => {
         <div>
           <ul className={headerStyles.socialMediaLists}>
             <li>
-              <a href="https://www.facebook.com/chaulagain.ajeet" target="_blank">
+              <a
+                href="https://www.facebook.com/chaulagain.ajeet"
+                target="_blank"
+              >
                 <FaFacebookF />
               </a>
             </li>
@@ -82,7 +84,10 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/ajeet-chaulagain/" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/ajeet-chaulagain/"
+                target="_blank"
+              >
                 <FaLinkedinIn />
               </a>
             </li>
@@ -92,7 +97,10 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/chaulagainajeet/" target="_blank">
+              <a
+                href="https://www.instagram.com/chaulagainajeet/"
+                target="_blank"
+              >
                 <FaInstagram />
               </a>
             </li>

@@ -1,58 +1,58 @@
-.resume-content{
-    position: relative;
-    padding-left: 5rem;
+.resume-content {
+  position: relative;
+  padding-left: 5rem;
 }
-.resume-content::before{
-    position: absolute;
-    content: '';
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 5px;
-    background-color: #5c257f;
-}   
-.resume-content ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.resume-content::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5px;
+  background-color: #5c257f;
 }
-.resume-content li{
-    margin-bottom: 20px;
-    margin-left: 0;
-    border-bottom: 1px dashed #5c257f; 
-    padding-bottom: 10px;
+.resume-content ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-.resume-content li:last-child{
-    margin-bottom: 0;
-    border: none;
-    padding: 0;
+.resume-content li {
+  margin-bottom: 20px;
+  margin-left: 0;
+  border-bottom: 1px dashed #5c257f;
+  padding-bottom: 10px;
+}
+.resume-content li:last-child {
+  margin-bottom: 0;
+  border: none;
+  padding: 0;
 }
 .resume-content h2,
 .resume-content h3,
 .resume-content h4,
 .resume-content h,
 .resume-content p,
-.resume-content time{
-    margin: 0 0 10px 0;
-    // color: #fff;
+.resume-content time {
+  margin: 0 0 10px 0;
+  // color: #fff;
 }
-.resume-item{
-    margin-bottom: 1.75rem;
-    background-color: rgb(245, 245, 255);
-    border-top: 3px solid #5c257f;
-    align-items: center;
-    border-radius: 0;
-    color:black;
-    padding: 2rem;
-    position: relative;
+.resume-item {
+  margin-bottom: 1.75rem;
+  background-color: rgb(245, 245, 255);
+  border-top: 3px solid #5c257f;
+  align-items: center;
+  border-radius: 0;
+  color: black;
+  padding: 2rem;
+  position: relative;
 }
 .resume-item::before {
-    content: '';
-    position: absolute;
-    top: -3px;
-    width: 50%;
-    left: -80px;
-    height: 3px;
-    background-color: #5c257f;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: -3px;
+  width: 50%;
+  left: -80px;
+  height: 3px;
+  background-color: #5c257f;
+  z-index: -1;
 }

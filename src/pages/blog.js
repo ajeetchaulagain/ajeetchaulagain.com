@@ -5,7 +5,6 @@ import ContentLayout from "../components/content-layout"
 import Blog from "../components/blog"
 
 const BlogPage = () => {
-  
   const searchBoxStyle = {
     width: "100%",
     padding: "1rem",
@@ -20,9 +19,7 @@ const BlogPage = () => {
 
   return (
     <MasterLayout>
-      <IntroSection>
-          Checkout my blog content
-      </IntroSection>
+      <IntroSection>Checkout my blog content</IntroSection>
       <ContentLayout>
         <h1>Articles</h1>
         <input

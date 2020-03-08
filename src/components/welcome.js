@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 
-
 import welcomeStyles from "./welcome.module.scss"
 
 import Particles from "react-particles-js"
@@ -120,10 +119,7 @@ const particlesParam = {
   retina_detect: true,
 }
 
-
-
 const Welcome = () => {
-
   const { ...GatsbyImageSharpFixed } = useAuthorImage()
 
   return (
@@ -136,7 +132,10 @@ const Welcome = () => {
       <div className={welcomeStyles.welcomeContent}>
         <div className={welcomeStyles.imageHolder}>
           <span>
-            <Img fixed={GatsbyImageSharpFixed} className={welcomeStyles.image} />
+            <Img
+              fixed={GatsbyImageSharpFixed}
+              className={welcomeStyles.image}
+            />
           </span>
         </div>
         <h1 className={welcomeStyles.heading}>

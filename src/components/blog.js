@@ -6,9 +6,7 @@ import Img from "gatsby-image"
 
 import { useAuthorImage } from "./utilities/use-author-image"
 
-
 const Blog = () => {
-
   const { ...GatsbyImageSharpFixed } = useAuthorImage()
 
   const data = useStaticQuery(graphql`
@@ -30,19 +28,13 @@ const Blog = () => {
     }
   `)
 
-
-
   return (
     <div className={blogStyles.blogWrapper}>
       {data.allMdx.edges.map(edge => {
         return (
-          
           <article className={blogStyles.blogItem}>
             <figure>
-              <Img 
-                fixed = {GatsbyImageSharpFixed} 
-                alte="blog-thumbnail"
-                />
+              <Img fixed={GatsbyImageSharpFixed} alte="blog-thumbnail" />
             </figure>
 
             <div className={blogStyles.content}>

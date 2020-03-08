@@ -21,7 +21,7 @@ Online Speed monitoring tools to determine the page speed of your site. Online S
 
 ## Architecture
 
-Here goes the architecture of the system 
+Here goes the architecture of the system
 
 ## Skills I have learned from the project
 

@@ -8,7 +8,8 @@ A simple Java based keyword search system utilising various technologies such as
 Java XML, Java FX, Advance data structures such as HashMap, HashSet and ArrayList.
 
 ## Architecture
-The architecture of system depens upon the 
+
+The architecture of system depens upon the
 
 ## Skills I have learned from the project
 
