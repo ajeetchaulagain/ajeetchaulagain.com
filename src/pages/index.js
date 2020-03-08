@@ -26,7 +26,7 @@ const IndexPage = () => {
     <MasterLayout>
       <Welcome />
 
-      { /* 
+      
       <ContentLayout>
         <h1 style={indexHeadingStyle}>Projects</h1>
         <p style={indexSubHeadingStyle}>
@@ -37,8 +37,6 @@ const IndexPage = () => {
           View All Projects
         </Link>
       </ContentLayout>
-
-      */ }
     
       <ContentLayout>
         <h1 style={indexHeadingStyle}>
