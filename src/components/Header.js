@@ -99,7 +99,7 @@ const Header = () => {
             <li>
               <a
                 href="https://www.instagram.com/chaulagainajeet/"
-                target="_blank"
+                target="_blank" rel="noopener"
               >
                 <FaInstagram />
               </a>
