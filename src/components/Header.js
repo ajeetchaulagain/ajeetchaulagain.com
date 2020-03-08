@@ -62,7 +62,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/skills" activeClassName={headerStyles.activeList}>
+              <Link to="/resume" activeClassName={headerStyles.activeList}>
                 Resume
               </Link>
             </li>
