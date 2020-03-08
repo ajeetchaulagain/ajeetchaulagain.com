@@ -34,14 +34,15 @@
 .resume-content p,
 .resume-content time{
     margin: 0 0 10px 0;
-    color: #fff;
+    // color: #fff;
 }
 .resume-item{
     margin-bottom: 1.75rem;
-    background-color: #5c257f;
-    border: 3px solid #5c257f;
+    background-color: rgb(245, 245, 255);
+    border-top: 3px solid #5c257f;
     align-items: center;
     border-radius: 0;
+    color:black;
     padding: 2rem;
     position: relative;
 }

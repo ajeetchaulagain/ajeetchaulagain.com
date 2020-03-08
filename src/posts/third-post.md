@@ -15,9 +15,9 @@ tags:
   ]
 ---
 
-Hi everyone. Welcome to my site. In this page, I wil be talking about my site and some intro of me. 
+Hi everyone. Welcome to my site. In this page, I wil be talking about my site and some intro of me. Hi everyone. Welcome to my site. In this page, I wil be talking about my site and some intro of me. Hi everyone. 
 
-Hi everyone. Welcome to my site. In this page, I wil be talking about my site and some intro of me. Hi everyone. 
+Also I would be talking about the key concepts of material design
 
 ## This is heading two -h2
 Welcome to my site. ***In this page***, I wil be talking about my site and some intro of me.mnHi everyone. Welcome to my site. In this page, I wil be tclalking about my site and some intro of me. Hi everyone. Welcome to my site. 

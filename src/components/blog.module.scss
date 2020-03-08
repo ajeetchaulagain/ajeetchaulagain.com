@@ -8,14 +8,20 @@
     h2 {
       text-decoration: underline;
     }
+
   }
+
+
   article {
     margin-bottom: 1.75rem;
     background-color: rgb(245, 245, 255);
   }
 
   .blog-item {
+
+    // background-color: green;
     display: flex;
+  
 
     @media only screen and (max-width: 599px) {
 
@@ -58,6 +64,7 @@
     padding: 0rem;
     h2 {
       font-weight: 700;
+      margin-top:0rem;
       line-height: 1.25;
       a {
         color: #333;

@@ -5,6 +5,7 @@ import ContentLayout from "../components/content-layout"
 import Blog from "../components/blog"
 
 const BlogPage = () => {
+  
   const searchBoxStyle = {
     width: "100%",
     padding: "1rem",

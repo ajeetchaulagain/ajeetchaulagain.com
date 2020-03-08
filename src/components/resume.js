@@ -6,20 +6,22 @@ const Resume = () =>{
 
     return (
         <div className="resume-wrapper">
+        <br/>
+        <br/>
             <div className={resumeStyles.resumeContent}>
                 <div className={resumeStyles.resumeItem}>
-                <h3>Education</h3>
+                <h2>Education</h2>
                 <ul>
                     <li>
-                        <h4>Masters Degree</h4>
-                        <h4>University Of Melbourne</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, suscipit!</p>
+                        <h4>Master of Information Technology(Professional Computing)</h4>
+                        <h4>Swinburne University of Technology</h4>
+                        <p>I completed my master degree here</p>
                     </li>
                 </ul>
                 </div>
 
                 <div className={resumeStyles.resumeItem}>
-					<h3>Work Experience</h3>
+					<h2>Work Experience</h2>
 					<ul>
 						<li>
 							<h3>App Development <time>2018 - 2019</time></h3>

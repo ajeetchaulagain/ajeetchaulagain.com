@@ -72,27 +72,27 @@ const Header = () => {
         <div>
           <ul className={headerStyles.socialMediaLists}>
             <li>
-              <a href="#">
+              <a href="https://www.facebook.com/chaulagain.ajeet" target="_blank">
                 <FaFacebookF />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://twitter.com/ajeetsweb" target="_blank">
                 <FaTwitter />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://www.linkedin.com/in/ajeet-chaulagain/" target="_blank">
                 <FaLinkedinIn />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://github.com/ajeetchaulagain" target="_blank">
                 <FaGithub />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://www.instagram.com/chaulagainajeet/" target="_blank">
                 <FaInstagram />
               </a>
             </li>

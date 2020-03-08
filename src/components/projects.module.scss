@@ -40,7 +40,7 @@
   padding: 0 2rem;
 
   .project-item {
-    background-color: rgba(232, 217, 242, 0.475);
+    background-color: rgb(245, 245, 255);
     border-radius: 3px;
     
     border: 1px solid rgb(188, 187, 189);
@@ -52,18 +52,13 @@
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+
     &:hover {
       .project-meta,
       figcaption {
         opacity: 1;
       }
       // background-color: #5c257f;
-      h2{
-        color: #5c257f;
-      }
-      // .project-content {
-      //   // color: #fff;
-      // }
     }
   }
   figure {
@@ -134,13 +129,14 @@
   }
   h2 {
     font-family: "Roboto", sans-serif;
-    font-size: 1.25rem !important;
+    font-size: 1.2rem !important;
     color: #333;
-    font-weight: 500;
+    font-weight: 600 !important;
     line-height: 1.4;
+    margin-top:0rem;
     margin-bottom: 5px;
     @media (max-width: 991px) {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
     }
   }
 

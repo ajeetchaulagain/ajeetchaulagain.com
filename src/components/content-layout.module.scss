@@ -39,11 +39,11 @@
   width: 100%;
   border: 1px solid rgb(235, 233, 233);
   min-height: 50rem;
-  line-height: 1.7;
+  line-height: 1.75;
   font-weight: 400;
   p {
     font-size: 1.1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.4rem;
     // text-justify: inter-character;
     // text-align: justify;
   }
@@ -62,22 +62,30 @@
 
   h2 {
     font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
+    font-weight: 700 !important;
+    font-size: 1.4rem;
+    margin-bottom:.3rem;
+    margin-top:2.5rem;
+    // text-decoration:underline;
     @media only screen and (max-width: 599px) {
-      font-size: 1.25rem;
-      font-weight: 600;
+      font-size: 1.3rem;
     }
   }
 
   h3{
     font-family: "Roboto", sans-serif;
-
+    font-size:1.3rem;
+    font-weight: 700;
+    margin-bottom:.3rem;
+    margin-top:2rem;
+    @media only screen and (max-width: 599px) {
+      font-size: 1.2rem;
+    }
   }
 
   @media (max-width: 960px) {
-    padding: 2rem 1.5rem 3rem;
-    margin-bottom:2rem;
+    padding: 2rem 1rem 3rem;
+    margin-bottom:1rem;
   }
 }
 
@@ -104,7 +112,7 @@
 
 @media only screen and (min-width: 600px) {
   .content {
-    padding: 3rem 3rem;
+    padding: 4rem 3rem;
   }
 }
 
