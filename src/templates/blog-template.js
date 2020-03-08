@@ -38,6 +38,7 @@ const BlogTemplate = props => {
         <b>Blog Article</b>
       </IntroSection>
       <ContentLayout>
+      <div className={blogTemplateStyles.postWrapper}>
         <header className={blogTemplateStyles.postHeader}>
           <div className={blogTemplateStyles.headerContent}>
             <h1 style={blogTitle}>{props.data.mdx.frontmatter.title}</h1>
@@ -59,6 +60,7 @@ const BlogTemplate = props => {
         </header>
 
         <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
+        </div>
       </ContentLayout>
     </MasterLayout>
   )
