@@ -132,9 +132,9 @@
     font-size: 1.2rem !important;
     color: #333;
     font-weight: 600 !important;
-    line-height: 1.4;
-    margin-top:0rem;
-    margin-bottom: 5px;
+    line-height: 1.3;
+    margin-top:0rem !important;
+    margin-bottom: 5px !important;
     @media (max-width: 991px) {
       font-size: 1.2rem;
     }

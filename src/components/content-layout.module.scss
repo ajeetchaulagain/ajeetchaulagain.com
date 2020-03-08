@@ -34,7 +34,7 @@
   }
 }
 .content {
-  padding: 1rem;
+  // padding: 10rem 1rem;
   background-color: white;
   width: 100%;
   border: 1px solid rgb(235, 233, 233);
@@ -84,7 +84,7 @@
   }
 
   @media (max-width: 960px) {
-    padding: 2rem 1rem 3rem;
+    padding: 2.5rem 1.2rem 5rem;
     margin-bottom:1rem;
   }
 }
