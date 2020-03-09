@@ -1,6 +1,8 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
+import { Helmet } from "react-helmet"
+
 import {
   FaFacebookF,
   FaTwitter,
@@ -32,6 +34,14 @@ const Header = () => {
 
   return (
     <header className={headerStyles.mainHeader}>
+
+    <Helmet>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
+      />
+    </Helmet>
+    
       <div className={headerStyles.headerContent}>
         <div className={headerStyles.logoSection}>
           <h1>
