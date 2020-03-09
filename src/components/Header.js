@@ -11,7 +11,7 @@ import {
   FaInstagram,
 } from "react-icons/fa"
 
-import Logo from "../images/logo.svg";
+import Logo from "../images/logo.svg"
 
 import headerStyles from "./header.module.scss"
 
@@ -28,25 +28,25 @@ const Header = () => {
   `)
 
   const logoStyle = {
-    height:"40px",
-    marginRight:"10px",
+    height: "35px",
+    marginRight: "5px",
+    marginTop: "5px",
   }
 
   return (
     <header className={headerStyles.mainHeader}>
+      <Helmet>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
+        />
+      </Helmet>
 
-    <Helmet>
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
-      />
-    </Helmet>
-    
       <div className={headerStyles.headerContent}>
         <div className={headerStyles.logoSection}>
           <h1>
             <Link to="/" className={headerStyles.title}>
-            <Logo style={logoStyle} />
+              <Logo style={logoStyle} />
               {data.site.siteMetadata.title}
             </Link>
           </h1>
@@ -91,33 +91,44 @@ const Header = () => {
             <li>
               <a
                 href="https://www.facebook.com/chaulagain.ajeet"
-                target="_blank" rel="noopener"
+                target="_blank"
+                rel="noopener"
               >
                 <FaFacebookF />
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/ajeetsweb" target="_blank" rel="noopener">
+              <a
+                href="https://twitter.com/ajeetsweb"
+                target="_blank"
+                rel="noopener"
+              >
                 <FaTwitter />
               </a>
             </li>
             <li>
               <a
                 href="https://www.linkedin.com/in/ajeet-chaulagain/"
-                target="_blank" rel="noopener"
+                target="_blank"
+                rel="noopener"
               >
                 <FaLinkedinIn />
               </a>
             </li>
             <li>
-              <a href="https://github.com/ajeetchaulagain" target="_blank" rel="noopener">
+              <a
+                href="https://github.com/ajeetchaulagain"
+                target="_blank"
+                rel="noopener"
+              >
                 <FaGithub />
               </a>
             </li>
             <li>
               <a
                 href="https://www.instagram.com/chaulagainajeet/"
-                target="_blank" rel="noopener"
+                target="_blank"
+                rel="noopener"
               >
                 <FaInstagram />
               </a>

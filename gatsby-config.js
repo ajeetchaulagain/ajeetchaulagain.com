@@ -38,12 +38,12 @@ module.exports = {
     },
 
     {
-    resolve: "gatsby-plugin-react-svg",
-    options: {
-      rule: {
-        // include: `${__dirname}/src/`
-      }
-    }
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          // include: `${__dirname}/src/`
+        },
+      },
     },
 
     `gatsby-plugin-react-helmet`,

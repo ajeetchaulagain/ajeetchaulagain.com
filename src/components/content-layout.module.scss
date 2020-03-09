@@ -101,6 +101,10 @@
   text-decoration: none;
 }
 
+.content img[alt="ajeet-about"] {
+  width: 30px;
+}
+
 // / Media Queries------------------------------------------------
 @media only screen and (max-width: 599px) {
   .content p {

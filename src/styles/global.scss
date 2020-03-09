@@ -241,3 +241,14 @@ em {
   font-weight: 600;
   font-style: inherit;
 }
+
+// List Styling
+
+// About page image styling
+
+img[alt="ajeet-about"] {
+  width: 300px !important;
+  height: auto !important;
+  display: block;
+  float: right;
+}

@@ -44,12 +44,10 @@ Et aliqua elit id culpa commodo elit sunt aliqua proident exercitation culpa ali
 
 Fugiat adipisicing cupidatat qui culpa voluptate ea pariatur nulla ad officia. Nisi elit enim ad proident non aliqua in incididunt. Tempor enim anim aliquip culpa. Labore dolor proident reprehenderit cillum dolor consectetur incididunt velit elit consectetur. Cupidatat consectetur velit quis qui.
 
-
 ```javascript
 var s = "JavaScript syntax highlighting"
 alert(s)
 ```
-
 
 ```python
 s = "Python syntax highlighting"
@@ -62,4 +60,3 @@ print s
 | -------- | --------- | ---------- |
 | _Still_  | `renders` | **nicely** |
 | 1        | 2         | 3          |
-

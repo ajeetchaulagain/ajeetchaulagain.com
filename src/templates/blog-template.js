@@ -4,13 +4,8 @@ import React from "react"
 import MasterLayout from "../components/master-layout"
 import IntroSection from "../components/intro-section"
 import ContentLayout from "../components/content-layout"
-
 import blogTemplateStyles from "./blog-template.module.scss"
-
 import { MDXRenderer } from "gatsby-plugin-mdx"
-// import Img from "gatsby-image"
-// import featured from "../images/ajeet.jpeg"
-
 import { FaDocker } from "react-icons/fa"
 
 import { graphql } from "gatsby"
@@ -32,6 +27,7 @@ const BlogTemplate = props => {
   const blogTitle = {
     lineHeight: "1.2",
   }
+
   return (
     <MasterLayout>
       <IntroSection>

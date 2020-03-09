@@ -2,24 +2,34 @@ import React from "react"
 import MasterLayout from "../components/master-layout"
 import IntroSection from "../components/intro-section"
 import ContentLayout from "../components/content-layout"
-import { Link } from "gatsby"
+import About from "../components/about"
 
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import { Link, useStaticQuery } from "gatsby"
+
+import Img from "gatsby-image"
 
 const AboutPage = () => {
+  const data = useStaticQuery(
+    graphql`
+      query MyQuery {
+        file(relativePath: { eq: "images/about-ajeet.jpg" }) {
+          childImageSharp {
+            fixed(webpQuality: 100, toFormat: WEBP, width: 200) {
+              ...GatsbyImageSharpFixed
+            }
+            id
+          }
+        }
+      }
+    `
+  )
+
   return (
     <MasterLayout>
       <IntroSection>Thankyou for stepping by to know me</IntroSection>
 
       <ContentLayout>
-          <h1>About Me</h1>
-           <p>
-           <em>
-           Hello. I'm Ajeet Chaulagain, a full stack developer currently living in Melbourne, Australia and 
-           originally from Kathmandu, Nepal. I have got a passion for programming and
-            developing software products that will have great value to the end-user.
-          </em>
-          </p> 
+        <About />
       </ContentLayout>
     </MasterLayout>
   )
