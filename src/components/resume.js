@@ -44,6 +44,12 @@ const Resume = () => {
                 suscipit!
               </p>
             </li>
+
+            <li>
+              <h3>Web Designing Course Facilitator</h3>
+              <h4>Insight Academy</h4>
+              <p>I facilitated web designing course for school level students.</p>
+            </li>
           </ul>
         </div>
       </div>

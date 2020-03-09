@@ -9,6 +9,8 @@ import {
   FaInstagram,
 } from "react-icons/fa"
 
+import Logo from "../images/logo.svg";
+
 import headerStyles from "./header.module.scss"
 
 const Header = () => {
@@ -23,12 +25,18 @@ const Header = () => {
     }
   `)
 
+  const logoStyle = {
+    height:"40px",
+    marginRight:"10px",
+  }
+
   return (
     <header className={headerStyles.mainHeader}>
       <div className={headerStyles.headerContent}>
         <div className={headerStyles.logoSection}>
           <h1>
             <Link to="/" className={headerStyles.title}>
+            <Logo style={logoStyle} />
               {data.site.siteMetadata.title}
             </Link>
           </h1>

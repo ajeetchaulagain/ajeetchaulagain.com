@@ -9,7 +9,7 @@ Java XML, Java FX, Advance data structures such as HashMap, HashSet and ArrayLis
 
 ## Architecture
 
-The architecture of system depens upon the
+XML Keyword System was developed in JavaFX, JavaXML and Advance data structures. Further, I would like to know about the   
 
 ## Skills I have learned from the project
 

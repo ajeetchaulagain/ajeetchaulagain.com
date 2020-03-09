@@ -12,16 +12,14 @@ const AboutPage = () => {
       <IntroSection>Thankyou for stepping by to know me</IntroSection>
 
       <ContentLayout>
-        <div>
           <h1>About Me</h1>
-          <p>
-            Hi everyone. Welcome to my site. In this page, I wil be talking
-            about my site and some intro of me. Hi everyone. Welcome to my site.
-            In this page, I wil be talking about my site and some intro of me.
-            Hi everyone.Also I would be talking about the key concepts of
-            material design
-          </p>
-        </div>
+           <p>
+           <em>
+           Hello. I'm Ajeet Chaulagain, a full stack developer currently living in Melbourne, Australia and 
+           originally from Kathmandu, Nepal. I have got a passion for programming and
+            developing software products that will have great value to the end-user.
+          </em>
+          </p> 
       </ContentLayout>
     </MasterLayout>
   )
