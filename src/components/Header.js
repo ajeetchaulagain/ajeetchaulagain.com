@@ -58,11 +58,7 @@ const Header = () => {
                 Home
               </Link>
             </li>
-            <li>
-              <Link to="/about" activeClassName={headerStyles.activeList}>
-                About
-              </Link>
-            </li>
+
             <li>
               <Link to="/projects" activeClassName={headerStyles.activeList}>
                 Portfolio
@@ -71,6 +67,11 @@ const Header = () => {
             <li>
               <Link to="/blog" activeClassName={headerStyles.activeList}>
                 Blog
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" activeClassName={headerStyles.activeList}>
+                About
               </Link>
             </li>
             <li>
