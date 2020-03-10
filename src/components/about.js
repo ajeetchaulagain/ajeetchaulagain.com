@@ -9,7 +9,7 @@ const About = () => {
       query AboutPageAuthorImage {
         file(relativePath: { eq: "images/ajeet.png" }) {
           childImageSharp {
-            fixed(webpQuality: 100, toFormat: WEBP, width:125) {
+            fixed(webpQuality: 100, toFormat: WEBP, width: 125) {
               ...GatsbyImageSharpFixed
             }
             id
@@ -30,23 +30,23 @@ const About = () => {
           products that will have great value to the end-user.
         </p>
         <div className={aboutStyles.imageWrapper}>
-        <Img
-          fixed={data.file.childImageSharp.fixed}
-          className={aboutStyles.aboutImage}
-        />
+          <Img
+            fixed={data.file.childImageSharp.fixed}
+            className={aboutStyles.aboutImage}
+          />
         </div>
       </div>
 
       <h2>Working Expertise</h2>
       <ul>
         <li>
-          Web application development with <em>React, Node, Express, MongoDB,
-          Gatsby, and GraphQL.</em>
+          Web application development with{" "}
+          <em>React, Node, Express, MongoDB, Gatsby, and GraphQL.</em>
         </li>
         <li>Native Android application development (in Java)</li>
         <li>
-          Working knowledge of tools associated with <em>incorporating CI/CD
-          pipeline in a project.</em>
+          Working knowledge of tools associated with{" "}
+          <em>incorporating CI/CD pipeline in a project.</em>
         </li>
       </ul>
       <br />
@@ -57,8 +57,8 @@ const About = () => {
         knowledge.
       </p>
       <p>
-        <h3>Need a developer for your next project? </h3>I would be more than happy to do your project.{" "}
-        <Link to="/contact">Say a hello to me</Link>
+        <h3>Need a developer for your next project? </h3>I would be more than
+        happy to do your project. <Link to="/contact">Say a hello to me</Link>
       </p>
 
       <h2>About this Website</h2>
@@ -72,9 +72,9 @@ const About = () => {
       </p>
       <p>
         I hope my articles will somehow help the beginner to start their career
-        in software development and programming. Please don't forget to subscirbe me for latest articles 
+        in software development and programming. Please don't forget to
+        subscirbe me for latest articles
       </p>
-      
     </div>
   )
 }

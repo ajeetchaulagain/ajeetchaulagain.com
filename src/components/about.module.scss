@@ -1,5 +1,5 @@
 .wrapper {
-  h2{
+  h2 {
     // color:rgb(91, 91, 91);
   }
   .flex-wrapper {
@@ -11,12 +11,12 @@
       flex-direction: column;
       // justify-content: center;
       align-items: center;
-      .image-wrapper{
-        order:1;
-        padding:2rem;
+      .image-wrapper {
+        order: 1;
+        padding: 2rem;
       }
-      p{
-        order:2;
+      p {
+        order: 2;
       }
     }
 
@@ -26,10 +26,8 @@
       display: block;
       position: absolute;
       box-shadow: 1px 1px 5px rgb(66, 13, 92);
-      border-radius:100px;
+      border-radius: 100px;
     }
-    
-
   }
 
   ul {
@@ -37,9 +35,9 @@
     font-size: 1.1rem;
     font-weight: 400;
     list-style-type: disc;
-    
-    li{
-      margin-bottom:.2rem;
+
+    li {
+      margin-bottom: 0.2rem;
     }
     // font-style: italic;
   }
