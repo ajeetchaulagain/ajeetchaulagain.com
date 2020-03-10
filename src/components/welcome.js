@@ -145,7 +145,7 @@ const Welcome = () => {
         <Link to="/about" className={welcomeStyles.welcomeButton}>
           More about me
         </Link>
-        <p>Beta Site 9</p>
+        <p>Beta Site 10</p>
       </div>
     </section>
   )
