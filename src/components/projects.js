@@ -15,7 +15,7 @@ const Projects = () => {
               technologies
               featuredImage {
                 childImageSharp {
-                  fluid(toFormat: WEBP) {
+                  fluid{
                     ...GatsbyImageSharpFluid
                   }
                 }
