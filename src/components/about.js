@@ -10,7 +10,7 @@ const About = () => {
         file(relativePath: { eq: "images/ajeet.png" }) {
           childImageSharp {
             fixed(webpQuality: 100, width:125) {
-              ...GatsbyImageSharpFixed
+              ...GatsbyImageSharpFixed_withWebP
             }
             id
           }
