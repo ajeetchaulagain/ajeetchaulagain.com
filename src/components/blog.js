@@ -34,7 +34,7 @@ const Blog = () => {
         return (
           <article className={blogStyles.blogItem}>
             <figure>
-              <Img fixed={GatsbyImageSharpFixed} alt="blog-thumbnail" />
+              <Img fixed={GatsbyImageSharpFixed} alt="blog-thumbnail" className={blogStyles.image} />
             </figure>
 
             <div className={blogStyles.content}>
