@@ -1,6 +1,31 @@
 .content-section {
-
-  background-color: rgb(246, 242, 250);
+  > div {
+    position: relative;
+    &::after,
+    &::before {
+      content: "";
+      color: white;
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+      background-color: rgba(92, 37, 127, 1);
+      border-radius: 50%;
+    }
+    &::after {
+      border: 1px solid rgba(255, 255, 255, 0.75);
+    }
+    &::before {
+      width: 50px;
+      height: 50px;
+      opacity: 0.8;
+      // background-color: rgb(94, 94, 92);
+      right: 35px;
+      bottom: 31px;
+    }
+  }
+  background-color: rgb(250, 248, 242);
   width: 100%;
   position: relative;
   @media only screen and (max-width: 599px) {
@@ -8,7 +33,7 @@
   }
 }
 .content {
-  padding: 1rem;
+  // padding: 10rem 1rem;
   background-color: white;
   width: 100%;
   border: 1px solid rgb(235, 233, 233);
@@ -16,8 +41,9 @@
   line-height: 1.75;
   font-weight: 400;
   p {
-    font-size: 1.15rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    margin-bottom: 1.4rem;
+    // text-justify: inter-character;
     // text-align: justify;
   }
 
@@ -35,27 +61,31 @@
 
   h2 {
     font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
+    font-weight: 700 !important;
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+    margin-top: 2.5rem;
+    // text-decoration:underline;
     @media only screen and (max-width: 599px) {
-      font-size: 1.25rem;
-      font-weight: 600;
+      font-size: 1.3rem;
     }
   }
 
-  h3{
+  h3 {
     font-family: "Roboto", sans-serif;
-
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    margin-top: 2rem;
+    @media only screen and (max-width: 599px) {
+      font-size: 1.2rem;
+    }
   }
 
-  @media (max-width: 599px) {
-    padding: 1.5rem;
+  @media (max-width: 960px) {
+    padding: 2.5rem 1.2rem 5rem;
+    margin-bottom: 1rem;
   }
-}
-
-.content img {
-  border: 1px solid rgb(110, 110, 116);
-  box-shadow: 1px 1px 5px rgb(101, 100, 100);
 }
 
 .content a {
@@ -71,16 +101,20 @@
   text-decoration: none;
 }
 
+.content img[alt="ajeet-about"] {
+  width: 30px;
+}
+
 // / Media Queries------------------------------------------------
 @media only screen and (max-width: 599px) {
   .content p {
-    font-size: 1.125rem;
+    font-size: 1.1rem;
   }
 }
 
 @media only screen and (min-width: 600px) {
   .content {
-    padding: 3rem 3rem;
+    padding: 4rem 3rem;
   }
 }
 
@@ -92,10 +126,10 @@
   }
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1160px) {
   .content {
-    width: 1180px;
-    padding: 8rem 12rem;
+    width: 1160px;
+    padding: 8rem 11rem;
     // box-shadow:1px 1px 3px rgb(44, 43, 43);
   }
 }

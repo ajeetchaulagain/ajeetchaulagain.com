@@ -1,10 +1,7 @@
 import React from "react"
 import projectStyles from "./projects.module.scss"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import img from "../images/ajeet.jpeg"
-
 import Img from "gatsby-image"
-
 import { FaAngleRight } from "react-icons/fa"
 
 const Projects = () => {
@@ -18,8 +15,8 @@ const Projects = () => {
               technologies
               featuredImage {
                 childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
+                  fluid{
+                    ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }
@@ -55,7 +52,7 @@ const Projects = () => {
                   fluid={
                     edge.node.frontmatter.featuredImage.childImageSharp.fluid
                   }
-                  alt="profile"
+                  alt="project"
                 />
                 <figcaption>
                   <Link

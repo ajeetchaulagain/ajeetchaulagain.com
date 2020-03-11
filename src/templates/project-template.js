@@ -8,7 +8,6 @@ import ContentLayout from "../components/content-layout"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 
 export const query = graphql`
   query($slug: String!) {

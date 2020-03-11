@@ -7,7 +7,6 @@ import ContentLayout from "../components/content-layout"
 import { Link } from "gatsby"
 import { FaBook } from "react-icons/fa"
 
-
 export const indexHeadingStyle = {
   marginBottom: ".5rem",
 }
@@ -26,6 +25,7 @@ const IndexPage = () => {
   return (
     <MasterLayout>
       <Welcome />
+
       <ContentLayout>
         <h1 style={indexHeadingStyle}>Projects</h1>
         <p style={indexSubHeadingStyle}>

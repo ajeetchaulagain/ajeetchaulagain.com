@@ -30,8 +30,9 @@
 .title {
   font-size: 2rem;
   font-family: "Parisienne", cursive;
-  font-weight: 100;
+  font-weight: 500;
   margin-right: 1rem;
+  display: flex;
 }
 
 .main-header h1 {
@@ -46,19 +47,14 @@
 
 .main-header h1 a:hover {
   color: rgb(211, 209, 211);
-  font-weight: 200;
 }
-
-// .main-header h1{
-//     // font-size:2rem;
-// }
 
 .nav-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   font-size: 0.8rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.05rem;
   @media (max-width: 567px) {
     letter-spacing: 0.02rem;
@@ -73,7 +69,7 @@
 
 .activeList {
   color: rgb(255, 252, 176);
-  text-decoration: underline;
+  // text-decoration: underline;
 }
 
 .nav-list li:first-child {
@@ -122,7 +118,7 @@
   }
 
   .nav-list li {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 500;
     padding: 0 0.5rem;
     margin: 0px;
@@ -138,9 +134,9 @@
   }
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (max-width: 600px) {
   .header-content {
-    padding:1rem 3rem;
+    padding: 1.5rem 2rem;
   }
 }
 
@@ -152,9 +148,10 @@
   }
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1160px) {
   .header-content {
-    width: 1180px;
+    width: 1160px;
+    padding-top: 2rem;
     margin: 0 auto;
   }
 }

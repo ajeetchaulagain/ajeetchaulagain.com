@@ -27,13 +27,26 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 800,
+              maxWidth: 500,
+              withWebp: true,
+              linkImagesToOriginal: false,
+              quality: 80,
             },
           },
         ],
       },
     },
 
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          // include: `${__dirname}/src/`
+        },
+      },
+    },
+
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
   ],

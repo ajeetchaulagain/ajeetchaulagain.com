@@ -14,10 +14,13 @@
 }
 
 .heading-light {
-  font-family: "Lora", sans-serif;
+  // font-family: "Helvetica", sans-serif;
+  // text-transform: uppercase;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 1.2rem;
-  font-style: italic;
-  font-weight: 200 !important;
+  // word-spacing: 5px;
+  // font-style: italic;
+  font-weight: 500 !important;
   line-height: 1.25;
   padding: 45px 15px;
 }
@@ -32,6 +35,10 @@
 @media only screen and (max-width: 599px) {
   .intro-content {
     padding: 0;
+    // background-color: green;
+    .heading-light {
+      padding: 0.5rem 0 2.2rem;
+    }
   }
 }
 @media only screen and (min-width: 961px) {

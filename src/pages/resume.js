@@ -2,17 +2,18 @@ import React from "react"
 import MasterLayout from "../components/master-layout"
 import IntroSection from "../components/intro-section"
 import ContentLayout from "../components/content-layout"
-import About from "../components/about"
+import Resume from "../components/resume"
 
-const AboutPage = () => {
+const ResumePage = () => {
   return (
     <MasterLayout>
-      <IntroSection>Thankyou for stepping by to know me</IntroSection>
+      <IntroSection>My Resume</IntroSection>
       <ContentLayout>
-        <About />
+        <h1>Resume</h1>
+        <Resume />
       </ContentLayout>
     </MasterLayout>
   )
 }
 
-export default AboutPage
+export default ResumePage

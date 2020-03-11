@@ -7,6 +7,10 @@ featuredImage: ../images/xml-keyword-search.jpeg
 A simple Java based keyword search system utilising various technologies such as
 Java XML, Java FX, Advance data structures such as HashMap, HashSet and ArrayList.
 
+## Architecture
+
+XML Keyword System was developed in JavaFX, JavaXML and Advance data structures. Further, I would like to know about the
+
 ## Skills I have learned from the project
 
 1. Java XML

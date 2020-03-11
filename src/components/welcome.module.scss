@@ -14,11 +14,6 @@
   text-align: center;
 }
 
-.image {
-  width: 150px;
-  border-radius: 150px;
-  border: 1px dotted white;
-}
 .image-holder img {
   width: 100%;
   height: auto;
@@ -90,7 +85,7 @@
 .particles {
   position: absolute;
   z-index: 0;
-  top: 10;
+  top: 0;
   left: 0;
   right: 0;
   height: 100vh;

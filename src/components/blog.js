@@ -2,9 +2,13 @@ import React from "react"
 import blogStyles from "./blog.module.scss"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
-import thumbnail from "../images/ajeet.jpeg"
+import Img from "gatsby-image"
+
+import { useAuthorImage } from "./utilities/use-author-image"
 
 const Blog = () => {
+  const { ...GatsbyImageSharpFixed } = useAuthorImage()
+
   const data = useStaticQuery(graphql`
     query {
       allMdx(filter: { fields: { contentType: { eq: "posts" } } }) {
@@ -28,10 +32,9 @@ const Blog = () => {
     <div className={blogStyles.blogWrapper}>
       {data.allMdx.edges.map(edge => {
         return (
-          
           <article className={blogStyles.blogItem}>
             <figure>
-              <img src={thumbnail} />
+              <Img fixed={GatsbyImageSharpFixed} alt="blog-thumbnail" className={blogStyles.image} />
             </figure>
 
             <div className={blogStyles.content}>

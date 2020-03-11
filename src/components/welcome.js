@@ -1,13 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
-
-import img from "../images/ajeet.jpeg"
+import Img from "gatsby-image"
 
 import welcomeStyles from "./welcome.module.scss"
 
 import Particles from "react-particles-js"
 
+import { useAuthorImage } from "./utilities/use-author-image"
+
 const particlesParam = {
+
   particles: {
     number: {
       value: 90,
@@ -119,6 +121,8 @@ const particlesParam = {
 }
 
 const Welcome = () => {
+  const { ...GatsbyImageSharpFixed } = useAuthorImage()
+
   return (
     <section className={welcomeStyles.welcomeSection}>
       <Particles
@@ -129,7 +133,10 @@ const Welcome = () => {
       <div className={welcomeStyles.welcomeContent}>
         <div className={welcomeStyles.imageHolder}>
           <span>
-            <img src={img} alt="profile" />
+            <Img
+              fixed={GatsbyImageSharpFixed}
+              className={welcomeStyles.image}
+            />
           </span>
         </div>
         <h1 className={welcomeStyles.heading}>

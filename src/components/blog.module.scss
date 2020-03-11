@@ -9,17 +9,18 @@
       text-decoration: underline;
     }
   }
+
   article {
     margin-bottom: 1.75rem;
     background-color: rgb(245, 245, 255);
   }
 
   .blog-item {
+    // background-color: green;
     display: flex;
 
     @media only screen and (max-width: 599px) {
-
-      padding: 1rem .5rem;
+      padding: 1rem 0.5rem;
       // flex-direction: column;
       align-items: flex-start;
       figure {
@@ -57,10 +58,11 @@
     line-height: 1.4;
     padding: 0rem;
     h2 {
-      font-weight: 700;
+      margin-top: 0rem;
       line-height: 1.25;
       a {
         color: #333;
+        // font-weight: 00;
         text-decoration: none;
       }
     }
@@ -74,7 +76,7 @@
       }
       ul {
         display: flex;
-        margin-top: .5rem;
+        margin-top: 0.5rem;
         // align-items:flex-end;
         li {
           background-color: rgb(100, 43, 140);
