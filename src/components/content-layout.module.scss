@@ -41,9 +41,6 @@
   line-height: 1.75;
   font-weight: 400;
   font-size: 1.15rem;
-  font-family: "Roboto", sans-serif;
-
-
 
   p {
     // font-size: 1.15rem;  
@@ -52,8 +49,9 @@
     // text-align: justify;
   }
 
+
   h1 {
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     font-weight: 700;
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -65,7 +63,7 @@
   }
 
   h2 {
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     font-weight: 700 !important;
     font-size: 1.4rem;
     margin-bottom: 0.3rem;
@@ -77,7 +75,7 @@
   }
 
   h3 {
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 0.3rem;
@@ -114,7 +112,7 @@
 @media only screen and (max-width: 599px) {
   .content p {
     // font-size: 1.15rem;
-    font-size: 1.15rem;
+    font-size: 1.13rem;
   }
 }
 
