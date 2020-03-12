@@ -38,9 +38,12 @@
   width: 100%;
   border: 1px solid rgb(235, 233, 233);
   min-height: 50rem;
-  line-height: 1.75;
+  line-height: 1.8;
   font-weight: 400;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
+
+
+
 
   p {
     // font-size: 1.15rem;  
@@ -49,11 +52,10 @@
     // text-align: justify;
   }
 
-
   h1 {
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 2.1rem;
     margin-bottom: 1rem;
     line-height: 1.2;
     color: #333;
@@ -63,25 +65,25 @@
   }
 
   h2 {
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 700 !important;
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     margin-bottom: 0.3rem;
     margin-top: 2.5rem;
     // text-decoration:underline;
     @media only screen and (max-width: 599px) {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
     }
   }
 
   h3 {
-    font-family: "Roboto Condensed", sans-serif;
-    font-size: 1.3rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.3rem;
     margin-top: 2rem;
     @media only screen and (max-width: 599px) {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
   }
 
@@ -112,7 +114,7 @@
 @media only screen and (max-width: 599px) {
   .content p {
     // font-size: 1.15rem;
-    font-size: 1.13rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -133,7 +135,7 @@
 @media only screen and (min-width: 1160px) {
   .content {
     width: 1160px;
-    padding: 8rem 11rem;
+    padding: 8rem 12rem;
     // box-shadow:1px 1px 3px rgb(44, 43, 43);
   }
 }
