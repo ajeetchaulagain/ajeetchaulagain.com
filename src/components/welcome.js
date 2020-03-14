@@ -9,7 +9,6 @@ import Particles from "react-particles-js"
 import { useAuthorImage } from "./utilities/use-author-image"
 
 const particlesParam = {
-
   particles: {
     number: {
       value: 90,

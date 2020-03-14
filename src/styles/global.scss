@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Parisienne|Source+Sans+Pro:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,900,900i&display=swap|Roboto:100,300,400,500,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Parisienne|Source+Sans+Pro:300,400,500,600,700,900&display=swap|Roboto:100,300,400,500,700,900&display=swap");
 
 @import url(./reset.scss);
 
@@ -244,7 +244,7 @@ em {
 
 // List Styling
 
-li{
+li {
   font-size: inherit;
 }
 
@@ -255,4 +255,51 @@ img[alt="ajeet-about"] {
   height: auto !important;
   display: block;
   float: right;
+}
+
+
+// Code blocks
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+  font-size:.9rem;
+}
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  // line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre {
+  background-color: #cdcdcd;
+  font-family:monospace;
+  border: 1px solid #6e6a6a;
+  font-size: 10px;
+  line-height: 5px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
 }

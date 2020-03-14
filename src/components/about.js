@@ -2,28 +2,17 @@ import React from "react"
 import aboutStyles from "./about.module.scss"
 import { useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
+import { useAuthorImage } from "./utilities/use-author-image"
 
 const About = () => {
-  const data = useStaticQuery(
-    graphql`
-      query AboutPageAuthorImage {
-        file(relativePath: { eq: "images/ajeet.png" }) {
-          childImageSharp {
-            fixed(webpQuality: 100, width:120) {
-              ...GatsbyImageSharpFixed_withWebp
-            }
-            id
-          }
-        }
-      }
-    `
-  )
+  const { ...GatsbyImageSharpFixed } = useAuthorImage()
 
   return (
     <div className={aboutStyles.wrapper}>
       <h1>About</h1>
       <div className={aboutStyles.flexWrapper}>
         <p>
+
           Hello. I'm Ajeet Chaulagain, a <em>full stack developer</em> currently
           living in Melbourne, Australia and originally from Kathmandu, Nepal. I
           have got a serious passion for programming and developing software
@@ -31,7 +20,7 @@ const About = () => {
         </p>
         <div className={aboutStyles.imageWrapper}>
           <Img
-            fixed={data.file.childImageSharp.fixed}
+            fixed={GatsbyImageSharpFixed}
             className={aboutStyles.aboutImage}
           />
         </div>

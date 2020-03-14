@@ -93,7 +93,7 @@ const Header = () => {
               <a
                 href="https://www.facebook.com/chaulagain.ajeet"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <FaFacebookF />
               </a>
@@ -102,7 +102,7 @@ const Header = () => {
               <a
                 href="https://twitter.com/ajeetsweb"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <FaTwitter />
               </a>
@@ -111,7 +111,7 @@ const Header = () => {
               <a
                 href="https://www.linkedin.com/in/ajeet-chaulagain/"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <FaLinkedinIn />
               </a>
@@ -120,7 +120,7 @@ const Header = () => {
               <a
                 href="https://github.com/ajeetchaulagain"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <FaGithub />
               </a>
@@ -129,7 +129,7 @@ const Header = () => {
               <a
                 href="https://www.instagram.com/chaulagainajeet/"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <FaInstagram />
               </a>
