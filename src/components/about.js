@@ -9,7 +9,7 @@ const About = () => {
       query AboutPageAuthorImage {
         file(relativePath: { eq: "images/ajeet.png" }) {
           childImageSharp {
-            fixed(webpQuality: 100, width:120) {
+            fixed(webpQuality: 100, width: 120) {
               ...GatsbyImageSharpFixed_withWebp
             }
             id
