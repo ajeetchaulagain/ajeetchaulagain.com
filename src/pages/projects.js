@@ -12,6 +12,7 @@ import { indexHeadingStyle, indexSubHeadingStyle } from "."
 // 3. Test your work!
 
 const ProjectsPage = () => {
+  
   // console.log(data);
   return (
     <MasterLayout>
