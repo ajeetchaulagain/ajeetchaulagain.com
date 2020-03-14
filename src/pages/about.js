@@ -4,10 +4,11 @@ import IntroSection from "../components/intro-section"
 import ContentLayout from "../components/content-layout"
 import About from "../components/about"
 
+
 const AboutPage = () => {
   return (
     <MasterLayout>
-      <IntroSection>Thankyou for stepping by to know me</IntroSection>
+      <IntroSection>Lets get connected!</IntroSection>
       <ContentLayout>
         <About />
       </ContentLayout>
