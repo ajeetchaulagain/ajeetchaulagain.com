@@ -7,6 +7,7 @@ import ContentLayout from "../components/content-layout"
 import blogTemplateStyles from "./blog-template.module.scss"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { FaDocker } from "react-icons/fa"
+import { DiscussionEmbed } from "disqus-react"
 
 import { graphql } from "gatsby"
 
@@ -23,10 +24,18 @@ export const query = graphql`
   }
 `
 
+
+
 const BlogTemplate = props => {
   const blogTitle = {
     lineHeight: "1.2",
   }
+
+  const disqusConfig = {
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: { identifier: "props.data.mdx.frontmatter.title" },
+  }
+
 
   return (
     <MasterLayout>
@@ -57,6 +66,7 @@ const BlogTemplate = props => {
 
           <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
         </div>
+        <DiscussionEmbed {...disqusConfig} />
       </ContentLayout>
     </MasterLayout>
   )
