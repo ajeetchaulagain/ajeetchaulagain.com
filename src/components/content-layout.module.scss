@@ -37,7 +37,7 @@
   background-color: white;
   width: 100%;
   border: 1px solid rgb(235, 233, 233);
-  min-height: 50rem;
+  // min-height: 50rem;
   line-height: 1.8;
   font-weight: 400;
   font-size: 1.125rem;
@@ -135,4 +135,11 @@
     padding: 10rem 13rem;
     // box-shadow:1px 1px 3px rgb(44, 43, 43);
   }
+}
+
+
+// Additional css - workout
+
+.abc{
+  background:red;
 }

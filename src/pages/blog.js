@@ -3,6 +3,7 @@ import MasterLayout from "../components/master-layout"
 import IntroSection from "../components/intro-section"
 import ContentLayout from "../components/content-layout"
 import Blog from "../components/blog"
+import { indexHeadingStyle } from "."
 
 const BlogPage = () => {
   const searchBoxStyle = {
@@ -21,7 +22,7 @@ const BlogPage = () => {
     <MasterLayout>
       <IntroSection>Checkout my blog content</IntroSection>
       <ContentLayout>
-        <h1>Articles</h1>
+        <h1 style={indexHeadingStyle}>Articles</h1>
         <input
           type="text"
           placeholder="Type here to filter articles"

@@ -7,6 +7,10 @@ import ContentLayout from "../components/content-layout"
 import { Link } from "gatsby"
 import { FaBook } from "react-icons/fa"
 
+import Newsletter from "../components/newsletter"
+
+import newsLetterStyles from "../components/newsletter.module.scss"
+
 export const indexHeadingStyle = {
   marginBottom: ".5rem",
   fontWeight:"900",
@@ -23,6 +27,11 @@ export const contentBoxButton = {
   textDecoration: "none",
   color: "#fff",
   fontWeight:"400",
+}
+
+export const subscribeSectionStyle = {
+  textAlign:"center",
+  backgroundColor:"grey",
 }
 
 const IndexPage = () => {
@@ -51,6 +60,12 @@ const IndexPage = () => {
           View all Articles
         </Link>
       </ContentLayout>
+
+      <ContentLayout>
+        <Newsletter />
+      </ContentLayout>
+
+      
 
     </MasterLayout>
   )
