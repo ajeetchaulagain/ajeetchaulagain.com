@@ -9,16 +9,20 @@ import { FaBook } from "react-icons/fa"
 
 export const indexHeadingStyle = {
   marginBottom: ".5rem",
+  fontWeight:"900",
+  color:"rgba(92, 37, 127, 1)",
 }
 
 export const indexSubHeadingStyle = {
   marginBottom: "2.5rem",
   lineHeight: "1",
+  
 }
 
 export const contentBoxButton = {
   textDecoration: "none",
   color: "#fff",
+  fontWeight:"400",
 }
 
 const IndexPage = () => {
