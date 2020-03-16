@@ -3,6 +3,7 @@ import aboutStyles from "./about.module.scss"
 import { useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import { useAuthorImage } from "./utilities/use-author-image"
+import { indexHeadingStyle } from "../pages"
 
 const About = () => {
   const { ...GatsbyImageSharpFixed } = useAuthorImage()
@@ -12,7 +13,6 @@ const About = () => {
       <h1>About</h1>
       <div className={aboutStyles.flexWrapper}>
         <p>
-
           Hello. I'm Ajeet Chaulagain, a <em>full stack developer</em> currently
           living in Melbourne, Australia and originally from Kathmandu, Nepal. I
           have got a serious passion for programming and developing software

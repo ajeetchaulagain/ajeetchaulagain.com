@@ -19,8 +19,10 @@ const Footer = () => {
     <footer className={footerStyles.mainFooter}>
       <div className={footerStyles.footerContent}>
         <p>
-          Developed by {data.site.siteMetadata.author}, © 2020. Proudly built
-          with React, Gatsby, Contentful, Github Pages
+          Developed by {data.site.siteMetadata.author} © 2020. All rights reserved.
+          </p>
+          <p>Proudly built
+          with React, Gatsby, GraphQL, Netlify, NodeJS, Contentful, Webpack, Babel
         </p>
       </div>
     </footer>
