@@ -3,7 +3,12 @@ import contactLayoutStyles from "./contact-layout.module.scss"
 const ContactForm = () => {
   return (
     <div className={contactLayoutStyles.contactFormWrap}>
-      <form name="contact" netlify>
+      <form 
+      name="contact"
+      method = "post"
+      data-netlify="true"
+      data-netlify-honepot="bot-field"
+      >
         <div className={contactLayoutStyles.formRow}>
           <label for="email">Email</label>
           <input
