@@ -5,9 +5,8 @@ const ContactForm = () => {
     <div className={contactLayoutStyles.contactFormWrap}>
       <form 
       name="contact"
-      method = "post"
+      method = "POST"
       data-netlify="true"
-      data-netlify-honepot="bot-field"
       >
         <div className={contactLayoutStyles.formRow}>
           <label for="email">Email</label>
