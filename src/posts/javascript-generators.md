@@ -1,7 +1,7 @@
 ---
 title: "How to use Generators in Javascript"
 date: "2019-03-01"
-tags: ["Javascript", "OOP", "Code","generators"]
+tags: ["Javascript", "OOP", "Code", "generators"]
 author: "Pawan Regmi"
 ---
 

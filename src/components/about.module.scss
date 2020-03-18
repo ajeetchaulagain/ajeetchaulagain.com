@@ -1,16 +1,13 @@
 .wrapper {
-  h2 {
-    // color:rgb(91, 91, 91);
-  }
+ 
   .flex-wrapper {
     display: flex;
 
     align-items: top;
-    // text-align: justify;
-
+  
     @media only screen and (max-width: 599px) {
       flex-direction: column;
-      // justify-content: center;
+  
       align-items: center;
       .image-wrapper {
         order: 1;
@@ -39,6 +36,6 @@
     li {
       margin-bottom: 0.2rem;
     }
-    // font-style: italic;
+    
   }
 }

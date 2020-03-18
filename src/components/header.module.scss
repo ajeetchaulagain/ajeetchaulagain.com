@@ -1,14 +1,13 @@
 .main-header {
-  // background-color: #000000;
+
   color: rgb(231, 222, 236);
   width: 100%;
   position: absolute;
   z-index: 2;
-  // background-color:black;
+  
   @media (max-width: 767px) {
   }
 }
-
 
 .header-content {
   display: flex;
@@ -27,7 +26,6 @@
 .logo-section {
   flex: auto;
 }
-
 
 .title {
   font-size: 2rem;
@@ -71,7 +69,7 @@
 
 .activeList {
   color: rgb(255, 252, 176);
-  // text-decoration: underline;
+
 }
 
 .nav-list li:first-child {

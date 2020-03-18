@@ -6,7 +6,7 @@ import IntroSection from "../components/intro-section"
 import ContentLayout from "../components/content-layout"
 import blogTemplateStyles from "./blog-template.module.scss"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { FaDocker } from "react-icons/fa"
+import { FaDocker,FaFacebookSquare, FaTwitterSquare, FaLinkedin } from "react-icons/fa"
 import { DiscussionEmbed } from "disqus-react"
 
 import { graphql } from "gatsby"
@@ -17,8 +17,10 @@ export const query = graphql`
       frontmatter {
         title
         tags
-        date
+        date(formatString: "MMMM DD, YYYY")
+        author
       }
+      timeToRead
       body
     }
   }
@@ -46,8 +48,10 @@ const BlogTemplate = props => {
               <h1 style={blogTitle}>{props.data.mdx.frontmatter.title}</h1>
               <div className={blogTemplateStyles.postMeta}>
                 <span>
-                  Published on: <time>{props.data.mdx.frontmatter.date}</time> /
-                  By: Ajeet Chaulagain
+                  <time>{props.data.mdx.frontmatter.date}</time>
+                  &nbsp; / &nbsp;
+                  {props.data.mdx.timeToRead} min read &nbsp;/&nbsp; By{" "}
+                  {props.data.mdx.frontmatter.author}
                 </span>
                 <ul className={blogTemplateStyles.tagList}>
                   {props.data.mdx.frontmatter.tags.map(tag => {
@@ -61,9 +65,18 @@ const BlogTemplate = props => {
             </div>
           </header>
 
+        
+
           <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
         </div>
-        <DiscussionEmbed {...disqusConfig} />
+        <ul className={blogTemplateStyles.socialShare}>
+          
+        <li>Share On: &nbsp;</li>
+        <li><a href = "#"><FaLinkedin /></a></li>
+        <li><a href = "#"><FaTwitterSquare/></a></li>
+        <li><a href= "#"><FaFacebookSquare /></a></li>
+        
+    </ul>
       </ContentLayout>
     </MasterLayout>
   )

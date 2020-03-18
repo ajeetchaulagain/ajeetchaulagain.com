@@ -17,7 +17,7 @@ const Blog = () => {
             frontmatter {
               title
               tags
-              date (formatString: "MMMM DD, YYYY")
+              date(formatString: "MMMM DD, YYYY")
               author
             }
             excerpt
@@ -36,41 +36,36 @@ const Blog = () => {
       {data.allMdx.edges.map(edge => {
         return (
           <Link to={`/blog/${edge.node.fields.slug}`}>
-          <article className={blogStyles.blogItem}>
-            <figure>
-              <Img
-                fixed={GatsbyImageSharpFixed}
-                alt="blog-thumbnail"
-                className={blogStyles.image}
-              />
-            </figure>
+            <article className={blogStyles.blogItem}>
+              <figure>
+                <Img
+                  fixed={GatsbyImageSharpFixed}
+                  alt="blog-thumbnail"
+                  className={blogStyles.image}
+                />
+              </figure>
 
-            <div className={blogStyles.content}>
-              <h2>
-                
-                  {edge.node.frontmatter.title}
-              </h2>
-              <div className={blogStyles.metaData}>
-                <date>
-                  {edge.node.frontmatter.date}
-                </date>
-                <span>
-                   &nbsp; / &nbsp; {edge.node.timeToRead} min read  &nbsp; / &nbsp; By {edge.node.frontmatter.author} 
-                </span>
-                <ul>
-                  {edge.node.frontmatter.tags.map(tag => {
-                    return <li>{tag}</li>
-                  })}
-                
-                </ul>
+              <div className={blogStyles.content}>
+                <h2>{edge.node.frontmatter.title}</h2>
+                <div className={blogStyles.metaData}>
+                  <date>{edge.node.frontmatter.date}</date>
+
+                  <span>
+                    &nbsp;/&nbsp;{edge.node.timeToRead} min read /
+                    &nbsp;By {edge.node.frontmatter.author}
+                  </span>
+                  <ul>
+                    {edge.node.frontmatter.tags.map(tag => {
+                      return <li>{tag}</li>
+                    })}
+                  </ul>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
           </Link>
         )
       })}
     </div>
-    
   )
 }
 

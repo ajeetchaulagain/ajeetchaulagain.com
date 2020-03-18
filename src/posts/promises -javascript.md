@@ -1,7 +1,7 @@
 ---
 title: "How to use promises in Javascript"
 date: "2019-03-01"
-tags: ["Javascript", "OOP", "Code","Promises"]
+tags: ["Javascript", "OOP", "Code", "Promises"]
 author: "Ajeet Chaulagain"
 ---
 

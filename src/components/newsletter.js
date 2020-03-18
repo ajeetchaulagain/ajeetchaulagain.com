@@ -10,7 +10,10 @@ const NewsLetter = () => {
   return (
     <div className={newsLetterStyles.wrapper}>
       <h1 style={indexHeadingStyle}> Subscribe Me</h1>
-      <p>I write articles on software development and programming. Subscribe to my article</p>
+      <p>
+        I write articles on software development and programming. Subscribe to
+        my article
+      </p>
       <form>
         <div>
           <input type="email" placeholder="YOUR EMAIL" />
