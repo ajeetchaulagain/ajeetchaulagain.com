@@ -6,7 +6,12 @@ import IntroSection from "../components/intro-section"
 import ContentLayout from "../components/content-layout"
 import blogTemplateStyles from "./blog-template.module.scss"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { FaDocker,FaFacebookSquare, FaTwitterSquare, FaLinkedin } from "react-icons/fa"
+import {
+  FaDocker,
+  FaFacebookSquare,
+  FaTwitterSquare,
+  FaLinkedin,
+} from "react-icons/fa"
 import { DiscussionEmbed } from "disqus-react"
 
 import { graphql } from "gatsby"
@@ -65,18 +70,26 @@ const BlogTemplate = props => {
             </div>
           </header>
 
-        
-
           <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
         </div>
         <ul className={blogTemplateStyles.socialShare}>
-          
-        <li>Share On: &nbsp;</li>
-        <li><a href = "#"><FaLinkedin /></a></li>
-        <li><a href = "#"><FaTwitterSquare/></a></li>
-        <li><a href= "#"><FaFacebookSquare /></a></li>
-        
-    </ul>
+          <li>Share On: &nbsp;</li>
+          <li>
+            <a href="#">
+              <FaLinkedin />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <FaTwitterSquare />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <FaFacebookSquare />
+            </a>
+          </li>
+        </ul>
       </ContentLayout>
     </MasterLayout>
   )

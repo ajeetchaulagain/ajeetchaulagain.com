@@ -49,10 +49,9 @@ const Blog = () => {
                 <h2>{edge.node.frontmatter.title}</h2>
                 <div className={blogStyles.metaData}>
                   <date>{edge.node.frontmatter.date}</date>
-
                   <span>
-                    &nbsp;/&nbsp;{edge.node.timeToRead} min read /
-                    &nbsp;By {edge.node.frontmatter.author}
+                    &nbsp;/&nbsp;{edge.node.timeToRead} min read / &nbsp;By{" "}
+                    {edge.node.frontmatter.author}
                   </span>
                   <ul>
                     {edge.node.frontmatter.tags.map(tag => {

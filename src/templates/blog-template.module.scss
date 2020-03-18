@@ -1,7 +1,7 @@
 .post-header {
   display: flex;
   justify-content: space-between;
-  margin-bottom:3rem;
+  margin-bottom: 3rem;
   @media only screen and (max-width: 599px) {
     flex-direction: column;
   }
@@ -10,7 +10,6 @@
 }
 
 .featured-icons {
-  
   font-size: 4rem;
   line-height: 1;
   // background-color:green;
@@ -56,23 +55,23 @@
   margin-bottom: 1rem;
 }
 
-.social-share{
+.social-share {
   display: flex;
-  margin-top:4rem;
+  margin-top: 4rem;
 
-  li:first-child{
-    font-size:1.3rem;
+  li:first-child {
+    font-size: 1.3rem;
   }
 
-  li{
-    font-size:2rem;
+  li {
+    font-size: 2rem;
     font-weight: 400;
-    margin-right:.3rem;
+    margin-right: 0.3rem;
     // display: block;
-    a{
-      color:#333;
-      :hover{
-        color:rgb(102, 60, 148);
+    a {
+      color: #333;
+      :hover {
+        color: rgb(102, 60, 148);
       }
     }
   }

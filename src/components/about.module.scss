@@ -1,13 +1,12 @@
 .wrapper {
- 
   .flex-wrapper {
     display: flex;
 
     align-items: top;
-  
+
     @media only screen and (max-width: 599px) {
       flex-direction: column;
-  
+
       align-items: center;
       .image-wrapper {
         order: 1;
@@ -36,6 +35,5 @@
     li {
       margin-bottom: 0.2rem;
     }
-    
   }
 }
