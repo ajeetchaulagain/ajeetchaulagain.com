@@ -24,8 +24,6 @@ export const query = graphql`
   }
 `
 
-
-
 const BlogTemplate = props => {
   const blogTitle = {
     lineHeight: "1.2",
@@ -35,7 +33,6 @@ const BlogTemplate = props => {
     shortname: process.env.GATSBY_DISQUS_NAME,
     config: { identifier: "props.data.mdx.frontmatter.title" },
   }
-
 
   return (
     <MasterLayout>

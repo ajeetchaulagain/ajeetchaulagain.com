@@ -16,6 +16,9 @@ const Blog = () => {
           node {
             frontmatter {
               title
+              tags
+              date (formatString: "MMMM DD, YYYY")
+              author
             }
             excerpt
             timeToRead
@@ -32,6 +35,7 @@ const Blog = () => {
     <div className={blogStyles.blogWrapper}>
       {data.allMdx.edges.map(edge => {
         return (
+
           <article className={blogStyles.blogItem}>
             <figure>
               <Img
@@ -49,16 +53,16 @@ const Blog = () => {
               </h2>
               <div className={blogStyles.metaData}>
                 <date>
-                  <strong>Published on: </strong>2014/12/12{" "}
+                  <strong>Published on: </strong>{edge.node.frontmatter.date}
                 </date>
                 <span>
-                  <strong> | Read Time: </strong> 2min | <strong>By: </strong>{" "}
-                  Ajeet Chaulagain
+                  <strong> &nbsp; / &nbsp; {edge.node.timeToRead} min read </strong> <strong> &nbsp; / &nbsp; By: {edge.node.frontmatter.author}</strong>
                 </span>
                 <ul>
-                  <li> Nodejs</li>
-                  <li>React JS</li>
-                  <li>Gatsby</li>
+                  {edge.node.frontmatter.tags.map(tag => {
+                    return <li>{tag}</li>
+                  })}
+                
                 </ul>
               </div>
             </div>
@@ -66,6 +70,7 @@ const Blog = () => {
         )
       })}
     </div>
+    
   )
 }
 

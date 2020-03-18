@@ -9,6 +9,7 @@
   }
 }
 
+
 .header-content {
   display: flex;
   padding: 1rem;
@@ -26,6 +27,7 @@
 .logo-section {
   flex: auto;
 }
+
 
 .title {
   font-size: 2rem;
@@ -148,9 +150,9 @@
   }
 }
 
-@media only screen and (min-width: 1160px) {
+@media only screen and (min-width: 1140px) {
   .header-content {
-    width: 1160px;
+    width: 1140px;
     padding-top: 2rem;
     margin: 0 auto;
   }

@@ -1,21 +1,17 @@
 ---
 title: "How to use promises in Javascript"
 date: "2019-03-01"
-tags:
-  [
-    "Javascript",
-    "OOP",
-    "Code",
-  ]
+tags: ["Javascript", "OOP", "Code","Promises"]
+author: "Ajeet Chaulagain"
+featuredImage: ../images/blogpost/
 ---
 
-*** Note: Just a dummy post ***
+**_ Note: Just a dummy post _**
 
 ## Object Basics
 
+- Has a _name_ value pair, an object is made up of multiple members, each of which has a name (e.g. name and age above), and a value (e.g. ['Bob', 'Smith'] and 32). Each name/value pair must be separated by a comma, and the name and value in each case are separated by a colon.
 
-- Has a *name* value pair, an object is made up of multiple members, each of which has a name (e.g. name and age above), and a value (e.g. ['Bob', 'Smith'] and 32). Each name/value pair must be separated by a comma, and the name and value in each case are separated by a colon.
- 
 ```
  const person = {
   name: ['Bob', 'Smith'],

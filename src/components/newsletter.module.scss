@@ -1,91 +1,104 @@
 @keyframes kofi-wiggle {
-	0% {
-		transform: rotate(0) scale(1)
-	}
-	60% {
-		transform: rotate(0) scale(1)
-	}
-	75% {
-		transform: rotate(0) scale(1.12)
-	}
-	80% {
-		transform: rotate(0) scale(1.1)
-	}
-	84% {
-		transform: rotate(-10deg) scale(1.1)
-	}
-	88% {
-		transform: rotate(10deg) scale(1.1)
-	}
-	92% {
-		transform: rotate(-10deg) scale(1.1)
-	}
-	96% {
-		transform: rotate(10deg) scale(1.1)
-	}
-	100% {
-		transform: rotate(0) scale(1)
-	}
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  60% {
+    transform: rotate(0) scale(1);
+  }
+  75% {
+    transform: rotate(0) scale(1.12);
+  }
+  80% {
+    transform: rotate(0) scale(1.1);
+  }
+  84% {
+    transform: rotate(-10deg) scale(1.1);
+  }
+  88% {
+    transform: rotate(10deg) scale(1.1);
+  }
+  92% {
+    transform: rotate(-10deg) scale(1.1);
+  }
+  96% {
+    transform: rotate(10deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(0) scale(1);
+  }
 }
-.wrapper{
-    text-align: center;
-    hr{
-        border: none;
-        margin: 4rem 0;
-        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5c257f+0,5c257f+0,ffffff+75&1+0,1+0,0+75 */
-background: -moz-radial-gradient(center, ellipse cover,  rgba(92,37,127,1) 0%, rgba(255,255,255,0) 75%); /* FF3.6-15 */
-background: -webkit-radial-gradient(center, ellipse cover,  rgba(92,37,127,1) 0%,rgba(255,255,255,0) 75%); /* Chrome10-25,Safari5.1-6 */
-background: radial-gradient(ellipse at center,  rgba(92,37,127,1) 0%,rgba(255,255,255,0) 75%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c257f', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+.wrapper {
+  text-align: center;
+  hr {
+    border: none;
+    margin: 4rem 0;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5c257f+0,5c257f+0,ffffff+75&1+0,1+0,0+75 */
+    background: -moz-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(92, 37, 127, 1) 0%,
+      rgba(255, 255, 255, 0) 75%
+    ); /* FF3.6-15 */
+    background: -webkit-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(92, 37, 127, 1) 0%,
+      rgba(255, 255, 255, 0) 75%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(
+      ellipse at center,
+      rgba(92, 37, 127, 1) 0%,
+      rgba(255, 255, 255, 0) 75%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c257f', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
-        height: 2px;
-width: 100%;
-    }
-    a{
-        background-color: #5c257f;
-        padding: 10px 15px;
-        color: #fff;
-        border-radius: 5px;
-        text-decoration: none;
+    height: 2px;
+    width: 100%;
+  }
+  a {
+    background-color: #5c257f;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  img {
+    margin-right: 5px;
+    width: 20px;
+    animation: kofi-wiggle 3s infinite;
+  }
+  input[type="submit"] {
+    height: 40px;
+    display: inline-block;
+    width: 100px;
+    // font-size: 1rem;
 
-    }
-    img{
-        margin-right: 5px;
-        width: 20px;
-        animation: kofi-wiggle 3s infinite;
-    }
-    input[type="submit"]{
-        height: 40px;
-        display: inline-block;
-        width: 100px;
-        // font-size: 1rem;
-
-        font-weight: 700;
-        padding: 0 5px !important;
-        position: absolute;
-        top: 0;
-        right: 0;
-        background-color: #5c257f;
+    font-weight: 700;
+    padding: 0 5px !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #5c257f;
     color: #fff;
     border: none;
     border-radius: 0 3px 3px 0;
-    }
-    input[type="email"]{
-        width: 400px;
+  }
+  input[type="email"] {
+    width: 400px;
     max-width: 100%;
-    padding-right:120px;
-@media (max-width: 567px){
-    width: 320px;
-}
-@media (max-width: 370px){
-    width: 280px;
-}
+    padding-right: 120px;
+    @media (max-width: 567px) {
+      width: 320px;
     }
-    form{
-        >div{
-            display: inline-block;
-            position: relative;
-            margin: 0 auto;
-        }
+    @media (max-width: 370px) {
+      width: 280px;
     }
+  }
+  form {
+    > div {
+      display: inline-block;
+      position: relative;
+      margin: 0 auto;
+    }
+  }
 }

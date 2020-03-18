@@ -257,10 +257,10 @@ img[alt="ajeet-about"] {
   float: right;
 }
 
-
 // Code blocks
 
-code, tt {
+code,
+tt {
   margin: 0 2px;
   padding: 0 5px;
   white-space: nowrap;
@@ -275,7 +275,7 @@ pre code {
   white-space: pre;
   border: none;
   background: transparent;
-  font-size:.9rem;
+  font-size: 0.9rem;
 }
 
 .highlight pre {
@@ -290,7 +290,7 @@ pre code {
 
 pre {
   background-color: #cdcdcd;
-  font-family:monospace;
+  font-family: monospace;
   border: 1px solid #6e6a6a;
   font-size: 10px;
   line-height: 5px;
@@ -299,7 +299,8 @@ pre {
   border-radius: 3px;
 }
 
-pre code, pre tt {
+pre code,
+pre tt {
   background-color: transparent;
   border: none;
 }
