@@ -14,7 +14,7 @@ import newsLetterStyles from "../components/newsletter.module.scss"
 export const indexHeadingStyle = {
   marginBottom: ".5rem",
   fontWeight: "900",
-  color: "rgba(92, 37, 127, 1)",
+  // color: "rgba(92, 37, 127, 1)",
 }
 
 export const indexSubHeadingStyle = {

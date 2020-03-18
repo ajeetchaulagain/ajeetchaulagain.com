@@ -3,7 +3,6 @@ title: "How to use promises in Javascript"
 date: "2019-03-01"
 tags: ["Javascript", "OOP", "Code","Promises"]
 author: "Ajeet Chaulagain"
-featuredImage: ../images/blogpost/
 ---
 
 **_ Note: Just a dummy post _**

@@ -35,7 +35,7 @@ const Blog = () => {
     <div className={blogStyles.blogWrapper}>
       {data.allMdx.edges.map(edge => {
         return (
-
+          <Link to={`/blog/${edge.node.fields.slug}`}>
           <article className={blogStyles.blogItem}>
             <figure>
               <Img
@@ -47,16 +47,15 @@ const Blog = () => {
 
             <div className={blogStyles.content}>
               <h2>
-                <Link to={`/blog/${edge.node.fields.slug}`}>
+                
                   {edge.node.frontmatter.title}
-                </Link>
               </h2>
               <div className={blogStyles.metaData}>
                 <date>
-                  <strong>Published on: </strong>{edge.node.frontmatter.date}
+                  {edge.node.frontmatter.date}
                 </date>
                 <span>
-                  <strong> &nbsp; / &nbsp; {edge.node.timeToRead} min read </strong> <strong> &nbsp; / &nbsp; By: {edge.node.frontmatter.author}</strong>
+                   &nbsp; / &nbsp; {edge.node.timeToRead} min read  &nbsp; / &nbsp; By {edge.node.frontmatter.author} 
                 </span>
                 <ul>
                   {edge.node.frontmatter.tags.map(tag => {
@@ -67,6 +66,7 @@ const Blog = () => {
               </div>
             </div>
           </article>
+          </Link>
         )
       })}
     </div>

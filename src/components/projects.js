@@ -59,7 +59,7 @@ const Projects = () => {
                     to={`/projects/${edge.node.fields.slug}`}
                     className="box-button solid"
                   >
-                    Case Study{" "}
+                    Case Study
                     <i>
                       <FaAngleRight />
                     </i>
@@ -72,7 +72,7 @@ const Projects = () => {
                 </Link>
 
                 <p className={projectStyles.smallParagraph}>
-                  <strong>Time to Read: </strong> {edge.node.timeToRead} min.
+                  {edge.node.timeToRead} min read
                 </p>
               </div>
             </div>
