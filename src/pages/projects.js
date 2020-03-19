@@ -5,9 +5,7 @@ import IntroSection from "../components/intro-section"
 import ContentLayout from "../components/content-layout"
 import { indexHeadingStyle, indexSubHeadingStyle } from "."
 
-
 const ProjectsPage = () => {
-
   // console.log(data);
   return (
     <MasterLayout>

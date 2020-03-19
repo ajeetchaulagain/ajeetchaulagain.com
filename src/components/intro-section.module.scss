@@ -14,14 +14,10 @@
 }
 
 .heading-light {
-  // font-family: "Helvetica", sans-serif;
-  // text-transform: uppercase;
   font-family: "Source Sans Pro", sans-serif;
-  // text-transform: uppercase;
+
   font-size: 1.1rem;
 
-  // word-spacing: 5px;
-  // font-style: italic;
   font-weight: 500 !important;
   line-height: 1.25;
   padding: 45px 15px;
@@ -37,7 +33,6 @@
 @media only screen and (max-width: 599px) {
   .intro-content {
     padding: 0;
-    // background-color: green;
     .heading-light {
       padding: 0.5rem 0 2.2rem;
     }

@@ -20,7 +20,6 @@
       width: 30px;
       height: 30px;
       opacity: 0.8;
-      // background-color: rgb(94, 94, 92);
       right: 35px;
       bottom: 31px;
     }
@@ -29,24 +28,18 @@
   width: 100%;
   position: relative;
   @media only screen and (max-width: 599px) {
-    // margin-top: 25px;
   }
 }
 .content {
-  // padding: 10rem 1rem;
   background-color: white;
   width: 100%;
   border: 1px solid rgb(235, 233, 233);
-  // min-height: 50rem;
   line-height: 1.8;
   font-weight: 400;
   font-size: 1.125rem;
 
   p {
-    // font-size: 1.15rem;
     margin-bottom: 1.4rem;
-    // text-justify: inter-character;
-    // text-align: justify;
   }
 
   h1 {
@@ -67,7 +60,6 @@
     font-size: 1.7rem;
     margin-bottom: 0.3rem;
     margin-top: 2.5rem;
-    // text-decoration:underline;
     @media only screen and (max-width: 599px) {
       font-size: 1.5rem;
     }
@@ -99,18 +91,14 @@
 .content-button {
   text-decoration: none;
 }
+
 .content a:hover {
   text-decoration: none;
-}
-
-.content img[alt="ajeet-about"] {
-  width: 30px;
 }
 
 // / Media Queries------------------------------------------------
 @media only screen and (max-width: 599px) {
   .content p {
-    // font-size: 1.15rem;
     font-size: 1.1rem;
   }
 }
@@ -129,17 +117,9 @@
   }
 }
 
-@media only screen and (min-width: 1160px) {
+@media only screen and (min-width: 1140px) {
   .content {
-    width: 1160px;
+    width: 1140px;
     padding: 10rem 13rem;
-    // box-shadow:1px 1px 3px rgb(44, 43, 43);
   }
-}
-
-
-// Additional css - workout
-
-.abc{
-  background:red;
 }

@@ -13,25 +13,24 @@ import newsLetterStyles from "../components/newsletter.module.scss"
 
 export const indexHeadingStyle = {
   marginBottom: ".5rem",
-  fontWeight:"900",
-  color:"rgba(92, 37, 127, 1)",
+  fontWeight: "900",
+  // color: "rgba(92, 37, 127, 1)",
 }
 
 export const indexSubHeadingStyle = {
   marginBottom: "2.5rem",
   lineHeight: "1",
-  
 }
 
 export const contentBoxButton = {
   textDecoration: "none",
   color: "#fff",
-  fontWeight:"400",
+  fontWeight: "400",
 }
 
 export const subscribeSectionStyle = {
-  textAlign:"center",
-  backgroundColor:"grey",
+  textAlign: "center",
+  backgroundColor: "grey",
 }
 
 const IndexPage = () => {
@@ -64,9 +63,6 @@ const IndexPage = () => {
       <ContentLayout>
         <Newsletter />
       </ContentLayout>
-
-      
-
     </MasterLayout>
   )
 }

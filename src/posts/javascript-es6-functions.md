@@ -1,21 +1,16 @@
 ---
 title: "The power of Javascript ES6 Arrow functions"
-date: "2019-03-01"
-tags:
-  [
-    "Javascript",
-    "OOP",
-    "Code",
-  ]
+date: "2020-04-10"
+tags: ["Javascript", "es6 ", "Code"]
+author: "Ajeet Chaulagain"
 ---
 
-*** Note: Just a dummy post ***
+**_ Note: Just a dummy post _**
 
 ## Object Basics
 
+- Has a _name_ value pair, an object is made up of multiple members, each of which has a name (e.g. name and age above), and a value (e.g. ['Bob', 'Smith'] and 32). Each name/value pair must be separated by a comma, and the name and value in each case are separated by a colon.
 
-- Has a *name* value pair, an object is made up of multiple members, each of which has a name (e.g. name and age above), and a value (e.g. ['Bob', 'Smith'] and 32). Each name/value pair must be separated by a comma, and the name and value in each case are separated by a colon.
- 
 ```
  const person = {
   name: ['Bob', 'Smith'],

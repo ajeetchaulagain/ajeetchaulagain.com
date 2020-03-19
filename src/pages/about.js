@@ -4,7 +4,6 @@ import IntroSection from "../components/intro-section"
 import ContentLayout from "../components/content-layout"
 import About from "../components/about"
 
-
 const AboutPage = () => {
   return (
     <MasterLayout>

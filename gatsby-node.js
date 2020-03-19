@@ -91,8 +91,4 @@ module.exports.createPages = async ({ graphql, actions }) => {
       })
     }
   })
-
-  // 1. Get path to template
-  // 2. Get markdown data
-  // 3. Create new pages
 }

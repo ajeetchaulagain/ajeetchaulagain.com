@@ -19,6 +19,8 @@ Cloud Decision Support Tools was developed in order to assist various business t
 
 ## Architecture of the Project
 
+The project depends upon various tools and technologies. The entire project depends upon the ReactJS project. The backend of the project underlies in NodeJS. The design framework used was ANT Design. Further for the testing purpose the JEST framework was used. For the deployment, Heroku cloud platform was used.
+
 The architecture of the application is very simple. CDT works in mainly three tier architecture. The final solution is planned to be hosted in the cloud like Heroku, Google Cloud, etc.
 
 The three layers of application architecture are as follows:

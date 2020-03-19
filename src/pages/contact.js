@@ -5,7 +5,6 @@ import { FaSmile } from "react-icons/fa"
 import ContentLayout from "../components/content-layout"
 import ContactForm from "../components/contact-form"
 
-
 const ContactPage = () => {
   return (
     <MasterLayout>

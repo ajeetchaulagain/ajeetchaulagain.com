@@ -1,10 +1,9 @@
 .main-header {
-  // background-color: #000000;
   color: rgb(231, 222, 236);
   width: 100%;
   position: absolute;
   z-index: 2;
-  // background-color:black;
+
   @media (max-width: 767px) {
   }
 }
@@ -69,7 +68,6 @@
 
 .activeList {
   color: rgb(255, 252, 176);
-  // text-decoration: underline;
 }
 
 .nav-list li:first-child {
@@ -148,9 +146,9 @@
   }
 }
 
-@media only screen and (min-width: 1160px) {
+@media only screen and (min-width: 1140px) {
   .header-content {
-    width: 1160px;
+    width: 1140px;
     padding-top: 2rem;
     margin: 0 auto;
   }
