@@ -1,9 +1,9 @@
 ---
-title: "React JS tutorials for complete beginners"
-date: "2019-03-01"
-tags: ["Javascript", "OOP", "Code", "generators"]
-thumbnail: ../images/thumbnails/react-js.png
-author: "Pawan Regmi"
+title: "Getting Started with Kubernetes"
+date: "2020-04-10"
+tags: ["Javascript", "es6 ", "Code"]
+thumbnail: ../images/thumbnails/kubernetes.png
+author: "Ajeet Chaulagain"
 ---
 
 **_ Note: Just a dummy post _**
