@@ -1,8 +1,8 @@
 ---
-title: "Javascript Object basics - Quick Review"
+title: "Setting up docker for full stack js"
 date: "2019-03-01"
 tags: ["Javascript", "OOP", "Code"]
-thumbnail: ../images/thumbnails/js2.png
+thumbnail: ../images/thumbnails/docker.png
 author: "Ajeet Chaulagain"
 ---
 

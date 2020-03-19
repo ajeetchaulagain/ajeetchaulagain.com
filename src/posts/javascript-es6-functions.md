@@ -1,7 +1,8 @@
 ---
-title: "The power of Javascript ES6 Arrow functions"
+title: "NodeJS up and running for beginners"
 date: "2020-04-10"
 tags: ["Javascript", "es6 ", "Code"]
+thumbnail: ../images/thumbnails/nodejs.png
 author: "Ajeet Chaulagain"
 ---
 

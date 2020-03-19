@@ -6,6 +6,7 @@ import IntroSection from "../components/intro-section"
 import ContentLayout from "../components/content-layout"
 import blogTemplateStyles from "./blog-template.module.scss"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import Img from "gatsby-image"
 import {
   FaDocker,
   FaFacebookSquare,
@@ -24,6 +25,13 @@ export const query = graphql`
         tags
         date(formatString: "MMMM DD, YYYY")
         author
+        thumbnail {
+          childImageSharp{
+            fluid (quality: 30){
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
       }
       timeToRead
       body
@@ -66,8 +74,11 @@ const BlogTemplate = props => {
               </div>
             </div>
             <div className={blogTemplateStyles.featuredIcons}>
-              <FaDocker />
-            </div>
+              <Img
+                fluid={props.data.mdx.frontmatter.thumbnail.childImageSharp.fluid}
+                alt="blog-thumbnail"
+              />
+              </div>
           </header>
 
           <MDXRenderer>{props.data.mdx.body}</MDXRenderer>

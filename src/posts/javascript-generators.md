@@ -1,7 +1,8 @@
 ---
-title: "How to use Generators in Javascript"
+title: "React JS tutorials for complete beginners"
 date: "2019-03-01"
 tags: ["Javascript", "OOP", "Code", "generators"]
+thumbnail: ../images/thumbnails/react-js.png
 author: "Pawan Regmi"
 ---
 

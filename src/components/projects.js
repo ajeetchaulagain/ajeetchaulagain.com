@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import { FaAngleRight } from "react-icons/fa"
 
 const Projects = () => {
+  
   const data = useStaticQuery(graphql`
     query {
       allMdx(filter: { fields: { contentType: { eq: "projects" } } }) {
@@ -32,8 +33,6 @@ const Projects = () => {
     }
   `)
 
-  console.log("object data", data)
-
   return (
     <div className={projectStyles.projects}>
       {data.allMdx.edges.map(edge => {
@@ -52,6 +51,7 @@ const Projects = () => {
                   fluid={
                     edge.node.frontmatter.featuredImage.childImageSharp.fluid
                   }
+            
                   alt="project"
                 />
                 <figcaption>
@@ -70,7 +70,6 @@ const Projects = () => {
                 <Link to={`/projects/${edge.node.fields.slug}`}>
                   <h2>{edge.node.frontmatter.title}</h2>
                 </Link>
-
                 <p className={projectStyles.smallParagraph}>
                   {edge.node.timeToRead} min read
                 </p>
