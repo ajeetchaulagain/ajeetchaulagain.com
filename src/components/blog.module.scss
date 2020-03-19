@@ -19,7 +19,7 @@
 
   .blog-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     // justify-content: space-between;
     figure{
       width:20%;
@@ -30,14 +30,10 @@
     }
     @media only screen and (max-width: 599px) {
       padding: 1rem 0.5rem;
-      align-items: flex-startce;
+      align-items: flex-start;
       figure {
         padding-right: 1rem;
-        width:25%;
-    
-        img {
-          width: 50px;
-        }
+        // width:25%;
       }
 
       
@@ -48,7 +44,7 @@
     }
     padding: 2rem 2rem;
     border: 1px solid rgb(216, 216, 216);
-    align-items: center;
+    
     // border-radius: 5px;
   }
 
@@ -57,7 +53,7 @@
     border-radius:100%;
     img {
       // width: 100px;
-      border-radius:100% ;
+      // border-radius:100% ;
     }
   }
 
