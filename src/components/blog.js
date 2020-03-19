@@ -7,6 +7,7 @@ import Img from "gatsby-image"
 import { useAuthorImage } from "./utilities/use-author-image"
 
 const Blog = () => {
+
   const { ...GatsbyImageSharpFixed } = useAuthorImage()
 
   const data = useStaticQuery(graphql`
@@ -19,6 +20,13 @@ const Blog = () => {
               tags
               date(formatString: "MMMM DD, YYYY")
               author
+              thumbnail {
+                childImageSharp{
+                  fluid (quality: 50){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
             }
             excerpt
             timeToRead
@@ -39,10 +47,11 @@ const Blog = () => {
             <article className={blogStyles.blogItem}>
               <figure>
                 <Img
-                  fixed={GatsbyImageSharpFixed}
+                  fluid={edge.node.frontmatter.thumbnail.childImageSharp.fluid}
                   alt="blog-thumbnail"
                   className={blogStyles.image}
                 />
+                {console.log(edge.node.frontmatter.thumbnail.childImageSharp.fluid)}
               </figure>
 
               <div className={blogStyles.content}>

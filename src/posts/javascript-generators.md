@@ -2,6 +2,7 @@
 title: "How to use Generators in Javascript"
 date: "2019-03-01"
 tags: ["Javascript", "OOP", "Code", "generators"]
+thumbnail: ../images/thumbnails/javascript.png
 author: "Pawan Regmi"
 ---
 

@@ -2,6 +2,7 @@
 title: "The power of Javascript ES6 Arrow functions"
 date: "2020-04-10"
 tags: ["Javascript", "es6 ", "Code"]
+thumbnail: ../images/thumbnails/javascript.png
 author: "Ajeet Chaulagain"
 ---
 

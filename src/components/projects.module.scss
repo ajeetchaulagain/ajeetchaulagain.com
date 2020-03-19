@@ -58,7 +58,6 @@
       figcaption {
         opacity: 1;
       }
-      // background-color: #5c257f;
     }
   }
   figure {
@@ -87,7 +86,6 @@
       z-index: 1;
       a {
         padding: 0.5rem 1rem;
-        // font-size: 1rem;
         font-weight: 500;
         i {
           -webkit-animation: arrowMove 1.25s infinite;
@@ -118,7 +116,6 @@
       }
     }
     @media (max-width: 699px) {
-      // width: 50%;
     }
   }
   .project-content {
@@ -174,15 +171,6 @@
     padding: 0 1.5rem;
   }
   @media (max-width: 767px) {
-    .project-content {
-      // color: #fff;
-      a {
-        // color: #fff !important;
-      }
-    }
-    > div {
-      // background-color: #ac9bb6 !important;
-    }
   }
   @media (max-width: 567px) {
     padding-left: 15px;
@@ -215,7 +203,6 @@
   }
   .project {
     max-width: 100%;
-    // padding: 25px;
     width: 410px;
     margin-left: auto;
     margin-right: auto;
