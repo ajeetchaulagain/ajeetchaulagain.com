@@ -12,12 +12,14 @@ const ContactForm = () => {
         <div className={contactLayoutStyles.formRow}>
         <input type="hidden" name="form-name" value="contact" />
           <label for="email">Email</label>
+
           <input
             type="email"
             id="email"
             name="email"
             placeholder="Your Email"
           />
+          
         </div>
         <div className={contactLayoutStyles.formRow}>
           <label for="name">Name</label>
