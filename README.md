@@ -11,4 +11,4 @@ This will be a portfolio theme based on gatsby and is supposed to make a open so
 Full documentation coming out soon....
 
 
-![Theme Screenshot](src/images.theme.png)
+![Theme Screenshot](./src/images/theme.png)
