@@ -9,7 +9,7 @@ const ProjectsPage = () => {
   // console.log(data);
   return (
     <MasterLayout>
-      <IntroSection>Some of mine projects</IntroSection>
+      <IntroSection/>
       <ContentLayout>
         <h1 style={indexHeadingStyle}>Projects</h1>
         <p style={indexSubHeadingStyle}>List of all projects with case study</p>
