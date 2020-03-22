@@ -7,7 +7,7 @@ import About from "../components/about"
 const AboutPage = () => {
   return (
     <MasterLayout>
-      <IntroSection>Lets get connected!</IntroSection>
+      <IntroSection/>
       <ContentLayout>
         <About />
       </ContentLayout>

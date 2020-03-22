@@ -8,9 +8,7 @@ import ContactForm from "../components/contact-form"
 const ContactPage = () => {
   return (
     <MasterLayout>
-      <IntroSection>
-        Say a friendly hello to me <FaSmile />
-      </IntroSection>
+      <IntroSection/>
       <ContentLayout>
         <h1>Contact Me</h1>
         <p>
