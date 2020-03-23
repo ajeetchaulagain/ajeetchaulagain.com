@@ -1,3 +1,4 @@
+
 .post-header {
   display: flex;
   justify-content: space-between;
@@ -39,6 +40,7 @@
   color: rgba(51, 51, 51, 0.667);
   border-radius: 1px;
   font-size: 0.8rem;
+  
 }
 
 .post-meta span {
@@ -49,24 +51,16 @@
   margin-bottom: 1rem;
 }
 
-.social-share {
-  display: flex;
-  margin-top: 4rem;
 
-  li:first-child {
-    font-size: 1.3rem;
-  }
+// Additional CSS added for styling markdown component if the styles of content layout fails to do!
 
-  li {
-    font-size: 2rem;
-    font-weight: 400;
-    margin-right: 0.3rem;
-    // display: block;
-    a {
-      color: #333;
-      :hover {
-        color: rgb(102, 60, 148);
-      }
+.post-wrapper{
+  .mdx-wrapper{
+    ul li {
+      font-size: 1.1rem;
+      list-style-type: disc;
+      margin-left: 2rem;
     }
   }
 }
+

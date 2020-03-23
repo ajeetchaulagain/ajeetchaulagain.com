@@ -22,7 +22,7 @@ export const query = graphql`
 const ProjectTemplate = props => {
   return (
     <MasterLayout>
-      <IntroSection>Project Case Study</IntroSection>
+      <IntroSection/>
       <ContentLayout>
         <h1>{props.data.mdx.frontmatter.title}</h1>
         <MDXRenderer>{props.data.mdx.body}</MDXRenderer>

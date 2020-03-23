@@ -197,8 +197,7 @@ textarea {
   width: 100%;
 }
 
-//Table Code - Markdown
-
+//Table Code for markdown
 table {
   padding: 0;
   width: 100%;
@@ -219,6 +218,8 @@ table tr th {
   text-align: left;
   margin: 0;
   padding: 6px 13px;
+  background-color: rgb(62, 62, 62);
+  color:#fff;
 }
 table tr td {
   border: 1px solid #cccccc;
@@ -244,9 +245,7 @@ em {
 
 // List Styling
 
-li {
-  font-size: inherit;
-}
+
 
 // About page image styling
 

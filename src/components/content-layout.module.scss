@@ -76,10 +76,35 @@
     }
   }
 
+  h4{
+    font-family: "Roboto", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    // font-style: italic;
+    margin-bottom: 0.3rem;
+    margin-top: 2rem;
+    @media only screen and (max-width: 599px) {
+      font-size: 1.3rem;
+    }
+  }
+
+  h5{
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    margin-top: 2rem;
+    @media only screen and (max-width: 599px) {
+      font-size: 1.2rem;
+    }
+  }
+
   @media (max-width: 960px) {
     padding: 2.5rem 1.2rem 5rem;
     margin-bottom: 1rem;
   }
+
+
 }
 
 .content a {
