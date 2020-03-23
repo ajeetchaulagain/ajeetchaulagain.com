@@ -8,8 +8,6 @@ import { useAuthorImage } from "./utilities/use-author-image"
 
 const Blog = () => {
 
-  const { ...GatsbyImageSharpFixed } = useAuthorImage()
-
   const data = useStaticQuery(graphql`
     query {
       allMdx(filter: { fields: { contentType: { eq: "posts" } } }) {
@@ -19,7 +17,7 @@ const Blog = () => {
               title
               tags
               date(formatString: "MMMM DD, YYYY")
-              author
+              author 
               thumbnail {
                 childImageSharp{
                   fluid (quality: 50){

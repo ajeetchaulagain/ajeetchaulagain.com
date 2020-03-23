@@ -1,5 +1,5 @@
 ---
-title: "Getting started with Express.js - A complete tutorial"
+title: "Getting started with Express.js - Keeping it simple!"
 date: "2020-03-23"
 tags: ["javascript", "express", "node"]
 thumbnail: ../images/thumbnails/expressjs.png
