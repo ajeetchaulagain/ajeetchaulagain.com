@@ -288,14 +288,14 @@ pre code {
 }
 
 pre {
-  background-color: #cdcdcd;
-  font-family: monospace;
-  border: 1px solid #6e6a6a;
-  font-size: 10px;
-  line-height: 5px;
-  overflow: auto;
-  padding: 6px 10px;
-  border-radius: 3px;
+  // background-color: #cdcdcd;
+  // font-family: monospace;
+  // border: 1px solid #6e6a6a;
+  font-size: .9rem !important;
+  // line-height: 5px;
+  // overflow: auto;
+  // padding: 6px 10px;
+  // border-radius: 3px;
 }
 
 pre code,
@@ -303,3 +303,4 @@ pre tt {
   background-color: transparent;
   border: none;
 }
+

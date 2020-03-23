@@ -7,12 +7,6 @@ import ContentLayout from "../components/content-layout"
 import blogTemplateStyles from "./blog-template.module.scss"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Img from "gatsby-image"
-import {
-  FaFacebookSquare,
-  FaTwitterSquare,
-  FaLinkedin,
-} from "react-icons/fa"
-
 import { graphql } from "gatsby"
 
 export const query = graphql`
@@ -41,8 +35,6 @@ const BlogTemplate = props => {
   const blogTitle = {
     lineHeight: "1.2",
   }
-
-
 
   return (
     <MasterLayout>
