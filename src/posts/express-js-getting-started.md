@@ -38,7 +38,7 @@ Upon completion of this tutorial, you will learn:
 
 As a full-stack javascript developer, I use Express to *make a web server and API* in the node.js runtime environment. You can simply *install the express as a node package* in your application. The complexity of creating a server and handling different routes by using the core http module is reduced by the express package. 
 
-```jsx
+```jsx{numberLines:true}
 const ContactPage = () => {
   return (
     <MasterLayout>
@@ -56,10 +56,9 @@ const ContactPage = () => {
     </MasterLayout>
   )
 }
-
 ```
 
-```Javascript
+```javascript{numberLines: true}
 import express from 'express';
 import data from './data/data.json';
 
@@ -69,99 +68,6 @@ const PORT = 3000;
 
 // This is for the public folder on path /
 app.use(express.static('public'));
-
-// method to use JSON
-// app.use(express.json());
-
-app.use(express.urlencoded({extended: true}));
-
-
-//This is for the images folder on path /images
-app.use('/images', express.static('images'));
-
-app.get('/', (req,res)=>{
-    // get data from the server
-    res.json(data);
-});
-
-// JSON data
-// { "hello": "JSON is cool"}
-// URLEncoded data
-// hello=URLEcncoded+is+cool
-
-app.post('/newItem', (req,res)=>{
-    console.log(req.body);
-    res.send(req.body);
-});
-
-
-app.get('/item/:id',(req,res,next)=>{
-    // this is the middleware that pulls the data
-    let user = Number(req.params.id);
-    console.log(data[user]);
-
-    // middleware that uses the req object
-    console.log(`Request from: ${req.originalUrl}`);
-    console.log(`Request type: ${req.method}`);
-
-    // everything above is middleware before sending response back
-    res.send(data[user]);
-    next();
-},(req,res)=>{
-    console.log('Did you get the right data?');
-});
-
-
-// Chaining the route
-app.route('/item')
-    .get((req,res) => {
-        // res.send(`a get request with /item rout on port ${PORT}`);
-        throw new Error();
-    }
-    )
-    .put((req,res)=>{
-        res.send(`a put request with /item route  on port ${PORT}`);
-    })
-    .delete((req,res) => {
-        res.send(`a delete request with /item route  on port ${PORT}`);
-    });
-
-// end of chaining code
-
-// What is middleware?
-// middleware are the function that has access to req and res object in express application.
-
-
-
-// app.put('/item', (req,res)=>{
-//     res.send(`a put request with /item route  on port ${PORT}`);
-// });
-
-// app.get('/item', (req,res)=>{
-//     // res.download('./images/rocket.jpg'); // Similar to the sendFile method
-//     // res.send(`a put request with /item route  on port ${PORT}`);
-//     // res.redirect('https://www.linkedin.com');
-
-//     res.send(`a get request with /item rout on port ${PORT}`);
-// });
-
-// app.delete('/item', (req,res)=>{
-//     res.send(`a delete request with /item route  on port ${PORT}`);
-// });
-
-
-// Error handling functions goes at last just before listen function
-app.use((err,req,res,next)=>{
-    console.error(err.stack);
-    res.status(500).send(`Red alert! Red Alert!: ${err.stack}`);
-});
-
-app.listen(PORT, ()=>{
-    // on the server
-    console.log(`Your Server is running on port ${PORT}`);
-});
-
-
 ```
 
 You will get indepth understanding of Express while you follow along this tutorial. So lets get started!
@@ -172,12 +78,17 @@ As *Express is node package*, first we need to install node and npm in our machi
 
 After you installed NodeJS and NPM in your machine, simply run the following commands to verify its installed properly.
 
-``` node -v ```
-``` npm -v ```
+```bash 
+node -v
+npm -v 
+```
+After  that 
 
 *Installing Express*: To install the express you simply need to execute the following commmand in your CLI (Command Line Interface)
 
-``` npm install express ```
+```bash
+npm install express 
+```
 
 ## Table Sample
 
