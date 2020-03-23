@@ -18,8 +18,8 @@ export const query = graphql`
         date(formatString: "MMMM DD, YYYY")
         author
         thumbnail {
-          childImageSharp{
-            fluid (quality: 30){
+          childImageSharp {
+            fluid(quality: 30) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -38,7 +38,7 @@ const BlogTemplate = props => {
 
   return (
     <MasterLayout>
-      <IntroSection/>
+      <IntroSection />
       <ContentLayout>
         <div className={blogTemplateStyles.postWrapper}>
           <header className={blogTemplateStyles.postHeader}>
@@ -60,16 +60,17 @@ const BlogTemplate = props => {
             </div>
             <div className={blogTemplateStyles.featuredIcons}>
               <Img
-                fluid={props.data.mdx.frontmatter.thumbnail.childImageSharp.fluid}
+                fluid={
+                  props.data.mdx.frontmatter.thumbnail.childImageSharp.fluid
+                }
                 alt="blog-thumbnail"
               />
-              </div>
+            </div>
           </header>
           <div className={blogTemplateStyles.mdxWrapper}>
             <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
           </div>
         </div>
-        
       </ContentLayout>
     </MasterLayout>
   )

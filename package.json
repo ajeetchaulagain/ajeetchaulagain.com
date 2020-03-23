@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "env-cmd": "^10.0.1",
+    "gatsby-remark-code-titles": "^1.1.0",
     "gh-pages": "^2.2.0",
     "prettier": "^1.19.1"
   },

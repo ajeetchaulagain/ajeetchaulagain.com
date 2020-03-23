@@ -3,14 +3,14 @@ import contactLayoutStyles from "./contact-layout.module.scss"
 const ContactForm = () => {
   return (
     <div className={contactLayoutStyles.contactFormWrap}>
-      <form 
-      name="contact"
-      method = "POST"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
       >
         <div className={contactLayoutStyles.formRow}>
-        <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="form-name" value="contact" />
           <label for="email">Email</label>
 
           <input
@@ -19,7 +19,6 @@ const ContactForm = () => {
             name="email"
             placeholder="Your Email"
           />
-          
         </div>
         <div className={contactLayoutStyles.formRow}>
           <label for="name">Name</label>

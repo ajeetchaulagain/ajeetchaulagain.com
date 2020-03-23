@@ -1,4 +1,3 @@
-
 .post-header {
   display: flex;
   justify-content: space-between;
@@ -11,13 +10,12 @@
 }
 
 .featured-icons {
-
-  width:20%;
-  padding-left:.1rem;
+  width: 20%;
+  padding-left: 0.1rem;
 
   @media only screen and (max-width: 599px) {
     order: 1;
-    padding-bottom:1rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -41,7 +39,6 @@
   color: rgba(51, 51, 51, 0.667);
   border-radius: 1px;
   font-size: 0.8rem;
-  
 }
 
 .post-meta span {
@@ -52,11 +49,10 @@
   margin-bottom: 1rem;
 }
 
-
 // Additional CSS added for styling markdown component if the styles of content layout fails to do!
 
-.post-wrapper{
-  .mdx-wrapper{
+.post-wrapper {
+  .mdx-wrapper {
     ul li {
       font-size: 1.1rem;
       list-style-type: disc;
@@ -64,4 +60,3 @@
     }
   }
 }
-

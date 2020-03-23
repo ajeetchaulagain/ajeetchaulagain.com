@@ -19,8 +19,6 @@ module.exports.onCreateNode = ({ node, actions }) => {
     let pathArray = pathDirectory.split(path.sep)
     let contentType = pathArray[pathArray.length - 1] // parent directory name will be the content type.
 
-  
-
     createNodeField({
       node,
       name: "slug",

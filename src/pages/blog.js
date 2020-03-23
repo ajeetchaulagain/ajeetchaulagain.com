@@ -20,7 +20,7 @@ const BlogPage = () => {
 
   return (
     <MasterLayout>
-      <IntroSection/>
+      <IntroSection />
       <ContentLayout>
         <h1>Articles</h1>
         <input

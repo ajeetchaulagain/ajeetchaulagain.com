@@ -219,7 +219,7 @@ table tr th {
   margin: 0;
   padding: 6px 13px;
   background-color: rgb(62, 62, 62);
-  color:#fff;
+  color: #fff;
 }
 table tr td {
   border: 1px solid #cccccc;
@@ -245,8 +245,6 @@ em {
 
 // List Styling
 
-
-
 // About page image styling
 
 img[alt="ajeet-about"] {
@@ -256,26 +254,6 @@ img[alt="ajeet-about"] {
   float: right;
 }
 
-// Code blocks
-
-
-pre {
-  // background-color: #cdcdcd;
-  // font-family: monospace;
-  // border: 1px solid #6e6a6a;
-  font-size: .9rem !important;
-  // line-height: 5px;
-  // overflow: auto;
-  // padding: 6px 10px;
-  // border-radius: 3px;
-}
-
-
-pre code,
-pre tt {
-  background-color: transparent;
-  border: none;
-}
 // line highlight
 .gatsby-highlight-code-line {
   background-color: rgb(89, 89, 89);
@@ -286,8 +264,6 @@ pre tt {
   padding-left: 0.75em;
   border-left: 3px solid #fff;
 }
-
-
 
 .gatsby-highlight pre[class*="language-"] {
   margin: 0;
@@ -311,9 +287,10 @@ pre tt {
  */
 
 .gatsby-highlight {
-  background-color:#272822;
-  border-radius:.5rem;
-  margin: 2rem 0 2.5rem;
+  font-size: 0.8rem;
+  background-color: #272822;
+  border-radius: 0.5rem;
+  margin: 0rem 0 2.5rem;
   padding: 1em;
   overflow: auto;
 }
@@ -345,4 +322,19 @@ pre tt {
 
 .command-line-prompt > span[data-prompt]:before {
   content: attr(data-prompt);
+}
+
+// Gatsby-remark-code-titles css
+
+.gatsby-code-title {
+  margin-bottom: -0.6rem;
+  padding: 0.2rem 1em 0.8rem;
+  font-family: inherit;
+  background-color: #000000;
+  color: white;
+  font-weight: 700;
+  z-index: 0;
+
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
 }

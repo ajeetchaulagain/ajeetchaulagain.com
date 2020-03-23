@@ -33,6 +33,14 @@ module.exports = {
               quality: 80,
             },
           },
+
+          {
+            resolve: "gatsby-remark-code-titles",
+            options: {
+              className: "your-custom-class-name",
+            },
+          },
+
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -122,7 +130,6 @@ module.exports = {
         trackingId: "UA-54342929-2",
       },
     },
-
   ],
 
   pathPrefix: "/gatsby-portfolio",
