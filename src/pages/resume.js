@@ -7,7 +7,7 @@ import Resume from "../components/resume"
 const ResumePage = () => {
   return (
     <MasterLayout>
-      <IntroSection/>
+      <IntroSection />
       <ContentLayout>
         <h1>Resume</h1>
         <Resume />

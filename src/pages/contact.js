@@ -8,7 +8,7 @@ import ContactForm from "../components/contact-form"
 const ContactPage = () => {
   return (
     <MasterLayout>
-      <IntroSection/>
+      <IntroSection />
       <ContentLayout>
         <h1>Contact Me</h1>
         <p>

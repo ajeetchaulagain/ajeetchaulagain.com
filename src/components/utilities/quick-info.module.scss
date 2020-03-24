@@ -1,0 +1,27 @@
+.quick-info{
+    background-color:#f2f1f2;
+    padding: .2rem 1rem;
+    color: #333;
+    font-weight: 400;
+    border:1px solid rgb(217, 214, 218);
+    border-radius: 5px solid black;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom:2.5rem;
+    margin-top:1.3rem;
+
+    div{
+        width:10%;
+        font-size:3rem;
+        line-height: 1;
+        color:rgb(88, 23, 101);
+    }
+    p{
+        width:85%;
+        margin-top:1rem;
+        line-height: 1.5;
+    }
+}

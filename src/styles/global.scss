@@ -31,6 +31,7 @@ $color__border-input: #d9d8da;
 $color__border-abbr: #666;
 
 $color__brand: #5c257f;
+$coolor__brand: #c4c3c4;
 $color__brandSecond: #f0f0f0;
 
 // font
@@ -197,8 +198,7 @@ textarea {
   width: 100%;
 }
 
-//Table Code - Markdown
-
+//Table Code for markdown
 table {
   padding: 0;
   width: 100%;
@@ -219,6 +219,8 @@ table tr th {
   text-align: left;
   margin: 0;
   padding: 6px 13px;
+  background-color: rgb(62, 62, 62);
+  color: #fff;
 }
 table tr td {
   border: 1px solid #cccccc;
@@ -244,63 +246,105 @@ em {
 
 // List Styling
 
-li {
-  font-size: inherit;
-}
 
-// About page image styling
 
-img[alt="ajeet-about"] {
-  width: 300px !important;
-  height: auto !important;
+
+// line highlight
+.gatsby-highlight-code-line {
+  background-color: rgb(89, 89, 89);
   display: block;
-  float: right;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 3px solid #fff;
 }
 
-// Code blocks
-
-code,
-tt {
-  margin: 0 2px;
-  padding: 0 5px;
-  white-space: nowrap;
-  border: 1px solid #eaeaea;
-  background-color: #f8f8f8;
-  border-radius: 3px;
-}
-
-pre code {
+.gatsby-highlight pre[class*="language-"] {
   margin: 0;
   padding: 0;
-  white-space: pre;
-  border: none;
-  background: transparent;
-  font-size: 0.9rem;
+  overflow: initial;
+  float: left; /* 1 */
+  min-width: 100%; /* 2 */
 }
 
-.highlight pre {
-  background-color: #f8f8f8;
-  border: 1px solid #cccccc;
-  font-size: 13px;
-  // line-height: 19px;
+/**
+ * If you already use line highlighting
+ */
+
+/* Adjust the position of the line numbers */
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding-left: 2.8em;
+}
+
+/**
+ * If you only want to use line numbering
+ */
+
+.gatsby-highlight {
+  font-size: 0.8rem;
+  background-color: #272822;
+  border-radius: 0.2rem;
+  margin: 0rem 0 2.5rem;
+  padding: 1em;
   overflow: auto;
-  padding: 6px 10px;
-  border-radius: 3px;
 }
 
-pre {
-  background-color: #cdcdcd;
-  font-family: monospace;
-  border: 1px solid #6e6a6a;
-  font-size: 10px;
-  line-height: 5px;
-  overflow: auto;
-  padding: 6px 10px;
-  border-radius: 3px;
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding: 0;
+  padding-left: 2.8em;
+  overflow: initial;
 }
 
-pre code,
-pre tt {
-  background-color: transparent;
-  border: none;
+
+// Line highlighting for inline - custom code
+
+em code{
+  font-size:1rem;
+  color:#333 !important;
+  font-weight: 400;
+  background-color:rgb(240, 240, 240) !important;
+  border:1px solid rgb(193, 193, 193) !important;
+  padding:.1rem .3rem !important;
+  display: inline-block !important;
+  border-radius:1px !important;
+  font-family: monospace !important;
+}
+
+// Code for shell prompt
+
+.command-line-prompt > span:before {
+  color: #999;
+  content: " ";
+  display: block;
+  padding-right: 0.8em;
+}
+
+/* Prompt for all users */
+.command-line-prompt > span[data-user]:before {
+  content: "[" attr(data-user) "@" attr(data-host) "] $";
+}
+
+/* Prompt for root */
+.command-line-prompt > span[data-user="root"]:before {
+  content: "[" attr(data-user) "@" attr(data-host) "] #";
+}
+
+.command-line-prompt > span[data-prompt]:before {
+  content: attr(data-prompt);
+}
+
+// Gatsby-remark-code-titles css
+
+.gatsby-code-title {
+  margin-bottom: -0.6rem;
+  padding: 0.2rem 1em 0.8rem;
+  font-family: inherit;
+  background-color: #000000;
+  color: white;
+  font-weight: 700;
+  z-index: 0;
+
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
 }

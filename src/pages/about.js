@@ -7,7 +7,7 @@ import About from "../components/about"
 const AboutPage = () => {
   return (
     <MasterLayout>
-      <IntroSection/>
+      <IntroSection />
       <ContentLayout>
         <About />
       </ContentLayout>

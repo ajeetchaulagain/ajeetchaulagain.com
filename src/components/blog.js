@@ -7,9 +7,6 @@ import Img from "gatsby-image"
 import { useAuthorImage } from "./utilities/use-author-image"
 
 const Blog = () => {
-
-  const { ...GatsbyImageSharpFixed } = useAuthorImage()
-
   const data = useStaticQuery(graphql`
     query {
       allMdx(filter: { fields: { contentType: { eq: "posts" } } }) {
@@ -21,8 +18,8 @@ const Blog = () => {
               date(formatString: "MMMM DD, YYYY")
               author
               thumbnail {
-                childImageSharp{
-                  fluid (quality: 50){
+                childImageSharp {
+                  fluid(quality: 50) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
@@ -51,7 +48,9 @@ const Blog = () => {
                   alt="blog-thumbnail"
                   className={blogStyles.image}
                 />
-                {console.log(edge.node.frontmatter.thumbnail.childImageSharp.fluid)}
+                {console.log(
+                  edge.node.frontmatter.thumbnail.childImageSharp.fluid
+                )}
               </figure>
 
               <div className={blogStyles.content}>

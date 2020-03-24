@@ -10,12 +10,12 @@
 }
 
 .featured-icons {
-
-  width:18%;
+  width: 20%;
+  padding-left: 0.1rem;
 
   @media only screen and (max-width: 599px) {
     order: 1;
-    padding-bottom:1rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -49,24 +49,19 @@
   margin-bottom: 1rem;
 }
 
-.social-share {
-  display: flex;
-  margin-top: 4rem;
+// Additional CSS added for styling markdown component if the styles of content layout fails to do!
 
-  li:first-child {
-    font-size: 1.3rem;
-  }
-
-  li {
-    font-size: 2rem;
-    font-weight: 400;
-    margin-right: 0.3rem;
-    // display: block;
-    a {
-      color: #333;
-      :hover {
-        color: rgb(102, 60, 148);
-      }
+.post-wrapper {
+  .mdx-wrapper {
+    ul li {
+      font-size: 1.1rem;
+      list-style-type: disc;
+      margin-left: 2rem;
+    }
+    ol li{
+      margin-left:.9rem;
+      margin-bottom: .6rem;
+      // font-weight: 500;
     }
   }
 }

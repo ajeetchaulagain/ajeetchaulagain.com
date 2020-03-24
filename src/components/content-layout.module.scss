@@ -36,6 +36,7 @@
   border: 1px solid rgb(235, 233, 233);
   line-height: 1.8;
   font-weight: 400;
+  color: #333;
   font-size: 1.125rem;
 
   p {
@@ -48,7 +49,7 @@
     font-size: 2.1rem;
     margin-bottom: 1rem;
     line-height: 1.2;
-    color: #333;
+
     @media only screen and (max-width: 599px) {
       font-size: 1.8rem;
     }
@@ -57,7 +58,7 @@
   h2 {
     font-family: "Roboto", sans-serif;
     font-weight: 700 !important;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     margin-bottom: 0.3rem;
     margin-top: 2.5rem;
     @media only screen and (max-width: 599px) {
@@ -67,7 +68,7 @@
 
   h3 {
     font-family: "Roboto", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: 0.3rem;
     margin-top: 2rem;
@@ -76,9 +77,34 @@
     }
   }
 
+  h4 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    // font-style: italic;
+    margin-bottom: 0.3rem;
+    margin-top: 2rem;
+    @media only screen and (max-width: 599px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  h5 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    margin-top: 2rem;
+    @media only screen and (max-width: 599px) {
+      font-size: 1.1rem;
+    }
+  }
+
   @media (max-width: 960px) {
     padding: 2.5rem 1.2rem 5rem;
-    margin-bottom: 1rem;
+    // margin-bottom: 1rem;
+    border:none;
+    border-bottom:1px solid rgb(194, 194, 194);
   }
 }
 
