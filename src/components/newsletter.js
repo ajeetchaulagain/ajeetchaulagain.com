@@ -9,10 +9,11 @@ import { indexHeadingStyle } from "../pages"
 const NewsLetter = () => {
   return (
     <div className={newsLetterStyles.wrapper}>
-      <h1 style={indexHeadingStyle}> Subscribe Me</h1>
+      <h1 style={indexHeadingStyle}> Get my best tips and tutorials</h1>
       <p>
-        I write articles on software development and programming. Subscribe to
-        my article
+        I write article, tutorials and how to guides to help beginner get into the software engineering feel. 
+        </p>
+        <p>Subscribe to get my tips straight into your mailbox.
       </p>
       <form>
         <div>

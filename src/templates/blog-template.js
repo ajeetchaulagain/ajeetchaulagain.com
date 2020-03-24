@@ -8,6 +8,8 @@ import blogTemplateStyles from "./blog-template.module.scss"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
+import AboutJumbotronBlog from "../components/about-jumbotron"
+
 
 export const query = graphql`
   query($slug: String!) {
@@ -71,6 +73,7 @@ const BlogTemplate = props => {
             <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
           </div>
         </div>
+        <AboutJumbotronBlog/>
       </ContentLayout>
     </MasterLayout>
   )
