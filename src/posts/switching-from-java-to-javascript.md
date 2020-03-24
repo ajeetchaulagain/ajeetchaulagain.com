@@ -1,8 +1,8 @@
 ---
-title: "Getting started with Express.js - Keeping it simple!"
-date: "2020-03-23"
-tags: ["javascript", "express", "node"]
-thumbnail: ../images/thumbnails/express-js.png
+title: "Why I switched to Javascript ecosystem from Java"
+date: "2020-03-21"
+tags: ["javascript", "code", "node"]
+thumbnail: ../images/thumbnails/ajeet-avatar.png
 author: "Ajeet Chaulagain"
 ---
 

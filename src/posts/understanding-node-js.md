@@ -1,8 +1,8 @@
 ---
-title: "Getting started with Express.js - Keeping it simple!"
-date: "2020-03-23"
-tags: ["javascript", "express", "node"]
-thumbnail: ../images/thumbnails/express-js.png
+title: "Understanding Node.js and NPM in 10 minutes"
+date: "2020-03-22"
+tags: ["javascript", "node", "npm"]
+thumbnail: ../images/thumbnails/node-js.png
 author: "Ajeet Chaulagain"
 ---
 

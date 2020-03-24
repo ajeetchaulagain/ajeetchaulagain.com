@@ -2,7 +2,7 @@
 title: "NodeJS up and running for beginners"
 date: "2020-04-10"
 tags: ["Javascript", "es6 ", "Code"]
-thumbnail: ../images/thumbnails/nodejs.png
+thumbnail: ../images/thumbnails/node-js.png
 author: "Ajeet Chaulagain"
 ---
 

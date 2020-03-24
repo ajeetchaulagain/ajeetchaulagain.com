@@ -2,7 +2,7 @@
 title: "Javascript Object basics - Quick Review"
 date: "2019-03-01"
 tags: ["Javascript", "OOP", "Code"]
-thumbnail: ../images/thumbnails/js2.png
+thumbnail: ../images/thumbnails/javascript.png
 author: "Ajeet Chaulagain"
 ---
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import quickInfoStyle from "./quick-info.module.scss"
+import {Link} from 'gatsby'
 
 import {
     FaInfoCircle
@@ -7,12 +8,10 @@ import {
 
 export const QuickInfo = (props) =>{
 
-  
-    
     return (
         <div className={quickInfoStyle.quickInfo}>
             <div><FaInfoCircle/></div>
-            <p>{props.children}</p>
+            <p><Link to={props.url}>{props.name}</Link> {props.children}</p>
         </div>
     )
 }

@@ -246,14 +246,8 @@ em {
 
 // List Styling
 
-// About page image styling
 
-img[alt="ajeet-about"] {
-  width: 300px !important;
-  height: auto !important;
-  display: block;
-  float: right;
-}
+
 
 // line highlight
 .gatsby-highlight-code-line {
@@ -300,6 +294,21 @@ img[alt="ajeet-about"] {
   padding: 0;
   padding-left: 2.8em;
   overflow: initial;
+}
+
+
+// Line highlighting for inline - custom code
+
+em code{
+  font-size:1rem;
+  color:#333 !important;
+  font-weight: 400;
+  background-color:rgb(240, 240, 240) !important;
+  border:1px solid rgb(193, 193, 193) !important;
+  padding:.1rem .3rem !important;
+  display: inline-block !important;
+  border-radius:1px !important;
+  font-family: monospace !important;
 }
 
 // Code for shell prompt
