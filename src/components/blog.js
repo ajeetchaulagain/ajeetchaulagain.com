@@ -48,9 +48,7 @@ const Blog = () => {
                   alt="blog-thumbnail"
                   className={blogStyles.image}
                 />
-                {console.log(
-                  edge.node.frontmatter.thumbnail.childImageSharp.fluid
-                )}
+              
               </figure>
 
               <div className={blogStyles.content}>

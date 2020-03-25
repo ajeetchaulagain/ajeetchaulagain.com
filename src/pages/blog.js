@@ -23,7 +23,9 @@ const BlogPage = () => {
       <IntroSection />
       <ContentLayout>
         <h1 style={indexHeadingStyle}>Articles & Tutorials</h1>
-        <p style={indexSubHeadingStyle}>Tutorials on software develpment, how-to guides and more.</p>
+        <p style={indexSubHeadingStyle}>
+          Tutorials on software develpment, how-to guides and more.
+        </p>
         <input
           type="text"
           placeholder="Type here to filter articles"

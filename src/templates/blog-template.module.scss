@@ -58,10 +58,56 @@
       list-style-type: disc;
       margin-left: 2rem;
     }
-    ol li{
-      margin-left:.9rem;
-      margin-bottom: .6rem;
+    ol li {
+      margin-left: 0.9rem;
+      margin-bottom: 0.6rem;
       // font-weight: 500;
     }
+  }
+
+  // Page Naviation code
+  .page-navigation {
+    margin-top:5rem;
+    // background-color:rgb(148, 155, 148);
+    // color:white;
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    
+    .next-nav{
+      border-right:none;
+      border-left:none;
+      // text-align: right;
+    }
+    .prev-nav{
+      border-left:none;
+      
+      // border-right:none;
+    }
+
+    div{
+      // background-color:rgb(58, 58, 58);
+      padding:1rem 0.4rem;
+      border:1px solid rgb(216, 216, 216);
+      width:50%;
+
+      span{
+        display:flex;
+        align-items: center;
+        text-decoration: none;
+        
+        // line-height:2;
+      }
+      
+
+      p{
+        margin:0;
+        font-size: 1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+    }
+
+    
   }
 }
