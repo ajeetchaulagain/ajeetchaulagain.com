@@ -12,14 +12,14 @@ import Newsletter from "../components/newsletter"
 import newsLetterStyles from "../components/newsletter.module.scss"
 
 export const indexHeadingStyle = {
-  marginBottom: ".5rem",
+  marginBottom: ".6rem",
   fontWeight: "900",
   // color: "rgba(92, 37, 127, 1)",
 }
 
 export const indexSubHeadingStyle = {
   marginBottom: "2.5rem",
-  lineHeight: "1",
+  lineHeight: "1.5",
 }
 
 export const contentBoxButton = {

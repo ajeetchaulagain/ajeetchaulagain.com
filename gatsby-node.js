@@ -40,44 +40,61 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const projectTemplate = path.resolve("./src/templates/project-template.js")
   // const blogTemplate = path.resolve("./src/templates/project-template.js")
 
-  const res = await graphql(`
-    query {
-      allMdx {
-        edges {
-          node {
-            fields {
-              slug
-              contentType
+  const postOnlyResult = await graphql(`
+        query {
+          allMdx(filter: {fields: {contentType: {eq: "posts"}}}
+          sort:{order:ASC, fields:[frontmatter___date]}) {
+            edges {
+              node {
+                fields {
+                  slug
+                  contentType
+                }
+              }
+            }
+          }
+        }
+      `)
+
+  const projectOnlyResult = await graphql(`
+      query {
+        allMdx(filter: {fields: {contentType: {eq: "projects"}}}) {
+          edges {
+            node {
+              fields {
+                slug
+                contentType
+              }
             }
           }
         }
       }
-    }
   `)
 
-  res.data.allMdx.edges.forEach(edge => {
-    // const absolutePath = edge.node.fileAbsolutePath;
-
-    // console.log("Type of " + typeof(absolutePath));
-
-    // const pathDirectory = path.dirname(absolutePath);
-
-    // console.log(`path dir: ${pathDirectory}`);
-
-    // let pathArray = pathDirectory.split(path.sep);
-    // let contentType = pathArray[pathArray.length-1]; // parent directory name will be the content type.
-
-    let contentType = edge.node.fields.contentType
-
-    if (contentType === "posts") {
-      createPage({
-        component: blogTemplate,
-        path: `/blog/${edge.node.fields.slug}`,
-        context: {
-          slug: edge.node.fields.slug,
-        },
+      const posts = postOnlyResult.data.allMdx.edges
+      posts.forEach((edge, index)=>{
+        createPage({
+              component: blogTemplate,
+              path: `/blog/${edge.node.fields.slug}`,
+              context: {
+                slug: edge.node.fields.slug,
+                prev: index === 0 ? null : posts[index-1].node,
+                next: index === (posts.length-1) ? null : posts[index+1].node,
+              },
+            })
       })
-    } else if (contentType === "projects") {
+    // postOnlyResult.data.allMdx.edges.forEach(edge => {
+    //   createPage({
+    //     component: blogTemplate,
+    //     path: `/blog/${edge.node.fields.slug}`,
+    //     context: {
+    //       slug: edge.node.fields.slug,
+    //     },
+    //   })
+    // })
+
+    
+    projectOnlyResult.data.allMdx.edges.forEach(edge => {
       createPage({
         component: projectTemplate,
         path: `/projects/${edge.node.fields.slug}`,
@@ -85,6 +102,5 @@ module.exports.createPages = async ({ graphql, actions }) => {
           slug: edge.node.fields.slug,
         },
       })
-    }
-  })
+    })
 }

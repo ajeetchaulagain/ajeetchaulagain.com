@@ -11,10 +11,10 @@ const NewsLetter = () => {
     <div className={newsLetterStyles.wrapper}>
       <h1 style={indexHeadingStyle}> Get my best tips and tutorials</h1>
       <p>
-        I write article, tutorials and how to guides to help beginner get into the software engineering feel. 
-        </p>
-        <p>Subscribe to get my tips straight into your mailbox.
+        I write article, tutorials and how to guides to help beginner get into
+        the software engineering feel.
       </p>
+      <p>Subscribe to get my tips straight into your mailbox.</p>
       <form>
         <div>
           <input type="email" placeholder="YOUR EMAIL" />
