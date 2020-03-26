@@ -246,9 +246,6 @@ em {
 
 // List Styling
 
-
-
-
 // line highlight
 .gatsby-highlight-code-line {
   background-color: rgb(89, 89, 89);
@@ -296,18 +293,17 @@ em {
   overflow: initial;
 }
 
-
 // Line highlighting for inline - custom code
 
-em code{
-  font-size:1rem;
-  color:#333 !important;
+em code {
+  font-size: 1rem;
+  color: #333 !important;
   font-weight: 400;
-  background-color:rgb(240, 240, 240) !important;
-  border:1px solid rgb(193, 193, 193) !important;
-  padding:.1rem .3rem !important;
+  background-color: rgb(240, 240, 240) !important;
+  border: 1px solid rgb(193, 193, 193) !important;
+  padding: 0.1rem 0.3rem !important;
   display: inline-block !important;
-  border-radius:1px !important;
+  border-radius: 1px !important;
   font-family: monospace !important;
 }
 

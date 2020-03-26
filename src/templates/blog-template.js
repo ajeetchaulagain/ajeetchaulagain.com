@@ -7,7 +7,9 @@ import ContentLayout from "../components/content-layout"
 import blogTemplateStyles from "./blog-template.module.scss"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Img from "gatsby-image"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
+import AboutJumbotronBlog from "../components/about-jumbotron"
+import { FaArrowLeft, FaArrowRight} from "react-icons/fa"
 
 export const query = graphql`
   query($slug: String!) {
@@ -31,7 +33,11 @@ export const query = graphql`
   }
 `
 
-const BlogTemplate = props => {
+const BlogTemplate = (props) => {
+
+  const {next, prev} = props.pageContext
+
+  
   const blogTitle = {
     lineHeight: "1.2",
   }
@@ -70,7 +76,31 @@ const BlogTemplate = props => {
           <div className={blogTemplateStyles.mdxWrapper}>
             <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
           </div>
+          
+          <div className={blogTemplateStyles.pageNavigation}>
+          
+          { prev && 
+            <div className={blogTemplateStyles.prevNav}>
+            <p>Previous</p>
+              <Link to = {`/blog/${prev.fields.slug}`}>
+                  <span><FaArrowLeft/>{prev.fields.slug}</span>
+              </Link>
+            </div>
+          }
+          
+          { next && 
+            <div className={blogTemplateStyles.nextNav}>
+              <p>Next</p>
+              <Link to = {`/blog/${next.fields.slug}`}>
+                  <span>{next.fields.slug}<FaArrowRight/></span>
+              </Link>
+            </div>
+          }
+          </div>
+          
+
         </div>
+        <AboutJumbotronBlog />
       </ContentLayout>
     </MasterLayout>
   )
