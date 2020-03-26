@@ -62,7 +62,7 @@ const About = () => {
       <p>
         I hope my articles will somehow help the beginner to start their career
         in software development and programming. Please don't forget to
-        subscirbe me for latest articles
+        subscirbe me for latest articles.
       </p>
     </div>
   )

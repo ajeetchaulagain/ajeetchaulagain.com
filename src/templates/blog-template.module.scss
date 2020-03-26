@@ -67,6 +67,7 @@
 
   // Page Naviation code
   .page-navigation {
+    font-size:1rem;
     margin-top:5rem;
     // background-color:rgb(148, 155, 148);
     // color:white;
@@ -78,11 +79,28 @@
       border-right:none;
       border-left:none;
       text-align: right;
+      
+      .float{
+        float:right;
+      }
+      
+      svg{
+        margin-left: .5rem;
+        width:12px;
+      }
+      
     }
     .prev-nav{
       border-left:none;
+        
+      svg{
+        margin-right: .5rem;
+        width:12px;
+      }
+      .float{
+        float:left;
+      }
       
-      // border-right:none;
     }
 
     div{
@@ -92,10 +110,9 @@
       width:50%;
 
 
-      span{
-        display:flex;
+      a{
+        display: flex;
         align-items: center;
-        text-decoration: none;
       }
     
       p{

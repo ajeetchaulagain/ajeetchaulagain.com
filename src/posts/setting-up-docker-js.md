@@ -1,5 +1,5 @@
 ---
-title: "Setting up docker for full stack js"
+title: "Setting up docker for Full Stack Javascript Development - Modern Aproach"
 date: "2019-03-01"
 tags: ["Javascript", "OOP", "Code"]
 thumbnail: ../images/thumbnails/docker.png
