@@ -50,6 +50,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
                   slug
                   contentType
                 }
+                frontmatter{
+                  title
+                }
               }
             }
           }
@@ -73,6 +76,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
       const posts = postOnlyResult.data.allMdx.edges
       posts.forEach((edge, index)=>{
+        
         createPage({
               component: blogTemplate,
               path: `/blog/${edge.node.fields.slug}`,
@@ -93,7 +97,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     //   })
     // })
 
-    
+  
     projectOnlyResult.data.allMdx.edges.forEach(edge => {
       createPage({
         component: projectTemplate,

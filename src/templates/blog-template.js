@@ -81,19 +81,24 @@ const BlogTemplate = (props) => {
           
           { prev && 
             <div className={blogTemplateStyles.prevNav}>
+            <aside className={blogTemplateStyles.float}>
             <p>Previous</p>
               <Link to = {`/blog/${prev.fields.slug}`}>
-                  <span><FaArrowLeft/>{prev.fields.slug}</span>
+              <FaArrowLeft/><span>{prev.frontmatter.title}</span>
               </Link>
+              </aside>
             </div>
           }
-          
+
+        
           { next && 
             <div className={blogTemplateStyles.nextNav}>
+              <aside className={blogTemplateStyles.float}>
               <p>Next</p>
               <Link to = {`/blog/${next.fields.slug}`}>
-                  <span>{next.fields.slug}<FaArrowRight/></span>
+                  <span>{next.frontmatter.title}</span><FaArrowRight/>
               </Link>
+              </aside>
             </div>
           }
           </div>
