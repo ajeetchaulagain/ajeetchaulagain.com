@@ -11,7 +11,7 @@ const ContactForm = () => {
       >
         <div className={contactLayoutStyles.formRow}>
           <input type="hidden" name="form-name" value="contact" />
-          <label for="email">Email</label>
+          <label>Email</label>
 
           <input
             type="email"
