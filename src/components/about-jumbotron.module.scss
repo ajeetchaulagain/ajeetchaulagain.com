@@ -1,6 +1,6 @@
 .wrapper {
   color: rgb(223, 212, 212);
-  padding: 1rem;
+  padding: 1rem 1rem .5rem;
   border: 1px solid rgb(142, 142, 142);
   margin-top: 5rem;
   // margin-bottom:2rem;
@@ -42,16 +42,17 @@
 .image-wrapper {
   width: 15%;
   border-radius: 100%;
+  padding-right:1rem;
 
 
   img {
     border-radius: 100%;
-    border: 2px solid rgb(58, 30, 128);
+    border: 1px solid rgb(220, 220, 220);
   }
 }
 
 .content-wrapper {
-  width: 80%;
+  width: 80.5%;
   line-height: 1.6;
   font-size: 1.05rem;
   // font-family: "Roboto", sans-serif;
