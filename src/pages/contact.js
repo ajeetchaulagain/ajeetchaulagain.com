@@ -1,7 +1,6 @@
 import React from "react"
 import MasterLayout from "../components/master-layout"
 import IntroSection from "../components/intro-section"
-import { FaSmile } from "react-icons/fa"
 import ContentLayout from "../components/content-layout"
 import ContactForm from "../components/contact-form"
 

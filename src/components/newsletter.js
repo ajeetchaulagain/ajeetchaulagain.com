@@ -1,5 +1,4 @@
 import React from "react"
-import { FaBook } from "react-icons/fa"
 
 import coffeImage from "../images/cuplogo-sm.png"
 

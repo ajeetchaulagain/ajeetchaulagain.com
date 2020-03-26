@@ -4,8 +4,6 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Img from "gatsby-image"
 
-import { useAuthorImage } from "./utilities/use-author-image"
-
 const Blog = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -40,7 +38,7 @@ const Blog = () => {
     <div className={blogStyles.blogWrapper}>
       {data.allMdx.edges.map(edge => {
         return (
-          <Link to={`/blog/${edge.node.fields.slug}`}>
+          <Link to={`/blog/${edge.node.fields.slug}`} key={edge.node.fields.slug}>
             <article className={blogStyles.blogItem}>
               <figure>
                 <Img
@@ -60,8 +58,8 @@ const Blog = () => {
                     {edge.node.frontmatter.author}
                   </span>
                   <ul>
-                    {edge.node.frontmatter.tags.map(tag => {
-                      return <li>{tag}</li>
+                    {edge.node.frontmatter.tags.map((tag,index) => {
+                      return <li key={index}>{tag}</li>
                     })}
                   </ul>
                 </div>
