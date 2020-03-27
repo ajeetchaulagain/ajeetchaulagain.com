@@ -11,7 +11,7 @@ const ContactForm = () => {
       >
         <div className={contactLayoutStyles.formRow}>
           <input type="hidden" name="form-name" value="contact" />
-          <label for="email">Email</label>
+          <label>Email</label>
 
           <input
             type="email"
@@ -21,11 +21,11 @@ const ContactForm = () => {
           />
         </div>
         <div className={contactLayoutStyles.formRow}>
-          <label for="name">Name</label>
+          <label>Name</label>
           <input type="text" name="name" id="name" placeholder="Your Name" />
         </div>
         <div className={contactLayoutStyles.formRow}>
-          <label for="message">Message</label>
+          <label>Message</label>
           <input
             type="text"
             name="message"
@@ -34,7 +34,7 @@ const ContactForm = () => {
           />
         </div>
         <div className={contactLayoutStyles.formRow}>
-          <button type="submit" class="box-button solid">
+          <button type="submit" className="box-button solid">
             Send
           </button>
           {/* <input type="reset" value="Clear" class="box-button" /> */}

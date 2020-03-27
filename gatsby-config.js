@@ -122,6 +122,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+  
 
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -130,6 +131,14 @@ module.exports = {
         trackingId: "UA-54342929-2",
       },
     },
+
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 })],
+      },
+    },
+
   ],
 
   pathPrefix: "/gatsby-portfolio",

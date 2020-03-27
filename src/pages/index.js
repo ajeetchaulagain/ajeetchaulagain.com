@@ -9,8 +9,6 @@ import { FaBook } from "react-icons/fa"
 
 import Newsletter from "../components/newsletter"
 
-import newsLetterStyles from "../components/newsletter.module.scss"
-
 export const indexHeadingStyle = {
   marginBottom: ".6rem",
   fontWeight: "900",

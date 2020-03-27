@@ -58,8 +58,8 @@ const BlogTemplate = (props) => {
                   {props.data.mdx.frontmatter.author}
                 </span>
                 <ul className={blogTemplateStyles.tagList}>
-                  {props.data.mdx.frontmatter.tags.map(tag => {
-                    return <li>{tag}</li>
+                  {props.data.mdx.frontmatter.tags.map((tag,index) => {
+                    return <li key={index}>{tag}</li>
                   })}
                 </ul>
               </div>

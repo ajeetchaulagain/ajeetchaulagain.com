@@ -34,15 +34,15 @@ const Projects = () => {
 
   return (
     <div className={projectStyles.projects}>
-      {data.allMdx.edges.map(edge => {
+      {data.allMdx.edges.map((edge, index) => {
         return (
-          <div className={projectStyles.project}>
+          <div className={projectStyles.project} key={index}>
             <div className={projectStyles.projectItem}>
               <figure>
                 <div className={projectStyles.projectMeta}>
                   <ul>
-                    {edge.node.frontmatter.technologies.map(technology => {
-                      return <li>{technology}</li>
+                    {edge.node.frontmatter.technologies.map((technology,index) => {
+                      return <li key={index}>{technology}</li>
                     })}
                   </ul>
                 </div>
