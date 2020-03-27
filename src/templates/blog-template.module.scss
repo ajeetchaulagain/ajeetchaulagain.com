@@ -36,17 +36,19 @@
   background-color: rgba(75, 73, 73, 0.187);
   margin-right: 0.3rem;
   margin-bottom: 0.3rem;
-  color: rgba(51, 51, 51, 0.667);
+  color: rgba(51, 51, 51, 0.701);
   border-radius: 1px;
   font-size: 0.8rem;
 }
 
 .post-meta span {
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: rgba(51, 51, 51, 0.763);
+  font-size: .9rem;
+  font-weight: 600;
+  // color: rgba(51, 51, 51, 0.763);
+  color:#5c257f;
   display: block;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 // Additional CSS added for styling markdown component if the styles of content layout fails to do!
@@ -125,4 +127,15 @@
 
     
   }
+
+ 
+
 }
+ // Back Navigation
+  .back{
+   text-transform: uppercase;
+   font-size: 1rem;
+   a{
+     text-decoration: none;
+   }
+  }

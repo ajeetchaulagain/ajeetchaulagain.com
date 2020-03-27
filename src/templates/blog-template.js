@@ -46,6 +46,8 @@ const BlogTemplate = (props) => {
     <MasterLayout>
       <IntroSection />
       <ContentLayout>
+
+     
         <div className={blogTemplateStyles.postWrapper}>
           <header className={blogTemplateStyles.postHeader}>
             <div className={blogTemplateStyles.headerContent}>
