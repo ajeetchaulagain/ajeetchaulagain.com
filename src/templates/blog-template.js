@@ -51,13 +51,12 @@ const BlogTemplate = (props) => {
         <div className={blogTemplateStyles.postWrapper}>
           <header className={blogTemplateStyles.postHeader}>
             <div className={blogTemplateStyles.headerContent}>
-              <h1 style={blogTitle}>{props.data.mdx.frontmatter.title}</h1>
+              <h1>{props.data.mdx.frontmatter.title}</h1>
               <div className={blogTemplateStyles.postMeta}>
                 <span>
                   <time>{props.data.mdx.frontmatter.date}</time>
                   &nbsp; / &nbsp;
-                  {props.data.mdx.timeToRead} min read &nbsp;/&nbsp; By{" "}
-                  {props.data.mdx.frontmatter.author}
+                  {props.data.mdx.timeToRead} min read
                 </span>
                 <ul className={blogTemplateStyles.tagList}>
                   {props.data.mdx.frontmatter.tags.map(tag => {

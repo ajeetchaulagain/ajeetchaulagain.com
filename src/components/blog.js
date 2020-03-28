@@ -4,7 +4,6 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Img from "gatsby-image"
 
-import { useAuthorImage } from "./utilities/use-author-image"
 
 const Blog = () => {
   const data = useStaticQuery(graphql`
@@ -56,8 +55,7 @@ const Blog = () => {
                 <div className={blogStyles.metaData}>
                   <date>{edge.node.frontmatter.date}</date>
                   <span>
-                    &nbsp;/&nbsp;{edge.node.timeToRead} min read / &nbsp;By{" "}
-                    {edge.node.frontmatter.author}
+                    &nbsp;/&nbsp;{edge.node.timeToRead} min read
                   </span>
                   <ul>
                     {edge.node.frontmatter.tags.map(tag => {
