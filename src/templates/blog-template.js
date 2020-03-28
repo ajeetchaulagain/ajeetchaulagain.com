@@ -9,7 +9,9 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Img from "gatsby-image"
 import { graphql, Link } from "gatsby"
 import AboutJumbotronBlog from "../components/about-jumbotron"
-import { FaArrowLeft, FaArrowRight} from "react-icons/fa"
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
+
+
 
 export const query = graphql`
   query($slug: String!) {
@@ -33,11 +35,9 @@ export const query = graphql`
   }
 `
 
-const BlogTemplate = (props) => {
+const BlogTemplate = props => {
+  const { next, prev } = props.pageContext
 
-  const {next, prev} = props.pageContext
-
-  
   const blogTitle = {
     lineHeight: "1.2",
   }
@@ -46,8 +46,6 @@ const BlogTemplate = (props) => {
     <MasterLayout>
       <IntroSection />
       <ContentLayout>
-
-     
         <div className={blogTemplateStyles.postWrapper}>
           <header className={blogTemplateStyles.postHeader}>
             <div className={blogTemplateStyles.headerContent}>
@@ -77,36 +75,35 @@ const BlogTemplate = (props) => {
           <div className={blogTemplateStyles.mdxWrapper}>
             <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
           </div>
-          
+
           <div className={blogTemplateStyles.pageNavigation}>
-          
-          { prev && 
-            <div className={blogTemplateStyles.prevNav}>
-            <aside className={blogTemplateStyles.float}>
-            <p>Previous</p>
-              <Link to = {`/blog/${prev.fields.slug}`}>
-              <FaArrowLeft/><span>{prev.frontmatter.title}</span>
-              </Link>
-              </aside>
-            </div>
-          }
+            {prev && (
+              <div className={blogTemplateStyles.prevNav}>
+                <aside className={blogTemplateStyles.float}>
+                  <p>Previous</p>
+                  <Link to={`/blog/${prev.fields.slug}`}>
+                    <FaArrowLeft />
+                    <span>{prev.frontmatter.title}</span>
+                  </Link>
+                </aside>
+              </div>
+            )}
 
-        
-          { next && 
-            <div className={blogTemplateStyles.nextNav}>
-              <aside className={blogTemplateStyles.float}>
-              <p>Next</p>
-              <Link to = {`/blog/${next.fields.slug}`}>
-                  <span>{next.frontmatter.title}</span><FaArrowRight/>
-              </Link>
-              </aside>
-            </div>
-          }
+            {next && (
+              <div className={blogTemplateStyles.nextNav}>
+                <aside className={blogTemplateStyles.float}>
+                  <p>Next</p>
+                  <Link to={`/blog/${next.fields.slug}`}>
+                    <span>{next.frontmatter.title}</span>
+                    <FaArrowRight />
+                  </Link>
+                </aside>
+              </div>
+            )}
           </div>
-          
-
         </div>
         <AboutJumbotronBlog />
+  
       </ContentLayout>
     </MasterLayout>
   )

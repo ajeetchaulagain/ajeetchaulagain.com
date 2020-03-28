@@ -41,70 +41,70 @@ module.exports.createPages = async ({ graphql, actions }) => {
   // const blogTemplate = path.resolve("./src/templates/project-template.js")
 
   const postOnlyResult = await graphql(`
-        query {
-          allMdx(filter: {fields: {contentType: {eq: "posts"}}}
-          sort:{order:ASC, fields:[frontmatter___date]}) {
-            edges {
-              node {
-                fields {
-                  slug
-                  contentType
-                }
-                frontmatter{
-                  title
-                }
-              }
+    query {
+      allMdx(
+        filter: { fields: { contentType: { eq: "posts" } } }
+        sort: { order: ASC, fields: [frontmatter___date] }
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+              contentType
             }
-          }
-        }
-      `)
-
-  const projectOnlyResult = await graphql(`
-      query {
-        allMdx(filter: {fields: {contentType: {eq: "projects"}}}) {
-          edges {
-            node {
-              fields {
-                slug
-                contentType
-              }
+            frontmatter {
+              title
             }
           }
         }
       }
+    }
   `)
 
-      const posts = postOnlyResult.data.allMdx.edges
-      posts.forEach((edge, index)=>{
-        
-        createPage({
-              component: blogTemplate,
-              path: `/blog/${edge.node.fields.slug}`,
-              context: {
-                slug: edge.node.fields.slug,
-                prev: index === 0 ? null : posts[index-1].node,
-                next: index === (posts.length-1) ? null : posts[index+1].node,
-              },
-            })
-      })
-    // postOnlyResult.data.allMdx.edges.forEach(edge => {
-    //   createPage({
-    //     component: blogTemplate,
-    //     path: `/blog/${edge.node.fields.slug}`,
-    //     context: {
-    //       slug: edge.node.fields.slug,
-    //     },
-    //   })
-    // })
+  const projectOnlyResult = await graphql(`
+    query {
+      allMdx(filter: { fields: { contentType: { eq: "projects" } } }) {
+        edges {
+          node {
+            fields {
+              slug
+              contentType
+            }
+          }
+        }
+      }
+    }
+  `)
 
-  
-    projectOnlyResult.data.allMdx.edges.forEach(edge => {
-      createPage({
-        component: projectTemplate,
-        path: `/projects/${edge.node.fields.slug}`,
-        context: {
-          slug: edge.node.fields.slug,
-        },
-      })
+  const posts = postOnlyResult.data.allMdx.edges
+  posts.forEach((edge, index) => {
+    createPage({
+      component: blogTemplate,
+      path: `/blog/${edge.node.fields.slug}`,
+      context: {
+        slug: edge.node.fields.slug,
+        prev: index === 0 ? null : posts[index - 1].node,
+        next: index === posts.length - 1 ? null : posts[index + 1].node,
+      },
     })
+  })
+  // postOnlyResult.data.allMdx.edges.forEach(edge => {
+  //   createPage({
+  //     component: blogTemplate,
+  //     path: `/blog/${edge.node.fields.slug}`,
+  //     context: {
+  //       slug: edge.node.fields.slug,
+  //     },
+  //   })
+  // })
+
+  projectOnlyResult.data.allMdx.edges.forEach(edge => {
+    createPage({
+      component: projectTemplate,
+      path: `/projects/${edge.node.fields.slug}`,
+      context: {
+        slug: edge.node.fields.slug,
+      },
+    })
+  })
 }

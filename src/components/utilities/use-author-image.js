@@ -15,6 +15,6 @@ export const useAuthorImage = () => {
       }
     `
   )
-  
+
   return file.childImageSharp.fixed
 }

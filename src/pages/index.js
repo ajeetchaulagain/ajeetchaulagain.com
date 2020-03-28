@@ -9,7 +9,8 @@ import { FaBook } from "react-icons/fa"
 
 import Newsletter from "../components/newsletter"
 
-import newsLetterStyles from "../components/newsletter.module.scss"
+
+import PopupModal from "../components/utilities/popup-modal"
 
 export const indexHeadingStyle = {
   marginBottom: ".6rem",
@@ -36,8 +37,10 @@ export const subscribeSectionStyle = {
 const IndexPage = () => {
   return (
     <MasterLayout>
+    
       <Welcome />
       <ContentLayout>
+      <PopupModal/>
         <h1 style={indexHeadingStyle}>Projects</h1>
         <p style={indexSubHeadingStyle}>
           Checkout some of my projects with case study

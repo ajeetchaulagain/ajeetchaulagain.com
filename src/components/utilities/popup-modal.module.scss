@@ -1,0 +1,97 @@
+.modal-wrapper{
+
+    hr {
+        clear: both;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        border: 0;
+        border-top: 1px solid #aaaaaa;
+    }
+   
+    p {
+        margin-bottom: 20px;
+    }
+    .btn {
+        background: #b342ca;
+       
+        border-radius: 3px;
+        color: #fff;
+        display: inline-block;
+        
+        padding: 8px 15px;
+        text-decoration: none;
+        text-align: center;
+        min-width: 100px;
+        position: relative;
+        transition: color .1s ease;
+    }
+
+    .btn.btn-big {
+        font-size: 18px;
+        padding: 15px 20px;
+        min-width: 100px;
+    }
+    .btn-close {
+        color: #aaaaaa;
+        font-size: 30px;
+        text-decoration: none;
+        position: absolute;
+        right: 1rem;
+        top: 0;
+    }
+    .btn-close:hover {
+        color: #919191;
+    }
+    .modal:target:before {
+        display: none;
+    }
+    .modal:before {
+        content:"";
+        display: block;
+        background: rgba(0, 0, 0, 0.6);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+    }
+    .modal .modal-dialog {
+        background: #fefefe;
+        border: #333333 solid 1px;
+        border-radius: 5px;
+        margin-left: -240px;
+        position: fixed;
+        left: 50%;
+        z-index: 11;
+        width: 400px;
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+        -webkit-transition: -webkit-transform 0.3s ease-out;
+        -moz-transition: -moz-transform 0.3s ease-out;
+        -o-transition: -o-transform 0.3s ease-out;
+        transition: transform 0.3s ease-out;
+        top: 20%;
+    }
+    .modal:target .modal-dialog {
+        top: -100%;
+        -webkit-transform: translate(0, -500%);
+        -ms-transform: translate(0, -500%);
+        transform: translate(0, -500%);
+    }
+    .modal-body {
+        padding: 20px;
+    }
+    .modal-header, .modal-footer {
+        padding: 10px 20px;
+    }
+    .modal-header {
+        border-bottom: #eeeeee solid 1px;
+    }
+  
+    .modal-footer {
+        border-top: #eeeeee solid 1px;
+        text-align: center;
+    }
+}

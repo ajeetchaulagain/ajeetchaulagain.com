@@ -4,7 +4,6 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Img from "gatsby-image"
 
-
 const Blog = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -47,16 +46,13 @@ const Blog = () => {
                   alt="blog-thumbnail"
                   className={blogStyles.image}
                 />
-              
               </figure>
 
               <div className={blogStyles.content}>
                 <h2>{edge.node.frontmatter.title}</h2>
                 <div className={blogStyles.metaData}>
                   <date>{edge.node.frontmatter.date}</date>
-                  <span>
-                    &nbsp;/&nbsp;{edge.node.timeToRead} min read
-                  </span>
+                  <span>&nbsp;/&nbsp;{edge.node.timeToRead} min read</span>
                   <ul>
                     {edge.node.frontmatter.tags.map(tag => {
                       return <li>{tag}</li>

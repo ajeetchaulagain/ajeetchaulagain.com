@@ -1,30 +1,23 @@
-.buymecoffee-wrapper{
+.buymecoffee-wrapper {
+  a {
+    background-color: #441660;
+    // border:1px solid white;
+    padding: 10px 12px;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    width: auto;
+  }
 
-    a {
-        background-color:#441660;
-        // border:1px solid white;
-        padding: 10px 12px;
-        color: #fff;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: 600;
-        width:auto;
+  a:hover {
+    background-color: #471a63;
+    // color:#333;
+  }
 
-        
-      }
-
-      a:hover {
-        background-color:#471a63;
-        // color:#333;
-      }
-
-
-
-      img{
-          height: auto;
-          width:20px;
-          margin-right: .2rem;
-
-      }
-
+  img {
+    height: auto;
+    width: 20px;
+    margin-right: 0.2rem;
+  }
 }
