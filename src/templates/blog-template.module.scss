@@ -36,17 +36,19 @@
   background-color: rgba(75, 73, 73, 0.187);
   margin-right: 0.3rem;
   margin-bottom: 0.3rem;
-  color: rgba(51, 51, 51, 0.667);
+  color: rgba(51, 51, 51, 0.701);
   border-radius: 1px;
   font-size: 0.8rem;
 }
 
 .post-meta span {
   font-size: 0.9rem;
-  font-weight: 400;
-  color: rgba(51, 51, 51, 0.763);
+  font-weight: 600;
+  // color: rgba(51, 51, 51, 0.763);
+  color: #5c257f;
   display: block;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 // Additional CSS added for styling markdown component if the styles of content layout fails to do!
@@ -67,62 +69,65 @@
 
   // Page Naviation code
   .page-navigation {
-    font-size:1rem;
-    margin-top:5rem;
+    font-size: 1rem;
+    margin-top: 5rem;
     // background-color:rgb(148, 155, 148);
     // color:white;
     display: flex;
     align-items: top;
     justify-content: space-between;
-    
-    .next-nav{
-      border-right:none;
-      border-left:none;
+
+    .next-nav {
+      border-right: none;
+      border-left: none;
       text-align: right;
-      
-      .float{
-        float:right;
+
+      .float {
+        float: right;
       }
-      
-      svg{
-        margin-left: .5rem;
-        width:12px;
+
+      svg {
+        margin-left: 0.5rem;
+        width: 12px;
       }
-      
     }
-    .prev-nav{
-      border-left:none;
-        
-      svg{
-        margin-right: .5rem;
-        width:12px;
+    .prev-nav {
+      border-left: none;
+
+      svg {
+        margin-right: 0.5rem;
+        width: 12px;
       }
-      .float{
-        float:left;
+      .float {
+        float: left;
       }
-      
     }
 
-    div{
+    div {
       // background-color:rgb(58, 58, 58);
-      padding:1rem 0.4rem;
-      border:1px solid rgb(216, 216, 216);
-      width:50%;
+      padding: 1rem 0.4rem;
+      border: 1px solid rgb(216, 216, 216);
+      width: 50%;
 
-
-      a{
+      a {
         display: flex;
         align-items: center;
       }
-    
-      p{
-        margin:0;
+
+      p {
+        margin: 0;
         font-size: 1rem;
         font-weight: 500;
         text-transform: uppercase;
       }
     }
-
-    
+  }
+}
+// Back Navigation
+.back {
+  text-transform: uppercase;
+  font-size: 1rem;
+  a {
+    text-decoration: none;
   }
 }

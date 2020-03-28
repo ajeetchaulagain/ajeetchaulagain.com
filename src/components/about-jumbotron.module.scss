@@ -20,19 +20,18 @@
 
   @media only screen and (max-width: 599px) {
     flex-direction: column;
-    padding:1.3rem;
-    margin-left:-.5rem;
-    margin-right: -.5rem;
-    .content-wrapper{
-      width:100%;
-      
+    padding: 1.3rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    .content-wrapper {
+      width: 100%;
     }
 
-    .image-wrapper{
-      margin-top:-4.5rem;
-      margin-left:-3rem;
+    .image-wrapper {
+      margin-top: -4.5rem;
+      margin-left: -3rem;
       text-align: center;
-      img{
+      img {
         display: inline-block;
       }
     }
@@ -42,8 +41,7 @@
 .image-wrapper {
   width: 15%;
   border-radius: 100%;
-  padding-right:1rem;
-
+  padding-right: 1rem;
 
   img {
     border-radius: 100%;
@@ -61,7 +59,7 @@
   }
 
   //Code for donation buttons
-  .support-section{
+  .support-section {
     display: flex;
   }
 }

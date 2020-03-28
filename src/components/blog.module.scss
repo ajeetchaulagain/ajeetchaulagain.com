@@ -20,9 +20,9 @@
   .blog-item {
     display: flex;
     align-items: flex-start;
-    // justify-content: space-between;
+
     figure {
-      width: 20%;
+      width: 18%;
     }
 
     .content {
@@ -56,16 +56,17 @@
     padding: 0rem;
     h2 {
       margin-top: 0rem;
-      line-height: 1.25;
+
       font-size: 1.3rem;
     }
 
     .meta-data {
-      color: rgba(55, 55, 55, 0.9);
+      color: rgba(59, 9, 75, 0.9);
       date,
       span {
         font-size: 0.9rem;
-        font-weight: 500;
+        font-weight: 600;
+        text-transform: uppercase;
         margin-bottom: 3rem;
       }
       ul {

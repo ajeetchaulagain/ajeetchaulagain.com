@@ -9,7 +9,9 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Img from "gatsby-image"
 import { graphql, Link } from "gatsby"
 import AboutJumbotronBlog from "../components/about-jumbotron"
-import { FaArrowLeft, FaArrowRight} from "react-icons/fa"
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
+
+
 
 export const query = graphql`
   query($slug: String!) {
@@ -33,11 +35,9 @@ export const query = graphql`
   }
 `
 
-const BlogTemplate = (props) => {
+const BlogTemplate = props => {
+  const { next, prev } = props.pageContext
 
-  const {next, prev} = props.pageContext
-
-  
   const blogTitle = {
     lineHeight: "1.2",
   }
@@ -49,13 +49,12 @@ const BlogTemplate = (props) => {
         <div className={blogTemplateStyles.postWrapper}>
           <header className={blogTemplateStyles.postHeader}>
             <div className={blogTemplateStyles.headerContent}>
-              <h1 style={blogTitle}>{props.data.mdx.frontmatter.title}</h1>
+              <h1>{props.data.mdx.frontmatter.title}</h1>
               <div className={blogTemplateStyles.postMeta}>
                 <span>
                   <time>{props.data.mdx.frontmatter.date}</time>
                   &nbsp; / &nbsp;
-                  {props.data.mdx.timeToRead} min read &nbsp;/&nbsp; By{" "}
-                  {props.data.mdx.frontmatter.author}
+                  {props.data.mdx.timeToRead} min read
                 </span>
                 <ul className={blogTemplateStyles.tagList}>
                   {props.data.mdx.frontmatter.tags.map(tag => {
@@ -76,36 +75,35 @@ const BlogTemplate = (props) => {
           <div className={blogTemplateStyles.mdxWrapper}>
             <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
           </div>
-          
+
           <div className={blogTemplateStyles.pageNavigation}>
-          
-          { prev && 
-            <div className={blogTemplateStyles.prevNav}>
-            <aside className={blogTemplateStyles.float}>
-            <p>Previous</p>
-              <Link to = {`/blog/${prev.fields.slug}`}>
-              <FaArrowLeft/><span>{prev.frontmatter.title}</span>
-              </Link>
-              </aside>
-            </div>
-          }
+            {prev && (
+              <div className={blogTemplateStyles.prevNav}>
+                <aside className={blogTemplateStyles.float}>
+                  <p>Previous</p>
+                  <Link to={`/blog/${prev.fields.slug}`}>
+                    <FaArrowLeft />
+                    <span>{prev.frontmatter.title}</span>
+                  </Link>
+                </aside>
+              </div>
+            )}
 
-        
-          { next && 
-            <div className={blogTemplateStyles.nextNav}>
-              <aside className={blogTemplateStyles.float}>
-              <p>Next</p>
-              <Link to = {`/blog/${next.fields.slug}`}>
-                  <span>{next.frontmatter.title}</span><FaArrowRight/>
-              </Link>
-              </aside>
-            </div>
-          }
+            {next && (
+              <div className={blogTemplateStyles.nextNav}>
+                <aside className={blogTemplateStyles.float}>
+                  <p>Next</p>
+                  <Link to={`/blog/${next.fields.slug}`}>
+                    <span>{next.frontmatter.title}</span>
+                    <FaArrowRight />
+                  </Link>
+                </aside>
+              </div>
+            )}
           </div>
-          
-
         </div>
         <AboutJumbotronBlog />
+  
       </ContentLayout>
     </MasterLayout>
   )
