@@ -28,9 +28,9 @@ const Header = () => {
   `)
 
   const logoStyle = {
-    height: "35px",
-    marginRight: "5px",
-    marginTop: "5px",
+    height: "1.2rem",
+    marginRight: "7px",
+    marginTop: "5px"
   }
 
   return (
@@ -47,7 +47,7 @@ const Header = () => {
           <h1>
             <Link to="/" className={headerStyles.title}>
               <Logo style={logoStyle} />
-              {data.site.siteMetadata.title}
+              {data.site.siteMetadata.title.split(" ")[0]}  <span> {data.site.siteMetadata.title.split(" ")[1]}</span>
             </Link>
           </h1>
         </div>
@@ -79,14 +79,16 @@ const Header = () => {
                 Contact
               </Link>
             </li>
-            <li>
+             { /* <li>
               <Link to="/resume" activeClassName={headerStyles.activeList}>
                 Resume
               </Link>
             </li>
+             */}
           </ul>
         </nav>
-
+        
+        { /*
         <div>
           <ul className={headerStyles.socialMediaLists}>
             <li>
@@ -135,7 +137,7 @@ const Header = () => {
               </a>
             </li>
           </ul>
-        </div>
+            </div> */}
       </div>
     </header>
   )

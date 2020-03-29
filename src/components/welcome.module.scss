@@ -6,7 +6,7 @@
   position: relative;
 }
 .welcome-content {
-  padding: 15rem 0 12rem;
+  padding: 12rem 3rem 13rem;
   z-index: 1;
   line-height: 1.5;
   position: relative;
@@ -55,18 +55,35 @@
   font-weight: 100;
 }
 
+.sub-heading{
+  background-color:rgba(255, 255, 255, 0.692);
+  display: inline-block;
+  padding:.1rem .4rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  color:#5c257f;
+ 
+  font-size: .8rem;
+  border-radius:2px;
+}
 .paragraph {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 300;
   margin-bottom: 1.5rem;
   @media (max-width: 991px) {
     font-size: 1.1rem;
   }
+  @media (min-width:700px) and (max-width: 1099px){
+    padding:0 6rem;
+  }
+  @media (min-width: 1100px) {
+    padding:0 12rem;
+  }
 }
 
 .welcome-button {
   border: 1px solid rgb(231, 222, 236);
-  padding: 0.8rem 2rem;
+  padding: 0.6rem 2rem;
   display: inline-block;
   text-decoration: none;
   color: inherit;
@@ -74,6 +91,7 @@
   font-weight: 400;
   border-radius: 2px;
   transition: all 0.3s ease;
+  
 }
 
 .welcome-button:hover {
@@ -98,7 +116,7 @@
     display: none;
   }
   .welcome-content {
-    padding: 4rem 0 3.5rem;
+    padding: 10rem 2rem 5rem;
   }
 }
 

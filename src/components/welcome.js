@@ -141,7 +141,9 @@ const Welcome = () => {
         <h1 className={welcomeStyles.heading}>
           <span style={{ fontWeight: "100" }}>Hello.I'm </span>Ajeet Chaulagain
         </h1>
-        <p className={welcomeStyles.paragraph}>Full Stack Software Engineer</p>
+        
+        <p className={welcomeStyles.paragraph}>A full stack developer. I strive towards building an application that is robust in performance with beautifully crafted code. </p>
+      
         <Link to="/about" className={welcomeStyles.welcomeButton}>
           More about me
         </Link>

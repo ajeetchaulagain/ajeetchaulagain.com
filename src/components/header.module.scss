@@ -2,6 +2,7 @@
   color: rgb(231, 222, 236);
   width: 100%;
   position: absolute;
+  // background-color: #3a3a38;
   z-index: 2;
   @media (max-width: 767px) {
   }
@@ -26,11 +27,23 @@
 }
 
 .title {
-  font-size: 2rem;
-  font-family: "Parisienne", cursive;
-  font-weight: 500;
+  font-size: 1.2rem;
+  // font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
   margin-right: 1rem;
   display: flex;
+  letter-spacing:.1rem;
+
+  span{
+    font-weight: 400 !important;
+    // color:#ccbbdf;
+    margin-left:.5rem;
+  }
+
+  @media only screen and (max-width: 599px){
+    font-size:1.3rem;
+  }
 }
 
 .main-header h1 {
@@ -39,7 +52,7 @@
 
 .main-header a {
   &:hover {
-    color: rgb(255, 252, 176);
+    color: #fffcb0;
   }
 }
 
@@ -103,7 +116,7 @@
 @media only screen and (max-width: 599px) {
   .main-header {
     background-color: #5c257f;
-    position: relative;
+    position: fixed;
   }
 
   .header-content {
@@ -115,7 +128,7 @@
   }
 
   .nav-list li {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
     padding: 0 0.5rem;
     margin: 0px;
