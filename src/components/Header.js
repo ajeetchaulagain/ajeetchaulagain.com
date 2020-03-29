@@ -30,7 +30,7 @@ const Header = () => {
   const logoStyle = {
     height: "1.2rem",
     marginRight: "7px",
-    marginTop: "5px"
+    marginTop: "3px"
   }
 
   return (
@@ -47,7 +47,7 @@ const Header = () => {
           <h1>
             <Link to="/" className={headerStyles.title}>
               <Logo style={logoStyle} />
-              {data.site.siteMetadata.title.split(" ")[0]}  <span> {data.site.siteMetadata.title.split(" ")[1]}</span>
+              <span>{data.site.siteMetadata.title.split(" ")[0]} </span> <span className={headerStyles.titleLight}> {data.site.siteMetadata.title.split(" ")[1]}</span>
             </Link>
           </h1>
         </div>
@@ -61,7 +61,7 @@ const Header = () => {
 
             <li>
               <Link to="/projects" activeClassName={headerStyles.activeList}>
-                Portfolio
+                Projects
               </Link>
             </li>
             <li>
