@@ -40,7 +40,7 @@ const IndexPage = () => {
     
       <Welcome />
       <ContentLayout>
-      <PopupModal/>
+
         <h1 style={indexHeadingStyle}>Projects</h1>
         <p style={indexSubHeadingStyle}>
           Checkout some of my projects with case study
