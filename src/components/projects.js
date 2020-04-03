@@ -36,44 +36,24 @@ const Projects = () => {
     <div className={projectStyles.projects}>
       {data.allMdx.edges.map(edge => {
         return (
-          <div className={projectStyles.project}>
-            <div className={projectStyles.projectItem}>
-              <figure>
-                <div className={projectStyles.projectMeta}>
-                  <ul>
-                    {edge.node.frontmatter.technologies.map(technology => {
-                      return <li>{technology}</li>
-                    })}
-                  </ul>
-                </div>
-                <Img
-                  fluid={
-                    edge.node.frontmatter.featuredImage.childImageSharp.fluid
-                  }
-                  alt="project"
-                />
-                <figcaption>
-                  <Link
-                    to={`/projects/${edge.node.fields.slug}`}
-                    className="box-button solid"
-                  >
-                    Case Study
-                    <i>
-                      <FaAngleRight />
-                    </i>
-                  </Link>
-                </figcaption>
-              </figure>
-              <div className={projectStyles.projectContent}>
-                <Link to={`/projects/${edge.node.fields.slug}`}>
+      
+              <div className={projectStyles.projectItem}>
+                  <div className={projectStyles.contentWrapper}>
                   <h2>{edge.node.frontmatter.title}</h2>
+                  <p>Here goes the project excerpt,Here goes the project excerpt</p>
+                  </div>
+                  <ul className = {projectStyles.toolsWrapper}>
+                     
+                    <li>React.js</li>
+                    <li>Nodejs</li>
+                    <li>Gatsbyjs</li>
+                  </ul>
+            
+                <Link to={`/projects/${edge.node.fields.slug}`}>
+                  View Case Study
                 </Link>
-                <p className={projectStyles.smallParagraph}>
-                  {edge.node.timeToRead} min read
-                </p>
               </div>
-            </div>
-          </div>
+    
         )
       })}
     </div>
