@@ -172,6 +172,8 @@
 @media only screen and (max-width: 599px) {
   .welcome-section {
     height: auto;
+    background: rgb(26,116,173);
+background: radial-gradient(circle, rgba(26,116,173,1) 0%, rgba(92,37,127,1) 100%);
   }
   .particles {
     display: none;
