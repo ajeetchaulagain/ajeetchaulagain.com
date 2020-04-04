@@ -134,8 +134,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `Ajeet Blog`,
+        short_name: `Ajeet`,
         start_url: `/`,
         background_color: `#5c257f`,
         theme_color: `#5c257f`,
