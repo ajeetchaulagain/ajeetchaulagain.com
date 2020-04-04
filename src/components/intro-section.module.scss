@@ -28,7 +28,9 @@ background: linear-gradient(77deg, rgba(92,37,127,1) 9%, rgba(26,116,173,1) 100%
 
 @media only screen and (max-width: 599px) {
   .intro-content {
-    padding: 0;
+    position: relative;
+    height:8rem;
+    // padding-top: 6rem;
     .heading-light {
       padding: 0.3rem 0;
     }
@@ -37,7 +39,8 @@ background: linear-gradient(77deg, rgba(92,37,127,1) 9%, rgba(26,116,173,1) 100%
 
 @media only screen and (min-width: 599px) and (max-width: 960px) {
   .intro-content {
-    height: 4rem;
+    height: 6rem;
+    
     // padding-top: 5rem;
   }
 }

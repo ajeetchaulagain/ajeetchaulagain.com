@@ -116,21 +116,23 @@
 @media only screen and (max-width: 599px) {
   .main-header {
     // background-color: #5c257f;
-    background: rgb(92,37,127);
-background: linear-gradient(77deg, rgba(92,37,127,1) 9%, rgba(26,116,173,1) 100%);
-    position: relative;
+//     background: rgb(92,37,127);
+// background: linear-gradient(77deg, rgba(92,37,127,1) 9%, rgba(26,116,173,1) 100%);
+    position: absolute;
+    
+    // height:15rem;
   }
 
   .header-content {
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     
-    padding: 1.5rem .8rem;
+    padding: 1rem .8rem 9rem;
+    
     
   }
 
-  .title span{
-    display:none;
-  }
+ 
   .nav-list {
     justify-content:center;
     margin-top: 0.4rem;
