@@ -145,6 +145,7 @@ module.exports = {
         icon: `src/images/thumbnails/ajeet-avatar.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-offline`,
   ],
 
   pathPrefix: "/gatsby-portfolio",
