@@ -40,6 +40,17 @@ const IndexPage = () => {
     
       <Welcome />
       <ContentLayout>
+      <h1 style={indexHeadingStyle}>
+        {" "}
+        <FaBook /> From my blog{" "}
+      </h1>
+      <p style={indexSubHeadingStyle}>See the recent on my article list</p>
+      <Blog />
+      <Link to="/blog" className="box-button" style={contentBoxButton}>
+        View all Articles
+      </Link>
+    </ContentLayout>
+      <ContentLayout>
 
         <h1 style={indexHeadingStyle}>Projects</h1>
         <p style={indexSubHeadingStyle}>
@@ -51,17 +62,7 @@ const IndexPage = () => {
         </Link>
       </ContentLayout>
 
-      <ContentLayout>
-        <h1 style={indexHeadingStyle}>
-          {" "}
-          <FaBook /> From my blog{" "}
-        </h1>
-        <p style={indexSubHeadingStyle}>See the recent on my article list</p>
-        <Blog />
-        <Link to="/blog" className="box-button" style={contentBoxButton}>
-          View all Articles
-        </Link>
-      </ContentLayout>
+     
 
       <ContentLayout>
         <Newsletter />

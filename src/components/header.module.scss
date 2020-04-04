@@ -165,12 +165,13 @@ background: linear-gradient(77deg, rgba(92,37,127,1) 9%, rgba(26,116,173,1) 100%
   }
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1120px) {
   .header-content {
-    width: 1100px;
-    padding:0rem; 
+    width: 1120px;
+    // padding:0rem; 
     padding-top: 2.5rem;
-    
+    padding-left:1rem;
+    padding-right:1rem;
     margin: 0 auto;
   }
 }

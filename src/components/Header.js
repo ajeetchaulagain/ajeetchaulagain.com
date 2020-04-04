@@ -3,13 +3,6 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 
 import { Helmet } from "react-helmet"
 
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaGithub,
-  FaInstagram,
-} from "react-icons/fa"
 
 import Logo from "../images/logo.svg"
 
@@ -50,6 +43,11 @@ const Header = () => {
         </div>
         <nav>
           <ul className={headerStyles.navList}>
+          <li>
+          <Link to="/" activeClassName={headerStyles.activeList}>
+            Home
+          </Link>
+          </li>
             
             <li>
             <Link to="/about" activeClassName={headerStyles.activeList}>
