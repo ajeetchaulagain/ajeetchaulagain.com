@@ -86,7 +86,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-
+    { /* 
         <div>
           <ul className={headerStyles.socialMediaLists}>
             <li>
@@ -135,7 +135,7 @@ const Header = () => {
               </a>
             </li>
           </ul>
-        </div>
+  </div> */ }
       </div>
     </header>
   )
