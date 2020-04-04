@@ -5,9 +5,10 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
 const Blog = () => {
+  
   const data = useStaticQuery(graphql`
     query {
-      allMdx(filter: { fields: { contentType: { eq: "posts" } } }) {
+      allMdx(filter: {fields: {contentType: {eq: "posts"}}}, limit: 4) {
         edges {
           node {
             frontmatter {
