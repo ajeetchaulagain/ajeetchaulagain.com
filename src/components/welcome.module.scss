@@ -178,7 +178,8 @@
   }
   .welcome-content {
     padding: 12rem 1.6rem 3.5rem;
-    display: block;
+    // display: block;
+    flex-direction: column;
     
     // background-color: #5c257f;
     
@@ -186,19 +187,25 @@
       width:100%;
       text-align: center;
       margin:0 auto;
+      order:2;
+    
 
       .social-media-lists{
         align-items: center;
         justify-content: center;
-        margin-bottom:1rem;
+        margin-bottom:2rem;
       }
 
     }
     .subscription{
       width:100%;
-       .image-holder span{
+      order:1;
+      background-color:rgba(47, 48, 46, 0.53);
+      background: none;
+       .image-holder h2,p,.subscribe-button{
          display: none;
        }
+
     }
   }
 }
