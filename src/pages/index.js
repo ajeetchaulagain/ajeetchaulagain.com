@@ -13,15 +13,15 @@ import Newsletter from "../components/newsletter"
 import PopupModal from "../components/utilities/popup-modal"
 
 export const indexHeadingStyle = {
-  marginBottom: ".6rem",
+  marginBottom: ".3rem",
   fontWeight: "900",
   // color: "rgba(92, 37, 127, 1)",
 }
 
 export const indexSubHeadingStyle = {
-  marginBottom: "2.5rem",
+  marginBottom: "1.5rem",
   lineHeight: "1.5",
-}
+} 
 
 export const contentBoxButton = {
   textDecoration: "none",

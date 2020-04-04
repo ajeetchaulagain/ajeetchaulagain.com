@@ -26,13 +26,24 @@
 }
 
 .title {
-  font-size: 2rem;
-  font-family: "Parisienne", cursive;
-  font-weight: 500;
+  font-size: 1.3rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  text-transform:uppercase;
   margin-right: 1rem;
   display: flex;
 }
 
+.logo-style{
+  height:20px;
+  margin-right: 5px;
+  margin-top:5px;
+  color:green;
+  @media (max-width: 567px) {
+    height:25px;
+  }
+
+}
 .main-header h1 {
   font-size: 2rem;
 }
@@ -108,7 +119,11 @@
   }
 
   .header-content {
-    flex-direction: column;
+    flex-direction: row;
+  }
+
+  .title span{
+    display:none;
   }
   .nav-list {
     justify-content:center;
