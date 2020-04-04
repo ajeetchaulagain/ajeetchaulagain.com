@@ -2,7 +2,13 @@ import React from "react"
 import projectStyles from "./projects.module.scss"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import { FaAngleRight } from "react-icons/fa"
+import { FaArrowRight } from "react-icons/fa"
+import dockerImg from '../images/thumbnails/docker.png';
+import reactImg from '../images/thumbnails/react-js.png';
+import nodeImg from '../images/thumbnails/node-js.png';
+import expressImg from '../images/thumbnails/express-js.png';
+
+
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -38,20 +44,31 @@ const Projects = () => {
         return (
       
               <div className={projectStyles.projectItem}>
+                  <div className={projectStyles.imageWrapper}>
+                  <Img
+                  fluid={
+                    edge.node.frontmatter.featuredImage.childImageSharp.fluid
+                  }
+                  alt="project"
+                /> 
+                </div> 
                   <div className={projectStyles.contentWrapper}>
-                  <h2>{edge.node.frontmatter.title}</h2>
-                  <p>Here goes the project excerpt,Here goes the project excerpt</p>
+                    <h2>{edge.node.frontmatter.title}</h2>
+                    
+                    <ul className = {projectStyles.toolsWrapper}>
+                      {edge.node.frontmatter.technologies.map(technology => {
+                        return <li>{technology}</li>
+                      })}  
+                    </ul>
                   </div>
-                  <ul className = {projectStyles.toolsWrapper}>
-                     
-                    <li>React.js</li>
-                    <li>Nodejs</li>
-                    <li>Gatsbyjs</li>
-                  </ul>
-            
+                  
+              <div className={projectStyles.linksWrapper}>
                 <Link to={`/projects/${edge.node.fields.slug}`}>
-                  View Case Study
+                  View Case Study <i>
+                  <FaArrowRight />
+                </i>
                 </Link>
+              </div>
               </div>
     
         )

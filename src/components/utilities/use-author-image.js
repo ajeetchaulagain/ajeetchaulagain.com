@@ -1,5 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby"
 
+
 export const useAuthorImage = () => {
   const { file } = useStaticQuery(
     graphql`
