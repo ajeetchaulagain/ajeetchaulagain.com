@@ -39,7 +39,8 @@
 
 .main-header a {
   &:hover {
-    color: rgb(255, 252, 176);
+    color: rgb(136, 216, 109);  
+    // text-decoration:underline;
   }
 }
 
@@ -51,8 +52,8 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.85rem;
+  font-weight: 700;
   letter-spacing: 0.05rem;
   @media (max-width: 567px) {
     letter-spacing: 0.02rem;
@@ -66,7 +67,7 @@
 }
 
 .activeList {
-  color: rgb(255, 252, 176);
+  color: rgb(136, 216, 109);
 }
 
 .nav-list li:first-child {
@@ -87,7 +88,7 @@
   font-weight: 400;
   a {
     &:hover {
-      color: #fffcb0;
+      color: rgb(136, 216, 109);
     }
   }
   li {
@@ -110,15 +111,16 @@
     flex-direction: column;
   }
   .nav-list {
-    justify-content: center;
+    justify-content:center;
     margin-top: 0.4rem;
   }
 
   .nav-list li {
     font-size: 1.2rem;
-    font-weight: 500;
-    padding: 0 0.5rem;
+    font-weight: 700;
+    padding: 0 0.4rem;
     margin: 0px;
+    // background-color: red;
   }
 
   .social-media-lists {
