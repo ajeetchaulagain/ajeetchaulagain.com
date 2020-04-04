@@ -4,13 +4,23 @@
   color: rgb(231, 222, 236);
   width: 100vw;
   position: relative;
+  background: rgb(92,37,127);
+background: linear-gradient(77deg, rgba(92,37,127,1) 9%, rgba(26,116,173,1) 100%);
+  
 }
 .welcome-content {
-  padding: 15rem 0 12rem;
+  padding: 10rem 0rem 12rem;
   z-index: 1;
+  display: flex;
+  justify-content: space-between;
   line-height: 1.5;
   position: relative;
-  text-align: center;
+  // text-align: center;
+
+  .about-intro{
+    width:60%;
+    // padding-left:.5rem;
+  }
 }
 
 .image-holder img {
@@ -32,7 +42,7 @@
 .heading {
   font-family: "Roboto", sans-serif;
   // font-family: 'Source Sans Pro', sans-serif;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 600;
   @media (max-width: 1200px) {
     font-size: 3rem;
@@ -56,9 +66,10 @@
 }
 
 .paragraph {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 300;
   margin-bottom: 1.5rem;
+  color:rgb(223, 217, 228);  
   @media (max-width: 991px) {
     font-size: 1.1rem;
   }
@@ -66,7 +77,7 @@
 
 .welcome-button {
   border: 1px solid rgb(231, 222, 236);
-  padding: 0.8rem 2rem;
+  padding: 0.5rem 2rem;
   display: inline-block;
   text-decoration: none;
   color: inherit;
@@ -83,6 +94,7 @@
 
 .particles {
   position: absolute;
+  display:none;
   z-index: 0;
   top: 0;
   left: 0;
@@ -112,9 +124,9 @@
   }
 }
 
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 1100px) {
   .welcome-content {
-    width: 1140px;
+    width: 1100px;
     margin: 0 auto;
   }
 }

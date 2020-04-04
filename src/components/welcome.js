@@ -127,24 +127,35 @@ const Welcome = () => {
       <Particles
         className={welcomeStyles.particles}
         params={particlesParam}
-        height="100vh"
       />
       <div className={welcomeStyles.welcomeContent}>
-        <div className={welcomeStyles.imageHolder}>
-          <span>
-            <Img
-              fixed={GatsbyImageSharpFixed}
-              className={welcomeStyles.image}
-            />
-          </span>
-        </div>
-        <h1 className={welcomeStyles.heading}>
-          <span style={{ fontWeight: "100" }}>Hello.I'm </span>Ajeet Chaulagain
-        </h1>
-        <p className={welcomeStyles.paragraph}>Full Stack Software Engineer</p>
-        <Link to="/about" className={welcomeStyles.welcomeButton}>
-          More about me
-        </Link>
+            <div className={welcomeStyles.aboutIntro}>
+                  
+                <h1 className={welcomeStyles.heading}>
+                  <span style={{ fontWeight: "100" }}>Hello.I'm </span>Ajeet Chaulagain
+                </h1>
+                <p className={welcomeStyles.paragraph}>I am full stack developer striving towards building 
+                applications that are scalable and maintainable with beautifully crafted code and writing about
+                modern software development.</p>
+                <Link to="/about" className={welcomeStyles.welcomeButton}>
+                  More about me
+                </Link>
+                <Link to="/about" className={welcomeStyles.welcomeButton} style={{marginLeft:".8rem", backgroundColor:"rgb(164, 219, 146)", color:"black"}}>
+                  View My Work
+                </Link>
+            </div>
+
+            <div className={welcomeStyles.subscription}>
+            <div className={welcomeStyles.imageHolder}>
+            <span>
+              <Img
+                fixed={GatsbyImageSharpFixed}
+                className={welcomeStyles.image}
+              />
+            </span>
+          </div>
+            </div>
+        
       </div>
     </section>
   )

@@ -3,6 +3,7 @@
   width: 100%;
   position: absolute;
   z-index: 2;
+  
   @media (max-width: 767px) {
   }
 }
@@ -38,7 +39,7 @@
   height:20px;
   margin-right: 5px;
   margin-top:5px;
-  color:green;
+  // color:green;
   @media (max-width: 567px) {
     height:25px;
   }
@@ -63,8 +64,8 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
   letter-spacing: 0.05rem;
   @media (max-width: 567px) {
     letter-spacing: 0.02rem;
@@ -78,7 +79,7 @@
 }
 
 .activeList {
-  color: rgb(136, 216, 109);
+  color: rgb(164, 219, 146);
 }
 
 .nav-list li:first-child {
@@ -99,7 +100,7 @@
   font-weight: 400;
   a {
     &:hover {
-      color: rgb(136, 216, 109);
+      color: rgb(164, 219, 146);
     }
   }
   li {
@@ -114,7 +115,9 @@
 
 @media only screen and (max-width: 599px) {
   .main-header {
-    background-color: #5c257f;
+    // background-color: #5c257f;
+    background: rgb(92,37,127);
+background: linear-gradient(77deg, rgba(92,37,127,1) 9%, rgba(26,116,173,1) 100%);
     position: relative;
   }
 
@@ -162,10 +165,12 @@
   }
 }
 
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 1100px) {
   .header-content {
-    width: 1140px;
-    padding-top: 2rem;
+    width: 1100px;
+    padding:0rem; 
+    padding-top: 2.5rem;
+    
     margin: 0 auto;
   }
 }
