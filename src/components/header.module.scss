@@ -123,6 +123,9 @@ background: linear-gradient(77deg, rgba(92,37,127,1) 9%, rgba(26,116,173,1) 100%
 
   .header-content {
     flex-direction: row;
+    
+    padding: 1.5rem .8rem;
+    
   }
 
   .title span{
@@ -146,16 +149,11 @@ background: linear-gradient(77deg, rgba(92,37,127,1) 9%, rgba(26,116,173,1) 100%
   }
 
   .social-media-lists li {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 500;
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .header-content {
-    padding: 1.5rem 1rem;
-  }
-}
 
 @media only screen and (min-width: 961px) {
   .header-content {

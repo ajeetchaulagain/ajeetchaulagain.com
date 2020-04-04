@@ -177,8 +177,10 @@
     display: none;
   }
   .welcome-content {
-    padding: 4rem 1.5rem 3.5rem;
+    padding: 4rem 1.6rem 3.5rem;
     display: block;
+    
+    background-color: #5c257f;
     
     .about-intro{
       width:100%;
@@ -194,6 +196,7 @@
     }
     .subscription{
       width:100%;
+      display: none;
     }
   }
 }
