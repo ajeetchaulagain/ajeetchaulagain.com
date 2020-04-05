@@ -3,13 +3,6 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 
 import { Helmet } from "react-helmet"
 
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaGithub,
-  FaInstagram,
-} from "react-icons/fa"
 
 import Logo from "../images/logo.svg"
 
@@ -27,11 +20,7 @@ const Header = () => {
     }
   `)
 
-  const logoStyle = {
-    height: "35px",
-    marginRight: "5px",
-    marginTop: "5px",
-  }
+
 
   return (
     <header className={headerStyles.mainHeader}>
@@ -45,23 +34,30 @@ const Header = () => {
       <div className={headerStyles.headerContent}>
         <div className={headerStyles.logoSection}>
           <h1>
+          
             <Link to="/" className={headerStyles.title}>
-              <Logo style={logoStyle} />
-              {data.site.siteMetadata.title}
+            <Logo className={headerStyles.logoStyle} />
+              <span>{data.site.siteMetadata.title}</span>
             </Link>
           </h1>
         </div>
         <nav>
           <ul className={headerStyles.navList}>
+          <li>
+          <Link to="/" activeClassName={headerStyles.activeList}>
+            Home
+          </Link>
+          </li>
+            
             <li>
-              <Link to="/" activeClassName={headerStyles.activeList}>
-                Home
-              </Link>
+            <Link to="/about" activeClassName={headerStyles.activeList}>
+              About
+            </Link>
             </li>
 
             <li>
               <Link to="/projects" activeClassName={headerStyles.activeList}>
-                Portfolio
+                Projects
               </Link>
             </li>
             <li>
@@ -69,24 +65,16 @@ const Header = () => {
                 Blog
               </Link>
             </li>
-            <li>
-              <Link to="/about" activeClassName={headerStyles.activeList}>
-                About
-              </Link>
-            </li>
+           
             <li>
               <Link to="/contact" activeClassName={headerStyles.activeList}>
                 Contact
               </Link>
             </li>
-            <li>
-              <Link to="/resume" activeClassName={headerStyles.activeList}>
-                Resume
-              </Link>
-            </li>
+          
           </ul>
         </nav>
-
+    { /* 
         <div>
           <ul className={headerStyles.socialMediaLists}>
             <li>
@@ -135,7 +123,7 @@ const Header = () => {
               </a>
             </li>
           </ul>
-        </div>
+  </div> */ }
       </div>
     </header>
   )

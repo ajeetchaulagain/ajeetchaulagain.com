@@ -10,6 +10,13 @@ technologies:
     "Ant Design",
     "Heroku",
   ]
+technologiesImages:
+  [
+    "../images/thumbnails/docker.png",
+    "../images/thumbnails/express-js.png",
+    "../images/thumbnails/kubernetes.png",
+    "../images/thumbnails/react-js.png",
+  ]
 featuredImage: ../images/speed-meter.jpg
 ---
 

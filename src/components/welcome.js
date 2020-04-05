@@ -8,6 +8,15 @@ import Particles from "react-particles-js"
 
 import { useAuthorImage } from "./utilities/use-author-image"
 
+import {
+  FaFacebook,
+  FaTwitter,
+  FaLinkedinIn,
+  FaGithub,
+  FaInstagram,
+  FaCoffee,
+} from "react-icons/fa"
+
 const particlesParam = {
   particles: {
     number: {
@@ -127,24 +136,98 @@ const Welcome = () => {
       <Particles
         className={welcomeStyles.particles}
         params={particlesParam}
-        height="100vh"
       />
       <div className={welcomeStyles.welcomeContent}>
-        <div className={welcomeStyles.imageHolder}>
-          <span>
-            <Img
-              fixed={GatsbyImageSharpFixed}
-              className={welcomeStyles.image}
-            />
-          </span>
-        </div>
-        <h1 className={welcomeStyles.heading}>
-          <span style={{ fontWeight: "100" }}>Hello.I'm </span>Ajeet Chaulagain
-        </h1>
-        <p className={welcomeStyles.paragraph}>Full Stack Software Engineer</p>
-        <Link to="/about" className={welcomeStyles.welcomeButton}>
-          More about me
-        </Link>
+            <div className={welcomeStyles.aboutIntro}>
+                  
+                <h1 className={welcomeStyles.heading}>
+                  <span style={{ fontWeight: "100" }}>Hello.I'm </span>Ajeet Chaulagain
+                </h1>
+                <p className={welcomeStyles.paragraph}>I am full stack developer passionate towards building 
+                applications that are scalable and maintainable with beautifully crafted code </p>
+                <Link to="/about" className={welcomeStyles.welcomeButton}>
+                  More about me
+                </Link>
+                <Link to="/about" className={welcomeStyles.welcomeButton} style={{backgroundColor:"#d4ab52", color:"black"}}>
+                  View My Work
+                </Link>
+
+                <div>
+          <ul className={welcomeStyles.socialMediaLists}>
+            <li>
+              <a
+                href="https://www.facebook.com/chaulagain.ajeet"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebook/>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/ajeetsweb"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTwitter />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/ajeet-chaulagain/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedinIn />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/ajeetchaulagain"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/chaulagainajeet/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram />
+              </a>
+            </li>
+            <li>
+            <a
+              href="https://www.instagram.com/chaulagainajeet/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaCoffee />
+            </a>
+          </li>
+          </ul>
+  </div>
+            </div>
+
+            <div className={welcomeStyles.subscription}>
+              <div className={welcomeStyles.imageHolder}>
+              <span>
+                <Img
+                  fixed={GatsbyImageSharpFixed}
+                  className={welcomeStyles.image}
+                />
+              </span>
+              <h2>Newsletter</h2>
+              <p>I write content on modern software development
+                mainly including Javascript, Node, Express, React, Gatsby and MongoDB. Please subscribe me, 
+                If you would love to read my content</p>
+              <Link to="/subscribe" className={welcomeStyles.subscribeButton}>Subscribe Here</Link>
+            </div>
+            </div>
+        
       </div>
     </section>
   )

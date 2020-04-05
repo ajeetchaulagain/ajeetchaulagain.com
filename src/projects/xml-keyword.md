@@ -1,6 +1,13 @@
 ---
 title: "XML Keyword Search System"
 technologies: ["JavaFX GUI", " JavaFX Graphics", "Data Structure", "Java XML"]
+technologiesImages:
+  [
+    "../images/thumbnails/docker.png",
+    "../images/thumbnails/express-js.png",
+    "../images/thumbnails/kubernetes.png",
+    "../images/thumbnails/react-js.png",
+  ]
 featuredImage: ../images/xml-keyword-search.jpeg
 ---
 

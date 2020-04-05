@@ -130,6 +130,22 @@ module.exports = {
         trackingId: "UA-54342929-2",
       },
     },
+
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Ajeet Blog`,
+        short_name: `Ajeet`,
+        start_url: `/`,
+        background_color: `#5c257f`,
+        theme_color: `#5c257f`,
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        display: `standalone`,
+        icon: `src/images/thumbnails/ajeet-avatar.png`, // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 
   pathPrefix: "/gatsby-portfolio",

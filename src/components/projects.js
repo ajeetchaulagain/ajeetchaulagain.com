@@ -2,12 +2,18 @@ import React from "react"
 import projectStyles from "./projects.module.scss"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import { FaAngleRight } from "react-icons/fa"
+import { FaArrowRight } from "react-icons/fa"
+import dockerImg from '../images/thumbnails/docker.png';
+import reactImg from '../images/thumbnails/react-js.png';
+import nodeImg from '../images/thumbnails/node-js.png';
+import expressImg from '../images/thumbnails/express-js.png';
+
+
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMdx(filter: { fields: { contentType: { eq: "projects" } } }) {
+      allMdx(filter: { fields: { contentType: { eq: "projects" } } }, limit:4) {
         edges {
           node {
             frontmatter {
@@ -36,44 +42,35 @@ const Projects = () => {
     <div className={projectStyles.projects}>
       {data.allMdx.edges.map(edge => {
         return (
-          <div className={projectStyles.project}>
-            <div className={projectStyles.projectItem}>
-              <figure>
-                <div className={projectStyles.projectMeta}>
-                  <ul>
-                    {edge.node.frontmatter.technologies.map(technology => {
-                      return <li>{technology}</li>
-                    })}
-                  </ul>
-                </div>
-                <Img
+      
+              <div className={projectStyles.projectItem}>
+                  <div className={projectStyles.imageWrapper}>
+                  <Img
                   fluid={
                     edge.node.frontmatter.featuredImage.childImageSharp.fluid
                   }
                   alt="project"
-                />
-                <figcaption>
-                  <Link
-                    to={`/projects/${edge.node.fields.slug}`}
-                    className="box-button solid"
-                  >
-                    Case Study
-                    <i>
-                      <FaAngleRight />
-                    </i>
-                  </Link>
-                </figcaption>
-              </figure>
-              <div className={projectStyles.projectContent}>
+                /> 
+                </div> 
+                  <div className={projectStyles.contentWrapper}>
+                    <h2>{edge.node.frontmatter.title}</h2>
+                    
+                    <ul className = {projectStyles.toolsWrapper}>
+                      {edge.node.frontmatter.technologies.map(technology => {
+                        return <li>{technology}</li>
+                      })}  
+                    </ul>
+                  </div>
+                  
+              <div className={projectStyles.linksWrapper}>
                 <Link to={`/projects/${edge.node.fields.slug}`}>
-                  <h2>{edge.node.frontmatter.title}</h2>
+                  View Case Study <i>
+                  <FaArrowRight />
+                </i>
                 </Link>
-                <p className={projectStyles.smallParagraph}>
-                  {edge.node.timeToRead} min read
-                </p>
               </div>
-            </div>
-          </div>
+              </div>
+    
         )
       })}
     </div>

@@ -1,0 +1,213 @@
+@-webkit-keyframes arrowMove {
+  0% {
+    right: 0px;
+  }
+  50% {
+    right: -5px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+@keyframes arrowMove {
+  0% {
+    right: 0px;
+  }
+  50% {
+    right: -5px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -2rem;
+  @media (max-width: 767px) {
+    margin: 0 -1.5rem;
+  }
+  @media (max-width: 567px) {
+    margin: 0 -15px;
+  }
+}
+
+.project {
+  margin-bottom: 2rem;
+  max-width: 500px;
+  width: 50%;
+  padding: 0 2rem;
+
+  .project-item {
+    background-color: rgb(245, 245, 255);
+    border-radius: 3px;
+
+    border: 1px solid rgb(188, 187, 189);
+    border-top: 15px solid #3c3b3c;
+    box-shadow: 1px 1px 3px rgba(182, 179, 179, 0.708);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      .project-meta,
+      figcaption {
+        opacity: 1;
+      }
+    }
+  }
+  figure {
+    position: relative;
+
+    .project-meta {
+      position: absolute;
+      left: 2rem;
+      right: 2rem;
+      top: 15px;
+      opacity: 0;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      z-index: 1;
+    }
+    figcaption {
+      position: absolute;
+      right: 2rem;
+      left: 2rem;
+      bottom: 30px;
+      opacity: 0;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      z-index: 1;
+      a {
+        padding: 0.5rem 1rem;
+        font-weight: 500;
+        i {
+          -webkit-animation: arrowMove 1.25s infinite;
+          animation: arrowMove 1.25s infinite;
+          font-style: normal;
+          position: relative;
+          top: 3px;
+        }
+
+        &:hover {
+          border-color: #fff !important;
+          background-color: #fff !important;
+          color: #501583 !important;
+        }
+      }
+    }
+    @media (max-width: 991px) {
+      figcaption {
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      .project-meta,
+      figcaption {
+        opacity: 1;
+      }
+    }
+    @media (max-width: 699px) {
+    }
+  }
+  .project-content {
+    padding: 1.25rem 2rem;
+    position: relative;
+    z-index: 1;
+  }
+  h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25rem !important;
+    color: #333;
+    font-weight: 600 !important;
+    line-height: 1.3;
+    margin-top: 0rem !important;
+    margin-bottom: 5px !important;
+  }
+
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+  .btn {
+    border: 1px solid black;
+  }
+  .project-meta ul {
+    display: flex;
+    font-size: 0.7rem;
+    font-weight: 500;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    li {
+      background-color: rgb(80, 21, 131);
+      margin-right: 0.5rem;
+      margin-top: 0.5rem;
+      padding: 0.1rem 0.5rem;
+      border-radius: 3px;
+      color: #ffffff;
+    }
+  }
+  .small-paragraph {
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 2px;
+  }
+  @media (max-width: 991px) {
+    padding: 0 1.5rem;
+  }
+  @media (max-width: 767px) {
+  }
+  @media (max-width: 567px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.box-button {
+  padding: 0.8rem 2rem;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  font-weight: 400;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  border: 1px solid black;
+}
+
+.projects .box-button:hover {
+  background-color: black;
+  color: white;
+}
+
+// Media Queries------------------------------------------------
+
+@media only screen and (max-width: 767px) {
+  .projects {
+    display: block;
+  }
+  .project {
+    max-width: 100%;
+    width: 410px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+}

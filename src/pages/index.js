@@ -13,15 +13,15 @@ import Newsletter from "../components/newsletter"
 import PopupModal from "../components/utilities/popup-modal"
 
 export const indexHeadingStyle = {
-  marginBottom: ".6rem",
+  marginBottom: ".3rem",
   fontWeight: "900",
   // color: "rgba(92, 37, 127, 1)",
 }
 
 export const indexSubHeadingStyle = {
-  marginBottom: "2.5rem",
+  marginBottom: "1.5rem",
   lineHeight: "1.5",
-}
+} 
 
 export const contentBoxButton = {
   textDecoration: "none",
@@ -40,6 +40,17 @@ const IndexPage = () => {
     
       <Welcome />
       <ContentLayout>
+      <h1 style={indexHeadingStyle}>
+        {" "}
+        <FaBook /> From my blog{" "}
+      </h1>
+      <p style={indexSubHeadingStyle}>See the recent on my article list</p>
+      <Blog />
+      <Link to="/blog" className="box-button" style={contentBoxButton}>
+        View all Articles
+      </Link>
+    </ContentLayout>
+      <ContentLayout>
 
         <h1 style={indexHeadingStyle}>Projects</h1>
         <p style={indexSubHeadingStyle}>
@@ -51,19 +62,9 @@ const IndexPage = () => {
         </Link>
       </ContentLayout>
 
-      <ContentLayout>
-        <h1 style={indexHeadingStyle}>
-          {" "}
-          <FaBook /> From my blog{" "}
-        </h1>
-        <p style={indexSubHeadingStyle}>See the recent on my article list</p>
-        <Blog />
-        <Link to="/blog" className="box-button" style={contentBoxButton}>
-          View all Articles
-        </Link>
-      </ContentLayout>
+     
 
-      <ContentLayout>
+      <ContentLayout bgcolor="#4a4a4a">
         <Newsletter />
       </ContentLayout>
     </MasterLayout>
