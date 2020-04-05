@@ -51,14 +51,16 @@
 
 .main-header a {
   &:hover {
-    color: rgb(136, 216, 109);  
+    color: #d4ab52;
     // text-decoration:underline;
   }
 }
 
+
 .main-header h1 a:hover {
-  color: rgb(211, 209, 211);
+  color: #bd9134;
 }
+
 
 .nav-list {
   display: flex;
@@ -79,7 +81,7 @@
 }
 
 .activeList {
-  color: rgb(164, 219, 146);
+  color: #d4ab52;
 }
 
 .nav-list li:first-child {
@@ -100,7 +102,7 @@
   font-weight: 400;
   a {
     &:hover {
-      color: rgb(164, 219, 146);
+      color: #bd9134;
     }
   }
   li {

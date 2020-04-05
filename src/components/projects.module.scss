@@ -37,7 +37,10 @@
   }
   .project-item{
     // background-color:green;
-    background-color: rgb(245, 245, 255);
+    background-color: #f5f5ff;
+    background: rgb(245,245,255);
+background: linear-gradient(77deg, rgba(245,245,255,1) 0%, rgba(188,188,228,1) 100%);
+    
     // background: rgb(185,187,240);
 // background: linear-gradient(90deg, rgba(185,187,240,1) 0%, rgba(207,211,240,1) 85%);
     // border-top-radius: 2px;
@@ -104,11 +107,11 @@
     }
 
     .links-wrapper{
-      background-color:rgb(98, 97, 99);
-      color:white; 
-      padding:0.8rem 1rem;
+      // background-color:rgb(98, 97, 99);
+      color:rgb(57, 53, 53); 
+      padding:1rem 1rem;
       a{
-        color:white;
+        // color:white;
         text-decoration:none;
         padding:.4rem .8rem;
         border:1px solid rgb(136, 135, 135);

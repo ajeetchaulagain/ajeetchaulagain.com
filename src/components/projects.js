@@ -13,7 +13,7 @@ import expressImg from '../images/thumbnails/express-js.png';
 const Projects = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMdx(filter: { fields: { contentType: { eq: "projects" } } }) {
+      allMdx(filter: { fields: { contentType: { eq: "projects" } } }, limit:4) {
         edges {
           node {
             frontmatter {
