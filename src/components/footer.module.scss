@@ -1,7 +1,7 @@
 .main-footer {
   background-color: #5c257f;
   color: rgb(231, 222, 236);
-  display: flex;
+  // display: flex;
   width: 100%;
   background: rgb(92,37,127);
 background: linear-gradient(77deg, rgba(92,37,127,1) 9%, rgba(26,116,173,1) 100%);
@@ -9,6 +9,46 @@ background: linear-gradient(77deg, rgba(92,37,127,1) 9%, rgba(26,116,173,1) 100%
 
 .footer-content {
   padding: 2.5rem;
+  text-align: center;
+
+  .social-media-lists{
+    display: flex;
+    justify-content: center;
+    margin-bottom:1rem;
+    padding-bottom:.5rem;
+    border-bottom:1px solid rgb(140, 140, 140);
+  }
+  .nav-list{
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom:.8rem;
+  }
+
+
+  li{
+    margin:0rem 0.5rem;
+    text-transform: uppercase;
+
+    :first-child{
+       margin-left:0;
+    }
+    :last-child{
+      margin-left:0;
+      margin-right:0rem;
+    }
+
+    .activeList {
+      color: #d4ab52;
+    }
+
+    a:hover{
+      color: #d4ab52;
+    }
+
+  }
+
 }
 
 // Media Queries------------------------------------------------

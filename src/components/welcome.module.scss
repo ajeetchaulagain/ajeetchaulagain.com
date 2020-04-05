@@ -56,8 +56,8 @@
 
   .subscription{
     width:45%;
-    background-color:rgba(0, 0, 0, 0.126);
-    // border:1px solid rgb(196, 196, 196);
+    background-color:rgba(0, 0, 0, 0.057);
+    // border:1px solid rgb(40, 80, 150);
     border-radius: 5px;
     // box-shadow:1px 1px 8px #0a4964;
     text-align:center;
@@ -140,6 +140,10 @@
   }
 }
 
+.test{
+  color:#bd9134;
+}
+
 .welcome-button {
   border: 1px solid rgb(231, 222, 236);
   padding: 0.5rem 1rem;
@@ -161,7 +165,7 @@
 
 .particles {
   position: absolute;
-  // display:none;
+  display:none;
   z-index: 0;
   top: 0;
   left: 0;
@@ -203,7 +207,7 @@ background: radial-gradient(circle, rgba(26,116,173,1) 0%, rgba(92,37,127,1) 100
     .subscription{
       width:100%;
       order:1;
-      background-color:rgba(47, 48, 46, 0.53);
+      background-color:rgba(47, 48, 46, 0.29);
       background: none;
        .image-holder h2,p,.subscribe-button{
          display: none;

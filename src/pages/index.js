@@ -64,7 +64,7 @@ const IndexPage = () => {
 
      
 
-      <ContentLayout>
+      <ContentLayout bgcolor="#4a4a4a">
         <Newsletter />
       </ContentLayout>
     </MasterLayout>
