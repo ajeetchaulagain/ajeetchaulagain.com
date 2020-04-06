@@ -137,23 +137,23 @@ module.exports = {
         name: `Ajeet Blog`,
         short_name: `Ajeet`,
         start_url: `/`,
-        background_color: `#5c257f`,
+        background_color: `#CCCC04`,
         theme_color: `#5c257f`,
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
-        icon: `src/images/thumbnails/ajeet-avatar.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo-fav.svg`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-offline`,
 
     {
-      resolve: 'gatsby-plugin-mailchimp',
+      resolve: "gatsby-plugin-mailchimp",
       options: {
-          endpoint: 'https://ajeetchaulagain.us19.list-manage.com/subscribe/post?u=961c9fb48e36f45cf16236b29&amp;id=ce684f7325', // add your MC list endpoint here; see instructions below
+        endpoint:
+          "https://ajeetchaulagain.us19.list-manage.com/subscribe/post?u=961c9fb48e36f45cf16236b29&amp;id=ce684f7325", // add your MC list endpoint here; see instructions below
       },
     },
-
   ],
 
   pathPrefix: "/gatsby-portfolio",

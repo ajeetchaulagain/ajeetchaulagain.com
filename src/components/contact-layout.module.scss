@@ -7,21 +7,23 @@
     width: 100%;
   }
 
-  input,textarea{
-    font-size:.9rem;
+  input,
+  textarea {
+    font-size: 0.9rem !important;
   }
 
+  button[type="submit"] {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    border: none;
 
-  button[type="submit"]{
-      font-size:.9rem;
-      text-transform: uppercase;
-      border:none;
-      
-      &:hover{
-        background-color:#4d1b6d;
-        color:#fff;
-        
+    &:hover {
+      background-color: #4d1b6d;
+      color: #fff;
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
     }
   }
-  
 }

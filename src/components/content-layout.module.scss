@@ -1,30 +1,4 @@
-
 .content-section {
-  > div {
-    position: relative;
-    &::after,
-    &::before {
-      content: "";
-      color: white;
-      width: 15px;
-      height: 15px;
-      position: absolute;
-      right: 30px;
-      bottom: 30px;
-      background-color: #5c257f;
-      border-radius: 50%;
-    }
-    &::after {
-      border: 1px solid rgba(255, 255, 255, 0.75);
-    }
-    &::before {
-      width: 30px;
-      height: 30px;
-      opacity: 0.8;
-      right: 35px;
-      bottom: 31px;
-    }
-  }
   background-color: rgb(250, 248, 242);
   width: 100%;
   position: relative;
@@ -102,7 +76,7 @@
   }
 
   @media (max-width: 960px) {
-    padding: 2.5rem 1.2rem 5rem;
+    padding: 2.5rem 1.2rem 2.5rem;
     // margin-bottom: 1rem;
     border: none;
     border-bottom: 1px solid rgb(194, 194, 194);

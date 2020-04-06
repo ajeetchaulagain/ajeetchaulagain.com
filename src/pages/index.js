@@ -5,11 +5,10 @@ import Blog from "../components/blog"
 import MasterLayout from "../components/master-layout"
 import ContentLayout from "../components/content-layout"
 import { Link } from "gatsby"
-import { FaBook, } from "react-icons/fa"
-import { IoIosArrowForward } from 'react-icons/io'
+import { FaBook } from "react-icons/fa"
+import { IoIosArrowForward } from "react-icons/io"
 
 import Newsletter from "../components/newsletter"
-
 
 export const indexHeadingStyle = {
   marginBottom: ".3rem",
@@ -20,14 +19,14 @@ export const indexHeadingStyle = {
 export const indexSubHeadingStyle = {
   marginBottom: "1.5rem",
   lineHeight: "1.5",
-} 
+}
 
 export const contentBoxButton = {
   textDecoration: "none",
   color: "#fff",
   fontWeight: "400",
-  textTransform:"uppercase",
-  fontSize:"1rem"
+  textTransform: "uppercase",
+  fontSize: "1rem",
 }
 
 export const subscribeSectionStyle = {
@@ -38,21 +37,19 @@ export const subscribeSectionStyle = {
 const IndexPage = () => {
   return (
     <MasterLayout>
-    
       <Welcome />
       <ContentLayout>
-      <h1 style={indexHeadingStyle}>
-        {" "}
-        <FaBook /> From my blog{" "}
-      </h1>
-      <p style={indexSubHeadingStyle}>See the recent on my article list</p>
-      <Blog />
-      <Link to="/blog" className="box-button" style={contentBoxButton}>
-        View all Articles
-      </Link>
-    </ContentLayout>
+        <h1 style={indexHeadingStyle}>
+          {" "}
+          <FaBook /> From my blog{" "}
+        </h1>
+        <p style={indexSubHeadingStyle}>See the recent on my article list</p>
+        <Blog />
+        <Link to="/blog" className="box-button" style={contentBoxButton}>
+          View all Articles
+        </Link>
+      </ContentLayout>
       <ContentLayout bgcolor="#D3DCE0">
-
         <h1 style={indexHeadingStyle}>Projects</h1>
         <p style={indexSubHeadingStyle}>
           Checkout some of my projects with case study
@@ -62,8 +59,6 @@ const IndexPage = () => {
           View All Projects
         </Link>
       </ContentLayout>
-
-     
 
       <ContentLayout bgcolor="#e8e8e8">
         <Newsletter />

@@ -12,8 +12,6 @@ import AboutJumbotronBlog from "../components/about-jumbotron"
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
 import NewsLetter from "../components/newsletter"
 
-
-
 export const query = graphql`
   query($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
@@ -103,14 +101,10 @@ const BlogTemplate = props => {
             )}
           </div>
         </div>
-        
-       
+
         <AboutJumbotronBlog />
-        <br/>
-        <NewsLetter/>
-        
-        
-  
+        <br />
+        <NewsLetter />
       </ContentLayout>
     </MasterLayout>
   )

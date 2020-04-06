@@ -35,7 +35,7 @@ const BlogPage = () => {
         <Blog />
       </ContentLayout>
       <ContentLayout bgcolor="#3D3D3D">
-        <NewsLetter/>
+        <NewsLetter />
       </ContentLayout>
     </MasterLayout>
   )

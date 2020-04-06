@@ -4,9 +4,12 @@
   color: rgb(231, 222, 236);
   display: flex;
   width: 100%;
-  background: rgb(92,37,127);
-background: linear-gradient(77deg, rgba(92,37,127,1) 9%, rgba(26,116,173,1) 100%);
-  
+  background: rgb(92, 37, 127);
+  background: linear-gradient(
+    77deg,
+    rgba(92, 37, 127, 1) 9%,
+    rgba(26, 116, 173, 1) 100%
+  );
 }
 
 .intro-content {
@@ -24,13 +27,11 @@ background: linear-gradient(77deg, rgba(92,37,127,1) 9%, rgba(26,116,173,1) 100%
   padding: 45px 15px;
 }
 
-
-
 @media only screen and (max-width: 599px) {
   .intro-content {
     position: relative;
-    height:8rem;
-    
+    height: 8rem;
+
     // padding-top: 6rem;
     .heading-light {
       padding: 0.3rem 0;
@@ -41,11 +42,10 @@ background: linear-gradient(77deg, rgba(92,37,127,1) 9%, rgba(26,116,173,1) 100%
 @media only screen and (min-width: 599px) and (max-width: 960px) {
   .intro-content {
     height: 6rem;
-    
+
     // padding-top: 5rem;
   }
 }
-
 
 @media only screen and (min-width: 961px) {
   .intro-content {

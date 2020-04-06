@@ -7,8 +7,7 @@ import welcomeStyles from "./welcome.module.scss"
 import Particles from "react-particles-js"
 
 import { useAuthorImage } from "./utilities/use-author-image"
-import { FaTelegram, FaArrowCircleRight, FaToolbox } from 'react-icons/fa'
-
+import { FaTelegram, FaArrowCircleRight, FaToolbox } from "react-icons/fa"
 
 import {
   FaFacebook,
@@ -17,9 +16,8 @@ import {
   FaGithub,
   FaInstagram,
   FaCoffee,
-  FaTelegramPlane
+  FaTelegramPlane,
 } from "react-icons/fa"
-
 
 const particlesParam = {
   particles: {
@@ -137,102 +135,110 @@ const Welcome = () => {
 
   return (
     <section className={welcomeStyles.welcomeSection}>
-      <Particles
-        className={welcomeStyles.particles}
-        params={particlesParam}
-      />
+      <Particles className={welcomeStyles.particles} params={particlesParam} />
       <div className={welcomeStyles.welcomeContent}>
-            <div className={welcomeStyles.aboutIntro}>
-                  
-                <h1 className={welcomeStyles.heading}>
-                  <span style={{ fontWeight: "100" }}>Hello.I'm </span>Ajeet Chaulagain
-                </h1>
-                <p className={welcomeStyles.paragraph}>I am full stack developer passionate towards building 
-                applications that are scalable and maintainable with beautifully crafted code </p>
-                <div className={welcomeStyles.calltoactionWrapper}>
-                <Link to="/about" className={welcomeStyles.welcomeButton}>
-                  More about me &nbsp; <FaArrowCircleRight/>
-                </Link>
-                <Link to="/about" className={welcomeStyles.welcomeButton} style={{backgroundColor:"#d4ab52", color:"#fff"}}>
-                  View My Work &nbsp; <FaToolbox/>
-                </Link>
-                </div>
-
-                <div>
-          <ul className={welcomeStyles.socialMediaLists}>
-            <li>
-              <a
-                href="https://www.facebook.com/chaulagain.ajeet"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaFacebook/>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://twitter.com/ajeetsweb"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaTwitter />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/ajeet-chaulagain/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/ajeetchaulagain"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/chaulagainajeet/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaInstagram />
-              </a>
-            </li>
-            <li>
-            <a
-              href="https://ko-fi.com/ajeetchaulagain"
-              target="_blank"
-              rel="noopener noreferrer"
+        <div className={welcomeStyles.aboutIntro}>
+          <h1 className={welcomeStyles.heading}>
+            <span style={{ fontWeight: "100" }}>Hello.I'm </span>Ajeet
+            Chaulagain
+          </h1>
+          <p className={welcomeStyles.paragraph}>
+            I am full stack developer passionate towards building applications
+            that are scalable and maintainable with beautifully crafted code{" "}
+          </p>
+          <div className={welcomeStyles.calltoactionWrapper}>
+            <Link to="/about" className={welcomeStyles.welcomeButton}>
+              More about me &nbsp; <FaArrowCircleRight />
+            </Link>
+            <Link
+              to="/about"
+              className={welcomeStyles.welcomeButton}
+              style={{ backgroundColor: "#d4ab52", color: "#fff" }}
             >
-              <FaCoffee />
-            </a>
-          </li>
-          </ul>
-  </div>
-            </div>
+              View My Work &nbsp; <FaToolbox />
+            </Link>
+          </div>
 
-            <div className={welcomeStyles.subscription}>
-              <div className={welcomeStyles.imageHolder}>
-              <span>
-                <Img
-                  fixed={GatsbyImageSharpFixed}
-                  className={welcomeStyles.image}
-                />
-              </span>
-              <h2>Newsletter</h2>
-              <p>I write articles on modern software development. Signup my newsletter to get the update when it comes out.</p>
-              
-              <Link to="/newsletter" className={welcomeStyles.subscribeButton}>Subscribe &nbsp;<FaTelegramPlane/></Link>
-            </div>
-            </div>
-        
+          <div>
+            <ul className={welcomeStyles.socialMediaLists}>
+              <li>
+                <a
+                  href="https://www.facebook.com/chaulagain.ajeet"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaFacebook />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/ajeetsweb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaTwitter />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/ajeet-chaulagain/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedinIn />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/ajeetchaulagain"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithub />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/chaulagainajeet/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://ko-fi.com/ajeetchaulagain"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaCoffee />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className={welcomeStyles.subscription}>
+          <div className={welcomeStyles.imageHolder}>
+            <span>
+              <Img
+                fixed={GatsbyImageSharpFixed}
+                className={welcomeStyles.image}
+              />
+            </span>
+            <h2>Newsletter</h2>
+            <p>
+              I write articles on modern software development. Signup my
+              newsletter to get the update when it comes out.
+            </p>
+
+            <Link to="/newsletter" className={welcomeStyles.subscribeButton}>
+              Subscribe &nbsp;
+              <FaTelegramPlane />
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   )

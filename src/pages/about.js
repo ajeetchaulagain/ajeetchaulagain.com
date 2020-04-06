@@ -11,7 +11,7 @@ const AboutPage = () => {
       <IntroSection />
       <ContentLayout>
         <About />
-        <NewsLetter/>
+        <NewsLetter />
       </ContentLayout>
     </MasterLayout>
   )
