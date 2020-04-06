@@ -119,7 +119,7 @@ const Footer = () => {
             </a>
           </li>
           </ul>
-      <hr size="1"/>
+        
         <p>
           <em>{data.site.siteMetadata.author} © 2020.</em> All rights
           reserved.
