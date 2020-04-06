@@ -1,98 +1,20 @@
-@keyframes kofi-wiggle {
-  0% {
-    transform: rotate(0) scale(1);
-  }
-  60% {
-    transform: rotate(0) scale(1);
-  }
-  75% {
-    transform: rotate(0) scale(1.12);
-  }
-  80% {
-    transform: rotate(0) scale(1.1);
-  }
-  84% {
-    transform: rotate(-10deg) scale(1.1);
-  }
-  88% {
-    transform: rotate(10deg) scale(1.1);
-  }
-  92% {
-    transform: rotate(-10deg) scale(1.1);
-  }
-  96% {
-    transform: rotate(10deg) scale(1.1);
-  }
-  100% {
-    transform: rotate(0) scale(1);
-  }
-}
+
 .wrapper {
   background-color:rgb(133, 132, 132);
-  background: rgb(38,40,38);
-  background: linear-gradient(77deg, rgba(38,40,38,1) 0%, rgba(97,93,93,1) 100%);
   border-top:1px dashed white;
   padding:2rem;
-  color:#fff;
+  border:1px solid rgb(179, 177, 177);
+  color:#333;
+  line-height: 1;
   text-align: center;
-  
-  display: flex;
-  hr {
-    border: none;
-    margin: 4rem 0;
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5c257f+0,5c257f+0,ffffff+75&1+0,1+0,0+75 */
-    background: -moz-radial-gradient(
-      center,
-      ellipse cover,
-      rgba(92, 37, 127, 1) 0%,
-      rgba(255, 255, 255, 0) 75%
-    ); /* FF3.6-15 */
-    background: -webkit-radial-gradient(
-      center,
-      ellipse cover,
-      rgba(92, 37, 127, 1) 0%,
-      rgba(255, 255, 255, 0) 75%
-    ); /* Chrome10-25,Safari5.1-6 */
-    background: radial-gradient(
-      ellipse at center,
-      rgba(92, 37, 127, 1) 0%,
-      rgba(255, 255, 255, 0) 75%
-    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c257f', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background-image: url('../images/double-bubble.png');
 
-    height: 2px;
-    width: 100%;
-  }
-  a {
-    background-color: #5c257f;
-    padding: 10px 15px;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-  }
-  img {
-    margin-right: 5px;
-    width: 20px;
-    animation: kofi-wiggle 3s infinite;
-  }
-  input[type="submit"] {
-    height: 40px;
-    display: inline-block;
-    width: 100px;
-    font-weight: 700;
-    padding: 0 5px !important;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #5c257f;
-    color: #fff;
-    border: none;
-    border-radius: 0 3px 3px 0;
-  }
   input[type="email"] {
     width: 450px;
     max-width: 100%;
+    font-size:.9rem;
     padding-right: 120px;
+    color:#5c257f;
     @media (max-width: 567px) {
       width: 320px;
     }
@@ -100,11 +22,23 @@
       width: 280px;
     }
   }
-  form {
-    > div {
-      display: inline-block;
-      position: relative;
-      margin: 0 auto;
+
+  button{
+    font-size:.9rem;
+    background-color:#5c257f;
+    color:white;
+    letter-spacing: 1px;
+    line-height:0;
+    text-transform:uppercase;
+    margin-top:.2rem;
+    padding:1.4rem 1rem;
+    border-radius:3px;
+    border:none;
+    margin-left:.3rem;
+
+    &:hover{
+        background-color:#4d1b6d;
     }
-  }
+}
+ 
 }

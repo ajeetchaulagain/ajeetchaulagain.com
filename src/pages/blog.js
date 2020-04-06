@@ -4,6 +4,7 @@ import IntroSection from "../components/intro-section"
 import ContentLayout from "../components/content-layout"
 import Blog from "../components/blog"
 import { indexHeadingStyle, indexSubHeadingStyle } from "."
+import NewsLetter from "../components/newsletter"
 
 const BlogPage = () => {
   const searchBoxStyle = {
@@ -32,6 +33,9 @@ const BlogPage = () => {
           style={searchBoxStyle}
         />
         <Blog />
+      </ContentLayout>
+      <ContentLayout bgcolor="#3D3D3D">
+        <NewsLetter/>
       </ContentLayout>
     </MasterLayout>
   )

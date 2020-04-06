@@ -6,6 +6,13 @@
         // background-color:red;
         min-width:350px;
         font-size:.9rem;
+
+        @media (max-width: 567px) {
+            width: 320px;
+          }
+          @media (max-width: 370px) {
+            width: 280px;
+          }
     }
 
     svg {

@@ -10,8 +10,6 @@ import { FaBook } from "react-icons/fa"
 import Newsletter from "../components/newsletter"
 
 
-import PopupModal from "../components/utilities/popup-modal"
-
 export const indexHeadingStyle = {
   marginBottom: ".3rem",
   fontWeight: "900",
@@ -50,7 +48,7 @@ const IndexPage = () => {
         View all Articles
       </Link>
     </ContentLayout>
-      <ContentLayout>
+      <ContentLayout bgcolor="#D3DCE0">
 
         <h1 style={indexHeadingStyle}>Projects</h1>
         <p style={indexSubHeadingStyle}>
@@ -64,7 +62,7 @@ const IndexPage = () => {
 
      
 
-      <ContentLayout bgcolor="#4a4a4a">
+      <ContentLayout bgcolor="#e8e8e8">
         <Newsletter />
       </ContentLayout>
     </MasterLayout>

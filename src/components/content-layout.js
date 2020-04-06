@@ -13,7 +13,7 @@ const ContentLayout = props => {
     <MDXProvider components={shortCodes}>
     
       <section className={contentLayoutStyles.contentSection}>
-        <div className={contentLayoutStyles.content} style={{backgroundColor:`${props.bgcolor}`}}>{props.children}</div>
+        <div className={contentLayoutStyles.content} style={{backgroundColor:props.bgcolor,color:props.color}}>{props.children}</div>
       </section>
     </MDXProvider>
   )

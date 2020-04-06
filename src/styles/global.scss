@@ -184,9 +184,10 @@ button {
 form {
   label {
     width: 100%;
+    font-size:inherit;
     display: block;
     color: #333;
-    font-family: $font__title;
+    font-family: $font__main;
   }
 }
 

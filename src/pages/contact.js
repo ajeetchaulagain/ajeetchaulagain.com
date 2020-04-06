@@ -12,10 +12,10 @@ const ContactPage = () => {
       <ContentLayout>
         <h1>Contact Me</h1>
         <p>
-          Feel free to say a friendly hello to me via chaulagainajeet@gmail.com or 
+          Feel free to say a friendly hello to me via <a href="mailto:chaulagainajeet@gmail.com">chaulagainajeet@gmail.com</a> or 
           by using the contact form available below.  </p>
         <ContactForm />
-        <h2>On Social Media</h2>
+        <h2>Follow me on:</h2>
       </ContentLayout>
     </MasterLayout>
   )
