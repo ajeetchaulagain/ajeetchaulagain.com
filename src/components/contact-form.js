@@ -26,7 +26,7 @@ const ContactForm = () => {
         </div>
         <div className={contactLayoutStyles.formRow}>
           <label for="message">Message</label>
-          <input
+          <textarea
             type="text"
             name="message"
             id="message"

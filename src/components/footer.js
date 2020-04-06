@@ -56,7 +56,11 @@ const Footer = () => {
                 Contact
               </Link>
             </li>
-          
+            <li>
+              <Link to="/newsletter" activeClassName={footerStyles.activeList}>
+                Newsletter
+              </Link>
+            </li> 
           </ul>
 
           <ul className={footerStyles.socialMediaLists}>
@@ -107,7 +111,7 @@ const Footer = () => {
             </li>
             <li>
             <a
-              href="https://www.instagram.com/chaulagainajeet/"
+              href="https://ko-fi.com/ajeetchaulagain"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -115,7 +119,7 @@ const Footer = () => {
             </a>
           </li>
           </ul>
-
+        
         <p>
           <em>{data.site.siteMetadata.author} © 2020.</em> All rights
           reserved.

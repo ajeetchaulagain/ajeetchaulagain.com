@@ -7,6 +7,8 @@ import welcomeStyles from "./welcome.module.scss"
 import Particles from "react-particles-js"
 
 import { useAuthorImage } from "./utilities/use-author-image"
+import { FaTelegram, FaArrowCircleRight, FaToolbox } from 'react-icons/fa'
+
 
 import {
   FaFacebook,
@@ -15,7 +17,9 @@ import {
   FaGithub,
   FaInstagram,
   FaCoffee,
+  FaTelegramPlane
 } from "react-icons/fa"
+
 
 const particlesParam = {
   particles: {
@@ -145,12 +149,14 @@ const Welcome = () => {
                 </h1>
                 <p className={welcomeStyles.paragraph}>I am full stack developer passionate towards building 
                 applications that are scalable and maintainable with beautifully crafted code </p>
+                <div className={welcomeStyles.calltoactionWrapper}>
                 <Link to="/about" className={welcomeStyles.welcomeButton}>
-                  More about me
+                  More about me &nbsp; <FaArrowCircleRight/>
                 </Link>
-                <Link to="/about" className={welcomeStyles.welcomeButton} style={{backgroundColor:"#d4ab52", color:"black"}}>
-                  View My Work
+                <Link to="/about" className={welcomeStyles.welcomeButton} style={{backgroundColor:"#d4ab52", color:"#fff"}}>
+                  View My Work &nbsp; <FaToolbox/>
                 </Link>
+                </div>
 
                 <div>
           <ul className={welcomeStyles.socialMediaLists}>
@@ -201,7 +207,7 @@ const Welcome = () => {
             </li>
             <li>
             <a
-              href="https://www.instagram.com/chaulagainajeet/"
+              href="https://ko-fi.com/ajeetchaulagain"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -221,10 +227,9 @@ const Welcome = () => {
                 />
               </span>
               <h2>Newsletter</h2>
-              <p>I write content on modern software development
-                mainly including Javascript, Node, Express, React, Gatsby and MongoDB. Please subscribe me, 
-                If you would love to read my content</p>
-              <Link to="/subscribe" className={welcomeStyles.subscribeButton}>Subscribe Here</Link>
+              <p>I write articles on modern software development. Signup my newsletter to get the update when it comes out.</p>
+              
+              <Link to="/newsletter" className={welcomeStyles.subscribeButton}>Subscribe &nbsp;<FaTelegramPlane/></Link>
             </div>
             </div>
         

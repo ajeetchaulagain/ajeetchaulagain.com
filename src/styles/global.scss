@@ -164,9 +164,9 @@ textarea {
   border: 1px solid $color__border-input;
   border: 1px solid #d9d8da;
   padding: 0.8rem 1rem;
-  font-weight: 400;
+  font-weight: 300;
   border-radius: 2px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   @include transition(0.2s);
   &:focus {
     color: $color__text-input-focus;
@@ -184,9 +184,10 @@ button {
 form {
   label {
     width: 100%;
+    font-size:inherit;
     display: block;
     color: #333;
-    font-family: $font__title;
+    font-family: $font__main;
   }
 }
 

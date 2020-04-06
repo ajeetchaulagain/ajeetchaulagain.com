@@ -6,4 +6,22 @@
   textarea {
     width: 100%;
   }
+
+  input,textarea{
+    font-size:.9rem;
+  }
+
+
+  button[type="submit"]{
+      font-size:.9rem;
+      text-transform: uppercase;
+      border:none;
+      
+      &:hover{
+        background-color:#4d1b6d;
+        color:#fff;
+        
+    }
+  }
+  
 }

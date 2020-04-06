@@ -10,6 +10,7 @@ import Img from "gatsby-image"
 import { graphql, Link } from "gatsby"
 import AboutJumbotronBlog from "../components/about-jumbotron"
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
+import NewsLetter from "../components/newsletter"
 
 
 
@@ -102,7 +103,13 @@ const BlogTemplate = props => {
             )}
           </div>
         </div>
+        
+       
         <AboutJumbotronBlog />
+        <br/>
+        <NewsLetter/>
+        
+        
   
       </ContentLayout>
     </MasterLayout>

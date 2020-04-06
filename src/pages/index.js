@@ -5,12 +5,11 @@ import Blog from "../components/blog"
 import MasterLayout from "../components/master-layout"
 import ContentLayout from "../components/content-layout"
 import { Link } from "gatsby"
-import { FaBook } from "react-icons/fa"
+import { FaBook, } from "react-icons/fa"
+import { IoIosArrowForward } from 'react-icons/io'
 
 import Newsletter from "../components/newsletter"
 
-
-import PopupModal from "../components/utilities/popup-modal"
 
 export const indexHeadingStyle = {
   marginBottom: ".3rem",
@@ -27,6 +26,8 @@ export const contentBoxButton = {
   textDecoration: "none",
   color: "#fff",
   fontWeight: "400",
+  textTransform:"uppercase",
+  fontSize:"1rem"
 }
 
 export const subscribeSectionStyle = {
@@ -50,7 +51,7 @@ const IndexPage = () => {
         View all Articles
       </Link>
     </ContentLayout>
-      <ContentLayout>
+      <ContentLayout bgcolor="#D3DCE0">
 
         <h1 style={indexHeadingStyle}>Projects</h1>
         <p style={indexSubHeadingStyle}>
@@ -64,7 +65,7 @@ const IndexPage = () => {
 
      
 
-      <ContentLayout bgcolor="#4a4a4a">
+      <ContentLayout bgcolor="#e8e8e8">
         <Newsletter />
       </ContentLayout>
     </MasterLayout>
