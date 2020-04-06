@@ -60,8 +60,7 @@ const Footer = () => {
               <Link to="/newsletter" activeClassName={footerStyles.activeList}>
                 Newsletter
               </Link>
-            </li>
-          
+            </li> 
           </ul>
 
           <ul className={footerStyles.socialMediaLists}>
@@ -112,7 +111,7 @@ const Footer = () => {
             </li>
             <li>
             <a
-              href="https://www.instagram.com/chaulagainajeet/"
+              href="https://ko-fi.com/ajeetchaulagain"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -2,6 +2,8 @@ import addToMailchimp from 'gatsby-plugin-mailchimp';
 
 import React from 'react';
 
+import {FaTelegramPlane} from 'react-icons/fa'
+
 
 export default class EmailList extends React.Component {
 
@@ -33,7 +35,7 @@ export default class EmailList extends React.Component {
           value={this.state.email}
           onChange = {event=>this.setState({email:event.target.value,resultMessage:''})}
           />
-          <button>Signup</button>
+          <button>Signup <FaTelegramPlane/></button>
        </div>
        <div>
         <p style={{color:this.state.result==="success"?successColor:failureColor, fontSize:"1rem", marginTop:"1rem"}}>{this.state.resultMessage}</p>

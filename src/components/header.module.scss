@@ -69,9 +69,6 @@
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.05rem;
-  @media (max-width: 567px) {
-    letter-spacing: 0.02rem;
-  }
 }
 
 .nav-list li {
@@ -141,11 +138,23 @@
   }
 
   .nav-list li {
-    font-size: 1.2rem;
-    font-weight: 500;
+    font-size: 1.1rem;
+    font-weight: 600;
     padding: 0 0.4rem;
     margin: 0px;
-    // background-color: red;
+    margin-bottom:.4rem;
+
+    a{
+      // background-color:red;
+      border:1px solid rgb(136, 142, 208);
+      border-radius: 2px;
+      padding:.1rem .3rem;
+    }
+    .activeList{
+      color:#333;
+      background-color:white;
+    }
+    
   }
 
   .social-media-lists {

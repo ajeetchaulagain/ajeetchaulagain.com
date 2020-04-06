@@ -2,7 +2,7 @@ import React from "react"
 import projectStyles from "./projects.module.scss"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import { FaArrowRight } from "react-icons/fa"
+import { FaArrowRight, FaLongArrowAltRight, FaArrowCircleRight } from "react-icons/fa"
 import dockerImg from '../images/thumbnails/docker.png';
 import reactImg from '../images/thumbnails/react-js.png';
 import nodeImg from '../images/thumbnails/node-js.png';
@@ -65,7 +65,7 @@ const Projects = () => {
               <div className={projectStyles.linksWrapper}>
                 <Link to={`/projects/${edge.node.fields.slug}`}>
                   View Case Study <i>
-                  <FaArrowRight />
+                  <FaArrowCircleRight />
                 </i>
                 </Link>
               </div>

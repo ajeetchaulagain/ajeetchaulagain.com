@@ -22,6 +22,12 @@
     width:52%;
     // padding-left:.5rem;
 
+    .calltoaction-wrapper{
+      display: flex;
+      flex-wrap: wrap;
+      // background-color: red;
+      justify-content:flex-start;
+    }
     // Social Media list
     .social-media-lists {
       display: flex;
@@ -39,7 +45,7 @@
         // color:rgb(199, 149, 43);
         // padding:.4rem;
         &:hover {
-          color: rgb(164, 219, 146);
+          color:#d4ab52;
         }
       }
       li {
@@ -95,9 +101,12 @@
       color:black;
       border-radius: 3px;
       display:inline-block;
-
+      vertical-align:middle;
       margin:1rem auto;
-      
+     
+      svg{
+        display: inline-block;
+      }
       &:hover{
         // background-color: rgb(179, 179, 179);
         color:#5c257f;
@@ -105,7 +114,6 @@
     }
   }
 }
-
 
 
 .heading {
@@ -161,6 +169,13 @@
   transition: all 0.3s ease;
   margin-bottom:.2rem;
   margin-right:.4rem;
+  display: flex;
+  // width:48%;
+  // flex-wrap: wrap;
+  align-items: center;
+  svg{
+    margin-top:.2rem;
+  }
 }
 
 .welcome-button:hover {
@@ -200,7 +215,11 @@ background: radial-gradient(circle, rgba(26,116,173,1) 0%, rgba(92,37,127,1) 100
       text-align: center;
       margin:0 auto;
       order:2;
-    
+
+      .calltoaction-wrapper{
+        justify-content: center;
+      }
+  
 
       .social-media-lists{
         align-items: center;

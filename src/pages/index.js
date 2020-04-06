@@ -5,7 +5,8 @@ import Blog from "../components/blog"
 import MasterLayout from "../components/master-layout"
 import ContentLayout from "../components/content-layout"
 import { Link } from "gatsby"
-import { FaBook } from "react-icons/fa"
+import { FaBook, } from "react-icons/fa"
+import { IoIosArrowForward } from 'react-icons/io'
 
 import Newsletter from "../components/newsletter"
 
@@ -25,6 +26,8 @@ export const contentBoxButton = {
   textDecoration: "none",
   color: "#fff",
   fontWeight: "400",
+  textTransform:"uppercase",
+  fontSize:"1rem"
 }
 
 export const subscribeSectionStyle = {

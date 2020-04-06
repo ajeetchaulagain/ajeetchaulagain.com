@@ -118,21 +118,21 @@
         font-size: 1rem;
         font-weight:600;
         border:1px solid rgb(199, 199, 199);
-        // background-color:red;
+        
 
         i{
   
           font-style: normal;
           position: relative;
-          top: 4.5px;
+          top: 3px;
         }
         &:hover {
           i{
             -webkit-animation: arrowMove 1.25s infinite;
           animation: arrowMove 1.25s infinite;
           }
-          background-color: #fff !important;
-          color: #501583 !important;
+          background-color: #501583;
+          color: #fff !important;
         }
       }
     }

@@ -2,12 +2,18 @@
 .wrapper {
   background-color:rgb(133, 132, 132);
   border-top:1px dashed white;
-  padding:2rem;
+  padding:0rem 1rem 1rem;
   border:1px solid rgb(179, 177, 177);
   color:#333;
-  line-height: 1;
+  line-height: 1.5;
+  // line-height: 1.5;
   text-align: center;
   background-image: url('../images/double-bubble.png');
+
+  h2{
+    font-weight:900;
+    font-size:2rem;
+  }
 
   input[type="email"] {
     width: 450px;
@@ -28,16 +34,22 @@
     background-color:#5c257f;
     color:white;
     letter-spacing: 1px;
-    line-height:0;
+    // line-height:1.5;
     text-transform:uppercase;
     margin-top:.2rem;
-    padding:1.4rem 1rem;
+    padding:.8rem 1rem;
     border-radius:3px;
     border:none;
     margin-left:.3rem;
+    display: inline-block;
 
     &:hover{
         background-color:#4d1b6d;
+    }
+
+    @media (max-width: 567px) {
+      width: 320px;
+      margin-top:1rem;
     }
 }
  
