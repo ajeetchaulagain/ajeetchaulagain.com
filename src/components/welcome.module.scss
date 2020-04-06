@@ -88,15 +88,20 @@
     }
 
     .subscribe-button{
-      // background-color: rgb(218, 172, 58);
-      border:1px solid white;
-    
-      padding:.5rem 1.5rem;
-      // color:#5c257f;
-      // width:150px;
+      background-color: rgb(227, 226, 224);
+      // border:1px solid white;
+      text-transform: uppercase;
+      padding:.5rem 2.5rem;
+      color:black;
+      border-radius: 3px;
       display:inline-block;
+
       margin:1rem auto;
       
+      &:hover{
+        // background-color: rgb(179, 179, 179);
+        color:#5c257f;
+      }
     }
   }
 }

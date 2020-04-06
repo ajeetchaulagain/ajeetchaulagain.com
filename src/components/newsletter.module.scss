@@ -28,8 +28,15 @@
   }
 }
 .wrapper {
+  background-color:rgb(133, 132, 132);
+  background: rgb(38,40,38);
+  background: linear-gradient(77deg, rgba(38,40,38,1) 0%, rgba(97,93,93,1) 100%);
+  border-top:1px dashed white;
+  padding:2rem;
   color:#fff;
   text-align: center;
+  
+  display: flex;
   hr {
     border: none;
     margin: 4rem 0;
@@ -83,7 +90,7 @@
     border-radius: 0 3px 3px 0;
   }
   input[type="email"] {
-    width: 400px;
+    width: 450px;
     max-width: 100%;
     padding-right: 120px;
     @media (max-width: 567px) {

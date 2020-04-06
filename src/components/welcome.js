@@ -17,6 +17,7 @@ import {
   FaCoffee,
 } from "react-icons/fa"
 
+
 const particlesParam = {
   particles: {
     number: {
@@ -221,10 +222,9 @@ const Welcome = () => {
                 />
               </span>
               <h2>Newsletter</h2>
-              <p>I write content on modern software development
-                mainly including Javascript, Node, Express, React, Gatsby and MongoDB. Please subscribe me, 
-                If you would love to read my content</p>
-              <Link to="/subscribe" className={welcomeStyles.subscribeButton}>Subscribe Here</Link>
+              <p>I write articles on modern software development. Signup my newsletter to get the update when it comes out.</p>
+              
+              <Link to="/newsletter" className={welcomeStyles.subscribeButton}>Subscribe</Link>
             </div>
             </div>
         
