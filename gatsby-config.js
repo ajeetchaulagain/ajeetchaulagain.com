@@ -135,8 +135,8 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Ajeet Blog`,
-        short_name: `Ajeet`,
-        start_url: `/`,
+        short_name: `Ajeet's Blog for Developer`,
+        start_url: `/blog`,
         background_color: `#CCCC04`,
         theme_color: `#5c257f`,
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)

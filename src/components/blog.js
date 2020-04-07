@@ -7,7 +7,7 @@ import Img from "gatsby-image"
 const Blog = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMdx(filter: { fields: { contentType: { eq: "posts" } } }, limit: 4) {
+      allMdx(filter: { fields: { contentType: { eq: "posts" } } }, limit: 6) {
         edges {
           node {
             frontmatter {

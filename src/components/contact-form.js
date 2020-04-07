@@ -8,6 +8,7 @@ const ContactForm = () => {
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
+        action="/success"
       >
         <div className={contactLayoutStyles.formRow}>
           <input type="hidden" name="form-name" value="contact" />
