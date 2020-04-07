@@ -88,27 +88,7 @@
   margin-right: 0rem;
 }
 
-.social-media-lists {
-  display: flex;
-  padding: 0.4rem 0.5rem 0;
-  border: 1px solid rgba(231, 222, 236, 0.3);
-  justify-content: space-between;
-  flex-wrap: wrap;
-  font-size: 0.9rem;
-  font-weight: 400;
-  a {
-    &:hover {
-      color: #bd9134;
-    }
-  }
-  li {
-    margin: 0rem 0.3rem;
-    justify-content: space-between;
-    a {
-      display: inline-flex;
-    }
-  }
-}
+
 // Media Queries -------------------------
 
 @media only screen and (max-width: 599px) {
@@ -152,14 +132,6 @@
     }
   }
 
-  .social-media-lists {
-    margin-top: 0.5rem;
-  }
-
-  .social-media-lists li {
-    font-size: 1.1rem;
-    font-weight: 500;
-  }
 }
 
 @media only screen and (min-width: 961px) {

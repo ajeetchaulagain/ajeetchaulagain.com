@@ -7,17 +7,9 @@ import welcomeStyles from "./welcome.module.scss"
 import Particles from "react-particles-js"
 
 import { useAuthorImage } from "./utilities/use-author-image"
-import { FaTelegram, FaArrowCircleRight, FaToolbox } from "react-icons/fa"
+import { FaArrowCircleRight, FaToolbox, FaTelegramPlane} from "react-icons/fa"
+import SocialMediaIcons from './utilities/social-media-icons';
 
-import {
-  FaFacebook,
-  FaTwitter,
-  FaLinkedinIn,
-  FaGithub,
-  FaInstagram,
-  FaCoffee,
-  FaTelegramPlane,
-} from "react-icons/fa"
 
 const particlesParam = {
   particles: {
@@ -159,64 +151,8 @@ const Welcome = () => {
             </Link>
           </div>
 
-          <div>
-            <ul className={welcomeStyles.socialMediaLists}>
-              <li>
-                <a
-                  href="https://www.facebook.com/chaulagain.ajeet"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaFacebook />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://twitter.com/ajeetsweb"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaTwitter />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/ajeet-chaulagain/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/ajeetchaulagain"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaGithub />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/chaulagainajeet/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaInstagram />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://ko-fi.com/ajeetchaulagain"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaCoffee />
-                </a>
-              </li>
-            </ul>
-          </div>
+          { /* Here goes the social media icons */}
+          <SocialMediaIcons />
         </div>
 
         <div className={welcomeStyles.subscription}>

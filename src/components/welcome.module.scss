@@ -28,34 +28,7 @@
       justify-content: flex-start;
     }
     // Social Media list
-    .social-media-lists {
-      display: flex;
-      padding: 0.4rem 0.5rem 0;
-      // border: 1px solid rgba(231, 222, 236, 0.3);
-      justify-content: flex-start;
-      margin-top: 1.5rem;
-      flex-wrap: wrap;
-      font-size: 1.4rem;
-      font-weight: 400;
-      a {
-        // background-color:white;
-        // border:1px solid rgb(199, 149, 43);;
-        // border-radius:100%;
-        // color:rgb(199, 149, 43);
-        // padding:.4rem;
-        &:hover {
-          color: #d4ab52;
-        }
-      }
-      li {
-        margin: 0rem;
-        margin-right: 0.6rem;
-
-        a {
-          display: inline-flex;
-        }
-      }
-    }
+   
   }
 
   .subscription {
@@ -143,14 +116,9 @@
   font-weight: 400;
   margin-bottom: 1.5rem;
   color: rgb(223, 217, 228);
-  @media (max-width: 991px) {
-    font-size: 1.1rem;
-  }
+
 }
 
-.test {
-  color: #bd9134;
-}
 
 .welcome-button {
   border: 1px solid rgb(231, 222, 236);
@@ -159,7 +127,7 @@
   text-decoration: none;
   color: inherit;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 600;
   border-radius: 2px;
   transition: all 0.3s ease;
   margin-bottom: 0.2rem;
@@ -218,11 +186,7 @@
         justify-content: center;
       }
 
-      .social-media-lists {
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 2rem;
-      }
+
     }
     .subscription {
       width: 100%;
