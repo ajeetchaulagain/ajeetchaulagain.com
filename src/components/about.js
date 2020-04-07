@@ -11,6 +11,7 @@ const About = () => {
   return (
     <div className={aboutStyles.wrapper}>
       <h1>About</h1>
+      
       <div className={aboutStyles.flexWrapper}>
         <p>
           Hello. I'm Ajeet Chaulagain, a <em>full stack developer</em> currently
@@ -32,38 +33,46 @@ const About = () => {
           Web application development with{" "}
           <em>React, Node, Express, MongoDB, Gatsby, and GraphQL.</em>
         </li>
+        <li>Web Application Development with <em>JAM Stack (GatsbyJS)</em></li>
         <li>Native Android application development (in Java)</li>
+        <li>Familiarity with implementing concept of <em>Progressive Web App (PWA)</em>
+         in a site.</li>
         <li>
           Working knowledge of tools associated with{" "}
           <em>incorporating CI/CD pipeline in a project.</em>
         </li>
       </ul>
-      <br />
-      <p>
-        My current focus is on full-stack development with MERN stack by
-        incorporating industry-standard tools and technologies. See{" "}
-        <Link to="/resume">resume</Link> for my full list of skillset and
-        knowledge.
-      </p>
-      <p>
-        <h3>Need a developer for your next project? </h3>I would be more than
-        happy to do your project. <Link to="/contact">Say a hello to me</Link>
-      </p>
+      
+  
+      <h3>My current set of toolbox and technologies:</h3>
+      <p>Reactjs, Node.js, Express, MongoDB, GatsbyJS, GraphQL, HTML5 & CSS3, 
+      Javascript Docker, Webpack, Babel, Git, Github, npm, postman, Visual Studio Code</p>
+      
+
+
+        <h3>Need a developer for your next project? </h3>
+        <p>I do full stack web application development using <em>MERN stack</em> and <em>JAM Stack.</em> 
+        You can view some of my<Link to="/project"> projects and its case study.</Link></p>
+        <p>Have you got project in your mind? 
+        <Link to="/contact">Lets work together</Link> on a project.</p>
+
+       
 
       <h2>About this Website</h2>
       <p>
         I designed and developed this personal website as a{" "}
         <em>place to showcase my work</em> and share{" "}
-        <Link to="articles">articles</Link> about software development in the
-        process of learning. You can check the case study of how I designed and
-        developed this website from scratch using <em>React/Gatsby</em>{" "}
-        <Link to="/about">here</Link>
+        <Link to="articles">articles</Link> about modern software
+         development. I designed this website in JAM stack using GatsbyJS. 
+         If you want to know more about this project, 
+         you can <Link to="/projects">check the case study </Link> of how I designed and
+        developed this website from scratch using <em>React/Gatsby.</em>
       </p>
       <p>
         I hope my articles will somehow help the beginner to start their career
         in software development and programming. Please don't forget to
         subscirbe me for latest articles.
-      </p>
+      </p> 
     </div>
   )
 }
