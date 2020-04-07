@@ -10,7 +10,7 @@ const FormSubmissionSuccess = () => {
 
         <MasterLayout>
         <IntroSection/>
-        <ContentLayout>
+        <ContentLayout minHeight="40rem">
             <div>
                 <h1>Thankyou for getting in touch!</h1>
                 <p>Hi there. I appreciate you contacting me. I will get back in touch with you soon!</p>

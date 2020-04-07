@@ -14,7 +14,7 @@ const ContentLayout = props => {
       <section className={contentLayoutStyles.contentSection}>
         <div
           className={contentLayoutStyles.content}
-          style={{ backgroundColor: props.bgcolor, color: props.color }}
+          style={{ backgroundColor: props.bgcolor, color: props.color, minHeight:props.minHeight }}
         >
           {props.children}
         </div>
