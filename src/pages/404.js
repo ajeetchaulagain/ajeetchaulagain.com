@@ -13,7 +13,10 @@ const DefaultNotFound = () => {
       <ContentLayout>
         <div>
           <h1>Page not found</h1>
-          <p>Oops!. The page you are requesting doesn't exist</p>
+          <p>
+            Oops!. The page you are requesting doesn't exist. Sorry for the
+            inconvenice.
+          </p>
           <Link to="/">Go Home</Link>
         </div>
       </ContentLayout>
