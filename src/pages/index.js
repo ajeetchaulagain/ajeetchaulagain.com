@@ -49,7 +49,7 @@ const IndexPage = () => {
           View all Articles
         </Link>
       </ContentLayout>
-      <ContentLayout bgcolor="#D3DCE0">
+      <ContentLayout bgcolor="#EAEFD3">
         <h1 style={indexHeadingStyle}>Projects</h1>
         <p style={indexSubHeadingStyle}>
           Checkout some of my projects with case study
