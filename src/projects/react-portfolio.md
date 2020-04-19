@@ -17,13 +17,13 @@ technologiesImages:
     "../images/thumbnails/kubernetes.png",
     "../images/thumbnails/react-js.png",
   ]
-featuredImage: ../images/react-developer-portfolio.png
+featuredImage: ../images/personal-site.png
 ---
 
 A simple Java based keyword search system utilising various technologies such as
 Java XML, Java FX, Advance data structures such as HashMap, HashSet and ArrayList.
 
-![React/Gatsby Developer Portfolio (Personal Site)](../images/react-developer-portfolio.png)
+![React/Gatsby Developer Portfolio (Personal Site)](../images/personal-site.png)
 
 ## Skills I have learned from the project
 

@@ -17,7 +17,7 @@ const Projects = () => {
     query {
       allMdx(
         filter: { fields: { contentType: { eq: "projects" } } }
-        limit: 4
+        limit: 6
       ) {
         edges {
           node {
