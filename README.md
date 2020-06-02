@@ -1,12 +1,9 @@
-<h1>
-  Developer Portfolio Theme - ajeetchaulagain.com
-</h1>
+# ajeetchaulagain.com
 
-<h2>
-  Documentation
-</h2>
+This is my personal site made with React, Gatsby and node
 
-This will be a portfolio theme based on gatsby and is supposed to make a open source so that developer can use it for their poprtfolio showcase.
-Full documentation coming out soon....
+**Note:**This site is not developed with the intention of making theme out of it. Rather, its developed for showcasing my portfolio and sharing articles. I would recommend to use other gatsby starter project for your need. But feel free to take any code from it.
 
-![Theme Screenshot](./src/images/theme.png)
+## License
+
+This project is open source and available under the [MIT License](LICENSE).

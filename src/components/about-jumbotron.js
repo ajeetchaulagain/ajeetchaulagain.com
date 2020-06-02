@@ -5,8 +5,6 @@ import jumbotronStyles from "./about-jumbotron.module.scss"
 
 import { useAuthorImage } from "./utilities/use-author-image"
 
-import coffeImage from "../images/cuplogo-sm.png"
-
 import BuyMeCoffeeButton from "./utilities/buy-me-coffee-button"
 
 const AboutJumbotronBlog = () => {
@@ -28,7 +26,6 @@ const AboutJumbotronBlog = () => {
         </p>
         <div className={jumbotronStyles.supportSection}>
           <BuyMeCoffeeButton />
-         
         </div>
       </div>
     </div>
