@@ -67,11 +67,6 @@ const Header = () => {
                 Contact
               </Link>
             </li>
-            <li>
-              <Link to="/resume" activeClassName={headerStyles.activeList}>
-                Resume
-              </Link>
-            </li>
           </ul>
         </nav>
       </div>
