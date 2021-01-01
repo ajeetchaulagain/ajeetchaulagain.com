@@ -134,8 +134,9 @@ const Welcome = () => {
             Chaulagain
           </h1>
           <p className={welcomeStyles.paragraph}>
-            I am full stack developer passionate towards building applications
-            that are scalable and maintainable with beautifully crafted code{" "}
+            I am pragmatic software engineer, passionate and experienced builing
+            applications that are scalable, maintainable and well architected
+            with beautifully crafted code{" "}
           </p>
           <div className={welcomeStyles.calltoactionWrapper}>
             <Link to="/about" className={welcomeStyles.welcomeButton}>
