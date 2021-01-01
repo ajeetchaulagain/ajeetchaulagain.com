@@ -7,9 +7,8 @@ import welcomeStyles from "./welcome.module.scss"
 import Particles from "react-particles-js"
 
 import { useAuthorImage } from "./utilities/use-author-image"
-import { FaArrowCircleRight, FaToolbox, FaTelegramPlane} from "react-icons/fa"
-import SocialMediaIcons from './utilities/social-media-icons';
-
+import { FaArrowCircleRight, FaToolbox, FaTelegramPlane } from "react-icons/fa"
+import SocialMediaIcons from "./utilities/social-media-icons"
 
 const particlesParam = {
   particles: {
@@ -143,7 +142,7 @@ const Welcome = () => {
               More about me &nbsp; <FaArrowCircleRight />
             </Link>
             <Link
-              to="/about"
+              to="/projects"
               className={welcomeStyles.welcomeButton}
               style={{ backgroundColor: "#d4ab52", color: "#fff" }}
             >
@@ -151,7 +150,7 @@ const Welcome = () => {
             </Link>
           </div>
 
-          { /* Here goes the social media icons */}
+          {/* Here goes the social media icons */}
           <SocialMediaIcons />
         </div>
 
