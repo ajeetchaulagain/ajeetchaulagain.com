@@ -8,7 +8,7 @@ technologiesImages:
     "../images/thumbnails/kubernetes.png",
     "../images/thumbnails/react-js.png",
   ]
-featuredImage: ../images/new-arrival-travel.png
+featuredImage: ../images/personal-site.png
 ---
 
 A simple Java based keyword search system utilising various technologies such as
