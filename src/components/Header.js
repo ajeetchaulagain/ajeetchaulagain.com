@@ -58,7 +58,7 @@ const Header = () => {
             </li>
             <li>
               <Link to="/blog" activeClassName={headerStyles.activeList}>
-                Blog
+                Articles
               </Link>
             </li>
 
