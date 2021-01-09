@@ -129,6 +129,4 @@ Now its time to configure nodemon and babel in our project. Instead of running _
 
 ```
 
-## Conclusion
-
-Object Basics Guide - [Find here the object basics](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics)
+## Part 2 to be continued.

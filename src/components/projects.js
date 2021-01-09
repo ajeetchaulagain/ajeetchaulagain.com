@@ -48,14 +48,14 @@ const Projects = () => {
       {data.allMdx.edges.map(edge => {
         return (
           <div className={projectStyles.projectItem}>
-            <div className={projectStyles.imageWrapper}>
+            {/* <div className={projectStyles.imageWrapper}>
               <Img
                 fluid={
                   edge.node.frontmatter.featuredImage.childImageSharp.fluid
                 }
                 alt="project"
               />
-            </div>
+            </div> */}
             <div className={projectStyles.contentWrapper}>
               <h2>{edge.node.frontmatter.title}</h2>
 

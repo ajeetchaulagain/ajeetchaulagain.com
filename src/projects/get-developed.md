@@ -1,6 +1,7 @@
 ---
-title: "XML Keyword Search System"
-technologies: ["JavaFX GUI", " JavaFX Graphics", "Data Structure", "Java XML"]
+title: Get Developed
+technologies:
+  ["Node", "Unit Testing", "Integration Testing", "Jest & Supertest", "Express"]
 technologiesImages:
   [
     "../images/thumbnails/docker.png",
@@ -8,21 +9,28 @@ technologiesImages:
     "../images/thumbnails/kubernetes.png",
     "../images/thumbnails/react-js.png",
   ]
-featuredImage: ../images/xml-keyword-search.jpeg
+featuredImage: ../images/personal-site.png
 ---
 
 A simple Java based keyword search system utilising various technologies such as
 Java XML, Java FX, Advance data structures such as HashMap, HashSet and ArrayList.
 
-## Architecture
-
-XML Keyword System was developed in JavaFX, JavaXML and Advance data structures. Further, I would like to know about the
+![React/Gatsby Developer Portfolio (Personal Site)](../images/personal-site.png)
 
 ## Skills I have learned from the project
 
 1. Java XML
 2. JavaFX
 3. Advance Data Structure
-   javascript
-   var s = "JavaScript syntax highlighting";
-   alert(s);
+
+```javascript
+// In your gatsby-config.js
+plugins: [
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [`gatsby-remark-prismjs`],
+    },
+  },
+]
+```

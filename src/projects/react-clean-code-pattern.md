@@ -1,13 +1,7 @@
 ---
-title: "React based Travel Site "
-technologies: ["JavaFX", "Data Structure", "Java XML"]
-technologiesImages:
-  [
-    "../images/thumbnails/docker.png",
-    "../images/thumbnails/express-js.png",
-    "../images/thumbnails/kubernetes.png",
-    "../images/thumbnails/react-js.png",
-  ]
+title: "React Clean Code Pattern"
+technologies: ["Custom Hooks", "Context API", "Java XML"]
+
 featuredImage: ../images/personal-site.png
 ---
 

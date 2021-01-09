@@ -1,15 +1,7 @@
 ---
-title: React/Gatsby Developer Portfolio (Personal Site)
+title: Stay Productive API Node
 technologies:
-  [
-    "React",
-    "Next.js",
-    "Node.js",
-    "Firebase",
-    "Express.js",
-    "Ant Design",
-    "Heroku",
-  ]
+  ["Node", "Unit Testing", "Integration Testing", "Jest & Supertest", "Express"]
 technologiesImages:
   [
     "../images/thumbnails/docker.png",
