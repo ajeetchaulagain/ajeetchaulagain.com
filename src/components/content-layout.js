@@ -2,7 +2,7 @@ import React from "react"
 
 import contentLayoutStyles from "./content-layout.module.scss"
 import { MDXProvider } from "@mdx-js/react"
-
+import { navigate } from "gatsby"
 import ContactForm from "./contact-form"
 import Img from "gatsby-image"
 
@@ -14,7 +14,11 @@ const ContentLayout = props => {
       <section className={contentLayoutStyles.contentSection}>
         <div
           className={contentLayoutStyles.content}
-          style={{ backgroundColor: props.bgcolor, color: props.color, minHeight:props.minHeight }}
+          style={{
+            backgroundColor: props.bgcolor,
+            color: props.color,
+            minHeight: props.minHeight,
+          }}
         >
           {props.children}
         </div>

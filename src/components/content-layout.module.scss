@@ -18,6 +18,21 @@
   color: #333;
   font-size: 1.125rem;
 
+  .back-button {
+    background-color: rgb(182, 181, 185);
+    padding: 0.1rem;
+    width: 30px;
+    height: 30px;
+    i {
+      position: absolute;
+      color: red;
+      top: 0;
+    }
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+  }
+
   p {
     margin-bottom: 1.4rem;
   }

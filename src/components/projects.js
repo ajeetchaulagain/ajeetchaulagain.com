@@ -65,15 +65,16 @@ const Projects = () => {
                 })}
               </ul>
             </div>
-
-            <div className={projectStyles.linksWrapper}>
-              <Link to={`/projects/${edge.node.fields.slug}`}>
-                View Case Study{" "}
-                <i>
-                  <FaArrowCircleRight />
-                </i>
-              </Link>
-            </div>
+            {true && (
+              <div className={projectStyles.linksWrapper}>
+                <Link to={`/projects/${edge.node.fields.slug}`}>
+                  View Case Study{" "}
+                  <i>
+                    <FaArrowRight />
+                  </i>
+                </Link>
+              </div>
+            )}
           </div>
         )
       })}
