@@ -8,3 +8,24 @@
     list-style-type: disc;
   }
 }
+.header {
+  line-height: 1;
+  background-color: #f5f5ff;
+  border-left: 3px solid #afadad;
+  padding: 1rem;
+  margin-left: -1rem;
+
+  h1 {
+    margin-bottom: 0;
+  }
+  .title {
+    color: #5c257f;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .date {
+    text-transform: uppercase;
+    color: #5c257f;
+    font-size: 80%;
+  }
+}

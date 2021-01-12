@@ -40,7 +40,14 @@ const ProjectTemplate = props => {
     <MasterLayout>
       <IntroSection />
       <ContentLayout>
-        <h1>{props.data.mdx.frontmatter.title}</h1>
+        <div className={projectStyles.header}>
+          <span className={projectStyles.title}>Case Study</span>
+
+          <h1>{props.data.mdx.frontmatter.title}</h1>
+          <span className={projectStyles.date}>March 2020</span>
+          {/* <a className={projectStyles.externalLinkButton}>View on Github</a> */}
+        </div>
+
         <div className={projectStyles.projectMdxWrapper}>
           <MDXRenderer components={components}>
             {props.data.mdx.body}

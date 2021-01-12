@@ -5,11 +5,11 @@ technologies: ["React", "Custom Hooks", "Context API", "Next.js", "Taiwind CSS"]
 featuredImage: ../images/personal-site.png
 ---
 
-### Project Summary
+### Summary
 
 React Clean Code Pattern is a light-weight project that demonstrates _the clean, reusable, and maintainable_ way of managing data/state in React application using Context API and Custom Hooks.
 
-### Project Description
+### Description
 
 This project uses [Next.js](https://nextjs.org/) to scaffold the React application and to simulate the server for API calls, JSON-server is used which is a fake REST server. To give an app a cool feeling, [Tailwind CSS](https://tailwindcss.com/) is used in the project.
 
@@ -23,7 +23,7 @@ _Concept Demonstrated:_
 
 Through this project, I got to enhance my react skills by learning how different core concepts of React can be implemented as a whole in a project to manage the data & state in the app in a clean and reusable way.
 
-### Resources Followed
+### Resources
 
 - [Setting up Next.js Project](https://nextjs.org/docs/getting-started)
 - [Configuring Tailwind CSS on NextJS project](https://statickit.com/guides/next-js-tailwind)

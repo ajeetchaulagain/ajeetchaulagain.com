@@ -1,5 +1,9 @@
 .content-section {
-  background-color: rgb(250, 248, 242);
+  // background: linear-gradient(77deg, #f6f0fadc 9%, #b7daec 100%);
+  // background-image: url("../images/textured-bg.jpg");
+  background-color: #faf8f2;
+
+  background-blend-mode: darken;
   width: 100%;
   position: relative;
   @media only screen and (max-width: 599px) {
@@ -8,7 +12,6 @@
 .content {
   background-color: white;
   width: 100%;
-  // min-height:40rem;
   border: 1px solid rgb(235, 233, 233);
   line-height: 1.8;
   font-weight: 400;
