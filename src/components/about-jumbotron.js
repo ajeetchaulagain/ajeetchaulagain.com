@@ -17,9 +17,9 @@ const AboutJumbotronBlog = () => {
       </div>
       <div className={jumbotronStyles.contentWrapper}>
         <p>
-          I am Ajeet Chaulagain, a full stack developer based in Melbourne,
+          Hi, I am Ajeet, a pragmatic software engineer based in Melbourne,
           Australia. I write an article about
-          <em>modern software development and my side projects</em> to help the
+          <em> modern software development and my side projects</em> to help the
           beginner start their career in software engineering. If my site has
           helped you somehow to learn, I would be grateful if you consider
           supporting me.
