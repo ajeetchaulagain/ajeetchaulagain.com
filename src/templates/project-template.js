@@ -4,6 +4,8 @@ import React from "react"
 import MasterLayout from "../components/master-layout"
 import IntroSection from "../components/intro-section"
 import ContentLayout from "../components/content-layout"
+import { Link } from "gatsby"
+import { FaArrowLeft } from "react-icons/fa"
 
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
@@ -52,6 +54,14 @@ const ProjectTemplate = props => {
           <MDXRenderer components={components}>
             {props.data.mdx.body}
           </MDXRenderer>
+        </div>
+        <div className={projectStyles.backButton}>
+          <Link to="/projects">
+            <i>
+              <FaArrowLeft />
+            </i>
+            Back to Project List
+          </Link>
         </div>
       </ContentLayout>
     </MasterLayout>
