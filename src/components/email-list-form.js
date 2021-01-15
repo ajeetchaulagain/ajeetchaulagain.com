@@ -15,9 +15,9 @@ export default class EmailList extends React.Component {
   _handleSubmit = async e => {
     e.preventDefault()
     const result = await addToMailchimp(this.state.email)
-
     this.setState({ resultMessage: result.msg })
     this.setState({ result: result.result })
+    this.setState({ email: "" })
   }
 
   render() {
