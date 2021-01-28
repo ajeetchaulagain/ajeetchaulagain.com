@@ -134,7 +134,7 @@ const Welcome = () => {
             Chaulagain
           </h1>
           <p className={welcomeStyles.paragraph}>
-            I am pragmatic software engineer, passionate and experienced builing
+            I am pragmatic software engineer, passionate and proficient builing
             applications that are scalable, maintainable and well architected
             with beautifully crafted code{" "}
           </p>
