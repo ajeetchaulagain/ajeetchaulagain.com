@@ -140,14 +140,14 @@ const Welcome = () => {
           </p>
           <div className={welcomeStyles.calltoactionWrapper}>
             <Link to="/about" className={welcomeStyles.welcomeButton}>
-              More about me &nbsp; <FaArrowCircleRight />
+              More about me
             </Link>
             <Link
               to="/projects"
               className={welcomeStyles.welcomeButton}
               style={{ backgroundColor: "#d4ab52", color: "#fff" }}
             >
-              View My Work &nbsp; <FaToolbox />
+              View My Work
             </Link>
           </div>
 
