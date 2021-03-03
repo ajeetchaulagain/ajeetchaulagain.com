@@ -145,7 +145,11 @@ const Welcome = () => {
             <Link
               to="/projects"
               className={welcomeStyles.welcomeButton}
-              style={{ backgroundColor: "#d4ab52", color: "#fff" }}
+              style={{
+                backgroundColor: "#baa1ca",
+                color: "#000",
+                border: "none",
+              }}
             >
               View My Work
             </Link>
