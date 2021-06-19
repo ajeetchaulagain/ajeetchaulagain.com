@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 
-import jumbotronStyles from "./about-jumbotron.module.scss"
+import * as jumbotronStyles from "./about-jumbotron.module.scss"
 
 import { useAuthorImage } from "./utilities/use-author-image"
 

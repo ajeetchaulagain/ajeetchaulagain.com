@@ -3,7 +3,7 @@ import aboutStyles from "./about.module.scss"
 import { useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import { useAuthorImage } from "./utilities/use-author-image"
-import { indexHeadingStyle } from "../pages"
+
 
 const About = () => {
   const { ...GatsbyImageSharpFixed } = useAuthorImage()

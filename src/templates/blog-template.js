@@ -37,10 +37,6 @@ export const query = graphql`
 const BlogTemplate = props => {
   const { next, prev } = props.pageContext
 
-  const blogTitle = {
-    lineHeight: "1.2",
-  }
-
   return (
     <MasterLayout>
       <IntroSection />

@@ -2,7 +2,6 @@ import React from "react"
 
 import * as contentLayoutStyles from "./content-layout.module.scss"
 import { MDXProvider } from "@mdx-js/react"
-import { navigate } from "gatsby"
 import ContactForm from "./contact-form"
 import Img from "gatsby-image"
 
