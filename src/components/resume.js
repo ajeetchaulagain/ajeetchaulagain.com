@@ -1,6 +1,6 @@
 import React from "react"
 
-import resumeStyles from "./resume.module.scss"
+import * as resumeStyles from "./resume.module.scss"
 
 const Resume = () => {
   return (

@@ -9,7 +9,7 @@ import { FaArrowLeft } from "react-icons/fa"
 
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import projectStyles from "./project-template.module.scss"
+import * as projectStyles from "./project-template.module.scss"
 
 import { graphql } from "gatsby"
 const ExternalLink = props => {

@@ -1,5 +1,5 @@
 import React from "react"
-import contactLayoutStyles from "./contact-layout.module.scss"
+import * as contactLayoutStyles from "./contact-layout.module.scss"
 const ContactForm = () => {
   return (
     <div className={contactLayoutStyles.contactFormWrap}>

@@ -1,6 +1,6 @@
 import React from "react"
 
-import popupModalStyles from "./popup-modal.module.scss"
+import * as popupModalStyles from "./popup-modal.module.scss"
 
 const PopupModal = () => {
   return (

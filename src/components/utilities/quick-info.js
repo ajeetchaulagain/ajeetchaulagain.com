@@ -1,5 +1,5 @@
 import React from "react"
-import quickInfoStyle from "./quick-info.module.scss"
+import * as quickInfoStyle from "./quick-info.module.scss"
 import { Link } from "gatsby"
 
 import { FaInfoCircle } from "react-icons/fa"

@@ -1,5 +1,5 @@
 import React from "react"
-import introStyles from "./intro-section.module.scss"
+import * as introStyles from "./intro-section.module.scss"
 
 const IntroSection = props => {
   return (

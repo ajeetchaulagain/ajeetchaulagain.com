@@ -1,6 +1,6 @@
 import React from "react"
 import coffeImage from "../../images/cuplogo-sm.png"
-import buyMeCoffeeButtonStyles from "./buy-me-coffee-button.module.scss"
+import * as buyMeCoffeeButtonStyles from "./buy-me-coffee-button.module.scss"
 
 const BuyMeCoffeeButton = () => {
   return (
