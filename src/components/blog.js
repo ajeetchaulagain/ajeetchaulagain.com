@@ -1,5 +1,5 @@
 import React from "react"
-import blogStyles from "./blog.module.scss"
+import * as blogStyles from "./blog.module.scss"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Img from "gatsby-image"

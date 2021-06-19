@@ -1,6 +1,6 @@
 import React from "react"
 
-import contentLayoutStyles from "./content-layout.module.scss"
+import * as contentLayoutStyles from "./content-layout.module.scss"
 import { MDXProvider } from "@mdx-js/react"
 import { navigate } from "gatsby"
 import ContactForm from "./contact-form"

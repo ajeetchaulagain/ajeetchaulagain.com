@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 
-import welcomeStyles from "./welcome.module.scss"
+import * as welcomeStyles from "./welcome.module.scss"
 
 import Particles from "react-particles-js"
 
