@@ -22,10 +22,7 @@ export const indexSubHeadingStyle = {
 }
 
 export const contentBoxButton = {
-  textDecoration: "none",
-  color: "#fff",
   fontWeight: "400",
-  textTransform: "uppercase",
   fontSize: "1rem",
 }
 
@@ -46,7 +43,7 @@ const IndexPage = () => {
         <p style={indexSubHeadingStyle}>See the recent on my article list</p>
         <Blog />
         <Link to="/blog" className="box-button" style={contentBoxButton}>
-          View all Articles
+          View all Articles →
         </Link>
       </ContentLayout>
       <ContentLayout bgcolor="white">
@@ -56,7 +53,7 @@ const IndexPage = () => {
         </p>
         <Projects />
         <Link to="/projects" className="box-button" style={contentBoxButton}>
-          View All Projects
+          View All Projects →
         </Link>
       </ContentLayout>
 

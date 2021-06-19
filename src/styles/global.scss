@@ -112,27 +112,24 @@ a {
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   background-color: #5c257f;
-  // text-transform:uppercase;
+  border: 1px solid #d3d3d3;
+  text-decoration: none !important;
+  border-radius: 0.3rem;
   font-weight: 600;
+  color: rgb(255, 255, 255) !important;
   // letter-spacing: 1px;
-  word-spacing: 3px;
-  @include transition(0.2s);
+
+  &:hover {
+    border: 1px solid transparent;
+    box-shadow: 1px 1px 1px #6b358d;
+    background-color: #6b358d;
+    transition: box-shadow 0.3s ease, border 0.3s ease, background 0.3s ease;
+  }
   &:hover {
     // color: #fff;
     // background-color: #5c257f;
     // text-decoration: none;
     // border-color: #5c257f;
-  }
-  &.solid {
-    color: #fff;
-    background-color: #5c257f;
-    text-decoration: none;
-    border-color: #5c257f;
-    &:hover {
-      color: #333;
-      border-color: rgb(217, 216, 218);
-      background-color: transparent;
-    }
   }
   @media (max-width: 991px) {
     padding: 0.5rem 1.25rem;

@@ -47,18 +47,10 @@ const Projects = () => {
     <div className={projectStyles.projects}>
       {data.allMdx.edges.map(edge => {
         return (
-          <div className={projectStyles.projectItem}>
-            {/* <div className={projectStyles.imageWrapper}>
-              <Img
-                fluid={
-                  edge.node.frontmatter.featuredImage.childImageSharp.fluid
-                }
-                alt="project"
-              />
-            </div> */}
+          <div className={projectStyles.projectItem} >
             <div className={projectStyles.contentWrapper}>
               <h2>{edge.node.frontmatter.title}</h2>
-
+              
               <ul className={projectStyles.toolsWrapper}>
                 {edge.node.frontmatter.technologies.map(technology => {
                   return <li>{technology}</li>
@@ -68,10 +60,8 @@ const Projects = () => {
             {true && (
               <div className={projectStyles.linksWrapper}>
                 <Link to={`/projects/${edge.node.fields.slug}`}>
-                  View Case Study{" "}
-                  <i>
-                    <FaArrowRight />
-                  </i>
+                  View Case Study → {" "}
+            
                 </Link>
               </div>
             )}
