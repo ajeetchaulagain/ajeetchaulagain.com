@@ -1,7 +1,7 @@
 .wrapper {
-  background-color: rgb(231, 231, 231);
+  background-color: rgb(241, 241, 241);
   padding: 0rem 1rem 1rem;
-  border: 1px solid rgb(179, 177, 177);
+  border: 1px solid rgb(184, 182, 182);
   color: #333;
   line-height: 1.5;
   text-align: center;
@@ -40,7 +40,8 @@
     display: inline-block;
 
     &:hover {
-      background-color: #4d1b6d;
+      background-color: #6b358d;
+      transition: background-color 0s ease;
     }
 
     @media (max-width: 567px) {
