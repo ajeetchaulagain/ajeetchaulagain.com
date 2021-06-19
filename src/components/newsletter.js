@@ -1,6 +1,6 @@
 import React from "react"
 
-import newsLetterStyles from "./newsletter.module.scss"
+import * as newsLetterStyles from "./newsletter.module.scss"
 import { indexHeadingStyle } from "../pages/index.js"
 import EmailList from "./email-list-form"
 

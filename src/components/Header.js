@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet"
 
 import Logo from "../images/logo.svg"
 
-import headerStyles from "./header.module.scss"
+import * as headerStyles from "./header.module.scss"
 
 const Header = () => {
   const data = useStaticQuery(graphql`

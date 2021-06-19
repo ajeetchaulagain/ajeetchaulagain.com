@@ -1,5 +1,5 @@
 import React from "react"
-import projectStyles from "./projects.module.scss"
+import * as projectStyles from "./projects.module.scss"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import {

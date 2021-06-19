@@ -1,5 +1,5 @@
 import React from 'react';
-import socialMediaIconsStyles from './social-media-icons.module.scss';
+import * as socialMediaIconsStyles from './social-media-icons.module.scss';
 import {
     FaFacebook,
     FaTwitter,
