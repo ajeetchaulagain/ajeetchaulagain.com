@@ -1,12 +1,4 @@
 .blog-wrapper {
-  :hover {
-    background-color: #ffffff;
-    cursor: pointer;
-    h2 {
-      color: #501583;
-    }
-  }
-
   a {
     color: #333;
     text-decoration: none;
@@ -21,6 +13,9 @@
       border: 1px solid transparent;
       box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
       transition: box-shadow 0.3s ease, border 0.3s ease;
+      h2 {
+        color: rgba(59, 9, 75, 0.9);
+      }
       a {
         border-bottom: 1px solid #5c257f;
       }
@@ -73,7 +68,7 @@
       color: rgba(59, 9, 75, 0.9);
       date,
       span {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         font-weight: 600;
         text-transform: uppercase;
         margin-bottom: 3rem;
@@ -82,12 +77,13 @@
         display: flex;
         margin-top: 0.7rem;
         flex-wrap: wrap;
+        font-weight: 500;
         li {
           line-height: 1.3;
-          background-color: #501583;
-          color: rgb(234, 234, 234);
+          background-color: #e6e6e6;
+          color: #515151;
           margin: 0 0.3rem 0.2rem 0;
-          padding: 0.15rem 0.3rem;
+          padding: 0.1rem 0.5rem;
           border-radius: 2px;
           font-size: 0.8rem;
         }

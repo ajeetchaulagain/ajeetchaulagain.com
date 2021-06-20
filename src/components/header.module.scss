@@ -51,14 +51,17 @@
 }
 
 .main-header a {
+  display: inline-block;
+  // padding-bottom: 1px;
+
   &:hover {
-    color: #d4ab52;
+    color: #d0fd9b;
     // text-decoration:underline;
   }
 }
 
 .main-header h1 a:hover {
-  color: #bd9134;
+  color: #d0fd9b;
 }
 
 .nav-list {
@@ -77,7 +80,8 @@
 }
 
 .activeList {
-  color: #d4ab52;
+  color: #d0fd9b;
+  border-bottom: 1px solid #bceca0;
 }
 
 .nav-list li:first-child {
@@ -87,7 +91,6 @@
   margin-left: 0;
   margin-right: 0rem;
 }
-
 
 // Media Queries -------------------------
 
@@ -131,7 +134,6 @@
       background-color: white;
     }
   }
-
 }
 
 @media only screen and (min-width: 961px) {

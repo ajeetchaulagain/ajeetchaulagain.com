@@ -140,9 +140,9 @@ const Welcome = () => {
           </p>
           <div className={welcomeStyles.calltoactionWrapper}>
             <Link to="/about" className={welcomeStyles.welcomeButton}>
-              More about me
+              More about me  →
             </Link>
-            <Link
+            { false &&<Link
               to="/projects"
               className={welcomeStyles.welcomeButton}
               style={{
@@ -152,7 +152,7 @@ const Welcome = () => {
               }}
             >
               View My Work
-            </Link>
+            </Link>}
           </div>
 
           {/* Here goes the social media icons */}
