@@ -12,8 +12,9 @@ import Newsletter from "../components/newsletter"
 
 export const indexHeadingStyle = {
   marginBottom: ".3rem",
-  fontWeight: "900",
+  fontWeight: "800",
   // color: "rgba(92, 37, 127, 1)",
+  color:"#5294d5"
 }
 
 export const indexSubHeadingStyle = {
@@ -37,7 +38,6 @@ const IndexPage = () => {
       <Welcome />
       <ContentLayout>
         <h1 style={indexHeadingStyle}>
-          {" "}
           <FaBook /> From my blog{" "}
         </h1>
         <p style={indexSubHeadingStyle}>See the recent on my article list</p>
