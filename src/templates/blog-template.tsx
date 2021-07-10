@@ -1,15 +1,15 @@
 // Create and export the react component
 import React from 'react';
-import MasterLayout from '../components/master-layout';
-import IntroSection from '../components/intro-section';
-import ContentLayout from '../components/content-layout';
+import MasterLayout from '../components/MasterLayout';
+import IntroSection from '../components/IntroSection';
+import ContentLayout from '../components/ContentLayout';
 import * as blogTemplateStyles from './blog-template.module.scss';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Img from 'gatsby-image';
 import { graphql, Link } from 'gatsby';
 import AboutJumbotronBlog from '../components/AboutJumbotron';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import NewsLetter from '../components/newsletter';
+import NewsLetter from '../components/NewsLetter';
 
 export const query = graphql`
   query ($slug: String!) {

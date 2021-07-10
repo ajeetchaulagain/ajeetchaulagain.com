@@ -1,7 +1,7 @@
 import React from 'react';
 
 import * as newsLetterStyles from './newsletter.module.scss';
-import EmailList from './email-list-form';
+import EmailList from './EmailListForm';
 
 const NewsLetter = (): JSX.Element => {
   return (

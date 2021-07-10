@@ -1,9 +1,9 @@
 // Create and export the react component
 
 import React from 'react';
-import MasterLayout from '../components/master-layout';
-import IntroSection from '../components/intro-section';
-import ContentLayout from '../components/content-layout';
+import MasterLayout from '../components/MasterLayout';
+import IntroSection from '../components/IntroSection';
+import ContentLayout from '../components/ContentLayout';
 import { Link } from 'gatsby';
 import { FaArrowLeft } from 'react-icons/fa';
 

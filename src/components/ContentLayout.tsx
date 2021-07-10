@@ -1,7 +1,7 @@
 import React from 'react';
 import * as contentLayoutStyles from './content-layout.module.scss';
 import { MDXProvider } from '@mdx-js/react';
-import ContactForm from './contact-form';
+import ContactForm from './ContactForm';
 import Img from 'gatsby-image';
 import { ReactElement } from 'react';
 

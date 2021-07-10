@@ -1,8 +1,8 @@
 import React from 'react';
-import Projects from '../components/projects';
-import MasterLayout from '../components/master-layout';
-import IntroSection from '../components/intro-section';
-import ContentLayout from '../components/content-layout';
+import Projects from '../components/Projects';
+import MasterLayout from '../components/MasterLayout';
+import IntroSection from '../components/IntroSection';
+import ContentLayout from '../components/ContentLayout';
 import { indexHeadingStyle, indexSubHeadingStyle } from '.';
 
 const ProjectsPage = () => {

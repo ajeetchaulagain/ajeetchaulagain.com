@@ -1,9 +1,9 @@
 import React from 'react';
-import MasterLayout from '../components/master-layout';
-import ContentLayout from '../components/content-layout';
-import IntroSection from '../components/intro-section';
+import MasterLayout from '../components/MasterLayout';
+import ContentLayout from '../components/ContentLayout';
+import IntroSection from '../components/IntroSection';
 import { Link } from 'gatsby';
-import NewsLetter from '../components/newsletter';
+import NewsLetter from '../components/NewsLetter';
 
 const NewsLetterPage = () => {
   return (
