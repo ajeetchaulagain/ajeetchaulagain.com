@@ -3,7 +3,7 @@ import MasterLayout from '../components/master-layout';
 import IntroSection from '../components/intro-section';
 import ContentLayout from '../components/content-layout';
 import Blog from '../components/blog';
-import { indexHeadingStyle, indexSubHeadingStyle } from '.';
+import { indexHeadingStyle, indexSubHeadingStyle } from './index.tsx';
 import NewsLetter from '../components/newsletter';
 
 const BlogPage = () => {

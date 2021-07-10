@@ -5,7 +5,7 @@ import Logo from '../images/logo.svg';
 
 import * as headerStyles from './header.module.scss';
 
-const Header = () => {
+const Header = (): JSX.Element => {
   const data = useStaticQuery(graphql`
     query {
       site {

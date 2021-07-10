@@ -3,7 +3,10 @@ import React from 'react';
 import Header from './Header';
 import Footer from './footer';
 
-const MasterLayout = ({ children }) => {
+type MasterLayoutProps = {
+  children?: React.ElementType[];
+};
+const MasterLayout = ({ children }: MasterLayoutProps) => {
   return (
     <div className="main">
       <Header />

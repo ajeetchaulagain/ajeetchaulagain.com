@@ -1,10 +1,9 @@
 import React from 'react';
 
 import * as newsLetterStyles from './newsletter.module.scss';
-import { indexHeadingStyle } from '../pages/index.js';
 import EmailList from './email-list-form';
 
-const NewsLetter = () => {
+const NewsLetter = (): JSX.Element => {
   return (
     <div className={newsLetterStyles.wrapper}>
       <h2>Newsletter</h2>

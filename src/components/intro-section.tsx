@@ -1,7 +1,10 @@
 import React from 'react';
 import * as introStyles from './intro-section.module.scss';
 
-const IntroSection = (props) => {
+type IntroSectionProps = {
+  children?: React.ElementType;
+};
+const IntroSection = (props: IntroSectionProps) => {
   return (
     <section className={introStyles.introSection}>
       <div className={introStyles.introContent}>

@@ -3,6 +3,7 @@ import * as contentLayoutStyles from './content-layout.module.scss';
 import { MDXProvider } from '@mdx-js/react';
 import ContactForm from './contact-form';
 import Img from 'gatsby-image';
+import { ReactElement } from 'react';
 
 const shortCodes = { ContactForm, Img };
 
@@ -10,7 +11,7 @@ type ContentLayoutProps = {
   bgcolor?: string;
   minHeight?: string;
   color?: string;
-  children: React.ElementType;
+  children?: React.ElementType;
 };
 const ContentLayout = (props: ContentLayoutProps): JSX.Element => {
   return (

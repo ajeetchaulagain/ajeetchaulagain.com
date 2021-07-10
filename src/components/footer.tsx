@@ -12,7 +12,7 @@ import {
   FaCoffee,
 } from 'react-icons/fa';
 
-const Footer = () => {
+const Footer = (): JSX.Element => {
   // Quering Graphql api with the tag template literals, allows that string to be processed by that function.
   const data = useStaticQuery(graphql`
     query {

@@ -1,18 +1,34 @@
 import React from 'react';
 import * as projectStyles from './projects.module.scss';
 import { Link, graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
-import {
-  FaArrowRight,
-  FaLongArrowAltRight,
-  FaArrowCircleRight,
-} from 'react-icons/fa';
-import dockerImg from '../images/thumbnails/docker.png';
-import reactImg from '../images/thumbnails/react-js.png';
-import nodeImg from '../images/thumbnails/node-js.png';
-import expressImg from '../images/thumbnails/express-js.png';
+// import Img from 'gatsby-image';
+// import {
+//   FaArrowRight,
+//   FaLongArrowAltRight,
+//   FaArrowCircleRight,
+// } from 'react-icons/fa';
+// import dockerImg from '../images/thumbnails/docker.png';
+// import reactImg from '../images/thumbnails/react-js.png';
+// import nodeImg from '../images/thumbnails/node-js.png';
+// import expressImg from '../images/thumbnails/express-js.png';
 
-const Projects = () => {
+type EdgeType = {
+  node: {
+    frontmatter: {
+      title:
+        | boolean
+        | React.ReactChild
+        | React.ReactFragment
+        | React.ReactPortal
+        | null
+        | undefined;
+      technologies: any[];
+    };
+    fields: { slug: any };
+  };
+};
+
+const Projects = (): JSX.Element => {
   const data = useStaticQuery(graphql`
     query {
       allMdx(
@@ -45,16 +61,18 @@ const Projects = () => {
 
   return (
     <div className={projectStyles.projects}>
-      {data.allMdx.edges.map((edge) => {
+      {data.allMdx.edges.map((edge: EdgeType) => {
         return (
           <div className={projectStyles.projectItem}>
             <div className={projectStyles.contentWrapper}>
               <h2>{edge.node.frontmatter.title}</h2>
 
               <ul className={projectStyles.toolsWrapper}>
-                {edge.node.frontmatter.technologies.map((technology) => {
-                  return <li>{technology}</li>;
-                })}
+                {edge.node.frontmatter.technologies.map(
+                  (technology: string) => {
+                    return <li>{technology}</li>;
+                  }
+                )}
               </ul>
             </div>
             {true && (
