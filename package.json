@@ -7,7 +7,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md,scss,css}\"",
+    "format": "prettier --write \"**/*.{js,jsx,tsx,ts,json,md,scss,css}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
@@ -17,6 +17,9 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-helmet": "^6.1.2",
     "disqus-react": "^1.1.0",
     "gatsby": "^3.7.2",
     "gatsby-image": "^3.7.1",
@@ -26,6 +29,7 @@
     "gatsby-plugin-manifest": "^3.7.1",
     "gatsby-plugin-mdx": "^2.7.1",
     "gatsby-plugin-offline": "^4.7.1",
+    "gatsby-plugin-prettier-eslint": "^1.0.6",
     "gatsby-plugin-react-helmet": "^4.7.1",
     "gatsby-plugin-react-svg": "^3.0.1",
     "gatsby-plugin-sass": "^4.7.1",
@@ -46,13 +50,22 @@
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.2.0",
-    "react-particles-js": "^3.4.1"
+    "react-particles-js": "^3.4.1",
+    "typescript": "^4.3.5"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
     "env-cmd": "^10.1.0",
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "gatsby-remark-code-titles": "^1.1.0",
     "gh-pages": "^3.2.2",
-    "prettier": "^2.3.1"
+    "prettier": "^2.3.2"
   },
   "repository": {
     "type": "git",

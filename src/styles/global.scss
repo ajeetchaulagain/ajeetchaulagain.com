@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Parisienne|Source+Sans+Pro:300,400,500,600,700,900&display=swap|Roboto:100,300,400,500,700,900&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Parisienne|Source+Sans+Pro:300,400,500,600,700,900&display=swap|Roboto:100,300,400,500,700,900&display=swap');
 
 @import url(./reset.scss);
 
@@ -36,10 +36,10 @@ $color__brandSecond: #f0f0f0;
 
 // font
 
-$font__main: "Source Sans Pro", serif;
-$font__title: "Merriweather", serif;
-$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__main: 'Source Sans Pro', serif;
+$font__title: 'Merriweather', serif;
+$font__code: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
+$font__pre: 'Courier 10 Pitch', Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
 
@@ -48,19 +48,19 @@ $font__line-height-pre: 1.6;
   transition: all $value ease-in-out;
 }
 @mixin placeholder {
-  @include optional-at-root("::-webkit-input-placeholder") {
+  @include optional-at-root('::-webkit-input-placeholder') {
     @content;
   }
 
-  @include optional-at-root(":-moz-placeholder") {
+  @include optional-at-root(':-moz-placeholder') {
     @content;
   }
 
-  @include optional-at-root("::-moz-placeholder") {
+  @include optional-at-root('::-moz-placeholder') {
     @content;
   }
 
-  @include optional-at-root(":-ms-input-placeholder") {
+  @include optional-at-root(':-ms-input-placeholder') {
     @content;
   }
 }
@@ -86,7 +86,7 @@ body {
 }
 
 h1 {
-  font-family: "Merriweather", serif;
+  font-family: 'Merriweather', serif;
   font-weight: 700;
 }
 
@@ -110,7 +110,7 @@ a {
   padding: 0.6rem 2rem;
   display: inline-block;
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #5c257f;
   border: 1px solid #d3d3d3;
   text-decoration: none !important;
@@ -140,21 +140,21 @@ a {
 //   font-size: 28px;
 // }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"],
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='number'],
+input[type='tel'],
+input[type='range'],
+input[type='date'],
+input[type='month'],
+input[type='week'],
+input[type='time'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='color'],
 textarea {
   color: $color__text-input;
   border: 1px solid $color__border-input;
@@ -172,7 +172,7 @@ textarea {
     color: #5c257f;
   }
 }
-input[type="submit"],
+input[type='submit'],
 button {
   cursor: pointer;
 }
@@ -254,7 +254,7 @@ em {
   border-left: 3px solid #fff;
 }
 
-.gatsby-highlight pre[class*="language-"] {
+.gatsby-highlight pre[class*='language-'] {
   margin: 0;
   padding: 0;
   overflow: initial;
@@ -267,7 +267,7 @@ em {
  */
 
 /* Adjust the position of the line numbers */
-.gatsby-highlight pre[class*="language-"].line-numbers {
+.gatsby-highlight pre[class*='language-'].line-numbers {
   padding-left: 2.8em;
 }
 
@@ -284,7 +284,7 @@ em {
   overflow: auto;
 }
 
-.gatsby-highlight pre[class*="language-"].line-numbers {
+.gatsby-highlight pre[class*='language-'].line-numbers {
   padding: 0;
   padding-left: 2.8em;
   overflow: initial;
@@ -308,19 +308,19 @@ em code {
 
 .command-line-prompt > span:before {
   color: #999;
-  content: " ";
+  content: ' ';
   display: block;
   padding-right: 0.8em;
 }
 
 /* Prompt for all users */
 .command-line-prompt > span[data-user]:before {
-  content: "[" attr(data-user) "@" attr(data-host) "] $";
+  content: '[' attr(data-user) '@' attr(data-host) '] $';
 }
 
 /* Prompt for root */
-.command-line-prompt > span[data-user="root"]:before {
-  content: "[" attr(data-user) "@" attr(data-host) "] #";
+.command-line-prompt > span[data-user='root']:before {
+  content: '[' attr(data-user) '@' attr(data-host) '] #';
 }
 
 .command-line-prompt > span[data-prompt]:before {

@@ -1,6 +1,6 @@
 ---
-title: "React Clean Code Pattern"
-technologies: ["React", "Custom Hooks", "Context API", "Next.js", "Taiwind CSS"]
+title: 'React Clean Code Pattern'
+technologies: ['React', 'Custom Hooks', 'Context API', 'Next.js', 'Taiwind CSS']
 
 featuredImage: ../images/personal-site.png
 ---

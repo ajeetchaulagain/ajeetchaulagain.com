@@ -1,43 +1,43 @@
-const path = require("path")
+const path = require('path');
 
 module.exports.onCreateNode = ({ node, actions }) => {
-  const { createNode, createNodeField } = actions
+  const { createNode, createNodeField } = actions;
   // Transform the new node here and create a new node or
   // create a new node field.
 
-  if (node.internal.type === "Mdx") {
-    const slug = path.basename(node.fileAbsolutePath, ".md")
+  if (node.internal.type === 'Mdx') {
+    const slug = path.basename(node.fileAbsolutePath, '.md');
 
-    const absolutePath = node.fileAbsolutePath
+    const absolutePath = node.fileAbsolutePath;
 
-    console.log("Type of " + typeof absolutePath)
+    console.log('Type of ' + typeof absolutePath);
 
-    const pathDirectory = path.dirname(absolutePath)
+    const pathDirectory = path.dirname(absolutePath);
 
-    console.log(`path dir: ${pathDirectory}`)
+    console.log(`path dir: ${pathDirectory}`);
 
-    let pathArray = pathDirectory.split(path.sep)
-    let contentType = pathArray[pathArray.length - 1] // parent directory name will be the content type.
+    let pathArray = pathDirectory.split(path.sep);
+    let contentType = pathArray[pathArray.length - 1]; // parent directory name will be the content type.
 
     createNodeField({
       node,
-      name: "slug",
+      name: 'slug',
       value: slug,
-    })
+    });
 
     createNodeField({
       node,
-      name: "contentType",
+      name: 'contentType',
       value: contentType,
-    })
+    });
   }
-}
+};
 
 module.exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
-  const blogTemplate = path.resolve("./src/templates/blog-template.js")
-  const projectTemplate = path.resolve("./src/templates/project-template.js")
+  const blogTemplate = path.resolve('./src/templates/blog-template.tsx');
+  const projectTemplate = path.resolve('./src/templates/project-template.tsx');
   // const blogTemplate = path.resolve("./src/templates/project-template.js")
 
   const postOnlyResult = await graphql(`
@@ -59,7 +59,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `)
+  `);
 
   const projectOnlyResult = await graphql(`
     query {
@@ -74,9 +74,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `)
+  `);
 
-  const posts = postOnlyResult.data.allMdx.edges
+  const posts = postOnlyResult.data.allMdx.edges;
   posts.forEach((edge, index) => {
     createPage({
       component: blogTemplate,
@@ -86,8 +86,8 @@ module.exports.createPages = async ({ graphql, actions }) => {
         prev: index === 0 ? null : posts[index - 1].node,
         next: index === posts.length - 1 ? null : posts[index + 1].node,
       },
-    })
-  })
+    });
+  });
   // postOnlyResult.data.allMdx.edges.forEach(edge => {
   //   createPage({
   //     component: blogTemplate,
@@ -98,13 +98,13 @@ module.exports.createPages = async ({ graphql, actions }) => {
   //   })
   // })
 
-  projectOnlyResult.data.allMdx.edges.forEach(edge => {
+  projectOnlyResult.data.allMdx.edges.forEach((edge) => {
     createPage({
       component: projectTemplate,
       path: `/projects/${edge.node.fields.slug}`,
       context: {
         slug: edge.node.fields.slug,
       },
-    })
-  })
-}
+    });
+  });
+};

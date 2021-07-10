@@ -1,12 +1,12 @@
 ---
-title: "Getting started with Express.js - Keeping it simple!"
-date: "2020-03-23"
-tags: ["javascript", "express", "node"]
+title: 'Getting started with Express.js - Keeping it simple!'
+date: '2020-03-23'
+tags: ['javascript', 'express', 'node']
 thumbnail: ../images/thumbnails/express-js.png
-author: "Ajeet Chaulagain"
+author: 'Ajeet Chaulagain'
 ---
 
-import { QuickInfo } from "../components/utilities/quick-info.js"
+import { QuickInfo } from "../components/utilities/quick-info.tsx"
 
 This tutorial is prepared to make you familiar with [Express.js](https://expressjs.com/). _Express_ is a web framework for node.js that allows you to build a _minimal and flexible_ web application. We will go through some basic concepts of Express in this tutorial and demonstrate various topics of express.js such as _routing, middleware, route chaining and more._
 
@@ -45,15 +45,15 @@ As a full-stack javascript developer, I use Express to _make a web server and AP
 For example the code for creating http server using _http_ core module looks like:
 
 ```js
-var http = require("http")
+var http = require('http');
 
 //create a server object:
 http
-  .createServer(function(req, res) {
-    res.write("Hello World!") //write a response to the client
-    res.end() //end the response
+  .createServer(function (req, res) {
+    res.write('Hello World!'); //write a response to the client
+    res.end(); //end the response
   })
-  .listen(8080) //the server object listens on port 8080
+  .listen(8080); //the server object listens on port 8080
 ```
 
 In the above code, we have imported the http core module from node and created the _server that listens on port 8080._
@@ -61,14 +61,14 @@ By using express we can acheive same thing simply as:
 
 ```js
 //this is es6 syntax for importing packages
-import express from "express"
+import express from 'express';
 
-const app = express()
+const app = express();
 
 app.listen(8080, () => {
   // on the server
-  console.log(`Your Server is running on port 8080`)
-})
+  console.log(`Your Server is running on port 8080`);
+});
 ```
 
 There are lot of cool features offered by express.js through different methods. You will get indepth understanding of Express while you follow along this tutorial. So lets get started!
@@ -130,4 +130,5 @@ Now its time to configure nodemon and babel in our project. Instead of running _
 ```
 
 ## Part 2 to be continued.
+
 q
