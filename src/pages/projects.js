@@ -1,9 +1,9 @@
-import React from "react"
-import Projects from "../components/projects"
-import MasterLayout from "../components/master-layout"
-import IntroSection from "../components/intro-section"
-import ContentLayout from "../components/content-layout"
-import { indexHeadingStyle, indexSubHeadingStyle } from "."
+import React from 'react';
+import Projects from '../components/projects';
+import MasterLayout from '../components/master-layout';
+import IntroSection from '../components/intro-section';
+import ContentLayout from '../components/content-layout';
+import { indexHeadingStyle, indexSubHeadingStyle } from '.';
 
 const ProjectsPage = () => {
   // console.log(data);
@@ -16,7 +16,7 @@ const ProjectsPage = () => {
         <Projects />
       </ContentLayout>
     </MasterLayout>
-  )
-}
+  );
+};
 
-export default ProjectsPage
+export default ProjectsPage;

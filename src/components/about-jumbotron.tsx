@@ -1,14 +1,11 @@
-import React from "react"
-import Img from "gatsby-image"
+import React from 'react';
+import Img from 'gatsby-image';
+import * as jumbotronStyles from './about-jumbotron.module.scss';
+import { useAuthorImage } from './utilities/use-author-image';
+import BuyMeCoffeeButton from './utilities/buy-me-coffee-button';
 
-import * as jumbotronStyles from "./about-jumbotron.module.scss"
-
-import { useAuthorImage } from "./utilities/use-author-image"
-
-import BuyMeCoffeeButton from "./utilities/buy-me-coffee-button"
-
-const AboutJumbotronBlog = () => {
-  const { ...GatsbyImageSharpFixed } = useAuthorImage()
+const AboutJumbotronBlog = (): JSX.Element => {
+  const { ...GatsbyImageSharpFixed } = useAuthorImage();
 
   return (
     <div className={jumbotronStyles.wrapper}>
@@ -29,7 +26,7 @@ const AboutJumbotronBlog = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AboutJumbotronBlog
+export default AboutJumbotronBlog;

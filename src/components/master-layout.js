@@ -1,7 +1,7 @@
-import React from "react"
+import React from 'react';
 
-import Header from "./Header"
-import Footer from "./footer"
+import Header from './Header';
+import Footer from './footer';
 
 const MasterLayout = ({ children }) => {
   return (
@@ -10,7 +10,7 @@ const MasterLayout = ({ children }) => {
       {children}
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default MasterLayout
+export default MasterLayout;

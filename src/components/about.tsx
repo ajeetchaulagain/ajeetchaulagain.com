@@ -1,12 +1,11 @@
-import React from "react"
-import * as aboutStyles from "./about.module.scss"
-import { useStaticQuery, Link } from "gatsby"
-import Img from "gatsby-image"
-import { useAuthorImage } from "./utilities/use-author-image"
+import React from 'react';
+import * as aboutStyles from './about.module.scss';
+import { Link } from 'gatsby';
+import Img from 'gatsby-image';
+import { useAuthorImage } from './utilities/use-author-image';
 
-
-const About = () => {
-  const { ...GatsbyImageSharpFixed } = useAuthorImage()
+const About = (): JSX.Element => {
+  const { ...GatsbyImageSharpFixed } = useAuthorImage();
 
   return (
     <div className={aboutStyles.wrapper}>
@@ -30,7 +29,7 @@ const About = () => {
       <h2>Working Expertise</h2>
       <ul>
         <li>
-          Web application development with{" "}
+          Web application development with{' '}
           <em>React, Node, Express, MongoDB, Gatsby, and GraphQL.</em>
         </li>
         <li>
@@ -38,12 +37,12 @@ const About = () => {
         </li>
         <li>Native Android application development (in Java)</li>
         <li>
-          Familiarity with implementing concept of{" "}
+          Familiarity with implementing concept of{' '}
           <em>Progressive Web App (PWA)</em>
           in a site.
         </li>
         <li>
-          Working knowledge of tools associated with{" "}
+          Working knowledge of tools associated with{' '}
           <em>incorporating CI/CD pipeline in a project.</em>
         </li>
       </ul>
@@ -57,7 +56,7 @@ const About = () => {
 
       <h3>Need a developer for your next project? </h3>
       <p>
-        I do full stack web application development using <em>MERN stack</em>{" "}
+        I do full stack web application development using <em>MERN stack</em>{' '}
         and <em>JAM Stack.</em>
         You can view some of my
         <Link to="/projects"> projects and its case study.</Link>
@@ -69,11 +68,11 @@ const About = () => {
 
       <h2>About this Website</h2>
       <p>
-        I designed and developed this personal website as a{" "}
-        <em>place to showcase my work</em> and share{" "}
+        I designed and developed this personal website as a{' '}
+        <em>place to showcase my work</em> and share{' '}
         <Link to="/blog">articles</Link> about modern software development. I
         designed this website in JAM stack using GatsbyJS. If you want to know
-        more about this project, you can{" "}
+        more about this project, you can{' '}
         <Link to="/projects">check the case study </Link> of how I designed and
         developed this website from scratch using <em>React/Gatsby.</em>
       </p>
@@ -83,7 +82,7 @@ const About = () => {
         subscirbe me for latest articles.
       </p>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

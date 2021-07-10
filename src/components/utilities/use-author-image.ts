@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from 'gatsby';
 
 export const useAuthorImage = () => {
   const { file } = useStaticQuery(
@@ -14,7 +14,7 @@ export const useAuthorImage = () => {
         }
       }
     `
-  )
+  );
 
-  return file.childImageSharp.fixed
-}
+  return file.childImageSharp.fixed;
+};

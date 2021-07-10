@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react';
 
-import { Link } from "gatsby"
+import { Link } from 'gatsby';
 
-import MasterLayout from "../components/master-layout"
-import IntroSection from "../components/intro-section"
-import ContentLayout from "../components/content-layout"
+import MasterLayout from '../components/master-layout';
+import IntroSection from '../components/intro-section';
+import ContentLayout from '../components/content-layout';
 
 const DefaultNotFound = () => {
   return (
@@ -21,7 +21,7 @@ const DefaultNotFound = () => {
         </div>
       </ContentLayout>
     </MasterLayout>
-  )
-}
+  );
+};
 
-export default DefaultNotFound
+export default DefaultNotFound;

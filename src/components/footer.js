@@ -1,7 +1,7 @@
-import React from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import React from 'react';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 
-import * as footerStyles from "./footer.module.scss"
+import * as footerStyles from './footer.module.scss';
 
 import {
   FaFacebook,
@@ -10,7 +10,7 @@ import {
   FaGithub,
   FaInstagram,
   FaCoffee,
-} from "react-icons/fa"
+} from 'react-icons/fa';
 
 const Footer = () => {
   // Quering Graphql api with the tag template literals, allows that string to be processed by that function.
@@ -22,7 +22,7 @@ const Footer = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <footer className={footerStyles.mainFooter}>
@@ -124,12 +124,12 @@ const Footer = () => {
           <em>{data.site.siteMetadata.author} © 2020.</em> All rights reserved.
         </p>
         <p>
-          Proudly built with{" "}
+          Proudly built with{' '}
           <em>React, Gatsby, GraphQL, Netlify, Nodejs, Webpack and Babel</em>
         </p>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

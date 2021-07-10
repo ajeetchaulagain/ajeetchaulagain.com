@@ -1,13 +1,13 @@
-import React from "react"
-import * as introStyles from "./intro-section.module.scss"
+import React from 'react';
+import * as introStyles from './intro-section.module.scss';
 
-const IntroSection = props => {
+const IntroSection = (props) => {
   return (
     <section className={introStyles.introSection}>
       <div className={introStyles.introContent}>
         <h1 className={introStyles.headingLight}>{props.children}</h1>
       </div>
     </section>
-  )
-}
-export default IntroSection
+  );
+};
+export default IntroSection;

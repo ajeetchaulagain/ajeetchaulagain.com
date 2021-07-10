@@ -1,23 +1,23 @@
-import React from "react"
-import MasterLayout from "../components/master-layout"
-import IntroSection from "../components/intro-section"
-import ContentLayout from "../components/content-layout"
-import Blog from "../components/blog"
-import { indexHeadingStyle, indexSubHeadingStyle } from "."
-import NewsLetter from "../components/newsletter"
+import React from 'react';
+import MasterLayout from '../components/master-layout';
+import IntroSection from '../components/intro-section';
+import ContentLayout from '../components/content-layout';
+import Blog from '../components/blog';
+import { indexHeadingStyle, indexSubHeadingStyle } from '.';
+import NewsLetter from '../components/newsletter';
 
 const BlogPage = () => {
   const searchBoxStyle = {
-    width: "100%",
-    padding: "1rem",
-    borderRadius: "5px",
-    fontSize: "1rem",
-    marginBottom: "3rem",
-    fontFamily: "Roboto",
-    fontWeight: "500",
-    letterSpacing: "1px",
-    border: "1px solid rgb(230, 228, 228)",
-  }
+    width: '100%',
+    padding: '1rem',
+    borderRadius: '5px',
+    fontSize: '1rem',
+    marginBottom: '3rem',
+    fontFamily: 'Roboto',
+    fontWeight: '500',
+    letterSpacing: '1px',
+    border: '1px solid rgb(230, 228, 228)',
+  };
 
   return (
     <MasterLayout>
@@ -36,6 +36,6 @@ const BlogPage = () => {
         <NewsLetter />
       </ContentLayout>
     </MasterLayout>
-  )
-}
-export default BlogPage
+  );
+};
+export default BlogPage;

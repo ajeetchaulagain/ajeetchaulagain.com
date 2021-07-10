@@ -1,19 +1,19 @@
 // Create and export the react component
 
-import React from "react"
-import MasterLayout from "../components/master-layout"
-import IntroSection from "../components/intro-section"
-import ContentLayout from "../components/content-layout"
-import * as blogTemplateStyles from "./blog-template.module.scss"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import Img from "gatsby-image"
-import { graphql, Link } from "gatsby"
-import AboutJumbotronBlog from "../components/about-jumbotron"
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
-import NewsLetter from "../components/newsletter"
+import React from 'react';
+import MasterLayout from '../components/master-layout';
+import IntroSection from '../components/intro-section';
+import ContentLayout from '../components/content-layout';
+import * as blogTemplateStyles from './blog-template.module.scss';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import Img from 'gatsby-image';
+import { graphql, Link } from 'gatsby';
+import AboutJumbotronBlog from '../components/about-jumbotron';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import NewsLetter from '../components/newsletter';
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
@@ -32,10 +32,10 @@ export const query = graphql`
       body
     }
   }
-`
+`;
 
-const BlogTemplate = props => {
-  const { next, prev } = props.pageContext
+const BlogTemplate = (props) => {
+  const { next, prev } = props.pageContext;
 
   return (
     <MasterLayout>
@@ -52,8 +52,8 @@ const BlogTemplate = props => {
                   {props.data.mdx.timeToRead} min read
                 </span>
                 <ul className={blogTemplateStyles.tagList}>
-                  {props.data.mdx.frontmatter.tags.map(tag => {
-                    return <li>{tag}</li>
+                  {props.data.mdx.frontmatter.tags.map((tag) => {
+                    return <li>{tag}</li>;
                   })}
                 </ul>
               </div>
@@ -103,7 +103,7 @@ const BlogTemplate = props => {
         <NewsLetter />
       </ContentLayout>
     </MasterLayout>
-  )
-}
+  );
+};
 
-export default BlogTemplate
+export default BlogTemplate;

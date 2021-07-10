@@ -1,14 +1,14 @@
-import React from "react"
-import { Link } from "gatsby"
-import Img from "gatsby-image"
+import React from 'react';
+import { Link } from 'gatsby';
+import Img from 'gatsby-image';
 
-import * as welcomeStyles from "./welcome.module.scss"
+import * as welcomeStyles from './welcome.module.scss';
 
-import Particles from "react-particles-js"
+import Particles from 'react-particles-js';
 
-import { useAuthorImage } from "./utilities/use-author-image"
-import { FaArrowCircleRight, FaToolbox, FaTelegramPlane } from "react-icons/fa"
-import SocialMediaIcons from "./utilities/social-media-icons"
+import { useAuthorImage } from './utilities/use-author-image';
+import { FaArrowCircleRight, FaToolbox, FaTelegramPlane } from 'react-icons/fa';
+import SocialMediaIcons from './utilities/social-media-icons';
 
 const particlesParam = {
   particles: {
@@ -20,19 +20,19 @@ const particlesParam = {
       },
     },
     color: {
-      value: "#ffffff",
+      value: '#ffffff',
     },
     shape: {
-      type: "polygon",
+      type: 'polygon',
       stroke: {
         width: 0,
-        color: "#000000",
+        color: '#000000',
       },
       polygon: {
         nb_sides: 6,
       },
       image: {
-        src: "img/github.svg",
+        src: 'img/github.svg',
         width: 100,
         height: 100,
       },
@@ -60,17 +60,17 @@ const particlesParam = {
     line_linked: {
       enable: true,
       distance: 120,
-      color: "#ffffff",
+      color: '#ffffff',
       opacity: 0.2,
       width: 1,
     },
     move: {
       enable: true,
       speed: 5,
-      direction: "none",
+      direction: 'none',
       random: false,
       straight: false,
-      out_mode: "out",
+      out_mode: 'out',
       bounce: false,
       attract: {
         enable: false,
@@ -80,15 +80,15 @@ const particlesParam = {
     },
   },
   interactivity: {
-    detect_on: "canvas",
+    detect_on: 'canvas',
     events: {
       onhover: {
         enable: true,
-        mode: "repulse",
+        mode: 'repulse',
       },
       onclick: {
         enable: false,
-        mode: "push",
+        mode: 'push',
       },
       resize: true,
     },
@@ -119,10 +119,10 @@ const particlesParam = {
     },
   },
   retina_detect: true,
-}
+};
 
 const Welcome = () => {
-  const { ...GatsbyImageSharpFixed } = useAuthorImage()
+  const { ...GatsbyImageSharpFixed } = useAuthorImage();
 
   return (
     <section className={welcomeStyles.welcomeSection}>
@@ -130,29 +130,31 @@ const Welcome = () => {
       <div className={welcomeStyles.welcomeContent}>
         <div className={welcomeStyles.aboutIntro}>
           <h1 className={welcomeStyles.heading}>
-            <span style={{ fontWeight: "100" }}>Hello.I'm </span>Ajeet
+            <span style={{ fontWeight: '100' }}>Hello.I'm </span>Ajeet
             Chaulagain
           </h1>
           <p className={welcomeStyles.paragraph}>
             I am pragmatic software engineer, passionate and proficient building
             applications that are scalable, maintainable and well architected
-            with beautifully crafted code{" "}
+            with beautifully crafted code{' '}
           </p>
           <div className={welcomeStyles.calltoactionWrapper}>
             <Link to="/about" className={welcomeStyles.welcomeButton}>
-              More about me  →
+              More about me →
             </Link>
-            { false &&<Link
-              to="/projects"
-              className={welcomeStyles.welcomeButton}
-              style={{
-                backgroundColor: "#baa1ca",
-                color: "#000",
-                border: "none",
-              }}
-            >
-              View My Work
-            </Link>}
+            {false && (
+              <Link
+                to="/projects"
+                className={welcomeStyles.welcomeButton}
+                style={{
+                  backgroundColor: '#baa1ca',
+                  color: '#000',
+                  border: 'none',
+                }}
+              >
+                View My Work
+              </Link>
+            )}
           </div>
 
           {/* Here goes the social media icons */}
@@ -181,7 +183,7 @@ const Welcome = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Welcome
+export default Welcome;

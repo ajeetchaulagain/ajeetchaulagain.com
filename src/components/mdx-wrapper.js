@@ -1,5 +1,5 @@
-import React from "react"
+import React from 'react';
 
-export const MdxWrapper = props => {
-  return <div>{props.children}</div>
-}
+export const MdxWrapper = (props) => {
+  return <div>{props.children}</div>;
+};

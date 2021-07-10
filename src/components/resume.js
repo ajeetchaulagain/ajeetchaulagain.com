@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react';
 
-import * as resumeStyles from "./resume.module.scss"
+import * as resumeStyles from './resume.module.scss';
 
 const Resume = () => {
   return (
@@ -56,7 +56,7 @@ const Resume = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Resume
+export default Resume;

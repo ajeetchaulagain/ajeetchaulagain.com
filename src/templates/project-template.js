@@ -1,34 +1,34 @@
 // Create and export the react component
 
-import React from "react"
-import MasterLayout from "../components/master-layout"
-import IntroSection from "../components/intro-section"
-import ContentLayout from "../components/content-layout"
-import { Link } from "gatsby"
-import { FaArrowLeft } from "react-icons/fa"
+import React from 'react';
+import MasterLayout from '../components/master-layout';
+import IntroSection from '../components/intro-section';
+import ContentLayout from '../components/content-layout';
+import { Link } from 'gatsby';
+import { FaArrowLeft } from 'react-icons/fa';
 
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import * as projectStyles from "./project-template.module.scss"
+import * as projectStyles from './project-template.module.scss';
 
-import { graphql } from "gatsby"
-const ExternalLink = props => {
-  if (props.href.includes("yourwebsite.com") || props.href[0] === "/") {
-    return <a href={props.href}>{props.children}</a>
+import { graphql } from 'gatsby';
+const ExternalLink = (props) => {
+  if (props.href.includes('yourwebsite.com') || props.href[0] === '/') {
+    return <a href={props.href}>{props.children}</a>;
   }
   return (
     <a href={props.href} target="_blank" rel="noopener noreferrer">
       {props.children}
     </a>
-  )
-}
+  );
+};
 
 const components = {
   a: ExternalLink,
-}
+};
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
@@ -36,8 +36,8 @@ export const query = graphql`
       body
     }
   }
-`
-const ProjectTemplate = props => {
+`;
+const ProjectTemplate = (props) => {
   return (
     <MasterLayout>
       <IntroSection />
@@ -65,7 +65,7 @@ const ProjectTemplate = props => {
         </div>
       </ContentLayout>
     </MasterLayout>
-  )
-}
+  );
+};
 
-export default ProjectTemplate
+export default ProjectTemplate;

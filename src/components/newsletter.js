@@ -1,8 +1,8 @@
-import React from "react"
+import React from 'react';
 
-import * as newsLetterStyles from "./newsletter.module.scss"
-import { indexHeadingStyle } from "../pages/index.js"
-import EmailList from "./email-list-form"
+import * as newsLetterStyles from './newsletter.module.scss';
+import { indexHeadingStyle } from '../pages/index.js';
+import EmailList from './email-list-form';
 
 const NewsLetter = () => {
   return (
@@ -12,7 +12,7 @@ const NewsLetter = () => {
       <p>Signup my newsletter to get update when any new stuffs comes out!</p>
       <EmailList />
     </div>
-  )
-}
+  );
+};
 
-export default NewsLetter
+export default NewsLetter;

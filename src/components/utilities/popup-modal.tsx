@@ -1,8 +1,7 @@
-import React from "react"
+import React from 'react';
+import * as popupModalStyles from './popup-modal.module.scss';
 
-import * as popupModalStyles from "./popup-modal.module.scss"
-
-const PopupModal = () => {
+const PopupModal = (): JSX.Element => {
   return (
     <div className={popupModalStyles.modalWrapper}>
       <div className={popupModalStyles.modal} id="test-view" aria-hidden="true">
@@ -29,7 +28,7 @@ const PopupModal = () => {
             </p>
           </div>
           <div className={popupModalStyles.modalFooter}>
-            {" "}
+            {' '}
             <a href="#test-view" className={popupModalStyles.btn}>
               Continue viewing website
             </a>
@@ -37,7 +36,7 @@ const PopupModal = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default PopupModal
+export default PopupModal;

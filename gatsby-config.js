@@ -6,19 +6,53 @@
 
 module.exports = {
   siteMetadata: {
-    title: " Ajeet Chaulagain",
-    author: "Ajeet Chaulagain",
+    title: ' Ajeet Chaulagain',
+    author: 'Ajeet Chaulagain',
   },
   plugins: [
-    "gatsby-plugin-sass",
+    'gatsby-plugin-sass',
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "src",
+        name: 'src',
         path: `${__dirname}/src/`,
       },
     },
-
+    {
+      resolve: 'gatsby-plugin-prettier-eslint',
+      // this is the default configuration, override only what you need
+      options: {
+        cwd: process.cwd(), // path to a directory that should be considered as the current working directory
+        watch: true, // format/lint on save
+        initialScan: true, // if true, will format/lint the whole project on Gatsby startup
+        onChangeFullScanLint: false, // if true, on file save always perform full scan lint
+        onChangeFullScanFormat: false, // if true, on file save always perform full scan format
+        prettierLast: false, // if true, will run Prettier after ESLint
+        ignorePatterns: [
+          '**/node_modules/**/*',
+          '**/.git/**/*',
+          '**/dist/**/*',
+          '.cache/**/*',
+          'public/**/*',
+        ], // string or array of paths/files/globs to ignore
+        prettier: {
+          patterns: [], // string or array of paths/files/globs to include related only to Prettier
+          ignorePatterns: [], // string or array of paths/files/globs to exclude related only to Prettier
+          customOptions: {}, // see: https://prettier.io/docs/en/options.html
+        },
+        eslint: {
+          patterns: [], // string or array of paths/files/globs to include related only to ESLint
+          ignorePatterns: [], // string or array of paths/files/globs to exclude related only to ESLint
+          formatter: 'stylish', // set custom or third party formatter
+          maxWarnings: undefined, // number of max warnings allowed, when exceed it will fail Gatsby build
+          emitWarning: true, // if true, will emit lint warnings
+          failOnError: false, // if true, any lint error will fail the build, you may set true only in your prod config
+          failOnWarning: false, // same as failOnError but for warnings
+          plugins: [], // an array of plugins to load for ESLint
+          customOptions: {}, // see: https://eslint.org/docs/developer-guide/nodejs-api#cliengine
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -35,9 +69,9 @@ module.exports = {
           },
 
           {
-            resolve: "gatsby-remark-code-titles",
+            resolve: 'gatsby-remark-code-titles',
             options: {
-              className: "your-custom-class-name",
+              className: 'your-custom-class-name',
             },
           },
 
@@ -51,7 +85,7 @@ module.exports = {
               // you may use this to prevent Prism from re-processing syntax.
               // This is an uncommon use-case though;
               // If you're unsure, it's best to use the default value.
-              classPrefix: "language-",
+              classPrefix: 'language-',
               // This is used to allow setting a language for inline code
               // (i.e. single backticks) by creating a separator.
               // This separator is a string and will do no white-space
@@ -81,8 +115,8 @@ module.exports = {
               // existing language" below.
               languageExtensions: [
                 {
-                  language: "superscript",
-                  extend: "javascript",
+                  language: 'superscript',
+                  extend: 'javascript',
                   definition: {
                     superscript_types: /(SuperType)/,
                   },
@@ -96,8 +130,8 @@ module.exports = {
               // Customize the prompt used in shell output
               // Values below are default
               prompt: {
-                user: "root",
-                host: "localhost",
+                user: 'root',
+                host: 'localhost',
                 global: false,
               },
               // By default the HTML entities <>&'" are escaped.
@@ -111,7 +145,7 @@ module.exports = {
     },
 
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
           // include: `${__dirname}/src/`
@@ -127,7 +161,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // replace "UA-XXXXXXXXX-X" with your own Tracking ID
-        trackingId: "UA-54342929-2",
+        trackingId: 'UA-54342929-2',
       },
     },
 
@@ -148,13 +182,13 @@ module.exports = {
     `gatsby-plugin-offline`,
 
     {
-      resolve: "gatsby-plugin-mailchimp",
+      resolve: 'gatsby-plugin-mailchimp',
       options: {
         endpoint:
-          "https://ajeetchaulagain.us19.list-manage.com/subscribe/post?u=961c9fb48e36f45cf16236b29&amp;id=ce684f7325", // add your MC list endpoint here; see instructions below
+          'https://ajeetchaulagain.us19.list-manage.com/subscribe/post?u=961c9fb48e36f45cf16236b29&amp;id=ce684f7325', // add your MC list endpoint here; see instructions below
       },
     },
   ],
 
-  pathPrefix: "/gatsby-portfolio",
-}
+  pathPrefix: '/gatsby-portfolio',
+};

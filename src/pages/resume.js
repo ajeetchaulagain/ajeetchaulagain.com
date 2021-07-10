@@ -1,8 +1,8 @@
-import React from "react"
-import MasterLayout from "../components/master-layout"
-import IntroSection from "../components/intro-section"
-import ContentLayout from "../components/content-layout"
-import Resume from "../components/resume"
+import React from 'react';
+import MasterLayout from '../components/master-layout';
+import IntroSection from '../components/intro-section';
+import ContentLayout from '../components/content-layout';
+import Resume from '../components/resume';
 
 const ResumePage = () => {
   return (
@@ -13,7 +13,7 @@ const ResumePage = () => {
         <Resume />
       </ContentLayout>
     </MasterLayout>
-  )
-}
+  );
+};
 
-export default ResumePage
+export default ResumePage;
