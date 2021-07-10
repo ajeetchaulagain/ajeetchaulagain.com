@@ -17,6 +17,8 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
     "disqus-react": "^1.1.0",
     "gatsby": "^3.7.2",
     "gatsby-image": "^3.7.1",
