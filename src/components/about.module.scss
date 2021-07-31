@@ -1,23 +1,21 @@
 .wrapper {
-  margin-bottom:3rem;
+  margin-bottom: 3rem;
   // margin-left:.5rem;
   .flex-wrapper {
-
     display: flex;
-    
+
     align-items: top;
 
-    .image-wrapper{
-      background-color:#5c257f;
-      border-radius:3px;
-      padding:1rem;
-      margin-left:.5rem;
+    .image-wrapper {
+      background-color: #5c257f;
+      border-radius: 3px;
+      padding: 1rem;
+      margin-left: 0.5rem;
     }
 
     @media only screen and (max-width: 599px) {
-      
-      h1{
-        text-align:center;
+      h1 {
+        text-align: center;
       }
 
       flex-direction: column;
@@ -26,9 +24,9 @@
       .image-wrapper {
         order: 1;
         padding: 2rem;
-        margin-bottom:1.5rem;
-        margin-left:0;
-        width:100%;
+        margin-bottom: 1.5rem;
+        margin-left: 0;
+        width: 100%;
         text-align: center;
       }
       p {
@@ -42,7 +40,7 @@
       display: block;
       position: absolute;
       box-shadow: 1px 1px 10px rgb(193, 190, 194);
-      border:1px solid white;
+      border: 1px solid white;
       border-radius: 100px;
     }
   }

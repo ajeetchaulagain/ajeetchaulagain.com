@@ -10,25 +10,22 @@
   input,
   textarea {
     font-size: 0.9rem !important;
-    
   }
 
   textarea {
     font-family: inherit;
     font-size: inherit;
- }
+  }
 
-  button[type="submit"] {
+  button[type='submit'] {
     font-size: 0.9rem;
     text-transform: uppercase;
     border: none;
-    padding:.8rem 2rem;
+    padding: 0.8rem 2rem;
 
     &:hover {
       background-color: #4d1b6d;
       color: #fff;
     }
-
-    
   }
 }
