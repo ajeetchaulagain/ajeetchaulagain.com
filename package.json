@@ -27,7 +27,7 @@
     "gatsby-plugin-google-analytics": "^3.7.1",
     "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-manifest": "^3.7.1",
-    "gatsby-plugin-mdx": "^2.7.1",
+    "gatsby-plugin-mdx": "^2.14.1",
     "gatsby-plugin-offline": "^4.7.1",
     "gatsby-plugin-prettier-eslint": "^1.0.6",
     "gatsby-plugin-react-helmet": "^4.7.1",
