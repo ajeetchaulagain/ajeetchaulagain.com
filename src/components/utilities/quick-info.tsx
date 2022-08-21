@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import * as quickInfoStyle from './quick-info.module.scss';
 import { Link } from 'gatsby';
 import { FaInfoCircle } from 'react-icons/fa';
@@ -6,7 +6,7 @@ import { FaInfoCircle } from 'react-icons/fa';
 type QuickInfoType = {
   name?: string;
   url: string;
-  children?: React.ElementType;
+  children?: ReactNode;
 };
 
 export const QuickInfo = (props: QuickInfoType) => {

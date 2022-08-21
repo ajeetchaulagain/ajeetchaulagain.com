@@ -6,7 +6,6 @@ import MasterLayout from '../components/MasterLayout';
 import ContentLayout from '../components/ContentLayout';
 import { Link } from 'gatsby';
 import { FaBook } from 'react-icons/fa';
-import { IoIosArrowForward } from 'react-icons/io';
 
 import Newsletter from '../components/NewsLetter';
 

@@ -3,7 +3,7 @@ import MasterLayout from '../components/MasterLayout';
 import IntroSection from '../components/IntroSection';
 import ContentLayout from '../components/ContentLayout';
 import Blog from '../components/Blog';
-import { indexHeadingStyle, indexSubHeadingStyle } from './index.tsx';
+import { indexHeadingStyle } from '.';
 import NewsLetter from '../components/NewsLetter';
 
 const BlogPage = () => {
@@ -24,7 +24,6 @@ const BlogPage = () => {
       <IntroSection />
       <ContentLayout>
         <h1 style={indexHeadingStyle}>Articles & Tutorials</h1>
-        {false && <p style={indexSubHeadingStyle}>Find the articles, I find</p>}
         <input
           type="text"
           placeholder="Type here to filter articles"

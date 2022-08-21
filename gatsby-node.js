@@ -38,7 +38,6 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   const blogTemplate = path.resolve('./src/templates/blog-template.tsx');
   const projectTemplate = path.resolve('./src/templates/project-template.tsx');
-  // const blogTemplate = path.resolve("./src/templates/project-template.js")
 
   const postOnlyResult = await graphql(`
     query {
