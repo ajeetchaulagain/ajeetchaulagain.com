@@ -1,16 +1,16 @@
 import React from 'react';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import * as jumbotronStyles from './about-jumbotron.module.scss';
 import { useAuthorImage } from './utilities/use-author-image';
 import BuyMeCoffeeButton from './utilities/buy-me-coffee-button';
 
 const AboutJumbotronBlog = (): JSX.Element => {
-  const { ...GatsbyImageSharpFixed } = useAuthorImage();
+  const { gatsbyImageData } = useAuthorImage();
 
   return (
     <div className={jumbotronStyles.wrapper}>
       <div className={jumbotronStyles.imageWrapper}>
-        <Img fixed={GatsbyImageSharpFixed} />
+        <GatsbyImage image={gatsbyImageData} alt="author-profile-image" />
       </div>
       <div className={jumbotronStyles.contentWrapper}>
         <p>

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import * as welcomeStyles from './welcome.module.scss';
 import { useAuthorImage } from './utilities/use-author-image';
 import { FaTelegramPlane } from 'react-icons/fa';
 import SocialMediaIcons from './utilities/social-media-icons';
 
 const Welcome = (): JSX.Element => {
-  const { ...GatsbyImageSharpFixed } = useAuthorImage();
+  const { gatsbyImageData } = useAuthorImage();
 
   return (
     <section className={welcomeStyles.welcomeSection}>
@@ -47,9 +47,10 @@ const Welcome = (): JSX.Element => {
         <div className={welcomeStyles.subscription}>
           <div className={welcomeStyles.imageHolder}>
             <span>
-              <Img
-                fixed={GatsbyImageSharpFixed}
+              <GatsbyImage
+                image={gatsbyImageData}
                 className={welcomeStyles.image}
+                alt="author-profile-image"
               />
             </span>
             <h2>Newsletter</h2>
