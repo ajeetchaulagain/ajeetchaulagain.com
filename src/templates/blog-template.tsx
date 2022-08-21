@@ -5,7 +5,7 @@ import IntroSection from '../components/IntroSection';
 import ContentLayout from '../components/ContentLayout';
 import * as blogTemplateStyles from './blog-template.module.scss';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql, Link } from 'gatsby';
 import AboutJumbotronBlog from '../components/AboutJumbotron';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
@@ -21,9 +21,7 @@ export const query = graphql`
         author
         thumbnail {
           childImageSharp {
-            fluid(quality: 30) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+            gatsbyImageData(layout: CONSTRAINED)
           }
         }
       }
@@ -58,9 +56,10 @@ const BlogTemplate = (props) => {
               </div>
             </div>
             <div className={blogTemplateStyles.featuredIcons}>
-              <Img
-                fluid={
-                  props.data.mdx.frontmatter.thumbnail.childImageSharp.fluid
+              <GatsbyImage
+                image={
+                  props.data.mdx.frontmatter.thumbnail.childImageSharp
+                    .gatsbyImageData
                 }
                 alt="blog-thumbnail"
               />

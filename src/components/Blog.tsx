@@ -1,7 +1,7 @@
 import React from 'react';
 import * as blogStyles from './blog.module.scss';
 import { Link, graphql, useStaticQuery } from 'gatsby';
-import Img, { FluidObject } from 'gatsby-image';
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 
 const Blog = (): JSX.Element => {
   const data = useStaticQuery(graphql`
@@ -16,9 +16,7 @@ const Blog = (): JSX.Element => {
               author
               thumbnail {
                 childImageSharp {
-                  fluid(quality: 50) {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(layout: CONSTRAINED)
                 }
               }
             }
@@ -41,7 +39,7 @@ const Blog = (): JSX.Element => {
             fields: { slug: any };
             frontmatter: {
               thumbnail: {
-                childImageSharp: { fluid: FluidObject | FluidObject[] };
+                childImageSharp: { gatsbyImageData: IGatsbyImageData };
               };
               title:
                 | boolean
@@ -72,9 +70,10 @@ const Blog = (): JSX.Element => {
             <Link to={`/blog/${edge.node.fields.slug}`}>
               <article className={blogStyles.blogItem}>
                 <figure>
-                  <Img
-                    fluid={
-                      edge.node.frontmatter.thumbnail.childImageSharp.fluid
+                  <GatsbyImage
+                    image={
+                      edge.node.frontmatter.thumbnail.childImageSharp
+                        .gatsbyImageData
                     }
                     alt="blog-thumbnail"
                     className={blogStyles.image}

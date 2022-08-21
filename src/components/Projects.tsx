@@ -1,16 +1,6 @@
 import React from 'react';
 import * as projectStyles from './projects.module.scss';
 import { Link, graphql, useStaticQuery } from 'gatsby';
-// import Img from 'gatsby-image';
-// import {
-//   FaArrowRight,
-//   FaLongArrowAltRight,
-//   FaArrowCircleRight,
-// } from 'react-icons/fa';
-// import dockerImg from '../images/thumbnails/docker.png';
-// import reactImg from '../images/thumbnails/react-js.png';
-// import nodeImg from '../images/thumbnails/node-js.png';
-// import expressImg from '../images/thumbnails/express-js.png';
 
 type EdgeType = {
   node: {
