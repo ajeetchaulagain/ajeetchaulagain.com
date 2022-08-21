@@ -4,28 +4,11 @@ import React from 'react';
 import MasterLayout from '../components/MasterLayout';
 import IntroSection from '../components/IntroSection';
 import ContentLayout from '../components/ContentLayout';
-import { Link } from 'gatsby';
+import { Link, PageProps } from 'gatsby';
 import { FaArrowLeft } from 'react-icons/fa';
-
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-
 import * as projectStyles from './project-template.module.scss';
-
 import { graphql } from 'gatsby';
-const ExternalLink = (props) => {
-  if (props.href.includes('yourwebsite.com') || props.href[0] === '/') {
-    return <a href={props.href}>{props.children}</a>;
-  }
-  return (
-    <a href={props.href} target="_blank" rel="noopener noreferrer">
-      {props.children}
-    </a>
-  );
-};
-
-const components = {
-  a: ExternalLink,
-};
 
 export const query = graphql`
   query ($slug: String!) {
@@ -37,7 +20,18 @@ export const query = graphql`
     }
   }
 `;
-const ProjectTemplate = (props) => {
+
+type DataProps = {
+  mdx: {
+    frontmatter: {
+      title: string;
+    };
+    body: string;
+    timeToRead: string;
+  };
+};
+
+const ProjectTemplate: React.FC<PageProps<DataProps, unknown>> = (props) => {
   return (
     <MasterLayout>
       <IntroSection />
@@ -51,9 +45,7 @@ const ProjectTemplate = (props) => {
         </div>
 
         <div className={projectStyles.projectMdxWrapper}>
-          <MDXRenderer components={components}>
-            {props.data.mdx.body}
-          </MDXRenderer>
+          <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
         </div>
         <div className={projectStyles.backButton}>
           <Link to="/projects">

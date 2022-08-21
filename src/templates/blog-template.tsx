@@ -1,12 +1,11 @@
-// Create and export the react component
 import React from 'react';
 import MasterLayout from '../components/MasterLayout';
 import IntroSection from '../components/IntroSection';
 import ContentLayout from '../components/ContentLayout';
 import * as blogTemplateStyles from './blog-template.module.scss';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import { graphql, Link } from 'gatsby';
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import { graphql, Link, PageProps } from 'gatsby';
 import AboutJumbotronBlog from '../components/AboutJumbotron';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import NewsLetter from '../components/NewsLetter';
@@ -31,7 +30,45 @@ export const query = graphql`
   }
 `;
 
-const BlogTemplate = (props) => {
+type DataProps = {
+  mdx: {
+    frontmatter: {
+      title: string;
+      date: string;
+      tags: string[];
+      thumbnail: {
+        childImageSharp: {
+          gatsbyImageData: IGatsbyImageData;
+        };
+      };
+    };
+    body: string;
+    timeToRead: string;
+  };
+};
+
+type PageContextProps = {
+  next: {
+    frontmatter: {
+      title: string;
+    };
+    fields: {
+      slug: string;
+    };
+  };
+  prev: {
+    frontmatter: {
+      title: string;
+    };
+    fields: {
+      slug: string;
+    };
+  };
+};
+
+const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
+  props
+): JSX.Element => {
   const { next, prev } = props.pageContext;
 
   return (

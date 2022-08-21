@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import * as contentLayoutStyles from './content-layout.module.scss';
 import { MDXProvider } from '@mdx-js/react';
 import ContactForm from './ContactForm';
@@ -10,8 +10,9 @@ type ContentLayoutProps = {
   bgcolor?: string;
   minHeight?: string;
   color?: string;
-  children?: React.ElementType;
+  children?: ReactNode;
 };
+
 const ContentLayout = (props: ContentLayoutProps): JSX.Element => {
   return (
     <MDXProvider components={shortCodes}>

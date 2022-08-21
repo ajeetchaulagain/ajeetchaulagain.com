@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 import Header from './Header';
 import Footer from './Footer';
 
 type MasterLayoutProps = {
-  children?: React.ElementType[];
+  children?: ReactNode;
 };
 const MasterLayout = ({ children }: MasterLayoutProps) => {
   return (

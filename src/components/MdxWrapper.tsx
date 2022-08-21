@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 type MdxWrapperProps = {
-  children: React.ElementType;
+  children: ReactNode;
 };
 export const MdxWrapper = (props: MdxWrapperProps) => {
   return <div>{props.children}</div>;

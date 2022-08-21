@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import * as introStyles from './intro-section.module.scss';
 
 type IntroSectionProps = {
-  children?: React.ElementType;
+  children?: ReactNode;
 };
 const IntroSection = (props: IntroSectionProps) => {
   return (

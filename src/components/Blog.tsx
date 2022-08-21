@@ -84,8 +84,10 @@ const Blog = (): JSX.Element => {
                   <h2>{edge.node.frontmatter.title}</h2>
                   <div className={blogStyles.metaData}>
                     <span>
-                      <date>{edge.node.frontmatter.date}</date>&nbsp;/&nbsp;
-                      {edge.node.timeToRead} min read
+                      <>
+                        <time>{edge.node.frontmatter.date}</time>&nbsp;/&nbsp;
+                        {edge.node.timeToRead} min read
+                      </>
                     </span>
                     <ul>
                       {edge.node.frontmatter.tags.map((tag) => {

@@ -1,7 +1,6 @@
 import React from 'react';
 import MasterLayout from '../components/MasterLayout';
 import IntroSection from '../components/IntroSection';
-import { FaSmile } from 'react-icons/fa';
 import ContentLayout from '../components/ContentLayout';
 import ContactForm from '../components/ContactForm';
 import SocialMediaIcons from '../components/utilities/social-media-icons';
