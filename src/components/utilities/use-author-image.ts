@@ -7,14 +7,12 @@ export const useAuthorImage = () => {
         file(relativePath: { eq: "images/ajeet.png" }) {
           id
           childImageSharp {
-            fixed(webpQuality: 100, width: 108) {
-              ...GatsbyImageSharpFixed_withWebp
-            }
+            gatsbyImageData(layout: FIXED, width:108)
           }
         }
       }
     `
   );
 
-  return file.childImageSharp.fixed;
+  return file.childImageSharp;
 };

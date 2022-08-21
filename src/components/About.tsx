@@ -1,11 +1,11 @@
 import React from 'react';
 import * as aboutStyles from './about.module.scss';
 import { Link } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { useAuthorImage } from './utilities/use-author-image';
 
 const About = (): JSX.Element => {
-  const { ...GatsbyImageSharpFixed } = useAuthorImage();
+  const {gatsbyImageData} = useAuthorImage();
 
   return (
     <div className={aboutStyles.wrapper}>
@@ -19,9 +19,10 @@ const About = (): JSX.Element => {
           products that will have great value to the end-user.
         </p>
         <div className={aboutStyles.imageWrapper}>
-          <Img
-            fixed={GatsbyImageSharpFixed}
+          <GatsbyImage
+            image={gatsbyImageData}
             className={aboutStyles.aboutImage}
+            alt='about-image'
           />
         </div>
       </div>
