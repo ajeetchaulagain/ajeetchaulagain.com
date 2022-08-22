@@ -24,11 +24,6 @@ const BlogPage = () => {
       <IntroSection />
       <ContentLayout>
         <h1 style={indexHeadingStyle}>Articles & Tutorials</h1>
-        <input
-          type="text"
-          placeholder="Type here to filter articles"
-          style={searchBoxStyle}
-        />
         <Blog />
       </ContentLayout>
       <ContentLayout bgcolor="#3D3D3D">
