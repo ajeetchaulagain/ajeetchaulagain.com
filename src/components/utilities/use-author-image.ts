@@ -7,7 +7,7 @@ export const useAuthorImage = () => {
         file(relativePath: { eq: "images/ajeet.png" }) {
           id
           childImageSharp {
-            gatsbyImageData(layout: FIXED, width:108)
+            gatsbyImageData(layout: FIXED, width: 108)
           }
         }
       }
