@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import { MasterLayout, ContentLayout } from '../components/layout';
-import IntroSection from '../components/IntroSection';
+import { IntroSection } from '../components/intro-section/IntroSection';
 
 const DefaultNotFound = () => {
   return (

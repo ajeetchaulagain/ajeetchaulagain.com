@@ -1,9 +1,9 @@
 import React from 'react';
 import { MasterLayout, ContentLayout } from '../components/layout';
-import IntroSection from '../components/IntroSection';
+import { IntroSection } from '../components/intro-section/IntroSection';
 import BlogList from '../components/blog-list/BlogList';
 import { indexHeadingStyle } from '.';
-import NewsLetter from '../components/NewsLetter';
+import { NewsLetter } from '../components/newsletter/NewsLetter';
 import { useBlogPostList } from '../hooks/useBlogPostList';
 
 const BlogPage = () => {

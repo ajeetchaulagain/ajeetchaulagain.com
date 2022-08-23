@@ -1,7 +1,7 @@
 import React from 'react';
 import { ProjectList } from '../components/project-list/ProjectList';
 import { MasterLayout, ContentLayout } from '../components/layout';
-import IntroSection from '../components/IntroSection';
+import { IntroSection } from '../components/intro-section/IntroSection';
 import { indexHeadingStyle, indexSubHeadingStyle } from '.';
 import { useProjectList } from '../hooks/useProjectList';
 

@@ -3,7 +3,7 @@ import React from 'react';
 import * as newsLetterStyles from './newsletter.module.scss';
 import EmailList from './EmailListForm';
 
-const NewsLetter = (): JSX.Element => {
+export const NewsLetter = (): JSX.Element => {
   return (
     <div className={newsLetterStyles.wrapper}>
       <h2>Newsletter</h2>
@@ -13,5 +13,3 @@ const NewsLetter = (): JSX.Element => {
     </div>
   );
 };
-
-export default NewsLetter;

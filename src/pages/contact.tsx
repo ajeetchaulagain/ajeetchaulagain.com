@@ -1,11 +1,10 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { MasterLayout, ContentLayout } from '../components/layout';
-import IntroSection from '../components/IntroSection';
+import { IntroSection } from '../components/intro-section/IntroSection';
 import { ContactForm } from '../components/contact-form/ContactForm';
 import SocialMediaIcons from '../components/utilities/social-media-icons';
-import { MdxWrapper } from '../components/MdxWrapper';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { MarkdownRenderer } from '../components/markdown-renderer/MarkdownRenderer';
 
 const ContactPage = () => {
   const contactPageData = useStaticQuery(graphql`
@@ -23,9 +22,7 @@ const ContactPage = () => {
     <MasterLayout>
       <IntroSection />
       <ContentLayout>
-        <MdxWrapper>
-          <MDXRenderer>{contactPageData.mdx.body}</MDXRenderer>
-        </MdxWrapper>
+        <MarkdownRenderer>{contactPageData.mdx.body}</MarkdownRenderer>
         <ContactForm />
         <h2>Follow me on:</h2>
         <SocialMediaIcons />

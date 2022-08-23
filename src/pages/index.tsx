@@ -6,7 +6,7 @@ import { MasterLayout, ContentLayout } from '../components/layout';
 import { Link } from 'gatsby';
 import { FaBook } from 'react-icons/fa';
 
-import Newsletter from '../components/NewsLetter';
+import { NewsLetter } from '../components/newsletter/NewsLetter';
 import { useBlogPostList } from '../hooks/useBlogPostList';
 import { useProjectList } from '../hooks/useProjectList';
 
@@ -61,7 +61,7 @@ const IndexPage = () => {
       </ContentLayout>
 
       <ContentLayout bgcolor="#fff">
-        <Newsletter />
+        <NewsLetter />
       </ContentLayout>
     </MasterLayout>
   );

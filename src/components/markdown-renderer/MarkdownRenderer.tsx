@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-export const MdxWrapper = styled.div`
+export const MarkdownRenderer = styled(MDXRenderer)`
   margin-top: 1rem;
   ul li {
     font-size: 1.1rem;
