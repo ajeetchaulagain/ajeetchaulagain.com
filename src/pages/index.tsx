@@ -1,13 +1,16 @@
 import React from 'react';
-import Welcome from '../components/Welcome';
-import Projects from '../components/Projects';
-import Blog from '../components/Blog';
-import MasterLayout from '../components/MasterLayout';
-import ContentLayout from '../components/ContentLayout';
 import { Link } from 'gatsby';
 import { FaBook } from 'react-icons/fa';
 
-import Newsletter from '../components/NewsLetter';
+import {
+  LandingPageHero,
+  ProjectList,
+  BlogList,
+  MasterLayout,
+  ContentLayout,
+  NewsLetter,
+} from 'components';
+import { useBlogPostList, useProjectList } from 'hooks';
 
 export const indexHeadingStyle = {
   marginBottom: '.3rem',
@@ -32,15 +35,18 @@ export const subscribeSectionStyle = {
 };
 
 const IndexPage = () => {
+  const blogPostList = useBlogPostList();
+  const projectList = useProjectList();
+
   return (
     <MasterLayout>
-      <Welcome />
+      <LandingPageHero />
       <ContentLayout>
         <h1 style={indexHeadingStyle}>
           <FaBook /> From my blog{' '}
         </h1>
         <p style={indexSubHeadingStyle}>See the recent on my article list</p>
-        <Blog />
+        <BlogList blogPostList={blogPostList} />
         <Link to="/blog" className="box-button" style={contentBoxButton}>
           View all Articles →
         </Link>
@@ -50,14 +56,14 @@ const IndexPage = () => {
         <p style={indexSubHeadingStyle}>
           Checkout some of my projects with case study
         </p>
-        <Projects />
+        <ProjectList projectList={projectList} />
         <Link to="/projects" className="box-button" style={contentBoxButton}>
           View All Projects →
         </Link>
       </ContentLayout>
 
       <ContentLayout bgcolor="#fff">
-        <Newsletter />
+        <NewsLetter />
       </ContentLayout>
     </MasterLayout>
   );

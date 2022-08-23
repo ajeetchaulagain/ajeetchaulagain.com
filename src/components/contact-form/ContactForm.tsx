@@ -1,6 +1,7 @@
 import React from 'react';
 import * as contactLayoutStyles from './contact-layout.module.scss';
-const ContactForm = () => {
+
+export const ContactForm = () => {
   return (
     <div className={contactLayoutStyles.contactFormWrap}>
       <form
@@ -39,5 +40,3 @@ const ContactForm = () => {
     </div>
   );
 };
-
-export default ContactForm;

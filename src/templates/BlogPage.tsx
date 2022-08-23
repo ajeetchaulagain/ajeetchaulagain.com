@@ -1,14 +1,14 @@
 import React from 'react';
-import MasterLayout from '../components/MasterLayout';
-import IntroSection from '../components/IntroSection';
-import ContentLayout from '../components/ContentLayout';
+import { MasterLayout } from '../components/layout';
+import { IntroSection } from '../components/intro-section/IntroSection';
+import ContentLayout from '../components/layout/ContentLayout';
 import * as blogTemplateStyles from './blog-template.module.scss';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import { graphql, Link, PageProps } from 'gatsby';
-import AboutJumbotronBlog from '../components/AboutJumbotron';
+import { AboutJumbotronBlog } from '../components/about-jumbotron/AboutJumbotron';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import NewsLetter from '../components/NewsLetter';
+import { NewsLetter } from '../components/newsletter/NewsLetter';
 
 export const query = graphql`
   query ($slug: String!) {

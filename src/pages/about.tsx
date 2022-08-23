@@ -1,13 +1,15 @@
 import React from 'react';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
-import MasterLayout from '../components/MasterLayout';
-import IntroSection from '../components/IntroSection';
-import ContentLayout from '../components/ContentLayout';
-import NewsLetter from '../components/NewsLetter';
-import { useAuthorImage } from '../components/utilities/use-author-image';
-import { MdxWrapper } from '../components/MdxWrapper';
+import { GatsbyImage } from 'gatsby-plugin-image';
+
+import {
+  MasterLayout,
+  ContentLayout,
+  IntroSection,
+  NewsLetter,
+  MarkdownRenderer,
+} from 'components';
+import { useAuthorImage } from 'hooks';
 
 const AboutPage = () => {
   const aboutPageData = useStaticQuery(graphql`
@@ -28,9 +30,7 @@ const AboutPage = () => {
       <IntroSection />
       <ContentLayout>
         <GatsbyImage image={gatsbyImageData} alt="about-image" />
-        <MdxWrapper>
-          <MDXRenderer>{aboutPageData.mdx.body}</MDXRenderer>
-        </MdxWrapper>
+        <MarkdownRenderer>{aboutPageData.mdx.body}</MarkdownRenderer>
         <NewsLetter />
       </ContentLayout>
     </MasterLayout>

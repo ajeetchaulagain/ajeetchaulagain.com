@@ -1,8 +1,9 @@
 import React, { ReactNode } from 'react';
-import * as contentLayoutStyles from './content-layout.module.scss';
 import { MDXProvider } from '@mdx-js/react';
-import ContactForm from './ContactForm';
 import { GatsbyImage } from 'gatsby-plugin-image';
+
+import { ContactForm } from '../contact-form/ContactForm';
+import * as contentLayoutStyles from './content-layout.module.scss';
 
 const shortCodes = { ContactForm, GatsbyImage };
 
@@ -13,7 +14,7 @@ type ContentLayoutProps = {
   children?: ReactNode;
 };
 
-const ContentLayout = (props: ContentLayoutProps): JSX.Element => {
+export const ContentLayout = (props: ContentLayoutProps): JSX.Element => {
   return (
     <MDXProvider components={shortCodes}>
       <section className={contentLayoutStyles.contentSection}>

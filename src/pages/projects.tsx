@@ -1,18 +1,24 @@
 import React from 'react';
-import Projects from '../components/Projects';
-import MasterLayout from '../components/MasterLayout';
-import IntroSection from '../components/IntroSection';
-import ContentLayout from '../components/ContentLayout';
+
+import {
+  MasterLayout,
+  ContentLayout,
+  IntroSection,
+  ProjectList,
+} from 'components';
+import { useProjectList } from 'hooks';
+
 import { indexHeadingStyle, indexSubHeadingStyle } from '.';
 
 const ProjectsPage = () => {
+  const projectList = useProjectList();
   return (
     <MasterLayout>
       <IntroSection />
       <ContentLayout>
         <h1 style={indexHeadingStyle}>Projects</h1>
         <p style={indexSubHeadingStyle}>List of all projects with case study</p>
-        <Projects />
+        <ProjectList projectList={projectList} />
       </ContentLayout>
     </MasterLayout>
   );

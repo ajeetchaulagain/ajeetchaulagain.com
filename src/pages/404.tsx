@@ -1,10 +1,7 @@
 import React from 'react';
-
 import { Link } from 'gatsby';
 
-import MasterLayout from '../components/MasterLayout';
-import IntroSection from '../components/IntroSection';
-import ContentLayout from '../components/ContentLayout';
+import { MasterLayout, ContentLayout, IntroSection } from 'components';
 
 const DefaultNotFound = () => {
   return (
