@@ -1,13 +1,12 @@
-import { useStaticQuery, graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
 
-export type BlogListEdge = {
+export type ProjectListEdge = {
   node: {
-    fields: { slug: any };
+    fields: { slug: string };
     frontmatter: {
       title: string;
-      date: string;
-      tags: string[];
+      technologies: string[];
       thumbnail: {
         childImageSharp: { gatsbyImageData: IGatsbyImageData };
       };
@@ -16,24 +15,24 @@ export type BlogListEdge = {
   };
 };
 
-export const useBlogPostList = () => {
+export const useProjectList = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMdx(filter: { fields: { contentType: { eq: "posts" } } }, limit: 6) {
+      allMdx(
+        filter: { fields: { contentType: { eq: "projects" } } }
+        limit: 6
+      ) {
         edges {
           node {
             frontmatter {
               title
-              tags
-              date(formatString: "MMMM DD, YYYY")
-              author
-              thumbnail {
+              technologies
+              featuredImage {
                 childImageSharp {
                   gatsbyImageData(layout: CONSTRAINED)
                 }
               }
             }
-            excerpt
             timeToRead
             fields {
               slug
@@ -43,5 +42,5 @@ export const useBlogPostList = () => {
       }
     }
   `);
-  return data.allMdx.edges as BlogListEdge[];
+  return data.allMdx.edges as ProjectListEdge[];
 };

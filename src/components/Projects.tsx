@@ -1,57 +1,16 @@
 import React from 'react';
 import * as projectStyles from './projects.module.scss';
-import { Link, graphql, useStaticQuery } from 'gatsby';
+import { Link } from 'gatsby';
+import { ProjectListEdge } from '../hooks/useProjectList';
 
-type EdgeType = {
-  node: {
-    frontmatter: {
-      title:
-        | boolean
-        | React.ReactChild
-        | React.ReactFragment
-        | React.ReactPortal
-        | null
-        | undefined;
-      technologies: any[];
-    };
-    fields: { slug: any };
-  };
+type ProjectListProps = {
+  projectList: ProjectListEdge[];
 };
 
-const Projects = (): JSX.Element => {
-  const data = useStaticQuery(graphql`
-    query {
-      allMdx(
-        filter: { fields: { contentType: { eq: "projects" } } }
-        limit: 6
-      ) {
-        edges {
-          node {
-            frontmatter {
-              title
-              technologies
-              featuredImage {
-                childImageSharp {
-                  fluid(quality: 50) {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                }
-              }
-            }
-            excerpt
-            timeToRead
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `);
-
+const Projects = ({ projectList }: ProjectListProps): JSX.Element => {
   return (
     <div className={projectStyles.projects}>
-      {data.allMdx.edges.map((edge: EdgeType) => {
+      {projectList.map((edge) => {
         return (
           <div className={projectStyles.projectItem}>
             <div className={projectStyles.contentWrapper}>
