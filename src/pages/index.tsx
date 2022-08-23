@@ -2,7 +2,7 @@ import React from 'react';
 import Welcome from '../components/Welcome';
 import Projects from '../components/Projects';
 import Blog from '../components/Blog';
-import MasterLayout from '../components/MasterLayout';
+import MasterLayout from '../components/layout/MasterLayout';
 import ContentLayout from '../components/ContentLayout';
 import { Link } from 'gatsby';
 import { FaBook } from 'react-icons/fa';

@@ -1,5 +1,5 @@
 import React from 'react';
-import MasterLayout from '../components/MasterLayout';
+import MasterLayout from '../components/layout/MasterLayout';
 import ContentLayout from '../components/ContentLayout';
 import IntroSection from '../components/IntroSection';
 import { Link } from 'gatsby';

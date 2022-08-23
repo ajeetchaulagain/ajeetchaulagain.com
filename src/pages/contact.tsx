@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import MasterLayout from '../components/MasterLayout';
+import MasterLayout from '../components/layout/MasterLayout';
 import IntroSection from '../components/IntroSection';
 import ContentLayout from '../components/ContentLayout';
 import ContactForm from '../components/ContactForm';

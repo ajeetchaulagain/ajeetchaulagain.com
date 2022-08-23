@@ -2,7 +2,7 @@ import React from 'react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
-import MasterLayout from '../components/MasterLayout';
+import MasterLayout from '../components/layout/MasterLayout';
 import IntroSection from '../components/IntroSection';
 import ContentLayout from '../components/ContentLayout';
 import NewsLetter from '../components/NewsLetter';
