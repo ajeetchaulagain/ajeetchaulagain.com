@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import Logo from '../../images/logo.svg';
 
+import Logo from '../../images/logo.svg';
 import * as headerStyles from './header.module.scss';
 
 export const Header = (): JSX.Element => {

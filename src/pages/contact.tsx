@@ -1,10 +1,13 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { MasterLayout, ContentLayout } from '../components/layout';
-import { IntroSection } from '../components/intro-section/IntroSection';
-import { ContactForm } from '../components/contact-form/ContactForm';
-import SocialMediaIcons from '../components/utilities/social-media-icons';
-import { MarkdownRenderer } from '../components/markdown-renderer/MarkdownRenderer';
+import {
+  MasterLayout,
+  ContentLayout,
+  IntroSection,
+  ContactForm,
+  MarkdownRenderer,
+  SocialMediaIcons,
+} from 'components';
 
 const ContactPage = () => {
   const contactPageData = useStaticQuery(graphql`

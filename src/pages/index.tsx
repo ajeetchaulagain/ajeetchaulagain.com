@@ -1,14 +1,16 @@
 import React from 'react';
-import { LandingPageHero } from '../components/landing-page-hero/LandingPageHero';
-import { ProjectList } from '../components/project-list/ProjectList';
-import Blog from '../components/blog-list/BlogList';
-import { MasterLayout, ContentLayout } from '../components/layout';
 import { Link } from 'gatsby';
 import { FaBook } from 'react-icons/fa';
 
-import { NewsLetter } from '../components/newsletter/NewsLetter';
-import { useBlogPostList } from '../hooks/useBlogPostList';
-import { useProjectList } from '../hooks/useProjectList';
+import {
+  LandingPageHero,
+  ProjectList,
+  BlogList,
+  MasterLayout,
+  ContentLayout,
+  NewsLetter,
+} from 'components';
+import { useBlogPostList, useProjectList } from 'hooks';
 
 export const indexHeadingStyle = {
   marginBottom: '.3rem',
@@ -44,7 +46,7 @@ const IndexPage = () => {
           <FaBook /> From my blog{' '}
         </h1>
         <p style={indexSubHeadingStyle}>See the recent on my article list</p>
-        <Blog blogPostList={blogPostList} />
+        <BlogList blogPostList={blogPostList} />
         <Link to="/blog" className="box-button" style={contentBoxButton}>
           View all Articles →
         </Link>

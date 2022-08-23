@@ -1,7 +1,8 @@
 import React from 'react';
-import * as projectStyles from './projects.module.scss';
 import { Link } from 'gatsby';
+
 import { ProjectListEdge } from '../../hooks/useProjectList';
+import * as projectStyles from './projects.module.scss';
 
 type ProjectListProps = {
   projectList: ProjectListEdge[];

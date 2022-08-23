@@ -1,8 +1,9 @@
 import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import * as jumbotronStyles from './about-jumbotron.module.scss';
-import { useAuthorImage } from '../utilities/use-author-image';
+
+import { useAuthorImage } from '../../hooks/use-author-image';
 import BuyMeCoffeeButton from '../utilities/buy-me-coffee-button';
+import * as jumbotronStyles from './about-jumbotron.module.scss';
 
 export const AboutJumbotronBlog = (): JSX.Element => {
   const { gatsbyImageData } = useAuthorImage();

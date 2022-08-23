@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import * as welcomeStyles from './landing-page-hero.module.scss';
-import { useAuthorImage } from '../utilities/use-author-image';
 import { FaTelegramPlane } from 'react-icons/fa';
-import SocialMediaIcons from '../utilities/social-media-icons';
+
+import * as welcomeStyles from './landing-page-hero.module.scss';
+import { useAuthorImage } from '../../hooks/use-author-image';
+import { SocialMediaIcons } from '../utilities/social-media-icons';
 
 export const LandingPageHero = (): JSX.Element => {
   const { gatsbyImageData } = useAuthorImage();

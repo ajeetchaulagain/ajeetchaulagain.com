@@ -1,14 +1,15 @@
 import React from 'react';
-import * as blogStyles from './blog.module.scss';
 import { Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
+
 import { BlogListEdge } from '../../hooks/useBlogPostList';
+import * as blogStyles from './blog.module.scss';
 
 type BlogListProps = {
   blogPostList: BlogListEdge[];
 };
 
-const BlogList = ({ blogPostList }: BlogListProps): JSX.Element => {
+export const BlogList = ({ blogPostList }: BlogListProps): JSX.Element => {
   return (
     <div className={blogStyles.blogWrapper}>
       {blogPostList.map((edge) => {
@@ -49,5 +50,3 @@ const BlogList = ({ blogPostList }: BlogListProps): JSX.Element => {
     </div>
   );
 };
-
-export default BlogList;

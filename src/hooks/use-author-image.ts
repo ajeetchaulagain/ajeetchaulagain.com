@@ -1,4 +1,5 @@
 import { useStaticQuery, graphql } from 'gatsby';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 
 export const useAuthorImage = () => {
   const { file } = useStaticQuery(
@@ -14,5 +15,5 @@ export const useAuthorImage = () => {
     `
   );
 
-  return file.childImageSharp;
+  return file.childImageSharp as { gatsbyImageData: IGatsbyImageData };
 };

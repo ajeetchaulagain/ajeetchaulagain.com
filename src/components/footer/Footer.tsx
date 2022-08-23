@@ -1,8 +1,5 @@
 import React from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
-
-import * as footerStyles from './footer.module.scss';
-
 import {
   FaFacebook,
   FaTwitter,
@@ -11,6 +8,8 @@ import {
   FaInstagram,
   FaCoffee,
 } from 'react-icons/fa';
+
+import * as footerStyles from './footer.module.scss';
 
 const Footer = (): JSX.Element => {
   // Quering Graphql api with the tag template literals, allows that string to be processed by that function.

@@ -1,10 +1,14 @@
 import React from 'react';
-import { MasterLayout, ContentLayout } from '../components/layout';
-import { IntroSection } from '../components/intro-section/IntroSection';
-import BlogList from '../components/blog-list/BlogList';
+
+import {
+  MasterLayout,
+  ContentLayout,
+  IntroSection,
+  BlogList,
+  NewsLetter,
+} from 'components';
+import { useBlogPostList } from 'hooks';
 import { indexHeadingStyle } from '.';
-import { NewsLetter } from '../components/newsletter/NewsLetter';
-import { useBlogPostList } from '../hooks/useBlogPostList';
 
 const BlogPage = () => {
   const blogPostList = useBlogPostList();

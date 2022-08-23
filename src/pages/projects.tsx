@@ -1,9 +1,14 @@
 import React from 'react';
-import { ProjectList } from '../components/project-list/ProjectList';
-import { MasterLayout, ContentLayout } from '../components/layout';
-import { IntroSection } from '../components/intro-section/IntroSection';
+
+import {
+  MasterLayout,
+  ContentLayout,
+  IntroSection,
+  ProjectList,
+} from 'components';
+import { useProjectList } from 'hooks';
+
 import { indexHeadingStyle, indexSubHeadingStyle } from '.';
-import { useProjectList } from '../hooks/useProjectList';
 
 const ProjectsPage = () => {
   const projectList = useProjectList();

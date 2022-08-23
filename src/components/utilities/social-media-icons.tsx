@@ -9,7 +9,7 @@ import {
   FaCoffee,
 } from 'react-icons/fa';
 
-const SocialMediaIcons = () => {
+export const SocialMediaIcons = () => {
   return (
     <div className={socialMediaIconsStyles.wrapper}>
       <ul className={socialMediaIconsStyles.socialMediaLists}>
@@ -71,5 +71,3 @@ const SocialMediaIcons = () => {
     </div>
   );
 };
-
-export default SocialMediaIcons;

@@ -1,7 +1,7 @@
 import React from 'react';
-import { MasterLayout, ContentLayout } from '../components/layout';
-import { IntroSection } from '../components/intro-section/IntroSection';
 import { Link } from 'gatsby';
+
+import { MasterLayout, ContentLayout, IntroSection } from 'components';
 
 const FormSubmissionSuccess = () => {
   return (

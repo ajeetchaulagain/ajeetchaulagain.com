@@ -8,7 +8,7 @@ import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import { graphql, Link, PageProps } from 'gatsby';
 import { AboutJumbotronBlog } from '../components/about-jumbotron/AboutJumbotron';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import { NewsLetter } from '../components/layout/NewsLetter';
+import { NewsLetter } from '../components/newsletter/NewsLetter';
 
 export const query = graphql`
   query ($slug: String!) {

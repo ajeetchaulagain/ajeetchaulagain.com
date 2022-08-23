@@ -1,5 +1,13 @@
 const path = require('path');
 
+module.exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, 'src/'), 'node_modules'],
+    },
+  });
+};
+
 module.exports.onCreateNode = ({ node, actions }) => {
   const { createNode, createNodeField } = actions;
   // Transform the new node here and create a new node or

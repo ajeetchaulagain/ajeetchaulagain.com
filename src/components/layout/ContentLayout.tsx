@@ -1,8 +1,9 @@
 import React, { ReactNode } from 'react';
-import * as contentLayoutStyles from './content-layout.module.scss';
 import { MDXProvider } from '@mdx-js/react';
-import { ContactForm } from '../contact-form/ContactForm';
 import { GatsbyImage } from 'gatsby-plugin-image';
+
+import { ContactForm } from '../contact-form/ContactForm';
+import * as contentLayoutStyles from './content-layout.module.scss';
 
 const shortCodes = { ContactForm, GatsbyImage };
 
