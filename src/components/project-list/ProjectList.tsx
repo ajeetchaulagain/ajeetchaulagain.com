@@ -1,13 +1,13 @@
 import React from 'react';
 import * as projectStyles from './projects.module.scss';
 import { Link } from 'gatsby';
-import { ProjectListEdge } from '../hooks/useProjectList';
+import { ProjectListEdge } from '../../hooks/useProjectList';
 
 type ProjectListProps = {
   projectList: ProjectListEdge[];
 };
 
-const Projects = ({ projectList }: ProjectListProps): JSX.Element => {
+export const ProjectList = ({ projectList }: ProjectListProps): JSX.Element => {
   return (
     <div className={projectStyles.projects}>
       {projectList.map((edge) => {
@@ -37,4 +37,3 @@ const Projects = ({ projectList }: ProjectListProps): JSX.Element => {
     </div>
   );
 };
-export default Projects;

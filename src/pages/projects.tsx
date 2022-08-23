@@ -1,5 +1,5 @@
 import React from 'react';
-import Projects from '../components/Projects';
+import { ProjectList } from '../components/project-list/ProjectList';
 import { MasterLayout, ContentLayout } from '../components/layout';
 import IntroSection from '../components/IntroSection';
 import { indexHeadingStyle, indexSubHeadingStyle } from '.';
@@ -13,7 +13,7 @@ const ProjectsPage = () => {
       <ContentLayout>
         <h1 style={indexHeadingStyle}>Projects</h1>
         <p style={indexSubHeadingStyle}>List of all projects with case study</p>
-        <Projects projectList={projectList} />
+        <ProjectList projectList={projectList} />
       </ContentLayout>
     </MasterLayout>
   );

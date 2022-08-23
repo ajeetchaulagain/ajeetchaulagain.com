@@ -1,6 +1,6 @@
 import React from 'react';
 import { LandingPageHero } from '../components/landing-page-hero/LandingPageHero';
-import Projects from '../components/Projects';
+import { ProjectList } from '../components/project-list/ProjectList';
 import Blog from '../components/blog-list/BlogList';
 import { MasterLayout, ContentLayout } from '../components/layout';
 import { Link } from 'gatsby';
@@ -8,6 +8,7 @@ import { FaBook } from 'react-icons/fa';
 
 import Newsletter from '../components/NewsLetter';
 import { useBlogPostList } from '../hooks/useBlogPostList';
+import { useProjectList } from '../hooks/useProjectList';
 
 export const indexHeadingStyle = {
   marginBottom: '.3rem',
@@ -33,6 +34,8 @@ export const subscribeSectionStyle = {
 
 const IndexPage = () => {
   const blogPostList = useBlogPostList();
+  const projectList = useProjectList();
+
   return (
     <MasterLayout>
       <LandingPageHero />
@@ -51,7 +54,7 @@ const IndexPage = () => {
         <p style={indexSubHeadingStyle}>
           Checkout some of my projects with case study
         </p>
-        <Projects />
+        <ProjectList projectList={projectList} />
         <Link to="/projects" className="box-button" style={contentBoxButton}>
           View All Projects →
         </Link>
