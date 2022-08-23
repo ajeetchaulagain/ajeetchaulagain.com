@@ -7,20 +7,7 @@ import IntroSection from '../components/IntroSection';
 import ContentLayout from '../components/ContentLayout';
 import NewsLetter from '../components/NewsLetter';
 import { useAuthorImage } from '../components/utilities/use-author-image';
-import styled from 'styled-components';
-
-const MdxWrapper = styled.div`
-  margin-top: 1rem;
-  ul li {
-    font-size: 1.1rem;
-    list-style-type: disc;
-    margin-left: 2rem;
-  }
-  ol li {
-    margin-left: 1.1rem;
-    margin-bottom: 0.6rem;
-  }
-`;
+import { MdxWrapper } from '../components/MdxWrapper';
 
 const AboutPage = () => {
   const aboutPageData = useStaticQuery(graphql`

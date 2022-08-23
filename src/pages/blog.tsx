@@ -7,18 +7,6 @@ import { indexHeadingStyle } from '.';
 import NewsLetter from '../components/NewsLetter';
 
 const BlogPage = () => {
-  const searchBoxStyle = {
-    width: '100%',
-    padding: '1rem',
-    borderRadius: '5px',
-    fontSize: '1rem',
-    marginBottom: '3rem',
-    fontFamily: 'Roboto',
-    fontWeight: '500',
-    letterSpacing: '1px',
-    border: '1px solid rgb(230, 228, 228)',
-  };
-
   return (
     <MasterLayout>
       <IntroSection />
