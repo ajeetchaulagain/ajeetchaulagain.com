@@ -6,7 +6,6 @@ import ContentLayout from '../components/ContentLayout';
 import { indexHeadingStyle, indexSubHeadingStyle } from '.';
 
 const ProjectsPage = () => {
-  // console.log(data);
   return (
     <MasterLayout>
       <IntroSection />
