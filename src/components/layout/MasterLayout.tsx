@@ -1,12 +1,12 @@
 import React, { ReactNode } from 'react';
-
-import Header from './Header';
-import Footer from './Footer';
+import Header from '../Header';
+import Footer from '../Footer';
 
 type MasterLayoutProps = {
   children?: ReactNode;
 };
-const MasterLayout = ({ children }: MasterLayoutProps) => {
+
+export const MasterLayout = ({ children }: MasterLayoutProps) => {
   return (
     <div className="main">
       <Header />

@@ -1,7 +1,6 @@
 import React from 'react';
-import MasterLayout from '../components/MasterLayout';
+import { MasterLayout, ContentLayout } from '../components/layout';
 import IntroSection from '../components/IntroSection';
-import ContentLayout from '../components/ContentLayout';
 import Blog from '../components/Blog';
 import { indexHeadingStyle } from '.';
 import NewsLetter from '../components/NewsLetter';

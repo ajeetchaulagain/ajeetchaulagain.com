@@ -1,9 +1,9 @@
 // Create and export the react component
 
 import React from 'react';
-import MasterLayout from '../components/MasterLayout';
+import MasterLayout from '../components/layout/MasterLayout';
 import IntroSection from '../components/IntroSection';
-import ContentLayout from '../components/ContentLayout';
+import ContentLayout from '../components/layout/ContentLayout';
 import { Link, PageProps } from 'gatsby';
 import { FaArrowLeft } from 'react-icons/fa';
 import { MDXRenderer } from 'gatsby-plugin-mdx';

@@ -1,8 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import MasterLayout from '../components/MasterLayout';
+import { MasterLayout, ContentLayout } from '../components/layout';
 import IntroSection from '../components/IntroSection';
-import ContentLayout from '../components/ContentLayout';
 import ContactForm from '../components/ContactForm';
 import SocialMediaIcons from '../components/utilities/social-media-icons';
 import { MdxWrapper } from '../components/MdxWrapper';

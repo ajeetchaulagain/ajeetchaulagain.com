@@ -1,7 +1,7 @@
 import React from 'react';
-import MasterLayout from '../components/MasterLayout';
+import { MasterLayout } from '../components/layout';
 import IntroSection from '../components/IntroSection';
-import ContentLayout from '../components/ContentLayout';
+import ContentLayout from '../components/layout/ContentLayout';
 import * as blogTemplateStyles from './blog-template.module.scss';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
