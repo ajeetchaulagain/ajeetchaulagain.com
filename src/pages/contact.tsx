@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { MasterLayout, ContentLayout } from '../components/layout';
 import IntroSection from '../components/IntroSection';
-import ContactForm from '../components/ContactForm';
+import { ContactForm } from '../components/contact-form/ContactForm';
 import SocialMediaIcons from '../components/utilities/social-media-icons';
 import { MdxWrapper } from '../components/MdxWrapper';
 import { MDXRenderer } from 'gatsby-plugin-mdx';

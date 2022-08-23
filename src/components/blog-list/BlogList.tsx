@@ -2,7 +2,7 @@ import React from 'react';
 import * as blogStyles from './blog.module.scss';
 import { Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { BlogListEdge } from '../hooks/useBlogPostList';
+import { BlogListEdge } from '../../hooks/useBlogPostList';
 
 type BlogListProps = {
   blogPostList: BlogListEdge[];

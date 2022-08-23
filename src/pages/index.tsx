@@ -1,12 +1,13 @@
 import React from 'react';
-import Welcome from '../components/Welcome';
+import { LandingPageHero } from '../components/landing-page-hero/LandingPageHero';
 import Projects from '../components/Projects';
-import Blog from '../components/BlogList';
+import Blog from '../components/blog-list/BlogList';
 import { MasterLayout, ContentLayout } from '../components/layout';
 import { Link } from 'gatsby';
 import { FaBook } from 'react-icons/fa';
 
 import Newsletter from '../components/NewsLetter';
+import { useBlogPostList } from '../hooks/useBlogPostList';
 
 export const indexHeadingStyle = {
   marginBottom: '.3rem',
@@ -31,15 +32,16 @@ export const subscribeSectionStyle = {
 };
 
 const IndexPage = () => {
+  const blogPostList = useBlogPostList();
   return (
     <MasterLayout>
-      <Welcome />
+      <LandingPageHero />
       <ContentLayout>
         <h1 style={indexHeadingStyle}>
           <FaBook /> From my blog{' '}
         </h1>
         <p style={indexSubHeadingStyle}>See the recent on my article list</p>
-        <Blog />
+        <Blog blogPostList={blogPostList} />
         <Link to="/blog" className="box-button" style={contentBoxButton}>
           View all Articles →
         </Link>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { MasterLayout, ContentLayout } from '../components/layout';
 import IntroSection from '../components/IntroSection';
-import BlogList from '../components/BlogList';
+import BlogList from '../components/blog-list/BlogList';
 import { indexHeadingStyle } from '.';
 import NewsLetter from '../components/NewsLetter';
 import { useBlogPostList } from '../hooks/useBlogPostList';

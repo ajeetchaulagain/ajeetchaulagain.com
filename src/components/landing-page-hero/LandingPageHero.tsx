@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import * as welcomeStyles from './welcome.module.scss';
-import { useAuthorImage } from './utilities/use-author-image';
+import * as welcomeStyles from './landing-page-hero.module.scss';
+import { useAuthorImage } from '../utilities/use-author-image';
 import { FaTelegramPlane } from 'react-icons/fa';
-import SocialMediaIcons from './utilities/social-media-icons';
+import SocialMediaIcons from '../utilities/social-media-icons';
 
-const Welcome = (): JSX.Element => {
+export const LandingPageHero = (): JSX.Element => {
   const { gatsbyImageData } = useAuthorImage();
 
   return (
@@ -69,5 +69,3 @@ const Welcome = (): JSX.Element => {
     </section>
   );
 };
-
-export default Welcome;
