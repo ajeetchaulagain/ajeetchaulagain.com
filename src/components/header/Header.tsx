@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import Logo from '../images/logo.svg';
+import Logo from '../../images/logo.svg';
 
 import * as headerStyles from './header.module.scss';
 
-const Header = (): JSX.Element => {
+export const Header = (): JSX.Element => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -71,5 +71,3 @@ const Header = (): JSX.Element => {
     </header>
   );
 };
-
-export default Header;

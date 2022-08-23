@@ -1,17 +1,20 @@
 import React from 'react';
 import { MasterLayout, ContentLayout } from '../components/layout';
 import IntroSection from '../components/IntroSection';
-import Blog from '../components/Blog';
+import BlogList from '../components/BlogList';
 import { indexHeadingStyle } from '.';
 import NewsLetter from '../components/NewsLetter';
+import { useBlogPostList } from '../hooks/useBlogPostList';
 
 const BlogPage = () => {
+  const blogPostList = useBlogPostList();
+
   return (
     <MasterLayout>
       <IntroSection />
       <ContentLayout>
         <h1 style={indexHeadingStyle}>Articles & Tutorials</h1>
-        <Blog />
+        <BlogList blogPostList={blogPostList} />
       </ContentLayout>
       <ContentLayout bgcolor="#3D3D3D">
         <NewsLetter />
