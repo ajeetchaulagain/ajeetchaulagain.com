@@ -50,8 +50,10 @@ export const LandingPageHero = (): JSX.Element => {
             <span>
               <GatsbyImage
                 image={gatsbyImageData}
+                loading="eager"
                 className={welcomeStyles.image}
                 alt="author-profile-image"
+                style={{ opacity: 1 }}
               />
             </span>
             <h2>Newsletter</h2>

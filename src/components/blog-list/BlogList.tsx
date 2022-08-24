@@ -24,6 +24,7 @@ export const BlogList = ({ blogPostList }: BlogListProps): JSX.Element => {
                   }
                   alt="blog-thumbnail"
                   className={blogStyles.image}
+                  style={{ opacity: 1 }}
                 />
               </figure>
 

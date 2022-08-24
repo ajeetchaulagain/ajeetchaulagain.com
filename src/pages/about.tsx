@@ -29,7 +29,11 @@ const AboutPage = () => {
     <MasterLayout>
       <IntroSection />
       <ContentLayout>
-        <GatsbyImage image={gatsbyImageData} alt="about-image" />
+        <GatsbyImage
+          image={gatsbyImageData}
+          alt="about-image"
+          style={{ opacity: 1 }}
+        />
         <MarkdownRenderer>{aboutPageData.mdx.body}</MarkdownRenderer>
         <NewsLetter />
       </ContentLayout>
