@@ -1,19 +1,81 @@
 import React, { ReactNode } from 'react';
-
+import { ThemeProvider } from 'styled-components';
 import { Header } from '../header';
 import Footer from '../footer/Footer';
+import { GlobalStyle } from '../../styles/GlobalStyles';
 
 type MasterLayoutProps = {
   children?: ReactNode;
 };
 
+const defaultTheme = {
+  breakpoints: {
+    xs: 0,
+    sm: 480,
+    md: 640,
+    lg: 800,
+    xl: 992,
+    xxl: 1120,
+    xxxl: 1200,
+  },
+  spacing: {
+    0: '0',
+    1: '0.25rem',
+    2: '0.5rem',
+    3: '1rem',
+    4: '1.5rem',
+    5: '2rem',
+    6: '2.5rem',
+    7: '3rem',
+  },
+  colors: {
+    light: '#e7deec',
+    background: '#fff',
+    primary: '#783396',
+    secondary: '#767676',
+    accent: '#d396c3',
+    muted: '#efefef',
+    error: '#d0453e',
+  },
+  fonts: {
+    body: `Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif`,
+    heading: {
+      primary: `'Domine', serif`,
+      secondary: `'Roboto', sans-serif`,
+    },
+  },
+  fontWeights: {
+    light: 200,
+    normal: 400,
+    bold: 700,
+  },
+  lineHeights: {
+    body: 1.5,
+    heading: 1.1,
+  },
+  borders: {
+    none: 0,
+    thin: '1px solid',
+  },
+  borderRadius: {
+    none: 0,
+    base: '0.25em',
+    round: '99999em',
+  },
+};
+
 export const MasterLayout = ({ children }: MasterLayoutProps) => {
   return (
-    <div className="main">
-      <Header />
-      {children}
-      <Footer />
-    </div>
+    <ThemeProvider theme={defaultTheme}>
+      <GlobalStyle />
+      <div className="main">
+        <Header />
+        {children}
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 };
 
