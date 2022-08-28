@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
-
+import styled from 'styled-components';
 import {
   MasterLayout,
   ContentLayout,
@@ -10,6 +9,14 @@ import {
   MarkdownRenderer,
 } from 'components';
 import { useAuthorImage } from 'hooks';
+import { StyledGatsbyImage } from 'components/gatsby-image/StyledGatsbyImage';
+
+const AboutImage = styled(StyledGatsbyImage)`
+  margin-bottom: 1rem;
+  & > picture > img {
+    border-radius: 100%;
+  }
+`;
 
 const AboutPage = () => {
   const aboutPageData = useStaticQuery(graphql`
@@ -29,11 +36,7 @@ const AboutPage = () => {
     <MasterLayout>
       <IntroSection />
       <ContentLayout>
-        <GatsbyImage
-          image={gatsbyImageData}
-          alt="about-image"
-          style={{ opacity: 1 }}
-        />
+        <AboutImage image={gatsbyImageData} alt="about-image" />
         <MarkdownRenderer>{aboutPageData.mdx.body}</MarkdownRenderer>
         <NewsLetter />
       </ContentLayout>
