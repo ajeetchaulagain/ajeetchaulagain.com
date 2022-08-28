@@ -17,7 +17,7 @@ export const indexHeadingStyle = {
   fontWeight: '800',
   // color: "rgba(92, 37, 127, 1)",
   fontFamily: 'Domine',
-  color: '#5294d5',
+  color: '#31363b',
 };
 
 export const indexSubHeadingStyle = {
@@ -44,7 +44,7 @@ const IndexPage = () => {
       <LandingPageHero />
       <ContentLayout>
         <h1 style={indexHeadingStyle}>
-          <FaBook /> From my blog{' '}
+          <FaBook /> From my blog
         </h1>
         <p style={indexSubHeadingStyle}>See the recent on my article list</p>
         <BlogList blogPostList={blogPostList} />
