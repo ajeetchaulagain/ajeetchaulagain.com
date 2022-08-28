@@ -20,11 +20,15 @@ const AboutMeButton = styled(BaseButtonLink)`
 const SubscribeButton = styled(BaseButtonLink)`
   background-color: ${(props) => props.theme.colors.light};
   color: ${(props) => props.theme.colors.darkGrey};
+  display: block;
   ${mt(4)}
   display: inline-block;
   border: ${(props) => props.theme.borders.none};
   &:hover {
     color: ${(props) => props.theme.colors.purple};
+  }
+  @media only screen and (max-width: 599px) {
+    display: none;
   }
 `;
 
@@ -41,7 +45,7 @@ export const LandingPageHero = (): JSX.Element => {
           <p className={welcomeStyles.paragraph}>
             I am pragmatic software engineer, passionate and proficient building
             applications that are scalable, maintainable and well architected
-            with beautifully crafted code{' '}
+            with beautifully crafted code
           </p>
           <div className={welcomeStyles.calltoactionWrapper}>
             <AboutMeButton to="/about">MORE ABOUT ME →</AboutMeButton>
