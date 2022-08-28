@@ -1,13 +1,13 @@
 import React from 'react';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import styled from 'styled-components';
+import { mt } from 'styled-components-spacing';
 import { FaTelegramPlane } from 'react-icons/fa';
 
 import * as welcomeStyles from './landing-page-hero.module.scss';
 import { useAuthorImage } from '../../hooks/use-author-image';
 import { SocialMediaIcons } from '../utilities/social-media-icons';
 import { BaseButtonLink } from 'components/button/Button';
-import styled from 'styled-components';
-import { mt } from 'styled-components-spacing';
+import { StyledGatsbyImage } from 'components/gatsby-image/StyledGatsbyImage';
 
 const AboutMeButton = styled(BaseButtonLink)`
   border: ${(props) => props.theme.borders.thin};
@@ -58,12 +58,11 @@ export const LandingPageHero = (): JSX.Element => {
         <div className={welcomeStyles.subscription}>
           <div className={welcomeStyles.imageHolder}>
             <span>
-              <GatsbyImage
+              <StyledGatsbyImage
                 image={gatsbyImageData}
                 loading="eager"
                 className={welcomeStyles.image}
                 alt="author-profile-image"
-                style={{ opacity: 1 }}
               />
             </span>
             <h2>Newsletter</h2>
