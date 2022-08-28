@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { FaBook } from 'react-icons/fa';
 
 import {
@@ -11,12 +10,14 @@ import {
   NewsLetter,
 } from 'components';
 import { useBlogPostList, useProjectList } from 'hooks';
+import { PrimaryButtonLink } from 'components/button/Button';
 
 export const indexHeadingStyle = {
   marginBottom: '.3rem',
   fontWeight: '800',
   // color: "rgba(92, 37, 127, 1)",
-  color: '#5294d5',
+  fontFamily: 'Domine',
+  color: '#31363b',
 };
 
 export const indexSubHeadingStyle = {
@@ -43,13 +44,11 @@ const IndexPage = () => {
       <LandingPageHero />
       <ContentLayout>
         <h1 style={indexHeadingStyle}>
-          <FaBook /> From my blog{' '}
+          <FaBook /> From my blog
         </h1>
         <p style={indexSubHeadingStyle}>See the recent on my article list</p>
         <BlogList blogPostList={blogPostList} />
-        <Link to="/blog" className="box-button" style={contentBoxButton}>
-          View all Articles →
-        </Link>
+        <PrimaryButtonLink to="/blog">View all Articles →</PrimaryButtonLink>
       </ContentLayout>
       <ContentLayout bgcolor="white">
         <h1 style={indexHeadingStyle}>Projects</h1>
@@ -57,9 +56,9 @@ const IndexPage = () => {
           Checkout some of my projects with case study
         </p>
         <ProjectList projectList={projectList} />
-        <Link to="/projects" className="box-button" style={contentBoxButton}>
+        <PrimaryButtonLink to="/projects">
           View All Projects →
-        </Link>
+        </PrimaryButtonLink>
       </ContentLayout>
 
       <ContentLayout bgcolor="#fff">

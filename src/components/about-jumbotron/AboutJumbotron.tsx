@@ -2,8 +2,16 @@ import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
 import { useAuthorImage } from '../../hooks/use-author-image';
-import BuyMeCoffeeButton from '../utilities/buy-me-coffee-button';
 import * as jumbotronStyles from './about-jumbotron.module.scss';
+import { PrimaryButtonLink } from 'components/button/Button';
+import coffeImage from '../../images/cuplogo-sm.png';
+import styled from 'styled-components';
+
+const StyledImg = styled.img`
+  height: auto;
+  width: 20px;
+  margin-right: 0.2rem;
+`;
 
 export const AboutJumbotronBlog = (): JSX.Element => {
   const { gatsbyImageData } = useAuthorImage();
@@ -22,9 +30,9 @@ export const AboutJumbotronBlog = (): JSX.Element => {
           helped you somehow to learn, I would be grateful if you consider
           supporting me.
         </p>
-        <div className={jumbotronStyles.supportSection}>
-          <BuyMeCoffeeButton />
-        </div>
+        <PrimaryButtonLink to="https://ko-fi.com/ajeetchaulagain">
+          <StyledImg src={coffeImage} /> Buy Me a Coffee
+        </PrimaryButtonLink>
       </div>
     </div>
   );

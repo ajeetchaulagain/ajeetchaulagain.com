@@ -13,7 +13,10 @@ export const ProjectList = ({ projectList }: ProjectListProps): JSX.Element => {
     <div className={projectStyles.projects}>
       {projectList.map((edge) => {
         return (
-          <div className={projectStyles.projectItem}>
+          <Link
+            to={`/projects/${edge.node.fields.slug}`}
+            className={projectStyles.projectItem}
+          >
             <div className={projectStyles.contentWrapper}>
               <h2>{edge.node.frontmatter.title}</h2>
 
@@ -27,12 +30,10 @@ export const ProjectList = ({ projectList }: ProjectListProps): JSX.Element => {
             </div>
             {true && (
               <div className={projectStyles.linksWrapper}>
-                <Link to={`/projects/${edge.node.fields.slug}`}>
-                  View Case Study →{' '}
-                </Link>
+                View Case Study →{' '}
               </div>
             )}
-          </div>
+          </Link>
         );
       })}
     </div>
