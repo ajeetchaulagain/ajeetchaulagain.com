@@ -4,17 +4,27 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 
 import { BlogListEdge } from '../../hooks/useBlogPostList';
 import * as blogStyles from './blog.module.scss';
+import styled from 'styled-components';
 
 type BlogListProps = {
   blogPostList: BlogListEdge[];
 };
+
+const StyledLink = styled(Link)`
+  text-decoration: none !important;
+  &:hover {
+    h2 {
+      text-decoration: underline;
+    }
+  }
+`;
 
 export const BlogList = ({ blogPostList }: BlogListProps): JSX.Element => {
   return (
     <div className={blogStyles.blogWrapper}>
       {blogPostList.map((edge) => {
         return (
-          <Link to={`/blog/${edge.node.fields.slug}`}>
+          <StyledLink to={`/blog/${edge.node.fields.slug}`}>
             <article className={blogStyles.blogItem}>
               <figure>
                 <GatsbyImage
@@ -45,7 +55,7 @@ export const BlogList = ({ blogPostList }: BlogListProps): JSX.Element => {
                 </div>
               </div>
             </article>
-          </Link>
+          </StyledLink>
         );
       })}
     </div>

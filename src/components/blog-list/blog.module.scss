@@ -1,21 +1,16 @@
 .blog-wrapper {
-  a {
-    color: #333;
-    text-decoration: none;
-  }
-
   article {
-    border: 1px solid #eaeaea;
     border-radius: 0.3rem;
     margin-bottom: 1.75rem;
-    background-color: rgb(255, 255, 255);
+    background-color: #f3f6f9;
+    h2 {
+      color: #333;
+    }
     &:hover {
-      border: 1px solid transparent;
-      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
-      transition: box-shadow 0.3s ease, border 0.3s ease;
-      h2 {
-        color: rgba(59, 9, 75, 0.9);
-      }
+      border: none;
+      box-shadow: 0 30px 60px rgba(46, 11, 68, 0.12);
+      transition: box-shadow 0.5s ease, border 0.3s ease;
+
       a {
         border-bottom: 1px solid #5c257f;
       }
