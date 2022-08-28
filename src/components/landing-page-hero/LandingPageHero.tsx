@@ -10,6 +10,7 @@ import styled from 'styled-components';
 import { mt } from 'styled-components-spacing';
 
 const AboutMeButton = styled(BaseButtonLink)`
+  border: ${(props) => props.theme.borders.thin};
   &:hover {
     background-color: ${(props) => props.theme.colors.light};
     color: ${(props) => props.theme.colors.purple};
