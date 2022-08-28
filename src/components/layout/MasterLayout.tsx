@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { ThemeProvider } from 'styled-components';
+import { DefaultTheme, ThemeProvider } from 'styled-components';
 import { Header } from '../header';
 import Footer from '../footer/Footer';
 import { GlobalStyle } from '../../styles/GlobalStyles';
@@ -8,7 +8,7 @@ type MasterLayoutProps = {
   children?: ReactNode;
 };
 
-const defaultTheme = {
+const defaultTheme: DefaultTheme = {
   breakpoints: {
     xs: 0,
     sm: 480,
@@ -44,10 +44,8 @@ const defaultTheme = {
     body: `Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif`,
-    heading: {
-      primary: `'Domine', serif`,
-      secondary: `'Roboto', sans-serif`,
-    },
+    primaryHeading: `'Domine', serif`,
+    secondaryHeading: `'Roboto', sans-serif`,
   },
   fontWeights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
   lineHeights: {
@@ -55,12 +53,12 @@ const defaultTheme = {
     heading: 1.1,
   },
   borders: {
-    none: 0,
+    none: '0',
     thin: '1px solid',
     thick: '2px solid',
   },
   borderRadius: {
-    none: 0,
+    none: '0',
     base: '0.1875rem',
     round: '99999em',
   },
