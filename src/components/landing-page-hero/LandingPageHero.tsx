@@ -1,11 +1,31 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { FaTelegramPlane } from 'react-icons/fa';
 
 import * as welcomeStyles from './landing-page-hero.module.scss';
 import { useAuthorImage } from '../../hooks/use-author-image';
 import { SocialMediaIcons } from '../utilities/social-media-icons';
+import { BaseButtonLink } from 'components/button/Button';
+import styled from 'styled-components';
+import { mt } from 'styled-components-spacing';
+
+const AboutMeButton = styled(BaseButtonLink)`
+  &:hover {
+    background-color: ${(props) => props.theme.colors.light};
+    color: ${(props) => props.theme.colors.purple};
+  }
+`;
+
+const SubscribeButton = styled(BaseButtonLink)`
+  background-color: ${(props) => props.theme.colors.light};
+  color: ${(props) => props.theme.colors.darkGrey};
+  ${mt(4)}
+  display: inline-block;
+  border: ${(props) => props.theme.borders.none};
+  &:hover {
+    color: ${(props) => props.theme.colors.purple};
+  }
+`;
 
 export const LandingPageHero = (): JSX.Element => {
   const { gatsbyImageData } = useAuthorImage();
@@ -23,22 +43,7 @@ export const LandingPageHero = (): JSX.Element => {
             with beautifully crafted code{' '}
           </p>
           <div className={welcomeStyles.calltoactionWrapper}>
-            <Link to="/about" className={welcomeStyles.welcomeButton}>
-              More about me →
-            </Link>
-            {false && (
-              <Link
-                to="/projects"
-                className={welcomeStyles.welcomeButton}
-                style={{
-                  backgroundColor: '#baa1ca',
-                  color: '#000',
-                  border: 'none',
-                }}
-              >
-                View My Work
-              </Link>
-            )}
+            <AboutMeButton to="/about">MORE ABOUT ME →</AboutMeButton>
           </div>
 
           {/* Here goes the social media icons */}
@@ -62,10 +67,10 @@ export const LandingPageHero = (): JSX.Element => {
               newsletter to get the update when it comes out.
             </p>
 
-            <Link to="/newsletter" className={welcomeStyles.subscribeButton}>
+            <SubscribeButton to="/newsletter">
               Subscribe &nbsp;
               <FaTelegramPlane />
-            </Link>
+            </SubscribeButton>
           </div>
         </div>
       </div>

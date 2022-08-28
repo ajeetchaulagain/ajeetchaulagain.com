@@ -56,25 +56,6 @@
       width: 120px;
       height: 120px;
     }
-
-    .subscribe-button {
-      background-color: rgb(227, 226, 224);
-      // border:1px solid white;
-      text-transform: uppercase;
-      padding: 0.5rem 2.5rem;
-      color: black;
-      display: inline-block;
-      vertical-align: middle;
-      margin: 1rem auto;
-
-      svg {
-        display: inline-block;
-      }
-      &:hover {
-        // background-color: rgb(179, 179, 179);
-        color: #5c257f;
-      }
-    }
   }
 }
 
@@ -110,32 +91,6 @@
   font-weight: 400;
   margin-bottom: 1.5rem;
   color: rgb(223, 217, 228);
-}
-
-.welcome-button {
-  border: 1px solid rgb(231, 222, 236);
-  padding: 0.5rem 1rem;
-  display: inline-block;
-  text-decoration: none;
-  color: inherit;
-  text-transform: uppercase;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  margin-bottom: 0.2rem;
-  margin-right: 0.4rem;
-  border-radius: 3px;
-  display: flex;
-  // width:48%;
-  // flex-wrap: wrap;
-  align-items: center;
-  svg {
-    margin-top: 0.2rem;
-  }
-}
-
-.welcome-button:hover {
-  background-color: rgb(231, 222, 236);
-  color: #5c257f;
 }
 
 .particles {

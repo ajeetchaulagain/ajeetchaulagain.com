@@ -31,6 +31,8 @@ const defaultTheme = {
   colors: {
     light: '#e7deec',
     lightGreen: '#d0fd9b',
+    purple: '#5c257f',
+    darkGrey: '#333',
     background: '#fff',
     primary: '#783396',
     secondary: '#767676',
@@ -59,7 +61,7 @@ const defaultTheme = {
   },
   borderRadius: {
     none: 0,
-    base: '0.25em',
+    base: '0.1875rem',
     round: '99999em',
   },
 };
