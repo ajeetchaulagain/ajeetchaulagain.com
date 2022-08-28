@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
-import styled from 'styled-components';
-import { ml, pt, px, mb } from 'styled-components-spacing';
+import styled, { DefaultTheme } from 'styled-components';
+import { ml, pt, mb, px, py } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
 
 export const HeaderWrapper = styled.header`
@@ -33,8 +33,8 @@ export const LogoWrapper = styled.div`
   span {
     text-transform: uppercase;
     ${ml(3)};
-    font-family: ${(props) => props.theme.fonts.heading.secondary}
-    font-weight: ${(props) => props.theme.fontWeights.light};
+    font-family: ${(props) => props.theme.fonts.primaryHeading}
+    font-weight: ${(props) => props.theme.fontWeights[1]};
   }
   ${mb({ xs: 3, md: 0 })}
 `;
@@ -53,16 +53,34 @@ export const NavMenuWrapper = styled.nav`
 
 export const Nav = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const NavItem = styled.li`
   ${ml(3)};
   & > a:hover {
-    color: ${(props) => props.theme.colors.lightGreen};
+    color: ${({ theme }) => theme.colors.lightGreen};
   }
   & > a.activeNavItem {
-    color: ${(props) => props.theme.colors.lightGreen};
-    border-bottom: ${(props) => props.theme.borders.thick};
+    color: ${({ theme }) => theme.colors.lightGreen};
+    border-bottom: ${({ theme }) => theme.borders.thick};
+  }
+  & > a {
+    ${breakpoint('xs', 'sm')`
+      display:block;
+      border: ${({ theme }: { theme: DefaultTheme }) => theme.borders.thin};
+      ${px(2)};
+      ${py(1)};
+      ${mb(2)}
+      &.activeNavItem {
+        background-color: ${({ theme }: { theme: DefaultTheme }) =>
+          theme.colors.light};
+        color:${({ theme }: { theme: DefaultTheme }) => theme.colors.purple};;
+        border:${({ theme }: { theme: DefaultTheme }) => theme.borders.none};
+      }
+    `}
   }
 `;
