@@ -30,6 +30,7 @@ const defaultTheme = {
   },
   colors: {
     light: '#e7deec',
+    lightGreen: '#d0fd9b',
     background: '#fff',
     primary: '#783396',
     secondary: '#767676',
@@ -46,11 +47,7 @@ const defaultTheme = {
       secondary: `'Roboto', sans-serif`,
     },
   },
-  fontWeights: {
-    light: 200,
-    normal: 400,
-    bold: 700,
-  },
+  fontWeights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
   lineHeights: {
     body: 1.5,
     heading: 1.1,
@@ -58,6 +55,7 @@ const defaultTheme = {
   borders: {
     none: 0,
     thin: '1px solid',
+    thick: '2px solid',
   },
   borderRadius: {
     none: 0,
