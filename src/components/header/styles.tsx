@@ -12,7 +12,7 @@ export const HeaderWrapper = styled.header`
 
 export const HeaderContent = styled.div`
   ${pt(5)};
-  ${px(3)}
+  ${px(4)}
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
