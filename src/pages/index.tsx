@@ -13,11 +13,9 @@ import { useBlogPostList, useProjectList } from 'hooks';
 import { PrimaryButtonLink } from 'components/button/Button';
 
 export const indexHeadingStyle = {
-  marginBottom: '.3rem',
   fontWeight: '800',
-  // color: "rgba(92, 37, 127, 1)",
   fontFamily: 'Domine',
-  color: '#31363b',
+  marginBottom: '1rem',
 };
 
 export const indexSubHeadingStyle = {
