@@ -1,8 +1,14 @@
+import React from 'react';
 import styled from 'styled-components';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-export const MarkdownRenderer = styled(MDXRenderer)`
-  margin-top: 1rem;
+const MarkdownWrapper = styled.div`
+  ul,
+  ol {
+    li:last-child {
+      margin-bottom: 1.4rem;
+    }
+  }
   ul li {
     font-size: 1.1rem;
     list-style-type: disc;
@@ -11,9 +17,22 @@ export const MarkdownRenderer = styled(MDXRenderer)`
       color: #7b79f4;
     }
   }
-
   ol li {
     margin-left: 1.1rem;
-    margin-bottom: 0.6rem;
+    &::marker {
+      font-weight: bolder;
+    }
   }
 `;
+
+type MarkdownRendererProps = {
+  children: string;
+};
+
+export const MarkdownRenderer = ({ children }: MarkdownRendererProps) => {
+  return (
+    <MarkdownWrapper>
+      <MDXRenderer>{children}</MDXRenderer>
+    </MarkdownWrapper>
+  );
+};
