@@ -10,6 +10,10 @@ import { QuickInfo } from "../components/utilities/quick-info.tsx"
 
 Suppose you are creating apps or web pages. In that case, you might need an image gallery to share the multiple images on our webpage with the best user interactions possible for the targeted audience. However, creating an image library from scratch that provides a great user experience for to end user requires quite an effort. In this tutorial, we will learn how to use different APIs of the react-image-gallery npm package to create a beautiful and elegant image gallery for your need with minimal effort.
 
+_Screenshot of final application:_
+
+![Final application screenshot](../images/react-image-gallery/final-application-screenshot.png)
+
 ## Why react-image-gallery ?
 
 React image gallery is one of the most popular and community-loved npm packages for providing react components to _build highly customizable_ image galleries. Its popularity among consumers is due to its support for a wide range of features out of the box. These features include _swipe gestures for mobile devices, navigation through thumbnails, responsive design, and much more_. Moreover, the react component provided by the package is highly customizable through different props that will help almost all your job get done as a need of gallery in your project. In this tutorial, we will demonstrate the most used props that will be handy for our project.
@@ -38,11 +42,11 @@ Running the above command will open the new app in localhost:3000
 
 The react app setup through create-react-app will have all the working files placed in a single directory src. The initial directory structure is something like this:
 
-_[Here goes image]_
+![Initial dirctory structure through create-react-app](../images/react-image-gallery/initial-directory-structure.png)
 
 To keep things organized, I will do a minor cleanup of the above initial directory structure and for non-required resources. The final directory would be something like this:
 
-_[Here goes image]_
+![Final dirctory structure](../images/react-image-gallery/final-direcotory-structure.png)
 
 - _components_ directory will contain all our react components.
 - _data_ directory will contain data that need to feed in react-image-gallery
@@ -82,7 +86,7 @@ Please note, react-image-gallery requires a react version 16.0.0 or later as per
 
 The package has a default export called ImageGallery that has items props for providing a list of images we want to display in our gallery. Let's prepare a dummy image data for that by creating a gallery-image.ts file that have a list of images exported.
 
-```js
+```j{numberLines:true}
 export const images = [
   {
     original: 'https://picsum.photos/id/1024/1000/600/',
@@ -112,7 +116,7 @@ export const images = [
 
 Once data is prepared, we will import the ImageGallery component exported by the package and images we just prepared in App.js file and use it through items props. The App.js file will end up with something like this:
 
-```js
+```javascript{numberLines:true}
 import ImageGallery from 'react-image-gallery';
 import { images } from '../data/gallery-image';
 
@@ -138,11 +142,11 @@ _Note_: I have amended some change in JSX part of the App component to assist CS
 
 Now if you view the browser, you will see a beautiful image gallery rendered for us, something like this:
 
-_[Here goes the image]_
+![Image gallery without styles](../images/react-image-gallery/image-gallery-without-styles.png)
 
 Currently, the ImageGallery is rendered full width in its container. Add the following CSS code in the _index.css_ file to give it a nice feel.
 
-```css
+```css{numberLines:true}
 header {
   background-color: #5c0080;
   margin-bottom: 4rem;
@@ -178,7 +182,7 @@ header {
 
 As you can see, In the above code, we are adding some styles to the wrapper of the image gallery and the navigation bar. After this style is in place, you will have a beautiful image gallery displayed like this in the browser:
 
-_[Here goes other image]_
+![Final image gallery](../images/react-image-gallery/final-application-screenshot.png)
 
 Yahoo! We made beautiful and responsive image galleries. You can view the demo for this app at -
 
