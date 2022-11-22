@@ -1,11 +1,11 @@
 import React from 'react';
-import { GatsbyImage } from 'gatsby-plugin-image';
 
 import { useAuthorImage } from '../../hooks/use-author-image';
 import * as jumbotronStyles from './about-jumbotron.module.scss';
 import { PrimaryButtonLink } from 'components/button/Button';
 import coffeImage from '../../images/cuplogo-sm.png';
 import styled from 'styled-components';
+import { StyledGatsbyImage } from 'components/gatsby-image/StyledGatsbyImage';
 
 const StyledImg = styled.img`
   height: auto;
@@ -19,7 +19,7 @@ export const AboutJumbotronBlog = (): JSX.Element => {
   return (
     <div className={jumbotronStyles.wrapper}>
       <div className={jumbotronStyles.imageWrapper}>
-        <GatsbyImage image={gatsbyImageData} alt="author-profile-image" />
+        <StyledGatsbyImage image={gatsbyImageData} alt="author-profile-image" />
       </div>
       <div className={jumbotronStyles.contentWrapper}>
         <p>
