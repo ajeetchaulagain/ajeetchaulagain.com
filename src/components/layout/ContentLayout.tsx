@@ -1,11 +1,11 @@
 import React, { ReactNode } from 'react';
 import { MDXProvider } from '@mdx-js/react';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { StyledGatsbyImage } from 'components/gatsby-image/StyledGatsbyImage';
 
 import { ContactForm } from '../contact-form/ContactForm';
 import * as contentLayoutStyles from './content-layout.module.scss';
 
-const shortCodes = { ContactForm, GatsbyImage };
+const shortCodes = { ContactForm, StyledGatsbyImage };
 
 type ContentLayoutProps = {
   bgcolor?: string;

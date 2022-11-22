@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
 
 import { BlogListEdge } from '../../hooks/useBlogPostList';
 import * as blogStyles from './blog.module.scss';
 import styled from 'styled-components';
+import { StyledGatsbyImage } from 'components/gatsby-image/StyledGatsbyImage';
 
 type BlogListProps = {
   blogPostList: BlogListEdge[];
@@ -27,7 +27,7 @@ export const BlogList = ({ blogPostList }: BlogListProps): JSX.Element => {
           <StyledLink to={`/blog/${edge.node.fields.slug}`}>
             <article className={blogStyles.blogItem}>
               <figure>
-                <GatsbyImage
+                <StyledGatsbyImage
                   image={
                     edge.node.frontmatter.thumbnail.childImageSharp
                       .gatsbyImageData
