@@ -7,20 +7,19 @@
   border-radius: 5px solid black;
 
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
   margin-bottom: 2.5rem;
   margin-top: 1.3rem;
+  flex-direction: row;
+  justify-content: flex-start;
 
   div {
-    width: 10%;
     font-size: 3rem;
     line-height: 1;
     color: rgb(88, 23, 101);
+    margin-right: 1rem;
   }
   p {
-    width: 85%;
     margin-top: 1rem;
     line-height: 1.5;
   }
