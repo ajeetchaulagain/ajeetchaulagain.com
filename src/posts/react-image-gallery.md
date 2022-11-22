@@ -8,17 +8,20 @@ author: 'Ajeet Chaulagain'
 
 import { QuickInfo } from "../components/utilities/quick-info.tsx"
 
-Suppose you are creating apps or web pages. In that case, you might need an image gallery to share the multiple images on our webpage with the best user interactions possible for the targeted audience. However, creating an image library from scratch that provides a great user experience for to end user requires quite an effort. In this tutorial, we will learn how to use different APIs of the react-image-gallery npm package to create a beautiful and elegant image gallery for your need with minimal effort.
+Suppose you are creating apps or web pages. In that case, you might need an image gallery to share the multiple images on our webpage with the best user interactions possible for the targeted audience. However, creating an image library from scratch that provides a great user experience for to end user requires quite an effort. In this tutorial, we will learn how to use different* APIs of the react-image-gallery* npm package to create a _beautiful and elegant image gallery_ for your need with minimal effort.
 
 _Screenshot of final application:_
 
 ![Final application screenshot](../images/react-image-gallery/final-application-screenshot.png)
 
+Here is the final source code and demo of the app:
+
+- [View Source code on Github](https://github.com/ajeetchaulagain/react-image-gallery-demo)
+- [View project demo](https://react-image-gallery-demo.ajeetchaulagain.com/)
+
 ## Why react-image-gallery ?
 
 React image gallery is one of the most popular and community-loved npm packages for providing react components to _build highly customizable_ image galleries. Its popularity among consumers is due to its support for a wide range of features out of the box. These features include _swipe gestures for mobile devices, navigation through thumbnails, responsive design, and much more_. Moreover, the react component provided by the package is highly customizable through different props that will help almost all your job get done as a need of gallery in your project. In this tutorial, we will demonstrate the most used props that will be handy for our project.
-
-- [Source code](https://github.com/ajeetchaulagain/react-image-gallery-demo) of the final application.
 
 ## Installation and Initial Setup
 
@@ -36,7 +39,7 @@ Once the project is created, _cd_ to the newly created directory and start the p
 cd react-image-gallery-demo && npm start
 ```
 
-Running the above command will open the new app in localhost:3000
+Running the above command will open the new app in _localhost:3000_
 
 ### Directory and imports cleanup
 
@@ -114,7 +117,7 @@ export const images = [
 <QuickInfo url="https://picsum.photos/" name="picsum.photos"> provides the placeholder image with the advanced usage. It supports various query params in the request URL to get the image you need.
 </QuickInfo>
 
-Once data is prepared, we will import the ImageGallery component exported by the package and images we just prepared in App.js file and use it through items props. The App.js file will end up with something like this:
+Once data is prepared, we will import the ImageGallery component exported by the package and images we just prepared in App.js file and use it through items props. The _App.js_ file will end up with something like this:
 
 ```javascript{numberLines:true}
 import ImageGallery from 'react-image-gallery';
@@ -180,14 +183,29 @@ header {
 }
 ```
 
-As you can see, In the above code, we are adding some styles to the wrapper of the image gallery and the navigation bar. After this style is in place, you will have a beautiful image gallery displayed like this in the browser:
+As you can see, In the above code, we are adding some styles to the wrapper of the image gallery and the navigation bar. After this style is in place, you will have a beautiful image gallery displayed in the browser:
 
 ![Final image gallery](../images/react-image-gallery/final-application-screenshot.png)
 
-Yahoo! We made beautiful and responsive image galleries. You can view the demo for this app at -
+Yahoo! We made beautiful and responsive image galleries. You can view the demo for this app [here](https://github.com/ajeetchaulagain/react-image-gallery-demo)
 
 ## Customizing React image gallery
 
-We already made the beautiful image gallery, without configuring any props and relying on the defaults. We can provide custom value to different props supported by packages for customizing as per needs.
+We made the beautiful image gallery without configuring any props and relying on the defaults. We can also provide custom value to different props supported by packages for customizing as per needs. The [documentation for react-image-gallery](https://github.com/xiaolin/react-image-gallery#user-content-props) package is decent, and I suggest checking it out for a wide range of possible configurations.
 
-Let's get started discussing a few of the common props that might be handy.
+For example, Suppose we want our gallery to be auto-played and don't want thumbnails to display. In that case, we can pass _autoPlay_ props to _true_ and _showThumbnails_ props to _false_ in an _ImageGallery_ component.
+
+```js
+<ImageGallery items={images} autoPlay={true} showThumbnails={false} />
+```
+
+This is how it looks with above props in place:
+
+![Image gallery without thumbnail and auto play](../images/react-image-gallery/image-gallery-without-thumbnai-and-autoplay.png)
+
+## Conclusion
+
+This article should have given you a basic idea of how we can leverage third-party modules like react-image-gallery to build an image gallery with minimal effort.
+
+- [View Source code on Github](https://github.com/ajeetchaulagain/react-image-gallery-demo)
+- [View Project Demo](https://react-image-gallery-demo.ajeetchaulagain.com/)
