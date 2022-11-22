@@ -51,7 +51,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     query {
       allMdx(
         filter: { fields: { contentType: { eq: "posts" } } }
-        sort: { order: ASC, fields: [frontmatter___date] }
+        sort: { order: DESC, fields: [frontmatter___date] }
       ) {
         edges {
           node {
