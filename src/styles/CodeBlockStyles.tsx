@@ -35,7 +35,7 @@ export const CodeBlockStyles = css`
 
   .gatsby-highlight {
     -webkit-font-smoothing: subpixel-antialiased;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     background-color: #2d2d2d;
     border-radius: 0.2rem;
     margin: 0rem 0 2rem;
