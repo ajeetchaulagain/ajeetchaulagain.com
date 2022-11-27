@@ -20,7 +20,7 @@ const BlogPage = () => {
         <h1 style={indexHeadingStyle}>Articles & Tutorials</h1>
         <BlogList blogPostList={blogPostList} />
       </ContentLayout>
-      <ContentLayout bgcolor="#3D3D3D">
+      <ContentLayout>
         <NewsLetter />
       </ContentLayout>
     </MasterLayout>

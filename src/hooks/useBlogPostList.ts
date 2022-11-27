@@ -19,7 +19,11 @@ export type BlogListEdge = {
 export const useBlogPostList = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMdx(filter: { fields: { contentType: { eq: "posts" } } }, limit: 6) {
+      allMdx(
+        filter: { fields: { contentType: { eq: "posts" } } }
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 6
+      ) {
         edges {
           node {
             frontmatter {

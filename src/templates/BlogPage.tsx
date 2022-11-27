@@ -3,12 +3,12 @@ import { MasterLayout } from '../components/layout';
 import { IntroSection } from '../components/intro-section/IntroSection';
 import ContentLayout from '../components/layout/ContentLayout';
 import * as blogTemplateStyles from './blog-template.module.scss';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import { graphql, Link, PageProps } from 'gatsby';
 import { AboutJumbotronBlog } from '../components/about-jumbotron/AboutJumbotron';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { NewsLetter } from '../components/newsletter/NewsLetter';
+import { MarkdownRenderer } from 'components';
 
 export const query = graphql`
   query ($slug: String!) {
@@ -102,9 +102,8 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
               />
             </div>
           </header>
-          <div className={blogTemplateStyles.mdxWrapper}>
-            <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
-          </div>
+
+          <MarkdownRenderer>{props.data.mdx.body}</MarkdownRenderer>
 
           <div className={blogTemplateStyles.pageNavigation}>
             {prev && (

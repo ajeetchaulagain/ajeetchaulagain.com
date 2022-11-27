@@ -26,7 +26,7 @@ export const AboutJumbotronBlog = (): JSX.Element => {
           Hi, I am Ajeet, a pragmatic software engineer based in Melbourne,
           Australia. I write an article about
           <em> modern software development and my side projects</em> to help the
-          beginner start their career in software engineering. If my site has
+          beginner start their career in software engineering. If this site has
           helped you somehow to learn, I would be grateful if you consider
           supporting me.
         </p>
