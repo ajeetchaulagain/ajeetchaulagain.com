@@ -10,7 +10,7 @@ import { QuickInfo } from "../components/utilities/quick-info.tsx"
 
 If you are creating web pages, you might need an image gallery showing multiple images at some point. However, developing an image gallery from scratch is quite an effort as you need to consider several things, such as user experience, customizability, and probably more features support. But a community-loved React package, [react-image-gallery,](https://www.npmjs.com/package/react-image-gallery) will help you develop a beautiful image gallery with a wide range of [features and customizability](https://github.com/xiaolin/react-image-gallery#user-content-features)
 
-React image gallery is one of the [most popular NPM package](https://npmtrends.com/react-gallery-swiper-vs-react-grid-gallery-vs-react-image-gallery-vs-react-image-lightbox-vs-react-image-slider-vs-react-images) that provide React component to build highly customizable image galleries. Also, It supports a wide range of features out of the box. These features include swipe gestures for mobile devices, navigation through thumbnails, responsive design, and much more. In this tutorial, you will learn how to build a _beautiful and elegant image gallery_ using a react-image-gallery NPM package. Let's get started.
+React image gallery is one of the [most popular npm package](https://npmtrends.com/react-gallery-swiper-vs-react-grid-gallery-vs-react-image-gallery-vs-react-image-lightbox-vs-react-image-slider-vs-react-images) that provide React component to build highly customizable image galleries. Also, It supports a wide range of features out of the box. These features include swipe gestures for mobile devices, navigation through thumbnails, responsive design, and much more. In this tutorial, you will learn how to build a _beautiful and elegant image gallery_ using a react-image-gallery npm package. Let's get started.
 
 _Screenshot of final application:_
 
@@ -63,7 +63,7 @@ To achieve the above cleanup:
 
 ### Adding CSS reset file
 
-To avoid browser default stylings for different HTML elements, Let's add a CSS reset code provided by https://meyerweb.com/eric/tools/css/reset/. To add the CSS reset code to the project, copy and paste the above code to a new file called _css-reset.css_ in the _styles_ directory. And reference that newly created file in _index.css_, which acts as our entry point for all the CSS:
+To avoid browser default stylings for different HTML elements, you will add a CSS reset code provided by https://meyerweb.com/eric/tools/css/reset/. To add the CSS reset code to the project, copy and paste the above code to a new file called _css-reset.css_ in the _styles_ directory. And reference that newly created file in _index.css_, which acts as our entry point for all the CSS:
 
 ```css
 @import './css-reset.css';
@@ -209,5 +209,5 @@ This tutorial gives you a basic idea of leveraging third-party modules like reac
 
 - [View Source code on Github](https://github.com/ajeetchaulagain/react-image-gallery-demo)
 - [View Project Demo](https://react-image-gallery-demo.ajeetchaulagain.com/)
-- [React Image Gallery NPM Package](https://www.npmjs.com/package/react-image-gallery)
+- [React Image Gallery npm package](https://www.npmjs.com/package/react-image-gallery)
 - Icons made by [Freepik](https://www.freepik.com) from [www.flaticon.com](https://www.flaticon.com/)
