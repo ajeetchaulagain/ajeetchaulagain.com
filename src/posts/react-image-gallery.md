@@ -1,6 +1,6 @@
 ---
 title: 'How to use React Image Gallery to build a beautiful and responsive image gallery'
-date: '2022-11-26'
+date: '2022-11-27'
 tags: ['javascript', 'react', 'image-gallery', 'image-carousel']
 thumbnail: ../images/thumbnails/image-gallery-icon.png
 author: 'Ajeet Chaulagain'
