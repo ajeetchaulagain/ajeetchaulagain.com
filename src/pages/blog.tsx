@@ -6,6 +6,7 @@ import {
   IntroSection,
   BlogList,
   NewsLetter,
+  SEO,
 } from 'components';
 import { useBlogPostList } from 'hooks';
 import { indexHeadingStyle } from '.';
@@ -27,3 +28,9 @@ const BlogPage = () => {
   );
 };
 export default BlogPage;
+
+export const Head = () => {
+  return (
+    <SEO title="Articles" description="Recent articles and tutorials from me" />
+  );
+};
