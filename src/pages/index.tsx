@@ -8,10 +8,10 @@ import {
   MasterLayout,
   ContentLayout,
   NewsLetter,
+  SEO,
 } from 'components';
 import { useBlogPostList, useProjectList } from 'hooks';
 import { PrimaryButtonLink } from 'components/button/Button';
-import { SEO } from 'components/seo';
 
 export const indexHeadingStyle = {
   fontWeight: '800',

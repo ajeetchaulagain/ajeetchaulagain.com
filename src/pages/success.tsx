@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import { MasterLayout, ContentLayout, IntroSection } from 'components';
+import { MasterLayout, ContentLayout, IntroSection, SEO } from 'components';
 
 const FormSubmissionSuccess = () => {
   return (
@@ -23,3 +23,7 @@ const FormSubmissionSuccess = () => {
 };
 
 export default FormSubmissionSuccess;
+
+export const Head = () => {
+  return <SEO title="Thankyou for contacting me" />;
+};

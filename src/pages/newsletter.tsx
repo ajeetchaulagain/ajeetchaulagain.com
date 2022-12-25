@@ -6,6 +6,7 @@ import {
   ContentLayout,
   IntroSection,
   NewsLetter,
+  SEO,
 } from 'components';
 
 const NewsLetterPage = () => {
@@ -26,3 +27,7 @@ const NewsLetterPage = () => {
 };
 
 export default NewsLetterPage;
+
+export const Head = () => {
+  return <SEO title="Newsletter" description="Subscribe to my newsletter" />;
+};

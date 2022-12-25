@@ -19,7 +19,7 @@ export const SEO = ({ title, description, pathname, children }: SEOProps) => {
   } = useSiteMetadata();
 
   const seo = {
-    title: title || defaultTitle,
+    title: title ? `${title} | ${defaultTitle}` : defaultTitle,
     description: description || defaultDescription,
     image: `${siteUrl}${image}`,
     url: `${siteUrl}${pathname || ``}`,

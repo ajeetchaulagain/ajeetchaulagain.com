@@ -7,6 +7,7 @@ import {
   ContactForm,
   MarkdownRenderer,
   SocialMediaIcons,
+  SEO,
 } from 'components';
 
 const ContactPage = () => {
@@ -35,3 +36,7 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
+
+export const Head = () => {
+  return <SEO title="Contact Me" />;
+};
