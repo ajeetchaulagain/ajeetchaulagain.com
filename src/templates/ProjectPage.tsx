@@ -4,17 +4,19 @@ import React from 'react';
 import MasterLayout from '../components/layout/MasterLayout';
 import { IntroSection } from '../components/intro-section/IntroSection';
 import ContentLayout from '../components/layout/ContentLayout';
-import { Link, PageProps } from 'gatsby';
+import { HeadProps, Link, PageProps } from 'gatsby';
 import { FaArrowLeft } from 'react-icons/fa';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import * as projectStyles from './project-template.module.scss';
 import { graphql } from 'gatsby';
+import { SEO } from 'components';
 
 export const query = graphql`
   query ($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
+        description
       }
       body
     }
@@ -25,6 +27,7 @@ type DataProps = {
   mdx: {
     frontmatter: {
       title: string;
+      description: string;
     };
     body: string;
     timeToRead: string;
@@ -61,3 +64,8 @@ const ProjectTemplate: React.FC<PageProps<DataProps, unknown>> = (props) => {
 };
 
 export default ProjectTemplate;
+
+export const Head = (props: HeadProps<DataProps>) => {
+  const { title, description } = props.data.mdx.frontmatter;
+  return <SEO title={title} description={description} />;
+};
