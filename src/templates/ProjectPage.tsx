@@ -4,7 +4,7 @@ import React from 'react';
 import MasterLayout from '../components/layout/MasterLayout';
 import { IntroSection } from '../components/intro-section/IntroSection';
 import ContentLayout from '../components/layout/ContentLayout';
-import { HeadProps, Link, PageProps } from 'gatsby';
+import { Link, PageProps } from 'gatsby';
 import { FaArrowLeft } from 'react-icons/fa';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import * as projectStyles from './project-template.module.scss';
@@ -35,8 +35,10 @@ type DataProps = {
 };
 
 const ProjectTemplate: React.FC<PageProps<DataProps, unknown>> = (props) => {
+  const { title, description } = props.data.mdx.frontmatter;
   return (
     <MasterLayout>
+      <SEO title={title} description={description} />
       <IntroSection />
       <ContentLayout>
         <div className={projectStyles.header}>
@@ -64,8 +66,3 @@ const ProjectTemplate: React.FC<PageProps<DataProps, unknown>> = (props) => {
 };
 
 export default ProjectTemplate;
-
-export const Head = (props: HeadProps<DataProps>) => {
-  const { title, description } = props.data.mdx.frontmatter;
-  return <SEO title={title} description={description} />;
-};

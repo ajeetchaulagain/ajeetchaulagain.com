@@ -15,6 +15,7 @@ const ProjectsPage = () => {
   const projectList = useProjectList();
   return (
     <MasterLayout>
+      <SEO title="Projects" description="List of projects" />
       <IntroSection />
       <ContentLayout>
         <h1 style={indexHeadingStyle}>Projects</h1>
@@ -26,7 +27,3 @@ const ProjectsPage = () => {
 };
 
 export default ProjectsPage;
-
-export const Head = () => {
-  return <SEO title="Projects" description="List of projects" />;
-};

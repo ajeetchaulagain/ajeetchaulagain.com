@@ -16,6 +16,10 @@ const BlogPage = () => {
 
   return (
     <MasterLayout>
+      <SEO
+        title="Articles"
+        description="Recent articles and tutorials from me"
+      />
       <IntroSection />
       <ContentLayout>
         <h1 style={indexHeadingStyle}>Articles & Tutorials</h1>
@@ -28,9 +32,3 @@ const BlogPage = () => {
   );
 };
 export default BlogPage;
-
-export const Head = () => {
-  return (
-    <SEO title="Articles" description="Recent articles and tutorials from me" />
-  );
-};

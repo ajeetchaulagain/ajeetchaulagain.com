@@ -12,6 +12,7 @@ import {
 const NewsLetterPage = () => {
   return (
     <MasterLayout>
+      <SEO title="Newsletter" description="Subscribe to my newsletter" />
       <IntroSection />
       <ContentLayout>
         <div>
@@ -27,7 +28,3 @@ const NewsLetterPage = () => {
 };
 
 export default NewsLetterPage;
-
-export const Head = () => {
-  return <SEO title="Newsletter" description="Subscribe to my newsletter" />;
-};

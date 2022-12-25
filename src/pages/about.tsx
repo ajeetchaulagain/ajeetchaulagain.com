@@ -19,11 +19,15 @@ const AboutImage = styled(StyledGatsbyImage)`
 `;
 
 const AboutPage = () => {
-  const { body } = useAboutPageDetails();
+  const {
+    body,
+    frontmatter: { title, description },
+  } = useAboutPageDetails();
   const { gatsbyImageData } = useAuthorImage();
 
   return (
     <MasterLayout>
+      <SEO title={title} description={description} />
       <IntroSection />
       <ContentLayout>
         <AboutImage image={gatsbyImageData} alt="about-image" />
@@ -35,11 +39,3 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
-
-export const Head = () => {
-  const {
-    frontmatter: { title, description },
-  } = useAboutPageDetails();
-
-  return <SEO title={title} description={description} />;
-};

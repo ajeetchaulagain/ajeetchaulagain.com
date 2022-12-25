@@ -40,6 +40,7 @@ const IndexPage = () => {
 
   return (
     <MasterLayout>
+      <SEO />
       <LandingPageHero />
       <ContentLayout>
         <h1 style={indexHeadingStyle}>
@@ -68,7 +69,3 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
-
-export const Head = () => {
-  return <SEO />;
-};

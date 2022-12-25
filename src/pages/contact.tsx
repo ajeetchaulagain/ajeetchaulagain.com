@@ -24,6 +24,7 @@ const ContactPage = () => {
 
   return (
     <MasterLayout>
+      <SEO title="Contact Me" />
       <IntroSection />
       <ContentLayout>
         <MarkdownRenderer>{contactPageData.mdx.body}</MarkdownRenderer>
@@ -36,7 +37,3 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
-
-export const Head = () => {
-  return <SEO title="Contact Me" />;
-};
