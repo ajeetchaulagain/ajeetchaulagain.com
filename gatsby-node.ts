@@ -1,6 +1,6 @@
-const path = require('path');
+import path from 'path';
 
-module.exports.onCreateWebpackConfig = ({ stage, actions }) => {
+export const onCreateWebpackConfig = ({ stage, actions }) => {
   actions.setWebpackConfig({
     resolve: {
       modules: [path.resolve(__dirname, 'src/'), 'node_modules'],
@@ -8,10 +8,8 @@ module.exports.onCreateWebpackConfig = ({ stage, actions }) => {
   });
 };
 
-module.exports.onCreateNode = ({ node, actions }) => {
+export const onCreateNode = ({ node, actions }) => {
   const { createNode, createNodeField } = actions;
-  // Transform the new node here and create a new node or
-  // create a new node field.
 
   if (node.internal.type === 'Mdx') {
     const slug = path.basename(node.fileAbsolutePath, '.md');
@@ -41,7 +39,7 @@ module.exports.onCreateNode = ({ node, actions }) => {
   }
 };
 
-module.exports.createPages = async ({ graphql, actions }) => {
+export const createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
   const blogTemplate = path.resolve('./src/templates/BlogPage.tsx');
@@ -95,15 +93,6 @@ module.exports.createPages = async ({ graphql, actions }) => {
       },
     });
   });
-  // postOnlyResult.data.allMdx.edges.forEach(edge => {
-  //   createPage({
-  //     component: blogTemplate,
-  //     path: `/blog/${edge.node.fields.slug}`,
-  //     context: {
-  //       slug: edge.node.fields.slug,
-  //     },
-  //   })
-  // })
 
   projectOnlyResult.data.allMdx.edges.forEach((edge) => {
     createPage({
