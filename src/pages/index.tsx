@@ -11,6 +11,7 @@ import {
 } from 'components';
 import { useBlogPostList, useProjectList } from 'hooks';
 import { PrimaryButtonLink } from 'components/button/Button';
+import { SEO } from 'components/seo';
 
 export const indexHeadingStyle = {
   fontWeight: '800',
@@ -67,3 +68,8 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+export const Head = () => {
+  console.log('headComponent');
+  return <SEO />;
+};
