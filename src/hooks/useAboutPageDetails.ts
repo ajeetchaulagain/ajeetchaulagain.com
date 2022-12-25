@@ -1,17 +1,15 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-type QueryTypes = {
-  mdx: {
-    frontmatter: {
-      title: string;
-      description: string;
-    };
-    body: string;
+type AboutPageDetails = {
+  frontmatter: {
+    title: string;
+    description: string;
   };
+  body: string;
 };
 
 export const useAboutPageDetails = () => {
-  const { mdx } = useStaticQuery<QueryTypes>(graphql`
+  const data = useStaticQuery<{ mdx: AboutPageDetails }>(graphql`
     query {
       mdx(fields: { slug: { eq: "about" } }) {
         frontmatter {
@@ -23,5 +21,5 @@ export const useAboutPageDetails = () => {
     }
   `);
 
-  return mdx;
+  return data.mdx;
 };
