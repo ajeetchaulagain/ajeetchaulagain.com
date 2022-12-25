@@ -70,6 +70,5 @@ const IndexPage = () => {
 export default IndexPage;
 
 export const Head = () => {
-  console.log('headComponent');
   return <SEO />;
 };
