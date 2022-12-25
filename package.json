@@ -37,6 +37,7 @@
     "gatsby-plugin-react-svg": "^3.0.1",
     "gatsby-plugin-sass": "^4.7.1",
     "gatsby-plugin-sharp": "^4.21.0",
+    "gatsby-plugin-sitemap": "5.25.0",
     "gatsby-plugin-styled-components": "^5.21.0",
     "gatsby-remark-copy-linked-files": "^4.4.1",
     "gatsby-remark-images": "^5.4.1",
@@ -58,9 +59,9 @@
     "react-icons": "^4.2.0",
     "react-particles-js": "^3.4.1",
     "styled-components": "^5.3.5",
-    "typescript": "^4.3.5",
     "styled-components-breakpoint": "^2.1.1",
-    "styled-components-spacing": "^3.1.1"
+    "styled-components-spacing": "^3.1.1",
+    "typescript": "^4.3.5"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.28.2",
