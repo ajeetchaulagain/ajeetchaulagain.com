@@ -10,3 +10,4 @@ export * from './markdown-renderer/MarkdownRenderer';
 export * from './project-list/ProjectList';
 export * from './newsletter/NewsLetter';
 export * from './utilities/social-media-icons';
+export * from './seo';
