@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from 'gatsby';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
 
-export type BlogListEdge = {
+export type BlogPostEdge = {
   node: {
     fields: { slug: any };
     frontmatter: {
@@ -16,8 +16,14 @@ export type BlogListEdge = {
   };
 };
 
+type QueryTypes = {
+  allMdx: {
+    edges: BlogPostEdge[];
+  };
+};
+
 export const useBlogPostList = () => {
-  const data = useStaticQuery(graphql`
+  const data = useStaticQuery<QueryTypes>(graphql`
     query {
       allMdx(
         filter: { fields: { contentType: { eq: "posts" } } }
@@ -47,5 +53,5 @@ export const useBlogPostList = () => {
       }
     }
   `);
-  return data.allMdx.edges as BlogListEdge[];
+  return data.allMdx.edges;
 };
