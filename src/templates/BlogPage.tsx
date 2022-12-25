@@ -4,17 +4,18 @@ import { IntroSection } from '../components/intro-section/IntroSection';
 import ContentLayout from '../components/layout/ContentLayout';
 import * as blogTemplateStyles from './blog-template.module.scss';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
-import { graphql, Link, PageProps } from 'gatsby';
+import { graphql, HeadProps, Link, PageProps } from 'gatsby';
 import { AboutJumbotronBlog } from '../components/about-jumbotron/AboutJumbotron';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { NewsLetter } from '../components/newsletter/NewsLetter';
-import { MarkdownRenderer } from 'components';
+import { MarkdownRenderer, SEO } from 'components';
 
 export const query = graphql`
   query ($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
+        description
         tags
         date(formatString: "MMMM DD, YYYY")
         author
@@ -34,6 +35,7 @@ type DataProps = {
   mdx: {
     frontmatter: {
       title: string;
+      description: string;
       date: string;
       tags: string[];
       thumbnail: {
@@ -70,6 +72,8 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
   props
 ): JSX.Element => {
   const { next, prev } = props.pageContext;
+
+  console.log('props', props);
 
   return (
     <MasterLayout>
@@ -141,3 +145,8 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
 };
 
 export default BlogTemplate;
+
+export const Head = (props: HeadProps<DataProps>) => {
+  const { title, description } = props.data.mdx.frontmatter;
+  return <SEO title={title} description={description} />;
+};

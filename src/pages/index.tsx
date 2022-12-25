@@ -8,6 +8,7 @@ import {
   MasterLayout,
   ContentLayout,
   NewsLetter,
+  SEO,
 } from 'components';
 import { useBlogPostList, useProjectList } from 'hooks';
 import { PrimaryButtonLink } from 'components/button/Button';
@@ -67,3 +68,7 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+export const Head = () => {
+  return <SEO />;
+};

@@ -5,6 +5,7 @@ import {
   ContentLayout,
   IntroSection,
   ProjectList,
+  SEO,
 } from 'components';
 import { useProjectList } from 'hooks';
 
@@ -25,3 +26,7 @@ const ProjectsPage = () => {
 };
 
 export default ProjectsPage;
+
+export const Head = () => {
+  return <SEO title="Projects" description="List of projects" />;
+};

@@ -1,14 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
-
-import { BlogListEdge } from '../../hooks/useBlogPostList';
 import * as blogStyles from './blog.module.scss';
 import styled from 'styled-components';
 import { StyledGatsbyImage } from 'components/gatsby-image/StyledGatsbyImage';
-
-type BlogListProps = {
-  blogPostList: BlogListEdge[];
-};
+import { BlogPostEdge } from 'hooks';
 
 const StyledLink = styled(Link)`
   text-decoration: none !important;
@@ -19,7 +14,11 @@ const StyledLink = styled(Link)`
   }
 `;
 
-export const BlogList = ({ blogPostList }: BlogListProps): JSX.Element => {
+export const BlogList = ({
+  blogPostList,
+}: {
+  blogPostList: BlogPostEdge[];
+}): JSX.Element => {
   return (
     <div className={blogStyles.blogWrapper}>
       {blogPostList.map((edge) => {

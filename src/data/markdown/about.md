@@ -1,5 +1,6 @@
 ---
-title: 'About'
+title: 'About Me'
+description: 'Pragmatic software engineer passionate about building scalable and maintainable software applications with beautifully crafted code. This is my digital space.'
 ---
 
 # About

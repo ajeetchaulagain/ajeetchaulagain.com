@@ -6,8 +6,12 @@
 
 module.exports = {
   siteMetadata: {
-    title: ' Ajeet Chaulagain',
-    author: 'Ajeet Chaulagain',
+    title: `Ajeet Chaulagain`,
+    author: `Ajeet Chaulagain`,
+    description: `Personal site of Ajeet Chaulagain sharing articles related to all things modern software development`,
+    siteUrl: `https://ajeetchaulagain.com/`,
+    image: '/ajeet.jpg',
+    twitterUsername: '@ajeetsweb',
   },
   plugins: [
     'gatsby-plugin-sass',

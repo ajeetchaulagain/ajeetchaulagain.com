@@ -1,5 +1,4 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import {
   MasterLayout,
@@ -7,8 +6,9 @@ import {
   IntroSection,
   NewsLetter,
   MarkdownRenderer,
+  SEO,
 } from 'components';
-import { useAuthorImage } from 'hooks';
+import { useAuthorImage, useAboutPageDetails } from 'hooks';
 import { StyledGatsbyImage } from 'components/gatsby-image/StyledGatsbyImage';
 
 const AboutImage = styled(StyledGatsbyImage)`
@@ -19,17 +19,7 @@ const AboutImage = styled(StyledGatsbyImage)`
 `;
 
 const AboutPage = () => {
-  const aboutPageData = useStaticQuery(graphql`
-    query SiteAboutPage {
-      mdx(fields: { slug: { eq: "about" } }) {
-        frontmatter {
-          title
-        }
-        body
-      }
-    }
-  `);
-
+  const { body } = useAboutPageDetails();
   const { gatsbyImageData } = useAuthorImage();
 
   return (
@@ -37,7 +27,7 @@ const AboutPage = () => {
       <IntroSection />
       <ContentLayout>
         <AboutImage image={gatsbyImageData} alt="about-image" />
-        <MarkdownRenderer>{aboutPageData.mdx.body}</MarkdownRenderer>
+        <MarkdownRenderer>{body}</MarkdownRenderer>
         <NewsLetter />
       </ContentLayout>
     </MasterLayout>
@@ -45,3 +35,11 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+
+export const Head = () => {
+  const {
+    frontmatter: { title, description },
+  } = useAboutPageDetails();
+
+  return <SEO title={title} description={description} />;
+};
