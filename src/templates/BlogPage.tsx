@@ -4,7 +4,7 @@ import { IntroSection } from '../components/intro-section/IntroSection';
 import ContentLayout from '../components/layout/ContentLayout';
 import * as blogTemplateStyles from './blog-template.module.scss';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
-import { graphql, HeadProps, Link, PageProps } from 'gatsby';
+import { graphql, Link, PageProps } from 'gatsby';
 import { AboutJumbotronBlog } from '../components/about-jumbotron/AboutJumbotron';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { NewsLetter } from '../components/newsletter/NewsLetter';
@@ -72,11 +72,11 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
   props
 ): JSX.Element => {
   const { next, prev } = props.pageContext;
-
-  console.log('props', props);
+  const { title, description } = props.data.mdx.frontmatter;
 
   return (
     <MasterLayout>
+      <SEO title={title} description={description} />
       <IntroSection />
       <ContentLayout>
         <div className={blogTemplateStyles.postWrapper}>
@@ -145,8 +145,3 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
 };
 
 export default BlogTemplate;
-
-export const Head = (props: HeadProps<DataProps>) => {
-  const { title, description } = props.data.mdx.frontmatter;
-  return <SEO title={title} description={description} />;
-};

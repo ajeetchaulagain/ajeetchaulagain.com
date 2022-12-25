@@ -6,6 +6,7 @@ import { MasterLayout, ContentLayout, IntroSection, SEO } from 'components';
 const FormSubmissionSuccess = () => {
   return (
     <MasterLayout>
+      <SEO title="Thankyou for contacting me" />
       <IntroSection />
       <ContentLayout minHeight="40rem">
         <div>
@@ -23,7 +24,3 @@ const FormSubmissionSuccess = () => {
 };
 
 export default FormSubmissionSuccess;
-
-export const Head = () => {
-  return <SEO title="Thankyou for contacting me" />;
-};
