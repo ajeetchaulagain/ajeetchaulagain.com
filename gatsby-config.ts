@@ -4,7 +4,9 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-module.exports = {
+import type { GatsbyConfig } from 'gatsby';
+
+const config: GatsbyConfig = {
   siteMetadata: {
     title: `Ajeet Chaulagain`,
     author: `Ajeet Chaulagain`,
@@ -198,3 +200,5 @@ module.exports = {
 
   pathPrefix: '/gatsby-portfolio',
 };
+
+export default config;
