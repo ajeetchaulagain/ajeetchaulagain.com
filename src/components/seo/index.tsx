@@ -28,7 +28,11 @@ export const SEO = ({ title, description, pathname, children }: SEOProps) => {
   };
 
   return (
-    <Helmet>
+    <Helmet
+      htmlAttributes={{
+        lang: 'en',
+      }}
+    >
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
