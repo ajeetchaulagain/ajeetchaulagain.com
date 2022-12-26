@@ -12,5 +12,6 @@ declare module 'styled-components' {
     lineHeights: Record<string, number>;
     borders: Record<string, string>;
     borderRadius: Record<string, string>;
+    buttonColors: Record<string, any>;
   }
 }

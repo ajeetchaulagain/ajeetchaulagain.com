@@ -2,6 +2,7 @@
 title: 'React Clean Code Pattern'
 description: 'A light-weight react project that demonstrated the clean, reusable, and maintainable way of managing data/state in react application'
 technologies: ['React', 'Custom Hooks', 'Context API', 'Next.js', 'Taiwind CSS']
+actions: [{ title: 'Source Code', url: 'ajeetchaulagain.com' }]
 
 featuredImage: ../images/personal-site.png
 ---
