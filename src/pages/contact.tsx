@@ -1,5 +1,4 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 import {
   MasterLayout,
   ContentLayout,
@@ -9,26 +8,20 @@ import {
   SocialMediaIcons,
   SEO,
 } from 'components';
+import { useContactPageDetails } from 'hooks/useContactPageDetails';
 
 const ContactPage = () => {
-  const contactPageData = useStaticQuery(graphql`
-    query SiteContactPage {
-      mdx(fields: { slug: { eq: "contact" } }) {
-        frontmatter {
-          title
-        }
-        body
-      }
-    }
-  `);
+  const {
+    frontmatter: { title, description },
+    body,
+  } = useContactPageDetails();
 
-  console.log('contact');
   return (
     <MasterLayout>
-      <SEO title="Contact Me" />
+      <SEO title={title} description={description} />
       <IntroSection />
       <ContentLayout>
-        <MarkdownRenderer>{contactPageData.mdx.body}</MarkdownRenderer>
+        <MarkdownRenderer>{body}</MarkdownRenderer>
         <ContactForm />
         <h2>Follow me on:</h2>
         <SocialMediaIcons />

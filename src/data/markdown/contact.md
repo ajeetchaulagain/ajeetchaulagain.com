@@ -1,5 +1,6 @@
 ---
 title: 'Contact Me'
+description: 'Say a friendly hello to me!'
 ---
 
 # Contact Me
