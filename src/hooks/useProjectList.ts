@@ -1,10 +1,7 @@
+import { ButtonLinkMarkdownType } from 'components/button-link/Decorator';
 import { graphql, useStaticQuery } from 'gatsby';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
 
-export type ActionType = {
-  title: string;
-  url: string;
-};
 export type ProjectListEdge = {
   node: {
     fields: { slug: string };
@@ -12,7 +9,7 @@ export type ProjectListEdge = {
       title: string;
       description: string;
       technologies: string[];
-      actions: ActionType[];
+      actions: ButtonLinkMarkdownType[];
       thumbnail: {
         childImageSharp: { gatsbyImageData: IGatsbyImageData };
       };
@@ -35,8 +32,9 @@ export const useProjectList = () => {
               description
               technologies
               actions {
-                title
-                url
+                text
+                to
+                iconName
               }
               featuredImage {
                 childImageSharp {

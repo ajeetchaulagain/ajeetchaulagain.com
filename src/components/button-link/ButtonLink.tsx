@@ -1,71 +1,43 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
 import { Link as GatsbyLink } from 'gatsby';
-import { py, px } from 'styled-components-spacing';
-import { colors, fontWeights } from '../layout/MasterLayout';
+import styled from 'styled-components';
+import { mb, ml } from 'styled-components-spacing';
+import { ButtonProps } from './PropTypes';
+import { Icon } from '../icon/Icon';
+import {
+  BaseButtonStyles,
+  getStylesForButtonSize,
+  getStylesForButtonType,
+} from './styles';
 
-export type ButtonProps = {
-  text: string;
-  to: string;
-  type: 'primary' | 'secondary' | 'plain';
-  size: 'small' | 'medium' | 'large';
-  color: 'light' | 'dark' | 'grey';
+export const BaseButtonLink = ({ text, iconName, ...rest }: ButtonProps) => {
+  return (
+    <GatsbyLink {...rest}>
+      {text} {iconName && <Icon iconName={iconName} />}
+    </GatsbyLink>
+  );
 };
 
-const getStylesForButtonSize = (size: string) => {
-  switch (size) {
-    case 'small':
-      return css`
-        ${px(2)}
-        ${py(1)}
-        font-size:0.9rem;
-        font-weight: 500;
-      `;
-    case 'medium':
-      return css`
-        ${px(3)}
-        ${py(2)}
-        font-size:1rem;
-      `;
-    case 'large':
-      return css`
-        ${px(3)}
-        ${py(2)}
-        font-size:1.1rem;
-      `;
-  }
-};
-
-const BaseButtonStyles = css`
-  text-decoration: none !important;
-  &:hover {
-    cursor: pointer;
-  }
-`;
-
-const getStylesForButtonType = (type: string, color: string) => {
-  return css`
-    background-color: ${(props) =>
-      props.theme.buttonColors[type][color].background || 'red'};
-    color: ${(props) => props.theme.buttonColors[type][color].text} !important;
-    font-weight: ${fontWeights[3]} !important;
-    border-radius: ${(props) => props.theme.borderRadius.base};
-    border: ${(props) => props.theme.buttonColors[type][color].border};
-  `;
-};
-
-export const ButtonLink = ({ text, ...rest }: ButtonProps) => {
-  return <GatsbyLink {...rest}>{text}</GatsbyLink>;
-};
-
-export const StyledButtonLink = styled(ButtonLink)`
+export const ButtonLink = styled(BaseButtonLink)`
   ${BaseButtonStyles};
-  
+
   ${({ type, color }) => {
     return getStylesForButtonType(type, color);
-  }}};
+  }};
 
   ${({ size }) => {
     return getStylesForButtonSize(size);
-  }}};
+  }};
+
+  svg {
+    vertical-align: middle;
+    ${ml(1)};
+    ${mb(1)};
+  }
 `;
+
+ButtonLink.defaultProps = {
+  type: 'primary',
+  color: 'dark',
+  size: 'large',
+};

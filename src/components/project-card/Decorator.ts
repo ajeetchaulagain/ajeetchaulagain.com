@@ -1,26 +1,23 @@
-import { ButtonLinkDecorator } from 'components/button-link/Decorator';
+import { ButtonLinkDecorator } from '../button-link/Decorator';
+import { ButtonProps } from '../button-link/PropTypes';
 import { ProjectListEdge } from 'hooks';
-import { ProjectCardProps } from './ProjectCard';
+import { ProjectCardProps } from './PropTypes';
 
 export const ProjectCardDecorator = (
   project: ProjectListEdge
 ): ProjectCardProps => {
-  const frontmatter = project.node.frontmatter;
-  const title = frontmatter.title;
-  const description = frontmatter.description;
+  const { title, description, actions } = project.node.frontmatter;
 
-  console.log('frontMater', frontmatter.actions, description);
-
-  const decoratedActions =
-    frontmatter.actions &&
-    frontmatter.actions.map((action) =>
-      ButtonLinkDecorator({
-        type: 'primary',
+  const decoratedActions: ButtonProps[] =
+    actions &&
+    actions.map((action) => ({
+      ...ButtonLinkDecorator({
+        ...action,
+        type: 'secondary',
         size: 'small',
         color: 'dark',
-        ...action,
-      })
-    );
+      }),
+    }));
 
   return {
     title,

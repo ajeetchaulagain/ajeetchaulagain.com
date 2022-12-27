@@ -1,8 +1,16 @@
 ---
 title: 'React Clean Code Pattern'
-description: 'A light-weight react project that demonstrated the clean, reusable, and maintainable way of managing data/state in react application'
+description: 'A light-weight react project that demonstrated the clean, reusable, and maintainable '
 technologies: ['React', 'Custom Hooks', 'Context API', 'Next.js', 'Taiwind CSS']
-actions: [{ title: 'Source Code', url: 'ajeetchaulagain.com' }]
+actions:
+  [
+    {
+      text: 'Source Code',
+      to: 'ajeetchaulagain.com',
+      iconName: 'ExternalLink',
+    },
+    { text: 'Demo', to: 'ajeetchaulagain.com', iconName: 'ExternalLink' },
+  ]
 
 featuredImage: ../images/personal-site.png
 ---

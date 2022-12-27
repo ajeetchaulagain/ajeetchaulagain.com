@@ -22,6 +22,7 @@ const ContactPage = () => {
     }
   `);
 
+  console.log('contact');
   return (
     <MasterLayout>
       <SEO title="Contact Me" />

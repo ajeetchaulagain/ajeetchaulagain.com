@@ -1,65 +1,40 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { ProjectCard } from '../project-card/ProjectCard';
-import { ProjectListEdge } from '../../hooks/useProjectList';
-import * as projectStyles from './projects.module.scss';
-import { propTypes } from 'gatsby-plugin-image/dist/src/components/gatsby-image.server';
-import { ProjectCardDecorator } from 'components/project-card/Decorator';
+import styled from 'styled-components';
+import breakpoint from 'styled-components-breakpoint';
+import { mb } from 'styled-components-spacing';
+import { ProjectCardProps } from '../project-card/PropTypes';
 
 type ProjectListProps = {
-  projectList: ProjectListEdge[];
+  projects: ProjectCardProps[];
 };
 
-const sample = [
-  {
-    title: 'title',
-    description: 'this is description',
-    actions: [
-      {
-        text: 'View source code',
-        to: 'ajeetchaulagain.com',
-        size: 'small',
-        color: 'light',
-        type: 'secondary',
-      },
-    ],
-  },
-];
+const Container = styled.div`
+  ${breakpoint('md')`
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  `}
+`;
 
-export const ProjectList = ({ projectList }: ProjectListProps): JSX.Element => {
-  const projects = projectList.map((project) => ProjectCardDecorator(project));
+const ProjectCardWrapper = styled.div`
+  ${mb(5)};
+  ${breakpoint('md')`
+  width: 48%;
+`}
+`;
 
+export const ProjectList = ({ projects }: ProjectListProps): JSX.Element => {
   return (
-    <div>
-      {projects.map((project) => {
-        // const {
-        //   node: {
-        //     fields: { slug },
-        //     frontmatter,
-        //   },
-        // } = edge;
-
-        // return (
-        //   <Link to={`/projects/${slug}`} className={projectStyles.projectItem}>
-        //     <div className={projectStyles.contentWrapper}>
-        //       <h2>{edge.node.frontmatter.title}</h2>
-
-        //       <ul className={projectStyles.toolsWrapper}>
-        //         {frontmatter.technologies.map((technology) => {
-        //           return <li>{technology}</li>;
-        //         })}
-        //       </ul>
-        //     </div>
-        //     {true && (
-        //       <div className={projectStyles.linksWrapper}>
-        //         View Case Study →{' '}
-        //       </div>
-        //     )}
-        //   </Link>
-        // );
-
-        return <ProjectCard {...project} />;
-      })}
-    </div>
+    <Container>
+      {projects &&
+        projects.map((project) => {
+          return (
+            <ProjectCardWrapper>
+              <ProjectCard {...project} />
+            </ProjectCardWrapper>
+          );
+        })}
+    </Container>
   );
 };

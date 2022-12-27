@@ -1,4 +1,7 @@
 import { action } from '@storybook/addon-actions';
+import { addDecorator } from '@storybook/react';
+import { ThemeProvider } from 'styled-components';
+import { defaultTheme } from '../src/components/theme/Theme';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -27,3 +30,9 @@ global.__BASE_PATH__ = '/';
 window.___navigate = (pathname) => {
   action('NavigateTo:')(pathname);
 };
+
+const themeDecorator = (storyFn) => (
+  <ThemeProvider theme={defaultTheme}>{storyFn()}</ThemeProvider>
+);
+
+addDecorator(themeDecorator);

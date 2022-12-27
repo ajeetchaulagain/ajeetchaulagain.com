@@ -12,6 +12,7 @@ import {
 } from 'components';
 import { useBlogPostList, useProjectList } from 'hooks';
 import { PrimaryButtonLink } from 'components/button/Button';
+import { ProjectCardDecorator } from 'components/project-card/Decorator';
 
 export const indexHeadingStyle = {
   fontWeight: '800',
@@ -38,6 +39,8 @@ const IndexPage = () => {
   const blogPostList = useBlogPostList();
   const projectList = useProjectList();
 
+  const projects = projectList.map((project) => ProjectCardDecorator(project));
+
   return (
     <MasterLayout>
       <SEO />
@@ -55,7 +58,7 @@ const IndexPage = () => {
         <p style={indexSubHeadingStyle}>
           Checkout some of my projects with case study
         </p>
-        <ProjectList projectList={projectList} />
+        <ProjectList projects={projects} />
         <PrimaryButtonLink to="/projects">
           View All Projects →
         </PrimaryButtonLink>

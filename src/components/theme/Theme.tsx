@@ -20,7 +20,7 @@ export const colors = {
 
 export const fontWeights = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 
-const defaultTheme: DefaultTheme = {
+export const defaultTheme: DefaultTheme = {
   breakpoints: {
     xs: 0,
     sm: 480,
@@ -49,6 +49,11 @@ const defaultTheme: DefaultTheme = {
     secondaryHeading: `'Roboto', sans-serif`,
   },
   fontWeights: fontWeights,
+  fontSizes: {
+    xsmall: '0.9rem',
+    small: '1.0rem',
+    medium: '1.1rem',
+  },
   lineHeights: {
     body: 1.5,
     heading: 1.1,
@@ -77,13 +82,13 @@ const defaultTheme: DefaultTheme = {
     secondary: {
       dark: {
         background: 'transparent',
-        text: colors.light,
+        text: colors.darkGrey,
         border: '1px solid grey',
       },
       light: {
         background: 'transparent',
-        text: colors.darkGrey,
-        border: '1px solid grey',
+        text: colors.light,
+        border: `1px solid ${colors.light}`,
       },
     },
   },

@@ -1,12 +1,21 @@
-import { ActionType } from 'hooks';
-import { ButtonProps } from './ButtonLink';
+import { ButtonProps } from './PropTypes';
 
-export const ButtonLinkDecorator = (link: any): ButtonProps => {
+type MakePartial<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
+
+export type ButtonLinkMarkdownType = MakePartial<
+  ButtonProps,
+  'type' | 'color' | 'size'
+>;
+
+export const ButtonLinkDecorator = (
+  buttonLink: ButtonLinkMarkdownType
+): ButtonProps => {
   return {
-    text: link.title,
-    to: link.url,
-    type: link.type,
-    color: link.color,
-    size: link.size,
+    text: buttonLink.text,
+    to: buttonLink.to,
+    type: buttonLink.type || 'primary',
+    color: buttonLink.color || 'light',
+    size: buttonLink.size || 'large',
+    iconName: buttonLink.iconName,
   };
 };

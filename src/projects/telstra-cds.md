@@ -1,5 +1,11 @@
 ---
-title: 'AI-Enabled Cloud Decision Support System Telstra'
+title: 'Cloud Decision Support System'
+description: 'A light-weight react project that demonstrated the clean, '
+actions:
+  [
+    { text: 'Source', to: 'ajeetchaulagain.com', iconName: 'Github' },
+    { text: 'Demo', to: 'ajeetchaulagain.com', iconName: 'ExternalLink' },
+  ]
 technologies:
   [
     'React',
