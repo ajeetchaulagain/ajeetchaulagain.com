@@ -10,19 +10,3 @@ ${BaseStyles};
 ${MarkdownTableStyles};
 ${CodeBlockStyles};
 `;
-
-// const PrimaryButtonStyles = css`
-//   ${(props) => {
-//     return `
-
-//     `;
-//   }}
-// `;
-
-// background-color: ${theme.colors.purple} !important;
-// color: ${theme.colors.light} !important;
-// text-decoration: none !important;
-// font-weight: ${theme.fontWeights[3]} !important;
-// &:hover {
-//   cursor: pointer;
-// }

@@ -2,6 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { addDecorator } from '@storybook/react';
 import { ThemeProvider } from 'styled-components';
 import { defaultTheme } from '../src/components/theme/Theme';
+import '../src/styles/GoogleFonts';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

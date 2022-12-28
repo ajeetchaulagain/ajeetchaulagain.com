@@ -22,10 +22,10 @@ export const colors = {
   whiteSmoke: '#f3f6f9',
 };
 
-export const fontWeights = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+export const fontWeights = [0, 100, 200, 300, 400, 500, 600, 700, 800, 900];
 
 const fontSizes = {
-  xsmall: '0.9rem',
+  xsmall: '0.95rem',
   small: '1.0rem',
   medium: '1.1rem',
   large: '1.3rem',
