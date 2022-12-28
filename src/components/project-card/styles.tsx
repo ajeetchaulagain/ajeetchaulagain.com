@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { p, ml, mb } from 'styled-components-spacing';
+import { Heading } from 'components/heading/Heading';
 
 export const Container = styled.div`
   background-color: ${(props) => props.theme.colors.whiteSmoke};
@@ -12,10 +13,15 @@ export const Container = styled.div`
   flex: 1;
 `;
 
+export const StyledHeading = styled(Heading)`
+  ${mb(3)};
+`;
+
 export const Paragraph = styled.p`
-  font-size: 1rem;
+  font-size: ${(props) => props.theme.fontSizes.xsmall};
   font-family: ${(props) => props.theme.fonts.body};
-  ${mb(5)};
+  ${mb(4)};
+  line-height: 1.5;
 `;
 
 export const ActionWrapper = styled.div`
