@@ -33,7 +33,7 @@ export const LogoWrapper = styled.div`
   span {
     text-transform: uppercase;
     ${ml(3)};
-    font-family: ${(props) => props.theme.fonts.primaryHeading}
+    font-family: ${(props) => props.theme.fonts.primaryHeading};
     font-weight: ${(props) => props.theme.fontWeights[1]};
   }
   ${mb({ xs: 3, md: 0 })}
