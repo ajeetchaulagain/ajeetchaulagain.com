@@ -12,7 +12,7 @@ const Heading1 = styled.h1<{ size?: HeadingFontSize; type?: FontType }>`
     type === 'sans-serif'
       ? fonts.secondaryHeading
       : fonts.primaryHeading} !important;
-  font-weight: 800;
+  font-weight: ${(props) => props.theme.fontWeights[9]};
 `;
 
 const Heading2 = styled.h2<{ size?: HeadingFontSize; type?: FontType }>`
@@ -23,7 +23,7 @@ const Heading2 = styled.h2<{ size?: HeadingFontSize; type?: FontType }>`
     type === 'sans-serif'
       ? fonts.secondaryHeading
       : fonts.primaryHeading} !important;
-  font-weight: 700;
+  font-weight: ${(props) => props.theme.fontWeights[6]};
 `;
 
 const Heading3 = styled.h3<{ size?: HeadingFontSize; type?: FontType }>`
@@ -35,7 +35,7 @@ const Heading3 = styled.h3<{ size?: HeadingFontSize; type?: FontType }>`
       ? fonts.secondaryHeading
       : fonts.primaryHeading} !important;
 
-  font-weight: 500;
+  font-weight: ${(props) => props.theme.fontWeights[5]};
 `;
 
 type FontType = 'serif' | 'sans-serif';
