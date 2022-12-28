@@ -1,16 +1,11 @@
 import React from 'react';
 
-import {
-  MasterLayout,
-  ContentLayout,
-  IntroSection,
-  ProjectList,
-  SEO,
-} from 'components';
+import { MasterLayout, IntroSection, ProjectList, SEO } from 'components';
 import { useProjectList } from 'hooks';
 
 import { indexHeadingStyle, indexSubHeadingStyle } from '.';
 import { ProjectCardDecorator } from 'components/project-card/Decorator';
+import { ContentRenderer } from 'components/layout/ContentWrapper';
 
 const ProjectsPage = () => {
   const projectList = useProjectList();
@@ -20,11 +15,11 @@ const ProjectsPage = () => {
     <MasterLayout>
       <SEO title="Projects" description="List of projects" />
       <IntroSection />
-      <ContentLayout>
+      <ContentRenderer>
         <h1 style={indexHeadingStyle}>Projects</h1>
         <p style={indexSubHeadingStyle}>List of all projects with case study</p>
         <ProjectList projects={projects} />
-      </ContentLayout>
+      </ContentRenderer>
     </MasterLayout>
   );
 };
