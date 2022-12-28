@@ -2,6 +2,8 @@ import { action } from '@storybook/addon-actions';
 import { addDecorator } from '@storybook/react';
 import { ThemeProvider } from 'styled-components';
 import { defaultTheme } from '../src/components/theme/Theme';
+import { GlobalStyle } from '../src/styles/GlobalStyles';
+
 import '../src/styles/GoogleFonts';
 
 export const parameters = {
@@ -33,7 +35,10 @@ window.___navigate = (pathname) => {
 };
 
 const themeDecorator = (storyFn) => (
-  <ThemeProvider theme={defaultTheme}>{storyFn()}</ThemeProvider>
+  <ThemeProvider theme={defaultTheme}>
+    <GlobalStyle />
+    {storyFn()}
+  </ThemeProvider>
 );
 
 addDecorator(themeDecorator);
