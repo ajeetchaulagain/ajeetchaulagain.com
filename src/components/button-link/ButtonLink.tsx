@@ -3,7 +3,7 @@ import { Link as GatsbyLink } from 'gatsby';
 import styled from 'styled-components';
 import { mb, ml } from 'styled-components-spacing';
 import { ButtonProps } from './PropTypes';
-import { Icon } from '../icon/Icon';
+import { Icon } from 'components/icon/Icon';
 import {
   BaseButtonStyles,
   getStylesForButtonSize,

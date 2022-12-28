@@ -1,7 +1,8 @@
 import React from 'react';
 import { ButtonLink } from '../button-link/ButtonLink';
-import { Container, Heading, Paragraph, ActionWrapper } from './styles';
+import { Container, Paragraph, ActionWrapper } from './styles';
 import { ProjectCardProps } from './PropTypes';
+import { Heading } from 'components/heading/Heading';
 
 export const ProjectCard = ({
   title,
@@ -10,7 +11,9 @@ export const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <Container>
-      <Heading>{title}</Heading>
+      <Heading level="h2" size="small" type="serif">
+        {title}
+      </Heading>
       <Paragraph>{description}</Paragraph>
       <ActionWrapper>
         {actions &&

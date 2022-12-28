@@ -4,21 +4,40 @@ import { DefaultTheme, ThemeProvider } from 'styled-components';
 type ThemeProps = {
   children?: ReactNode;
 };
+export type FontSize = keyof typeof fontSizes;
+export type HeadingFontSize = keyof typeof headingFontSizes;
 
 export const colors = {
   light: '#e7deec',
   lightGreen: '#d0fd9b',
   purple: '#5c257f',
   darkGrey: '#333',
+  lightPurple: '#e3e1fb',
   background: '#fff',
   primary: '#783396',
   secondary: '#767676',
   accent: '#d396c3',
   muted: '#efefef',
   error: '#d0453e',
+  whiteSmoke: '#f3f6f9',
 };
 
 export const fontWeights = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+const fontSizes = {
+  xsmall: '0.9rem',
+  small: '1.0rem',
+  medium: '1.1rem',
+  large: '1.3rem',
+  xlarge: '2rem',
+};
+
+const headingFontSizes = {
+  small: '1.3rem',
+  medium: '1.5rem',
+  large: '1.8rem',
+  xlarge: '2.1rem',
+};
 
 export const defaultTheme: DefaultTheme = {
   breakpoints: {
@@ -49,11 +68,8 @@ export const defaultTheme: DefaultTheme = {
     secondaryHeading: `'Roboto', sans-serif`,
   },
   fontWeights: fontWeights,
-  fontSizes: {
-    xsmall: '0.9rem',
-    small: '1.0rem',
-    medium: '1.1rem',
-  },
+  fontSizes: fontSizes,
+  headingFontSizes: headingFontSizes,
   lineHeights: {
     body: 1.5,
     heading: 1.1,
@@ -81,9 +97,8 @@ export const defaultTheme: DefaultTheme = {
     },
     secondary: {
       dark: {
-        background: 'transparent',
+        background: colors.lightPurple,
         text: colors.darkGrey,
-        border: '1px solid grey',
       },
       light: {
         background: 'transparent',

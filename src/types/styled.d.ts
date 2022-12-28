@@ -9,6 +9,7 @@ declare module 'styled-components' {
     colors: Record<string, string>;
     fonts: Record<string, string>;
     fontSizes: Record<string, string>;
+    headingFontSizes: Record<string, string>;
     fontWeights: number[];
     lineHeights: Record<string, number>;
     borders: Record<string, string>;
