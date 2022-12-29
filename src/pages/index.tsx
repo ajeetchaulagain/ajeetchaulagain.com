@@ -13,6 +13,7 @@ import {
 import { useBlogPostList, useProjectList } from 'hooks';
 import { PrimaryButtonLink } from 'components/button/Button';
 import { ProjectCardDecorator } from 'components/project-card/Decorator';
+import { ContentRenderer } from 'components/layout/ContentWrapper';
 
 export const indexHeadingStyle = {
   fontWeight: '800',
@@ -53,7 +54,7 @@ const IndexPage = () => {
         <BlogList blogPostList={blogPostList} />
         <PrimaryButtonLink to="/blog">View all Articles →</PrimaryButtonLink>
       </ContentLayout>
-      <ContentLayout bgcolor="white">
+      <ContentRenderer>
         <h1 style={indexHeadingStyle}>Projects</h1>
         <p style={indexSubHeadingStyle}>
           Checkout some of my projects with case study
@@ -62,7 +63,7 @@ const IndexPage = () => {
         <PrimaryButtonLink to="/projects">
           View All Projects →
         </PrimaryButtonLink>
-      </ContentLayout>
+      </ContentRenderer>
 
       <ContentLayout bgcolor="#fff">
         <NewsLetter />

@@ -35,7 +35,7 @@ const fontSizes = {
 };
 
 const headingFontSizes = {
-  small: '1.3rem',
+  small: '1.2rem',
   medium: '1.5rem',
   large: '1.8rem',
   xlarge: '2.1rem',

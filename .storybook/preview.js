@@ -2,9 +2,15 @@ import { action } from '@storybook/addon-actions';
 import { addDecorator } from '@storybook/react';
 import { ThemeProvider } from 'styled-components';
 import { defaultTheme } from '../src/components/theme/Theme';
-import { GlobalStyle } from '../src/styles/GlobalStyles';
-
+import { createGlobalStyle } from 'styled-components';
 import '../src/styles/GoogleFonts';
+import { CSSReset } from '../src/styles/CSSReset';
+import { BaseStyles } from '../src/styles/BaseStyles';
+
+const GlobalStyle = createGlobalStyle`
+  ${CSSReset};
+  ${BaseStyles};
+`;
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -14,6 +20,7 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  viewMode: 'docs',
 };
 
 // Gatsby's Link overrides:
