@@ -25,7 +25,7 @@ export const getStylesForButtonSize = (size: string) => {
 };
 
 export const BaseButtonStyles = css`
-  text-decoration: none !important;
+  text-decoration: none;
   &:hover {
     cursor: pointer;
   }
@@ -35,7 +35,7 @@ export const getStylesForButtonType = (type: string, color: string) => {
   return css`
     background-color: ${(props) =>
       props.theme.buttonColors[type][color].background || 'red'};
-    color: ${(props) => props.theme.buttonColors[type][color].text} !important;
+    color: ${(props) => props.theme.buttonColors[type][color].text};
     font-weight: ${(props) => props.theme.fontWeights[2]};
     border-radius: ${(props) => props.theme.borderRadius.base || '10px'};
     border: ${(props) => props.theme.buttonColors[type][color].border};
