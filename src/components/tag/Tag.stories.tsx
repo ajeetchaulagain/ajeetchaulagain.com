@@ -5,7 +5,6 @@ import { Tag } from './Tag';
 export default {
   component: Tag,
   title: 'Components/Tag',
-  Tag,
 } as ComponentMeta<typeof Tag>;
 
 const Template: ComponentStory<typeof Tag> = (args) => <Tag {...args} />;

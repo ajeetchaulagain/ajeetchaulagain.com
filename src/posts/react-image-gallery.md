@@ -3,7 +3,11 @@ title: 'How to use React Image Gallery to build a beautiful and responsive image
 description: 'This tutorial shows you how to build a beautiful and responsive image gallery using React Image Gallery'
 date: '2022-11-27'
 tags: ['javascript', 'react', 'image-gallery', 'image-carousel']
-thumbnail: ../images/thumbnails/image-gallery-icon.png
+thumbnail:
+  {
+    src: ../images/thumbnails/image-gallery-icon.png,
+    altText: 'Image Gallery Icon',
+  }
 author: 'Ajeet Chaulagain'
 ---
 

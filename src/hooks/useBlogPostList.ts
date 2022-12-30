@@ -9,7 +9,10 @@ export type BlogPostEdge = {
       date: string;
       tags: string[];
       thumbnail: {
-        childImageSharp: { gatsbyImageData: IGatsbyImageData };
+        src: {
+          childImageSharp: { gatsbyImageData: IGatsbyImageData };
+        };
+        altText: string;
       };
     };
     timeToRead: string;
@@ -38,9 +41,12 @@ export const useBlogPostList = () => {
               date(formatString: "MMMM DD, YYYY")
               author
               thumbnail {
-                childImageSharp {
-                  gatsbyImageData(layout: CONSTRAINED)
+                src {
+                  childImageSharp {
+                    gatsbyImageData(layout: CONSTRAINED)
+                  }
                 }
+                altText
               }
             }
             excerpt

@@ -20,9 +20,12 @@ export const query = graphql`
         date(formatString: "MMMM DD, YYYY")
         author
         thumbnail {
-          childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED)
+          src {
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED)
+            }
           }
+          altText
         }
       }
       timeToRead
@@ -39,8 +42,11 @@ type DataProps = {
       date: string;
       tags: string[];
       thumbnail: {
-        childImageSharp: {
-          gatsbyImageData: IGatsbyImageData;
+        src: {
+          childImageSharp: {
+            gatsbyImageData: IGatsbyImageData;
+          };
+          altText: string;
         };
       };
     };
@@ -99,7 +105,7 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
             <div className={blogTemplateStyles.featuredIcons}>
               <GatsbyImage
                 image={
-                  props.data.mdx.frontmatter.thumbnail.childImageSharp
+                  props.data.mdx.frontmatter.thumbnail.src.childImageSharp
                     .gatsbyImageData
                 }
                 alt="blog-thumbnail"

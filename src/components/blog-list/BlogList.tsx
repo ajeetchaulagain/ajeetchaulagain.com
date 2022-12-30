@@ -28,7 +28,7 @@ export const BlogList = ({
               <figure>
                 <StyledGatsbyImage
                   image={
-                    edge.node.frontmatter.thumbnail.childImageSharp
+                    edge.node.frontmatter.thumbnail.src.childImageSharp
                       .gatsbyImageData
                   }
                   alt="blog-thumbnail"
