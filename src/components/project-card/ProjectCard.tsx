@@ -10,7 +10,7 @@ export const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <Container>
-      <StyledHeading level="h2" size="small" type="serif">
+      <StyledHeading level="h2" size="small" type="sans-serif">
         {title}
       </StyledHeading>
       <Paragraph>{description}</Paragraph>

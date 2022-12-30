@@ -4,15 +4,18 @@ import {
   MasterLayout,
   ContentLayout,
   IntroSection,
-  BlogList,
   NewsLetter,
   SEO,
 } from 'components';
 import { useBlogPostList } from 'hooks';
 import { indexHeadingStyle } from '.';
+import { BlogPostCardDecorator } from 'components/blog-post-card/Decorator';
+import { BlogPostCardList } from 'components/blog-post-card-list/BlogPostCardList';
+import { ContentRenderer } from 'components/layout/ContentWrapper';
 
 const BlogPage = () => {
   const blogPostList = useBlogPostList();
+  const blogs = blogPostList.map((blogPost) => BlogPostCardDecorator(blogPost));
 
   return (
     <MasterLayout>
@@ -21,10 +24,10 @@ const BlogPage = () => {
         description="Recent articles and tutorials from me"
       />
       <IntroSection />
-      <ContentLayout>
+      <ContentRenderer>
         <h1 style={indexHeadingStyle}>Articles & Tutorials</h1>
-        <BlogList blogPostList={blogPostList} />
-      </ContentLayout>
+        <BlogPostCardList blogs={blogs} />
+      </ContentRenderer>
       <ContentLayout>
         <NewsLetter />
       </ContentLayout>
