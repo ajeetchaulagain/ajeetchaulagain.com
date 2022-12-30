@@ -9,7 +9,7 @@ export type HeadingFontSize = keyof typeof headingFontSizes;
 
 export const colors = {
   white: '#ffffff',
-  light: '#e7deec',
+  light: '#e7e7e7',
   lightGreen: '#d0fd9b',
   purple: '#5c257f',
   darkGrey: '#333',
@@ -27,7 +27,7 @@ export const colors = {
 export const fontWeights = [0, 100, 200, 300, 400, 500, 600, 700, 800, 900];
 
 const fontSizes = {
-  xsmall: '0.95rem',
+  xsmall: '0.8rem',
   small: '1.0rem',
   medium: '1.1rem',
   large: '1.3rem',
