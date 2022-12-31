@@ -7,9 +7,9 @@ import {
   NewsLetter,
   MarkdownRenderer,
   SEO,
+  StyledGatsbyImage,
 } from 'components';
 import { useAuthorImage, useAboutPageDetails } from 'hooks';
-import { StyledGatsbyImage } from 'components/gatsby-image/StyledGatsbyImage';
 
 const AboutImage = styled(StyledGatsbyImage)`
   margin-bottom: 1rem;

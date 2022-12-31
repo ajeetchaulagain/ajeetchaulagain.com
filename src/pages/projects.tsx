@@ -1,13 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import { mb } from 'styled-components-spacing';
-
-import { MasterLayout, IntroSection, ProjectList, SEO } from 'components';
+import {
+  MasterLayout,
+  IntroSection,
+  ProjectList,
+  SEO,
+  ProjectCardDecorator,
+  ContentRenderer,
+  Heading,
+} from 'components';
 import { useProjectList } from 'hooks';
-
-import { ProjectCardDecorator } from 'components/project-card/Decorator';
-import { ContentRenderer } from 'components/layout/ContentWrapper';
-import { Heading } from 'components/heading/Heading';
 
 const StyledHeading = styled(Heading)`
   ${mb(3)};

@@ -1,65 +1,49 @@
 import React from 'react';
 import { FaBook } from 'react-icons/fa';
-
 import {
   LandingPageHero,
   ProjectList,
-  BlogList,
   MasterLayout,
   ContentLayout,
   NewsLetter,
   SEO,
+  ProjectCardDecorator,
+  ContentRenderer,
+  ButtonLink,
+  Heading,
+  Paragraph,
+  BlogPostCardDecorator,
+  BlogPostCardList,
 } from 'components';
 import { useBlogPostList, useProjectList } from 'hooks';
-import { PrimaryButtonLink } from 'components/button/Button';
-import { ProjectCardDecorator } from 'components/project-card/Decorator';
-import { ContentRenderer } from 'components/layout/ContentWrapper';
-import { ButtonLink } from 'components/button-link/ButtonLink';
-import { Heading } from 'components/heading/Heading';
-import { Paragraph } from 'components/paragraph/Paragraph';
-
-export const indexHeadingStyle = {
-  fontWeight: '800',
-  fontFamily: 'Domine',
-  marginBottom: '1rem',
-};
-
-export const indexSubHeadingStyle = {
-  marginBottom: '1.5rem',
-  lineHeight: '1.5',
-};
-
-export const contentBoxButton = {
-  fontWeight: '400',
-  fontSize: '1rem',
-};
-
-export const subscribeSectionStyle = {
-  textAlign: 'center',
-  backgroundColor: 'grey',
-};
 
 const IndexPage = () => {
   const blogPostList = useBlogPostList();
   const projectList = useProjectList();
-
   const projects = projectList.map((project) => ProjectCardDecorator(project));
+  const blogs = blogPostList.map((blogPost) => BlogPostCardDecorator(blogPost));
 
   return (
     <MasterLayout>
       <SEO />
       <LandingPageHero />
-      <ContentLayout>
-        <h1 style={indexHeadingStyle}>
+      <ContentRenderer>
+        <Heading>
           <FaBook /> From my blog
-        </h1>
-        <p style={indexSubHeadingStyle}>See the recent on my article list</p>
-        <BlogList blogPostList={blogPostList} />
-        <PrimaryButtonLink to="/blog">View all Articles →</PrimaryButtonLink>
-      </ContentLayout>
+        </Heading>
+        <Paragraph>See the recent on my article list</Paragraph>
+        <BlogPostCardList blogs={blogs} />
+        <ButtonLink
+          to="/projects"
+          text="View All Projects →"
+          variant="contained"
+          color="primary"
+          size="large"
+        />
+      </ContentRenderer>
       <ContentRenderer>
         <Heading>Projects</Heading>
-        <Paragraph>Checkout some of my projects with case study</Paragraph>
+        <Paragraph>Checkout some of my projects</Paragraph>
         <ProjectList projects={projects} />
         <ButtonLink
           to="/projects"

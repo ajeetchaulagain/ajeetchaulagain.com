@@ -1,9 +1,8 @@
 import React from 'react';
-import { ProjectCard } from '../project-card/ProjectCard';
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import { mb } from 'styled-components-spacing';
-import { ProjectCardProps } from '../project-card/PropTypes';
+import { ProjectCard, ProjectCardProps } from '../project-card';
 
 type ProjectListProps = {
   projects: ProjectCardProps[];

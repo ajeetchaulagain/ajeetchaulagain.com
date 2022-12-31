@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ProjectList } from './ProjectList';
-import { ProjectCardProps } from 'components/project-card/PropTypes';
+import { ProjectCardProps } from '../project-card/PropTypes';
 
 export default {
   component: ProjectList,

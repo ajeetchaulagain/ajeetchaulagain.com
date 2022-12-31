@@ -1,6 +1,6 @@
-import { HeadingFontSize } from 'components/theme/Theme';
+import { HeadingFontSize } from '../theme/Theme';
 import React, { ReactNode } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 //TODO: Revisit this file to remove !important once overriding scss is cleaned up
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { BlogPostCardList } from './BlogPostCardList';
-import { BlogPostCardProps } from 'components/blog-post-card/PropTypes';
+import { BlogPostCardProps } from '../blog-post-card/PropTypes';
 
 export default {
   component: BlogPostCardList,
@@ -34,6 +34,7 @@ const sampleBlogPostCardData: BlogPostCardProps = {
       height: 256,
     },
   },
+  blogPostRelativeUrl: '/blog',
 };
 
 export const Default = Template.bind({});
