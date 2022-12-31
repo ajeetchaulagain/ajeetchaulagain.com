@@ -4,7 +4,7 @@ type MakePartial<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
 
 export type ButtonLinkMarkdownType = MakePartial<
   ButtonProps,
-  'type' | 'color' | 'size'
+  'variant' | 'color' | 'size'
 >;
 
 export const ButtonLinkDecorator = (
@@ -13,8 +13,8 @@ export const ButtonLinkDecorator = (
   return {
     text: buttonLink.text,
     to: buttonLink.to,
-    type: buttonLink.type || 'primary',
-    color: buttonLink.color || 'light',
+    variant: buttonLink.variant || 'text',
+    color: buttonLink.color || 'primary',
     size: buttonLink.size || 'large',
     iconName: buttonLink.iconName,
   };

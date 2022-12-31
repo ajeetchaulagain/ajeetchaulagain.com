@@ -3,12 +3,11 @@ import { IconType } from 'react-icons';
 import { BiLinkExternal } from 'react-icons/bi';
 import { FaGithub } from 'react-icons/fa';
 
-export type IconName = 'ExternalLink' | 'Github' | 'Test';
+export type IconName = 'ExternalLink' | 'Github';
 
 const IconMap: Record<IconName, IconType> = {
   ExternalLink: BiLinkExternal,
   Github: FaGithub,
-  Test: FaGithub,
 };
 
 export const Icon = ({ iconName }: { iconName: IconName }) => {

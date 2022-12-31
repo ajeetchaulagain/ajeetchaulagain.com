@@ -88,25 +88,12 @@ export const defaultTheme: DefaultTheme = {
   },
   buttonColors: {
     primary: {
-      dark: {
-        background: colors.purple,
-        text: colors.light,
-      },
-      light: {
-        background: colors.light,
-        text: colors.darkGrey,
-      },
+      background: colors.primary,
+      text: colors.light,
     },
     secondary: {
-      dark: {
-        background: colors.lightPurple,
-        text: colors.darkGrey,
-      },
-      light: {
-        background: 'transparent',
-        text: colors.light,
-        border: `1px solid ${colors.light}`,
-      },
+      background: colors.lightPurple,
+      text: colors.darkGrey,
     },
   },
 };

@@ -7,7 +7,7 @@ import { Icon } from 'components/icon/Icon';
 import {
   BaseButtonStyles,
   getStylesForButtonSize,
-  getStylesForButtonType,
+  getStylesForButtonColorAndVariant,
 } from './styles';
 
 export const BaseButtonLink = ({ text, iconName, ...rest }: ButtonProps) => {
@@ -21,8 +21,8 @@ export const BaseButtonLink = ({ text, iconName, ...rest }: ButtonProps) => {
 export const ButtonLink = styled(BaseButtonLink)`
   ${BaseButtonStyles};
 
-  ${({ type, color }) => {
-    return getStylesForButtonType(type, color);
+  ${({ variant, color }) => {
+    return getStylesForButtonColorAndVariant(variant, color);
   }};
 
   ${({ size }) => {
@@ -37,7 +37,7 @@ export const ButtonLink = styled(BaseButtonLink)`
 `;
 
 ButtonLink.defaultProps = {
-  type: 'primary',
-  color: 'dark',
+  variant: 'text',
+  color: 'primary',
   size: 'large',
 };

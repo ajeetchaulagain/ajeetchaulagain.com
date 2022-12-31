@@ -14,11 +14,11 @@ export const Container = styled.div`
 `;
 
 export const StyledHeading = styled(Heading)`
-  ${mb(3)};
+  ${mb(2)};
 `;
 
 export const Paragraph = styled.p`
-  font-size: ${(props) => props.theme.fontSizes.xsmall};
+  font-size: ${(props) => props.theme.fontSizes.small};
   font-family: ${(props) => props.theme.fonts.body};
   ${mb(4)};
   line-height: 1.5;
@@ -27,6 +27,6 @@ export const Paragraph = styled.p`
 export const ActionWrapper = styled.div`
   margin-top: auto;
   a:not(:first-child) {
-    ${ml(2)};
+    ${ml(3)};
   }
 `;

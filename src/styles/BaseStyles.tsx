@@ -22,20 +22,6 @@ export const BaseStyles = css`
     flex-wrap: wrap;
   }
 
-  h1 {
-    font-family: 'Domine', serif;
-    font-weight: 700;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: 700;
-  }
-
   a {
     text-decoration: none;
     color: inherit;
