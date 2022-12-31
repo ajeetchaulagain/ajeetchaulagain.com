@@ -3,6 +3,10 @@ import styled from 'styled-components';
 import { p, mb, mt, ml } from 'styled-components-spacing';
 import { Heading } from '../heading/Heading';
 
+export const StyledHeading = styled(Heading)`
+  ${mb(3)};
+`;
+
 export const Container = styled.div`
   background-color: ${(props) => props.theme.colors.whiteSmoke};
   border-radius: ${(props) => props.theme.borderRadius.base};
@@ -10,6 +14,14 @@ export const Container = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  &:hover {
+    border: none;
+    box-shadow: 0 30px 60px rgba(46, 11, 68, 0.12);
+    transition: box-shadow 0.5s ease, border 0.3s ease;
+    ${StyledHeading} {
+      text-decoration: underline;
+    }
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -20,10 +32,6 @@ export const ImageWrapper = styled.div`
 `;
 export const TextContentWrapper = styled.div`
   width: 82%;
-`;
-
-export const StyledHeading = styled(Heading)`
-  ${mb(3)};
 `;
 
 export const DateAndTimeComponent = styled.span`

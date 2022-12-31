@@ -6,4 +6,5 @@ export type BlogPostCardProps = {
   timeToRead: string;
   tags?: string[];
   gatsbyImageProps?: GatsbyImageProps;
+  blogPostRelativeUrl: string;
 };

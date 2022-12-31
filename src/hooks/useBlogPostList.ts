@@ -3,7 +3,7 @@ import { IGatsbyImageData } from 'gatsby-plugin-image';
 
 export type BlogPostEdge = {
   node: {
-    fields: { slug: any };
+    fields: { slug: string };
     frontmatter: {
       title: string;
       date: string;

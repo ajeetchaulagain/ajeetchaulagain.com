@@ -5,7 +5,7 @@ import { BlogPostCardProps } from './PropTypes';
 export const BlogPostCardDecorator = (
   blog: BlogPostEdge
 ): BlogPostCardProps => {
-  const { timeToRead, frontmatter } = blog.node;
+  const { timeToRead, frontmatter, fields } = blog.node;
 
   const {
     title,
@@ -20,11 +20,14 @@ export const BlogPostCardDecorator = (
     alt: altText,
   };
 
+  const blogPostRelativeUrl = `/blog/${fields.slug}`;
+
   return {
     title,
     gatsbyImageProps,
     publishDate: date,
     timeToRead,
     tags,
+    blogPostRelativeUrl,
   };
 };
