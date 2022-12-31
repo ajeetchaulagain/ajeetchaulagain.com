@@ -67,7 +67,6 @@ const IndexPage = () => {
           variant="contained"
           color="primary"
           size="large"
-          style={{ marginBottom: '3rem' }}
         />
       </ContentRenderer>
 

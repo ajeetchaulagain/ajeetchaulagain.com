@@ -1,11 +1,17 @@
 import React from 'react';
+import styled from 'styled-components';
+import { mb } from 'styled-components-spacing';
 
 import { MasterLayout, IntroSection, ProjectList, SEO } from 'components';
 import { useProjectList } from 'hooks';
 
-import { indexHeadingStyle, indexSubHeadingStyle } from '.';
 import { ProjectCardDecorator } from 'components/project-card/Decorator';
 import { ContentRenderer } from 'components/layout/ContentWrapper';
+import { Heading } from 'components/heading/Heading';
+
+const StyledHeading = styled(Heading)`
+  ${mb(3)};
+`;
 
 const ProjectsPage = () => {
   const projectList = useProjectList();
@@ -16,8 +22,7 @@ const ProjectsPage = () => {
       <SEO title="Projects" description="List of projects" />
       <IntroSection />
       <ContentRenderer>
-        <h1 style={indexHeadingStyle}>Projects</h1>
-        <p style={indexSubHeadingStyle}>List of all projects with case study</p>
+        <StyledHeading>Projects</StyledHeading>
         <ProjectList projects={projects} />
       </ContentRenderer>
     </MasterLayout>
