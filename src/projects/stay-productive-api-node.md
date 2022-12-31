@@ -3,11 +3,7 @@ title: Stay Productive API Node
 description: 'A light-weight react project that demonstrated the clean, reusable, and maintainable '
 actions:
   [
-    {
-      text: 'Source Code',
-      to: 'ajeetchaulagain.com',
-      iconName: 'ExternalLink',
-    },
+    { text: 'Source', to: 'ajeetchaulagain.com', iconName: 'ExternalLink' },
     { text: 'Demo', to: 'ajeetchaulagain.com', iconName: 'ExternalLink' },
     { text: 'Article', to: 'ajeetchaulagain.com', iconName: 'ExternalLink' },
   ]

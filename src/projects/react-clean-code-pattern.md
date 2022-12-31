@@ -4,11 +4,7 @@ description: 'A light-weight react project that demonstrated the clean, reusable
 technologies: ['React', 'Custom Hooks', 'Context API', 'Next.js', 'Taiwind CSS']
 actions:
   [
-    {
-      text: 'Source Code',
-      to: 'ajeetchaulagain.com',
-      iconName: 'ExternalLink',
-    },
+    { text: 'Source', to: 'ajeetchaulagain.com', iconName: 'ExternalLink' },
     { text: 'Demo', to: 'ajeetchaulagain.com', iconName: 'ExternalLink' },
   ]
 

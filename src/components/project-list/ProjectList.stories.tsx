@@ -12,7 +12,7 @@ const Template: ComponentStory<typeof ProjectList> = (args) => (
   <ProjectList {...args} />
 );
 
-export const Default = Template.bind({});
+export const WithOutlinedAndContainedActions = Template.bind({});
 
 const sampleProjectCardData: ProjectCardProps = {
   title: 'React Clean Code Pattern',
@@ -22,22 +22,22 @@ const sampleProjectCardData: ProjectCardProps = {
     {
       text: 'Source',
       to: '',
-      type: 'secondary',
-      color: 'dark',
+      variant: 'outlined',
+      color: 'primary',
       size: 'small',
       iconName: 'Github',
     },
     {
       text: 'Demo',
       to: '',
-      type: 'primary',
-      color: 'dark',
+      variant: 'contained',
+      color: 'primary',
       size: 'small',
       iconName: 'ExternalLink',
     },
   ],
 };
-Default.args = {
+WithOutlinedAndContainedActions.args = {
   projects: [
     sampleProjectCardData,
     sampleProjectCardData,

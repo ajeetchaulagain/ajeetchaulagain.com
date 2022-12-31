@@ -18,10 +18,10 @@ const Container = styled.div`
 `;
 
 const ProjectCardWrapper = styled.div`
-  ${mb(5)};
+  ${mb(4)};
   ${breakpoint('md')`
-  width: 48%;
-`}
+    width: 48.5%;
+  `}
 `;
 
 export const ProjectList = ({ projects }: ProjectListProps): JSX.Element => {

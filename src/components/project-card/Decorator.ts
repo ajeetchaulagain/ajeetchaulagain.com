@@ -13,9 +13,9 @@ export const ProjectCardDecorator = (
     actions.map((action) => ({
       ...ButtonLinkDecorator({
         ...action,
-        variant: 'contained',
-        size: 'small',
-        color: 'secondary',
+        variant: 'text',
+        size: 'medium',
+        color: 'primary',
       }),
     }));
 

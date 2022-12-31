@@ -29,9 +29,9 @@ export const fontWeights = [0, 100, 200, 300, 400, 500, 600, 700, 800, 900];
 const fontSizes = {
   xsmall: '0.8rem',
   small: '1.0rem',
-  medium: '1.1rem',
+  medium: '1.2rem',
   large: '1.3rem',
-  xlarge: '2rem',
+  xlarge: '1.4rem',
 };
 
 const headingFontSizes = {

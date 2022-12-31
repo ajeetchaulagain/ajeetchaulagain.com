@@ -26,6 +26,8 @@ export const getStylesForButtonSize = (size: string) => {
 };
 
 export const BaseButtonStyles = css`
+  display: inline-block;
+  line-height: 1.5;
   text-decoration: none;
   &:hover {
     cursor: pointer;
@@ -36,8 +38,6 @@ export const BaseButtonStyles = css`
   font-weight: ${(props) => props.theme.fontWeights[6]};
   border-radius: ${(props) => props.theme.borderRadius.base || '10px'};
 `;
-
-export const getHoverStylesForButtonColorAndVariant = () => {};
 
 export const getStylesForButtonColorAndVariant = (
   variant: ButtonVariant,
@@ -54,6 +54,7 @@ export const getStylesForButtonColorAndVariant = (
     case 'text':
       return css`
         color: ${({ theme }) => theme.buttonColors[color].background};
+        padding: 0 !important; // TODO: Revisit here later
       `;
 
     case 'outlined':
