@@ -9,9 +9,9 @@ import {
   BlogPostCardList,
   ContentRenderer,
   Heading,
-  BlogPostCardDecorator,
 } from 'components';
 import { useBlogPostList } from 'hooks';
+import { BlogPostCardDecorator } from 'markdown-decorators';
 
 const StyledHeading = styled(Heading)`
   ${mb(3)};

@@ -15,6 +15,6 @@ export * from './gatsby-image/StyledGatsbyImage';
 export * from './blog-post-card-list/BlogPostCardList';
 export * from './heading/Heading';
 export * from './blog-post-card';
-export * from './project-card/Decorator';
-export * from './button-link/ButtonLink';
+export * from './project-card';
+export * from './button-link';
 export * from './paragraph/Paragraph';

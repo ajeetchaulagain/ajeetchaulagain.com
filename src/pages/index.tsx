@@ -7,15 +7,17 @@ import {
   ContentLayout,
   NewsLetter,
   SEO,
-  ProjectCardDecorator,
   ContentRenderer,
   ButtonLink,
   Heading,
   Paragraph,
-  BlogPostCardDecorator,
   BlogPostCardList,
 } from 'components';
 import { useBlogPostList, useProjectList } from 'hooks';
+import {
+  BlogPostCardDecorator,
+  ProjectCardDecorator,
+} from 'markdown-decorators';
 
 const IndexPage = () => {
   const blogPostList = useBlogPostList();

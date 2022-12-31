@@ -1,4 +1,4 @@
-import { ButtonProps } from './PropTypes';
+import { ButtonProps } from 'components';
 
 type MakePartial<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
 

@@ -1,7 +1,6 @@
-import { ButtonLinkDecorator } from '../button-link/Decorator';
-import { ButtonProps } from '../button-link/PropTypes';
+import { ButtonProps, ProjectCardProps } from 'components';
 import { ProjectListEdge } from 'hooks';
-import { ProjectCardProps } from './PropTypes';
+import { ButtonLinkDecorator } from './ButtonLinkDecorator';
 
 export const ProjectCardDecorator = (
   project: ProjectListEdge

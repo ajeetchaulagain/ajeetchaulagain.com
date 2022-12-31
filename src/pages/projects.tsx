@@ -6,11 +6,11 @@ import {
   IntroSection,
   ProjectList,
   SEO,
-  ProjectCardDecorator,
   ContentRenderer,
   Heading,
 } from 'components';
 import { useProjectList } from 'hooks';
+import { ProjectCardDecorator } from 'markdown-decorators';
 
 const StyledHeading = styled(Heading)`
   ${mb(3)};
