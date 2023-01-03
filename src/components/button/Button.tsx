@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { px, py } from 'styled-components-spacing';
 
 export const BaseButtonLink = styled(Link)`
-  ${px(3)};
+  ${px(4)};
   ${py(2)};
   border-radius: ${(props) => props.theme.borderRadius.base};
 `;

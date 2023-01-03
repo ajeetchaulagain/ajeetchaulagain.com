@@ -12,15 +12,15 @@ export const getStylesForButtonSize = (size: string) => {
       `;
     case 'medium':
       return css`
-        ${px(3)}
+        ${px(4)}
         ${py(2)}
         font-size:${(props) => props.theme.fontSizes.small};
       `;
     case 'large':
       return css`
-        ${px(3)}
-        ${py(2)}
-        font-size:${(props) => props.theme.fontSizes.medium};
+        ${px(4)}
+        ${py(3)};
+        font-size: ${(props) => props.theme.fontSizes.medium};
       `;
   }
 };

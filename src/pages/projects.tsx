@@ -13,7 +13,7 @@ import { useProjectList } from 'hooks';
 import { ProjectCardDecorator } from 'markdown-decorators';
 
 const StyledHeading = styled(Heading)`
-  ${mb(3)};
+  ${mb(4)};
 `;
 
 const ProjectsPage = () => {

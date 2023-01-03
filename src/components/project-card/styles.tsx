@@ -5,7 +5,7 @@ import { Heading } from 'components/heading/Heading';
 export const Container = styled.div`
   background-color: ${(props) => props.theme.colors.whiteSmoke};
   border-radius: ${(props) => props.theme.borderRadius.base};
-  ${p(4)};
+  ${p(5)};
   max-width: 30rem;
   height: 100%;
   display: flex;
@@ -20,13 +20,14 @@ export const StyledHeading = styled(Heading)`
 export const Paragraph = styled.p`
   font-size: ${(props) => props.theme.fontSizes.small};
   font-family: ${(props) => props.theme.fonts.body};
-  ${mb(4)};
+  ${mb(5)};
   line-height: 1.5;
+  color: ${({ theme }) => theme.colors.darkGrey};
 `;
 
 export const ActionWrapper = styled.div`
   margin-top: auto;
   a:not(:first-child) {
-    ${ml(3)};
+    ${ml(4)};
   }
 `;

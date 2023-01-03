@@ -4,13 +4,13 @@ import { p, mb, mt, ml } from 'styled-components-spacing';
 import { Heading } from '../heading/Heading';
 
 export const StyledHeading = styled(Heading)`
-  ${mb(3)};
+  ${mb(4)};
 `;
 
 export const Container = styled.div`
   background-color: ${(props) => props.theme.colors.whiteSmoke};
   border-radius: ${(props) => props.theme.borderRadius.base};
-  ${p(4)};
+  ${p(5)};
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -45,7 +45,7 @@ export const DateAndTimeComponent = styled.span`
 `;
 
 export const TagsWrapper = styled.div`
-  ${mt(3)};
+  ${mt(4)};
   span:not(:first-child) {
     ${ml(2)};
   }

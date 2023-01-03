@@ -17,7 +17,7 @@ const Container = styled.div`
 `;
 
 const ProjectCardWrapper = styled.div`
-  ${mb(4)};
+  ${mb(5)};
   ${breakpoint('md')`
     width: 48.5%;
   `}

@@ -11,8 +11,8 @@ export const HeaderWrapper = styled.header`
 `;
 
 export const HeaderContent = styled.div`
-  ${pt(5)};
-  ${px(4)}
+  ${pt(6)};
+  ${px(5)}
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -32,11 +32,11 @@ export const LogoWrapper = styled.div`
   }
   span {
     text-transform: uppercase;
-    ${ml(3)};
+    ${ml(4)};
     font-family: ${(props) => props.theme.fonts.primaryHeading};
     font-weight: ${(props) => props.theme.fontWeights[1]};
   }
-  ${mb({ xs: 3, md: 0 })}
+  ${mb({ xs: 5, md: 0 })}
 `;
 
 export const LogoLink = styled(Link)`
@@ -60,7 +60,7 @@ export const Nav = styled.ul`
 `;
 
 export const NavItem = styled.li`
-  ${ml(3)};
+  ${ml(4)};
   & > a:hover {
     color: ${({ theme }) => theme.colors.lightGreen};
   }

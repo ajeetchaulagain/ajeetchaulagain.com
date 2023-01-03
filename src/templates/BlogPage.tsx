@@ -3,7 +3,7 @@ import { MasterLayout } from '../components/layout';
 import { IntroSection } from '../components/intro-section/IntroSection';
 import ContentLayout from '../components/layout/ContentLayout';
 import * as blogTemplateStyles from './blog-template.module.scss';
-import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import { graphql, Link, PageProps } from 'gatsby';
 import { AboutJumbotronBlog } from '../components/about-jumbotron/AboutJumbotron';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
@@ -46,8 +46,8 @@ type DataProps = {
           childImageSharp: {
             gatsbyImageData: IGatsbyImageData;
           };
-          altText: string;
         };
+        altText: string;
       };
     };
     body: string;
@@ -78,7 +78,15 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
   props
 ): JSX.Element => {
   const { next, prev } = props.pageContext;
-  const { title, description } = props.data.mdx.frontmatter;
+
+  const {
+    frontmatter: { title, description, date, tags, thumbnail },
+    timeToRead,
+    body,
+  } = props.data.mdx;
+
+  const imageAltText = thumbnail.altText;
+  const image = getImage(thumbnail.src);
 
   return (
     <MasterLayout>
@@ -88,32 +96,26 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
         <div className={blogTemplateStyles.postWrapper}>
           <header className={blogTemplateStyles.postHeader}>
             <div className={blogTemplateStyles.headerContent}>
-              <h1>{props.data.mdx.frontmatter.title}</h1>
+              <h1>{title}</h1>
               <div className={blogTemplateStyles.postMeta}>
                 <span>
-                  <time>{props.data.mdx.frontmatter.date}</time>
+                  <time>{date}</time>
                   &nbsp; / &nbsp;
-                  {props.data.mdx.timeToRead} min read
+                  {timeToRead} min read
                 </span>
                 <ul className={blogTemplateStyles.tagList}>
-                  {props.data.mdx.frontmatter.tags.map((tag) => {
+                  {tags.map((tag) => {
                     return <li>{tag}</li>;
                   })}
                 </ul>
               </div>
             </div>
             <div className={blogTemplateStyles.featuredIcons}>
-              <GatsbyImage
-                image={
-                  props.data.mdx.frontmatter.thumbnail.src.childImageSharp
-                    .gatsbyImageData
-                }
-                alt="blog-thumbnail"
-              />
+              {image && <GatsbyImage image={image} alt={imageAltText} />}
             </div>
           </header>
 
-          <MarkdownRenderer>{props.data.mdx.body}</MarkdownRenderer>
+          <MarkdownRenderer>{body}</MarkdownRenderer>
 
           <div className={blogTemplateStyles.pageNavigation}>
             {prev && (

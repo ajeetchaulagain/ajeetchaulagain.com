@@ -14,7 +14,7 @@ import { useBlogPostList } from 'hooks';
 import { BlogPostCardDecorator } from 'markdown-decorators';
 
 const StyledHeading = styled(Heading)`
-  ${mb(3)};
+  ${mb(4)};
 `;
 
 const BlogPage = () => {

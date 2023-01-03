@@ -21,7 +21,7 @@ const SubscribeButton = styled(BaseButtonLink)`
   background-color: ${(props) => props.theme.colors.light};
   color: ${(props) => props.theme.colors.darkGrey};
   display: block;
-  ${mt(4)}
+  ${mt(5)}
   display: inline-block;
   border: ${(props) => props.theme.borders.none};
   &:hover {
