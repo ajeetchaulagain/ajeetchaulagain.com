@@ -11,13 +11,13 @@ export const Container = styled.span<{ type?: TagType; size?: TagSize }>`
     switch (type) {
       case 'light':
         return css`
-          background-color: ${theme.colors.light};
-          color: ${theme.colors.darkGrey};
+          background-color: ${theme.colors.quaternaryBackground};
+          color: ${theme.colors.primaryText};
         `;
       case 'dark':
         return css`
-          background-color: ${theme.colors.darkGrey};
-          color: ${theme.colors.light};
+          background-color: ${theme.colors.primaryText}; // TODO: Revisit here
+          color: ${theme.colors.secondaryText};
         `;
     }
   }}

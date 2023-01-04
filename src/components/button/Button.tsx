@@ -9,7 +9,7 @@ export const BaseButtonLink = styled(Link)`
 `;
 
 export const PrimaryButtonLink = styled(BaseButtonLink)`
-  background-color: ${(props) => props.theme.colors.purple};
+  background-color: ${(props) => props.theme.colors.brandPrimary};
 
   color: ${(props) =>
     props.theme.colors

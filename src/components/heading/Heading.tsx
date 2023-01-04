@@ -55,7 +55,7 @@ export const Heading = ({ level, children, ...rest }: HeadingProps) => {
     font-family: ${({ type, theme: { fonts } }) =>
       type === 'sans-serif' ? fonts.secondaryHeading : fonts.primaryHeading};
     line-height: 1.4;
-    color: ${({ theme }) => theme.colors.darkGrey};
+    color: ${({ theme }) => theme.colors.primaryText};
   `;
 
   return <StyledHeadingComponent {...rest}>{children}</StyledHeadingComponent>;

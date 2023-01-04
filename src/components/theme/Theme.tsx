@@ -10,18 +10,61 @@ export type HeadingFontSize = keyof typeof headingFontSizes;
 export const colors = {
   white: '#ffffff',
   light: '#e7e7e7',
-  lightGreen: '#d0fd9b',
-  purple: '#5c257f',
-  darkGrey: '#333',
+  eerieBlack: '#181818',
+  darkCharcoal: '#333333',
+  darkGrey: '#1f1f1f',
   lightPurple: '#e3e1fb',
   background: '#fff',
   primary: '#5c257f',
-  secondary: '#767676',
-  accent: '#d396c3',
-  muted: '#efefef',
-  error: '#d0453e',
   whiteSmoke: '#f3f6f9',
   whiteCream: '#faf8f2',
+  brightLavender: '#c995eb',
+};
+
+const darkThemeColor = {
+  primaryBackground: colors.eerieBlack,
+  secondaryBackground: colors.darkGrey,
+  tertiaryBackground: colors.darkGrey,
+  quaternaryBackground: colors.darkCharcoal,
+  primaryText: colors.light,
+  secondaryText: colors.darkGrey,
+  brandPrimary: colors.brightLavender,
+  primaryBorder: colors.eerieBlack,
+  secondaryBorder: colors.brightLavender,
+};
+
+const lightThemeButtonColors = {
+  primary: {
+    background: colors.primary,
+    text: colors.light,
+  },
+  secondary: {
+    background: colors.lightPurple,
+    text: colors.darkCharcoal,
+  },
+};
+
+const darkThemeButtonColors = {
+  primary: {
+    background: colors.brightLavender,
+    text: colors.darkCharcoal,
+  },
+  secondary: {
+    background: colors.primary,
+    text: colors.light,
+  },
+};
+
+const lightThemeColor = {
+  primaryBackground: colors.white,
+  secondaryBackground: colors.whiteCream,
+  tertiaryBackground: colors.whiteSmoke,
+  quaternaryBackground: colors.light,
+  primaryText: colors.darkCharcoal,
+  secondaryText: colors.light,
+  brandPrimary: colors.primary,
+  primaryBorder: colors.light,
+  secondaryBorder: colors.primary,
 };
 
 export const fontWeights = [0, 100, 200, 300, 400, 500, 600, 700, 800, 900];
@@ -62,7 +105,7 @@ export const defaultTheme: DefaultTheme = {
     7: '2.5rem',
     8: '3rem',
   },
-  colors: colors,
+  colors: lightThemeColor,
   fonts: {
     body: `Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI,
       Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
@@ -87,16 +130,7 @@ export const defaultTheme: DefaultTheme = {
     base: '0.1875rem',
     round: '99999em',
   },
-  buttonColors: {
-    primary: {
-      background: colors.primary,
-      text: colors.light,
-    },
-    secondary: {
-      background: colors.lightPurple,
-      text: colors.darkGrey,
-    },
-  },
+  buttonColors: lightThemeButtonColors,
 };
 
 export const Theme = ({ children }: ThemeProps) => {

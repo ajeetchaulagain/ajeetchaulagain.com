@@ -7,7 +7,7 @@ type ContentWrapperProps = {
 };
 
 const Wrapper = styled.section`
-  background-color: ${(props) => props.theme.colors.whiteCream};
+  background-color: ${({ theme }) => theme.colors.secondaryBackground};
   background-blend-mode: darken;
   position: relative;
   display: flex;
@@ -18,24 +18,25 @@ const Wrapper = styled.section`
 `;
 
 const Content = styled.div`
-  background-color: ${(props) => props.theme.colors.white};
-  border: ${(props) => props.theme.borders.thin} #ebe9e9;
+  background-color: ${({ theme }) => theme.colors.primaryBackground};
+  border: ${({ theme }) =>
+    `${theme.borders.thin} ${theme.colors.primaryBorder}`};
 
   ${breakpoint('md')`
      padding: 4rem 3rem;
-  `}
+  `};
 
   ${breakpoint('xl')`
     width: 992px;
     margin-top: -6rem;
     margin-bottom:10rem;
     padding: 6rem 9rem;
-  `}
+  `};
 
   ${breakpoint('xxl')`
     width: 1120px;
     padding: 9rem 12rem;
-  `}
+  `};
 `;
 
 export const ContentRenderer = ({ children }: ContentWrapperProps) => {

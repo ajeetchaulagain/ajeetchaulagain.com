@@ -3,8 +3,8 @@ import { p, ml, mb } from 'styled-components-spacing';
 import { Heading } from 'components/heading/Heading';
 
 export const Container = styled.div`
-  background-color: ${(props) => props.theme.colors.whiteSmoke};
-  border-radius: ${(props) => props.theme.borderRadius.base};
+  background-color: ${({ theme }) => theme.colors.tertiaryBackground};
+  border-radius: ${({ theme }) => theme.borderRadius.base};
   ${p(5)};
   max-width: 30rem;
   height: 100%;
@@ -22,7 +22,7 @@ export const Paragraph = styled.p`
   font-family: ${(props) => props.theme.fonts.body};
   ${mb(5)};
   line-height: 1.5;
-  color: ${({ theme }) => theme.colors.darkGrey};
+  color: ${({ theme }) => theme.colors.primaryText};
 `;
 
 export const ActionWrapper = styled.div`

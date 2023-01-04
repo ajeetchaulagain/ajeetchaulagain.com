@@ -30,7 +30,7 @@ export const BaseStyles = css`
     transition: all 0.3s ease-in-out;
   }
 
-  input[type='text'],
+  /* input[type='text'],
   input[type='email'],
   input[type='url'],
   input[type='password'],
@@ -61,9 +61,9 @@ export const BaseStyles = css`
   input[type='submit'],
   button {
     cursor: pointer;
-  }
+  } */
 
-  form {
+  /* form {
     label {
       width: 100%;
       font-size: inherit;
@@ -74,7 +74,7 @@ export const BaseStyles = css`
 
   textarea {
     width: 100%;
-  }
+  } */
 
   em {
     font-weight: 600;

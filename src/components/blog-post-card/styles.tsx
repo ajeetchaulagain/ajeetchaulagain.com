@@ -8,7 +8,7 @@ export const StyledHeading = styled(Heading)`
 `;
 
 export const Container = styled.div`
-  background-color: ${(props) => props.theme.colors.whiteSmoke};
+  background-color: ${(props) => props.theme.colors.tertiaryBackground};
   border-radius: ${(props) => props.theme.borderRadius.base};
   ${p(5)};
   display: flex;
@@ -37,7 +37,7 @@ export const TextContentWrapper = styled.div`
 export const DateAndTimeComponent = styled.span`
   text-transform: uppercase;
   font-size: ${({ theme }) => theme.fontSizes.xmall};
-  color: ${({ theme }) => theme.colors.purple};
+  color: ${({ theme }) => theme.colors.brandPrimary};
   font-family: ${({ theme }) => theme.fonts.body};
   font-weight: ${({ theme }) => theme.fontWeights[5]};
   display: inline-block;

@@ -12,20 +12,20 @@ import { StyledGatsbyImage } from 'components/gatsby-image/StyledGatsbyImage';
 const AboutMeButton = styled(BaseButtonLink)`
   border: ${(props) => props.theme.borders.thin};
   &:hover {
-    background-color: ${(props) => props.theme.colors.light};
-    color: ${(props) => props.theme.colors.purple};
+    background-color: ${(props) => props.theme.colors.primaryBackground};
+    color: ${(props) => props.theme.colors.brandPrimary};
   }
 `;
 
 const SubscribeButton = styled(BaseButtonLink)`
-  background-color: ${(props) => props.theme.colors.light};
-  color: ${(props) => props.theme.colors.darkGrey};
+  background-color: ${(props) => props.theme.colors.primaryBackground};
+  color: ${(props) => props.theme.colors.primaryText};
   display: block;
   ${mt(5)}
   display: inline-block;
   border: ${(props) => props.theme.borders.none};
   &:hover {
-    color: ${(props) => props.theme.colors.purple};
+    color: ${(props) => props.theme.colors.brandPrimary};
   }
   @media only screen and (max-width: 599px) {
     display: none;
