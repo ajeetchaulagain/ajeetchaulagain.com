@@ -1,29 +1,41 @@
 import { Link } from 'gatsby';
 import styled, { DefaultTheme } from 'styled-components';
-import { ml, pt, mb, px, py } from 'styled-components-spacing';
+import { ml, mb, px, py } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
 
 export const HeaderWrapper = styled.header`
-  color: ${(props) => props.theme.colors.light};
+  font-size: ${({ theme }) => theme.fontSizes.medium};
+  font-family: ${(props) => props.theme.fonts.secondaryHeading};
+  font-weight: ${(props) => props.theme.fontWeights[5]};
+  color: ${({ theme }) =>
+    theme.name === 'lightTheme'
+      ? theme.colors.secondaryText
+      : theme.colors.primaryText};
   width: 100%;
   position: absolute;
   z-index: 2;
 `;
 
 export const HeaderContent = styled.div`
-  ${pt(6)};
-  ${px(5)}
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+  ${px(4)};
+  ${py(6)};
+
+  ${breakpoint('lg')`
+     flex-direction:row;
+     justify-content:space-between;
+     margin:0 auto;
+  `};
+
+  ${breakpoint('xl')`
+    width: 62rem;
+  `};
+
   ${breakpoint('xxl')`
     width: 70rem;
-    margin: 0 auto;
-  `}
-  ${breakpoint('xs', 'md')`
-    flex-direction: column;
-  `}
+  `};
 `;
 
 export const LogoWrapper = styled.div`
@@ -31,12 +43,12 @@ export const LogoWrapper = styled.div`
     width: 1.75rem;
   }
   span {
+    font-size: ${({ theme }) => theme.fontSizes.small};
+    font-weight: ${(props) => props.theme.fontWeights[3]};
     text-transform: uppercase;
-    ${ml(4)};
-    font-family: ${(props) => props.theme.fonts.primaryHeading};
-    font-weight: ${(props) => props.theme.fontWeights[1]};
+    ${ml(4)}
   }
-  ${mb({ xs: 5, md: 0 })}
+  ${mb({ xs: 5, lg: 0 })}
 `;
 
 export const LogoLink = styled(Link)`
@@ -47,14 +59,11 @@ export const LogoLink = styled(Link)`
   }
 `;
 
-export const NavMenuWrapper = styled.nav`
-  font-weight: ${(props) => props.theme.fontWeights[5]};
-`;
+export const NavMenuWrapper = styled.nav``;
 
 export const Nav = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  text-transform: uppercase;
   align-items: center;
   justify-content: center;
 `;
@@ -62,10 +71,10 @@ export const Nav = styled.ul`
 export const NavItem = styled.li`
   ${ml(4)};
   & > a:hover {
-    color: ${({ theme }) => theme.colors.lightGreen};
+    color: ${({ theme }) => theme.colors.brightLavender};
   }
   & > a.activeNavItem {
-    color: ${({ theme }) => theme.colors.lightGreen};
+    color: ${({ theme }) => theme.colors.brightLavender};
     border-bottom: ${({ theme }) => theme.borders.thick};
   }
   & > a {
@@ -74,11 +83,12 @@ export const NavItem = styled.li`
       border: ${({ theme }: { theme: DefaultTheme }) => theme.borders.thin};
       ${px(2)};
       ${py(1)};
-      ${mb(2)}
+      ${mb(2)};
       &.activeNavItem {
         background-color: ${({ theme }: { theme: DefaultTheme }) =>
-          theme.colors.light};
-        color:${({ theme }: { theme: DefaultTheme }) => theme.colors.purple};;
+          theme.colors.primaryText};
+        color:${({ theme }: { theme: DefaultTheme }) =>
+          theme.colors.brightLavender};;
         border:${({ theme }: { theme: DefaultTheme }) => theme.borders.none};
       }
     `}

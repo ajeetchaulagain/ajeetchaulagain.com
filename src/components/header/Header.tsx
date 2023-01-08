@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
-import { Helmet } from 'react-helmet';
 import Logo from '../../images/logo.svg';
 import {
   HeaderWrapper,
@@ -11,6 +10,7 @@ import {
   NavItem,
   NavMenuWrapper,
 } from './styles';
+import { navItems } from './navItems';
 
 export const Header = (): JSX.Element => {
   const data = useStaticQuery(graphql`
@@ -23,14 +23,6 @@ export const Header = (): JSX.Element => {
       }
     }
   `);
-
-  const navItems: Record<string, string>[] = [
-    { title: 'Home', url: '/' },
-    { title: 'About', url: '/about' },
-    { title: 'Projects', url: '/projects' },
-    { title: 'Articles', url: '/blog' },
-    { title: 'Contact', url: '/contact' },
-  ];
 
   return (
     <HeaderWrapper>

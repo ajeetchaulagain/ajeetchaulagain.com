@@ -2,6 +2,7 @@ import { DefaultTheme } from 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
+    name: 'darkTheme' | 'lightTheme';
     breakpoints: {
       [name in 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl']: number;
     };

@@ -19,6 +19,10 @@ export const colors = {
   whiteSmoke: '#f3f6f9',
   whiteCream: '#faf8f2',
   brightLavender: '#c995eb',
+  primary90: '#5c257ff8',
+  greenBlue90: '#1a75adf8',
+  darkCharcoal90: '#333333e6',
+  darkGrey90: '#1f1f1fe6',
 };
 
 const darkThemeColor = {
@@ -31,6 +35,9 @@ const darkThemeColor = {
   brandPrimary: colors.brightLavender,
   primaryBorder: colors.eerieBlack,
   secondaryBorder: colors.brightLavender,
+  heroGradientStop1: colors.darkCharcoal90,
+  heroGradientStop2: colors.darkGrey90,
+  brightLavender: colors.brightLavender,
 };
 
 const lightThemeButtonColors = {
@@ -50,8 +57,8 @@ const darkThemeButtonColors = {
     text: colors.darkCharcoal,
   },
   secondary: {
-    background: colors.primary,
-    text: colors.light,
+    background: colors.brightLavender,
+    text: colors.darkCharcoal,
   },
 };
 
@@ -65,6 +72,9 @@ const lightThemeColor = {
   brandPrimary: colors.primary,
   primaryBorder: colors.light,
   secondaryBorder: colors.primary,
+  brightLavender: colors.brightLavender,
+  heroGradientStop1: colors.primary90,
+  heroGradientStop2: colors.greenBlue90,
 };
 
 export const fontWeights = [0, 100, 200, 300, 400, 500, 600, 700, 800, 900];
@@ -85,6 +95,7 @@ const headingFontSizes = {
 };
 
 export const defaultTheme: DefaultTheme = {
+  name: 'darkTheme',
   breakpoints: {
     xs: 0,
     sm: 480,
@@ -105,7 +116,7 @@ export const defaultTheme: DefaultTheme = {
     7: '2.5rem',
     8: '3rem',
   },
-  colors: lightThemeColor,
+  colors: darkThemeColor,
   fonts: {
     body: `Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI,
       Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
@@ -130,7 +141,7 @@ export const defaultTheme: DefaultTheme = {
     base: '0.1875rem',
     round: '99999em',
   },
-  buttonColors: lightThemeButtonColors,
+  buttonColors: darkThemeButtonColors,
 };
 
 export const Theme = ({ children }: ThemeProps) => {

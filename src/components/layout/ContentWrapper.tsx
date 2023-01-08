@@ -27,14 +27,14 @@ const Content = styled.div`
   `};
 
   ${breakpoint('xl')`
-    width: 992px;
+    width: 62rem;
     margin-top: -6rem;
     margin-bottom:10rem;
     padding: 6rem 9rem;
   `};
 
   ${breakpoint('xxl')`
-    width: 1120px;
+    width: 70rem;
     padding: 9rem 12rem;
   `};
 `;

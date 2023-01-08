@@ -5,10 +5,10 @@ export const useAuthorImage = () => {
   const { file } = useStaticQuery(
     graphql`
       query SiteAuthorImage {
-        file(relativePath: { eq: "images/ajeet.png" }) {
+        file(relativePath: { eq: "images/ajeet-profile.jpg" }) {
           id
           childImageSharp {
-            gatsbyImageData(layout: FIXED, width: 108)
+            gatsbyImageData(layout: CONSTRAINED)
           }
         }
       }
