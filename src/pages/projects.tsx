@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { mb } from 'styled-components-spacing';
 import {
   MasterLayout,
-  IntroSection,
   ProjectList,
   SEO,
   ContentRenderer,
@@ -11,6 +10,7 @@ import {
 } from 'components';
 import { useProjectList } from 'hooks';
 import { ProjectCardDecorator } from 'markdown-decorators';
+import { HeroBlank } from 'components/hero-blank/HeroBlank';
 
 const StyledHeading = styled(Heading)`
   ${mb(4)};
@@ -23,7 +23,7 @@ const ProjectsPage = () => {
   return (
     <MasterLayout>
       <SEO title="Projects" description="List of projects" />
-      <IntroSection />
+      <HeroBlank />
       <ContentRenderer>
         <StyledHeading>Projects</StyledHeading>
         <ProjectList projects={projects} />

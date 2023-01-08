@@ -11,7 +11,7 @@ export const MasterLayout = ({ children }: MasterLayoutProps) => {
   return (
     <Theme>
       <GlobalStyle />
-      <div className="main">
+      <div>
         <Header />
         {children}
         <Footer />

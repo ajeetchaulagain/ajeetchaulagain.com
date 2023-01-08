@@ -1,37 +1,117 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { mb, mt, ml } from 'styled-components-spacing';
+
+const GlobalMarkdownStyles = css`
+  font-family: ${({ theme }) => theme.fonts.body};
+  font-size: ${({ theme }) => theme.fontSizes.xmedium};
+  color: ${({ theme }) => theme.colors.primaryText};
+`;
+
+const AnchorLinkStyles = css`
+  a {
+    color: ${({ theme }) => theme.colors.brandPrimary};
+    text-decoration: underline;
+    font-weight: ${({ theme }) => theme.fontWeights[6]};
+    :hover {
+      text-decoration: none;
+    }
+  }
+`;
+
+const HeadingStyles = css`
+  // Need a revisit here
+  h1 {
+    font-weight: ${({ theme }) => theme.fontWeights[6]};
+    font-family: ${({ theme }) => theme.fonts.secondaryHeading};
+    font-size: ${({ theme }) => theme.headingFontSizes.medium};
+    line-height: ${({ theme }) => theme.lineHeights.heading};
+  }
+
+  h2 {
+    font-weight: ${({ theme }) => theme.fontWeights[6]};
+    font-family: ${({ theme }) => theme.fonts.secondaryHeading};
+    font-size: ${({ theme }) => theme.headingFontSizes.medium};
+    line-height: ${({ theme }) => theme.lineHeights.heading};
+    ${mb(2)};
+    ${mt(7)};
+  }
+
+  h3 {
+    font-weight: ${({ theme }) => theme.fontWeights[5]};
+    font-family: ${({ theme }) => theme.fonts.secondaryHeading};
+    font-size: ${({ theme }) => theme.headingFontSizes.small} !important;
+    line-height: ${({ theme }) => theme.lineHeights.heading};
+    font-size: 1.4rem;
+    font-weight: 700;
+    ${mb(2)};
+    ${mt(7)};
+  }
+
+  h4 {
+    font-weight: ${({ theme }) => theme.fontWeights[5]};
+    font-family: ${({ theme }) => theme.fonts.secondaryHeading};
+    font-size: ${({ theme }) => theme.headingFontSizes.small} !important;
+    line-height: ${({ theme }) => theme.lineHeights.heading};
+    ${mb(2)};
+    ${mt(7)};
+  }
+
+  h5 {
+    font-weight: ${({ theme }) => theme.fontWeights[5]};
+    font-family: ${({ theme }) => theme.fonts.secondaryHeading};
+    font-size: ${({ theme }) => theme.headingFontSizes.small} !important;
+    line-height: ${({ theme }) => theme.lineHeights.heading};
+    ${mb(3)};
+    ${mt(6)};
+  }
+`;
+
+const UnorderListStyles = css`
+  ul {
+    li {
+      list-style-type: disc;
+      line-height: ${({ theme }) => theme.lineHeights.body};
+      ${ml(5)};
+      &::marker {
+        color: ${({ theme }) => theme.colors.brightLavender};
+      }
+    }
+    ${mb(5)};
+  }
+`;
+
+const OrderedListStyles = css`
+  ol {
+    li {
+      line-height: ${({ theme }) => theme.lineHeights.body};
+      ${ml(5)};
+    }
+    ${mb(5)};
+  }
+`;
+
+const ParagraphStyles = css`
+  p {
+    font-family: ${({ theme }) => theme.fonts.body};
+    font-size: ${({ theme }) => theme.fontSizes.xmedium};
+    ${mb(5)}
+    line-height: ${({ theme }) => theme.lineHeights.body};
+    color: ${({ theme }) => theme.colors.primaryText};
+  }
+`;
 
 const MarkdownWrapper = styled.div`
-  ul {
-    li:last-child {
-      margin-bottom: 1.4rem;
-    }
-  }
-  ol {
-    li:last-child {
-      margin-bottom: 0.5rem;
-    }
-  }
-  ul li {
-    font-size: 1.1rem;
-    list-style-type: disc;
-    margin-left: 2rem;
-    &::marker {
-      color: #7b79f4;
-    }
-  }
-
-  ol li {
-    margin-left: 1.1rem;
-    &::marker {
-      font-weight: bolder;
-    }
-  }
+  ${GlobalMarkdownStyles};
+  ${AnchorLinkStyles};
+  ${ParagraphStyles};
+  ${HeadingStyles};
+  ${UnorderListStyles};
+  ${OrderedListStyles}
   // Fix for gatsby remark image left align
   // Todo: revisit for a standard fixes
   .gatsby-resp-image-wrapper {
-    // border: 2px solid gray;
     margin: 0 !important;
   }
 `;

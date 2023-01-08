@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { mb } from 'styled-components-spacing';
 import {
   MasterLayout,
-  IntroSection,
   NewsLetter,
   SEO,
   BlogPostCardList,
@@ -12,6 +11,7 @@ import {
 } from 'components';
 import { useBlogPostList } from 'hooks';
 import { BlogPostCardDecorator } from 'markdown-decorators';
+import { HeroBlank } from 'components/hero-blank/HeroBlank';
 
 const StyledHeading = styled(Heading)`
   ${mb(4)};
@@ -27,7 +27,7 @@ const BlogPage = () => {
         title="Articles"
         description="Recent articles and tutorials from me"
       />
-      <IntroSection />
+      <HeroBlank />
       <ContentRenderer>
         <StyledHeading>Articles & Tutorials</StyledHeading>
         <BlogPostCardList blogs={blogs} />

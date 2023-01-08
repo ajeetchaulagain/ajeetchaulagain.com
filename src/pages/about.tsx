@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import {
   MasterLayout,
-  ContentLayout,
-  IntroSection,
   NewsLetter,
   MarkdownRenderer,
   SEO,
   StyledGatsbyImage,
+  ContentRenderer,
 } from 'components';
 import { useAuthorImage, useAboutPageDetails } from 'hooks';
+import { HeroBlank } from 'components/hero-blank/HeroBlank';
 
 const AboutImage = styled(StyledGatsbyImage)`
   margin-bottom: 1rem;
@@ -28,12 +28,12 @@ const AboutPage = () => {
   return (
     <MasterLayout>
       <SEO title={title} description={description} />
-      <IntroSection />
-      <ContentLayout>
+      <HeroBlank />
+      <ContentRenderer>
         <AboutImage image={gatsbyImageData} alt="about-image" />
         <MarkdownRenderer>{body}</MarkdownRenderer>
         <NewsLetter />
-      </ContentLayout>
+      </ContentRenderer>
     </MasterLayout>
   );
 };

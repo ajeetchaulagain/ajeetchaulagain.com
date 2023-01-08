@@ -1,14 +1,14 @@
 import React from 'react';
 import {
   MasterLayout,
-  ContentLayout,
-  IntroSection,
   ContactForm,
   MarkdownRenderer,
   SocialMediaIcons,
   SEO,
+  ContentRenderer,
 } from 'components';
 import { useContactPageDetails } from 'hooks/useContactPageDetails';
+import { HeroBlank } from 'components/hero-blank/HeroBlank';
 
 const ContactPage = () => {
   const {
@@ -19,13 +19,13 @@ const ContactPage = () => {
   return (
     <MasterLayout>
       <SEO title={title} description={description} />
-      <IntroSection />
-      <ContentLayout>
+      <HeroBlank />
+      <ContentRenderer>
         <MarkdownRenderer>{body}</MarkdownRenderer>
         <ContactForm />
         <h2>Follow me on:</h2>
         <SocialMediaIcons />
-      </ContentLayout>
+      </ContentRenderer>
     </MasterLayout>
   );
 };

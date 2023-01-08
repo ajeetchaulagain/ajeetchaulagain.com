@@ -82,6 +82,7 @@ export const fontWeights = [0, 100, 200, 300, 400, 500, 600, 700, 800, 900];
 const fontSizes = {
   xsmall: '0.8rem',
   small: '1.0rem',
+  xmedium: '1.125rem',
   medium: '1.2rem',
   large: '1.3rem',
   xlarge: '1.4rem',
@@ -95,7 +96,7 @@ const headingFontSizes = {
 };
 
 export const defaultTheme: DefaultTheme = {
-  name: 'lightTheme',
+  name: 'darkTheme',
   breakpoints: {
     xs: 0,
     sm: 480,
@@ -117,7 +118,7 @@ export const defaultTheme: DefaultTheme = {
     8: '3rem',
     9: '4rem',
   },
-  colors: lightThemeColor,
+  colors: darkThemeColor,
   fonts: {
     body: `Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI,
       Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
@@ -129,8 +130,9 @@ export const defaultTheme: DefaultTheme = {
   fontSizes: fontSizes,
   headingFontSizes: headingFontSizes,
   lineHeights: {
-    body: 1.5,
-    heading: 1.1,
+    body: 1.8,
+    bodyCondensed: 1.5,
+    heading: 1.4,
   },
   borders: {
     none: '0',
@@ -142,7 +144,7 @@ export const defaultTheme: DefaultTheme = {
     base: '0.1875rem',
     round: '99999em',
   },
-  buttonColors: lightThemeButtonColors,
+  buttonColors: darkThemeButtonColors,
 };
 
 export const Theme = ({ children }: ThemeProps) => {

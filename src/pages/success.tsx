@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import { MasterLayout, ContentLayout, IntroSection, SEO } from 'components';
+import { MasterLayout, ContentLayout, SEO } from 'components';
+import { HeroBlank } from 'components/hero-blank/HeroBlank';
 
 const FormSubmissionSuccess = () => {
   return (
     <MasterLayout>
       <SEO title="Thankyou for contacting me" />
-      <IntroSection />
+      <HeroBlank />
       <ContentLayout minHeight="40rem">
         <div>
           <h1>Thankyou for getting in touch!</h1>

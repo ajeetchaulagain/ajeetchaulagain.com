@@ -1,14 +1,17 @@
 import React from 'react';
-import { MasterLayout } from '../components/layout';
-import { IntroSection } from '../components/intro-section/IntroSection';
-import ContentLayout from '../components/layout/ContentLayout';
+import { ContentRenderer, MasterLayout } from '../components/layout';
+
 import * as blogTemplateStyles from './blog-template.module.scss';
 import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import { graphql, Link, PageProps } from 'gatsby';
 import { AboutJumbotronBlog } from '../components/about-jumbotron/AboutJumbotron';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { NewsLetter } from '../components/newsletter/NewsLetter';
-import { MarkdownRenderer, SEO } from 'components';
+import { Heading, MarkdownRenderer, SEO } from 'components';
+import { HeroBlank } from 'components/hero-blank/HeroBlank';
+import styled from 'styled-components';
+import { Tag } from 'components/tag/Tag';
+import { mt, ml } from 'styled-components-spacing';
 
 export const query = graphql`
   query ($slug: String!) {
@@ -88,66 +91,94 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
   const imageAltText = thumbnail.altText;
   const image = getImage(thumbnail.src);
 
+  const PostHeaderContainer = styled.div`
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.brightLavender};
+  `;
+
+  const PostHeaderLeftColumn = styled.div`
+    display: flex;
+    flex-direction: column;
+  `;
+  const PostHeaderRightColumn = styled.div`
+    width: 20%;
+  `;
+
+  const DateAndTimeComponent = styled.span`
+    text-transform: uppercase;
+    font-size: ${({ theme }) => theme.fontSizes.xmall};
+    color: ${({ theme }) => theme.colors.brandPrimary};
+    font-family: ${({ theme }) => theme.fonts.body};
+    font-weight: ${({ theme }) => theme.fontWeights[5]};
+    ${mt(4)};
+  `;
+
+  const TagsWrapper = styled.div`
+    ${mt(5)};
+    span:not(:first-child) {
+      ${ml(2)};
+    }
+  `;
+
   return (
     <MasterLayout>
       <SEO title={title} description={description} />
-      <IntroSection />
-      <ContentLayout>
-        <div className={blogTemplateStyles.postWrapper}>
-          <header className={blogTemplateStyles.postHeader}>
-            <div className={blogTemplateStyles.headerContent}>
-              <h1>{title}</h1>
-              <div className={blogTemplateStyles.postMeta}>
-                <span>
-                  <time>{date}</time>
-                  &nbsp; / &nbsp;
-                  {timeToRead} min read
-                </span>
-                <ul className={blogTemplateStyles.tagList}>
-                  {tags.map((tag) => {
-                    return <li>{tag}</li>;
-                  })}
-                </ul>
-              </div>
+      <HeroBlank />
+      <ContentRenderer>
+        <PostHeaderContainer>
+          <PostHeaderLeftColumn>
+            <Heading>{title}</Heading>
+
+            <DateAndTimeComponent>
+              {date} / {timeToRead} min read
+            </DateAndTimeComponent>
+
+            <TagsWrapper>
+              {tags.map((tag, index) => {
+                return <Tag key={index}>{tag}</Tag>;
+              })}
+            </TagsWrapper>
+          </PostHeaderLeftColumn>
+          <PostHeaderRightColumn>
+            {image && <GatsbyImage image={image} alt={imageAltText} />}
+          </PostHeaderRightColumn>
+        </PostHeaderContainer>
+
+        <MarkdownRenderer>{body}</MarkdownRenderer>
+
+        <div className={blogTemplateStyles.pageNavigation}>
+          {prev && (
+            <div className={blogTemplateStyles.prevNav}>
+              <aside className={blogTemplateStyles.float}>
+                <p>Previous</p>
+                <Link to={`/blog/${prev.fields.slug}`}>
+                  <FaArrowLeft />
+                  <span>{prev.frontmatter.title}</span>
+                </Link>
+              </aside>
             </div>
-            <div className={blogTemplateStyles.featuredIcons}>
-              {image && <GatsbyImage image={image} alt={imageAltText} />}
+          )}
+
+          {next && (
+            <div className={blogTemplateStyles.nextNav}>
+              <aside className={blogTemplateStyles.float}>
+                <p>Next</p>
+                <Link to={`/blog/${next.fields.slug}`}>
+                  <span>{next.frontmatter.title}</span>
+                  <FaArrowRight />
+                </Link>
+              </aside>
             </div>
-          </header>
-
-          <MarkdownRenderer>{body}</MarkdownRenderer>
-
-          <div className={blogTemplateStyles.pageNavigation}>
-            {prev && (
-              <div className={blogTemplateStyles.prevNav}>
-                <aside className={blogTemplateStyles.float}>
-                  <p>Previous</p>
-                  <Link to={`/blog/${prev.fields.slug}`}>
-                    <FaArrowLeft />
-                    <span>{prev.frontmatter.title}</span>
-                  </Link>
-                </aside>
-              </div>
-            )}
-
-            {next && (
-              <div className={blogTemplateStyles.nextNav}>
-                <aside className={blogTemplateStyles.float}>
-                  <p>Next</p>
-                  <Link to={`/blog/${next.fields.slug}`}>
-                    <span>{next.frontmatter.title}</span>
-                    <FaArrowRight />
-                  </Link>
-                </aside>
-              </div>
-            )}
-          </div>
+          )}
         </div>
 
         <AboutJumbotronBlog />
         <br />
         <NewsLetter />
-      </ContentLayout>
+      </ContentRenderer>
     </MasterLayout>
   );
 };
