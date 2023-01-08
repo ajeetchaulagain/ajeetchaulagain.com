@@ -21,8 +21,8 @@ export const colors = {
   brightLavender: '#c995eb',
   primary90: '#5c257ff8',
   greenBlue90: '#1a75adf8',
-  darkCharcoal90: '#333333e6',
-  darkGrey90: '#1f1f1fe6',
+  darkCharcoal90: '#333333f8',
+  darkGrey90: '#1f1f1ff8',
 };
 
 const darkThemeColor = {
@@ -95,7 +95,7 @@ const headingFontSizes = {
 };
 
 export const defaultTheme: DefaultTheme = {
-  name: 'darkTheme',
+  name: 'lightTheme',
   breakpoints: {
     xs: 0,
     sm: 480,
@@ -115,8 +115,9 @@ export const defaultTheme: DefaultTheme = {
     6: '2rem',
     7: '2.5rem',
     8: '3rem',
+    9: '4rem',
   },
-  colors: darkThemeColor,
+  colors: lightThemeColor,
   fonts: {
     body: `Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI,
       Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
@@ -141,7 +142,7 @@ export const defaultTheme: DefaultTheme = {
     base: '0.1875rem',
     round: '99999em',
   },
-  buttonColors: darkThemeButtonColors,
+  buttonColors: lightThemeButtonColors,
 };
 
 export const Theme = ({ children }: ThemeProps) => {

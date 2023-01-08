@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Header } from '../header';
-import Footer from '../footer/Footer';
+import { Header, Footer } from '../header-footer';
 import { GlobalStyle } from '../../styles/GlobalStyles';
 import { Theme } from 'components/theme/Theme';
 

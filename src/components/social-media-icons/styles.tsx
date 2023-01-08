@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 import { mt, ml } from 'styled-components-spacing';
 
-export const Container = styled.div``;
-
 export const ListItem = styled.li``;
 
 export const SocialMediaList = styled.ul`

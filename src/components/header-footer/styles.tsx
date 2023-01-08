@@ -1,16 +1,11 @@
 import { Link } from 'gatsby';
 import styled, { DefaultTheme } from 'styled-components';
-import { ml, mb, px, py } from 'styled-components-spacing';
+import { ml, mb, px, py, pt, pb } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
+import { Paragraph } from '../paragraph/Paragraph';
 
 export const HeaderWrapper = styled.header`
-  font-size: ${({ theme }) => theme.fontSizes.medium};
   font-family: ${(props) => props.theme.fonts.secondaryHeading};
-  font-weight: ${(props) => props.theme.fontWeights[5]};
-  color: ${({ theme }) =>
-    theme.name === 'lightTheme'
-      ? theme.colors.secondaryText
-      : theme.colors.primaryText};
   width: 100%;
   position: absolute;
   z-index: 2;
@@ -45,6 +40,10 @@ export const LogoWrapper = styled.div`
   span {
     font-size: ${({ theme }) => theme.fontSizes.small};
     font-weight: ${(props) => props.theme.fontWeights[3]};
+    color: ${({ theme }) =>
+      theme.name === 'lightTheme'
+        ? theme.colors.secondaryText
+        : theme.colors.primaryText};
     text-transform: uppercase;
     ${ml(4)}
   }
@@ -69,6 +68,13 @@ export const Nav = styled.ul`
 `;
 
 export const NavItem = styled.li`
+  font-size: ${({ theme }) => theme.fontSizes.medium};
+  font-weight: ${(props) => props.theme.fontWeights[5]};
+  color: ${({ theme }) =>
+    theme.name === 'lightTheme'
+      ? theme.colors.secondaryText
+      : theme.colors.primaryText};
+
   ${ml(4)};
   & > a:hover {
     color: ${({ theme }) => theme.colors.brightLavender};
@@ -93,4 +99,51 @@ export const NavItem = styled.li`
       }
     `}
   }
+`;
+
+export const FooterContainer = styled.div`
+  font-size: ${({ theme }) => theme.fontSizes.medium};
+  font-family: ${(props) => props.theme.fonts.secondaryHeading};
+  font-weight: ${(props) => props.theme.fontWeights[5]};
+  width: 100%;
+  background: url('../pattern-3.jpg') repeat fixed center;
+  background-size: 1000px;
+`;
+
+export const FooterContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  ${pt(9)};
+  ${pb(7)};
+  ${px(4)};
+
+  ${breakpoint('lg')`
+  `};
+
+  ${breakpoint('xl')`
+    width: 62rem;
+  `};
+
+  ${breakpoint('xxl')`
+    width: 70rem;
+  `};
+`;
+
+export const SocialMediaLinksWrapper = styled.div`
+  ${mb(5)};
+`;
+
+export const StyledParagraph = styled(Paragraph)`
+  && {
+    color: ${({ theme }) =>
+      theme.name === 'lightTheme'
+        ? theme.colors.secondaryText
+        : theme.colors.primaryText};
+    font-size: ${({ theme }) => theme.fontSizes.small};
+    ${mb(1)};
+  }
+  text-align: center;
 `;
