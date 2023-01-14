@@ -6,8 +6,11 @@ import {
   TextArea,
   Label,
 } from 'components/form/styles';
+import { mb } from 'styled-components-spacing';
 
-const Container = styled.div``;
+const Container = styled.div`
+  ${mb(6)}
+`;
 
 const Button = styled(FormButton)`
   width: 90px;
