@@ -18,3 +18,5 @@ export * from './button-link';
 export * from './paragraph/Paragraph';
 export * from './social-media-icons/SocialMediaIcons';
 export * from './social-media-icons/styles';
+export * from './hero-blank/HeroBlank';
+export * from './tag/Tag';
