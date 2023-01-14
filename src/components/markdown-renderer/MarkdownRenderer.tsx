@@ -21,12 +21,12 @@ const AnchorLinkStyles = css`
 `;
 
 const HeadingStyles = css`
-  // Need a revisit here
   h1 {
-    font-weight: ${({ theme }) => theme.fontWeights[6]};
-    font-family: ${({ theme }) => theme.fonts.secondaryHeading};
-    font-size: ${({ theme }) => theme.headingFontSizes.medium};
+    font-weight: ${({ theme }) => theme.fontWeights[9]};
+    font-family: ${({ theme }) => theme.fonts.primaryHeading};
+    font-size: ${({ theme }) => theme.headingFontSizes.xlarge};
     line-height: ${({ theme }) => theme.lineHeights.heading};
+    ${mb(2)};
   }
 
   h2 {

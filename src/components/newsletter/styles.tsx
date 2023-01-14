@@ -40,40 +40,4 @@ export const SuccessContentWrapper = styled.div`
   width: 76%;
 `;
 
-export const Input = styled.input`
-  border: 2px solid ${({ theme }) => theme.colors.primaryBorder};
-  ${mb(5)};
-  ${px(4)}
-  ${py(4)}
-  font-size: ${({ theme }) => theme.fontSizes.medium};
 
-  &:focus {
-    box-shadow: none;
-    outline: none;
-    border: 2px solid ${({ theme }) => theme.colors.secondaryBorder};
-  }
-`;
-
-export const Button = styled.button`
-  display: flex;
-  align-items: center;
-  line-height: 1.5;
-  border: none !important;
-  ${px(4)}
-  ${py(3)}
-  font-size: ${({ theme }) => theme.fontSizes.medium};
-  color: ${({ theme }) => theme.buttonColors.primary.text};
-  background-color: ${({ theme }) => theme.buttonColors.primary.background};
-  font-family: ${({ theme }) => theme.fonts.body};
-  font-weight: ${({ theme }) => theme.fontWeights[6]};
-  border-radius: 3px;
-  width: 150px;
-  &:hover {
-    cursor: pointer;
-    filter: contrast(120%);
-  }
-
-  svg {
-    ${ml(2)}
-  }
-`;

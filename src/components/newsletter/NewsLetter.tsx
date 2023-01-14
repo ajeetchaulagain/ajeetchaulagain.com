@@ -7,10 +7,10 @@ import {
   FormSection,
   ImageWrapper,
   StyledForm,
-  Input,
-  Button,
   SuccessContentWrapper,
 } from './styles';
+
+import { Button, Input } from 'components/form/styles';
 
 export const NewsLetter = (): JSX.Element => {
   const [status, setStatus] = useState<string>();
