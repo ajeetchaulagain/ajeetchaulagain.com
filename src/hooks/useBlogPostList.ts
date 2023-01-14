@@ -1,23 +1,5 @@
 import { useStaticQuery, graphql } from 'gatsby';
-import { IGatsbyImageData } from 'gatsby-plugin-image';
-
-export type BlogPostEdge = {
-  node: {
-    fields: { slug: string };
-    frontmatter: {
-      title: string;
-      date: string;
-      tags: string[];
-      thumbnail: {
-        src: {
-          childImageSharp: { gatsbyImageData: IGatsbyImageData };
-        };
-        altText: string;
-      };
-    };
-    timeToRead: string;
-  };
-};
+import { BlogPostEdge } from 'markdown-types';
 
 type QueryTypes = {
   allMdx: {

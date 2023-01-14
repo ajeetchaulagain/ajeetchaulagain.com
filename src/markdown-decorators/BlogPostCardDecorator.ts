@@ -1,6 +1,6 @@
 import { BlogPostCardProps } from 'components';
 import { GatsbyImageProps, getImage } from 'gatsby-plugin-image';
-import { BlogPostEdge } from 'hooks';
+import { BlogPostEdge } from 'markdown-types';
 
 export const BlogPostCardDecorator = (
   blog: BlogPostEdge
