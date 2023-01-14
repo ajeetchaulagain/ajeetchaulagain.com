@@ -38,5 +38,4 @@ export const MarkdownTableStyles = css`
   table tr td :last-child {
     margin-bottom: 0;
   }
-}
 `;

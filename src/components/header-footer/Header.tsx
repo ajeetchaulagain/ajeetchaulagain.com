@@ -11,6 +11,7 @@ import {
   NavMenuWrapper,
 } from './styles';
 import { navItems } from './navItems';
+import { ThemeToggleSwitch } from 'components/theme-toggle-switch/ThemeToggleSwitch';
 
 export const Header = (): JSX.Element => {
   const data = useStaticQuery(graphql`
@@ -33,6 +34,9 @@ export const Header = (): JSX.Element => {
             <span>{data.site.siteMetadata.title}</span>
           </LogoLink>
         </LogoWrapper>
+
+        <ThemeToggleSwitch />
+
         <NavMenuWrapper>
           <Nav>
             {navItems.map(({ title, url }) => (

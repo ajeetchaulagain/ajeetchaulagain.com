@@ -1,9 +1,11 @@
-import React, { ReactNode } from 'react';
+import { GlobalStateContext } from 'contexts/GlobalContextProvider';
+import React, { Dispatch, ReactNode, useContext } from 'react';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 
 type ThemeProps = {
   children?: ReactNode;
 };
+
 export type FontSize = keyof typeof fontSizes;
 export type HeadingFontSize = keyof typeof headingFontSizes;
 
@@ -23,6 +25,7 @@ export const colors = {
   greenBlue90: '#1a75adf8',
   darkCharcoal90: '#333333f8',
   darkGrey90: '#1f1f1ff8',
+  oldSilver50: '#85858584',
 };
 
 const darkThemeColor = {
@@ -38,6 +41,8 @@ const darkThemeColor = {
   heroGradientStop1: colors.darkCharcoal90,
   heroGradientStop2: colors.darkGrey90,
   brightLavender: colors.brightLavender,
+  lightBackground: colors.light,
+  oldSilver50: colors.oldSilver50,
 };
 
 const lightThemeButtonColors = {
@@ -75,6 +80,8 @@ const lightThemeColor = {
   brightLavender: colors.brightLavender,
   heroGradientStop1: colors.primary90,
   heroGradientStop2: colors.greenBlue90,
+  lightBackground: colors.light,
+  oldSilver50: colors.oldSilver50,
 };
 
 export const fontWeights = [0, 100, 200, 300, 400, 500, 600, 700, 800, 900];
@@ -95,8 +102,7 @@ const headingFontSizes = {
   xlarge: '2.1rem',
 };
 
-export const defaultTheme: DefaultTheme = {
-  name: 'darkTheme',
+const themeCommonProperties = {
   breakpoints: {
     xs: 0,
     sm: 480,
@@ -118,7 +124,6 @@ export const defaultTheme: DefaultTheme = {
     8: '3rem',
     9: '4rem',
   },
-  colors: darkThemeColor,
   fonts: {
     body: `Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI,
       Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
@@ -144,9 +149,29 @@ export const defaultTheme: DefaultTheme = {
     base: '0.1875rem',
     round: '99999em',
   },
+};
+
+export const darkTheme: DefaultTheme = {
+  ...themeCommonProperties,
+  name: 'darkTheme',
+  colors: darkThemeColor,
   buttonColors: darkThemeButtonColors,
 };
 
+export const lightTheme: DefaultTheme = {
+  ...themeCommonProperties,
+  name: 'lightTheme',
+  colors: lightThemeColor,
+  buttonColors: lightThemeButtonColors,
+};
+
+export type ThemeContextType = {
+  theme: string;
+  themeToggler: Dispatch<string>;
+};
+
 export const Theme = ({ children }: ThemeProps) => {
-  return <ThemeProvider theme={defaultTheme}>{children}</ThemeProvider>;
+  const { theme } = useContext(GlobalStateContext);
+  const themeProps = theme === 'lightTheme' ? lightTheme : darkTheme;
+  return <ThemeProvider theme={themeProps}>{children}</ThemeProvider>;
 };

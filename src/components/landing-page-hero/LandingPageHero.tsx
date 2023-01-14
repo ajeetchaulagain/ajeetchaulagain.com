@@ -26,7 +26,7 @@ export const LandingPageHero = (): JSX.Element => {
           />
           <AboutWrapper>
             <StyledHeading type="sans-serif">
-              <span style={{ fontWeight: 100 }}>Hello. I'm </span>Ajeet !
+              <span style={{ fontWeight: 100 }}> Hello. I'm </span>Ajeet !
             </StyledHeading>
             <StyledParagraph>
               I am pragmatic software engineer, passionate and proficient

@@ -6,7 +6,7 @@ import { Paragraph } from 'components/paragraph/Paragraph';
 import { StyledGatsbyImage } from 'components/gatsby-image/StyledGatsbyImage';
 
 export const Container = styled.section`
-  width: 100vw;
+  width: 100%;
   background: url('pattern-3.jpg') repeat fixed center;
   background-size: 1000px;
 `;

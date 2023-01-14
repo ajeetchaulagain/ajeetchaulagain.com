@@ -60,13 +60,6 @@ export const LogoLink = styled(Link)`
 
 export const NavMenuWrapper = styled.nav``;
 
-export const Nav = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-`;
-
 export const NavItem = styled.li`
   font-size: ${({ theme }) => theme.fontSizes.medium};
   font-weight: ${(props) => props.theme.fontWeights[5]};
@@ -75,7 +68,6 @@ export const NavItem = styled.li`
       ? theme.colors.secondaryText
       : theme.colors.primaryText};
 
-  ${ml(4)};
   & > a:hover {
     color: ${({ theme }) => theme.colors.brightLavender};
   }
@@ -98,6 +90,16 @@ export const NavItem = styled.li`
         border:${({ theme }: { theme: DefaultTheme }) => theme.borders.none};
       }
     `}
+  }
+`;
+
+export const Nav = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  ${NavItem}:not(:first-child) {
+    ${ml(4)};
   }
 `;
 
