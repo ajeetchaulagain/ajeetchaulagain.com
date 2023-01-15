@@ -7,13 +7,15 @@ import {
   SEO,
   StyledGatsbyImage,
   ContentRenderer,
+  HeroBlank,
 } from 'components';
 import { useAuthorImage, useAboutPageDetails } from 'hooks';
-import { HeroBlank } from 'components/hero-blank/HeroBlank';
+import { mb } from 'styled-components-spacing';
 
-const AboutImage = styled(StyledGatsbyImage)`
-  margin-bottom: 1rem;
-  & > picture > img {
+const ImageWrapper = styled.div`
+  width: 150px;
+  ${mb(5)}
+  ${StyledGatsbyImage} {
     border-radius: 100%;
   }
 `;
@@ -30,7 +32,9 @@ const AboutPage = () => {
       <SEO title={title} description={description} />
       <HeroBlank />
       <ContentRenderer>
-        <AboutImage image={gatsbyImageData} alt="about-image" />
+        <ImageWrapper>
+          <StyledGatsbyImage image={gatsbyImageData} alt="about-image" />
+        </ImageWrapper>
         <MarkdownRenderer>{body}</MarkdownRenderer>
         <NewsLetter />
       </ContentRenderer>
