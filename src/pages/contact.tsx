@@ -21,7 +21,8 @@ const SocialMediaContainer = styled.div`
         theme.name === 'lightTheme'
           ? theme.colors.brandPrimary
           : theme.colors.primaryText};
-      ${mt(4)}
+      ${mt(4)};
+      justify-content: flex-start;
     }
   }
 `;
