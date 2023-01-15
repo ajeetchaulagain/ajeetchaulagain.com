@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { mb, ml } from 'styled-components-spacing';
 import { ButtonProps } from './PropTypes';

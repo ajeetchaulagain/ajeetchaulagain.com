@@ -1,7 +1,7 @@
 import { Paragraph } from 'components';
-import { Link } from 'gatsby';
 import styled, { css } from 'styled-components';
 import { py, pr, pl, mt, ml } from 'styled-components-spacing';
+import Link from 'components/link/Link';
 
 export const PostHeaderContainer = styled.div`
   display: flex;

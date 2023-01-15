@@ -1,6 +1,6 @@
-import { StyledGatsbyImage } from 'components/gatsby-image/StyledGatsbyImage';
-import { Tag } from 'components/tag/Tag';
-import { Link } from 'gatsby';
+import { StyledGatsbyImage } from '../gatsby-image/StyledGatsbyImage';
+import { Tag } from '../tag/Tag';
+import Link from '../link/Link';
 
 import React from 'react';
 import { BlogPostCardProps } from './PropTypes';

@@ -1,8 +1,8 @@
-import { Link } from 'gatsby';
 import styled, { DefaultTheme } from 'styled-components';
 import { ml, mb, px, py, pt, pb } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
 import { Paragraph } from '../paragraph/Paragraph';
+import Link from '../link/Link';
 
 export const HeaderWrapper = styled.header`
   font-family: ${(props) => props.theme.fonts.secondaryHeading};

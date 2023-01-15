@@ -1,3 +1,4 @@
+import Link from '../link/Link';
 import styled from 'styled-components';
 import { mt, ml } from 'styled-components-spacing';
 
@@ -17,8 +18,9 @@ export const SocialMediaList = styled.ul`
   }
 `;
 
-export const StyledAnchorLink = styled.a`
+export const StyledAnchorLink = styled(Link)`
   &:hover {
+    cursor: pointer;
     color: ${({ theme }) => theme.colors.brightLavender};
   }
 `;

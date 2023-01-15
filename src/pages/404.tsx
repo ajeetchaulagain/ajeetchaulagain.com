@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import { MasterLayout, ContentLayout, IntroSection } from 'components';
+import { MasterLayout, HeroBlank, ContentRenderer } from 'components';
+import Link from 'components/link/Link';
 
 const DefaultNotFound = () => {
   return (
     <MasterLayout>
-      <IntroSection />
-      <ContentLayout>
+      <HeroBlank />
+      <ContentRenderer>
         <div>
           <h1>Page not found</h1>
           <p>
@@ -15,7 +15,7 @@ const DefaultNotFound = () => {
           </p>
           <Link to="/">Go Home</Link>
         </div>
-      </ContentLayout>
+      </ContentRenderer>
     </MasterLayout>
   );
 };

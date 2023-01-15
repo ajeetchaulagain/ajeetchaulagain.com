@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import Logo from '../../images/logo.svg';
 import {
   HeaderWrapper,
@@ -12,6 +12,7 @@ import {
 } from './styles';
 import { navItems } from './navItems';
 import { ThemeToggleSwitch } from 'components/theme-toggle-switch/ThemeToggleSwitch';
+import Link from '../link/Link';
 
 export const Header = (): JSX.Element => {
   const data = useStaticQuery(graphql`

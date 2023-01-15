@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, useStaticQuery, Link } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import { FooterContainer } from './styles';
 import { GradientOverlay } from '../landing-page-hero/styles';
 import { navItems } from './navItems';
@@ -12,6 +12,7 @@ import {
   SocialMediaLinksWrapper,
 } from './styles';
 import { SocialMediaIcons } from '../social-media-icons/SocialMediaIcons';
+import Link from '../link/Link';
 
 export const Footer = () => {
   const data = useStaticQuery(graphql`
