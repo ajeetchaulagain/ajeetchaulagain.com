@@ -65,7 +65,7 @@ export const projects: ProjectMetaDetails[] = [
       },
       {
         text: 'Article',
-        to: 'blog/react-image-gallery',
+        to: '/blog/react-image-gallery',
         iconName: 'Book',
       },
     ],
