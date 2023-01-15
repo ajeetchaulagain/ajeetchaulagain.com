@@ -17,17 +17,12 @@ import {
   BlogPostCardDecorator,
   ProjectCardDecorator,
 } from 'markdown-decorators';
-import { projects as staticProjectList } from 'data/projects';
 
 const IndexPage = () => {
   const blogPostList = useBlogPostList();
-  const projectListFromMarkdown = useProjectList(); // Project list from markdown file
+  const projectList = useProjectList();
 
-  const allProjectList = [...projectListFromMarkdown, ...staticProjectList];
-
-  const projects = allProjectList.map((project) =>
-    ProjectCardDecorator(project)
-  );
+  const projects = projectList.map((project) => ProjectCardDecorator(project));
   const blogs = blogPostList.map((blogPost) => BlogPostCardDecorator(blogPost));
 
   return (
