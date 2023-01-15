@@ -1,6 +1,6 @@
 import { StyledGatsbyImage } from 'components/gatsby-image/StyledGatsbyImage';
 import styled from 'styled-components';
-import { p, mb, mt, ml } from 'styled-components-spacing';
+import { p, mb, mt, mr } from 'styled-components-spacing';
 import { Heading } from '../heading/Heading';
 
 export const StyledHeading = styled(Heading)`
@@ -46,7 +46,10 @@ export const DateAndTimeComponent = styled.span`
 
 export const TagsWrapper = styled.div`
   ${mt(4)};
-  span:not(:first-child) {
-    ${ml(2)};
+  span:not(:last-child) {
+    ${mr(2)};
+  }
+  span {
+    ${mb(2)};
   }
 `;

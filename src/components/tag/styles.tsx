@@ -4,8 +4,8 @@ import { px, py } from 'styled-components-spacing';
 
 export const Container = styled.span<{ type?: TagType; size?: TagSize }>`
   font-family: ${({ theme }) => theme.fonts.body};
-  line-height: 0;
   border-radius: ${({ theme }) => theme.borderRadius.base};
+  display: inline-block;
 
   ${({ type, theme }) => {
     switch (type) {
@@ -30,9 +30,16 @@ export const Container = styled.span<{ type?: TagType; size?: TagSize }>`
         font-size: ${theme.fontSizes.small};
       `;
     }
+    if (size === 'small') {
+      return css`
+        ${px(2)};
+        ${py(1)};
+        font-size: ${theme.fontSizes.small};
+      `;
+    }
     return css`
       ${px(2)};
-      font-size: ${theme.fontSizes.xmall};
+      font-size: ${theme.fontSizes.xsmall};
     `;
   }}
 `;

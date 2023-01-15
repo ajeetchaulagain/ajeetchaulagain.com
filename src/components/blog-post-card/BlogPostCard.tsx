@@ -37,7 +37,9 @@ export const BlogPostCard = ({
           {tags && tags.length && (
             <TagsWrapper>
               {tags.map((tag, index) => (
-                <Tag key={index}>{tag}</Tag>
+                <Tag key={index} size="small">
+                  {tag}
+                </Tag>
               ))}
             </TagsWrapper>
           )}
