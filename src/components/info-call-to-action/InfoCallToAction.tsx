@@ -12,6 +12,16 @@ const Container = styled.div`
   border-radius: ${(props) => props.theme.borderRadius.base};
   ${p(4)};
   ${my(5)};
+
+  a {
+    font-family: ${({ theme }) => theme.fonts.body};
+    color: ${({ theme }) => theme.colors.brandPrimary};
+    text-decoration: underline;
+    font-weight: ${({ theme }) => theme.fontWeights[6]};
+    :hover {
+      text-decoration: none;
+    }
+  }
 `;
 
 const StyledParagraph = styled(Paragraph)`
