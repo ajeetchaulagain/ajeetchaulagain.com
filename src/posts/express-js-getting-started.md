@@ -8,7 +8,6 @@ author: 'Ajeet Chaulagain'
 ---
 
 import { InfoCallToAction } from "../components/info-call-to-action/InfoCallToAction.tsx"
-import { QuickInfo } from "../components/utilities/quick-info.tsx"
 
 This tutorial is prepared to make you familiar with [Express.js](https://expressjs.com/). _Express_ is a web framework for node.js that allows you to build a _minimal and flexible_ web application. We will go through some basic concepts of Express in this tutorial and demonstrate various topics of express.js such as _routing, middleware, route chaining and more._
 
