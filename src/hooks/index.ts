@@ -1,4 +1,4 @@
-export * from './use-author-image';
+export * from './useAuthorImage';
 export * from './useBlogPostList';
 export * from './useProjectList';
 export * from './useAboutPageDetails';

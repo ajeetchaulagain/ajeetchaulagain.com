@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useAuthorImage } from '../../hooks/use-author-image';
+import { useAuthorImage } from '../../hooks/useAuthorImage';
 import * as jumbotronStyles from './about-jumbotron.module.scss';
 import { PrimaryButtonLink } from 'components/button/Button';
 import coffeImage from '../../images/cuplogo-sm.png';

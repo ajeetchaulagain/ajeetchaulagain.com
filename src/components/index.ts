@@ -1,6 +1,4 @@
 export * from './about-jumbotron/AboutJumbotron';
-export * from './intro-section/IntroSection';
-export * from './blog-list/BlogList';
 export * from './contact-form/ContactForm';
 export * from './header-footer';
 export * from './landing-page-hero/LandingPageHero';

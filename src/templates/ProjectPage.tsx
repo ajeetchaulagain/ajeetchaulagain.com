@@ -1,15 +1,10 @@
-// Create and export the react component
-
 import React from 'react';
-import MasterLayout from '../components/layout/MasterLayout';
-import { IntroSection } from '../components/intro-section/IntroSection';
-import ContentLayout from '../components/layout/ContentLayout';
 import { Link, PageProps } from 'gatsby';
 import { FaArrowLeft } from 'react-icons/fa';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import * as projectStyles from './project-template.module.scss';
 import { graphql } from 'gatsby';
-import { SEO } from 'components';
+import { MasterLayout, ContentRenderer, HeroBlank, SEO } from 'components';
 
 export const query = graphql`
   query ($slug: String!) {
@@ -39,8 +34,8 @@ const ProjectTemplate: React.FC<PageProps<DataProps, unknown>> = (props) => {
   return (
     <MasterLayout>
       <SEO title={title} description={description} />
-      <IntroSection />
-      <ContentLayout>
+      <HeroBlank />
+      <ContentRenderer>
         <div className={projectStyles.header}>
           <span className={projectStyles.title}>Case Study</span>
 
@@ -60,7 +55,7 @@ const ProjectTemplate: React.FC<PageProps<DataProps, unknown>> = (props) => {
             Back to Project List
           </Link>
         </div>
-      </ContentLayout>
+      </ContentRenderer>
     </MasterLayout>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAuthorImage } from '../../hooks/use-author-image';
+import { useAuthorImage } from '../../hooks/useAuthorImage';
 import { SocialMediaIcons } from '../social-media-icons/SocialMediaIcons';
 import { ButtonLink } from 'components/button-link';
 import {
