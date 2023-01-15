@@ -6,7 +6,6 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.tertiaryBackground};
   border-radius: ${({ theme }) => theme.borderRadius.base};
   ${p(5)};
-  max-width: 30rem;
   height: 100%;
   display: flex;
   flex-direction: column;

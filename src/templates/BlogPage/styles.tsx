@@ -1,7 +1,8 @@
-import { Paragraph } from 'components';
+import { Paragraph, StyledGatsbyImage } from 'components';
 import styled, { css } from 'styled-components';
-import { py, pr, pl, mt, ml } from 'styled-components-spacing';
+import { py, pr, pl, mt, ml, mb } from 'styled-components-spacing';
 import Link from 'components/link/Link';
+import breakpoint from 'styled-components-breakpoint';
 
 export const PostHeaderContainer = styled.div`
   display: flex;
@@ -9,14 +10,22 @@ export const PostHeaderContainer = styled.div`
   margin-bottom: 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid ${({ theme }) => theme.colors.oldSilver50};
+
+  ${breakpoint('xs', 'md')`
+    flex-direction:column-reverse;
+    ${StyledGatsbyImage}{
+      ${mb(4)};
+    }
+  `}
 `;
 
 export const PostHeaderLeftColumn = styled.div`
   display: flex;
   flex-direction: column;
+  width: 80%;
 `;
 export const PostHeaderRightColumn = styled.div`
-  width: 20%;
+  width: 15%;
 `;
 
 export const DateAndTimeComponent = styled.span`

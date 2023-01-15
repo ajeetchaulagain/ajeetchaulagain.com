@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, PageProps } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { getImage } from 'gatsby-plugin-image';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import {
   Heading,
@@ -12,6 +12,7 @@ import {
   NewsLetter,
   HeroBlank,
   Tag,
+  StyledGatsbyImage,
 } from 'components';
 import { BlogPostType, BlogPostNode } from 'markdown-types';
 import {
@@ -94,7 +95,7 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
             </TagsWrapper>
           </PostHeaderLeftColumn>
           <PostHeaderRightColumn>
-            {image && <GatsbyImage image={image} alt={imageAltText} />}
+            {image && <StyledGatsbyImage image={image} alt={imageAltText} />}
           </PostHeaderRightColumn>
         </PostHeaderContainer>
 
