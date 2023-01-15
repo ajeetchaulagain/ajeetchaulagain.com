@@ -1,8 +1,7 @@
 import { HeadingFontSize } from '../theme/Theme';
 import React, { ReactNode } from 'react';
-import styled from 'styled-components';
-import { mt, mb } from 'styled-components-spacing';
-//TODO: Revisit this file to remove !important once overriding scss is cleaned up
+import styled, { DefaultTheme, css } from 'styled-components';
+import breakpoint from 'styled-components-breakpoint';
 
 type FontType = 'serif' | 'sans-serif';
 
@@ -18,6 +17,16 @@ const Heading1 = styled.h1<{ size?: HeadingFontSize; type?: FontType }>`
     size ? headingFontSizes[size] : headingFontSizes.xlarge};
 
   font-weight: ${(props) => props.theme.fontWeights[9]};
+
+  ${breakpoint('xs', 'lg')`
+    ${({ size, theme }: { size: HeadingFontSize; theme: DefaultTheme }) => {
+      if (size === 'xlarge') {
+        return css`
+          font-size: ${theme.headingFontSizes.large};
+        `;
+      }
+    }}
+  `};
 `;
 
 const Heading2 = styled.h2<{ size?: HeadingFontSize; type?: FontType }>`
@@ -25,13 +34,38 @@ const Heading2 = styled.h2<{ size?: HeadingFontSize; type?: FontType }>`
     size ? headingFontSizes[size] : headingFontSizes.xlarge};
 
   font-weight: ${({ theme }) => theme.fontWeights[6]};
+
+  ${breakpoint('xs', 'lg')`
+    ${({ size, theme }: { size: HeadingFontSize; theme: DefaultTheme }) => {
+      if (size === 'xlarge') {
+        return css`
+          font-size: ${theme.headingFontSizes.large};
+        `;
+      }
+      if (size === 'large') {
+        return css`
+          font-size: ${theme.headingFontSizes.medium};
+        `;
+      }
+    }}
+  `};
 `;
 
 const Heading3 = styled.h3<{ size?: HeadingFontSize; type?: FontType }>`
   font-size: ${({ size, theme: { headingFontSizes } }) =>
     size ? headingFontSizes[size] : headingFontSizes.large};
 
-  font-weight: ${({ theme }) => theme.fontWeights[5]};
+  font-weight: ${({ theme }) => theme.fontWeights[6]};
+
+  ${breakpoint('xs', 'lg')`
+    ${({ size, theme }: { size: HeadingFontSize; theme: DefaultTheme }) => {
+      if (size === 'medium') {
+        return css`
+          font-size: ${theme.headingFontSizes.small};
+        `;
+      }
+    }}
+  `};
 `;
 
 const Heading4 = styled.h3<{ size?: HeadingFontSize; type?: FontType }>`

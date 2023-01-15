@@ -23,6 +23,9 @@ export const PostHeaderLeftColumn = styled.div`
   display: flex;
   flex-direction: column;
   width: 80%;
+  ${breakpoint('xs', 'md')`
+    width:100%;
+  `}
 `;
 export const PostHeaderRightColumn = styled.div`
   width: 15%;

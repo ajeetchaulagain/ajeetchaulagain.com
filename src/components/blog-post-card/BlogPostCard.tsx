@@ -28,7 +28,7 @@ export const BlogPostCard = ({
           {gatsbyImageProps && <StyledGatsbyImage {...gatsbyImageProps} />}
         </ImageWrapper>
         <TextContentWrapper>
-          <StyledHeading level="h2" size="small" type="sans-serif">
+          <StyledHeading level="h3" size="small" type="sans-serif">
             {title}
           </StyledHeading>
           <DateAndTimeComponent>

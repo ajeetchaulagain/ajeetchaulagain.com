@@ -30,7 +30,7 @@ const IndexPage = () => {
       <SEO />
       <LandingPageHero />
       <ContentRenderer>
-        <Heading level="h2">
+        <Heading level="h2" size="xlarge">
           <FaBook /> From my blog
         </Heading>
         <Paragraph>See the recent on my article list</Paragraph>
@@ -44,7 +44,9 @@ const IndexPage = () => {
         />
       </ContentRenderer>
       <ContentRenderer>
-        <Heading level="h2">Projects</Heading>
+        <Heading level="h2" size="xlarge">
+          Projects
+        </Heading>
         <Paragraph>Checkout some of my projects</Paragraph>
         <ProjectList projects={projects} />
         <ButtonLink

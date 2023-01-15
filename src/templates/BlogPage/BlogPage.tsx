@@ -82,7 +82,7 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
       <ContentRenderer>
         <PostHeaderContainer>
           <PostHeaderLeftColumn>
-            <Heading>{title}</Heading>
+            <Heading size="xlarge">{title}</Heading>
 
             <DateAndTimeComponent>
               {date} / {timeToRead} min read
