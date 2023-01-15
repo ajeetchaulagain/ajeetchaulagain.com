@@ -8,7 +8,7 @@ export const PostHeaderContainer = styled.div`
   align-items: flex-start;
   margin-bottom: 2rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.brightLavender};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.oldSilver50};
 `;
 
 export const PostHeaderLeftColumn = styled.div`

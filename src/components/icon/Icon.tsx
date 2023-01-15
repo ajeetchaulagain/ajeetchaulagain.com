@@ -6,6 +6,7 @@ import {
   FaArrowRight,
   FaTelegramPlane,
   FaCoffee,
+  FaInfoCircle,
 } from 'react-icons/fa';
 
 export type IconName =
@@ -13,7 +14,8 @@ export type IconName =
   | 'Github'
   | 'ArrowRight'
   | 'Plane'
-  | 'Coffee';
+  | 'Coffee'
+  | 'InfoCircle';
 
 const IconMap: Record<IconName, IconType> = {
   ExternalLink: BiLinkExternal,
@@ -21,6 +23,7 @@ const IconMap: Record<IconName, IconType> = {
   ArrowRight: FaArrowRight,
   Plane: FaTelegramPlane,
   Coffee: FaCoffee,
+  InfoCircle: FaInfoCircle,
 };
 
 export const Icon = ({ iconName }: { iconName: IconName }) => {
