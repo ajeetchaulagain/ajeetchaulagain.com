@@ -71,23 +71,22 @@ export const NavItem = styled.li`
   & > a:hover {
     color: ${({ theme }) => theme.colors.brightLavender};
   }
-  & > a.activeNavItem {
-    color: ${({ theme }) => theme.colors.brightLavender};
-    border-bottom: ${({ theme }) => theme.borders.thick};
-  }
+
   & > a {
+    border-radius: 3px;
     ${breakpoint('xs', 'sm')`
       display:block;
       border: ${({ theme }: { theme: DefaultTheme }) => theme.borders.thin};
       ${px(2)};
       ${py(1)};
-      ${mb(2)};
+      ${mb(3)};
       &.activeNavItem {
         background-color: ${({ theme }: { theme: DefaultTheme }) =>
-          theme.colors.primaryText};
+          theme.colors.primaryBackground};
         color:${({ theme }: { theme: DefaultTheme }) =>
-          theme.colors.brightLavender};;
-        border:${({ theme }: { theme: DefaultTheme }) => theme.borders.none};
+          theme.colors.brandPrimary};;
+        border:1px solid ${({ theme }: { theme: DefaultTheme }) =>
+          theme.colors.primaryBackground};
       }
     `}
   }
