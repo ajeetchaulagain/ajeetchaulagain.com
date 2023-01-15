@@ -10,9 +10,9 @@ export const Container = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-  min-height: 11rem;
+  min-height: 13rem;
   ${breakpoint('sm')`
-    min-height: 9rem;
+    min-height: 10rem;
   `};
   ${breakpoint('lg')`
     min-height: 5.5rem;
