@@ -8,7 +8,7 @@ import {
   SEO,
   ContentRenderer,
   MasterLayout,
-  AboutJumbotronBlog,
+  AboutJumbotron,
   NewsLetter,
   HeroBlank,
   Tag,
@@ -122,7 +122,7 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
           )}
         </PageNavigationWrapper>
 
-        <AboutJumbotronBlog />
+        <AboutJumbotron />
         <NewsLetter />
       </ContentRenderer>
     </MasterLayout>
