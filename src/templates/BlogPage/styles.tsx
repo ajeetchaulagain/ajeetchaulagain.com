@@ -1,6 +1,6 @@
 import { Paragraph, StyledGatsbyImage } from 'components';
 import styled, { css } from 'styled-components';
-import { py, pr, pl, mt, ml, mb } from 'styled-components-spacing';
+import { py, pr, pl, mt, mr, mb } from 'styled-components-spacing';
 import Link from 'components/link/Link';
 import breakpoint from 'styled-components-breakpoint';
 
@@ -39,8 +39,11 @@ export const DateAndTimeComponent = styled.span`
 
 export const TagsWrapper = styled.div`
   ${mt(5)};
-  span:not(:first-child) {
-    ${ml(2)};
+  span:not(:last-child) {
+    ${mr(2)};
+  }
+  span {
+    ${mb(3)};
   }
 `;
 
