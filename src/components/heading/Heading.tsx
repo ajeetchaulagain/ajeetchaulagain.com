@@ -9,7 +9,7 @@ export type HeadingProps = {
   size?: HeadingFontSize;
   type?: FontType;
   level: 'h1' | 'h2' | 'h3' | 'h4';
-  children: ReactNode;
+  children?: ReactNode;
 };
 
 const Heading1 = styled.h1<{ size?: HeadingFontSize; type?: FontType }>`

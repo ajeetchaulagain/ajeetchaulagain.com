@@ -7,12 +7,15 @@ export const ProjectCard = ({
   title,
   description,
   actions,
+  headingProps = {
+    level: 'h2',
+    size: 'small',
+    type: 'sans-serif',
+  },
 }: ProjectCardProps) => {
   return (
     <Container>
-      <StyledHeading level="h2" size="small" type="sans-serif">
-        {title}
-      </StyledHeading>
+      <StyledHeading {...headingProps}>{title}</StyledHeading>
       <Paragraph>{description}</Paragraph>
       <ActionWrapper>
         {actions &&

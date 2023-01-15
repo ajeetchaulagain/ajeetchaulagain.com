@@ -1,9 +1,11 @@
 import { BlogPostCardProps } from 'components';
 import { GatsbyImageProps, getImage } from 'gatsby-plugin-image';
 import { BlogPostEdge } from 'markdown-types';
+import { BlogPostCardDecoratorOptions } from 'pages';
 
 export const BlogPostCardDecorator = (
-  blog: BlogPostEdge
+  blog: BlogPostEdge,
+  decoratorOptions?: BlogPostCardDecoratorOptions
 ): BlogPostCardProps => {
   const { timeToRead, frontmatter, fields } = blog.node;
 
@@ -22,6 +24,8 @@ export const BlogPostCardDecorator = (
 
   const blogPostRelativeUrl = `/blog/${fields.slug}`;
 
+  const headingProps = decoratorOptions?.headingProps;
+
   return {
     title,
     gatsbyImageProps,
@@ -29,5 +33,6 @@ export const BlogPostCardDecorator = (
     timeToRead,
     tags,
     blogPostRelativeUrl,
+    headingProps,
   };
 };

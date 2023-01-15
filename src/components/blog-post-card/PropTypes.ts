@@ -1,3 +1,4 @@
+import { HeadingProps } from 'components/heading/Heading';
 import { GatsbyImageProps } from 'gatsby-plugin-image';
 
 export type BlogPostCardProps = {
@@ -7,4 +8,5 @@ export type BlogPostCardProps = {
   tags?: string[];
   gatsbyImageProps?: GatsbyImageProps;
   blogPostRelativeUrl: string;
+  headingProps?: HeadingProps;
 };

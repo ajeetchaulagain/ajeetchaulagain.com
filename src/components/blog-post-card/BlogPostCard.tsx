@@ -20,6 +20,11 @@ export const BlogPostCard = ({
   timeToRead,
   tags,
   blogPostRelativeUrl,
+  headingProps = {
+    level: 'h2',
+    size: 'small',
+    type: 'sans-serif',
+  },
 }: BlogPostCardProps) => {
   return (
     <Link to={blogPostRelativeUrl}>
@@ -28,9 +33,7 @@ export const BlogPostCard = ({
           {gatsbyImageProps && <StyledGatsbyImage {...gatsbyImageProps} />}
         </ImageWrapper>
         <TextContentWrapper>
-          <StyledHeading level="h3" size="small" type="sans-serif">
-            {title}
-          </StyledHeading>
+          <StyledHeading {...headingProps}>{title}</StyledHeading>
           <DateAndTimeComponent>
             {publishDate} / {timeToRead} min read
           </DateAndTimeComponent>

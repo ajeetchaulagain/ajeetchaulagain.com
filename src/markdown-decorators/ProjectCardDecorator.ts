@@ -4,10 +4,12 @@ import {
   ProjectEdge,
   ProjectMetaDetails,
 } from 'markdown-types';
+import { ProjectCardDecoratorOptions } from 'pages';
 import { ButtonLinkDecorator } from './ButtonLinkDecorator';
 
 export const ProjectCardDecorator = (
-  project: ProjectEdge | ProjectMetaDetails
+  project: ProjectEdge | ProjectMetaDetails,
+  decoratorOptions?: ProjectCardDecoratorOptions
 ): ProjectCardProps => {
   let title;
   let description;
@@ -42,9 +44,12 @@ export const ProjectCardDecorator = (
       }),
     }));
 
+  const headingProps = decoratorOptions?.headingProps;
+
   return {
     title,
     description,
     actions: decoratedActions,
+    headingProps,
   } as ProjectCardProps;
 };

@@ -11,6 +11,7 @@ import {
   Heading,
   Paragraph,
   BlogPostCardList,
+  HeadingProps,
 } from 'components';
 import { useBlogPostList, useProjectList } from 'hooks';
 import {
@@ -18,12 +19,40 @@ import {
   ProjectCardDecorator,
 } from 'markdown-decorators';
 
+export type BlogPostCardDecoratorOptions = {
+  headingProps?: HeadingProps;
+};
+
+export type ProjectCardDecoratorOptions = {
+  headingProps?: HeadingProps;
+};
+
+const blogPostCardDecoratorOptions: BlogPostCardDecoratorOptions = {
+  headingProps: {
+    level: 'h3',
+    size: 'small',
+    type: 'sans-serif',
+  },
+};
+
+const projectCardDecoratorOptions: ProjectCardDecoratorOptions = {
+  headingProps: {
+    level: 'h3',
+    size: 'small',
+    type: 'sans-serif',
+  },
+};
+
 const IndexPage = () => {
   const blogPostList = useBlogPostList();
   const projectList = useProjectList();
 
-  const projects = projectList.map((project) => ProjectCardDecorator(project));
-  const blogs = blogPostList.map((blogPost) => BlogPostCardDecorator(blogPost));
+  const projects = projectList.map((project) =>
+    ProjectCardDecorator(project, projectCardDecoratorOptions)
+  );
+  const blogs = blogPostList.map((blogPost) =>
+    BlogPostCardDecorator(blogPost, blogPostCardDecoratorOptions)
+  );
 
   return (
     <MasterLayout>
