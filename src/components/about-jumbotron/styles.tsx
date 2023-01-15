@@ -19,7 +19,9 @@ export const Container = styled.div`
 export const ImageWrapper = styled.div`
   width: 15%;
   ${StyledGatsbyImage} {
-    border-radius: 100%;
+    & > picture > img {
+      border-radius: 100%;
+    }
   }
 `;
 export const TextContentWrapper = styled.div`

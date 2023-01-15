@@ -16,7 +16,9 @@ const ImageWrapper = styled.div`
   width: 150px;
   ${mb(5)}
   ${StyledGatsbyImage} {
-    border-radius: 100%;
+    & > picture > img {
+      border-radius: 100%;
+    }
   }
 `;
 

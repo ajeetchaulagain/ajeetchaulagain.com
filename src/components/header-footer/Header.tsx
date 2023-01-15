@@ -19,7 +19,7 @@ import { mb } from 'styled-components-spacing';
 const ToggleWrapper = styled.div`
   display: flex;
   align-items: center;
-  ${mb({ xs: 3, lg: 0 })}
+  ${mb({ xs: 4, lg: 0 })}
 `;
 
 export const Header = (): JSX.Element => {

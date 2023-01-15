@@ -19,14 +19,17 @@ const StyledParagraph = styled(Paragraph)`
 `;
 
 const IconWrapper = styled.div`
-  width: 10%;
   font-size: 3rem;
   display: flex;
-  color: ${({ theme }) => theme.colors.brandPrimary}; ;
+  color: ${({ theme }) => theme.colors.brandPrimary};
+  svg {
+    display: inline-block;
+    margin-right: 1rem;
+  }
 `;
 
 const ContentWrapper = styled.div`
-  width: 90%;
+  width: 100%;
 `;
 
 type InfoCallToAction = {
