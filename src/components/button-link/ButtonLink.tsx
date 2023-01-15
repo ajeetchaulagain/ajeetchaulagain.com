@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as GatsbyLink } from 'gatsby';
+// import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { mb, ml } from 'styled-components-spacing';
 import { ButtonProps } from './PropTypes';
@@ -9,12 +9,13 @@ import {
   getStylesForButtonSize,
   getStylesForButtonColorAndVariant,
 } from './styles';
+import Link from '../link/Link';
 
 export const BaseButtonLink = ({ text, iconName, ...rest }: ButtonProps) => {
   return (
-    <GatsbyLink {...rest}>
+    <Link {...rest}>
       {text} {iconName && <Icon iconName={iconName} />}
-    </GatsbyLink>
+    </Link>
   );
 };
 

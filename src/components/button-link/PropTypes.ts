@@ -1,14 +1,12 @@
-import { IconName } from 'components/icon/Icon';
+import { ButtonLinkMarkdownType } from 'markdown-types';
 
 export type ButtonVariant = 'text' | 'contained' | 'outlined';
 export type ButtonSize = 'small' | 'medium' | 'large';
 export type ButtonColor = 'primary' | 'secondary';
 
-export type ButtonProps = {
-  text: string;
-  to: string;
-  variant: ButtonVariant;
-  size: ButtonSize;
-  color: ButtonColor;
-  iconName?: IconName;
-};
+type MakeRequired<T, K extends keyof T> = Omit<T, K> & Required<Pick<T, K>>;
+
+export type ButtonProps = MakeRequired<
+  ButtonLinkMarkdownType,
+  'size' | 'color' | 'variant'
+>;

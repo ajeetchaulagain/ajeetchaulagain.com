@@ -4,7 +4,6 @@ import {
   LandingPageHero,
   ProjectList,
   MasterLayout,
-  ContentLayout,
   NewsLetter,
   SEO,
   ContentRenderer,
@@ -18,11 +17,17 @@ import {
   BlogPostCardDecorator,
   ProjectCardDecorator,
 } from 'markdown-decorators';
+import { projects as staticProjectList } from 'data/projects';
 
 const IndexPage = () => {
   const blogPostList = useBlogPostList();
-  const projectList = useProjectList();
-  const projects = projectList.map((project) => ProjectCardDecorator(project));
+  const projectListFromMarkdown = useProjectList(); // Project list from markdown file
+
+  const allProjectList = [...projectListFromMarkdown, ...staticProjectList];
+
+  const projects = allProjectList.map((project) =>
+    ProjectCardDecorator(project)
+  );
   const blogs = blogPostList.map((blogPost) => BlogPostCardDecorator(blogPost));
 
   return (

@@ -1,11 +1,35 @@
 import { ButtonProps, ProjectCardProps } from 'components';
-import { ProjectListEdge } from 'hooks';
+import {
+  ButtonLinkMarkdownType,
+  ProjectEdge,
+  ProjectMetaDetails,
+} from 'markdown-types';
 import { ButtonLinkDecorator } from './ButtonLinkDecorator';
 
 export const ProjectCardDecorator = (
-  project: ProjectListEdge
+  project: ProjectEdge | ProjectMetaDetails
 ): ProjectCardProps => {
-  const { title, description, actions } = project.node.frontmatter;
+  let title;
+  let description;
+  let actions: ButtonLinkMarkdownType[] = [];
+
+  const isProjectEdge = (
+    project: ProjectEdge | ProjectMetaDetails
+  ): project is ProjectEdge => {
+    return !!(project as ProjectEdge).node;
+  };
+
+  if (isProjectEdge(project)) {
+    title = project.node.frontmatter.title;
+    description = project.node.frontmatter.description;
+    actions = project.node.frontmatter.actions;
+  }
+
+  if (!isProjectEdge(project)) {
+    title = project.title;
+    description = project.description;
+    actions = project.actions;
+  }
 
   const decoratedActions: ButtonProps[] =
     actions &&
@@ -22,5 +46,5 @@ export const ProjectCardDecorator = (
     title,
     description,
     actions: decoratedActions,
-  };
+  } as ProjectCardProps;
 };

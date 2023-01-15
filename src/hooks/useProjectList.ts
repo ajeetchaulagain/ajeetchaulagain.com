@@ -1,25 +1,14 @@
-import { ButtonLinkMarkdownType } from 'components/button-link/Decorator';
 import { graphql, useStaticQuery } from 'gatsby';
-import { IGatsbyImageData } from 'gatsby-plugin-image';
+import { ProjectEdge } from 'markdown-types';
 
-export type ProjectListEdge = {
-  node: {
-    fields: { slug: string };
-    frontmatter: {
-      title: string;
-      description: string;
-      technologies: string[];
-      actions: ButtonLinkMarkdownType[];
-      thumbnail: {
-        childImageSharp: { gatsbyImageData: IGatsbyImageData };
-      };
-    };
-    timeToRead: string;
+type QueryTypes = {
+  allMdx: {
+    edges: ProjectEdge[];
   };
 };
 
 export const useProjectList = () => {
-  const data = useStaticQuery(graphql`
+  const data = useStaticQuery<QueryTypes>(graphql`
     query {
       allMdx(
         filter: { fields: { contentType: { eq: "projects" } } }
@@ -36,20 +25,11 @@ export const useProjectList = () => {
                 to
                 iconName
               }
-              featuredImage {
-                childImageSharp {
-                  gatsbyImageData(layout: CONSTRAINED)
-                }
-              }
-            }
-            timeToRead
-            fields {
-              slug
             }
           }
         }
       }
     }
   `);
-  return data.allMdx.edges as ProjectListEdge[];
+  return data.allMdx.edges;
 };
