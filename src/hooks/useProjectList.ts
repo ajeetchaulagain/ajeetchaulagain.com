@@ -1,22 +1,15 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import { IGatsbyImageData } from 'gatsby-plugin-image';
+import { ProjectEdge } from 'markdown-types';
+import { projects as staticProjectList } from 'data/projects';
 
-export type ProjectListEdge = {
-  node: {
-    fields: { slug: string };
-    frontmatter: {
-      title: string;
-      technologies: string[];
-      thumbnail: {
-        childImageSharp: { gatsbyImageData: IGatsbyImageData };
-      };
-    };
-    timeToRead: string;
+type QueryTypes = {
+  allMdx: {
+    edges: ProjectEdge[];
   };
 };
 
 export const useProjectList = () => {
-  const data = useStaticQuery(graphql`
+  const data = useStaticQuery<QueryTypes>(graphql`
     query {
       allMdx(
         filter: { fields: { contentType: { eq: "projects" } } }
@@ -26,21 +19,24 @@ export const useProjectList = () => {
           node {
             frontmatter {
               title
+              description
               technologies
-              featuredImage {
-                childImageSharp {
-                  gatsbyImageData(layout: CONSTRAINED)
-                }
+              actions {
+                text
+                to
+                iconName
               }
-            }
-            timeToRead
-            fields {
-              slug
             }
           }
         }
       }
     }
   `);
-  return data.allMdx.edges as ProjectListEdge[];
+
+  /* To get a  list of projects there is two data source - markdown and static array.
+   For those project that have artcile published in markdown, details are fetched from markdown
+   and for those not having markdown, details are maintained in static array.
+   This will maintain just a single source of truth for each project data. */
+
+  return [...data.allMdx.edges, ...staticProjectList];
 };

@@ -2,19 +2,23 @@ import React from 'react';
 import styled from 'styled-components';
 import {
   MasterLayout,
-  ContentLayout,
-  IntroSection,
   NewsLetter,
   MarkdownRenderer,
   SEO,
+  StyledGatsbyImage,
+  ContentRenderer,
+  HeroBlank,
 } from 'components';
 import { useAuthorImage, useAboutPageDetails } from 'hooks';
-import { StyledGatsbyImage } from 'components/gatsby-image/StyledGatsbyImage';
+import { mb } from 'styled-components-spacing';
 
-const AboutImage = styled(StyledGatsbyImage)`
-  margin-bottom: 1rem;
-  & > picture > img {
-    border-radius: 100%;
+const ImageWrapper = styled.div`
+  width: 150px;
+  ${mb(5)}
+  ${StyledGatsbyImage} {
+    & > picture > img {
+      border-radius: 100%;
+    }
   }
 `;
 
@@ -28,12 +32,14 @@ const AboutPage = () => {
   return (
     <MasterLayout>
       <SEO title={title} description={description} />
-      <IntroSection />
-      <ContentLayout>
-        <AboutImage image={gatsbyImageData} alt="about-image" />
+      <HeroBlank />
+      <ContentRenderer>
+        <ImageWrapper>
+          <StyledGatsbyImage image={gatsbyImageData} alt="about-image" />
+        </ImageWrapper>
         <MarkdownRenderer>{body}</MarkdownRenderer>
         <NewsLetter />
-      </ContentLayout>
+      </ContentRenderer>
     </MasterLayout>
   );
 };

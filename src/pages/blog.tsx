@@ -1,18 +1,25 @@
 import React from 'react';
-
+import styled from 'styled-components';
+import { mb } from 'styled-components-spacing';
 import {
   MasterLayout,
-  ContentLayout,
-  IntroSection,
-  BlogList,
   NewsLetter,
   SEO,
+  BlogPostCardList,
+  ContentRenderer,
+  Heading,
 } from 'components';
 import { useBlogPostList } from 'hooks';
-import { indexHeadingStyle } from '.';
+import { BlogPostCardDecorator } from 'markdown-decorators';
+import { HeroBlank } from 'components/hero-blank/HeroBlank';
+
+const StyledHeading = styled(Heading)`
+  ${mb(4)};
+`;
 
 const BlogPage = () => {
   const blogPostList = useBlogPostList();
+  const blogs = blogPostList.map((blogPost) => BlogPostCardDecorator(blogPost));
 
   return (
     <MasterLayout>
@@ -20,14 +27,14 @@ const BlogPage = () => {
         title="Articles"
         description="Recent articles and tutorials from me"
       />
-      <IntroSection />
-      <ContentLayout>
-        <h1 style={indexHeadingStyle}>Articles & Tutorials</h1>
-        <BlogList blogPostList={blogPostList} />
-      </ContentLayout>
-      <ContentLayout>
+      <HeroBlank />
+      <ContentRenderer>
+        <StyledHeading>Articles & Tutorials</StyledHeading>
+        <BlogPostCardList blogs={blogs} />
+      </ContentRenderer>
+      <ContentRenderer>
         <NewsLetter />
-      </ContentLayout>
+      </ContentRenderer>
     </MasterLayout>
   );
 };

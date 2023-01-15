@@ -1,37 +1,52 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 import {
   MasterLayout,
-  ContentLayout,
-  IntroSection,
   ContactForm,
   MarkdownRenderer,
   SocialMediaIcons,
   SEO,
+  ContentRenderer,
+  SocialMediaList,
+  Heading,
 } from 'components';
+import { useContactPageDetails } from 'hooks/useContactPageDetails';
+import { HeroBlank } from 'components/hero-blank/HeroBlank';
+import styled from 'styled-components';
+import { mt } from 'styled-components-spacing';
+
+const SocialMediaContainer = styled.div`
+  && {
+    > ${SocialMediaList} {
+      color: ${({ theme }) =>
+        theme.name === 'lightTheme'
+          ? theme.colors.brandPrimary
+          : theme.colors.primaryText};
+      ${mt(4)};
+      justify-content: flex-start;
+    }
+  }
+`;
 
 const ContactPage = () => {
-  const contactPageData = useStaticQuery(graphql`
-    query SiteContactPage {
-      mdx(fields: { slug: { eq: "contact" } }) {
-        frontmatter {
-          title
-        }
-        body
-      }
-    }
-  `);
+  const {
+    frontmatter: { title, description },
+    body,
+  } = useContactPageDetails();
 
   return (
     <MasterLayout>
-      <SEO title="Contact Me" />
-      <IntroSection />
-      <ContentLayout>
-        <MarkdownRenderer>{contactPageData.mdx.body}</MarkdownRenderer>
+      <SEO title={title} description={description} />
+      <HeroBlank />
+      <ContentRenderer>
+        <MarkdownRenderer>{body}</MarkdownRenderer>
         <ContactForm />
-        <h2>Follow me on:</h2>
-        <SocialMediaIcons />
-      </ContentLayout>
+        <Heading level="h2" size="small" type="sans-serif">
+          Follow me on:
+        </Heading>
+        <SocialMediaContainer>
+          <SocialMediaIcons />
+        </SocialMediaContainer>
+      </ContentRenderer>
     </MasterLayout>
   );
 };

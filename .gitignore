@@ -71,3 +71,5 @@ yarn-error.log
 
 #VS Code Configuration
 .vscode/
+
+storybook-static/

@@ -1,27 +1,33 @@
 import React from 'react';
-
+import styled from 'styled-components';
+import { mb } from 'styled-components-spacing';
 import {
   MasterLayout,
-  ContentLayout,
-  IntroSection,
   ProjectList,
   SEO,
+  ContentRenderer,
+  Heading,
 } from 'components';
 import { useProjectList } from 'hooks';
+import { ProjectCardDecorator } from 'markdown-decorators';
+import { HeroBlank } from 'components/hero-blank/HeroBlank';
 
-import { indexHeadingStyle, indexSubHeadingStyle } from '.';
+const StyledHeading = styled(Heading)`
+  ${mb(4)};
+`;
 
 const ProjectsPage = () => {
   const projectList = useProjectList();
+  const projects = projectList.map((project) => ProjectCardDecorator(project));
+
   return (
     <MasterLayout>
       <SEO title="Projects" description="List of projects" />
-      <IntroSection />
-      <ContentLayout>
-        <h1 style={indexHeadingStyle}>Projects</h1>
-        <p style={indexSubHeadingStyle}>List of all projects with case study</p>
-        <ProjectList projectList={projectList} />
-      </ContentLayout>
+      <HeroBlank />
+      <ContentRenderer>
+        <StyledHeading>Projects</StyledHeading>
+        <ProjectList projects={projects} />
+      </ContentRenderer>
     </MasterLayout>
   );
 };

@@ -5,7 +5,6 @@ export const MarkdownTableStyles = css`
     padding: 0;
     width: 100%;
   }
-
   table tr {
     border-top: 1px solid #cccccc;
     background-color: white;
@@ -38,5 +37,4 @@ export const MarkdownTableStyles = css`
   table tr td :last-child {
     margin-bottom: 0;
   }
-}
 `;

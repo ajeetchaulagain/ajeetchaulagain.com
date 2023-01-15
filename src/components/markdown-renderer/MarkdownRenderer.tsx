@@ -1,37 +1,47 @@
 import React from 'react';
 import styled from 'styled-components';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { mb, mt, ml } from 'styled-components-spacing';
+import { MDXProvider } from '@mdx-js/react';
+import { Heading, HeadingProps } from 'components/heading/Heading';
+import { Paragraph } from 'components/paragraph/Paragraph';
+import Link from 'components/link/Link';
 
-const MarkdownWrapper = styled.div`
-  ul {
-    li:last-child {
-      margin-bottom: 1.4rem;
-    }
+const AnchorLink = styled(Link)`
+  font-family: ${({ theme }) => theme.fonts.body};
+  color: ${({ theme }) => theme.colors.brandPrimary};
+  text-decoration: underline;
+  font-weight: ${({ theme }) => theme.fontWeights[6]};
+  :hover {
+    text-decoration: none;
   }
-  ol {
-    li:last-child {
-      margin-bottom: 0.5rem;
-    }
-  }
-  ul li {
-    font-size: 1.1rem;
+`;
+
+const ListItem = styled.li`
+  font-size: ${({ theme }) => theme.fontSizes.xmedium};
+  font-family: ${({ theme }) => theme.fonts.body};
+  line-height: ${({ theme }) => theme.lineHeights.body};
+  color: ${({ theme }) => theme.colors.primaryText};
+  ${ml(5)};
+`;
+
+const UnorderedList = styled.ul`
+  ${ListItem} {
     list-style-type: disc;
-    margin-left: 2rem;
     &::marker {
-      color: #7b79f4;
+      color: ${({ theme }) => theme.colors.brightLavender};
     }
   }
+  ${mb(5)};
+`;
 
-  ol li {
-    margin-left: 1.1rem;
-    &::marker {
-      font-weight: bolder;
-    }
-  }
-  // Fix for gatsby remark image left align
-  // Todo: revisit for a standard fixes
-  .gatsby-resp-image-wrapper {
-    // border: 2px solid gray;
+const OrderedList = styled.ol`
+  ${mb(5)};
+`;
+
+// Fixes for gatsby span wrapper
+const Span = styled.span`
+  &.gatsby-resp-image-wrapper {
     margin: 0 !important;
   }
 `;
@@ -40,10 +50,48 @@ type MarkdownRendererProps = {
   children: string;
 };
 
+const StyledHeading = styled(Heading)`
+  ${mb(2)};
+  ${mt(7)};
+`;
+
+const StyledHeading1 = styled(Heading)`
+  ${mb(2)};
+`;
+
 export const MarkdownRenderer = ({ children }: MarkdownRendererProps) => {
   return (
-    <MarkdownWrapper>
+    <MDXProvider
+      components={{
+        h1: ({ children }: HeadingProps) => (
+          <StyledHeading1 level="h1" size="xlarge" type="serif">
+            {children}
+          </StyledHeading1>
+        ),
+        h2: ({ children }: HeadingProps) => (
+          <StyledHeading level="h2" size="large" type="sans-serif">
+            {children}
+          </StyledHeading>
+        ),
+        h3: ({ children }: HeadingProps) => (
+          <StyledHeading level="h3" size="medium" type="sans-serif">
+            {children}
+          </StyledHeading>
+        ),
+        h4: ({ children }: HeadingProps) => (
+          <StyledHeading level="h4" size="small" type="sans-serif">
+            {children}
+          </StyledHeading>
+        ),
+        ul: UnorderedList,
+        ol: OrderedList,
+        li: ListItem,
+        a: AnchorLink,
+        p: Paragraph,
+        span: Span,
+      }}
+    >
       <MDXRenderer>{children}</MDXRenderer>
-    </MarkdownWrapper>
+    </MDXProvider>
   );
 };

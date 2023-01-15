@@ -1,20 +1,14 @@
 import React from 'react';
-import { Link } from 'gatsby';
-
-import {
-  MasterLayout,
-  ContentLayout,
-  IntroSection,
-  NewsLetter,
-  SEO,
-} from 'components';
+import { ContentRenderer, MasterLayout, NewsLetter, SEO } from 'components';
+import { HeroBlank } from 'components/hero-blank/HeroBlank';
+import Link from 'components/link/Link';
 
 const NewsLetterPage = () => {
   return (
     <MasterLayout>
       <SEO title="Newsletter" description="Subscribe to my newsletter" />
-      <IntroSection />
-      <ContentLayout>
+      <HeroBlank />
+      <ContentRenderer>
         <div>
           <NewsLetter />
         </div>
@@ -22,7 +16,7 @@ const NewsLetterPage = () => {
         <p>
           <Link to="/">Go back to Home</Link>
         </p>
-      </ContentLayout>
+      </ContentRenderer>
     </MasterLayout>
   );
 };

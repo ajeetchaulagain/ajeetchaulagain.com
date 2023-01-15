@@ -1,20 +1,5 @@
 import { useStaticQuery, graphql } from 'gatsby';
-import { IGatsbyImageData } from 'gatsby-plugin-image';
-
-export type BlogPostEdge = {
-  node: {
-    fields: { slug: any };
-    frontmatter: {
-      title: string;
-      date: string;
-      tags: string[];
-      thumbnail: {
-        childImageSharp: { gatsbyImageData: IGatsbyImageData };
-      };
-    };
-    timeToRead: string;
-  };
-};
+import { BlogPostEdge } from 'markdown-types';
 
 type QueryTypes = {
   allMdx: {
@@ -38,9 +23,12 @@ export const useBlogPostList = () => {
               date(formatString: "MMMM DD, YYYY")
               author
               thumbnail {
-                childImageSharp {
-                  gatsbyImageData(layout: CONSTRAINED)
+                src {
+                  childImageSharp {
+                    gatsbyImageData(layout: CONSTRAINED)
+                  }
                 }
+                altText
               }
             }
             excerpt

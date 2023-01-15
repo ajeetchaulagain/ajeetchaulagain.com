@@ -1,69 +1,95 @@
 import React from 'react';
 import { FaBook } from 'react-icons/fa';
-
 import {
   LandingPageHero,
   ProjectList,
-  BlogList,
   MasterLayout,
-  ContentLayout,
   NewsLetter,
   SEO,
+  ContentRenderer,
+  ButtonLink,
+  Heading,
+  Paragraph,
+  BlogPostCardList,
+  HeadingProps,
 } from 'components';
 import { useBlogPostList, useProjectList } from 'hooks';
-import { PrimaryButtonLink } from 'components/button/Button';
+import {
+  BlogPostCardDecorator,
+  ProjectCardDecorator,
+} from 'markdown-decorators';
 
-export const indexHeadingStyle = {
-  fontWeight: '800',
-  fontFamily: 'Domine',
-  marginBottom: '1rem',
+export type BlogPostCardDecoratorOptions = {
+  headingProps?: HeadingProps;
 };
 
-export const indexSubHeadingStyle = {
-  marginBottom: '1.5rem',
-  lineHeight: '1.5',
+export type ProjectCardDecoratorOptions = {
+  headingProps?: HeadingProps;
 };
 
-export const contentBoxButton = {
-  fontWeight: '400',
-  fontSize: '1rem',
+const blogPostCardDecoratorOptions: BlogPostCardDecoratorOptions = {
+  headingProps: {
+    level: 'h3',
+    size: 'small',
+    type: 'sans-serif',
+  },
 };
 
-export const subscribeSectionStyle = {
-  textAlign: 'center',
-  backgroundColor: 'grey',
+const projectCardDecoratorOptions: ProjectCardDecoratorOptions = {
+  headingProps: {
+    level: 'h3',
+    size: 'small',
+    type: 'sans-serif',
+  },
 };
 
 const IndexPage = () => {
   const blogPostList = useBlogPostList();
   const projectList = useProjectList();
 
+  const projects = projectList.map((project) =>
+    ProjectCardDecorator(project, projectCardDecoratorOptions)
+  );
+  const blogs = blogPostList.map((blogPost) =>
+    BlogPostCardDecorator(blogPost, blogPostCardDecoratorOptions)
+  );
+
   return (
     <MasterLayout>
       <SEO />
       <LandingPageHero />
-      <ContentLayout>
-        <h1 style={indexHeadingStyle}>
+      <ContentRenderer>
+        <Heading level="h2" size="xlarge">
           <FaBook /> From my blog
-        </h1>
-        <p style={indexSubHeadingStyle}>See the recent on my article list</p>
-        <BlogList blogPostList={blogPostList} />
-        <PrimaryButtonLink to="/blog">View all Articles →</PrimaryButtonLink>
-      </ContentLayout>
-      <ContentLayout bgcolor="white">
-        <h1 style={indexHeadingStyle}>Projects</h1>
-        <p style={indexSubHeadingStyle}>
-          Checkout some of my projects with case study
-        </p>
-        <ProjectList projectList={projectList} />
-        <PrimaryButtonLink to="/projects">
-          View All Projects →
-        </PrimaryButtonLink>
-      </ContentLayout>
+        </Heading>
+        <Paragraph>See the recent on my article list</Paragraph>
+        <BlogPostCardList blogs={blogs} />
+        <ButtonLink
+          to="/blog"
+          text="View All Articles →"
+          variant="contained"
+          color="primary"
+          size="large"
+        />
+      </ContentRenderer>
+      <ContentRenderer>
+        <Heading level="h2" size="xlarge">
+          Projects
+        </Heading>
+        <Paragraph>Checkout some of my projects</Paragraph>
+        <ProjectList projects={projects} />
+        <ButtonLink
+          to="/projects"
+          text="View All Projects →"
+          variant="contained"
+          color="primary"
+          size="large"
+        />
+      </ContentRenderer>
 
-      <ContentLayout bgcolor="#fff">
+      <ContentRenderer>
         <NewsLetter />
-      </ContentLayout>
+      </ContentRenderer>
     </MasterLayout>
   );
 };

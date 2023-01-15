@@ -2,11 +2,12 @@
 title: 'Getting started with Express.js - Keeping it simple!'
 date: '2020-03-23'
 tags: ['javascript', 'express', 'node']
-thumbnail: ../images/thumbnails/express-js.png
+thumbnail:
+  { src: ../images/thumbnails/express-js.png, altText: 'Express JS Icon' }
 author: 'Ajeet Chaulagain'
 ---
 
-import { QuickInfo } from "../components/utilities/quick-info.tsx"
+import { InfoCallToAction } from "../components/info-call-to-action/InfoCallToAction.tsx"
 
 This tutorial is prepared to make you familiar with [Express.js](https://expressjs.com/). _Express_ is a web framework for node.js that allows you to build a _minimal and flexible_ web application. We will go through some basic concepts of Express in this tutorial and demonstrate various topics of express.js such as _routing, middleware, route chaining and more._
 
@@ -18,9 +19,7 @@ I assume you have the knowledge of following topics to follow along with this tu
 - _Knowledge of Node.js and NPM (Node Package Manager)_
 - _Postman:_ We will be using it to test the API endpoints
 
-<QuickInfo> 
-    Postman is a popular API end point testing application
-</QuickInfo>
+<InfoCallToAction htmlString="<p>Postman is a popular API end point testing application</p>"/>
 
 #### What you will learn
 
@@ -108,7 +107,7 @@ npm install express
   npm install nodemon
 ```
 
-<QuickInfo url="https://www.npmjs.com/package/nodemon" name="nodemon">is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.</QuickInfo>
+<InfoCallToAction htmlString="<p><a href='https://www.npmjs.com/package/nodemon'>nodemon</a> is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected..</p>"/>
 
 5. _Install project dev dependencies:_
 

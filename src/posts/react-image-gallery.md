@@ -3,11 +3,15 @@ title: 'How to use React Image Gallery to build a beautiful and responsive image
 description: 'This tutorial shows you how to build a beautiful and responsive image gallery using React Image Gallery'
 date: '2022-11-27'
 tags: ['javascript', 'react', 'image-gallery', 'image-carousel']
-thumbnail: ../images/thumbnails/image-gallery-icon.png
+thumbnail:
+  {
+    src: ../images/thumbnails/image-gallery-icon.png,
+    altText: 'Image Gallery Icon',
+  }
 author: 'Ajeet Chaulagain'
 ---
 
-import { QuickInfo } from "../components/utilities/quick-info.tsx"
+import { InfoCallToAction } from "../components/info-call-to-action/InfoCallToAction.tsx"
 
 If you are creating web pages, you might need an image gallery showing multiple images at some point. However, developing an image gallery from scratch is quite an effort as you need to consider several things, such as user experience, customizability, and probably more features support. But a community-loved React package, [react-image-gallery,](https://www.npmjs.com/package/react-image-gallery) will help you develop a beautiful image gallery with a wide range of [features and customizability](https://github.com/xiaolin/react-image-gallery#user-content-features)
 
@@ -80,7 +84,7 @@ After a minor cleanup is done for the project, to install the react-image-galler
 npm i react-image-gallery
 ```
 
-<QuickInfo> react-image-gallery requires a React version 16.0.0 or later as per the docs.</QuickInfo>
+<InfoCallToAction htmlString="<p>react-image-gallery requires a React version 16.0.0 or later as per the docs.</p>"/>
 
 After installing the package, you need to import the stylesheet required for a package on top of _index.css_ file.
 
@@ -115,8 +119,7 @@ export const images = [
 ];
 ```
 
-<QuickInfo url="https://picsum.photos/" name="picsum.photos"> provides the placeholder image with the advanced usage. It supports various query params in the request URL to get the image you need.
-</QuickInfo>
+<InfoCallToAction htmlString="<p><a href='picsum.photos'>picsum.photos</a> provides the placeholder image with the advanced usage. It supports various query params in the request URL to get the image you need.</p>"/>
 
 Once data is prepared, you will import the ImageGallery component exported by the package and images you just prepared in App.js file and use it through items props. The _App.js_ file will end up with something like this:
 
