@@ -18,11 +18,12 @@ const Wrapper = styled.section`
   align-items: center;
 `;
 
-const Content = styled.div`
+export const Content = styled.div`
   background-color: ${({ theme }) => theme.colors.primaryBackground};
   border: ${({ theme }) =>
     `${theme.borders.thin} ${theme.colors.primaryBorder}`};
 
+  width: 100%;
   ${px(4)};
   ${py(6)};
   ${breakpoint('lg')`

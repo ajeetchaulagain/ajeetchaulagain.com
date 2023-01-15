@@ -55,14 +55,18 @@ const StyledHeading = styled(Heading)`
   ${mt(7)};
 `;
 
+const StyledHeading1 = styled(Heading)`
+  ${mb(2)};
+`;
+
 export const MarkdownRenderer = ({ children }: MarkdownRendererProps) => {
   return (
     <MDXProvider
       components={{
         h1: ({ children }: HeadingProps) => (
-          <StyledHeading level="h1" size="xlarge" type="serif">
+          <StyledHeading1 level="h1" size="xlarge" type="serif">
             {children}
-          </StyledHeading>
+          </StyledHeading1>
         ),
         h2: ({ children }: HeadingProps) => (
           <StyledHeading level="h2" size="large" type="sans-serif">
