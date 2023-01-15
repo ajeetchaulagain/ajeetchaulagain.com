@@ -1,6 +1,6 @@
 ---
 title: 'React Clean Code Pattern'
-description: 'A light-weight react project that demonstrated the clean, reusable, and maintainable'
+description: 'A react project that demonstrates the clean and maintainable way of managing data and state'
 technologies: ['React', 'Custom Hooks', 'Context API', 'Next.js', 'Taiwind CSS']
 actions:
   [
@@ -9,8 +9,11 @@ actions:
       to: 'https://github.com/ajeetchaulagain/react-clean-code-pattern',
       iconName: 'Github',
     },
-    { text: 'Demo', to: 'ajeetchaulagain.com', iconName: 'ExternalLink' },
-    { text: 'Demo', to: 'ajeetchaulagain.com', iconName: 'ExternalLink' },
+    {
+      text: 'Article',
+      to: 'projects/react-clean-code-pattern',
+      iconName: 'Book',
+    },
   ]
 
 featuredImage: ../images/personal-site.png
