@@ -13,9 +13,7 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "type-check": "./node_modules/typescript/bin/tsc --noEmit --skipLibCheck",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "@fontsource/domine": "^4.5.9",

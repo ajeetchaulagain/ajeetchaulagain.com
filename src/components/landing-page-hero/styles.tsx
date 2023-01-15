@@ -39,8 +39,8 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  padding-top: 12rem;
-  padding-bottom: 4rem;
+  padding-top: 13rem;
+  padding-bottom: 2rem;
   ${px(4)};
 
   ${breakpoint('sm')`

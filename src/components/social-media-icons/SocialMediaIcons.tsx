@@ -8,11 +8,7 @@ export const SocialMediaIcons = () => {
       {socialMediaLinks.map(({ url, IconComponent }) => {
         return (
           <ListItem>
-            <StyledAnchorLink
-              href={url as string}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <StyledAnchorLink to={url as string}>
               <IconComponent />
             </StyledAnchorLink>
           </ListItem>

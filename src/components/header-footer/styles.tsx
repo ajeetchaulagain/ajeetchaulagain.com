@@ -47,7 +47,7 @@ export const LogoWrapper = styled.div`
     text-transform: uppercase;
     ${ml(4)}
   }
-  ${mb({ xs: 5, lg: 0 })}
+  ${mb({ xs: 3, lg: 0 })}
 `;
 
 export const LogoLink = styled(Link)`

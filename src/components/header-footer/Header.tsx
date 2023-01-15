@@ -13,6 +13,14 @@ import {
 import { navItems } from './navItems';
 import { ThemeToggleSwitch } from 'components/theme-toggle-switch/ThemeToggleSwitch';
 import Link from '../link/Link';
+import styled from 'styled-components';
+import { mb } from 'styled-components-spacing';
+
+const ToggleWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  ${mb({ xs: 3, lg: 0 })}
+`;
 
 export const Header = (): JSX.Element => {
   const data = useStaticQuery(graphql`
@@ -36,7 +44,9 @@ export const Header = (): JSX.Element => {
           </LogoLink>
         </LogoWrapper>
 
-        <ThemeToggleSwitch />
+        <ToggleWrapper>
+          <ThemeToggleSwitch />
+        </ToggleWrapper>
 
         <NavMenuWrapper>
           <Nav>
