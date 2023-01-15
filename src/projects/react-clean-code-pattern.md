@@ -11,7 +11,7 @@ actions:
     },
     {
       text: 'Article',
-      to: 'projects/react-clean-code-pattern',
+      to: '/projects/react-clean-code-pattern',
       iconName: 'Book',
     },
   ]
