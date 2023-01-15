@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { mb, px } from 'styled-components-spacing';
+import { mb, px, pb } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
 import { Heading } from 'components/heading/Heading';
 import { Paragraph } from 'components/paragraph/Paragraph';
@@ -40,13 +40,14 @@ export const ContentWrapper = styled.div`
   justify-content: center;
   width: 100%;
   padding-top: 13rem;
-  padding-bottom: 2rem;
+  ${pb(6)};
   ${px(4)};
-
   ${breakpoint('sm')`
-    padding-top: 9rem;
-    padding-bottom: 4rem;
+    padding-top: 10rem;
   `}
+  ${breakpoint('lg')`
+     padding: 3rem 1rem;
+  `};
   ${breakpoint('lg')`
      flex-direction:row-reverse;
      justify-content:space-between;

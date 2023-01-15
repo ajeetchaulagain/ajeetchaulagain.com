@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
+import { px, py } from 'styled-components-spacing';
 
 type ContentWrapperProps = {
   children: ReactNode;
@@ -22,8 +23,10 @@ const Content = styled.div`
   border: ${({ theme }) =>
     `${theme.borders.thin} ${theme.colors.primaryBorder}`};
 
-  ${breakpoint('md')`
-     padding: 4rem 3rem;
+  ${px(4)};
+  ${py(6)};
+  ${breakpoint('lg')`
+     padding: 3rem 2rem;
   `};
 
   ${breakpoint('xl')`
