@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { p, my } from 'styled-components-spacing';
 import { Icon } from 'components/icon/Icon';
+import { Paragraph } from 'components/paragraph/Paragraph';
+import { mb } from 'styled-components-spacing';
 
 const Container = styled.div`
   display: flex;
@@ -10,12 +12,10 @@ const Container = styled.div`
   border-radius: ${(props) => props.theme.borderRadius.base};
   ${p(4)};
   ${my(5)};
-  && {
-    p {
-      margin-bottom: 0;
-      line-height: 1.5;
-    }
-  }
+`;
+
+const StyledParagraph = styled(Paragraph)`
+  ${mb(0)};
 `;
 
 const IconWrapper = styled.div`
@@ -39,7 +39,9 @@ export const InfoCallToAction = ({ htmlString }: InfoCallToAction) => {
       <IconWrapper>
         <Icon iconName="InfoCircle" />
       </IconWrapper>
-      <ContentWrapper dangerouslySetInnerHTML={{ __html: htmlString }} />
+      <ContentWrapper>
+        <StyledParagraph dangerouslySetInnerHTML={{ __html: htmlString }} />
+      </ContentWrapper>
     </Container>
   );
 };

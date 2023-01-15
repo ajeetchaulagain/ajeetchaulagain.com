@@ -1,15 +1,15 @@
 import { HeadingFontSize } from '../theme/Theme';
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
-
+import { mt, mb } from 'styled-components-spacing';
 //TODO: Revisit this file to remove !important once overriding scss is cleaned up
 
 type FontType = 'serif' | 'sans-serif';
 
-type HeadingProps = {
+export type HeadingProps = {
   size?: HeadingFontSize;
   type?: FontType;
-  level: 'h1' | 'h2' | 'h3';
+  level: 'h1' | 'h2' | 'h3' | 'h4';
   children: ReactNode;
 };
 
@@ -34,6 +34,13 @@ const Heading3 = styled.h3<{ size?: HeadingFontSize; type?: FontType }>`
   font-weight: ${({ theme }) => theme.fontWeights[5]};
 `;
 
+const Heading4 = styled.h3<{ size?: HeadingFontSize; type?: FontType }>`
+  font-size: ${({ size, theme: { headingFontSizes } }) =>
+    size ? headingFontSizes[size] : headingFontSizes.medium};
+
+  font-weight: ${({ theme }) => theme.fontWeights[5]};
+`;
+
 export const Heading = ({ level, children, ...rest }: HeadingProps) => {
   let HeadingComponent;
   switch (level) {
@@ -46,6 +53,8 @@ export const Heading = ({ level, children, ...rest }: HeadingProps) => {
     case 'h3':
       HeadingComponent = Heading3;
       break;
+    case 'h4':
+      HeadingComponent = Heading4;
     default:
       HeadingComponent = Heading1;
       break;
@@ -54,7 +63,7 @@ export const Heading = ({ level, children, ...rest }: HeadingProps) => {
   const StyledHeadingComponent = styled(HeadingComponent)`
     font-family: ${({ type, theme: { fonts } }) =>
       type === 'sans-serif' ? fonts.secondaryHeading : fonts.primaryHeading};
-    line-height: 1.4;
+    line-height: ${({ theme }) => theme.lineHeights.heading};
     color: ${({ theme }) => theme.colors.primaryText};
   `;
 

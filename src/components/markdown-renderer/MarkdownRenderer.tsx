@@ -1,117 +1,47 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { mb, mt, ml } from 'styled-components-spacing';
+import { MDXProvider } from '@mdx-js/react';
+import { Heading, HeadingProps } from 'components/heading/Heading';
+import { Paragraph } from 'components/paragraph/Paragraph';
+import Link from 'components/link/Link';
 
-const GlobalMarkdownStyles = css`
+const AnchorLink = styled(Link)`
   font-family: ${({ theme }) => theme.fonts.body};
+  color: ${({ theme }) => theme.colors.brandPrimary};
+  text-decoration: underline;
+  font-weight: ${({ theme }) => theme.fontWeights[6]};
+  :hover {
+    text-decoration: none;
+  }
+`;
+
+const ListItem = styled.li`
   font-size: ${({ theme }) => theme.fontSizes.xmedium};
+  font-family: ${({ theme }) => theme.fonts.body};
+  line-height: ${({ theme }) => theme.lineHeights.body};
   color: ${({ theme }) => theme.colors.primaryText};
+  ${ml(5)};
 `;
 
-const AnchorLinkStyles = css`
-  a {
-    color: ${({ theme }) => theme.colors.brandPrimary};
-    text-decoration: underline;
-    font-weight: ${({ theme }) => theme.fontWeights[6]};
-    :hover {
-      text-decoration: none;
+const UnorderedList = styled.ul`
+  ${ListItem} {
+    list-style-type: disc;
+    &::marker {
+      color: ${({ theme }) => theme.colors.brightLavender};
     }
   }
+  ${mb(5)};
 `;
 
-const HeadingStyles = css`
-  h1 {
-    font-weight: ${({ theme }) => theme.fontWeights[9]};
-    font-family: ${({ theme }) => theme.fonts.primaryHeading};
-    font-size: ${({ theme }) => theme.headingFontSizes.xlarge};
-    line-height: ${({ theme }) => theme.lineHeights.heading};
-    ${mb(2)};
-  }
-
-  h2 {
-    font-weight: ${({ theme }) => theme.fontWeights[6]};
-    font-family: ${({ theme }) => theme.fonts.secondaryHeading};
-    font-size: ${({ theme }) => theme.headingFontSizes.medium};
-    line-height: ${({ theme }) => theme.lineHeights.heading};
-    ${mb(2)};
-    ${mt(7)};
-  }
-
-  h3 {
-    font-weight: ${({ theme }) => theme.fontWeights[5]};
-    font-family: ${({ theme }) => theme.fonts.secondaryHeading};
-    font-size: ${({ theme }) => theme.headingFontSizes.small} !important;
-    line-height: ${({ theme }) => theme.lineHeights.heading};
-    font-size: 1.4rem;
-    font-weight: 700;
-    ${mb(2)};
-    ${mt(7)};
-  }
-
-  h4 {
-    font-weight: ${({ theme }) => theme.fontWeights[5]};
-    font-family: ${({ theme }) => theme.fonts.secondaryHeading};
-    font-size: ${({ theme }) => theme.headingFontSizes.small} !important;
-    line-height: ${({ theme }) => theme.lineHeights.heading};
-    ${mb(2)};
-    ${mt(7)};
-  }
-
-  h5 {
-    font-weight: ${({ theme }) => theme.fontWeights[5]};
-    font-family: ${({ theme }) => theme.fonts.secondaryHeading};
-    font-size: ${({ theme }) => theme.headingFontSizes.small} !important;
-    line-height: ${({ theme }) => theme.lineHeights.heading};
-    ${mb(3)};
-    ${mt(6)};
-  }
+const OrderedList = styled.ol`
+  ${mb(5)};
 `;
 
-const UnorderListStyles = css`
-  ul {
-    li {
-      list-style-type: disc;
-      line-height: ${({ theme }) => theme.lineHeights.body};
-      ${ml(5)};
-      &::marker {
-        color: ${({ theme }) => theme.colors.brightLavender};
-      }
-    }
-    ${mb(5)};
-  }
-`;
-
-const OrderedListStyles = css`
-  ol {
-    li {
-      line-height: ${({ theme }) => theme.lineHeights.body};
-      ${ml(5)};
-    }
-    ${mb(5)};
-  }
-`;
-
-const ParagraphStyles = css`
-  p {
-    font-family: ${({ theme }) => theme.fonts.body};
-    font-size: ${({ theme }) => theme.fontSizes.xmedium};
-    ${mb(5)}
-    line-height: ${({ theme }) => theme.lineHeights.body};
-    color: ${({ theme }) => theme.colors.primaryText};
-  }
-`;
-
-const MarkdownWrapper = styled.div`
-  ${GlobalMarkdownStyles};
-  ${AnchorLinkStyles};
-  ${ParagraphStyles};
-  ${HeadingStyles};
-  ${UnorderListStyles};
-  ${OrderedListStyles}
-  // Fix for gatsby remark image left align
-  // Todo: revisit for a standard fixes
-  .gatsby-resp-image-wrapper {
+// Fixes for gatsby span wrapper
+const Span = styled.span`
+  &.gatsby-resp-image-wrapper {
     margin: 0 !important;
   }
 `;
@@ -120,10 +50,44 @@ type MarkdownRendererProps = {
   children: string;
 };
 
+const StyledHeading = styled(Heading)`
+  ${mb(2)};
+  ${mt(7)};
+`;
+
 export const MarkdownRenderer = ({ children }: MarkdownRendererProps) => {
   return (
-    <MarkdownWrapper>
+    <MDXProvider
+      components={{
+        h1: ({ children }: HeadingProps) => (
+          <StyledHeading level="h1" size="xlarge" type="serif">
+            {children}
+          </StyledHeading>
+        ),
+        h2: ({ children }: HeadingProps) => (
+          <StyledHeading level="h2" size="large" type="sans-serif">
+            {children}
+          </StyledHeading>
+        ),
+        h3: ({ children }: HeadingProps) => (
+          <StyledHeading level="h3" size="medium" type="sans-serif">
+            {children}
+          </StyledHeading>
+        ),
+        h4: ({ children }: HeadingProps) => (
+          <StyledHeading level="h4" size="small" type="sans-serif">
+            {children}
+          </StyledHeading>
+        ),
+        ul: UnorderedList,
+        ol: OrderedList,
+        li: ListItem,
+        a: AnchorLink,
+        p: Paragraph,
+        span: Span,
+      }}
+    >
       <MDXRenderer>{children}</MDXRenderer>
-    </MarkdownWrapper>
+    </MDXProvider>
   );
 };

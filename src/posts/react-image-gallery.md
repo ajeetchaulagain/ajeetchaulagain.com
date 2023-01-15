@@ -84,7 +84,7 @@ After a minor cleanup is done for the project, to install the react-image-galler
 npm i react-image-gallery
 ```
 
-<InfoCallToAction htmlString="react-image-gallery requires a React version 16.0.0 or later as per the docs.</p>"/>
+<InfoCallToAction htmlString="<p>react-image-gallery requires a React version 16.0.0 or later as per the docs.</p>"/>
 
 After installing the package, you need to import the stylesheet required for a package on top of _index.css_ file.
 
