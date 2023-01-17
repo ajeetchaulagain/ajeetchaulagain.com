@@ -16,12 +16,13 @@ export const HeaderContent = styled.div`
   align-items: center;
   flex-direction: column;
   ${px(4)};
-  ${py(6)};
+  ${py(4)};
 
   ${breakpoint('lg')`
      flex-direction:row;
      justify-content:space-between;
      margin:0 auto;
+     ${py(6)};
   `};
 
   ${breakpoint('xl')`
@@ -74,22 +75,16 @@ export const NavItem = styled.li`
 
   & > a {
     border-radius: 3px;
-    ${breakpoint('xs', 'sm')`
-      display:block;
-      border: ${({ theme }: { theme: DefaultTheme }) => theme.borders.thin};
-      ${px(2)};
-      ${py(1)};
-      ${mb(3)};
-      &.activeNavItem {
-        background-color: ${({ theme }: { theme: DefaultTheme }) =>
-          theme.colors.primaryBackground};
-        color:${({ theme }: { theme: DefaultTheme }) =>
-          theme.colors.brandPrimary};;
-        border:1px solid ${({ theme }: { theme: DefaultTheme }) =>
-          theme.colors.primaryBackground};
-      }
-    `}
+    &.activeNavItem {
+      color: ${({ theme }: { theme: DefaultTheme }) =>
+        theme.colors.brandPrimary};
+      text-decoration: underline;
+      text-underline-offset: 0.3rem;
+    }
   }
+  ${breakpoint('xs', 'sm')`
+    ${mb(3)};
+  `}
 `;
 
 export const Nav = styled.ul`
@@ -99,6 +94,9 @@ export const Nav = styled.ul`
   justify-content: center;
   ${NavItem}:not(:first-child) {
     ${ml(4)};
+    ${breakpoint('xs', 'sm')`
+      ${ml(3)};
+    `}
   }
 `;
 

@@ -10,10 +10,10 @@ export const Container = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-  min-height: 13rem;
-  ${breakpoint('sm')`
-    min-height: 10rem;
+  ${breakpoint('xs')`
+    min-height: 8.5rem;
   `};
+
   ${breakpoint('lg')`
     min-height: 5.5rem;
   `};
