@@ -35,7 +35,6 @@ export const BaseButtonStyles = css`
 
   font-family: ${(props) => props.theme.fonts.body};
   font-weight: ${(props) => props.theme.fontWeights[6]};
-  border-radius: ${(props) => props.theme.borderRadius.base || '10px'};
 `;
 
 export const getStylesForButtonColorAndVariant = (
@@ -48,16 +47,19 @@ export const getStylesForButtonColorAndVariant = (
         background-color: ${({ theme }) =>
           theme.buttonColors[color].background};
         color: ${({ theme }) => theme.buttonColors[color].text};
+        border-radius: ${(props) => props.theme.borderRadius.base || '10px'};
       `;
 
     case 'text':
       return css`
-        text-decoration: underline;
-        text-underline-offset: 0.2rem;
+        border-radius: none;
+        border-bottom: ${({ theme }) =>
+          `${theme.borders.thin} ${theme.buttonColors[color].background}`};
         color: ${({ theme }) => theme.buttonColors[color].background};
         padding: 0 !important; // TODO: Revisit here later
         :hover {
           text-decoration: none;
+          border-bottom-color: transparent;
         }
       `;
 
@@ -66,6 +68,7 @@ export const getStylesForButtonColorAndVariant = (
         border: ${({ theme }) =>
           `${theme.borders.thin} ${theme.buttonColors[color].background}`};
         color: ${({ theme }) => theme.buttonColors[color].background};
+        border-radius: ${(props) => props.theme.borderRadius.base || '10px'};
       `;
   }
 };
