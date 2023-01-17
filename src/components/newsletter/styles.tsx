@@ -29,7 +29,7 @@ export const StyledForm = styled.form`
 
 export const FormSection = styled.div`
   background-color: ${({ theme }) => theme.colors.tertiaryBackground};
-  ${px(6)}
+  ${px(5)}
   ${py(7)};
   display: flex;
   align-items: center;
