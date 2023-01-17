@@ -26,6 +26,7 @@ export const colors = {
   darkCharcoal90: '#333333f8',
   darkGrey90: '#1f1f1ff8',
   oldSilver50: '#85858584',
+  lightGrey: '#999',
 };
 
 const darkThemeColor = {
@@ -43,6 +44,7 @@ const darkThemeColor = {
   brightLavender: colors.brightLavender,
   lightBackground: colors.light,
   oldSilver50: colors.oldSilver50,
+  lightGrey: colors.lightGrey,
 };
 
 const lightThemeButtonColors = {
