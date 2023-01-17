@@ -62,8 +62,9 @@ export const LogoLink = styled(Link)`
 export const NavMenuWrapper = styled.nav``;
 
 export const NavItem = styled.li`
-  font-size: ${({ theme }) => theme.fontSizes.medium};
-  font-weight: ${(props) => props.theme.fontWeights[5]};
+  font-size: ${({ theme }) => theme.fontSizes.small};
+  font-weight: ${(props) => props.theme.fontWeights[4]};
+  text-transform: uppercase;
   color: ${({ theme }) =>
     theme.name === 'lightTheme'
       ? theme.colors.secondaryText
@@ -77,7 +78,7 @@ export const NavItem = styled.li`
     border-radius: 3px;
     &.activeNavItem {
       color: ${({ theme }: { theme: DefaultTheme }) =>
-        theme.colors.brandPrimary};
+        theme.colors.brightLavender};
       text-decoration: underline;
       text-underline-offset: 0.3rem;
     }
