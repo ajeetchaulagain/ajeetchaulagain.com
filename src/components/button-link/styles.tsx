@@ -53,7 +53,7 @@ export const getStylesForButtonColorAndVariant = (
     case 'text':
       return css`
         text-decoration: underline;
-        text-underline-offset: 0.3rem;
+        text-underline-offset: 0.2rem;
         color: ${({ theme }) => theme.buttonColors[color].background};
         padding: 0 !important; // TODO: Revisit here later
         :hover {

@@ -1,12 +1,11 @@
 import styled from 'styled-components';
-import { p, mb, px, py, ml } from 'styled-components-spacing';
+import { mb, px, py, ml } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
 import { Heading } from '../heading/Heading';
 
 export const Container = styled.div``;
 
 export const StyledHeading = styled(Heading)`
-  ${mb(2)};
   display: flex;
   align-items: center;
   svg {
