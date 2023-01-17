@@ -28,7 +28,6 @@ export const getStylesForButtonSize = (size: string) => {
 export const BaseButtonStyles = css`
   display: inline-block;
   line-height: 1.5;
-  text-decoration: none;
   &:hover {
     cursor: pointer;
     filter: contrast(120%);
@@ -53,8 +52,13 @@ export const getStylesForButtonColorAndVariant = (
 
     case 'text':
       return css`
+        text-decoration: underline;
+        text-underline-offset: 0.3rem;
         color: ${({ theme }) => theme.buttonColors[color].background};
         padding: 0 !important; // TODO: Revisit here later
+        :hover {
+          text-decoration: none;
+        }
       `;
 
     case 'outlined':

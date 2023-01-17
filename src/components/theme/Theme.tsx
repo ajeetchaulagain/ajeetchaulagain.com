@@ -51,7 +51,7 @@ const lightThemeButtonColors = {
     text: colors.light,
   },
   secondary: {
-    background: colors.lightPurple,
+    background: colors.brightLavender,
     text: colors.darkCharcoal,
   },
 };

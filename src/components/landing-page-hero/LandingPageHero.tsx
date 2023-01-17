@@ -37,7 +37,7 @@ export const LandingPageHero = (): JSX.Element => {
             <ButtonLink
               to="/about"
               text="More About Me →"
-              variant="contained"
+              variant="text"
               color="secondary"
               size="large"
             />

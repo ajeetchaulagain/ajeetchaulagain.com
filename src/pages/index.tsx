@@ -67,7 +67,7 @@ const IndexPage = () => {
         <ButtonLink
           to="/blog"
           text="View All Articles →"
-          variant="contained"
+          variant="text"
           color="primary"
           size="large"
         />
@@ -81,7 +81,7 @@ const IndexPage = () => {
         <ButtonLink
           to="/projects"
           text="View All Projects →"
-          variant="contained"
+          variant="text"
           color="primary"
           size="large"
         />
