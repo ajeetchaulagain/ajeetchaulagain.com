@@ -31,25 +31,6 @@ export const PostHeaderRightColumn = styled.div`
   width: 15%;
 `;
 
-export const DateAndTimeComponent = styled.span`
-  text-transform: uppercase;
-  font-size: ${({ theme }) => theme.fontSizes.xmall};
-  color: ${({ theme }) => theme.colors.brandPrimary};
-  font-family: ${({ theme }) => theme.fonts.body};
-  font-weight: ${({ theme }) => theme.fontWeights[5]};
-  ${mt(4)};
-`;
-
-export const TagsWrapper = styled.div`
-  ${mt(5)};
-  span:not(:last-child) {
-    ${mr(2)};
-  }
-  span {
-    ${mb(3)};
-  }
-`;
-
 export const StyledParagraph = styled(Paragraph)`
   text-transform: uppercase;
 `;
