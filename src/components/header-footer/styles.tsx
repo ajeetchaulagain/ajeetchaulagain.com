@@ -116,12 +116,9 @@ export const FooterContentWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  ${pt(9)};
-  ${pb(7)};
+  ${pt(8)};
+  ${pb(6)};
   ${px(4)};
-
-  ${breakpoint('lg')`
-  `};
 
   ${breakpoint('xl')`
     width: 62rem;
