@@ -21,7 +21,10 @@ export const Paragraph = styled.p`
   font-family: ${(props) => props.theme.fonts.body};
   ${mb(5)};
   line-height: 1.5;
-  color: ${({ theme }) => theme.colors.primaryText};
+  color: ${({ theme }) =>
+    theme.name === 'lightTheme'
+      ? theme.colors.primaryText
+      : theme.colors.lightGrey};
 `;
 
 export const ActionWrapper = styled.div`

@@ -16,12 +16,13 @@ export const HeaderContent = styled.div`
   align-items: center;
   flex-direction: column;
   ${px(4)};
-  ${py(6)};
+  ${py(4)};
 
   ${breakpoint('lg')`
      flex-direction:row;
      justify-content:space-between;
      margin:0 auto;
+     ${py(6)};
   `};
 
   ${breakpoint('xl')`
@@ -61,8 +62,9 @@ export const LogoLink = styled(Link)`
 export const NavMenuWrapper = styled.nav``;
 
 export const NavItem = styled.li`
-  font-size: ${({ theme }) => theme.fontSizes.medium};
-  font-weight: ${(props) => props.theme.fontWeights[5]};
+  font-size: ${({ theme }) => theme.fontSizes.small};
+  font-weight: ${(props) => props.theme.fontWeights[4]};
+  text-transform: uppercase;
   color: ${({ theme }) =>
     theme.name === 'lightTheme'
       ? theme.colors.secondaryText
@@ -74,22 +76,16 @@ export const NavItem = styled.li`
 
   & > a {
     border-radius: 3px;
-    ${breakpoint('xs', 'sm')`
-      display:block;
-      border: ${({ theme }: { theme: DefaultTheme }) => theme.borders.thin};
-      ${px(2)};
-      ${py(1)};
-      ${mb(3)};
-      &.activeNavItem {
-        background-color: ${({ theme }: { theme: DefaultTheme }) =>
-          theme.colors.primaryBackground};
-        color:${({ theme }: { theme: DefaultTheme }) =>
-          theme.colors.brandPrimary};;
-        border:1px solid ${({ theme }: { theme: DefaultTheme }) =>
-          theme.colors.primaryBackground};
-      }
-    `}
+    &.activeNavItem {
+      color: ${({ theme }: { theme: DefaultTheme }) =>
+        theme.colors.brightLavender};
+      text-decoration: underline;
+      text-underline-offset: 0.3rem;
+    }
   }
+  ${breakpoint('xs', 'sm')`
+    ${mb(3)};
+  `}
 `;
 
 export const Nav = styled.ul`
@@ -99,6 +95,9 @@ export const Nav = styled.ul`
   justify-content: center;
   ${NavItem}:not(:first-child) {
     ${ml(4)};
+    ${breakpoint('xs', 'sm')`
+      ${ml(3)};
+    `}
   }
 `;
 
@@ -117,12 +116,9 @@ export const FooterContentWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  ${pt(9)};
-  ${pb(7)};
+  ${pt(8)};
+  ${pb(6)};
   ${px(4)};
-
-  ${breakpoint('lg')`
-  `};
 
   ${breakpoint('xl')`
     width: 62rem;

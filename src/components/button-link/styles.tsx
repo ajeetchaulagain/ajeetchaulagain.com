@@ -28,7 +28,6 @@ export const getStylesForButtonSize = (size: string) => {
 export const BaseButtonStyles = css`
   display: inline-block;
   line-height: 1.5;
-  text-decoration: none;
   &:hover {
     cursor: pointer;
     filter: contrast(120%);
@@ -36,7 +35,6 @@ export const BaseButtonStyles = css`
 
   font-family: ${(props) => props.theme.fonts.body};
   font-weight: ${(props) => props.theme.fontWeights[6]};
-  border-radius: ${(props) => props.theme.borderRadius.base || '10px'};
 `;
 
 export const getStylesForButtonColorAndVariant = (
@@ -49,12 +47,20 @@ export const getStylesForButtonColorAndVariant = (
         background-color: ${({ theme }) =>
           theme.buttonColors[color].background};
         color: ${({ theme }) => theme.buttonColors[color].text};
+        border-radius: ${(props) => props.theme.borderRadius.base || '10px'};
       `;
 
     case 'text':
       return css`
+        border-radius: none;
+        border-bottom: ${({ theme }) =>
+          `${theme.borders.thin} ${theme.buttonColors[color].background}`};
         color: ${({ theme }) => theme.buttonColors[color].background};
         padding: 0 !important; // TODO: Revisit here later
+        :hover {
+          text-decoration: none;
+          border-bottom-color: transparent;
+        }
       `;
 
     case 'outlined':
@@ -62,6 +68,7 @@ export const getStylesForButtonColorAndVariant = (
         border: ${({ theme }) =>
           `${theme.borders.thin} ${theme.buttonColors[color].background}`};
         color: ${({ theme }) => theme.buttonColors[color].background};
+        border-radius: ${(props) => props.theme.borderRadius.base || '10px'};
       `;
   }
 };

@@ -14,9 +14,9 @@ export const BaseStyles = css`
   a {
     text-decoration: none;
     color: inherit;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
   }
 
   em {

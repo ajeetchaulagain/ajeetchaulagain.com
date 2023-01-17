@@ -19,14 +19,13 @@ import {
   PostHeaderContainer,
   PostHeaderLeftColumn,
   PostHeaderRightColumn,
-  DateAndTimeComponent,
-  TagsWrapper,
   PageNavigationWrapper,
   PreviousNav,
   NextNav,
   StyledParagraph,
   StyledLink,
 } from './styles';
+import { DateAndTimeComponent, TagsWrapper } from '../styles';
 
 export const query = graphql`
   query BlogPageQuery($slug: String!) {
