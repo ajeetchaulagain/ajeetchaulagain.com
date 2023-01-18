@@ -68,7 +68,11 @@ export const LogoLink = styled(Link)`
   }
 `;
 
-export const NavMenuWrapper = styled.nav``;
+export const NavMenuWrapper = styled.nav`
+  ${breakpoint('xs', 'sm')`
+        flex-grow: 1;
+    `}
+`;
 
 export const NavItem = styled.li`
   font-size: ${({ theme }) => theme.fontSizes.small};
@@ -99,9 +103,13 @@ export const Nav = styled.ul`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  ${breakpoint('xs', 'sm')`
+      flex-grow: 1;
+      justify-content:space-between;
+   `}
   ${NavItem}:last-child {
     ${breakpoint('xs', 'sm')`
-      ${mr(1)};
+      ${mr(3)};
     `}
   }
   ${NavItem}:not(:first-child) {
