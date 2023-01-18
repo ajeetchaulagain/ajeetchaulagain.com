@@ -2,6 +2,7 @@ import { GradientOverlay } from 'components/landing-page-hero/styles';
 import React from 'react';
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
+import { py } from 'styled-components-spacing';
 
 export const Container = styled.div`
   width: 100%;
@@ -10,16 +11,8 @@ export const Container = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-  ${breakpoint('xs')`
-    min-height: 8.5rem;
-  `};
-
-  ${breakpoint('lg')`
-    min-height: 5.5rem;
-  `};
-
   ${breakpoint('xl')`
-    min-height: 18rem;
+    ${py(12)};
   `};
 `;
 

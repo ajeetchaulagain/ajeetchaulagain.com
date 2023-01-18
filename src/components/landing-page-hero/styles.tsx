@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { mb, px, pb } from 'styled-components-spacing';
+import { mb, px, pt, pb } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
 import { Heading } from 'components/heading/Heading';
 import { Paragraph } from 'components/paragraph/Paragraph';
@@ -39,33 +39,22 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  padding-top: 10rem;
+  ${pt(8)};
   ${pb(6)};
   ${px(4)};
-  ${breakpoint('sm')`
-    padding-top: 10rem;
+  ${breakpoint('xl')`
+ 
   `}
   ${breakpoint('lg')`
-     padding: 3rem 1rem;
-  `};
-  ${breakpoint('lg')`
      flex-direction:row-reverse;
      justify-content:space-between;
      align-items:flex-start;
      margin:0 auto;
-     padding-top: 8rem;
   `};
 
   ${breakpoint('xl')`
-     flex-direction:row-reverse;
-     justify-content:space-between;
-     align-items:flex-start;
-     margin:0 auto;
-     padding-bottom: 9rem;
-  `};
-
-  ${breakpoint('xl')`
-    width: 62rem;
+    ${pb(6)};
+    padding-bottom:9rem;
   `};
 
   ${breakpoint('xxl')`

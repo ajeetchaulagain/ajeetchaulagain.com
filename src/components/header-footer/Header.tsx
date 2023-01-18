@@ -14,13 +14,11 @@ import { navItems } from './navItems';
 import { ThemeToggleSwitch } from 'components/theme-toggle-switch/ThemeToggleSwitch';
 import Link from '../link/Link';
 import styled from 'styled-components';
-import { mb } from 'styled-components-spacing';
 
-const ToggleWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  ${mb({ xs: 4, lg: 0 })}
-`;
+import { GradientOverlay } from 'components/landing-page-hero/styles';
+import { Icon } from 'components/icon/Icon';
+
+const ToggleWrapper = styled.div``;
 
 export const Header = (): JSX.Element => {
   const data = useStaticQuery(graphql`
@@ -36,30 +34,36 @@ export const Header = (): JSX.Element => {
 
   return (
     <HeaderWrapper>
-      <HeaderContent>
-        <LogoWrapper>
-          <LogoLink to="/">
-            <Logo />
-            <span>{data.site.siteMetadata.title}</span>
-          </LogoLink>
-        </LogoWrapper>
+      <GradientOverlay>
+        <HeaderContent>
+          <LogoWrapper>
+            <LogoLink to="/">
+              <Logo />
+              <span>{data.site.siteMetadata.title}</span>
+            </LogoLink>
+          </LogoWrapper>
 
-        <ToggleWrapper>
-          <ThemeToggleSwitch />
-        </ToggleWrapper>
-
-        <NavMenuWrapper>
-          <Nav>
-            {navItems.map(({ title, url }) => (
+          <ToggleWrapper>
+            <ThemeToggleSwitch />
+          </ToggleWrapper>
+          <NavMenuWrapper>
+            <Nav>
               <NavItem>
-                <Link to={url} activeClassName="activeNavItem">
-                  {title}
+                <Link to="/" activeClassName="activeNavItem">
+                  <Icon iconName="Home" />
                 </Link>
               </NavItem>
-            ))}
-          </Nav>
-        </NavMenuWrapper>
-      </HeaderContent>
+              {navItems.map(({ title, url }) => (
+                <NavItem>
+                  <Link to={url} activeClassName="activeNavItem">
+                    {title}
+                  </Link>
+                </NavItem>
+              ))}
+            </Nav>
+          </NavMenuWrapper>
+        </HeaderContent>
+      </GradientOverlay>
     </HeaderWrapper>
   );
 };
