@@ -1,5 +1,5 @@
 import styled, { DefaultTheme } from 'styled-components';
-import { ml, mb, px, py, pt, pb } from 'styled-components-spacing';
+import { ml, mb, px, py, pt, pb, mr } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
 import { Paragraph } from '../paragraph/Paragraph';
 import Link from '../link/Link';
@@ -7,26 +7,31 @@ import Link from '../link/Link';
 export const HeaderWrapper = styled.header`
   font-family: ${(props) => props.theme.fonts.secondaryHeading};
   width: 100%;
-  position: absolute;
-  z-index: 2;
+  background: url('pattern-3.jpg') repeat fixed center;
+  background-size: 1000px;
 `;
 
 export const HeaderContent = styled.div`
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   ${px(4)};
   ${py(4)};
+
+  ${breakpoint('xs', 'lg')`
+      flex-direction: row-reverse;
+  `};
 
   ${breakpoint('lg')`
      flex-direction:row;
      justify-content:space-between;
      margin:0 auto;
-     ${py(6)};
   `};
 
   ${breakpoint('xl')`
     width: 62rem;
+    ${pt(6)};
   `};
 
   ${breakpoint('xxl')`
@@ -35,6 +40,10 @@ export const HeaderContent = styled.div`
 `;
 
 export const LogoWrapper = styled.div`
+  ${breakpoint('xs', 'lg')`
+    display:none;
+  `};
+
   svg {
     width: 1.75rem;
   }
@@ -59,7 +68,11 @@ export const LogoLink = styled(Link)`
   }
 `;
 
-export const NavMenuWrapper = styled.nav``;
+export const NavMenuWrapper = styled.nav`
+  ${breakpoint('xs', 'sm')`
+        flex-grow: 1;
+    `}
+`;
 
 export const NavItem = styled.li`
   font-size: ${({ theme }) => theme.fontSizes.small};
@@ -83,9 +96,6 @@ export const NavItem = styled.li`
       text-underline-offset: 0.3rem;
     }
   }
-  ${breakpoint('xs', 'sm')`
-    ${mb(3)};
-  `}
 `;
 
 export const Nav = styled.ul`
@@ -93,10 +103,19 @@ export const Nav = styled.ul`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  ${breakpoint('xs', 'sm')`
+      flex-grow: 1;
+      justify-content:space-between;
+   `}
+  ${NavItem}:last-child {
+    ${breakpoint('xs', 'sm')`
+      ${mr(3)};
+    `}
+  }
   ${NavItem}:not(:first-child) {
     ${ml(4)};
     ${breakpoint('xs', 'sm')`
-      ${ml(3)};
+      ${ml(2)};
     `}
   }
 `;

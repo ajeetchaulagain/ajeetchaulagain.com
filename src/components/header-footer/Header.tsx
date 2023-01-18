@@ -1,5 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import styled from 'styled-components';
+import breakpoint from 'styled-components-breakpoint';
 import Logo from '../../images/logo.svg';
 import {
   HeaderWrapper,
@@ -13,13 +15,25 @@ import {
 import { navItems } from './navItems';
 import { ThemeToggleSwitch } from 'components/theme-toggle-switch/ThemeToggleSwitch';
 import Link from '../link/Link';
-import styled from 'styled-components';
-import { mb } from 'styled-components-spacing';
+import { GradientOverlay } from 'components/landing-page-hero/styles';
+import { Icon } from 'components/icon/Icon';
 
-const ToggleWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  ${mb({ xs: 4, lg: 0 })}
+const ToggleWrapper = styled.div``;
+
+const HomeTextNavItem = styled(NavItem)`
+  ${breakpoint('xs', 'lg')`
+    && {
+      display:none;
+    }
+  `};
+`;
+
+const HomeIconNavItem = styled(NavItem)`
+  ${breakpoint('lg')`
+    && {
+      display:none;
+    }
+  `};
 `;
 
 export const Header = (): JSX.Element => {
@@ -36,30 +50,41 @@ export const Header = (): JSX.Element => {
 
   return (
     <HeaderWrapper>
-      <HeaderContent>
-        <LogoWrapper>
-          <LogoLink to="/">
-            <Logo />
-            <span>{data.site.siteMetadata.title}</span>
-          </LogoLink>
-        </LogoWrapper>
+      <GradientOverlay>
+        <HeaderContent>
+          <LogoWrapper>
+            <LogoLink to="/">
+              <Logo />
+              <span>{data.site.siteMetadata.title}</span>
+            </LogoLink>
+          </LogoWrapper>
 
-        <ToggleWrapper>
-          <ThemeToggleSwitch />
-        </ToggleWrapper>
-
-        <NavMenuWrapper>
-          <Nav>
-            {navItems.map(({ title, url }) => (
-              <NavItem>
-                <Link to={url} activeClassName="activeNavItem">
-                  {title}
+          <ToggleWrapper>
+            <ThemeToggleSwitch />
+          </ToggleWrapper>
+          <NavMenuWrapper>
+            <Nav>
+              <HomeIconNavItem>
+                <Link to="/" activeClassName="activeNavItem">
+                  <Icon iconName="Home" />
                 </Link>
-              </NavItem>
-            ))}
-          </Nav>
-        </NavMenuWrapper>
-      </HeaderContent>
+              </HomeIconNavItem>
+              <HomeTextNavItem>
+                <Link to="/" activeClassName="activeNavItem">
+                  Home
+                </Link>
+              </HomeTextNavItem>
+              {navItems.map(({ title, url }) => (
+                <NavItem>
+                  <Link to={url} activeClassName="activeNavItem">
+                    {title}
+                  </Link>
+                </NavItem>
+              ))}
+            </Nav>
+          </NavMenuWrapper>
+        </HeaderContent>
+      </GradientOverlay>
     </HeaderWrapper>
   );
 };
