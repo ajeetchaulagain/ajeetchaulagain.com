@@ -1,5 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import styled from 'styled-components';
+import breakpoint from 'styled-components-breakpoint';
 import Logo from '../../images/logo.svg';
 import {
   HeaderWrapper,
@@ -13,12 +15,26 @@ import {
 import { navItems } from './navItems';
 import { ThemeToggleSwitch } from 'components/theme-toggle-switch/ThemeToggleSwitch';
 import Link from '../link/Link';
-import styled from 'styled-components';
-
 import { GradientOverlay } from 'components/landing-page-hero/styles';
 import { Icon } from 'components/icon/Icon';
 
 const ToggleWrapper = styled.div``;
+
+const HomeTextNavItem = styled(NavItem)`
+  ${breakpoint('xs', 'lg')`
+    && {
+      display:none;
+    }
+  `};
+`;
+
+const HomeIconNavItem = styled(NavItem)`
+  ${breakpoint('lg')`
+    && {
+      display:none;
+    }
+  `};
+`;
 
 export const Header = (): JSX.Element => {
   const data = useStaticQuery(graphql`
@@ -48,11 +64,16 @@ export const Header = (): JSX.Element => {
           </ToggleWrapper>
           <NavMenuWrapper>
             <Nav>
-              <NavItem>
+              <HomeIconNavItem>
                 <Link to="/" activeClassName="activeNavItem">
                   <Icon iconName="Home" />
                 </Link>
-              </NavItem>
+              </HomeIconNavItem>
+              <HomeTextNavItem>
+                <Link to="/" activeClassName="activeNavItem">
+                  Home
+                </Link>
+              </HomeTextNavItem>
               {navItems.map(({ title, url }) => (
                 <NavItem>
                   <Link to={url} activeClassName="activeNavItem">
