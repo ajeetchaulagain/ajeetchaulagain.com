@@ -48,6 +48,7 @@ export const Header = (): JSX.Element => {
     }
   `);
 
+  const [{ url: homePageUrl }, ...navItemsWithoutHomePageLink] = navItems;
   return (
     <HeaderWrapper>
       <GradientOverlay>
@@ -65,7 +66,7 @@ export const Header = (): JSX.Element => {
           <NavMenuWrapper>
             <Nav>
               <HomeIconNavItem>
-                <Link to="/" activeClassName="activeNavItem">
+                <Link to={homePageUrl} activeClassName="activeNavItem">
                   <Icon iconName="Home" />
                 </Link>
               </HomeIconNavItem>
@@ -74,7 +75,7 @@ export const Header = (): JSX.Element => {
                   Home
                 </Link>
               </HomeTextNavItem>
-              {navItems.map(({ title, url }) => (
+              {navItemsWithoutHomePageLink.map(({ title, url }) => (
                 <NavItem>
                   <Link to={url} activeClassName="activeNavItem">
                     {title}

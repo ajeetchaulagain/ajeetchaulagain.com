@@ -137,6 +137,10 @@ export const FooterContentWrapper = styled.div`
   ${breakpoint('xxl')`
     width: 70rem;
   `};
+
+  ${NavMenuWrapper} {
+    ${mr(0)}
+  }
 `;
 
 export const SocialMediaLinksWrapper = styled.div`
