@@ -42,9 +42,6 @@ export const ContentWrapper = styled.div`
   ${pt(8)};
   ${pb(6)};
   ${px(4)};
-  ${breakpoint('xl')`
- 
-  `}
   ${breakpoint('lg')`
      flex-direction:row-reverse;
      justify-content:space-between;
