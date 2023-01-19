@@ -18,8 +18,6 @@ import Link from '../link/Link';
 import { GradientOverlay } from 'components/landing-page-hero/styles';
 import { Icon } from 'components/icon/Icon';
 
-const ToggleWrapper = styled.div``;
-
 const HomeTextNavItem = styled(NavItem)`
   ${breakpoint('xs', 'lg')`
     && {
@@ -60,9 +58,8 @@ export const Header = (): JSX.Element => {
             </LogoLink>
           </LogoWrapper>
 
-          <ToggleWrapper>
-            <ThemeToggleSwitch />
-          </ToggleWrapper>
+          <ThemeToggleSwitch />
+
           <NavMenuWrapper>
             <Nav>
               <HomeIconNavItem>

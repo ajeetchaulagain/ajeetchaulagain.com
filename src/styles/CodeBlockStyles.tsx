@@ -3,7 +3,6 @@ import { css } from 'styled-components';
 export const CodeBlockStyles = css`
   .gatsby-highlight-code-line {
     background-color: rgb(89, 89, 89);
-    background-color: red;
     display: block;
     margin-right: -1em;
     margin-left: -1em;
@@ -42,6 +41,9 @@ export const CodeBlockStyles = css`
     padding: 0.5rem;
     padding-left: 1rem;
     overflow: auto;
+    code {
+      font-size: 0.9rem !important;
+    }
   }
 
   .gatsby-highlight pre[class*='language-'].line-numbers {
