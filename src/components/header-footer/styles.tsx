@@ -70,8 +70,8 @@ export const LogoLink = styled(Link)`
 
 export const NavMenuWrapper = styled.nav`
   ${breakpoint('xs', 'sm')`
-        flex-grow: 1;
-    `}
+      ${mr(4)};
+  `}
 `;
 
 export const NavItem = styled.li`
@@ -103,15 +103,6 @@ export const Nav = styled.ul`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  ${breakpoint('xs', 'sm')`
-      flex-grow: 1;
-      justify-content:space-between;
-   `}
-  ${NavItem}:last-child {
-    ${breakpoint('xs', 'sm')`
-      ${mr(3)};
-    `}
-  }
   ${NavItem}:not(:first-child) {
     ${ml(4)};
     ${breakpoint('xs', 'sm')`
@@ -146,6 +137,10 @@ export const FooterContentWrapper = styled.div`
   ${breakpoint('xxl')`
     width: 70rem;
   `};
+
+  ${NavMenuWrapper} {
+    ${mr(0)}
+  }
 `;
 
 export const SocialMediaLinksWrapper = styled.div`

@@ -18,8 +18,6 @@ import Link from '../link/Link';
 import { GradientOverlay } from 'components/landing-page-hero/styles';
 import { Icon } from 'components/icon/Icon';
 
-const ToggleWrapper = styled.div``;
-
 const HomeTextNavItem = styled(NavItem)`
   ${breakpoint('xs', 'lg')`
     && {
@@ -48,6 +46,7 @@ export const Header = (): JSX.Element => {
     }
   `);
 
+  const [{ url: homePageUrl }, ...navItemsWithoutHomePageLink] = navItems;
   return (
     <HeaderWrapper>
       <GradientOverlay>
@@ -59,13 +58,12 @@ export const Header = (): JSX.Element => {
             </LogoLink>
           </LogoWrapper>
 
-          <ToggleWrapper>
-            <ThemeToggleSwitch />
-          </ToggleWrapper>
+          <ThemeToggleSwitch />
+
           <NavMenuWrapper>
             <Nav>
               <HomeIconNavItem>
-                <Link to="/" activeClassName="activeNavItem">
+                <Link to={homePageUrl} activeClassName="activeNavItem">
                   <Icon iconName="Home" />
                 </Link>
               </HomeIconNavItem>
@@ -74,7 +72,7 @@ export const Header = (): JSX.Element => {
                   Home
                 </Link>
               </HomeTextNavItem>
-              {navItems.map(({ title, url }) => (
+              {navItemsWithoutHomePageLink.map(({ title, url }) => (
                 <NavItem>
                   <Link to={url} activeClassName="activeNavItem">
                     {title}
