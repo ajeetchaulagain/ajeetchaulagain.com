@@ -106,7 +106,7 @@ export const Nav = styled.ul`
   ${NavItem}:not(:first-child) {
     ${ml(4)};
     ${breakpoint('xs', 'sm')`
-      ${ml(2)};
+      ${ml(3)};
     `}
   }
 `;
