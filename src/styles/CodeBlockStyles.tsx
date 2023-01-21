@@ -11,10 +11,6 @@ export const CodeBlockStyles = css`
     border-left: 3px solid #fff;
   }
 
-  .body-text-size {
-    font-size: 0.9rem;
-  }
-
   .gatsby-highlight {
     -webkit-font-smoothing: subpixel-antialiased;
     background-color: #2d2d2d;
@@ -23,6 +19,9 @@ export const CodeBlockStyles = css`
     padding: 0.5rem;
     padding-left: 1rem;
     overflow: auto;
+    .body-text-size {
+      font-size: 0.9rem !important;
+    }
     pre[class*='language-'] {
       margin: 0;
       padding: 0;
