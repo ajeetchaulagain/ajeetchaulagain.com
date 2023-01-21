@@ -1,15 +1,13 @@
 import { Paragraph, StyledGatsbyImage } from 'components';
 import styled, { css } from 'styled-components';
-import { py, pr, pl, mt, mr, mb } from 'styled-components-spacing';
+import { py, pr, pl, mt, mb } from 'styled-components-spacing';
 import Link from 'components/link/Link';
 import breakpoint from 'styled-components-breakpoint';
 
 export const PostHeaderContainer = styled.div`
   display: flex;
   align-items: flex-start;
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.oldSilver50};
+  ${mb(5)};
 
   ${breakpoint('xs', 'md')`
     flex-direction:column-reverse;
