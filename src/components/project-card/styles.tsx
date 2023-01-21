@@ -12,7 +12,7 @@ export const Container = styled.div`
   flex-direction: column;
   flex: 1;
   ${breakpoint('xs', 'lg')`
-    ${p(3)}
+    ${p(4)}
   `}
 `;
 
