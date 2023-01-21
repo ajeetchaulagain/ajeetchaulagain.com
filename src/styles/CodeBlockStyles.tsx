@@ -11,59 +11,29 @@ export const CodeBlockStyles = css`
     border-left: 3px solid #fff;
   }
 
-  .gatsby-highlight pre[class*='language-'] {
-    margin: 0;
-    padding: 0;
-    overflow: initial;
-    float: left; /* 1 */
-    min-width: 100%; /* 2 */
-  }
-
-  /**
-   * If you already use line highlighting
-   */
-
-  /* Adjust the position of the line numbers */
-  .gatsby-highlight pre[class*='language-'].line-numbers {
-    padding-left: 2.8em;
-  }
-
-  /**
-   * If you only want to use line numbering
-   */
-
   .gatsby-highlight {
     -webkit-font-smoothing: subpixel-antialiased;
-    font-size: 0.9rem;
     background-color: #2d2d2d;
     border-radius: 0.2rem;
     margin: 0rem 0 2rem;
     padding: 0.5rem;
     padding-left: 1rem;
     overflow: auto;
-    code {
-      font-size: 0.9rem !important;
+
+    pre[class*='language-'] {
+      margin: 0;
+      padding: 0;
+      overflow: initial;
+      float: left;
+      min-width: 100%;
+      font-size: 0.9rem;
     }
-  }
 
-  .gatsby-highlight pre[class*='language-'].line-numbers {
-    padding: 0;
-    padding-left: 2.8em;
-    overflow: initial;
-  }
-
-  // Line highlighting for inline - custom code
-
-  em code {
-    font-size: 1rem;
-    color: #333 !important;
-    font-weight: 400;
-    background-color: rgb(240, 240, 240) !important;
-    border: 1px solid rgb(193, 193, 193) !important;
-    padding: 0.1rem 0.3rem !important;
-    display: inline-block !important;
-    border-radius: 1px !important;
-    font-family: monospace !important;
+    pre[class*='language-'].line-numbers {
+      padding: 0;
+      padding-left: 2.8rem;
+      overflow: initial;
+    }
   }
 
   // Code for shell prompt
