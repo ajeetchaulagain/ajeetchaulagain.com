@@ -26,6 +26,9 @@ const Container = styled.div`
 
 const StyledParagraph = styled(Paragraph)`
   ${mb(0)};
+  line-height: 1.5;
+  font-size: ${({ theme }) => theme.fontSizes.small};
+  font-weight: ${({ theme }) => theme.fontWeights[4]};
 `;
 
 const IconWrapper = styled.div`
