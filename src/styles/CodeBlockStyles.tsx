@@ -34,7 +34,7 @@ export const CodeBlockStyles = css`
       overflow: initial;
     }
 
-    code[class*='language-'] {
+    code[class='language-js'] {
       font-size: 0.9rem !important;
     }
   }
