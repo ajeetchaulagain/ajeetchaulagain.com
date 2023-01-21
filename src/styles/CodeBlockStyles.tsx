@@ -19,16 +19,13 @@ export const CodeBlockStyles = css`
     padding: 0.5rem;
     padding-left: 1rem;
     overflow: auto;
-    .body-text-size {
-      font-size: 0.9rem !important;
-    }
     pre[class*='language-'] {
       margin: 0;
       padding: 0;
       overflow: initial;
       float: left;
       min-width: 100%;
-      font-size: 0.9rem !important;
+      font-size: 14px !important;
     }
 
     pre[class*='language-'].line-numbers {
@@ -38,7 +35,7 @@ export const CodeBlockStyles = css`
     }
 
     code[class='language-js'] {
-      font-size: 0.9rem !important;
+      font-size: 14px !important;
     }
   }
 
