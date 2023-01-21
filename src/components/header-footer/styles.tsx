@@ -19,7 +19,11 @@ export const HeaderContent = styled.div`
   ${px(4)};
   ${py(4)};
 
-  ${breakpoint('xs', 'lg')`
+  ${breakpoint('xs', 'xsm')`
+      flex-direction: column;
+  `};
+
+  ${breakpoint('xsm', 'lg')`
       flex-direction: row-reverse;
   `};
 
@@ -83,6 +87,10 @@ export const NavItem = styled.li`
       ? theme.colors.secondaryText
       : theme.colors.primaryText};
 
+  ${breakpoint('xs', 'xsm')`
+      ${mb(3)};
+  `}
+
   & > a:hover {
     color: ${({ theme }) => theme.colors.brightLavender};
   }
@@ -98,6 +106,22 @@ export const NavItem = styled.li`
   }
 `;
 
+export const HomeTextNavItem = styled(NavItem)`
+  ${breakpoint('xs', 'lg')`
+    && {
+      display:none;
+    }
+  `};
+`;
+
+export const HomeIconNavItem = styled(NavItem)`
+  ${breakpoint('lg')`
+    && {
+      display:none;
+    }
+  `};
+`;
+
 export const Nav = styled.ul`
   display: flex;
   flex-wrap: wrap;
@@ -111,6 +135,13 @@ export const Nav = styled.ul`
   }
 `;
 
+export const ThemeToggleSwitchWrapper = styled.div`
+  ${breakpoint('xs', 'xsm')`
+      ${mb(4)};
+  `};
+`;
+
+// Footer and its component styles
 export const FooterContainer = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.medium};
   font-family: ${(props) => props.theme.fonts.secondaryHeading};

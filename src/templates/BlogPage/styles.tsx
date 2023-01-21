@@ -9,7 +9,6 @@ export const PostHeaderContainer = styled.div`
   align-items: flex-start;
   ${mb(6)};
   ${mb(6)};
-  border-bottom: 1px solid ${({ theme }) => theme.colors.oldSilver50};
 
   ${breakpoint('xs', 'md')`
     flex-direction:column-reverse;
