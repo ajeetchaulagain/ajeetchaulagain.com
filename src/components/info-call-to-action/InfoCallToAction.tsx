@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { p, my } from 'styled-components-spacing';
 import { Icon } from 'components/icon/Icon';
 import { Paragraph } from 'components/paragraph/Paragraph';
-import { mb } from 'styled-components-spacing';
+import { mb, mr } from 'styled-components-spacing';
 
 const Container = styled.div`
   display: flex;
@@ -37,7 +37,7 @@ const IconWrapper = styled.div`
   color: ${({ theme }) => theme.colors.brandPrimary};
   svg {
     display: inline-block;
-    margin-right: 1rem;
+    ${mr(4)};
   }
 `;
 

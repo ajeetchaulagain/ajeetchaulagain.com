@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { mb, px, pt, pb } from 'styled-components-spacing';
+import { mb, px, pt, pb, mt } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
 import { Heading } from 'components/heading/Heading';
 import { Paragraph } from 'components/paragraph/Paragraph';
@@ -92,7 +92,7 @@ export const AboutWrapper = styled.div`
   text-align: center;
 
   ${breakpoint('xs', 'lg')`
-    margin-top:2rem;
+    ${mt(6)}
   `}
   ${breakpoint('lg')`
     width: 70%;

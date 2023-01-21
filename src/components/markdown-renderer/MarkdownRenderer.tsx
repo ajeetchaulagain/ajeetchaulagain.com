@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { mb, mt, ml } from 'styled-components-spacing';
+import { mb, mt, ml, m } from 'styled-components-spacing';
 import { MDXProvider } from '@mdx-js/react';
 import { Heading, HeadingProps } from 'components/heading/Heading';
 import { Paragraph } from 'components/paragraph/Paragraph';
