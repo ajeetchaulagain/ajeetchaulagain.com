@@ -43,6 +43,10 @@ export const FormSection = styled.div`
       width:100%;
     }
   `}
+  ${breakpoint('xs', 'lg')`
+    ${px(3)}
+    ${py(5)};
+  `}
 `;
 
 export const SuccessContentWrapper = styled.div`
