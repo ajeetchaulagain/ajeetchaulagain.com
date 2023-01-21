@@ -130,7 +130,7 @@ const themeCommonProperties = {
     12: '7rem',
   },
   fonts: {
-    body: `Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI,
+    body: `Source Sans Pro, BlinkMacSystemFont, Segoe UI,
       Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
       sans-serif`,
     primaryHeading: `'Domine', serif`,

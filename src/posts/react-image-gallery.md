@@ -94,7 +94,7 @@ After installing the package, you need to import the stylesheet required for a p
 
 The package has a default export called ImageGallery that has items props for providing a list of images we want to display in our gallery. Let's prepare a dummy image data for that by creating a _gallery-image.ts_ file that have a list of images exported.
 
-```j{numberLines:true}
+```js{numberLines:true}
 export const images = [
   {
     original: 'https://picsum.photos/id/1024/1000/600/',
