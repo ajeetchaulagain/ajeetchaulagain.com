@@ -14,7 +14,7 @@ const Container = styled.div`
   ${Content} {
     ${breakpoint('xs', 'lg')`
       border-bottom: 1px solid ${({ theme }: { theme: DefaultTheme }) =>
-        theme.colors.oldSilver50};
+        theme.colors.quaternaryBackground};
   `};
   }
 `;
