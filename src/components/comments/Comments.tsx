@@ -5,7 +5,7 @@ import { Heading } from '../heading/Heading';
 import { GlobalStateContext } from 'contexts/GlobalContextProvider';
 
 const CommentContainer = styled.div`
-  ${mb(9)};
+  ${mb(6)};
 `;
 
 export const Comments = () => {

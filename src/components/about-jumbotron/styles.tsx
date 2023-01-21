@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { p, my, mb } from 'styled-components-spacing';
+import { p, mb, mt } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
 import { StyledGatsbyImage } from '../gatsby-image/StyledGatsbyImage';
 import { Paragraph } from '../paragraph/Paragraph';
@@ -13,7 +13,8 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   ${p(5)};
-  ${my(9)}
+  ${mt(9)};
+  ${mb(8)}
   background-color: ${({ theme }) => theme.colors.tertiaryBackground};
   border-radius: ${({ theme }) => theme.borderRadius.base};
 
