@@ -12,7 +12,7 @@ export const CodeBlockStyles = css`
   }
 
   .body-text-size {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .gatsby-highlight {
