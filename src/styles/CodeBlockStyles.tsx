@@ -11,6 +11,10 @@ export const CodeBlockStyles = css`
     border-left: 3px solid #fff;
   }
 
+  .body-text-size {
+    font-size: 1rem;
+  }
+
   .gatsby-highlight {
     -webkit-font-smoothing: subpixel-antialiased;
     background-color: #2d2d2d;
