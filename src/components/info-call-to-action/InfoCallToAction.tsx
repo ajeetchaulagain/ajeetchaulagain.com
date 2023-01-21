@@ -17,7 +17,7 @@ const Container = styled.div`
     font-family: ${({ theme }) => theme.fonts.body};
     color: ${({ theme }) => theme.colors.brandPrimary};
     text-decoration: underline;
-    font-weight: ${({ theme }) => theme.fontWeights[6]};
+    font-weight: ${({ theme }) => theme.fontWeights[5]};
     :hover {
       text-decoration: none;
     }
@@ -26,6 +26,9 @@ const Container = styled.div`
 
 const StyledParagraph = styled(Paragraph)`
   ${mb(0)};
+  line-height: 1.5;
+  font-size: ${({ theme }) => theme.fontSizes.small};
+  font-weight: ${({ theme }) => theme.fontWeights[3]};
 `;
 
 const IconWrapper = styled.div`
