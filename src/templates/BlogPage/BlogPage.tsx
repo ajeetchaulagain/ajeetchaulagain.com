@@ -13,6 +13,7 @@ import {
   HeroBlank,
   Tag,
   StyledGatsbyImage,
+  Comments,
 } from 'components';
 import { BlogPostType, BlogPostNode } from 'markdown-types';
 import {
@@ -123,6 +124,7 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
         </PageNavigationWrapper>
 
         <AboutJumbotron />
+        <Comments />
         <NewsLetter />
       </ContentRenderer>
     </MasterLayout>
