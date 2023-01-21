@@ -1,6 +1,7 @@
 import { StyledGatsbyImage } from 'components/gatsby-image/StyledGatsbyImage';
 import styled from 'styled-components';
 import { p, mb, mt, mr } from 'styled-components-spacing';
+import breakpoint from 'styled-components-breakpoint';
 import { Heading } from '../heading/Heading';
 
 export const StyledHeading = styled(Heading)`
@@ -22,6 +23,9 @@ export const Container = styled.div`
       text-decoration: underline;
     }
   }
+  ${breakpoint('xs', 'lg')`
+    ${p(3)}
+  `}
 `;
 
 export const ImageWrapper = styled.div`

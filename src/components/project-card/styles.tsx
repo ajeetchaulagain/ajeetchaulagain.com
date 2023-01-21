@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import breakpoint from 'styled-components-breakpoint';
 import { p, ml, mb } from 'styled-components-spacing';
 import { Heading } from 'components/heading/Heading';
 
@@ -10,6 +11,9 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
+  ${breakpoint('xs', 'lg')`
+    ${p(3)}
+  `}
 `;
 
 export const StyledHeading = styled(Heading)`
