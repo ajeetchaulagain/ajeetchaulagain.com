@@ -33,6 +33,10 @@ export const CodeBlockStyles = css`
       padding-left: 2.8rem;
       overflow: initial;
     }
+
+    code[class*='language-'] {
+      font-size: 0.9rem !important;
+    }
   }
 
   // Code for shell prompt
