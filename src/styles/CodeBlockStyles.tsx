@@ -19,6 +19,9 @@ export const CodeBlockStyles = css`
     padding: 0.5rem;
     padding-left: 1rem;
     overflow: auto;
+    .body-text-size {
+      font-size: 14px;
+    }
     pre[class*='language-'] {
       margin: 0;
       padding: 0;
