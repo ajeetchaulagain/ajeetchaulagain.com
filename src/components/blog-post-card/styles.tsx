@@ -24,7 +24,7 @@ export const Container = styled.div`
     }
   }
   ${breakpoint('xs', 'lg')`
-    ${p(3)}
+    ${p(4)}
   `}
 `;
 
