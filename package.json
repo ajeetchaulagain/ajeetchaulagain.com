@@ -38,7 +38,6 @@
     "gatsby-plugin-prettier-eslint": "^1.0.6",
     "gatsby-plugin-react-helmet": "^4.7.1",
     "gatsby-plugin-react-svg": "^3.0.1",
-    "gatsby-plugin-sass": "^4.7.1",
     "gatsby-plugin-sharp": "^4.21.0",
     "gatsby-plugin-sitemap": "5.25.0",
     "gatsby-plugin-styled-components": "^5.21.0",
@@ -51,7 +50,6 @@
     "gatsby-transformer-remark": "^4.4.1",
     "gatsby-transformer-sharp": "^3.7.1",
     "install": "^0.13.0",
-    "node-sass": "^6.0.0",
     "npm": "^8.18.0",
     "prism-react-renderer": "^1.2.1",
     "prismjs": "^1.23.0",
@@ -88,6 +86,6 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "engines": {
-    "node": ">=14.6.0"
+    "node": ">=18.12.1"
   }
 }

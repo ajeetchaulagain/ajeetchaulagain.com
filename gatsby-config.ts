@@ -16,7 +16,6 @@ const config: GatsbyConfig = {
     twitterUsername: '@ajeetsweb',
   },
   plugins: [
-    'gatsby-plugin-sass',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-sitemap',
     {
