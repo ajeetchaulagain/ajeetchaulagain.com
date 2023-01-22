@@ -13,6 +13,26 @@ author: 'Ajeet Chaulagain'
 
 import { InfoCallToAction } from "../components/info-call-to-action/InfoCallToAction.tsx"
 
+```toc
+# This code block gets replaced with the TOC
+```
+
+```toc
+# This code block gets replaced with the TOC
+exclude: Table of Contents
+tight: false
+ordered: false
+from-heading: 2
+to-heading: 6
+class-name: "table-of-contents"
+```
+
+```toc
+exclude: Table of Contents
+from-heading: 2
+to-heading: 6
+```
+
 If you are creating web pages, you might need an image gallery showing multiple images at some point. However, developing an image gallery from scratch is quite an effort as you need to consider several things, such as user experience, customizability, and probably more features support. But a community-loved React package, [react-image-gallery,](https://www.npmjs.com/package/react-image-gallery) will help you develop a beautiful image gallery with a wide range of [features and customizability](https://github.com/xiaolin/react-image-gallery#user-content-features)
 
 React image gallery is one of the [most popular npm package](https://npmtrends.com/react-gallery-swiper-vs-react-grid-gallery-vs-react-image-gallery-vs-react-image-lightbox-vs-react-image-slider-vs-react-images) that provide React component to build highly customizable image galleries. Also, It supports a wide range of features out of the box. These features include swipe gestures for mobile devices, navigation through thumbnails, responsive design, and much more. In this tutorial, you will learn how to build a _beautiful and elegant image gallery_ using a react-image-gallery npm package. Let's get started.

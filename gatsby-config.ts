@@ -195,6 +195,26 @@ const config: GatsbyConfig = {
           'https://ajeetchaulagain.us19.list-manage.com/subscribe/post?u=961c9fb48e36f45cf16236b29&amp;id=ce684f7325', // add your MC list endpoint here; see instructions below
       },
     },
+
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-table-of-contents`,
+            options: {
+              exclude: 'Table of Contents',
+              tight: false,
+              ordered: false,
+              fromHeading: 1,
+              toHeading: 6,
+              className: 'table-of-contents',
+            },
+          },
+          `gatsby-remark-autolink-headers`,
+        ],
+      },
+    },
   ],
 
   pathPrefix: '/gatsby-portfolio',
