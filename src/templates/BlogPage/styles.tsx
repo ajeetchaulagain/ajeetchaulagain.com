@@ -1,13 +1,14 @@
 import { Paragraph, StyledGatsbyImage } from 'components';
 import styled, { css } from 'styled-components';
-import { py, pr, pl, mt, mb } from 'styled-components-spacing';
+import { py, pr, pl, mt, mr, ml, mb } from 'styled-components-spacing';
 import Link from 'components/link/Link';
 import breakpoint from 'styled-components-breakpoint';
 
 export const PostHeaderContainer = styled.div`
   display: flex;
   align-items: flex-start;
-  ${mb(5)};
+  ${mb(6)};
+  ${mb(6)};
 
   ${breakpoint('xs', 'md')`
     flex-direction:column-reverse;
@@ -67,7 +68,7 @@ export const PreviousNav = styled.div`
   ${pr(3)}
   ${StyledLink} {
     svg {
-      margin-right: 0.5rem;
+      ${mr(2)};
     }
   }
   border-left: none;
@@ -81,7 +82,7 @@ export const NextNav = styled.div`
   border-left: none;
   ${StyledLink} {
     svg {
-      margin-left: 0.5rem;
+      ${ml(2)};
     }
   }
 `;

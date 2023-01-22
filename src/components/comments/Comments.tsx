@@ -4,7 +4,7 @@ import { mb } from 'styled-components-spacing';
 import { Heading } from '../heading/Heading';
 import { GlobalStateContext } from 'contexts/GlobalContextProvider';
 
-const CommentContainer = styled.div`
+const CommentsContainer = styled.div`
   ${mb(6)};
 `;
 
@@ -32,11 +32,11 @@ export const Comments = () => {
   }, [theme]);
 
   return (
-    <CommentContainer>
+    <CommentsContainer>
       <Heading type="serif" level="h3">
         Comments
       </Heading>
       <div id="utterance-comment-box" />
-    </CommentContainer>
+    </CommentsContainer>
   );
 };

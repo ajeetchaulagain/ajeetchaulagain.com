@@ -1,4 +1,5 @@
 import { css } from 'styled-components';
+import { m, mt, mb } from 'styled-components-spacing';
 
 export const MarkdownTableStyles = css`
   table {
@@ -8,7 +9,7 @@ export const MarkdownTableStyles = css`
   table tr {
     border-top: 1px solid #cccccc;
     background-color: white;
-    margin: 0;
+    ${m(0)};
     padding: 0;
   }
   table tr:nth-child(2n) {
@@ -18,7 +19,7 @@ export const MarkdownTableStyles = css`
     font-weight: bold;
     border: 1px solid #cccccc;
     text-align: left;
-    margin: 0;
+    ${m(0)};
     padding: 6px 13px;
     background-color: rgb(62, 62, 62);
     color: #fff;
@@ -26,15 +27,15 @@ export const MarkdownTableStyles = css`
   table tr td {
     border: 1px solid #cccccc;
     text-align: left;
-    margin: 0;
+    ${m(0)};
     padding: 6px 13px;
   }
   table tr th :first-child,
   table tr td :first-child {
-    margin-top: 0;
+    ${mt(0)};
   }
   table tr th :last-child,
   table tr td :last-child {
-    margin-bottom: 0;
+    ${mb(0)};
   }
 `;
