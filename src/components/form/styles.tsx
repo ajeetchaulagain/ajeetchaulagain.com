@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { p, mb, px, py, ml } from 'styled-components-spacing';
+import { mb, px, py, ml } from 'styled-components-spacing';
 
 export const Input = styled.input`
   border: 2px solid

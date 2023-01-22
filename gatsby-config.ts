@@ -16,7 +16,6 @@ const config: GatsbyConfig = {
     twitterUsername: '@ajeetsweb',
   },
   plugins: [
-    'gatsby-plugin-sass',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-sitemap',
     {
@@ -188,14 +187,6 @@ const config: GatsbyConfig = {
       },
     },
     `gatsby-plugin-offline`,
-
-    {
-      resolve: 'gatsby-plugin-mailchimp',
-      options: {
-        endpoint:
-          'https://ajeetchaulagain.us19.list-manage.com/subscribe/post?u=961c9fb48e36f45cf16236b29&amp;id=ce684f7325', // add your MC list endpoint here; see instructions below
-      },
-    },
   ],
 
   pathPrefix: '/gatsby-portfolio',
