@@ -27,6 +27,7 @@ export const colors = {
   darkGrey90: '#1f1f1ff8',
   oldSilver50: '#85858584',
   lightGrey: '#999',
+  darkGrey2: '#2c2c2c',
 };
 
 const darkThemeColor = {
@@ -45,6 +46,7 @@ const darkThemeColor = {
   lightBackground: colors.light,
   oldSilver50: colors.oldSilver50,
   lightGrey: colors.lightGrey,
+  cardBorder: colors.darkGrey2,
 };
 
 const lightThemeButtonColors = {
@@ -84,6 +86,7 @@ const lightThemeColor = {
   heroGradientStop2: colors.greenBlue90,
   lightBackground: colors.light,
   oldSilver50: colors.oldSilver50,
+  cardBorder: colors.light,
 };
 
 export const fontWeights = [0, 100, 200, 300, 400, 500, 600, 700, 800, 900];

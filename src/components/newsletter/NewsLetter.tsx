@@ -32,12 +32,9 @@ export const NewsLetter = (): JSX.Element => {
           accept: 'application/json',
         },
       });
-      console.log('response1', response);
-      setStatus('SUCCESS');
       setEmail('');
       const json = await response.json();
       if (json.status === 'success') {
-        console.log('response2', response);
         setStatus('SUCCESS');
         return;
       }

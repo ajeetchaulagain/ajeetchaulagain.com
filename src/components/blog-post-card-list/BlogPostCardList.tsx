@@ -11,7 +11,7 @@ type BlogPostCardListProps = {
 const Container = styled.div``;
 
 const BlogPostCardWrapper = styled.div`
-  ${mb(4)};
+  ${mb(5)};
 `;
 
 export const BlogPostCardList = ({ blogs }: BlogPostCardListProps) => {

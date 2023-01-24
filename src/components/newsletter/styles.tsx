@@ -27,8 +27,14 @@ export const StyledForm = styled.form`
   font-size: ${({ theme }) => theme.fontSizes.medium};
 `;
 
+export const SuccessContentWrapper = styled.div`
+  width: 76%;
+`;
+
 export const FormSection = styled.div`
   background-color: ${({ theme }) => theme.colors.tertiaryBackground};
+  border: 1px solid ${({ theme }) => theme.colors.cardBorder};
+  border-radius: ${({ theme }) => theme.borderRadius.base};
   ${px(5)}
   ${py(7)};
   display: flex;
@@ -42,13 +48,12 @@ export const FormSection = styled.div`
     ${StyledForm}{
       width:100%;
     }
+    ${SuccessContentWrapper}{
+      width:100%;
+    }
   `}
   ${breakpoint('xs', 'lg')`
     ${px(4)}
     ${py(5)};
   `}
-`;
-
-export const SuccessContentWrapper = styled.div`
-  width: 76%;
 `;
