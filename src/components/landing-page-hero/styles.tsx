@@ -99,3 +99,7 @@ export const AboutWrapper = styled.div`
     text-align: left;
   `};
 `;
+
+export const SocialMediaLinksWrapper = styled.div`
+  ${mt(6)}
+`;

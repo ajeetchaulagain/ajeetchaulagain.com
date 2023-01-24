@@ -10,6 +10,7 @@ import {
   StyledHeading,
   AboutImage,
   StyledParagraph,
+  SocialMediaLinksWrapper,
 } from './styles';
 
 export const LandingPageHero = (): JSX.Element => {
@@ -24,10 +25,12 @@ export const LandingPageHero = (): JSX.Element => {
             loading="eager"
             alt="author-profile-image"
           />
+
           <AboutWrapper>
             <StyledHeading type="sans-serif">
               <span style={{ fontWeight: 100 }}> Hello. I'm </span>Ajeet !
             </StyledHeading>
+
             <StyledParagraph>
               I am pragmatic software engineer, passionate and proficient
               building applications that are scalable, maintainable and well
@@ -41,7 +44,10 @@ export const LandingPageHero = (): JSX.Element => {
               color="secondary"
               size="large"
             />
-            <SocialMediaIcons />
+
+            <SocialMediaLinksWrapper>
+              <SocialMediaIcons />
+            </SocialMediaLinksWrapper>
           </AboutWrapper>
         </ContentWrapper>
       </GradientOverlay>

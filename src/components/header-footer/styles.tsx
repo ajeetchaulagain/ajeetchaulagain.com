@@ -1,5 +1,5 @@
 import styled, { DefaultTheme } from 'styled-components';
-import { ml, mb, px, py, pt, pb, mr } from 'styled-components-spacing';
+import { ml, mb, px, py, pt, pb, mr, mt } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
 import { Paragraph } from '../paragraph/Paragraph';
 import Link from '../link/Link';
@@ -137,7 +137,7 @@ export const Nav = styled.ul`
 
 export const ThemeToggleSwitchWrapper = styled.div`
   ${breakpoint('xs', 'xsm')`
-      ${mb(4)};
+     ${mb(4)};
   `};
 `;
 
@@ -157,8 +157,8 @@ export const FooterContentWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  ${pt(8)};
-  ${pb(6)};
+  ${pt(6)};
+  ${pb(4)};
   ${px(4)};
 
   ${breakpoint('xl')`
@@ -175,7 +175,11 @@ export const FooterContentWrapper = styled.div`
 `;
 
 export const SocialMediaLinksWrapper = styled.div`
-  ${mb(5)};
+  ${mb(4)};
+  ${mt(6)};
+  ${breakpoint('xs', 'lg')`
+      ${mt(5)};
+  `};
 `;
 
 export const StyledParagraph = styled(Paragraph)`
