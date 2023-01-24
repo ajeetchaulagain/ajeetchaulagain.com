@@ -5,6 +5,7 @@ import { Heading } from 'components/heading/Heading';
 
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.tertiaryBackground};
+  border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   border-radius: ${({ theme }) => theme.borderRadius.base};
   ${p(5)};
   height: 100%;
@@ -21,8 +22,8 @@ export const StyledHeading = styled(Heading)`
 `;
 
 export const Paragraph = styled.p`
-  font-size: ${(props) => props.theme.fontSizes.small};
-  font-family: ${(props) => props.theme.fonts.body};
+  font-size: ${({ theme }) => theme.fontSizes.small};
+  font-family: ${({ theme }) => theme.fonts.body};
   ${mb(5)};
   line-height: 1.5;
   color: ${({ theme }) =>

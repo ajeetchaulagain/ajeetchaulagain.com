@@ -9,14 +9,14 @@ export const StyledHeading = styled(Heading)`
 `;
 
 export const Container = styled.div`
-  background-color: ${(props) => props.theme.colors.tertiaryBackground};
+  background-color: ${({ theme }) => theme.colors.tertiaryBackground};
+  border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   border-radius: ${(props) => props.theme.borderRadius.base};
   ${p(5)};
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   &:hover {
-    border: none;
     box-shadow: 0 30px 60px rgba(46, 11, 68, 0.12);
     transition: box-shadow 0.5s ease, border 0.3s ease;
     ${StyledHeading} {
