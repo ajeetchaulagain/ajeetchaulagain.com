@@ -1,18 +1,20 @@
 import styled from 'styled-components';
-import { p, mb, mt } from 'styled-components-spacing';
+import { p, mb, mt, py, px } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
 import { StyledGatsbyImage } from '../gatsby-image/StyledGatsbyImage';
 import { Paragraph } from '../paragraph/Paragraph';
 
 export const StyledParagraph = styled(Paragraph)`
-  font-size: ${({ theme }) => theme.fontSizes.xmedium};
+  font-size: ${({ theme }) => theme.fontSizes.small};
+  line-height: ${({ theme }) => theme.lineHeights.bodyCondensed};
 `;
 
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  ${p(5)};
+  ${py(4)};
+  ${px(4)};
   ${mt(9)};
   ${mb(8)}
   background-color: ${({ theme }) => theme.colors.tertiaryBackground};

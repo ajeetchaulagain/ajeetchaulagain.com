@@ -24,7 +24,7 @@ export const StyledHeading = styled(Heading)`
 export const Paragraph = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.small};
   font-family: ${({ theme }) => theme.fonts.body};
-  ${mb(5)};
+  ${mb(3)};
   line-height: 1.5;
   color: ${({ theme }) =>
     theme.name === 'lightTheme'
