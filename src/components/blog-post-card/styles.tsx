@@ -29,13 +29,18 @@ export const Container = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  width: 12%;
   ${StyledGatsbyImage} {
+    max-width: 50px;
     border-radius: 100%;
   }
+  ${mr(5)};
+  ${mt(1)};
+  ${breakpoint('xs', 'lg')`
+      ${mr(4)};
+  `}
 `;
 export const TextContentWrapper = styled.div`
-  width: 82%;
+  width: 100%;
 `;
 
 export const DateAndTimeComponent = styled.span`
