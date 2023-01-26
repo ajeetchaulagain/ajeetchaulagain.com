@@ -125,7 +125,7 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
 
         <AboutJumbotron />
         <Comments />
-        <NewsLetter />
+        <NewsLetter headingProps={{ level: 'h3', size: 'large' }} />
       </ContentRenderer>
     </MasterLayout>
   );

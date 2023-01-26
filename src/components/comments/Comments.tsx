@@ -33,7 +33,7 @@ export const Comments = () => {
 
   return (
     <CommentsContainer>
-      <Heading type="serif" level="h3">
+      <Heading type="serif" level="h3" size="large">
         Comments
       </Heading>
       <div id="utterance-comment-box" />

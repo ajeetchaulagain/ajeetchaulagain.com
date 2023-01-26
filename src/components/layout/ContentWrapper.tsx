@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import styled from 'styled-components';
+import styled, { DefaultTheme } from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import { px, py } from 'styled-components-spacing';
 
@@ -20,8 +20,6 @@ const Wrapper = styled.section`
 
 export const Content = styled.div`
   background-color: ${({ theme }) => theme.colors.primaryBackground};
-  border: ${({ theme }) =>
-    `${theme.borders.thin} ${theme.colors.primaryBorder}`};
 
   width: 100%;
   ${px(4)};
@@ -35,6 +33,8 @@ export const Content = styled.div`
     margin-top: -6rem;
     margin-bottom:10rem;
     padding: 6rem 9rem;
+    border: ${({ theme }: { theme: DefaultTheme }) =>
+      `${theme.borders.thin} ${theme.colors.primaryBorder}`};
   `};
 
   ${breakpoint('xxl')`

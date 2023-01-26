@@ -5,7 +5,7 @@ import breakpoint from 'styled-components-breakpoint';
 import { Heading } from '../heading/Heading';
 
 export const StyledHeading = styled(Heading)`
-  ${mb(4)};
+  ${mb(2)};
 `;
 
 export const Container = styled.div`
@@ -29,13 +29,18 @@ export const Container = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  width: 12%;
   ${StyledGatsbyImage} {
+    max-width: 50px;
     border-radius: 100%;
   }
+  ${mr(5)};
+  ${mt(1)};
+  ${breakpoint('xs', 'lg')`
+      ${mr(4)};
+  `}
 `;
 export const TextContentWrapper = styled.div`
-  width: 82%;
+  width: 100%;
 `;
 
 export const DateAndTimeComponent = styled.span`
@@ -49,7 +54,7 @@ export const DateAndTimeComponent = styled.span`
 `;
 
 export const TagsWrapper = styled.div`
-  ${mt(4)};
+  ${mt(3)};
   span:not(:last-child) {
     ${mr(2)};
   }
