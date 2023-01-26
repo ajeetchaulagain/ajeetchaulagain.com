@@ -1,6 +1,5 @@
 import React from 'react';
-import { MasterLayout, HeroBlank, ContentRenderer } from 'components';
-import Link from 'components/link/Link';
+import { MasterLayout, HeroBlank, ContentRenderer, Link } from 'components';
 
 const DefaultNotFound = () => {
   return (
