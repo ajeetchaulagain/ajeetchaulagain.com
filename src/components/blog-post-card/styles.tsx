@@ -5,7 +5,7 @@ import breakpoint from 'styled-components-breakpoint';
 import { Heading } from '../heading/Heading';
 
 export const StyledHeading = styled(Heading)`
-  ${mb(4)};
+  ${mb(2)};
 `;
 
 export const Container = styled.div`
@@ -49,7 +49,7 @@ export const DateAndTimeComponent = styled.span`
 `;
 
 export const TagsWrapper = styled.div`
-  ${mt(4)};
+  ${mt(3)};
   span:not(:last-child) {
     ${mr(2)};
   }
