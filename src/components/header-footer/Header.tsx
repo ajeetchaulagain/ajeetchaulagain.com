@@ -16,7 +16,7 @@ import {
 import { navItems } from './navItems';
 import { ThemeToggleSwitch } from '../theme-toggle-switch/ThemeToggleSwitch';
 import { Link } from '../link/Link';
-import { GradientOverlay } from 'components/landing-page-hero/styles';
+import { GradientOverlay } from '../landing-page-hero/styles';
 import { Icon } from '../icon/Icon';
 
 export const Header = (): JSX.Element => {

@@ -1,4 +1,4 @@
-import { HeadingProps } from 'components/heading/Heading';
+import { HeadingProps } from '../heading/Heading';
 import { GatsbyImageProps } from 'gatsby-plugin-image';
 
 export type BlogPostCardProps = {

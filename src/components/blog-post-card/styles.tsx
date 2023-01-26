@@ -1,4 +1,4 @@
-import { StyledGatsbyImage } from 'components/gatsby-image/StyledGatsbyImage';
+import { StyledGatsbyImage } from '../gatsby-image/StyledGatsbyImage';
 import styled from 'styled-components';
 import { p, mb, mt, mr } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';

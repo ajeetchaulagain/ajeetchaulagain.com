@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAuthorImage } from 'hooks';
-import { StyledGatsbyImage } from 'components/gatsby-image/StyledGatsbyImage';
-import { ButtonLink } from 'components/button-link';
+import { StyledGatsbyImage } from '../gatsby-image/StyledGatsbyImage';
+import { ButtonLink } from '../button-link';
 import {
   Container,
   ImageWrapper,

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { p, my } from 'styled-components-spacing';
-import { Paragraph } from 'components/paragraph/Paragraph';
+import { Paragraph } from '../paragraph/Paragraph';
 import { mb, mr } from 'styled-components-spacing';
 
 export const Container = styled.div`

@@ -10,8 +10,8 @@ import {
   SuccessContentWrapper,
 } from './styles';
 
-import { Button, Input } from 'components/form/styles';
-import { HeadingProps } from 'components/heading/Heading';
+import { Button, Input } from '../form/styles';
+import { HeadingProps } from '../heading/Heading';
 
 type NewsLetterProps = {
   headingProps?: HeadingProps;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAuthorImage } from '../../hooks/useAuthorImage';
 import { SocialMediaIcons } from '../social-media-icons/SocialMediaIcons';
-import { ButtonLink } from 'components/button-link';
+import { ButtonLink } from '../button-link';
 import {
   Container,
   GradientOverlay,

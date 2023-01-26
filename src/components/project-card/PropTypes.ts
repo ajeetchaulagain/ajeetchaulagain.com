@@ -1,5 +1,5 @@
-import { ButtonProps } from 'components/button-link/PropTypes';
-import { HeadingProps } from 'components/heading/Heading';
+import { ButtonProps } from '../button-link/PropTypes';
+import { HeadingProps } from '../heading/Heading';
 
 export type ProjectCardProps = {
   title: string;
