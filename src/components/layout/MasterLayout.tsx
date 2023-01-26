@@ -12,9 +12,9 @@ type MasterLayoutProps = {
 
 const Container = styled.div`
   ${Content} {
-    ${breakpoint('xs', 'lg')`
+    ${breakpoint('xs', 'xl')`
       border-bottom: 1px solid ${({ theme }: { theme: DefaultTheme }) =>
-        theme.colors.quaternaryBackground};
+        theme.colors.cardBorder};
   `};
   }
 `;
