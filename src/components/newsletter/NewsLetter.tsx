@@ -14,7 +14,7 @@ import { Button, Input } from 'components/form/styles';
 import { HeadingProps } from 'components/heading/Heading';
 
 type NewsLetterProps = {
-  headingProps: HeadingProps;
+  headingProps?: HeadingProps;
 };
 
 export const NewsLetter = ({

@@ -10,7 +10,7 @@ import {
   HeroBlank,
 } from 'components';
 import { useAuthorImage, useAboutPageDetails } from 'hooks';
-import { mb } from 'styled-components-spacing';
+import { mb, mt } from 'styled-components-spacing';
 
 const ImageWrapper = styled.div`
   width: 150px;
@@ -20,6 +20,10 @@ const ImageWrapper = styled.div`
       border-radius: 100%;
     }
   }
+`;
+
+const NewsletterWrapper = styled.div`
+  ${mt(8)};
 `;
 
 const AboutPage = () => {
@@ -38,7 +42,9 @@ const AboutPage = () => {
           <StyledGatsbyImage image={gatsbyImageData} alt="about-image" />
         </ImageWrapper>
         <MarkdownRenderer>{body}</MarkdownRenderer>
-        <NewsLetter />
+        <NewsletterWrapper>
+          <NewsLetter headingProps={{ level: 'h3', size: 'large' }} />
+        </NewsletterWrapper>
       </ContentRenderer>
     </MasterLayout>
   );
