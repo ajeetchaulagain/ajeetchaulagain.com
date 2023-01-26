@@ -21,13 +21,20 @@ export const PostHeaderContainer = styled.div`
 export const PostHeaderLeftColumn = styled.div`
   display: flex;
   flex-direction: column;
-  width: 80%;
-  ${breakpoint('xs', 'md')`
-    width:100%;
-  `}
+  width: 100%;
 `;
+
 export const PostHeaderRightColumn = styled.div`
-  width: 15%;
+  ${StyledGatsbyImage} {
+    max-width: 50px;
+    border-radius: 100%;
+  }
+  ${mt(2)};
+  ${ml(4)};
+  ${breakpoint('xs', 'md')`
+    ${ml(0)};
+    ${mt(0)};
+  `}
 `;
 
 export const StyledParagraph = styled(Paragraph)`
