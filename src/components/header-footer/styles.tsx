@@ -2,10 +2,10 @@ import styled, { DefaultTheme } from 'styled-components';
 import { ml, mb, px, py, pt, pb, mr, mt } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
 import { Paragraph } from '../paragraph/Paragraph';
-import Link from '../link/Link';
+import { Link } from '../link/Link';
 
 export const HeaderWrapper = styled.header`
-  font-family: ${(props) => props.theme.fonts.secondaryHeading};
+  font-family: ${({ theme }) => theme.fonts.secondaryHeading};
   width: 100%;
   background: url('pattern-3.jpg') repeat fixed center;
   background-size: 1000px;
@@ -53,7 +53,7 @@ export const LogoWrapper = styled.div`
   }
   span {
     font-size: ${({ theme }) => theme.fontSizes.small};
-    font-weight: ${(props) => props.theme.fontWeights[3]};
+    font-weight: ${({ theme }) => theme.fontWeights[3]};
     color: ${({ theme }) =>
       theme.name === 'lightTheme'
         ? theme.colors.secondaryText
@@ -68,7 +68,7 @@ export const LogoLink = styled(Link)`
   display: flex;
   align-items: center;
   &:hover {
-    color: ${(props) => props.theme.colors.lightGreen};
+    color: ${({ theme }) => theme.colors.lightGreen};
   }
 `;
 
@@ -80,7 +80,7 @@ export const NavMenuWrapper = styled.nav`
 
 export const NavItem = styled.li`
   font-size: ${({ theme }) => theme.fontSizes.small};
-  font-weight: ${(props) => props.theme.fontWeights[4]};
+  font-weight: ${({ theme }) => theme.fontWeights[4]};
   text-transform: uppercase;
   color: ${({ theme }) =>
     theme.name === 'lightTheme'
@@ -144,8 +144,8 @@ export const ThemeToggleSwitchWrapper = styled.div`
 // Footer and its component styles
 export const FooterContainer = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.medium};
-  font-family: ${(props) => props.theme.fonts.secondaryHeading};
-  font-weight: ${(props) => props.theme.fontWeights[5]};
+  font-family: ${({ theme }) => theme.fonts.secondaryHeading};
+  font-weight: ${({ theme }) => theme.fontWeights[5]};
   width: 100%;
   background: url('../pattern-3.jpg') repeat fixed center;
   background-size: 1000px;

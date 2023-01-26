@@ -1,11 +1,11 @@
+import React, { useContext } from 'react';
+import { FaMoon, FaSun } from 'react-icons/fa';
 import {
   GlobalDispatchContext,
   GlobalDispatchContextType,
   GlobalStateContext,
 } from 'contexts/GlobalContextProvider';
-import React, { useContext } from 'react';
 import { Container, Input, Label, Ball } from './styles';
-import { FaMoon, FaSun } from 'react-icons/fa';
 
 export const ThemeToggleSwitch = () => {
   const themeToggler = useContext(

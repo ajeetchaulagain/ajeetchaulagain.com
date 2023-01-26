@@ -3,3 +3,4 @@ export * from './useBlogPostList';
 export * from './useProjectList';
 export * from './useAboutPageDetails';
 export * from './useSiteMetaData';
+export * from './useContactPageDetails';

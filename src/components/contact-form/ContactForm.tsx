@@ -1,30 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
-import {
-  Button as FormButton,
-  Input,
-  TextArea,
-  Label,
-} from 'components/form/styles';
-import { mb } from 'styled-components-spacing';
-
-const Container = styled.div`
-  ${mb(6)}
-`;
-
-const Button = styled(FormButton)`
-  width: 90px;
-`;
-
-const StyledForm = styled.form`
-  display: flex;
-  flex-direction: column;
-`;
-
-const FormRow = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+import { Input, TextArea, Label } from '../form/styles';
+import { Container, StyledForm, FormRow, Button } from './styles';
 
 export const ContactForm = () => {
   return (

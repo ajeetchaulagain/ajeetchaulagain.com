@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import { p, ml, mb } from 'styled-components-spacing';
-import { Heading } from 'components/heading/Heading';
+import { Heading } from '../heading/Heading';
 
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.tertiaryBackground};

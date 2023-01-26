@@ -19,3 +19,4 @@ export * from './social-media-icons/styles';
 export * from './hero-blank/HeroBlank';
 export * from './tag/Tag';
 export * from './comments/Comments';
+export * from './link/Link';

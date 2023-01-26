@@ -8,7 +8,7 @@ import {
   getStylesForButtonSize,
   getStylesForButtonColorAndVariant,
 } from './styles';
-import Link from '../link/Link';
+import { Link } from '../link/Link';
 
 export const BaseButtonLink = ({ text, iconName, ...rest }: ButtonProps) => {
   return (
