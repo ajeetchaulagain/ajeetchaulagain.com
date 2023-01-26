@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components';
 import { mb, px, pt, pb, mt } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
-import { Heading } from 'components/heading/Heading';
-import { Paragraph } from 'components/paragraph/Paragraph';
-import { StyledGatsbyImage } from 'components/gatsby-image/StyledGatsbyImage';
+import { Heading } from '../heading/Heading';
+import { Paragraph } from '../paragraph/Paragraph';
+import { StyledGatsbyImage } from '../gatsby-image/StyledGatsbyImage';
 
 export const Container = styled.section`
   width: 100%;

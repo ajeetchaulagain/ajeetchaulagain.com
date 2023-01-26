@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button as FormButton } from 'components/form/styles';
+import { Button as FormButton } from '../form/styles';
 import { mb } from 'styled-components-spacing';
 
 export const Container = styled.div`
