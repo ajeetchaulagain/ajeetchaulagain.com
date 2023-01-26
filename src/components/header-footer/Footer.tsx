@@ -12,7 +12,7 @@ import {
   SocialMediaLinksWrapper,
 } from './styles';
 import { SocialMediaIcons } from '../social-media-icons/SocialMediaIcons';
-import Link from '../link/Link';
+import { Link } from '../link/Link';
 
 export const Footer = () => {
   const data = useStaticQuery(graphql`

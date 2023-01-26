@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { mb, mt } from 'styled-components-spacing';
 import {
   MasterLayout,
   NewsLetter,
@@ -10,7 +11,6 @@ import {
   HeroBlank,
 } from 'components';
 import { useAuthorImage, useAboutPageDetails } from 'hooks';
-import { mb, mt } from 'styled-components-spacing';
 
 const ImageWrapper = styled.div`
   width: 150px;

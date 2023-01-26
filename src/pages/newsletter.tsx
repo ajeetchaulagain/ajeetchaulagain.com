@@ -1,7 +1,12 @@
 import React from 'react';
-import { ContentRenderer, MasterLayout, NewsLetter, SEO } from 'components';
-import { HeroBlank } from 'components/hero-blank/HeroBlank';
-import Link from 'components/link/Link';
+import {
+  ContentRenderer,
+  MasterLayout,
+  NewsLetter,
+  SEO,
+  HeroBlank,
+  Link,
+} from 'components';
 
 const NewsLetterPage = () => {
   return (

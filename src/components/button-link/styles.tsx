@@ -8,19 +8,19 @@ export const getStylesForButtonSize = (size: string) => {
       return css`
         ${px(2)}
         ${py(1)}
-        font-size:${(props) => props.theme.fontSizes.xsmall};
+        font-size:${({ theme }) => theme.fontSizes.xsmall};
       `;
     case 'medium':
       return css`
         ${px(4)}
         ${py(2)}
-        font-size:${(props) => props.theme.fontSizes.small};
+        font-size:${({ theme }) => theme.fontSizes.small};
       `;
     case 'large':
       return css`
         ${px(4)}
         ${py(3)};
-        font-size: ${(props) => props.theme.fontSizes.medium};
+        font-size: ${({ theme }) => theme.fontSizes.medium};
       `;
   }
 };
@@ -33,8 +33,8 @@ export const BaseButtonStyles = css`
     filter: contrast(120%);
   }
 
-  font-family: ${(props) => props.theme.fonts.body};
-  font-weight: ${(props) => props.theme.fontWeights[6]};
+  font-family: ${({ theme }) => theme.fonts.body};
+  font-weight: ${({ theme }) => theme.fontWeights[6]};
 `;
 
 export const getStylesForButtonColorAndVariant = (
@@ -47,7 +47,7 @@ export const getStylesForButtonColorAndVariant = (
         background-color: ${({ theme }) =>
           theme.buttonColors[color].background};
         color: ${({ theme }) => theme.buttonColors[color].text};
-        border-radius: ${(props) => props.theme.borderRadius.base || '10px'};
+        border-radius: ${({ theme }) => theme.borderRadius.base || '10px'};
       `;
 
     case 'text':
@@ -68,7 +68,7 @@ export const getStylesForButtonColorAndVariant = (
         border: ${({ theme }) =>
           `${theme.borders.thin} ${theme.buttonColors[color].background}`};
         color: ${({ theme }) => theme.buttonColors[color].background};
-        border-radius: ${(props) => props.theme.borderRadius.base || '10px'};
+        border-radius: ${({ theme }) => theme.borderRadius.base || '10px'};
       `;
   }
 };

@@ -1,8 +1,7 @@
+import React from 'react';
 import { StyledGatsbyImage } from '../gatsby-image/StyledGatsbyImage';
 import { Tag } from '../tag/Tag';
-import Link from '../link/Link';
-
-import React from 'react';
+import { Link } from '../link/Link';
 import { BlogPostCardProps } from './PropTypes';
 import {
   Container,

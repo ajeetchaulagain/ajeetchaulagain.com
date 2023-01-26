@@ -1,7 +1,7 @@
-import Link from '../link/Link';
 import styled from 'styled-components';
 import { ml } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
+import { Link } from '../link/Link';
 
 export const ListItem = styled.li``;
 

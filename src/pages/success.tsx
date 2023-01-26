@@ -1,7 +1,11 @@
 import React from 'react';
-import { MasterLayout, SEO, ContentRenderer } from 'components';
-import { HeroBlank } from 'components/hero-blank/HeroBlank';
-import Link from 'components/link/Link';
+import {
+  MasterLayout,
+  SEO,
+  ContentRenderer,
+  HeroBlank,
+  Link,
+} from 'components';
 
 const FormSubmissionSuccess = () => {
   return (

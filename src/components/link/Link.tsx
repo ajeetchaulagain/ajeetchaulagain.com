@@ -7,7 +7,7 @@ const isExternalLink = (path: string) =>
   path?.startsWith(`https://`) ||
   path?.startsWith(`//`);
 
-export default function Link<TState>({
+export function Link<TState>({
   children,
   ...props
 }: React.PropsWithoutRef<GatsbyLinkProps<TState>>) {

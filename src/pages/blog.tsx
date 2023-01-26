@@ -8,10 +8,10 @@ import {
   BlogPostCardList,
   ContentRenderer,
   Heading,
+  HeroBlank,
 } from 'components';
 import { useBlogPostList } from 'hooks';
 import { BlogPostCardDecorator } from 'markdown-decorators';
-import { HeroBlank } from 'components/hero-blank/HeroBlank';
 
 const StyledHeading = styled(Heading)`
   ${mb(4)};

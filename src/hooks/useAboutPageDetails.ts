@@ -8,8 +8,12 @@ type AboutPageDetails = {
   body: string;
 };
 
+type QueryTypes = {
+  mdx: AboutPageDetails;
+};
+
 export const useAboutPageDetails = () => {
-  const data = useStaticQuery<{ mdx: AboutPageDetails }>(graphql`
+  const data = useStaticQuery<QueryTypes>(graphql`
     query {
       mdx(fields: { slug: { eq: "about" } }) {
         frontmatter {

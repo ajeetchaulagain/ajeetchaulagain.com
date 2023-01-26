@@ -11,7 +11,7 @@ export const StyledHeading = styled(Heading)`
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.tertiaryBackground};
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
-  border-radius: ${(props) => props.theme.borderRadius.base};
+  border-radius: ${({ theme }) => theme.borderRadius.base};
   ${p(5)};
   display: flex;
   align-items: flex-start;

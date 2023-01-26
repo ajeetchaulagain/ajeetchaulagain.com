@@ -7,10 +7,10 @@ import {
   SEO,
   ContentRenderer,
   Heading,
+  HeroBlank,
 } from 'components';
 import { useProjectList } from 'hooks';
 import { ProjectCardDecorator } from 'markdown-decorators';
-import { HeroBlank } from 'components/hero-blank/HeroBlank';
 
 const StyledHeading = styled(Heading)`
   ${mb(4)};

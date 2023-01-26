@@ -1,4 +1,6 @@
 import React from 'react';
+import styled from 'styled-components';
+import { mt } from 'styled-components-spacing';
 import {
   MasterLayout,
   ContactForm,
@@ -8,11 +10,9 @@ import {
   ContentRenderer,
   SocialMediaList,
   Heading,
+  HeroBlank,
 } from 'components';
-import { useContactPageDetails } from 'hooks/useContactPageDetails';
-import { HeroBlank } from 'components/hero-blank/HeroBlank';
-import styled from 'styled-components';
-import { mt } from 'styled-components-spacing';
+import { useContactPageDetails } from 'hooks';
 
 const SocialMediaContainer = styled.div`
   && {

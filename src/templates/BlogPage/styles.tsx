@@ -1,8 +1,8 @@
 import { Paragraph, StyledGatsbyImage } from 'components';
 import styled, { css } from 'styled-components';
 import { py, pr, pl, mt, mr, ml, mb } from 'styled-components-spacing';
-import Link from 'components/link/Link';
 import breakpoint from 'styled-components-breakpoint';
+import { Link } from 'components/link/Link';
 
 export const PostHeaderContainer = styled.div`
   display: flex;
@@ -51,8 +51,8 @@ export const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
   color: ${({ theme }) => theme.buttonColors['primary'].background};
-  font-family: ${(props) => props.theme.fonts.body};
-  font-weight: ${(props) => props.theme.fontWeights[6]};
+  font-family: ${({ theme }) => theme.fonts.body};
+  font-weight: ${({ theme }) => theme.fontWeights[6]};
   font-size: ${({ theme }) => theme.fontSizes.small};
   :hover {
     text-decoration: none;
