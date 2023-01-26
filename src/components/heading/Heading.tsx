@@ -64,6 +64,11 @@ const Heading3 = styled.h3<{ size?: HeadingFontSize; type?: FontType }>`
           font-size: ${theme.headingFontSizes.small};
         `;
       }
+      if (['xlarge', 'large'].includes(size)) {
+        return css`
+          font-size: ${theme.headingFontSizes.medium};
+        `;
+      }
     }}
   `};
 `;
