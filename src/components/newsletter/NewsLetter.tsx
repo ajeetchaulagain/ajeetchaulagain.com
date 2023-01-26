@@ -11,8 +11,19 @@ import {
 } from './styles';
 
 import { Button, Input } from 'components/form/styles';
+import { HeadingProps } from 'components/heading/Heading';
 
-export const NewsLetter = (): JSX.Element => {
+type NewsLetterProps = {
+  headingProps: HeadingProps;
+};
+
+export const NewsLetter = ({
+  headingProps = {
+    type: 'serif',
+    level: 'h2',
+    size: 'xlarge',
+  },
+}: NewsLetterProps): JSX.Element => {
   const [status, setStatus] = useState<string>();
   const [email, setEmail] = useState<string>('');
 
@@ -54,7 +65,7 @@ export const NewsLetter = (): JSX.Element => {
 
   return (
     <Container>
-      <StyledHeading level="h2">Newsletter</StyledHeading>
+      <StyledHeading {...headingProps}>Newsletter</StyledHeading>
       <Paragraph>
         Signup my newsletter to get update when any new stuffs comes out!
       </Paragraph>
