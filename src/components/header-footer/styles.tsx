@@ -6,9 +6,6 @@ import { Link } from '../link/Link';
 
 export const HeaderWrapper = styled.header`
   font-family: ${({ theme }) => theme.fonts.secondaryHeading};
-  width: 100%;
-  background: url('pattern-3.jpg') repeat fixed center;
-  background-size: 1000px;
 `;
 
 export const HeaderContent = styled.div`
@@ -143,10 +140,7 @@ export const ThemeToggleSwitchWrapper = styled.div`
 // Footer and its component styles
 export const FooterContainer = styled.div`
   font-family: ${({ theme }) => theme.fonts.secondaryHeading};
-  font-weight: ${({ theme }) => theme.fontWeights[5]};
   width: 100%;
-  background: url('../pattern-3.jpg') repeat fixed center;
-  background-size: 1000px;
 `;
 
 export const FooterContentWrapper = styled.div`
@@ -186,7 +180,7 @@ export const StyledParagraph = styled(Paragraph)`
       theme.name === 'lightTheme'
         ? theme.colors.secondaryText
         : theme.colors.primaryText};
-    font-size: ${({ theme }) => theme.fontSizes.small};
+    font-size: ${({ theme }) => theme.fontSizes.xsmall};
     ${mb(1)};
   }
   text-align: center;

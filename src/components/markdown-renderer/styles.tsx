@@ -1,13 +1,14 @@
-import styled from 'styled-components';
+import styled, { DefaultTheme } from 'styled-components';
 import { mb, mt, ml } from 'styled-components-spacing';
 import { Heading } from '../heading/Heading';
 import { Link } from '../link/Link';
+import breakpoint from 'styled-components-breakpoint';
 
 export const AnchorLink = styled(Link)`
   font-family: ${({ theme }) => theme.fonts.body};
   color: ${({ theme }) => theme.colors.brandPrimary};
   text-decoration: underline;
-  font-weight: ${({ theme }) => theme.fontWeights[6]};
+  font-weight: ${({ theme }) => theme.fontWeights[5]};
   :hover {
     text-decoration: none;
   }
@@ -19,6 +20,12 @@ export const ListItem = styled.li`
   line-height: ${({ theme }) => theme.lineHeights.body};
   color: ${({ theme }) => theme.colors.primaryText};
   ${ml(5)};
+  ${breakpoint('xs', 'lg')`
+      font-size: ${({ theme }: { theme: DefaultTheme }) =>
+        theme.fontSizes.small};
+      line-height: ${({ theme }: { theme: DefaultTheme }) =>
+        theme.lineHeights.bodyMediumCondensed};
+  `};
 `;
 
 export const UnorderedList = styled.ul`

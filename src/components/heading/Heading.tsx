@@ -16,7 +16,7 @@ const Heading1 = styled.h1<{ size?: HeadingFontSize; type?: FontType }>`
   font-size: ${({ size, theme: { headingFontSizes } }) =>
     size ? headingFontSizes[size] : headingFontSizes.xlarge};
 
-  font-weight: ${({ theme }) => theme.fontWeights[7]};
+  font-weight: ${({ theme }) => theme.fontWeights[9]};
 
   ${breakpoint('xs', 'lg')`
     ${({ size, theme }: { size: HeadingFontSize; theme: DefaultTheme }) => {
@@ -47,6 +47,11 @@ const Heading2 = styled.h2<{ size?: HeadingFontSize; type?: FontType }>`
           font-size: ${theme.headingFontSizes.medium};
         `;
       }
+      if (size === 'small') {
+        return css`
+          font-size: ${theme.headingFontSizes.xsmall};
+        `;
+      }
     }}
   `};
 `;
@@ -69,6 +74,11 @@ const Heading3 = styled.h3<{ size?: HeadingFontSize; type?: FontType }>`
           font-size: ${theme.headingFontSizes.medium};
         `;
       }
+      if (size === 'small') {
+        return css`
+          font-size: ${theme.headingFontSizes.xsmall};
+        `;
+      }
     }}
   `};
 `;
@@ -77,7 +87,7 @@ const Heading4 = styled.h3<{ size?: HeadingFontSize; type?: FontType }>`
   font-size: ${({ size, theme: { headingFontSizes } }) =>
     size ? headingFontSizes[size] : headingFontSizes.medium};
 
-  font-weight: ${({ theme }) => theme.fontWeights[5]};
+  font-weight: ${({ theme }) => theme.fontWeights[6]};
 `;
 
 export const Heading = ({ level, children, ...rest }: HeadingProps) => {
