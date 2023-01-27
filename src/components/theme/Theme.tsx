@@ -101,6 +101,7 @@ const fontSizes = {
 };
 
 const headingFontSizes = {
+  xsmall: '1.15rem',
   small: '1.2rem',
   medium: '1.5rem',
   large: '1.8rem',
@@ -144,6 +145,7 @@ const themeCommonProperties = {
   headingFontSizes: headingFontSizes,
   lineHeights: {
     body: 1.8,
+    bodyMediumCondensed: 1.7,
     bodyCondensed: 1.5,
     heading: 1.4,
   },
