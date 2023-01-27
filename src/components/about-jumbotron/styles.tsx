@@ -6,14 +6,14 @@ import { Paragraph } from '../paragraph/Paragraph';
 
 export const StyledParagraph = styled(Paragraph)`
   font-size: ${({ theme }) => theme.fontSizes.small};
-  line-height: ${({ theme }) => theme.lineHeights.bodyCondensed};
+  line-height: ${({ theme }) => theme.lineHeights.body};
 `;
 
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  ${py(4)};
+  ${py(5)};
   ${px(4)};
   ${mt(9)};
   ${mb(8)}

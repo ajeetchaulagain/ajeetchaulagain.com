@@ -92,10 +92,10 @@ const lightThemeColor = {
 export const fontWeights = [0, 100, 200, 300, 400, 500, 600, 700, 800, 900];
 
 const fontSizes = {
-  xsmall: '0.8rem',
-  small: '1.0rem',
-  xmedium: '1.125rem',
-  medium: '1.2rem',
+  xsmall: '0.9rem',
+  small: '0.95rem',
+  xmedium: '1.05rem',
+  medium: '1.15rem',
   large: '1.3rem',
   xlarge: '1.4rem',
 };
@@ -134,11 +134,10 @@ const themeCommonProperties = {
     12: '7rem',
   },
   fonts: {
-    body: `Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI,
-      Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    body: `Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
       sans-serif`,
     primaryHeading: `'Domine', serif`,
-    secondaryHeading: `'Roboto', sans-serif`,
+    secondaryHeading: `'Inter', sans-serif`,
   },
   fontWeights: fontWeights,
   fontSizes: fontSizes,

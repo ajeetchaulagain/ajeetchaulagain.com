@@ -34,7 +34,7 @@ export const BaseButtonStyles = css`
   }
 
   font-family: ${({ theme }) => theme.fonts.body};
-  font-weight: ${({ theme }) => theme.fontWeights[6]};
+  font-weight: ${({ theme }) => theme.fontWeights[5]};
 `;
 
 export const getStylesForButtonColorAndVariant = (

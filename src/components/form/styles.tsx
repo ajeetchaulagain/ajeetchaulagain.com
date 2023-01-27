@@ -26,8 +26,9 @@ export const Input = styled.input`
 export const Label = styled.label`
   color: ${({ theme }) => theme.colors.primaryText};
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: ${({ theme }) => theme.fontSizes.medium};
+  font-size: ${({ theme }) => theme.fontSizes.xmedium};
   ${mb(3)};
+  font-weight: ${({ theme }) => theme.fontWeights[5]};
 `;
 
 export const TextArea = styled.textarea`
@@ -64,7 +65,7 @@ export const Button = styled.button`
   border: none !important;
   ${px(4)}
   ${py(3)}
-  font-size: ${({ theme }) => theme.fontSizes.medium};
+  font-size: ${({ theme }) => theme.fontSizes.xmedium};
   color: ${({ theme }) => theme.buttonColors.primary.text};
   background-color: ${({ theme }) => theme.buttonColors.primary.background};
   font-family: ${({ theme }) => theme.fonts.body};

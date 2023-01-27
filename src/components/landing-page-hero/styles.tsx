@@ -66,7 +66,7 @@ export const StyledHeading = styled(Heading)`
         ? theme.colors.secondaryText
         : theme.colors.primaryText};
     ${breakpoint('lg')`
-      font-size: 3.5rem;
+      font-size: 3rem;
     `};
   }
   ${mb(2)};

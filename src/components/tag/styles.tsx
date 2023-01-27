@@ -27,19 +27,19 @@ export const Container = styled.span<{ type?: TagType; size?: TagSize }>`
       return css`
         ${px(2)};
         ${py(1)};
-        font-size: ${theme.fontSizes.small};
+        font-size: ${theme.fontSizes.xsmall};
       `;
     }
     if (size === 'small') {
       return css`
         ${px(2)};
         ${py(1)};
-        font-size: ${theme.fontSizes.small};
+        font-size: ${theme.fontSizes.xsmall};
       `;
     }
     return css`
       ${px(2)};
-      font-size: ${theme.fontSizes.xsmall};
+      font-size: ${theme.fontSizes.small};
     `;
   }}
 `;
