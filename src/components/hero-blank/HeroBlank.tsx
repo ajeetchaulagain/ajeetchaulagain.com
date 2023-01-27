@@ -6,8 +6,6 @@ import { py } from 'styled-components-spacing';
 
 export const Container = styled.div`
   width: 100%;
-  background: url('../pattern-3.jpg') repeat fixed center;
-  background-size: 1000px;
 `;
 
 const ContentWrapper = styled.div`

@@ -6,9 +6,6 @@ import { Link } from '../link/Link';
 
 export const HeaderWrapper = styled.header`
   font-family: ${({ theme }) => theme.fonts.secondaryHeading};
-  width: 100%;
-  background: url('pattern-3.jpg') repeat fixed center;
-  background-size: 1000px;
 `;
 
 export const HeaderContent = styled.div`
@@ -144,8 +141,6 @@ export const ThemeToggleSwitchWrapper = styled.div`
 export const FooterContainer = styled.div`
   font-family: ${({ theme }) => theme.fonts.secondaryHeading};
   width: 100%;
-  background: url('../pattern-3.jpg') repeat fixed center;
-  background-size: 1000px;
 `;
 
 export const FooterContentWrapper = styled.div`
