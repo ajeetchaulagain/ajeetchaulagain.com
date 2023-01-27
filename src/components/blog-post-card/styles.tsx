@@ -45,7 +45,7 @@ export const TextContentWrapper = styled.div`
 
 export const DateAndTimeComponent = styled.span`
   text-transform: uppercase;
-  font-size: ${({ theme }) => theme.fontSizes.xmall};
+  font-size: ${({ theme }) => theme.fontSizes.xsmall};
   color: ${({ theme }) => theme.colors.brandPrimary};
   font-family: ${({ theme }) => theme.fonts.body};
   font-weight: ${({ theme }) => theme.fontWeights[5]};

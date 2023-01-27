@@ -79,9 +79,8 @@ export const NavMenuWrapper = styled.nav`
 `;
 
 export const NavItem = styled.li`
-  font-size: ${({ theme }) => theme.fontSizes.small};
+  font-size: ${({ theme }) => theme.fontSizes.xmedium};
   font-weight: ${({ theme }) => theme.fontWeights[4]};
-  text-transform: uppercase;
   color: ${({ theme }) =>
     theme.name === 'lightTheme'
       ? theme.colors.secondaryText
@@ -143,7 +142,6 @@ export const ThemeToggleSwitchWrapper = styled.div`
 
 // Footer and its component styles
 export const FooterContainer = styled.div`
-  font-size: ${({ theme }) => theme.fontSizes.medium};
   font-family: ${({ theme }) => theme.fonts.secondaryHeading};
   font-weight: ${({ theme }) => theme.fontWeights[5]};
   width: 100%;
