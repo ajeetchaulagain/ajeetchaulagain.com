@@ -7,7 +7,7 @@ import { Link } from 'components/link/Link';
 export const PostHeaderContainer = styled.div`
   display: flex;
   align-items: flex-start;
-  ${mb(4)};
+  ${mb(5)};
 
   ${breakpoint('xs', 'md')`
     flex-direction:column-reverse;

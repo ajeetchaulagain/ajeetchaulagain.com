@@ -48,7 +48,7 @@ export const DateAndTimeComponent = styled.span`
   font-size: ${({ theme }) => theme.fontSizes.xsmall};
   color: ${({ theme }) => theme.colors.brandPrimary};
   font-family: ${({ theme }) => theme.fonts.body};
-  font-weight: ${({ theme }) => theme.fontWeights[5]};
+  font-weight: ${({ theme }) => theme.fontWeights[4]};
   display: inline-block;
   ${mb(0)};
 `;
