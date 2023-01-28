@@ -181,8 +181,8 @@ export const StyledParagraph = styled(Paragraph)`
   && {
     color: ${({ theme }) =>
       theme.name === 'lightTheme'
-        ? theme.colors.secondaryText
-        : theme.colors.primaryText};
+        ? theme.colors.blueBell
+        : theme.colors.lightGrey};
     font-size: ${({ theme }) => theme.fontSizes.small};
     ${mb(1)};
   }

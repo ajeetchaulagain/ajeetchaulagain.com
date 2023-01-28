@@ -28,6 +28,7 @@ export const colors = {
   oldSilver50: '#85858584',
   lightGrey: '#999',
   darkGrey2: '#2c2c2c',
+  blueBell: '#bbb9e3',
 };
 
 const darkThemeColor = {
@@ -86,6 +87,7 @@ const lightThemeColor = {
   heroGradientStop2: colors.greenBlue90,
   lightBackground: colors.light,
   oldSilver50: colors.oldSilver50,
+  blueBell: colors.blueBell,
   cardBorder: colors.light,
 };
 
