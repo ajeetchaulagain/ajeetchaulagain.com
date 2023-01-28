@@ -8,7 +8,6 @@ export const PostHeaderContainer = styled.div`
   display: flex;
   align-items: flex-start;
   ${mb(6)};
-  ${mb(6)};
 
   ${breakpoint('xs', 'md')`
     flex-direction:column-reverse;
@@ -54,7 +53,9 @@ export const StyledLink = styled(Link)`
   font-family: ${({ theme }) => theme.fonts.body};
   font-weight: ${({ theme }) => theme.fontWeights[6]};
   font-size: ${({ theme }) => theme.fontSizes.small};
-  :hover {
+  line-height: ${({ theme }) => theme.lineHeights.extraCondensed};
+
+  &:hover {
     text-decoration: none;
   }
   svg {

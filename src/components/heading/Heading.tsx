@@ -55,7 +55,7 @@ const Heading3 = styled.h3<{ size?: HeadingFontSize; type?: FontType }>`
   font-size: ${({ size, theme: { headingFontSizes } }) =>
     size ? headingFontSizes[size] : headingFontSizes.large};
 
-  font-weight: ${({ theme }) => theme.fontWeights[6]};
+  font-weight: ${({ theme }) => theme.fontWeights[5]};
 
   ${breakpoint('xs', 'lg')`
     ${({ size, theme }: { size: HeadingFontSize; theme: DefaultTheme }) => {
@@ -102,7 +102,7 @@ export const Heading = ({ level, children, ...rest }: HeadingProps) => {
   const StyledHeadingComponent = styled(HeadingComponent)`
     font-family: ${({ type, theme: { fonts } }) =>
       type === 'sans-serif' ? fonts.secondaryHeading : fonts.primaryHeading};
-    line-height: ${({ theme }) => theme.lineHeights.heading};
+    line-height: ${({ theme }) => theme.lineHeights.extraCondensed};
     color: ${({ theme }) => theme.colors.primaryText};
   `;
 

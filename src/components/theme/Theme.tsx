@@ -144,9 +144,9 @@ const themeCommonProperties = {
   fontSizes: fontSizes,
   headingFontSizes: headingFontSizes,
   lineHeights: {
-    body: 1.8,
-    bodyCondensed: 1.5,
-    heading: 1.4,
+    regular: 1.8,
+    condensed: 1.5,
+    extraCondensed: 1.4,
   },
   borders: {
     none: '0',

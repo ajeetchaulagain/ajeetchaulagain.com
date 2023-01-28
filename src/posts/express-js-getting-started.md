@@ -11,7 +11,7 @@ import { InfoCallToAction } from "../components/info-call-to-action/InfoCallToAc
 
 This tutorial is prepared to make you familiar with [Express.js](https://expressjs.com/). _Express_ is a web framework for node.js that allows you to build a _minimal and flexible_ web application. We will go through some basic concepts of Express in this tutorial and demonstrate various topics of express.js such as _routing, middleware, route chaining and more._
 
-#### Prerequisite
+### Prerequisite
 
 I assume you have the knowledge of following topics to follow along with this tutorial.
 
@@ -21,7 +21,7 @@ I assume you have the knowledge of following topics to follow along with this tu
 
 <InfoCallToAction htmlString="<p>Postman is a popular API end point testing application</p>"/>
 
-#### What you will learn
+### What you will learn
 
 Upon completion of this tutorial, you will learn:
 
@@ -31,7 +31,7 @@ Upon completion of this tutorial, you will learn:
 - How to _chain a routing_ (\*Intermediate topic)
 - Understanding and using _middleware_ in Express.
 
-#### Source Code
+### Source Code
 
 - [Source code](https://www.google.com) of the final application
 

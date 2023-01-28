@@ -16,7 +16,7 @@ export const AnchorLink = styled(Link)`
 export const ListItem = styled.li`
   font-size: ${({ theme }) => theme.fontSizes.xmedium};
   font-family: ${({ theme }) => theme.fonts.body};
-  line-height: ${({ theme }) => theme.lineHeights.body};
+  line-height: ${({ theme }) => theme.lineHeights.regular};
   color: ${({ theme }) => theme.colors.primaryText};
   ${ml(5)};
 `;

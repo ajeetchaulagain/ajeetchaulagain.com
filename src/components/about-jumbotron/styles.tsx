@@ -6,7 +6,7 @@ import { Paragraph } from '../paragraph/Paragraph';
 
 export const StyledParagraph = styled(Paragraph)`
   font-size: ${({ theme }) => theme.fontSizes.small};
-  line-height: ${({ theme }) => theme.lineHeights.bodyCondensed};
+  line-height: ${({ theme }) => theme.lineHeights.condensed};
   ${mb(4)};
 `;
 

@@ -5,6 +5,6 @@ export const Paragraph = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.xmedium};
   font-family: ${({ theme }) => theme.fonts.body};
   ${mb(5)};
-  line-height: ${({ theme }) => theme.lineHeights.body};
+  line-height: ${({ theme }) => theme.lineHeights.regular};
   color: ${({ theme }) => theme.colors.primaryText};
 `;
