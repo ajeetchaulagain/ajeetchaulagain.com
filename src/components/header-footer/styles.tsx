@@ -49,18 +49,18 @@ export const LogoWrapper = styled.div`
   `};
 
   svg {
-    width: 1.75rem;
+    width: 1.5rem;
   }
   span {
-    font-size: ${({ theme }) => theme.fontSizes.small};
-    font-weight: ${({ theme }) => theme.fontWeights[3]};
+    font-size: ${({ theme }) => theme.fontSizes.xmedium};
+    font-weight: ${({ theme }) => theme.fontWeights[4]};
     color: ${({ theme }) =>
       theme.name === 'lightTheme'
         ? theme.colors.secondaryText
         : theme.colors.primaryText};
-    text-transform: uppercase;
-    ${ml(4)}
+    ${ml(3)}
   }
+
   ${mb({ xs: 3, lg: 0 })}
 `;
 
@@ -79,9 +79,8 @@ export const NavMenuWrapper = styled.nav`
 `;
 
 export const NavItem = styled.li`
-  font-size: ${({ theme }) => theme.fontSizes.small};
+  font-size: ${({ theme }) => theme.fontSizes.xmedium};
   font-weight: ${({ theme }) => theme.fontWeights[4]};
-  text-transform: uppercase;
   color: ${({ theme }) =>
     theme.name === 'lightTheme'
       ? theme.colors.secondaryText
