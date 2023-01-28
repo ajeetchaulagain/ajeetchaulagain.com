@@ -7,8 +7,6 @@ import { Link } from '../link/Link';
 export const HeaderWrapper = styled.header`
   font-family: ${({ theme }) => theme.fonts.secondaryHeading};
   width: 100%;
-  background: url('pattern-3.jpg') repeat fixed center;
-  background-size: 1000px;
 `;
 
 export const HeaderContent = styled.div`
@@ -35,7 +33,7 @@ export const HeaderContent = styled.div`
 
   ${breakpoint('xl')`
     width: 62rem;
-    ${pt(6)};
+     ${pt(6)};
   `};
 
   ${breakpoint('xxl')`
@@ -146,8 +144,6 @@ export const FooterContainer = styled.div`
   font-family: ${({ theme }) => theme.fonts.secondaryHeading};
   font-weight: ${({ theme }) => theme.fontWeights[5]};
   width: 100%;
-  background: url('../pattern-3.jpg') repeat fixed center;
-  background-size: 1000px;
 `;
 
 export const FooterContentWrapper = styled.div`
