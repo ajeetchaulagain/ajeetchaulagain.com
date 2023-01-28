@@ -55,7 +55,7 @@ const Heading3 = styled.h3<{ size?: HeadingFontSize; type?: FontType }>`
   font-size: ${({ size, theme: { headingFontSizes } }) =>
     size ? headingFontSizes[size] : headingFontSizes.large};
 
-  font-weight: ${({ theme }) => theme.fontWeights[5]};
+  font-weight: ${({ theme }) => theme.fontWeights[6]};
 
   ${breakpoint('xs', 'lg')`
     ${({ size, theme }: { size: HeadingFontSize; theme: DefaultTheme }) => {
