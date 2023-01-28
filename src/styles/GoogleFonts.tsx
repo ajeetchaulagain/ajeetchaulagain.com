@@ -4,16 +4,12 @@ import '@fontsource/domine/500.css';
 import '@fontsource/domine/600.css';
 import '@fontsource/domine/700.css';
 
-import '@fontsource/roboto/100.css';
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-import '@fontsource/roboto/900.css';
-
-import '@fontsource/source-sans-pro/200.css';
-import '@fontsource/source-sans-pro/300.css';
-import '@fontsource/source-sans-pro/400.css';
-import '@fontsource/source-sans-pro/600.css';
-import '@fontsource/source-sans-pro/700.css';
-import '@fontsource/source-sans-pro/900.css';
+import '@fontsource/inter/100.css';
+import '@fontsource/inter/200.css';
+import '@fontsource/inter/300.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+import '@fontsource/inter/800.css';
+import '@fontsource/inter/900.css';

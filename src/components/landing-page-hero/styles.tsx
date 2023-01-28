@@ -7,8 +7,6 @@ import { StyledGatsbyImage } from '../gatsby-image/StyledGatsbyImage';
 
 export const Container = styled.section`
   width: 100%;
-  background: url('pattern-3.jpg') repeat fixed center;
-  background-size: 1000px;
 `;
 
 export const GradientOverlay = styled.div`
@@ -66,7 +64,7 @@ export const StyledHeading = styled(Heading)`
         ? theme.colors.secondaryText
         : theme.colors.primaryText};
     ${breakpoint('lg')`
-      font-size: 3.5rem;
+      font-size: 3rem;
     `};
   }
   ${mb(2)};
