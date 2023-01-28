@@ -64,7 +64,7 @@ export const StyledLink = styled(Link)`
 
 export const NavCommonStyles = css`
   ${py(3)};
-  border: 1px solid ${({ theme }) => theme.colors.oldSilver50};
+  border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   ${Paragraph} {
     font-size: ${({ theme }) => theme.fontSizes.small};
   }
