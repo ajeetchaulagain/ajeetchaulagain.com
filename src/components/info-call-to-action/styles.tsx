@@ -24,13 +24,13 @@ export const Container = styled.div`
 
 export const StyledParagraph = styled(Paragraph)`
   ${mb(0)};
-  line-height: 1.5;
+  line-height: ${({ theme }) => theme.lineHeights.extraCondensed};
   font-size: ${({ theme }) => theme.fontSizes.small};
   font-weight: ${({ theme }) => theme.fontWeights[4]};
 `;
 
 export const IconWrapper = styled.div`
-  font-size: 3rem;
+  font-size: 2.15rem;
   display: flex;
   color: ${({ theme }) => theme.colors.brandPrimary};
   svg {

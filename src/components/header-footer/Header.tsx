@@ -1,5 +1,4 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 import Logo from '../../images/logo.svg';
 import {
   HeaderWrapper,
@@ -18,20 +17,12 @@ import { ThemeToggleSwitch } from '../theme-toggle-switch/ThemeToggleSwitch';
 import { Link } from '../link/Link';
 import { GradientOverlay } from '../landing-page-hero/styles';
 import { Icon } from '../icon/Icon';
+import { useSiteMetadata } from 'hooks';
 
 export const Header = (): JSX.Element => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-          author
-        }
-      }
-    }
-  `);
-
+  const { title } = useSiteMetadata();
   const [{ url: homePageUrl }, ...navItemsWithoutHomePageLink] = navItems;
+
   return (
     <HeaderWrapper>
       <GradientOverlay>
@@ -39,7 +30,7 @@ export const Header = (): JSX.Element => {
           <LogoWrapper>
             <LogoLink to="/">
               <Logo />
-              <span>{data.site.siteMetadata.title}</span>
+              <span>{title}</span>
             </LogoLink>
           </LogoWrapper>
 

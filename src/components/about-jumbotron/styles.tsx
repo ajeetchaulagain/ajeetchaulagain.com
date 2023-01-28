@@ -6,7 +6,8 @@ import { Paragraph } from '../paragraph/Paragraph';
 
 export const StyledParagraph = styled(Paragraph)`
   font-size: ${({ theme }) => theme.fontSizes.small};
-  line-height: ${({ theme }) => theme.lineHeights.bodyCondensed};
+  line-height: ${({ theme }) => theme.lineHeights.condensed};
+  ${mb(4)};
 `;
 
 export const Container = styled.div`
@@ -19,7 +20,7 @@ export const Container = styled.div`
   ${mb(8)}
   background-color: ${({ theme }) => theme.colors.tertiaryBackground};
   border-radius: ${({ theme }) => theme.borderRadius.base};
-
+  border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   ${breakpoint('xs', 'md')`
      flex-direction:column;
   `};
