@@ -24,7 +24,6 @@ export const StyledForm = styled.form`
   display: flex;
   width: 68%;
   flex-direction: column;
-  font-size: ${({ theme }) => theme.fontSizes.medium};
 `;
 
 export const SuccessContentWrapper = styled.div`

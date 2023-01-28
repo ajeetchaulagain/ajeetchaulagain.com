@@ -48,12 +48,8 @@ export const Footer = () => {
             reserved.
           </StyledParagraph>
           <StyledParagraph>
-            Proudly built with
-            <em>
-              {' '}
-              React, Gatsby, GraphQL, Typescript, Styled Components, Netlify and
-              Nodejs
-            </em>
+            Proudly built with React, Gatsby, GraphQL, Typescript, Styled
+            Components, Netlify and Nodejs
           </StyledParagraph>
         </FooterContentWrapper>
       </GradientOverlay>

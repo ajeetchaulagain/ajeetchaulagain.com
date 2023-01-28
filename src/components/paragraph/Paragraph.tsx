@@ -1,5 +1,6 @@
-import styled from 'styled-components';
+import styled, { DefaultTheme } from 'styled-components';
 import { mb } from 'styled-components-spacing';
+import breakpoint from 'styled-components-breakpoint';
 
 export const Paragraph = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.xmedium};
@@ -7,4 +8,11 @@ export const Paragraph = styled.p`
   ${mb(5)};
   line-height: ${({ theme }) => theme.lineHeights.body};
   color: ${({ theme }) => theme.colors.primaryText};
+
+  ${breakpoint('xs', 'lg')`
+      font-size: ${({ theme }: { theme: DefaultTheme }) =>
+        theme.fontSizes.small};
+      line-height: ${({ theme }: { theme: DefaultTheme }) =>
+        theme.lineHeights.bodyMediumCondensed};
+  `};
 `;

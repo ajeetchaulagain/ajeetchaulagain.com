@@ -7,8 +7,7 @@ import { Link } from 'components/link/Link';
 export const PostHeaderContainer = styled.div`
   display: flex;
   align-items: flex-start;
-  ${mb(6)};
-  ${mb(6)};
+  ${mb(5)};
 
   ${breakpoint('xs', 'md')`
     flex-direction:column-reverse;
@@ -52,8 +51,9 @@ export const StyledLink = styled(Link)`
   align-items: center;
   color: ${({ theme }) => theme.buttonColors['primary'].background};
   font-family: ${({ theme }) => theme.fonts.body};
-  font-weight: ${({ theme }) => theme.fontWeights[6]};
+  font-weight: ${({ theme }) => theme.fontWeights[5]};
   font-size: ${({ theme }) => theme.fontSizes.small};
+  line-height: ${({ theme }) => theme.lineHeights.bodyCondensed};
   :hover {
     text-decoration: none;
   }
@@ -64,7 +64,7 @@ export const StyledLink = styled(Link)`
 
 export const NavCommonStyles = css`
   ${py(3)};
-  border: 1px solid ${({ theme }) => theme.colors.oldSilver50};
+  border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   ${Paragraph} {
     font-size: ${({ theme }) => theme.fontSizes.small};
   }
