@@ -12,6 +12,8 @@ import {
 
 import { Button, Input } from '../form/styles';
 import { HeadingProps } from '../heading/Heading';
+import { StyledGatsbyImage } from 'components/gatsby-image/StyledGatsbyImage';
+import { useCelebrationImage, useBooksImage } from 'hooks';
 
 type NewsLetterProps = {
   headingProps?: HeadingProps;
@@ -26,6 +28,9 @@ export const NewsLetter = ({
 }: NewsLetterProps): JSX.Element => {
   const [status, setStatus] = useState<string>();
   const [email, setEmail] = useState<string>('');
+
+  const { gatsbyImageData: booksGatsbyImageData } = useBooksImage();
+  const { gatsbyImageData: celebrationGatsbyImageData } = useCelebrationImage();
 
   const FORM_URL = `https://app.convertkit.com/forms/3908991/subscriptions`;
 
@@ -73,7 +78,10 @@ export const NewsLetter = ({
         {status === 'SUCCESS' ? (
           <>
             <ImageWrapper status={status}>
-              <img src="/celebration.png" />
+              <StyledGatsbyImage
+                image={celebrationGatsbyImageData}
+                alt="A celebration image"
+              />
             </ImageWrapper>
             <SuccessContentWrapper>
               <StyledHeading size="small" type="sans-serif" level="h3">
@@ -87,7 +95,10 @@ export const NewsLetter = ({
         ) : (
           <>
             <ImageWrapper>
-              <img src="/books.png" />
+              <StyledGatsbyImage
+                image={booksGatsbyImageData}
+                alt="A books image"
+              />
             </ImageWrapper>
             <StyledForm action={FORM_URL} method="post" onSubmit={handleSubmit}>
               {status === 'ERROR' && (
