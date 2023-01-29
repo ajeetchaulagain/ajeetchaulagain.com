@@ -56,7 +56,11 @@ export const LogoWrapper = styled.div`
       theme.name === 'lightTheme'
         ? theme.colors.secondaryText
         : theme.colors.primaryText};
-    ${ml(3)}
+    ${ml(3)};
+    ${breakpoint('xs', 'lg')`
+      font-size: ${({ theme }: { theme: DefaultTheme }) =>
+        theme.fontSizes.small};
+    `};
   }
 
   ${mb({ xs: 3, lg: 0 })}
@@ -87,6 +91,9 @@ export const NavItem = styled.li`
   ${breakpoint('xs', 'xsm')`
       ${mb(3)};
   `}
+  ${breakpoint('xs', 'lg')`
+    font-size: ${({ theme }: { theme: DefaultTheme }) => theme.fontSizes.small};
+  `};
 
   & > a:hover {
     color: ${({ theme }) => theme.colors.brightLavender};
@@ -126,6 +133,9 @@ export const Nav = styled.ul`
   justify-content: center;
   ${NavItem}:not(:first-child) {
     ${ml(4)};
+    ${breakpoint('xs', 'lg')`
+      ${ml(4)};
+    `};
   }
 `;
 

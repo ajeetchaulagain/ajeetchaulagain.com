@@ -36,7 +36,7 @@ const headingFontSizes = {
 const themeCommonProperties = {
   breakpoints: {
     xs: 0,
-    xsm: 402,
+    xsm: 370,
     sm: 480,
     md: 640,
     lg: 800,
