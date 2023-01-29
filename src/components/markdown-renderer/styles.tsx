@@ -1,7 +1,7 @@
 import { Paragraph } from 'components/paragraph/Paragraph';
 import styled, { DefaultTheme } from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
-import { mb, mt, ml, my, pb } from 'styled-components-spacing';
+import { mb, mt, ml, pb } from 'styled-components-spacing';
 import { Heading } from '../heading/Heading';
 import { Link } from '../link/Link';
 
@@ -34,6 +34,9 @@ export const UnorderedList = styled.ul`
       color: ${({ theme }) => theme.colors.brandPrimary};
     }
   }
+  & + ${Paragraph} {
+    ${mt(5)};
+  }
 `;
 
 export const OrderedList = styled.ol`
@@ -53,15 +56,21 @@ export const Span = styled.span`
 `;
 
 export const StyledHeading = styled(Heading)`
-  ${mb(2)};
+  ${mb(1)};
   ${mt(7)};
+  & + ${Paragraph} {
+    ${mt(3)};
+  }
 `;
 
 export const StyledHeading2 = styled(Heading)`
   ${mb(2)};
   ${mt(7)};
-  ${pb(1)};
+  ${pb(2)};
   border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
+  & + ${Paragraph} {
+    ${mt(5)};
+  }
 `;
 
 export const StyledHeading1 = styled(Heading)`
@@ -69,5 +78,5 @@ export const StyledHeading1 = styled(Heading)`
 `;
 
 export const StyledParagraph = styled(Paragraph)`
-  ${my(4)};
+  ${mb(5)};
 `;
