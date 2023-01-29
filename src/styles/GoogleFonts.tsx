@@ -1,4 +1,5 @@
 // Source of truth for google web fonts used in a project
+
 import '@fontsource/domine/400.css';
 import '@fontsource/domine/500.css';
 import '@fontsource/domine/600.css';

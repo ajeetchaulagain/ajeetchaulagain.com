@@ -8,18 +8,23 @@ type ProjectListProps = {
   projects: ProjectCardProps[];
 };
 
+const ProjectCardWrapper = styled.div`
+  ${breakpoint('md')`
+    width: 48.5%;
+    ${mb(5)};
+  `}
+`;
+
 const Container = styled.div`
+  ${breakpoint('xs', 'md')`
+    ${ProjectCardWrapper}:not(:last-child){
+      ${mb(5)};
+    }
+  `}
   ${breakpoint('md')`
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  `}
-`;
-
-const ProjectCardWrapper = styled.div`
-  ${mb(5)};
-  ${breakpoint('md')`
-    width: 48.5%;
   `}
 `;
 

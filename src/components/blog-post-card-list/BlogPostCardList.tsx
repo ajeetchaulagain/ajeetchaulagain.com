@@ -8,10 +8,12 @@ type BlogPostCardListProps = {
   blogs: BlogPostCardProps[];
 };
 
-const Container = styled.div``;
+const BlogPostCardWrapper = styled.div``;
 
-const BlogPostCardWrapper = styled.div`
-  ${mb(5)};
+const Container = styled.div`
+  ${BlogPostCardWrapper}:not(:last-child) {
+    ${mb(5)};
+  }
 `;
 
 export const BlogPostCardList = ({ blogs }: BlogPostCardListProps) => {

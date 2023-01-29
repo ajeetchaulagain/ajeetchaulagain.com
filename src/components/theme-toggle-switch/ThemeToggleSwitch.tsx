@@ -18,11 +18,12 @@ export const ThemeToggleSwitch = () => {
     <Container>
       <Input
         type="checkbox"
-        id="checkbox"
+        id="theme-toggle-checkbox"
+        aria-labelledby="theme-toggle-label"
         checked={checked}
         onChange={() => themeToggler()}
       />
-      <Label htmlFor="checkbox">
+      <Label htmlFor="theme-toggle-checkbox" id="theme-toggle-label">
         <FaSun color="#f39c12" />
         <FaMoon color="#f1c40f" />
         <Ball className="ball"></Ball>

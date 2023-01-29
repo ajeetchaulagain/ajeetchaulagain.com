@@ -126,9 +126,6 @@ export const Nav = styled.ul`
   justify-content: center;
   ${NavItem}:not(:first-child) {
     ${ml(4)};
-    ${breakpoint('xs', 'sm')`
-      ${ml(3)};
-    `}
   }
 `;
 
