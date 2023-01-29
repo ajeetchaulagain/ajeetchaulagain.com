@@ -16,7 +16,7 @@ export const DarkTheme = css`
     color: #ffffff;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; /* this is the default */
     /* The following properties are standard, please leave them as they are */
-    font-size: 1rem;
+    font-size: 0.5em;
     direction: ltr;
     text-align: left;
     white-space: pre;
