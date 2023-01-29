@@ -1,4 +1,4 @@
-import { css, DefaultTheme } from 'styled-components';
+import { css } from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 export const DarkTheme = css`
   /*
@@ -16,9 +16,9 @@ export const DarkTheme = css`
     color: #ffffff;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; /* this is the default */
     /* The following properties are standard, please leave them as they are */
-    font-size: 1rem;
+    font-size: 1.05rem;
     ${breakpoint('xs', 'lg')`
-     font-size: 0.9rem
+     font-size: 0.95rem
     `};
     direction: ltr;
     text-align: left;

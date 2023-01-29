@@ -1,4 +1,5 @@
 import { css } from 'styled-components';
+import breakpoint from 'styled-components-breakpoint';
 
 export const PrismOneLightTheme = css`
   /**
@@ -14,6 +15,10 @@ export const PrismOneLightTheme = css`
     background: hsl(230, 1%, 98%);
     color: #423839;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 1.05rem;
+    ${breakpoint('xs', 'lg')`
+     font-size: 0.95rem
+    `};
     direction: ltr;
     text-align: left;
     white-space: pre;
