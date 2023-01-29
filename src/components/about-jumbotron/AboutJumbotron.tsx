@@ -30,7 +30,7 @@ export const AboutJumbotron = (): JSX.Element => {
           text="Buy me a Coffee"
           variant="contained"
           color="primary"
-          size="medium"
+          size="small"
           iconName="Coffee"
         />
       </TextContentWrapper>

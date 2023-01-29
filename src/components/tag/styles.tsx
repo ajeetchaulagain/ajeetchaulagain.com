@@ -34,7 +34,7 @@ export const Container = styled.span<{ type?: TagType; size?: TagSize }>`
       return css`
         ${px(2)};
         ${py(1)};
-        font-size: ${theme.fontSizes.small};
+        font-size: ${theme.fontSizes.xsmall};
       `;
     }
     return css`

@@ -1,5 +1,6 @@
-import styled from 'styled-components';
+import styled, { DefaultTheme } from 'styled-components';
 import { mb, px, py, ml } from 'styled-components-spacing';
+import breakpoint from 'styled-components-breakpoint';
 
 export const Input = styled.input`
   border: 2px solid
@@ -10,7 +11,7 @@ export const Input = styled.input`
   ${mb(5)};
   ${px(4)}
   ${py(4)}
-  font-size: ${({ theme }) => theme.fontSizes.medium};
+  font-size: ${({ theme }) => theme.fontSizes.xmedium};
   color: ${({ theme }) => theme.colors.primaryText};
   background-color: ${({ theme }) =>
     theme.name === 'lightTheme'
@@ -22,18 +23,26 @@ export const Input = styled.input`
     outline: none;
     border: 2px solid ${({ theme }) => theme.colors.secondaryBorder};
   }
+  ${breakpoint('xs', 'lg')`
+     font-size: ${({ theme }: { theme: DefaultTheme }) =>
+       theme.fontSizes.small};
+  `}
 `;
 export const Label = styled.label`
   color: ${({ theme }) => theme.colors.primaryText};
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: ${({ theme }) => theme.fontSizes.medium};
+  font-size: ${({ theme }) => theme.fontSizes.xmedium};
   ${mb(3)};
+  ${breakpoint('xs', 'lg')`
+     font-size: ${({ theme }: { theme: DefaultTheme }) =>
+       theme.fontSizes.small};
+  `}
 `;
 
 export const TextArea = styled.textarea`
   width: 100%;
   border: 2px solid ${({ theme }) => theme.colors.primaryBorder};
-  font-size: ${({ theme }) => theme.fontSizes.medium};
+  font-size: ${({ theme }) => theme.fontSizes.xmedium};
   font-family: ${({ theme }) => theme.fonts.body};
   color: ${({ theme }) => theme.colors.primaryText};
   border: 2px solid
@@ -54,6 +63,10 @@ export const TextArea = styled.textarea`
     outline: none;
     border: 2px solid ${({ theme }) => theme.colors.secondaryBorder};
   }
+  ${breakpoint('xs', 'lg')`
+     font-size: ${({ theme }: { theme: DefaultTheme }) =>
+       theme.fontSizes.small};
+  `};
 `;
 
 export const Button = styled.button`

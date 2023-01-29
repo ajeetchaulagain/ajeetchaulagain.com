@@ -1,15 +1,17 @@
-import styled from 'styled-components';
+import styled, { DefaultTheme } from 'styled-components';
 import { p, my } from 'styled-components-spacing';
-import { Paragraph } from '../paragraph/Paragraph';
 import { mb, mr } from 'styled-components-spacing';
+import breakpoint from 'styled-components-breakpoint';
+import { Paragraph } from '../paragraph/Paragraph';
 
 export const Container = styled.div`
   display: flex;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.tertiaryBackground};
   border-radius: ${({ theme }) => theme.borderRadius.base};
+  border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   ${p(4)};
-  ${my(5)};
+  ${my(6)};
 
   a {
     font-family: ${({ theme }) => theme.fonts.body};
@@ -27,6 +29,10 @@ export const StyledParagraph = styled(Paragraph)`
   line-height: ${({ theme }) => theme.lineHeights.extraCondensed};
   font-size: ${({ theme }) => theme.fontSizes.small};
   font-weight: ${({ theme }) => theme.fontWeights[4]};
+  ${breakpoint('xs', 'lg')`
+     font-size: ${({ theme }: { theme: DefaultTheme }) =>
+       theme.fontSizes.xsmall};
+  `};
 `;
 
 export const IconWrapper = styled.div`

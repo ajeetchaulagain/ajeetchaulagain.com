@@ -22,7 +22,7 @@ export const StyledHeading = styled(Heading)`
 `;
 
 export const Paragraph = styled.p`
-  font-size: ${({ theme }) => theme.fontSizes.small};
+  font-size: ${({ theme }) => theme.fontSizes.xsmall};
   font-family: ${({ theme }) => theme.fonts.body};
   ${mb(3)};
   line-height: 1.5;

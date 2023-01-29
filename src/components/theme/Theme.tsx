@@ -18,8 +18,8 @@ export type HeadingFontSize = keyof typeof headingFontSizes;
 export const fontWeights = [0, 100, 200, 300, 400, 500, 600, 700, 800, 900];
 
 const fontSizes = {
-  xsmall: '0.8rem',
-  small: '1.0rem',
+  xsmall: '0.975rem',
+  small: '1.05rem',
   xmedium: '1.125rem',
   medium: '1.2rem',
   large: '1.3rem',
@@ -36,7 +36,7 @@ const headingFontSizes = {
 const themeCommonProperties = {
   breakpoints: {
     xs: 0,
-    xsm: 402,
+    xsm: 370,
     sm: 480,
     md: 640,
     lg: 800,

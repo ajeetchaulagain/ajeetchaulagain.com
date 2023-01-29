@@ -85,7 +85,9 @@ export const AboutImageWrapper = styled.div`
   width: 20%;
   ${StyledGatsbyImage} {
     max-width: 170px;
-    border-radius: 100%;
+    & > picture > img {
+      border-radius: 100%;
+    }
   }
 `;
 
