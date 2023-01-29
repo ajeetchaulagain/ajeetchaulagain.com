@@ -1,7 +1,8 @@
-import styled from 'styled-components';
+import styled, { DefaultTheme } from 'styled-components';
 import { p, my } from 'styled-components-spacing';
-import { Paragraph } from '../paragraph/Paragraph';
 import { mb, mr } from 'styled-components-spacing';
+import breakpoint from 'styled-components-breakpoint';
+import { Paragraph } from '../paragraph/Paragraph';
 
 export const Container = styled.div`
   display: flex;
@@ -27,6 +28,10 @@ export const StyledParagraph = styled(Paragraph)`
   line-height: ${({ theme }) => theme.lineHeights.extraCondensed};
   font-size: ${({ theme }) => theme.fontSizes.small};
   font-weight: ${({ theme }) => theme.fontWeights[4]};
+  ${breakpoint('xs', 'lg')`
+     font-size: ${({ theme }: { theme: DefaultTheme }) =>
+       theme.fontSizes.xsmall};
+  `};
 `;
 
 export const IconWrapper = styled.div`

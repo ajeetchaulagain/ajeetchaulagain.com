@@ -6,8 +6,8 @@ export const getStylesForButtonSize = (size: string) => {
   switch (size) {
     case 'small':
       return css`
-        ${px(2)}
-        ${py(1)}
+        ${px(3)}
+        ${py(2)}
         font-size:${({ theme }) => theme.fontSizes.xsmall};
       `;
     case 'medium':

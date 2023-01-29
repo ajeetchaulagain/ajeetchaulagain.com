@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, { DefaultTheme } from 'styled-components';
+import breakpoint from 'styled-components-breakpoint';
 import { mb, mt, ml } from 'styled-components-spacing';
 import { Heading } from '../heading/Heading';
 import { Link } from '../link/Link';
@@ -19,6 +20,10 @@ export const ListItem = styled.li`
   line-height: ${({ theme }) => theme.lineHeights.regular};
   color: ${({ theme }) => theme.colors.primaryText};
   ${ml(5)};
+  ${breakpoint('xs', 'lg')`
+     font-size: ${({ theme }: { theme: DefaultTheme }) =>
+       theme.fontSizes.small};
+  `}
 `;
 
 export const UnorderedList = styled.ul`

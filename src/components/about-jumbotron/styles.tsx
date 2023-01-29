@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { p, mb, mt, py, px } from 'styled-components-spacing';
+import styled, { DefaultTheme } from 'styled-components';
+import { mb, mt, py, px } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
 import { StyledGatsbyImage } from '../gatsby-image/StyledGatsbyImage';
 import { Paragraph } from '../paragraph/Paragraph';
@@ -8,6 +8,10 @@ export const StyledParagraph = styled(Paragraph)`
   font-size: ${({ theme }) => theme.fontSizes.small};
   line-height: ${({ theme }) => theme.lineHeights.condensed};
   ${mb(4)};
+  ${breakpoint('xs', 'lg')`
+     font-size: ${({ theme }: { theme: DefaultTheme }) =>
+       theme.fontSizes.xsmall};
+  `};
 `;
 
 export const Container = styled.div`

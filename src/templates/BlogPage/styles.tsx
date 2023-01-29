@@ -1,5 +1,5 @@
 import { Paragraph, StyledGatsbyImage } from 'components';
-import styled, { css } from 'styled-components';
+import styled, { css, DefaultTheme } from 'styled-components';
 import { py, pr, pl, mt, mr, ml, mb } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
 import { Link } from 'components/link/Link';
@@ -61,6 +61,11 @@ export const StyledLink = styled(Link)`
   svg {
     width: 12px;
   }
+
+  ${breakpoint('xs', 'lg')`
+     font-size: ${({ theme }: { theme: DefaultTheme }) =>
+       theme.fontSizes.xsmall};
+  `};
 `;
 
 export const NavCommonStyles = css`
