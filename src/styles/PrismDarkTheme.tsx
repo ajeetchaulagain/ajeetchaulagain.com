@@ -57,7 +57,8 @@ export const DarkTheme = css`
     padding: 1rem; /* this is standard */
     margin: 1rem 0; /* this is the default */
     overflow: auto; /* this is standard */
-    border-radius: 0.3rem; // Custom Edit by Ajeet
+    border-radius: ${({ theme }) =>
+      theme.borderRadius.base}; // Custom Edit by Ajeet
     border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   }
 

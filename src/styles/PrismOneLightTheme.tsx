@@ -54,7 +54,8 @@ export const PrismOneLightTheme = css`
     padding: 1rem;
     margin: 0.5rem 0;
     overflow: auto;
-    border-radius: 0.3rem; // Custom Edit by Ajeet
+    border-radius: ${({ theme }) =>
+      theme.borderRadius.base}; // Custom Edit by Ajeet
     border: 1px solid ${({ theme }) => theme.colors.cardBorder}; // Custom Edit by Ajeet
   }
 
