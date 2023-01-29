@@ -5,6 +5,7 @@ import { HeadingProps } from '../heading/Heading';
 import {
   StyledHeading,
   StyledHeading1,
+  StyledHeading2,
   UnorderedList,
   OrderedList,
   ListItem,
@@ -27,9 +28,9 @@ export const MarkdownRenderer = ({ children }: MarkdownRendererProps) => {
           </StyledHeading1>
         ),
         h2: ({ children }: HeadingProps) => (
-          <StyledHeading level="h2" size="large" type="sans-serif">
+          <StyledHeading2 level="h2" size="large" type="sans-serif">
             {children}
-          </StyledHeading>
+          </StyledHeading2>
         ),
         h3: ({ children }: HeadingProps) => (
           <StyledHeading level="h3" size="medium" type="sans-serif">
