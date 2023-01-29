@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaBook } from 'react-icons/fa';
+import styled from 'styled-components';
+import { mt } from 'styled-components-spacing';
 import {
   LandingPageHero,
   ProjectList,
@@ -43,6 +45,10 @@ const projectCardDecoratorOptions: ProjectCardDecoratorOptions = {
   },
 };
 
+const StyledButtonLink = styled(ButtonLink)`
+  ${mt(5)};
+`;
+
 const IndexPage = () => {
   const blogPostList = useBlogPostList();
   const projectList = useProjectList();
@@ -64,7 +70,7 @@ const IndexPage = () => {
         </Heading>
         <Paragraph>See the recent on my article list</Paragraph>
         <BlogPostCardList blogs={blogs} />
-        <ButtonLink
+        <StyledButtonLink
           to="/blog"
           text="View All Articles →"
           variant="text"
@@ -78,7 +84,7 @@ const IndexPage = () => {
         </Heading>
         <Paragraph>Checkout some of my projects</Paragraph>
         <ProjectList projects={projects} />
-        <ButtonLink
+        <StyledButtonLink
           to="/projects"
           text="View All Projects →"
           variant="text"
