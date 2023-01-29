@@ -13,5 +13,7 @@ export const CodeBlockStyles = css`
   // Wrapper for code block - Common styles for dark and light theme
   .gatsby-highlight {
     ${my(6)};
+    margin-left: -1rem;
+    margin-right: -1rem;
   }
 `;
