@@ -79,14 +79,17 @@ export const StyledParagraph = styled(Paragraph)`
   }
 `;
 
-export const AboutImage = styled(StyledGatsbyImage)`
+export const AboutImageWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
   width: 20%;
-  & > picture > img {
+  ${StyledGatsbyImage} {
+    max-width: 170px;
     border-radius: 100%;
   }
 `;
 
-export const AboutWrapper = styled.div`
+export const AboutContentWrapper = styled.div`
   text-align: center;
 
   ${breakpoint('xs', 'lg')`
