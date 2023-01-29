@@ -6,12 +6,13 @@ import {
   Container,
   GradientOverlay,
   ContentWrapper,
-  AboutWrapper,
+  AboutContentWrapper,
   StyledHeading,
-  AboutImage,
+  AboutImageWrapper,
   StyledParagraph,
   SocialMediaLinksWrapper,
 } from './styles';
+import { StyledGatsbyImage } from 'components/gatsby-image/StyledGatsbyImage';
 
 export const LandingPageHero = (): JSX.Element => {
   const { gatsbyImageData } = useAuthorImage();
@@ -20,13 +21,15 @@ export const LandingPageHero = (): JSX.Element => {
     <Container>
       <GradientOverlay>
         <ContentWrapper>
-          <AboutImage
-            image={gatsbyImageData}
-            loading="eager"
-            alt="author-profile-image"
-          />
+          <AboutImageWrapper>
+            <StyledGatsbyImage
+              image={gatsbyImageData}
+              loading="eager"
+              alt="author-profile-image"
+            />
+          </AboutImageWrapper>
 
-          <AboutWrapper>
+          <AboutContentWrapper>
             <StyledHeading type="sans-serif">
               <span style={{ fontWeight: 100 }}> Hello. I'm </span>Ajeet !
             </StyledHeading>
@@ -48,7 +51,7 @@ export const LandingPageHero = (): JSX.Element => {
             <SocialMediaLinksWrapper>
               <SocialMediaIcons />
             </SocialMediaLinksWrapper>
-          </AboutWrapper>
+          </AboutContentWrapper>
         </ContentWrapper>
       </GradientOverlay>
     </Container>
