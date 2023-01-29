@@ -7,14 +7,13 @@ export const PrismOneLightTheme = css`
  * Theme - https://github.com/PrismJS/prism-themes/blob/master/themes/prism-one-light.css 
  */
 
-  // Note: Minor tweaks is done in the original code for design needs
+  /* Note: Minor tweaks is done in the original code for design needs by Ajeet */
 
   code[class*='language-'],
   pre[class*='language-'] {
     background: hsl(230, 1%, 98%);
     color: #423839;
-    font-family: 'Fira Code', 'Fira Mono', Menlo, Consolas, 'DejaVu Sans Mono',
-      monospace;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     direction: ltr;
     text-align: left;
     white-space: pre;
@@ -48,10 +47,10 @@ export const PrismOneLightTheme = css`
   /* Code blocks */
   pre[class*='language-'] {
     padding: 1rem;
-    margin: 0.5em 0;
+    margin: 0.5rem 0;
     overflow: auto;
-    border-radius: 0.3em;
-    border: 1px solid ${({ theme }) => theme.colors.cardBorder};
+    border-radius: 0.3rem; // Custom Edit by Ajeet
+    border: 1px solid ${({ theme }) => theme.colors.cardBorder}; // Custom Edit by Ajeet
   }
 
   /* Inline code */
@@ -288,9 +287,6 @@ export const PrismOneLightTheme = css`
   /* Line Numbers and Command Line plugins overrides */
   /* Line separating gutter from coding area */
 
-  .line-numbers.line-numbers .line-numbers-rows {
-    padding: 1rem 0.1rem 1rem 0.5rem;
-  }
   .line-numbers.line-numbers .line-numbers-rows,
   .command-line .command-line-prompt {
     border-right-color: hsla(230, 8%, 24%, 0.2);
