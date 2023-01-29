@@ -5,10 +5,13 @@ import { socialMediaLinks } from './socialMediaLinks';
 export const SocialMediaIcons = () => {
   return (
     <SocialMediaList>
-      {socialMediaLinks.map(({ url, IconComponent }) => {
+      {socialMediaLinks.map(({ url, IconComponent, ariaLabel }) => {
         return (
           <ListItem>
-            <StyledAnchorLink to={url as string}>
+            <StyledAnchorLink
+              to={url as string}
+              aria-label={ariaLabel as string}
+            >
               <IconComponent />
             </StyledAnchorLink>
           </ListItem>
