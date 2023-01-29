@@ -68,10 +68,12 @@ const config: GatsbyConfig = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 800,
+              maxWidth: 735,
               withWebp: true,
               linkImagesToOriginal: false,
               quality: 80,
+              loading: 'lazy',
+              tracedSVG: true,
             },
           },
 
