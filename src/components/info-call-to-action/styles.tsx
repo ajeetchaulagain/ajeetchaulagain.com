@@ -9,8 +9,9 @@ export const Container = styled.div`
   align-items: center;
   background-color: ${({ theme }) => theme.colors.tertiaryBackground};
   border-radius: ${({ theme }) => theme.borderRadius.base};
+  border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   ${p(4)};
-  ${my(5)};
+  ${my(6)};
 
   a {
     font-family: ${({ theme }) => theme.fonts.body};

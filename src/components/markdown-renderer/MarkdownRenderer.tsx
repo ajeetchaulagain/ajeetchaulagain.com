@@ -2,7 +2,6 @@ import React from 'react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 import { HeadingProps } from '../heading/Heading';
-import { Paragraph } from '../paragraph/Paragraph';
 import {
   StyledHeading,
   StyledHeading1,
@@ -11,6 +10,7 @@ import {
   ListItem,
   AnchorLink,
   Span,
+  StyledParagraph,
 } from './styles';
 
 type MarkdownRendererProps = {
@@ -45,7 +45,7 @@ export const MarkdownRenderer = ({ children }: MarkdownRendererProps) => {
         ol: OrderedList,
         li: ListItem,
         a: AnchorLink,
-        p: Paragraph,
+        p: StyledParagraph,
         span: Span,
       }}
     >

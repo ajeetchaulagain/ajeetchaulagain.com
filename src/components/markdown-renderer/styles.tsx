@@ -1,6 +1,7 @@
+import { Paragraph } from 'components/paragraph/Paragraph';
 import styled, { DefaultTheme } from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
-import { mb, mt, ml } from 'styled-components-spacing';
+import { mb, mt, ml, my } from 'styled-components-spacing';
 import { Heading } from '../heading/Heading';
 import { Link } from '../link/Link';
 
@@ -30,14 +31,18 @@ export const UnorderedList = styled.ul`
   ${ListItem} {
     list-style-type: disc;
     &::marker {
-      color: ${({ theme }) => theme.colors.brightLavender};
+      color: ${({ theme }) => theme.colors.brandPrimary};
     }
   }
-  ${mb(5)};
 `;
 
 export const OrderedList = styled.ol`
-  ${mb(5)};
+  ${ListItem} {
+    &::marker {
+      color: ${({ theme }) => theme.colors.brandPrimary};
+      font-weight: 600;
+    }
+  }
 `;
 
 // Fixes for gatsby span wrapper
@@ -54,4 +59,8 @@ export const StyledHeading = styled(Heading)`
 
 export const StyledHeading1 = styled(Heading)`
   ${mb(2)};
+`;
+
+export const StyledParagraph = styled(Paragraph)`
+  ${my(5)};
 `;
