@@ -66,10 +66,10 @@ export const StyledHeading = styled(Heading)`
 export const StyledHeading2 = styled(Heading)`
   ${mb(2)};
   ${mt(7)};
-  ${pb(1)};
+  ${pb(2)};
   border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
   & + ${Paragraph} {
-    ${mt(4)};
+    ${mt(5)};
   }
 `;
 
