@@ -1,5 +1,5 @@
-import { css } from 'styled-components';
-
+import { css, DefaultTheme } from 'styled-components';
+import breakpoint from 'styled-components-breakpoint';
 export const DarkTheme = css`
   /*
  * Laserwave Theme originally by Jared Jones for Visual Studio Code
@@ -16,7 +16,10 @@ export const DarkTheme = css`
     color: #ffffff;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; /* this is the default */
     /* The following properties are standard, please leave them as they are */
-    font-size: 0.5rem;
+    font-size: 1rem;
+    ${breakpoint('xs', 'lg')`
+     font-size: 0.9rem
+    `};
     direction: ltr;
     text-align: left;
     white-space: pre;
