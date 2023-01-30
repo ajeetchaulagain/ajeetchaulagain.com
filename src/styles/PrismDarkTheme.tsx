@@ -55,7 +55,7 @@ export const DarkTheme = css`
   /* Properties specific to code blocks */
   pre[class*='language-'] {
     padding: 1rem; /* this is standard */
-    margin: 1rem 0; /* this is the default */
+    margin: 0; /* this is the default */
     overflow: auto; /* this is standard */
     border-radius: ${({ theme }) =>
       theme.borderRadius.base}; // Custom Edit by Ajeet

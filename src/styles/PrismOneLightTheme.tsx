@@ -52,7 +52,7 @@ export const PrismOneLightTheme = css`
   /* Code blocks */
   pre[class*='language-'] {
     padding: 1rem;
-    margin: 0.5rem 0;
+    margin: 0;
     overflow: auto;
     border-radius: ${({ theme }) =>
       theme.borderRadius.base}; // Custom Edit by Ajeet
