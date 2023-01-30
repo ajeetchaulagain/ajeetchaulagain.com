@@ -4,11 +4,13 @@ import { BaseStyles } from './BaseStyles';
 import { MarkdownTableStyles } from './MarkdownTableStyles';
 import { CodeBlockStyles } from './CodeBlockStyles';
 import * as GoogleFonts from './GoogleFonts';
+import { GatsbyRemarkCodeTitles } from './GatsbyRemarkCodeTitles';
 
 export const GlobalStyle = createGlobalStyle`
-${CSSReset};
-${BaseStyles};
-${MarkdownTableStyles};
-${CodeBlockStyles};
-${GoogleFonts};
+ ${CSSReset};
+ ${BaseStyles};
+ ${MarkdownTableStyles};
+ ${CodeBlockStyles};
+ ${GoogleFonts};
+ ${GatsbyRemarkCodeTitles};
 `;

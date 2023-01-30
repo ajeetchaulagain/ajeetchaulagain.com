@@ -92,9 +92,9 @@ After installing the package, you need to import the stylesheet required for a p
 @import '~react-image-gallery/styles/css/image-gallery.css';
 ```
 
-The package has a default export called ImageGallery that has items props for providing a list of images we want to display in our gallery. Let's prepare a dummy image data for that by creating a _gallery-image.ts_ file that have a list of images exported.
+The package has a default export called ImageGallery that has items props for providing a list of images we want to display in our gallery. Let's prepare a dummy image data for that by creating a _gallery-image.js_ file that have a list of images exported.
 
-```j{numberLines:true}
+```js:title=gallery-image.js {numberLines:true}
 export const images = [
   {
     original: 'https://picsum.photos/id/1024/1000/600/',
@@ -123,7 +123,7 @@ export const images = [
 
 Once data is prepared, you will import the ImageGallery component exported by the package and images you just prepared in App.js file and use it through items props. The _App.js_ file will end up with something like this:
 
-```jsx{numberLines:true}
+```jsx:title=App.js {numberLines:true}
 import ImageGallery from 'react-image-gallery';
 import { images } from '../data/gallery-image';
 
@@ -153,7 +153,7 @@ Now if you view the browser, you will see a beautiful image gallery rendered for
 
 Currently, the ImageGallery is rendered full width in its container. Add the following CSS code in the _index.css_ file to give it a nice feel.
 
-```css{numberLines:true}
+```css:title=index.css {numberLines:true}
 header {
   background-color: #5c0080;
   margin-bottom: 4rem;

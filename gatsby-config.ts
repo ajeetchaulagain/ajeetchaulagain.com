@@ -110,7 +110,7 @@ const config: GatsbyConfig = {
           {
             resolve: 'gatsby-remark-code-titles',
             options: {
-              className: 'your-custom-class-name',
+              className: 'gatsby-remark-code-title-wrapper',
             },
           },
 

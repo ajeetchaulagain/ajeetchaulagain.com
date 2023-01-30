@@ -6,12 +6,13 @@ import { my } from 'styled-components-spacing';
 export const CodeBlockStyles = css`
   ${(props) =>
     props.theme.name === 'lightTheme' ? PrismOneLightTheme : DarkTheme};
-  .line-numbers.line-numbers .line-numbers-rows {
-    padding: 1rem 0.1rem 1rem 0.5rem;
-  }
 
-  // Wrapper for code block - Common styles for dark and light theme
+  // Common Styles for dark and light theme
   .gatsby-highlight {
     ${my(6)};
+  }
+  .line-numbers.line-numbers .line-numbers-rows {
+    padding: 1rem 0.1rem 1rem 0.5rem;
+    border-right: 1px solid ${({ theme }) => theme.colors.cardBorder};
   }
 `;
