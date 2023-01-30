@@ -129,5 +129,3 @@ Now its time to configure nodemon and babel in our project. Instead of running _
 ```
 
 ## Part 2 to be continued.
-
-q
