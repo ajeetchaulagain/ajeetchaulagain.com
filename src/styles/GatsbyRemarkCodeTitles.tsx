@@ -1,5 +1,5 @@
 import { css, DefaultTheme } from 'styled-components';
-import { mb, mt, py, p, pb } from 'styled-components-spacing';
+import { mb, mt, py, p } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
 
 export const GatsbyRemarkCodeTitles = css`
@@ -26,12 +26,24 @@ export const GatsbyRemarkCodeTitles = css`
         border-top-left-radius: unset;
         border-top-right-radius: unset;
         ${p(5)};
+
+        ${breakpoint('xs', 'md')`
+          ${p(5)};
+        `};
       }
     }
 
     ${breakpoint('xs', 'lg')`
        font-size: ${({ theme }: { theme: DefaultTheme }) =>
          theme.fontSizes.xsmall};
+    `};
+
+    ${breakpoint('xs', 'md')`
+        margin-left:-1rem;
+        margin-right:-1rem;
+        border-left:none;
+        border-right:none;
+        border-radius:unset;
     `};
   }
 `;

@@ -58,6 +58,12 @@ export const PrismOneLightTheme = css`
     border-radius: ${({ theme }) =>
       theme.borderRadius.base}; // Custom Edit by Ajeet
     border: 1px solid ${({ theme }) => theme.colors.cardBorder}; // Custom Edit by Ajeet
+
+    ${breakpoint('xs', 'md')`
+       border-left:none;
+       border-right:none;
+       border-radius:unset;
+    `}
   }
 
   /* Inline code */

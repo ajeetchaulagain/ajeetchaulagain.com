@@ -61,6 +61,12 @@ export const DarkTheme = css`
     border-radius: ${({ theme }) =>
       theme.borderRadius.base}; // Custom Edit by Ajeet
     border: 1px solid ${({ theme }) => theme.colors.cardBorder};
+
+    ${breakpoint('xs', 'md')`
+       border-left:none;
+       border-right:none;
+       border-radius:unset;
+    `}
   }
 
   /* Properties specific to inline code */
