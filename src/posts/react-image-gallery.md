@@ -46,13 +46,15 @@ Running the above command will open the new app in _localhost:3000_
 
 ### Clean up to create an image gallery
 
-The React app setup through create-react-app will have all the working files placed in a single directory src. The initial directory structure is something like this:
+The React app setup through create-react-app will have all the working files placed in a root of src directory. To keep things organized, Let's do a minor cleanup of the initial directory structure for non-required resources. The final directory would be something like this:
 
-![Initial dirctory structure through create-react-app](../images/react-image-gallery/initial-directory-structure.jpg)
-
-To keep things organized, Let's do a minor cleanup of the initial directory structure for non-required resources. The final directory would be something like this:
-
-![Final dirctory structure](../images/react-image-gallery/final-direcotory-structure.jpg)
+```bash:title=Directory_Structure
+└── src
+    ├── components
+    ├── data
+    ├── index.js
+    └── styles
+```
 
 - _components_ directory will contain all our React components.
 - _data_ directory will contain data that need to feed in react-image-gallery
@@ -191,7 +193,22 @@ As you can see, In the above code, we are adding some styles to the wrapper of t
 
 ![Final image gallery](../images/react-image-gallery/final-application-screenshot.jpg)
 
-Yahoo! You now made a beautiful and responsive image gallery. You can view the demo for this app [here](https://github.com/ajeetchaulagain/react-image-gallery-demo)
+Yahoo! You now made a beautiful and responsive image gallery. You can view the demo for this app [here](https://github.com/ajeetchaulagain/react-image-gallery-demo). The directory structure at this point with files in place looks like:
+
+```bash:title=Directory_Structure
+└── src
+    ├── components
+    │   ├── App.js
+    │   └── App.test.js
+    ├── data
+    │   └── gallery-image.js
+    ├── index.js
+    ├── logo.svg
+    └── styles
+        ├── css-reset.css
+        ├── image-gallery.css
+        └── index.css
+```
 
 ## Customizing React image gallery
 
@@ -199,7 +216,7 @@ As you can see above, you made a beautiful image gallery without configuring any
 
 For example, suppose you want your gallery to be auto-played and don't want thumbnails to display. In that case, you can pass _autoPlay_ props to _true_ and showThumbnails props to _false_ in an ImageGallery component.
 
-```jsx:title=App.js {13}
+```js:title=App.js {13-16}
 import ImageGallery from 'react-image-gallery';
 import { images } from '../data/gallery-image';
 
@@ -212,7 +229,10 @@ function App() {
         </div>
       </header>
       <div className="image-gallery-wrapper">
-        <ImageGallery items={images} autoPlay={true} showThumbnails={false} />;
+        <ImageGallery
+          items={images}
+          autoPlay={true}
+          showThumbnails={false} />
       </div>
     </div>
   );
