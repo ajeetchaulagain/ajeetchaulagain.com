@@ -5,6 +5,7 @@ import { MarkdownTableStyles } from './MarkdownTableStyles';
 import { CodeBlockStyles } from './CodeBlockStyles';
 import * as GoogleFonts from './GoogleFonts';
 import { GatsbyRemarkCodeTitles } from './GatsbyRemarkCodeTitles';
+import { ScrollBarStyles } from './ScrollBarStyles';
 
 export const GlobalStyle = createGlobalStyle`
  ${CSSReset};
@@ -13,4 +14,5 @@ export const GlobalStyle = createGlobalStyle`
  ${CodeBlockStyles};
  ${GoogleFonts};
  ${GatsbyRemarkCodeTitles};
+ ${ScrollBarStyles};
 `;
