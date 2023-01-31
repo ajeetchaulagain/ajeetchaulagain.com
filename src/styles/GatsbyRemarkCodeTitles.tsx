@@ -1,5 +1,5 @@
 import { css, DefaultTheme } from 'styled-components';
-import { mb, mt, py } from 'styled-components-spacing';
+import { mb, mt, py, p, pb } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
 
 export const GatsbyRemarkCodeTitles = css`
@@ -19,12 +19,13 @@ export const GatsbyRemarkCodeTitles = css`
 
     & + .gatsby-highlight {
       ${mb(6)};
-      ${mt(0)}
+      ${mt(0)};
 
       & > pre[class*='language-'] {
-        border-top: unset;
+        border-top: none;
         border-top-left-radius: unset;
         border-top-right-radius: unset;
+        ${p(5)};
       }
     }
 
