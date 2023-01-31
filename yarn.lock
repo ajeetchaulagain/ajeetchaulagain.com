@@ -1160,6 +1160,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/domine/-/domine-4.5.9.tgz#019076bf07531d5479faed9bd596048b552e70bf"
   integrity sha512-mmGDyjnIZy44R2+abcREAA7Azl/2d8zChYS1F6hxOQ2jnRYGs+Ydz5wGQ9t2ofnip3sOqNqFsszkL/jY12+lOQ==
 
+"@fontsource/fira-code@^4.5.13":
+  version "4.5.13"
+  resolved "https://registry.yarnpkg.com/@fontsource/fira-code/-/fira-code-4.5.13.tgz#7ddd62472f7e6002acf9371815090eecf5d28f8c"
+  integrity sha512-T1IG6/2AXSwEKwlrEm3kyIL3RQTMblPyj68HgnBGl0IBGFxgS5LZ7StRdDo/QimJ4Tz6FQGHuy1Y/ShNxaUefA==
+
 "@fontsource/roboto@^4.5.8":
   version "4.5.8"
   resolved "https://registry.yarnpkg.com/@fontsource/roboto/-/roboto-4.5.8.tgz#56347764786079838faf43f0eeda22dd7328437f"

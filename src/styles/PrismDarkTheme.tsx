@@ -14,11 +14,12 @@ export const DarkTheme = css`
   pre[class*='language-'] {
     background: ${({ theme }) => theme.colors.secondaryBackground};
     color: #ffffff;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; /* this is the default */
+    font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
+      monospace; /* this is the default */
     /* The following properties are standard, please leave them as they are */
-    font-size: 1.05rem;
+    font-size: 1rem;
     ${breakpoint('xs', 'lg')`
-     font-size: 0.95rem
+     font-size: 0.9rem
     `};
     direction: ltr;
     text-align: left;

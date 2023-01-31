@@ -14,10 +14,11 @@ export const PrismOneLightTheme = css`
   pre[class*='language-'] {
     background: hsl(230, 1%, 98%);
     color: #423839;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    font-size: 1.05rem;
+    font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
+      monospace;
+    font-size: 1rem;
     ${breakpoint('xs', 'lg')`
-     font-size: 0.95rem
+     font-size: 0.9rem
     `};
     direction: ltr;
     text-align: left;

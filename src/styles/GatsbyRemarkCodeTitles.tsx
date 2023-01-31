@@ -15,6 +15,7 @@ export const GatsbyRemarkCodeTitles = css`
     border-top-left-radius: ${({ theme }) => theme.borderRadius.base};
     border-top-right-radius: ${({ theme }) => theme.borderRadius.base};
     background-color: ${({ theme }) => theme.colors.tertiaryBackground};
+    line-height: ${({ theme }) => theme.lineHeights.extraCondensed};
 
     & + .gatsby-highlight {
       ${mb(6)};
