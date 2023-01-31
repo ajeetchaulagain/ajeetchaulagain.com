@@ -123,7 +123,7 @@ export const images = [
 
 Once data is prepared, you will import the ImageGallery component exported by the package and images you just prepared in App.js file and use it through items props. The _App.js_ file will end up with something like this:
 
-```jsx:title=App.js {numberLines:false}
+```jsx:title=App.js {1,13}{numberLines:false}
 import ImageGallery from 'react-image-gallery';
 import { images } from '../data/gallery-image';
 
@@ -199,8 +199,26 @@ As you can see above, you made a beautiful image gallery without configuring any
 
 For example, suppose you want your gallery to be auto-played and don't want thumbnails to display. In that case, you can pass _autoPlay_ props to _true_ and showThumbnails props to _false_ in an ImageGallery component.
 
-```js
-<ImageGallery items={images} autoPlay={true} showThumbnails={false} />
+```jsx:title=App.js {13}
+import ImageGallery from 'react-image-gallery';
+import { images } from '../data/gallery-image';
+
+function App() {
+  return (
+    <div className="app">
+      <header>
+        <div className="header-wrapper">
+          <h1>React image gallery demo</h1>
+        </div>
+      </header>
+      <div className="image-gallery-wrapper">
+        <ImageGallery items={images} autoPlay={true} showThumbnails={false} />;
+      </div>
+    </div>
+  );
+}
+
+export default App;
 ```
 
 This is how it looks with above props in place:
