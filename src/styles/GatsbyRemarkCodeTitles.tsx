@@ -28,7 +28,7 @@ export const GatsbyRemarkCodeTitles = css`
         ${p(5)};
 
         ${breakpoint('xs', 'md')`
-          ${p(5)};
+          ${p(4)};
         `};
       }
     }
