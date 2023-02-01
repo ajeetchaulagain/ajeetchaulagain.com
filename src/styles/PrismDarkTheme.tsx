@@ -19,7 +19,7 @@ export const DarkTheme = css`
     /* The following properties are standard, please leave them as they are */
     font-size: 1rem;
     ${breakpoint('xs', 'lg')`
-     font-size: 0.9rem
+     font-size: 0.95rem
     `};
     direction: ltr;
     text-align: left;

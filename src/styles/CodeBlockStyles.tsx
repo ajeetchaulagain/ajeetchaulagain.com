@@ -21,7 +21,7 @@ export const CodeBlockStyles = css`
   .gatsby-highlight-code-line {
     background-color: ${({ theme }) => theme.colors.codeHighlightBackground};
     display: block;
-    padding-left: calc(1rem - 5px);
+    padding-left: calc(1.5rem - 5px);
     border-left: 5px solid
       ${({ theme }) => theme.colors.codeHighlightBorderColor};
     margin-left: -1.5rem;
@@ -29,6 +29,7 @@ export const CodeBlockStyles = css`
     ${breakpoint('xs', 'md')`
         margin-left:-1rem;
         margin-right:-1rem;
+        padding-left: calc(1rem - 5px);
     `};
   }
 

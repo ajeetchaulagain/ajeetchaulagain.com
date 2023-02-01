@@ -216,7 +216,7 @@ As you can see above, you made a beautiful image gallery without configuring any
 
 For example, suppose you want your gallery to be auto-played and don't want thumbnails to display. In that case, you can pass _autoPlay_ props to _true_ and showThumbnails props to _false_ in an ImageGallery component.
 
-```js:title=App.js {13-16}
+```jsx:title=App.js {13-16}
 import ImageGallery from 'react-image-gallery';
 import { images } from '../data/gallery-image';
 

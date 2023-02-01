@@ -12,13 +12,13 @@ export const PrismOneLightTheme = css`
 
   code[class*='language-'],
   pre[class*='language-'] {
-    background: hsl(230, 1%, 98%);
-    color: #423839;
+    background: #ffffff;
+    color: #181818;
     font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
       monospace;
     font-size: 1rem;
     ${breakpoint('xs', 'lg')`
-     font-size: 0.9rem
+     font-size: 0.95rem
     `};
     direction: ltr;
     text-align: left;
@@ -114,7 +114,7 @@ export const PrismOneLightTheme = css`
   .token.regex,
   .token.attr-value,
   .token.attr-value > .token.punctuation {
-    color: hsl(119, 34%, 47%);
+    color: #147285;
   }
 
   .token.variable,
