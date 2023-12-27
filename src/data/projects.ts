@@ -31,6 +31,23 @@ export const projects: ProjectMetaDetails[] = [
     ],
   },
   {
+    title: 'Next.js Blog Starter Kit',
+    description:
+      'A blog starter kit built using Next.js app router, styled-components, typescript and configured to source blog post from a markdown files.',
+    actions: [
+      {
+        text: 'Source',
+        to: 'https://github.com/ajeetchaulagain/nextjs-blog-starter-styled-components',
+        iconName: 'Github',
+      },
+      {
+        text: 'Demo',
+        to: 'https://nextjs-blog-styled-components.vercel.app/',
+        iconName: 'ExternalLink',
+      },
+    ],
+  },
+  {
     title: 'React Server Rendering',
     description: 'Demonstrates how React app can be server rendered',
     actions: [
