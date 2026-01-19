@@ -42,7 +42,7 @@ export const projects: ProjectMetaDetails[] = [
       },
       {
         text: 'Demo',
-        to: 'https://nextjs-blog-styled-components.vercel.app/',
+        to: 'https://nextjs-blog-styled.vercel.app/',
         iconName: 'ExternalLink',
       },
     ],
