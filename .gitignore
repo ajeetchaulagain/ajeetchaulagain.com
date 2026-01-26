@@ -73,3 +73,10 @@ yarn-error.log
 .vscode/
 
 storybook-static/
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
