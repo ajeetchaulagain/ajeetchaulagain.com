@@ -18,4 +18,4 @@ test('Blog Listing page Visual Regression', async ({ page }) => {
 
 test('Project Listing page Regression', async ({ page }) => {
   await page.goto('/projects');
-
+});
