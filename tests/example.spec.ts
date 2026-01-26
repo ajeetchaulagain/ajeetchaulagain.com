@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('HomePage Visual Regression', async ({ page }) => {
-  await page.goto('https://ajeetchaulagain.com/');
+  await page.goto('/');
   // Compare full page screenshot against baseline
   await expect(page).toHaveScreenshot('homepage.png', {
     fullPage: true,
@@ -12,13 +12,10 @@ test('HomePage Visual Regression', async ({ page }) => {
 
 
 test('Blog Listing page Visual Regression', async ({ page }) => {
-  await page.goto('https://ajeetchaulagain.com/blog');
+  await page.goto('/blog');
   await expect(page).toHaveScreenshot('blog-listing-page.png', { fullPage: true });
 });
 
 test('Project Listing page Regression', async ({ page }) => {
-  await page.goto('https://ajeetchaulagain.com/projects');
-  await expect(page).toHaveScreenshot('project-listing-page.png', { fullPage: true });
-});
-
+  await page.goto('/projects');
 

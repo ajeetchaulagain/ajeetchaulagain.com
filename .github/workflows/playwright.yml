@@ -17,8 +17,18 @@ jobs:
       run: npm install -g yarn && yarn
     - name: Install Playwright Browsers
       run: yarn playwright install --with-deps
-    - name: Run Playwright tests
+    - name: Wait for Netlify deployment
+      uses: nwtgis/wait-for-netlify-action@v2
+      id: netlify
+      with:
+        site_id: ${{ secrets.NETLIFY_SITE_ID }}
+        max_timeout: 600
+      env:
+        NETLIFY_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+    - name: Run Playwright tests against preview
       run: yarn playwright test
+      env:
+        PLAYWRIGHT_TEST_BASE_URL: ${{ steps.netlify.outputs.url }}
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
