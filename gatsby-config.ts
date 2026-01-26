@@ -52,40 +52,41 @@ const config: GatsbyConfig = {
     // Linting
     // --------------------------------------------------------------------
 
-    {
-      resolve: 'gatsby-plugin-prettier-eslint',
-      options: {
-        cwd: process.cwd(),
-        watch: true,
-        initialScan: true,
-        onChangeFullScanLint: false,
-        onChangeFullScanFormat: false,
-        prettierLast: false,
-        ignorePatterns: [
-          '**/node_modules/**/*',
-          '**/.git/**/*',
-          '**/dist/**/*',
-          '.cache/**/*',
-          'public/**/*',
-        ],
-        prettier: {
-          patterns: [],
-          ignorePatterns: [],
-          customOptions: {},
-        },
-        eslint: {
-          patterns: [],
-          ignorePatterns: [],
-          formatter: 'stylish',
-          maxWarnings: undefined,
-          emitWarning: true,
-          failOnError: false,
-          failOnWarning: false,
-          plugins: [],
-          customOptions: {},
-        },
-      },
-    },
+    // Disabled due to CLIEngine deprecation in Gatsby v5
+    // {
+    //   resolve: 'gatsby-plugin-prettier-eslint',
+    //   options: {
+    //     cwd: process.cwd(),
+    //     watch: true,
+    //     initialScan: true,
+    //     onChangeFullScanLint: false,
+    //     onChangeFullScanFormat: false,
+    //     prettierLast: false,
+    //     ignorePatterns: [
+    //       '**/node_modules/**/*',
+    //       '**/.git/**/*',
+    //       '**/dist/**/*',
+    //       '.cache/**/*',
+    //       'public/**/*',
+    //     ],
+    //     prettier: {
+    //       patterns: [],
+    //       ignorePatterns: [],
+    //       customOptions: {},
+    //     },
+    //     eslint: {
+    //       patterns: [],
+    //       ignorePatterns: [],
+    //       formatter: 'stylish',
+    //       maxWarnings: undefined,
+    //       emitWarning: true,
+    //       failOnError: false,
+    //       failOnWarning: false,
+    //       plugins: [],
+    //       customOptions: {},
+    //     },
+    //   },
+    // },
 
     // --------------------------------------------------------------------
     // Markdown

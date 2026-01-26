@@ -12,7 +12,7 @@ export const useBlogPostList = () => {
     query {
       allMdx(
         filter: { fields: { contentType: { eq: "posts" } } }
-        sort: { order: DESC, fields: [frontmatter___date] }
+        sort: { frontmatter: { date: DESC } }
         limit: 6
       ) {
         edges {
