@@ -1,4 +1,22 @@
 import path from 'path';
+import readingTime from 'reading-time';
+
+export const createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+
+  createTypes(`
+    type MdxFields {
+      slug: String
+      contentType: String
+      timeToRead: Int
+    }
+
+    extend type Mdx {
+      fields: MdxFields
+      timeToRead: Int
+    }
+  `);
+};
 
 export const onCreateWebpackConfig = ({ stage, actions }) => {
   actions.setWebpackConfig({
@@ -12,13 +30,19 @@ export const onCreateNode = ({ node, actions }) => {
   const { createNode, createNodeField } = actions;
 
   if (node.internal.type === 'Mdx') {
-    const slug = path.basename(node.fileAbsolutePath, '.md');
+    // In Gatsby v5, use node.internal.contentFilePath for the file path
+    const fileAbsolutePath = node.fileAbsolutePath || node.internal.contentFilePath;
 
-    const absolutePath = node.fileAbsolutePath;
+    if (!fileAbsolutePath) {
+      console.warn('No file path found for MDX node', node.id);
+      return;
+    }
 
-    console.log('Type of ' + typeof absolutePath);
+    const slug = path.basename(fileAbsolutePath, '.md');
 
-    const pathDirectory = path.dirname(absolutePath);
+    console.log('Type of ' + typeof fileAbsolutePath);
+
+    const pathDirectory = path.dirname(fileAbsolutePath);
 
     console.log(`path dir: ${pathDirectory}`);
 
@@ -36,6 +60,16 @@ export const onCreateNode = ({ node, actions }) => {
       name: 'contentType',
       value: contentType,
     });
+
+    // Calculate reading time
+    const time = readingTime(node.body);
+    const timeToRead = Math.ceil(time.minutes);
+
+    createNodeField({
+      node,
+      name: 'timeToRead',
+      value: timeToRead,
+    });
   }
 };
 
@@ -51,7 +85,7 @@ export const createPages = async ({ graphql, actions }) => {
     query {
       allMdx(
         filter: { fields: { contentType: { eq: "posts" } } }
-        sort: { order: ASC, fields: [frontmatter___date] }
+        sort: {frontmatter: {date: ASC}}
       ) {
         edges {
           node {
