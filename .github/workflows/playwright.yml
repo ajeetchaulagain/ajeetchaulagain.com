@@ -25,7 +25,6 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         environment_url: https://deploy-preview-${{ github.event.pull_request.number }}--ajeetchaulagain.netlify.app
         state: success
-        auto_inactive: false
       if: github.event_name == 'pull_request'
     
     - name: Run Playwright tests (PR preview)
