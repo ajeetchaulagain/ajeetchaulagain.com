@@ -19,17 +19,24 @@ jobs:
       run: yarn playwright install --with-deps
     
     - name: Wait for Netlify deployment
-      uses: jakejarvis/wait-for-netlify-action@v2
-      id: netlify
+      uses: chrnorm/deployment-status@releases/v1
+      id: deployment_status
       with:
-        site_id: ${{ secrets.NETLIFY_SITE_ID }}
-      env:
-        NETLIFY_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
+        environment_url: https://deploy-preview-${{ github.event.pull_request.number }}--ajeetchaulagain.netlify.app
+        state: success
+        auto_inactive: false
+      if: github.event_name == 'pull_request'
     
-    - name: Run Playwright tests against preview
+    - name: Run Playwright tests (PR preview)
       run: yarn playwright test
       env:
-        PLAYWRIGHT_TEST_BASE_URL: ${{ steps.netlify.outputs.url }}
+        PLAYWRIGHT_TEST_BASE_URL: https://deploy-preview-${{ github.event.pull_request.number }}--ajeetchaulagain.netlify.app
+      if: github.event_name == 'pull_request'
+    
+    - name: Run Playwright tests (production)
+      run: yarn playwright test
+      if: github.event_name == 'push'
     
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
