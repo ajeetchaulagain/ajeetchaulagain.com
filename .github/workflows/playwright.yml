@@ -18,24 +18,31 @@ jobs:
     - name: Install Playwright Browsers
       run: yarn playwright install --with-deps
     
-    - name: Wait for Netlify deployment
-      uses: chrnorm/deployment-status@releases/v1
-      id: deployment_status
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        environment_url: https://deploy-preview-${{ github.event.pull_request.number }}--ajeetchaulagain.netlify.app
-        state: success
+    - name: Wait for Netlify deployment (PR)
       if: github.event_name == 'pull_request'
+      run: |
+        PREVIEW_URL="https://deploy-preview-${{ github.event.pull_request.number }}--ajeetchaulagain.netlify.app"
+        echo "Waiting for $PREVIEW_URL to be ready..."
+        for i in {1..60}; do
+          if curl -f "$PREVIEW_URL" > /dev/null 2>&1; then
+            echo "✓ Netlify preview is ready!"
+            exit 0
+          fi
+          echo "Attempt $i/60: Waiting for deployment..."
+          sleep 10
+        done
+        echo "✗ Deployment did not become ready in time"
+        exit 1
     
     - name: Run Playwright tests (PR preview)
+      if: github.event_name == 'pull_request'
       run: yarn playwright test
       env:
         PLAYWRIGHT_TEST_BASE_URL: https://deploy-preview-${{ github.event.pull_request.number }}--ajeetchaulagain.netlify.app
-      if: github.event_name == 'pull_request'
     
     - name: Run Playwright tests (production)
-      run: yarn playwright test
       if: github.event_name == 'push'
+      run: yarn playwright test
     
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
