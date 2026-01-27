@@ -47,15 +47,6 @@ jobs:
         env:
           PLAYWRIGHT_TEST_BASE_URL: https://deploy-preview-${{ github.event.pull_request.number }}--ajeetchaulagain.netlify.app
 
-      - name: Commit updated snapshots
-        if: github.event_name == 'pull_request' && steps.test-run.outcome == 'failure'
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add tests/visual-regression.spec.ts-snapshots/
-          git commit -m "chore: update playwright snapshots" || true
-          git push
-
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
