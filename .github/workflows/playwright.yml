@@ -38,6 +38,7 @@ jobs:
         continue-on-error: true
         id: test-run
         env:
+          CI: true #Prevents snapshot updates on CI
           PLAYWRIGHT_TEST_BASE_URL: https://deploy-preview-${{ github.event.pull_request.number }}--ajeetchaulagain.netlify.app
 
       - name: Update snapshots if tests failed
