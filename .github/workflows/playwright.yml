@@ -35,7 +35,6 @@ jobs:
       - name: Run Playwright tests (PR preview)
         if: github.event_name == 'pull_request'
         run: yarn playwright test --reporter=html
-        continue-on-error: true
         id: test-run
         env:
           CI: true #Prevents snapshot updates on CI
