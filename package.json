@@ -22,6 +22,7 @@
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "babel-plugin-styled-components": "^2.0.7",
+    "dotenv": "^17.2.3",
     "gatsby": "^4.21.0",
     "gatsby-plugin-google-analytics": "^3.7.1",
     "gatsby-plugin-image": "^2.21.0",
@@ -50,6 +51,9 @@
     "styled-components-spacing": "^3.1.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.58.0",
+    "@types/dotenv": "^8.2.3",
+    "@types/node": "^25.0.10",
     "@types/react": "^18.0.6",
     "@types/react-dom": "^17.0.9",
     "@types/react-helmet": "^6.1.2",
