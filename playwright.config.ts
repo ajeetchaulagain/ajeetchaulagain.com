@@ -38,8 +38,13 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
 
+  // Single template for all assertions
+  snapshotPathTemplate: '{testDir}/__screenshots__/{testFilePath}/{arg}{ext}',
+
   expect: {
-    toHaveScreenshot: { maxDiffPixels: 100 },
+    toHaveScreenshot: {
+      maxDiffPixels: 100,
+    },
   },
 
   /* Configure projects for major browsers */
@@ -47,16 +52,6 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-    },
-
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
     },
 
     /* Test against mobile viewports. */

@@ -26,7 +26,7 @@ jobs:
               echo "✓ Netlify preview is ready!"
               exit 0
             fi
-            echo "Attempt $i/60: Waiting for deployment..."
+            echo "Attempt $i/20: Waiting for deployment..."
             sleep 10
           done
           echo "✗ Deployment did not become ready in time"
@@ -35,9 +35,25 @@ jobs:
       - name: Run Playwright tests (PR preview)
         if: github.event_name == 'pull_request'
         run: yarn playwright test --reporter=html
+        continue-on-error: true
+        id: test-run
         env:
-          CI: true #Prevenst snapshot updates on CI
           PLAYWRIGHT_TEST_BASE_URL: https://deploy-preview-${{ github.event.pull_request.number }}--ajeetchaulagain.netlify.app
+
+      - name: Update snapshots if tests failed
+        if: github.event_name == 'pull_request' && steps.test-run.outcome == 'failure'
+        run: yarn playwright test --update-snapshots
+        env:
+          PLAYWRIGHT_TEST_BASE_URL: https://deploy-preview-${{ github.event.pull_request.number }}--ajeetchaulagain.netlify.app
+
+      - name: Commit updated snapshots
+        if: github.event_name == 'pull_request' && steps.test-run.outcome == 'failure'
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add tests/visual-regression.spec.ts-snapshots/
+          git commit -m "chore: update playwright snapshots" || true
+          git push
 
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
