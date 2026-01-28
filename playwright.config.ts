@@ -42,15 +42,15 @@ export default defineConfig({
 
   expect: {
     toHaveScreenshot: {
-      maxDiffPixelRatio: 0.1, // Allow 10% difference
+      maxDiffPixelRatio: 0.05, // Allow 5% difference
     },
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
     },
 
     /* Test against mobile viewports. */
