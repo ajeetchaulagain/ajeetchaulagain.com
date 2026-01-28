@@ -35,7 +35,7 @@ export const LandingPageHero = (): JSX.Element => {
             </StyledHeading>
 
             <StyledParagraph>
-              I am pragmatic software engineer,passionate and proficient
+              I am pragmatic software engineer, passionate and proficient
               building applications that are scalable, maintainable and well
               architected with beautifully crafted code.
             </StyledParagraph>
