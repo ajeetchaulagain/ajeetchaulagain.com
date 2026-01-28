@@ -34,16 +34,10 @@ jobs:
 
       - name: Run Playwright tests (PR preview)
         if: github.event_name == 'pull_request'
-        run: yarn playwright test --reporter=html
+        run: PLAYWRIGHT_JSON_OUTPUT_NAME=results.json yarn playwright test --reporter=html --reporter=json
         id: test-run
         env:
           CI: true #Prevents snapshot updates on CI
-          PLAYWRIGHT_TEST_BASE_URL: https://deploy-preview-${{ github.event.pull_request.number }}--ajeetchaulagain.netlify.app
-
-      - name: Update snapshots if tests failed
-        if: github.event_name == 'pull_request' && steps.test-run.outcome == 'failure'
-        run: yarn playwright test --update-snapshots
-        env:
           PLAYWRIGHT_TEST_BASE_URL: https://deploy-preview-${{ github.event.pull_request.number }}--ajeetchaulagain.netlify.app
 
       - uses: actions/upload-artifact@v4
