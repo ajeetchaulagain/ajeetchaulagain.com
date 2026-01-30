@@ -30,14 +30,15 @@ export const LandingPageHero = (): JSX.Element => {
           </AboutImageWrapper>
 
           <AboutContentWrapper>
-            <StyledHeading type="sans-serif">
-              <span style={{ fontWeight: 100 }}> Hello. I'm </span>Ajeet !
+            <StyledHeading type="serif">
+              <span style={{ fontWeight: 100 }}> Hi. I'm </span>Ajeet,
             </StyledHeading>
 
             <StyledParagraph>
-              I am pragmatic software engineer, passionate and proficient
-              building applications that are scalable, maintainable and well
-              architected with beautifully crafted code.
+              I’m a Software Engineer with 5+ years of commercial experience
+              building production systems across fullstack. I work mainly with
+              TypeScript, React, Node.js, and AWS, and enjoy taking ownership of
+              software from design through to production.
             </StyledParagraph>
 
             <ButtonLink

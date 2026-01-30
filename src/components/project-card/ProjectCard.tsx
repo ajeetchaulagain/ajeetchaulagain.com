@@ -10,7 +10,7 @@ export const ProjectCard = ({
   headingProps = {
     level: 'h2',
     size: 'small',
-    type: 'sans-serif',
+    type: 'serif',
   },
 }: ProjectCardProps) => {
   return (
