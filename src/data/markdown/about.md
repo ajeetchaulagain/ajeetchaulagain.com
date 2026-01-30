@@ -26,4 +26,4 @@ These are the tools I’ve spent the most time with in production, but I’m mor
 
 I’m interested in Senior Software Engineer roles where I can work on meaningful problems, contribute to well-structured systems, and help teams build software that remains reliable and maintainable as it grows.
 
-f you’d like to get in touch, feel free to reach out via email at chaulagainajeet@gmail.com — I’m always happy to connect and chat about software.
+If you’d like to get in touch, feel free to reach out via email at chaulagainajeet@gmail.com — I’m always happy to connect and chat about software.

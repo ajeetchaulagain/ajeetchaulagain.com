@@ -35,7 +35,7 @@ export const LandingPageHero = (): JSX.Element => {
             </StyledHeading>
 
             <StyledParagraph>
-              I am Software Engineer with 5+ years of commercial experience
+              I’m a Software Engineer with 5+ years of commercial experience
               building production systems across fullstack. I work mainly with
               TypeScript, React, Node.js, and AWS, and enjoy taking ownership of
               software from design through to production.
