@@ -3,22 +3,27 @@ title: 'About Me'
 description: 'Pragmatic software engineer passionate about building scalable and maintainable software applications with beautifully crafted code. This is my digital space.'
 ---
 
-# About
+## About
 
-Hello. I'm Ajeet Chaulagain, a full stack developer currently living in Melbourne, Australia and originally from Kathmandu, Nepal. I have got a serious passion for programming and developing software products that will have great value to the end-user.
+Hey — I’m Ajeet.
 
-## Working Expertise
+I’m a Software Engineer with 5+ years of commercial experience building and maintaining long-lived, production systems across consulting and enterprise environments. I had been building software well before entering industry, with early foundations shaped through study and hands-on work — a craft I’ve stayed deeply engaged with over time.
 
-- _Web application development with \_React, Node, Express, MongoDB, Gatsby, and GraphQL._
-- Web Application Development with _JAM Stack (GatsbyJS)_
-- Native Android application development (in Java)
-- Familiarity with implementing concept of _Progressive Web App (PWA)_ in a site.
-- Working knowledge of tools associated with _incorporating CI/CD pipeline in a project._
+I enjoy working on software where the challenge isn’t just shipping features, but making sound decisions that hold up as systems, teams, and requirements evolve. Much of my background has been in consulting, working across multiple teams and domains, which has shaped how I think about trade-offs, ownership, and building software that works in real-world conditions.
 
-### My current set of toolbox and technologies:
+## What I Work With
 
-Reactjs, Node.js, Express, MongoDB, GatsbyJS, GraphQL, HTML5 & CSS3, Javascript Docker, Webpack, Babel, Git, Github, npm, postman, Visual Studio Code
+Most of my recent commercial experience has been centred around a TypeScript-first stack, and that’s where I’m most effective.
 
-### Need a developer for your next project?
+- **Frontend:** TypeScript, React, Next.js, Vue, Nuxt
+- **Backend:** Node.js, NestJS, GraphQL, REST
+- **Cloud & DevOps:** AWS, Docker, CI/CD (GitHub Actions, Buildkite)
+- **Quality:** Unit, integration, and end-to-end testing (Jest, Cypress, Playwright)
 
-I do full stack web application development using MERN stack and JAM Stack.You can view some of my [projects and its case study.](/projects)
+These are the tools I’ve spent the most time with in production, but I’m more interested in choosing the right approach for the problem than being tied to any specific technology.
+
+## What I’m Looking For
+
+I’m interested in Senior Software Engineer roles where I can work on meaningful problems, contribute to well-structured systems, and help teams build software that remains reliable and maintainable as it grows.
+
+f you’d like to get in touch, feel free to reach out via email at chaulagainajeet@gmail.com — I’m always happy to connect and chat about software.

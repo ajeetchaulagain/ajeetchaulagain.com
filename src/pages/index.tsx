@@ -33,7 +33,7 @@ const blogPostCardDecoratorOptions: BlogPostCardDecoratorOptions = {
   headingProps: {
     level: 'h3',
     size: 'small',
-    type: 'sans-serif',
+    type: 'serif',
   },
 };
 
@@ -41,7 +41,7 @@ const projectCardDecoratorOptions: ProjectCardDecoratorOptions = {
   headingProps: {
     level: 'h3',
     size: 'small',
-    type: 'sans-serif',
+    type: 'serif',
   },
 };
 

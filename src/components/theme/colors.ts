@@ -20,6 +20,7 @@ export const colors = {
   mantis: '#65be65',
   honeyDew: '#e6ffec',
   wageningenGreen15: '#2ea04326',
+  silver: '#C8C8C8',
 };
 
 export const darkThemeColor = {
@@ -41,6 +42,7 @@ export const darkThemeColor = {
   cardBorder: colors.darkGrey2,
   codeHighlightBackground: colors.wageningenGreen15,
   codeHighlightBorderColor: colors.mughalGreen,
+  silver: colors.silver,
 };
 
 export const lightThemeColor = {
@@ -62,6 +64,7 @@ export const lightThemeColor = {
   cardBorder: colors.light,
   codeHighlightBackground: colors.honeyDew,
   codeHighlightBorderColor: colors.mantis,
+  silver: colors.silver,
 };
 
 export const lightThemeButtonColors = {

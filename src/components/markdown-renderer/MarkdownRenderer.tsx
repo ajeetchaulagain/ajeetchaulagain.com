@@ -28,17 +28,17 @@ export const MarkdownRenderer = ({ children }: MarkdownRendererProps) => {
           </StyledHeading1>
         ),
         h2: ({ children }: HeadingProps) => (
-          <StyledHeading2 level="h2" size="large" type="sans-serif">
+          <StyledHeading2 level="h2" size="large" type="serif">
             {children}
           </StyledHeading2>
         ),
         h3: ({ children }: HeadingProps) => (
-          <StyledHeading level="h3" size="medium" type="sans-serif">
+          <StyledHeading level="h3" size="medium" type="serif">
             {children}
           </StyledHeading>
         ),
         h4: ({ children }: HeadingProps) => (
-          <StyledHeading level="h4" size="small" type="sans-serif">
+          <StyledHeading level="h4" size="small" type="serif">
             {children}
           </StyledHeading>
         ),

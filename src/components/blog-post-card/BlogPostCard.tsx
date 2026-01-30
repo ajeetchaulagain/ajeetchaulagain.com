@@ -22,7 +22,7 @@ export const BlogPostCard = ({
   headingProps = {
     level: 'h2',
     size: 'small',
-    type: 'sans-serif',
+    type: 'serif',
   },
 }: BlogPostCardProps) => {
   return (

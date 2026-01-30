@@ -72,11 +72,7 @@ export const StyledHeading = styled(Heading)`
 
 export const StyledParagraph = styled(Paragraph)`
   && {
-    color: ${({ theme }) =>
-      theme.name === 'lightTheme'
-        ? theme.colors.secondaryText
-        : theme.colors.primaryText};
-  }
+    color: ${({ theme }) => theme.colors.silver}
 `;
 
 export const AboutImageWrapper = styled.div`
