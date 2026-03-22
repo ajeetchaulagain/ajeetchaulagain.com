@@ -18,12 +18,8 @@ const config: GatsbyConfig = {
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-sitemap',
     `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'UA-54342929-2',
-      },
-    },
+    // TODO: Replace with gatsby-plugin-google-gtag once you have a GA4 measurement ID (G-XXXXXXXXXX)
+    // gatsby-plugin-google-analytics used UA tracking which was shut down July 2023
 
     // --------------------------------------------------------------------
     // Images, Stylings and Static
@@ -148,7 +144,6 @@ const config: GatsbyConfig = {
     },
   ],
 
-  pathPrefix: '/gatsby-portfolio',
 };
 
 export default config;

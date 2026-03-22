@@ -34,7 +34,7 @@ export const ProjectList = ({ projects }: ProjectListProps): JSX.Element => {
       {projects &&
         projects.map((project) => {
           return (
-            <ProjectCardWrapper>
+            <ProjectCardWrapper key={project.title}>
               <ProjectCard {...project} />
             </ProjectCardWrapper>
           );
