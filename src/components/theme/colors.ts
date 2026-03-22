@@ -61,6 +61,7 @@ export const lightThemeColor = {
   lightBackground: colors.light,
   oldSilver50: colors.oldSilver50,
   blueBell: colors.blueBell,
+  lightGrey: colors.lightGrey,
   cardBorder: colors.light,
   codeHighlightBackground: colors.honeyDew,
   codeHighlightBorderColor: colors.mantis,
