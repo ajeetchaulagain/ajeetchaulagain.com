@@ -45,6 +45,16 @@ Tests run against a live URL. Locally defaults to `https://ajeetchaulagain.com`;
 
 Global styles live in `src/styles/` (CSS reset, base styles, Prism themes for light/dark mode). Component styles are co-located with components using styled-components.
 
+## yarn resolutions
+
+The `resolutions` field in `package.json` pins specific transitive dependency versions. Do not remove these without understanding why they were added:
+
+| Package | Reason |
+|---------|--------|
+| `@types/react` | `@reach/router` (used internally by Gatsby) bundles its own older `@types/react`, causing duplicate React type conflicts. Pinned to force a single version. |
+| `webpack` | CVE-2025-68458 and CVE-2025-68157 (SSRF, LOW) introduced via `gatsby@5`. Fixed in `webpack@5.104.1`. |
+| `sharp` | Gatsby image plugins (gatsby-plugin-sharp, gatsby-transformer-sharp, gatsby-plugin-manifest, gatsby-sharp) each install their own nested copy of `sharp`, causing libvips integrity check failures on Netlify's Linux CI environment. Pinned to force a single hoisted installation. |
+
 ## Code style
 
 - ESLint with Airbnb config + TypeScript; Prettier with single quotes, 2-space indent, 80-char line width, trailing commas (es5)
