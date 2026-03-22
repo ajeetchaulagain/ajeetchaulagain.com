@@ -6,11 +6,18 @@ on:
         description: 'Base URL to run tests against'
         required: false
         default: 'https://ajeetchaulagain.com'
+      ref:
+        description: 'Branch to update snapshots on'
+        required: false
+        default: 'master'
 jobs:
   update-snapshots:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.ref || 'master' }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-node@v4
         with:
           node-version: 21
