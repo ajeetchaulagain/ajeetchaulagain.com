@@ -19,7 +19,7 @@ export const colors = {
   mughalGreen: '#316531',
   mantis: '#65be65',
   honeyDew: '#e6ffec',
-  wageningenGreen15: '#2ea04326',
+  wageningenGreen15: '#1d3526',
   silver: '#C8C8C8',
 };
 

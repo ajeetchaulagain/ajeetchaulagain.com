@@ -48,7 +48,7 @@ Running the above command will open the new app in _localhost:3000_
 
 The React app setup through create-react-app will have all the working files placed in a root of src directory. To keep things organized, Let's do a minor cleanup of the initial directory structure for non-required resources. The final directory would be something like this:
 
-```bash:title=Directory_Structure
+```bash:title=Directory_Structure&noCopy
 └── src
     ├── components
     ├── data
@@ -125,7 +125,7 @@ export const images = [
 
 Once data is prepared, you will import the ImageGallery component exported by the package and images you just prepared in App.js file and use it through items props. The _App.js_ file will end up with something like this:
 
-```jsx:title=App.js {1,13}{numberLines:false}
+```jsx:title=App.js {1,13}{numberLines:true}
 import ImageGallery from 'react-image-gallery';
 import { images } from '../data/gallery-image';
 
@@ -195,7 +195,7 @@ As you can see, In the above code, we are adding some styles to the wrapper of t
 
 Yahoo! You now made a beautiful and responsive image gallery. You can view the demo for this app [here](https://github.com/ajeetchaulagain/react-image-gallery-demo). The directory structure at this point with files in place looks like:
 
-```bash:title=Directory_Structure
+```bash:title=Directory_Structure&noCopy
 └── src
     ├── components
     │   ├── App.js
@@ -216,7 +216,7 @@ As you can see above, you made a beautiful image gallery without configuring any
 
 For example, suppose you want your gallery to be auto-played and don't want thumbnails to display. In that case, you can pass _autoPlay_ props to _true_ and showThumbnails props to _false_ in an ImageGallery component.
 
-```jsx:title=App.js {13-16}
+```jsx:title=App.js {13-16}{numberLines:true}
 import ImageGallery from 'react-image-gallery';
 import { images } from '../data/gallery-image';
 

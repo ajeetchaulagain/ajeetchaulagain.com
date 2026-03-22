@@ -1,4 +1,5 @@
 import type { GatsbyConfig } from 'gatsby';
+import remarkNoCopy from './plugins/remark-no-copy';
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -90,6 +91,9 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
+        mdxOptions: {
+          remarkPlugins: [remarkNoCopy],
+        },
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
@@ -143,7 +147,6 @@ const config: GatsbyConfig = {
       },
     },
   ],
-
 };
 
 export default config;
