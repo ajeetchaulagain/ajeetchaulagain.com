@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactContent from '../data/markdown/contact.md';
 import styled from 'styled-components';
 import { mt } from 'styled-components-spacing';
 import {
@@ -30,7 +31,6 @@ const SocialMediaContainer = styled.div`
 const ContactPage = () => {
   const {
     frontmatter: { title, description },
-    body,
   } = useContactPageDetails();
 
   return (
@@ -38,7 +38,7 @@ const ContactPage = () => {
       <SEO title={title} description={description} />
       <HeroBlank />
       <ContentRenderer>
-        <MarkdownRenderer>{body}</MarkdownRenderer>
+        <MarkdownRenderer><ContactContent /></MarkdownRenderer>
         <ContactForm />
         <Heading level="h2" size="small" type="sans-serif">
           Follow me on:

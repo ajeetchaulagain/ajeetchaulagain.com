@@ -103,7 +103,6 @@ const config: GatsbyConfig = {
               linkImagesToOriginal: false,
               quality: 80,
               loading: 'lazy',
-              tracedSVG: true,
             },
           },
 

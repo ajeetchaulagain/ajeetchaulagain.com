@@ -1,5 +1,4 @@
 import React from 'react';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 import { HeadingProps } from '../heading/Heading';
 import {
@@ -15,7 +14,7 @@ import {
 } from './styles';
 
 type MarkdownRendererProps = {
-  children: string;
+  children: React.ReactNode;
 };
 
 export const MarkdownRenderer = ({ children }: MarkdownRendererProps) => {
@@ -50,7 +49,7 @@ export const MarkdownRenderer = ({ children }: MarkdownRendererProps) => {
         span: Span,
       }}
     >
-      <MDXRenderer>{children}</MDXRenderer>
+      {children}
     </MDXProvider>
   );
 };
