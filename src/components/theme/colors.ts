@@ -21,6 +21,8 @@ export const colors = {
   honeyDew: '#e6ffec',
   wageningenGreen15: '#1d3526',
   silver: '#C8C8C8',
+  slate: '#aaaaaa',
+  charcoalMid: '#555555',
 };
 
 export const darkThemeColor = {
@@ -43,6 +45,7 @@ export const darkThemeColor = {
   codeHighlightBackground: colors.wageningenGreen15,
   codeHighlightBorderColor: colors.mughalGreen,
   silver: colors.silver,
+  tocText: colors.slate,
 };
 
 export const lightThemeColor = {
@@ -66,6 +69,7 @@ export const lightThemeColor = {
   codeHighlightBackground: colors.honeyDew,
   codeHighlightBorderColor: colors.mantis,
   silver: colors.silver,
+  tocText: colors.charcoalMid,
 };
 
 export const lightThemeButtonColors = {

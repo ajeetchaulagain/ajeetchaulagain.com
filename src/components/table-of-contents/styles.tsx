@@ -1,5 +1,57 @@
 import styled from 'styled-components';
 
+// ─── Mobile inline collapsible ───────────────────────────────────────────────
+
+export const MobileTocWrapper = styled.div`
+  position: sticky;
+  top: 4rem;
+  z-index: 10;
+  margin-bottom: 2rem;
+  background: ${({ theme }) => theme.colors.primaryBackground};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
+
+  @media (min-width: 1380px) {
+    display: none;
+  }
+`;
+
+export const MobileTocDetails = styled.details`
+  padding: 0.6rem 1rem;
+
+  summary {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: ${({ theme }) => theme.colors.tocText};
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      content: '▶';
+      font-size: 0.55rem;
+      transition: transform 0.2s ease;
+    }
+  }
+
+  &[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  &[open] summary {
+    margin-bottom: 0.75rem;
+  }
+`;
+
+// ─────────────────────────────────────────────────────────────────────────────
+
 export const TocWrapper = styled.nav`
   position: fixed;
   right: 3rem;
@@ -20,11 +72,11 @@ export const TocWrapper = styled.nav`
 `;
 
 export const TocTitle = styled.p`
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #888;
+  color: ${({ theme }) => theme.colors.tocText};
   margin: 0 0 0.6rem 0;
 `;
 
@@ -48,10 +100,10 @@ export const TocItem = styled.li<TocItemProps>`
   a {
     display: block;
     padding: 0.2rem 0;
-    font-size: 0.78rem;
+    font-size: 0.875rem;
     line-height: 1.4;
     color: ${({ theme, isActive }) =>
-      isActive ? theme.colors.brandPrimary : theme.colors.lightGrey};
+      isActive ? theme.colors.brandPrimary : theme.colors.tocText};
     text-decoration: none;
     transition: color 0.2s ease;
 

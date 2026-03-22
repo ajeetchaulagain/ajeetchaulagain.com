@@ -104,6 +104,7 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
           </PostHeaderRightColumn>
         </PostHeaderContainer>
 
+        <TableOfContents />
         <MarkdownRenderer>{props.children}</MarkdownRenderer>
 
         <PageNavigationWrapper>
