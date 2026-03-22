@@ -11,11 +11,47 @@ export const CodeBlockStyles = css`
   // Common Styles for dark and light theme
   .gatsby-highlight {
     ${my(6)};
+    position: relative;
 
     ${breakpoint('xs', 'md')`
         margin-left:-1rem;
         margin-right:-1rem;
     `};
+  }
+
+  .copy-code-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem;
+    background: transparent;
+    border: 1px solid ${({ theme }) => theme.colors.cardBorder};
+    border-radius: ${({ theme }) => theme.borderRadius.base};
+    color: ${({ theme }) => theme.colors.primaryText};
+    cursor: pointer;
+    opacity: 0.5;
+    transition: color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+    line-height: 0;
+
+    &:hover {
+      opacity: 1;
+      color: ${({ theme }) => theme.colors.brandPrimary};
+      border-color: ${({ theme }) => theme.colors.brandPrimary};
+    }
+
+    &.copied {
+      opacity: 1;
+      color: ${({ theme }) => theme.colors.brandPrimary};
+      border-color: ${({ theme }) => theme.colors.brandPrimary};
+    }
+
+    &--in-title {
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 
   .gatsby-highlight-code-line {
@@ -33,8 +69,25 @@ export const CodeBlockStyles = css`
     `};
   }
 
+  pre[class*='language-'].line-numbers {
+    padding-left: 3.8em !important;
+  }
+
+  /* Extend highlighted lines to cover the full line-numbers gutter */
+  pre[class*='language-'].line-numbers .gatsby-highlight-code-line {
+    margin-left: -3.8em;
+    padding-left: calc(3.8em - 5px);
+  }
+
   .line-numbers.line-numbers .line-numbers-rows {
-    padding: 1rem 0.1rem 1rem 0.5rem;
+    top: 1.5rem;
+    bottom: 1.5rem;
+    padding: 0 0.5rem 0 1rem;
     border-right: 1px solid ${({ theme }) => theme.colors.cardBorder};
+
+    ${breakpoint('xs', 'md')`
+      top: 1rem;
+      bottom: 1rem;
+    `};
   }
 `;

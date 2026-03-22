@@ -27,6 +27,7 @@ import {
   StyledLink,
 } from './styles';
 import { DateAndTimeComponent, TagsWrapper } from '../styles';
+import useCopyCode from 'hooks/useCopyCode';
 
 export const query = graphql`
   query BlogPageQuery($slug: String!) {
@@ -65,6 +66,8 @@ type PageContextProps = {
 const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
   props
 ): JSX.Element => {
+  useCopyCode();
+
   const { next, prev } = props.pageContext;
 
   const {

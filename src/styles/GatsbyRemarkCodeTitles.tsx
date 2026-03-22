@@ -6,6 +6,7 @@ export const GatsbyRemarkCodeTitles = css`
   .gatsby-remark-code-title-wrapper {
     ${py(2)};
     ${mt(6)};
+    position: relative;
     font-family: ${({ theme }) => theme.fonts.body};
     font-size: ${({ theme }) => theme.fontSizes.small};
     color: ${({ theme }) => theme.colors.brandPrimary};
