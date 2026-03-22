@@ -77,7 +77,8 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "resolutions": {
-    "@types/react": "^18.0.6"
+    "@types/react": "^18.0.6",
+    "webpack": "^5.104.1"
   },
   "engines": {
     "node": ">=18.0.0"
