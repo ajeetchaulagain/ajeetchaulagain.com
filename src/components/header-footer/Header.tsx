@@ -53,7 +53,7 @@ export const Header = (): JSX.Element => {
               </HomeTextNavItem>
 
               {navItemsWithoutHomePageLink.map(({ title, url }) => (
-                <NavItem>
+                <NavItem key={url}>
                   <Link to={url} activeClassName="activeNavItem">
                     {title}
                   </Link>

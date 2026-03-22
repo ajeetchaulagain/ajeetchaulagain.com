@@ -89,8 +89,8 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
             </DateAndTimeComponent>
 
             <TagsWrapper>
-              {tags.map((tag, index) => {
-                return <Tag key={index}>{tag}</Tag>;
+              {tags.map((tag) => {
+                return <Tag key={tag}>{tag}</Tag>;
               })}
             </TagsWrapper>
           </PostHeaderLeftColumn>

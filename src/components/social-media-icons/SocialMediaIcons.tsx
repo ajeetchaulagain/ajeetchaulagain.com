@@ -7,7 +7,7 @@ export const SocialMediaIcons = () => {
     <SocialMediaList>
       {socialMediaLinks.map(({ url, IconComponent, ariaLabel }) => {
         return (
-          <ListItem>
+          <ListItem key={url as string}>
             <StyledAnchorLink
               to={url as string}
               aria-label={ariaLabel as string}

@@ -38,8 +38,8 @@ export const BlogPostCard = ({
           </DateAndTimeComponent>
           {tags && tags.length && (
             <TagsWrapper>
-              {tags.map((tag, index) => (
-                <Tag key={index} size="small">
+              {tags.map((tag) => (
+                <Tag key={tag} size="small">
                   {tag}
                 </Tag>
               ))}
