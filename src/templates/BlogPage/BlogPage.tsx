@@ -14,6 +14,7 @@ import {
   Tag,
   StyledGatsbyImage,
   Comments,
+  TableOfContents,
 } from 'components';
 import { BlogPostType, BlogPostNode } from 'markdown-types';
 import {
@@ -80,6 +81,7 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
 
   return (
     <MasterLayout>
+      <TableOfContents />
       <SEO title={title} description={description} />
       <HeroBlank />
       <ContentRenderer>

@@ -20,3 +20,4 @@ export * from './hero-blank/HeroBlank';
 export * from './tag/Tag';
 export * from './comments/Comments';
 export * from './link/Link';
+export * from './table-of-contents/TableOfContents';
