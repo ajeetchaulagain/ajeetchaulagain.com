@@ -78,7 +78,8 @@
   },
   "resolutions": {
     "@types/react": "^18.0.6",
-    "webpack": "^5.104.1"
+    "webpack": "^5.104.1",
+    "sharp": "^0.34.5"
   },
   "engines": {
     "node": ">=18.0.0"
