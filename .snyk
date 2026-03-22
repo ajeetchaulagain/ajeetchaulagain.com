@@ -1,6 +1,15 @@
 # Snyk (https://snyk.io) policy file
 version: v1.25.0
 ignore:
+  SNYK-JS-WEBPACK-15235969:
+    - gatsby > webpack:
+        reason: >
+          Mitigated via yarn resolutions pinning webpack to ^5.104.1.
+          The lockfile resolves all webpack requests (including gatsby's ~5.98.0
+          constraint) to 5.105.4 which contains the fix. Snyk resolves the
+          gatsby dep tree independently from the lockfile and reports 5.98.0
+          as a false positive.
+        expires: '2026-12-31T00:00:00.000Z'
   SNYK-JS-WEBPACK-15235959:
     - gatsby > webpack:
         reason: >
