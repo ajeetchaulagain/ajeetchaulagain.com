@@ -7,7 +7,8 @@ export const BlogPostCardDecorator = (
   blog: BlogPostEdge,
   decoratorOptions?: BlogPostCardDecoratorOptions
 ): BlogPostCardProps => {
-  const { timeToRead, frontmatter, fields } = blog.node;
+  const { frontmatter, fields } = blog.node;
+  const { timeToRead } = fields;
 
   const {
     title,

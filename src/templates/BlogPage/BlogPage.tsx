@@ -46,8 +46,9 @@ export const query = graphql`
           altText
         }
       }
-      timeToRead
-      body
+      fields {
+        timeToRead
+      }
     }
   }
 `;
@@ -68,8 +69,7 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
 
   const {
     frontmatter: { title, description, date, tags, thumbnail },
-    timeToRead,
-    body,
+    fields: { timeToRead },
   } = props.data.mdx;
 
   const imageAltText = thumbnail.altText;
@@ -99,7 +99,7 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
           </PostHeaderRightColumn>
         </PostHeaderContainer>
 
-        <MarkdownRenderer>{body}</MarkdownRenderer>
+        <MarkdownRenderer>{props.children}</MarkdownRenderer>
 
         <PageNavigationWrapper>
           {prev && (

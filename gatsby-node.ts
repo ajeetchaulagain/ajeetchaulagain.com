@@ -9,21 +9,18 @@ export const onCreateWebpackConfig = ({ stage, actions }) => {
 };
 
 export const onCreateNode = ({ node, actions }) => {
-  const { createNode, createNodeField } = actions;
+  const { createNodeField } = actions;
 
   if (node.internal.type === 'Mdx') {
-    const slug = path.basename(node.fileAbsolutePath, '.md');
+    const contentFilePath = node.internal.contentFilePath;
+    // Support both .md and .mdx extensions
+    const slug = path.basename(contentFilePath).replace(/\.mdx?$/, '');
+    const pathDirectory = path.dirname(contentFilePath);
+    const pathArray = pathDirectory.split(path.sep);
+    const contentType = pathArray[pathArray.length - 1]; // parent directory name will be the content type.
 
-    const absolutePath = node.fileAbsolutePath;
-
-    console.log('Type of ' + typeof absolutePath);
-
-    const pathDirectory = path.dirname(absolutePath);
-
-    console.log(`path dir: ${pathDirectory}`);
-
-    let pathArray = pathDirectory.split(path.sep);
-    let contentType = pathArray[pathArray.length - 1]; // parent directory name will be the content type.
+    const wordCount = String(node.body ?? '').split(/\s+/).filter(Boolean).length;
+    const timeToRead = Math.max(1, Math.ceil(wordCount / 200));
 
     createNodeField({
       node,
@@ -35,6 +32,12 @@ export const onCreateNode = ({ node, actions }) => {
       node,
       name: 'contentType',
       value: contentType,
+    });
+
+    createNodeField({
+      node,
+      name: 'timeToRead',
+      value: timeToRead,
     });
   }
 };
@@ -51,10 +54,13 @@ export const createPages = async ({ graphql, actions }) => {
     query {
       allMdx(
         filter: { fields: { contentType: { eq: "posts" } } }
-        sort: { order: ASC, fields: [frontmatter___date] }
+        sort: { frontmatter: { date: ASC } }
       ) {
         edges {
           node {
+            internal {
+              contentFilePath
+            }
             fields {
               slug
               contentType
@@ -73,6 +79,9 @@ export const createPages = async ({ graphql, actions }) => {
       allMdx(filter: { fields: { contentType: { eq: "projects" } } }) {
         edges {
           node {
+            internal {
+              contentFilePath
+            }
             fields {
               slug
               contentType
@@ -83,10 +92,17 @@ export const createPages = async ({ graphql, actions }) => {
     }
   `);
 
+  if (postOnlyResult.errors) {
+    throw postOnlyResult.errors[0];
+  }
+  if (projectOnlyResult.errors) {
+    throw projectOnlyResult.errors[0];
+  }
+
   const posts = postOnlyResult.data.allMdx.edges;
   posts.forEach((edge, index) => {
     createPage({
-      component: blogTemplate,
+      component: `${blogTemplate}?__contentFilePath=${edge.node.internal.contentFilePath}`,
       path: `/blog/${edge.node.fields.slug}`,
       context: {
         slug: edge.node.fields.slug,
@@ -98,7 +114,7 @@ export const createPages = async ({ graphql, actions }) => {
 
   projectOnlyResult.data.allMdx.edges.forEach((edge) => {
     createPage({
-      component: projectTemplate,
+      component: `${projectTemplate}?__contentFilePath=${edge.node.internal.contentFilePath}`,
       path: `/projects/${edge.node.fields.slug}`,
       context: {
         slug: edge.node.fields.slug,
