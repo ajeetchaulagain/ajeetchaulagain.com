@@ -46,12 +46,13 @@ export const TableOfContents = () => {
     if (detailsRef.current) detailsRef.current.open = false;
   };
 
+  const tocTitle = 'Contents';
   return (
     <>
       {/* Mobile: sticky collapsible bar, hidden at ≥1380px */}
       <MobileTocWrapper>
         <MobileTocDetails ref={detailsRef}>
-          <summary>On this page</summary>
+          <summary>{tocTitle}</summary>
           <TocItems
             headings={headings}
             activeId={activeId}
@@ -62,7 +63,7 @@ export const TableOfContents = () => {
 
       {/* Desktop: fixed sidebar, hidden below 1380px */}
       <TocWrapper style={{ top: tocTop }}>
-        <TocTitle>On this page</TocTitle>
+        <TocTitle>{tocTitle}</TocTitle>
         <TocItems headings={headings} activeId={activeId} />
       </TocWrapper>
     </>
