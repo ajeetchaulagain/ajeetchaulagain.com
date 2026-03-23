@@ -81,7 +81,6 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
 
   return (
     <MasterLayout>
-      <TableOfContents />
       <SEO title={title} description={description} />
       <HeroBlank />
       <ContentRenderer>
@@ -104,6 +103,7 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
           </PostHeaderRightColumn>
         </PostHeaderContainer>
 
+        <TableOfContents />
         <MarkdownRenderer>{props.children}</MarkdownRenderer>
 
         <PageNavigationWrapper>

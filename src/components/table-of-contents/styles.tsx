@@ -1,9 +1,59 @@
 import styled from 'styled-components';
 
+// ─── Mobile inline collapsible ───────────────────────────────────────────────
+
+export const MobileTocWrapper = styled.div`
+  position: sticky;
+  top: 3.6rem;
+  z-index: 10;
+  background: ${({ theme }) => theme.colors.primaryBackground};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
+  margin-bottom: 2rem;
+  @media (min-width: 1380px) {
+    display: none;
+  }
+`;
+
+export const MobileTocDetails = styled.details`
+  padding: 0.6rem 0.4rem;
+  summary {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: ${({ theme }) => theme.colors.tocText};
+    font-family: ${({ theme }) => theme.fonts.primaryHeading};
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      content: '▶';
+      font-size: 0.55rem;
+      transition: transform 0.2s ease;
+    }
+  }
+
+  &[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  &[open] summary {
+    margin-bottom: 0.75rem;
+  }
+`;
+
+// ─────────────────────────────────────────────────────────────────────────────
+
 export const TocWrapper = styled.nav`
   position: fixed;
   right: 3rem;
-  width: 200px;
+  width: 220px;
   transition: top 0.15s ease;
   max-height: calc(100vh - 10rem);
   overflow-y: auto;
@@ -14,17 +64,18 @@ export const TocWrapper = styled.nav`
   padding: 1rem;
   border-radius: ${({ theme }) => theme.borderRadius.base};
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   @media (min-width: 1380px) {
     display: block;
   }
 `;
 
 export const TocTitle = styled.p`
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #888;
+  color: ${({ theme }) => theme.colors.tocText};
+  font-family: ${({ theme }) => theme.fonts.primaryHeading};
   margin: 0 0 0.6rem 0;
 `;
 
@@ -47,11 +98,12 @@ export const TocItem = styled.li<TocItemProps>`
 
   a {
     display: block;
-    padding: 0.2rem 0;
-    font-size: 0.78rem;
-    line-height: 1.4;
+    padding: 0.3rem 0;
+    font-size: 0.8rem;
+    font-family: ${({ theme }) => theme.fonts.primaryHeading};
+    line-height: 1.5;
     color: ${({ theme, isActive }) =>
-      isActive ? theme.colors.brandPrimary : theme.colors.lightGrey};
+      isActive ? theme.colors.brandPrimary : theme.colors.tocText};
     text-decoration: none;
     transition: color 0.2s ease;
 
