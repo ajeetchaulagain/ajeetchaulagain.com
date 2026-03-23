@@ -5,7 +5,6 @@ type AboutPageDetails = {
     title: string;
     description: string;
   };
-  body: string;
 };
 
 type QueryTypes = {
@@ -20,7 +19,6 @@ export const useAboutPageDetails = () => {
           title
           description
         }
-        body
       }
     }
   `);

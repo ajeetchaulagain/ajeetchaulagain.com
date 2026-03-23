@@ -22,7 +22,7 @@ export const BlogPostCardList = ({ blogs }: BlogPostCardListProps) => {
       {blogs &&
         blogs.map((blog) => {
           return (
-            <BlogPostCardWrapper>
+            <BlogPostCardWrapper key={blog.blogPostRelativeUrl}>
               <BlogPostCard {...blog} />
             </BlogPostCardWrapper>
           );

@@ -56,7 +56,6 @@ export const NewsLetter = ({
       }
     } catch (err) {
       setStatus('ERROR');
-      console.log(err);
     }
   };
 

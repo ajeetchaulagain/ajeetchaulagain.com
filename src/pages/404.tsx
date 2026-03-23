@@ -10,7 +10,7 @@ const DefaultNotFound = () => {
           <h1>Page not found</h1>
           <p>
             Oops!. The page you are requesting doesn't exist. Sorry for the
-            inconvenice.
+            inconvenience.
           </p>
           <Link to="/">Go Home</Link>
         </div>

@@ -1,5 +1,5 @@
 import styled, { DefaultTheme } from 'styled-components';
-import { ml, mb, px, py, pt, pb, mr, mt } from 'styled-components-spacing';
+import { ml, mb, px, py, pt, pb, mr, mt, p } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
 import { Paragraph } from '../paragraph/Paragraph';
 import { Link } from '../link/Link';
@@ -7,6 +7,9 @@ import { Link } from '../link/Link';
 export const HeaderWrapper = styled.header`
   font-family: ${({ theme }) => theme.fonts.secondaryHeading};
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 `;
 
 export const HeaderContent = styled.div`
@@ -33,7 +36,7 @@ export const HeaderContent = styled.div`
 
   ${breakpoint('xl')`
     width: 62rem;
-     ${pt(6)};
+     ${p(4)};
   `};
 
   ${breakpoint('xxl')`

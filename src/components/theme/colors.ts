@@ -19,8 +19,10 @@ export const colors = {
   mughalGreen: '#316531',
   mantis: '#65be65',
   honeyDew: '#e6ffec',
-  wageningenGreen15: '#2ea04326',
+  wageningenGreen15: '#1d3526',
   silver: '#C8C8C8',
+  slate: '#aaaaaa',
+  charcoalMid: '#555555',
 };
 
 export const darkThemeColor = {
@@ -43,6 +45,7 @@ export const darkThemeColor = {
   codeHighlightBackground: colors.wageningenGreen15,
   codeHighlightBorderColor: colors.mughalGreen,
   silver: colors.silver,
+  tocText: colors.slate,
 };
 
 export const lightThemeColor = {
@@ -61,10 +64,12 @@ export const lightThemeColor = {
   lightBackground: colors.light,
   oldSilver50: colors.oldSilver50,
   blueBell: colors.blueBell,
+  lightGrey: colors.lightGrey,
   cardBorder: colors.light,
   codeHighlightBackground: colors.honeyDew,
   codeHighlightBorderColor: colors.mantis,
   silver: colors.silver,
+  tocText: colors.charcoalMid,
 };
 
 export const lightThemeButtonColors = {

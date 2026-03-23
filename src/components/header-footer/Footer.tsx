@@ -32,7 +32,7 @@ export const Footer = () => {
           <NavMenuWrapper>
             <Nav>
               {navItems.map(({ title, url }) => (
-                <NavItem>
+                <NavItem key={url}>
                   <Link to={url} activeClassName="activeNavItem">
                     {title}
                   </Link>

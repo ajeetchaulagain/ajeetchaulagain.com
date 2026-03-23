@@ -21,7 +21,6 @@ export const query = graphql`
         description
         technologies
       }
-      body
     }
   }
 `;
@@ -33,15 +32,12 @@ type DataProps = {
       description: string;
       technologies: string[];
     };
-    body: string;
-    timeToRead: string;
   };
 };
 
 const ProjectTemplate: React.FC<PageProps<DataProps, unknown>> = (props) => {
   const {
     frontmatter: { title, description, technologies },
-    body,
   } = props.data.mdx;
   return (
     <MasterLayout>
@@ -59,7 +55,7 @@ const ProjectTemplate: React.FC<PageProps<DataProps, unknown>> = (props) => {
           </TagsWrapper>
         </ProjectHeaderContainer>
 
-        <MarkdownRenderer>{body}</MarkdownRenderer>
+        <MarkdownRenderer>{props.children}</MarkdownRenderer>
         <StyledButtonLink
           to="/projects"
           text="← Back to project list"

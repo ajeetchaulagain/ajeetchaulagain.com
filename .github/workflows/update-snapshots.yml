@@ -1,0 +1,38 @@
+name: Update Playwright Snapshots
+on:
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: 'Base URL to run tests against'
+        required: false
+        default: 'https://ajeetchaulagain.com'
+      ref:
+        description: 'Branch to update snapshots on'
+        required: false
+        default: 'master'
+jobs:
+  update-snapshots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.ref || 'master' }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 21
+      - name: Install dependencies
+        run: npm install -g yarn && yarn
+      - name: Install Playwright Browsers
+        run: yarn playwright install --with-deps
+      - name: Update snapshots
+        run: yarn playwright test --update-snapshots
+        env:
+          PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.inputs.base_url }}
+      - name: Commit updated snapshots
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add tests/__screenshots__/
+          git diff --staged --quiet || git commit -m "Update Playwright baseline screenshots (Linux)"
+          git push

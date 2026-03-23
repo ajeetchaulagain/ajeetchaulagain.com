@@ -17,12 +17,13 @@ export type BlogPostType = {
       altText: string;
     };
   };
-  body: string;
-  timeToRead: string;
+  fields: {
+    timeToRead: number;
+  };
 };
 
 export type BlogPostNode = BlogPostType & {
-  fields: { slug: string };
+  fields: { slug: string; timeToRead: number };
 };
 export type BlogPostEdge = {
   node: BlogPostNode;

@@ -1,4 +1,5 @@
 import type { GatsbyConfig } from 'gatsby';
+import remarkNoCopy from './plugins/remark-no-copy';
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -18,12 +19,8 @@ const config: GatsbyConfig = {
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-sitemap',
     `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'UA-54342929-2',
-      },
-    },
+    // TODO: Replace with gatsby-plugin-google-gtag once you have a GA4 measurement ID (G-XXXXXXXXXX)
+    // gatsby-plugin-google-analytics used UA tracking which was shut down July 2023
 
     // --------------------------------------------------------------------
     // Images, Stylings and Static
@@ -94,6 +91,9 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
+        mdxOptions: {
+          remarkPlugins: [remarkNoCopy],
+        },
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
@@ -103,7 +103,6 @@ const config: GatsbyConfig = {
               linkImagesToOriginal: false,
               quality: 80,
               loading: 'lazy',
-              tracedSVG: true,
             },
           },
 
@@ -148,8 +147,6 @@ const config: GatsbyConfig = {
       },
     },
   ],
-
-  pathPrefix: '/gatsby-portfolio',
 };
 
 export default config;

@@ -9,6 +9,7 @@ export type HeadingProps = {
   size?: HeadingFontSize;
   type?: FontType;
   level: 'h1' | 'h2' | 'h3' | 'h4';
+  id?: string;
   children?: ReactNode;
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import AboutContent from '../data/markdown/about.md';
 import { mb, mt } from 'styled-components-spacing';
 import {
   MasterLayout,
@@ -28,7 +29,6 @@ const NewsletterWrapper = styled.div`
 
 const AboutPage = () => {
   const {
-    body,
     frontmatter: { title, description },
   } = useAboutPageDetails();
   const { gatsbyImageData } = useAuthorImage();
@@ -41,7 +41,7 @@ const AboutPage = () => {
         <ImageWrapper>
           <StyledGatsbyImage image={gatsbyImageData} alt="about-image" />
         </ImageWrapper>
-        <MarkdownRenderer>{body}</MarkdownRenderer>
+        <MarkdownRenderer><AboutContent /></MarkdownRenderer>
         <NewsletterWrapper>
           <NewsLetter headingProps={{ level: 'h3', size: 'large' }} />
         </NewsletterWrapper>

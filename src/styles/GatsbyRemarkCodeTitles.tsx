@@ -6,6 +6,7 @@ export const GatsbyRemarkCodeTitles = css`
   .gatsby-remark-code-title-wrapper {
     ${py(2)};
     ${mt(6)};
+    position: relative;
     font-family: ${({ theme }) => theme.fonts.body};
     font-size: ${({ theme }) => theme.fontSizes.small};
     color: ${({ theme }) => theme.colors.brandPrimary};
@@ -17,7 +18,7 @@ export const GatsbyRemarkCodeTitles = css`
     background-color: ${({ theme }) => theme.colors.tertiaryBackground};
     line-height: ${({ theme }) => theme.lineHeights.extraCondensed};
 
-    & + .gatsby-highlight {
+    & ~ .gatsby-highlight {
       ${mb(6)};
       ${mt(0)};
 
@@ -45,5 +46,22 @@ export const GatsbyRemarkCodeTitles = css`
         border-right:none;
         border-radius:unset;
     `};
+  }
+
+  /* MDX v5 wraps each block in a span, so title and highlight are no longer direct siblings */
+  span:has(> .gatsby-remark-code-title-wrapper) + span > .gatsby-highlight {
+    ${mb(6)};
+    ${mt(0)};
+
+    & > pre[class*='language-'] {
+      border-top: none;
+      border-top-left-radius: unset;
+      border-top-right-radius: unset;
+      ${p(5)};
+
+      ${breakpoint('xs', 'md')`
+        ${p(4)};
+      `};
+    }
   }
 `;

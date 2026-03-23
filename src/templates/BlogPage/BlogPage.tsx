@@ -14,6 +14,7 @@ import {
   Tag,
   StyledGatsbyImage,
   Comments,
+  TableOfContents,
 } from 'components';
 import { BlogPostType, BlogPostNode } from 'markdown-types';
 import {
@@ -27,6 +28,7 @@ import {
   StyledLink,
 } from './styles';
 import { DateAndTimeComponent, TagsWrapper } from '../styles';
+import useCopyCode from 'hooks/useCopyCode';
 
 export const query = graphql`
   query BlogPageQuery($slug: String!) {
@@ -46,8 +48,9 @@ export const query = graphql`
           altText
         }
       }
-      timeToRead
-      body
+      fields {
+        timeToRead
+      }
     }
   }
 `;
@@ -64,12 +67,13 @@ type PageContextProps = {
 const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
   props
 ): JSX.Element => {
+  useCopyCode();
+
   const { next, prev } = props.pageContext;
 
   const {
     frontmatter: { title, description, date, tags, thumbnail },
-    timeToRead,
-    body,
+    fields: { timeToRead },
   } = props.data.mdx;
 
   const imageAltText = thumbnail.altText;
@@ -89,8 +93,8 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
             </DateAndTimeComponent>
 
             <TagsWrapper>
-              {tags.map((tag, index) => {
-                return <Tag key={index}>{tag}</Tag>;
+              {tags.map((tag) => {
+                return <Tag key={tag}>{tag}</Tag>;
               })}
             </TagsWrapper>
           </PostHeaderLeftColumn>
@@ -99,7 +103,8 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
           </PostHeaderRightColumn>
         </PostHeaderContainer>
 
-        <MarkdownRenderer>{body}</MarkdownRenderer>
+        <TableOfContents />
+        <MarkdownRenderer>{props.children}</MarkdownRenderer>
 
         <PageNavigationWrapper>
           {prev && (
