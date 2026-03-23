@@ -72,11 +72,19 @@ export const TocWrapper = styled.nav`
 `;
 
 export const TocTitle = styled.p`
+<<<<<<< HEAD
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.tocText};
+=======
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #888;
+>>>>>>> master
   margin: 0 0 0.6rem 0;
 `;
 
