@@ -1,5 +1,6 @@
 import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
+import { VideoPlayer } from '../video-player/VideoPlayer';
 
 import { HeadingProps } from '../heading/Heading';
 import {
@@ -14,6 +15,7 @@ import {
   StyledParagraph,
 } from './styles';
 import { slugify } from './slugify';
+import { InfoCallToAction } from 'components/info-call-to-action/InfoCallToAction';
 
 type MarkdownRendererProps = {
   children: React.ReactNode;
@@ -59,6 +61,8 @@ export const MarkdownRenderer = ({ children }: MarkdownRendererProps) => {
         a: AnchorLink,
         p: StyledParagraph,
         span: Span,
+        VideoPlayer,
+        InfoCallToAction,
       }}
     >
       {children}
