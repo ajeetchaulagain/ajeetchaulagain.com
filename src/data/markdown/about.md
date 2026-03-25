@@ -5,11 +5,13 @@ description: 'Pragmatic software engineer passionate about building scalable and
 
 ## About
 
-Hey — I’m Ajeet.
+👋 Hey — I’m Ajeet.
 
 I’m a Software Engineer with 5+ years of commercial experience building and maintaining long-lived, production systems across consulting and enterprise environments. I had been building software well before entering industry, with early foundations shaped through study and hands-on work — a craft I’ve stayed deeply engaged with over time.
 
 I enjoy working on software where the challenge isn’t just shipping features, but making sound decisions that hold up as systems, teams, and requirements evolve. Much of my background has been in consulting, working across multiple teams and domains, which has shaped how I think about trade-offs, ownership, and building software that works in real-world conditions.
+
+This site is where I write blog posts about what I learn along the way, across both side projects and my professional experience, and share things I explore and find interesting.
 
 ## What I Work With
 
@@ -22,8 +24,6 @@ Most of my recent commercial experience has been centred around a TypeScript-fir
 
 These are the tools I’ve spent the most time with in production, but I’m more interested in choosing the right approach for the problem than being tied to any specific technology.
 
-## What I’m Looking For
+I’m interested in roles where I can continue to grow as an engineer and work with teams that value thoughtful engineering, quality, ownership, and continuous improvement. If that resonates, feel free to reach out at chaulagainajeet@gmail.com.
 
-I’m interested in Senior Software Engineer roles where I can work on meaningful problems, contribute to well-structured systems, and help teams build software that remains reliable and maintainable as it grows.
-
-If you’d like to get in touch, feel free to reach out via email at chaulagainajeet@gmail.com — I’m always happy to connect and chat about software.
+I also use this site to share what I learn along the way — drawing from both side projects and my professional experience.

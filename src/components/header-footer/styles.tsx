@@ -162,8 +162,8 @@ export const FooterContentWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  ${pt(6)};
-  ${pb(4)};
+  ${pt(8)};
+  ${pb(6)};
   ${px(4)};
 
   ${breakpoint('xl')`
@@ -191,8 +191,8 @@ export const StyledParagraph = styled(Paragraph)`
   && {
     color: ${({ theme }) =>
       theme.name === 'lightTheme'
-        ? theme.colors.blueBell
-        : theme.colors.lightGrey};
+        ? theme.colors.secondaryText
+        : theme.colors.primaryText};
     font-size: ${({ theme }) => theme.fontSizes.small};
     ${mb(1)};
   }

@@ -44,16 +44,7 @@ export const Footer = () => {
             <SocialMediaIcons />
           </SocialMediaLinksWrapper>
           <StyledParagraph>
-            <em>{data.site.siteMetadata.author} © 2020.</em> All rights
-            reserved.
-          </StyledParagraph>
-          <StyledParagraph>
-            Proudly built with
-            <em>
-              {' '}
-              React, Gatsby, GraphQL, Typescript, Styled Components, Netlify and
-              Nodejs
-            </em>
+            © 2026 {data.site.siteMetadata.author}.
           </StyledParagraph>
         </FooterContentWrapper>
       </GradientOverlay>

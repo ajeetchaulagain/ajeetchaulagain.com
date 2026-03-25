@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { mt } from 'styled-components-spacing';
 import {
   LandingPageHero,
-  ProjectList,
+  // ProjectList, //Project page is temporarily disabled.
   MasterLayout,
   NewsLetter,
   SEO,
@@ -78,7 +78,7 @@ const IndexPage = () => {
           size="large"
         />
       </ContentRenderer>
-      <ContentRenderer>
+      {/* <ContentRenderer>
         <Heading level="h2" size="xlarge">
           Projects
         </Heading>
@@ -91,7 +91,7 @@ const IndexPage = () => {
           color="primary"
           size="large"
         />
-      </ContentRenderer>
+      </ContentRenderer> */}
 
       <ContentRenderer>
         <NewsLetter />
