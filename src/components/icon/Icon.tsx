@@ -36,6 +36,6 @@ export const Icon = ({ iconName }: { iconName: IconName }) => {
   if (!iconName) {
     return null;
   }
-  const IconComponent = iconName && IconMap[iconName];
+  const IconComponent = IconMap[iconName];
   return <IconComponent />;
 };

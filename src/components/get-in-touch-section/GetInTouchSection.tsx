@@ -2,8 +2,8 @@ import React from 'react';
 import { Paragraph } from '../paragraph/Paragraph';
 import { socialMediaLinks } from '../social-media-icons/socialMediaLinks';
 import { Container, SocialLinksList, SocialLinkItem } from './styles';
-import { Heading } from 'components/heading/Heading';
-import { ButtonLink } from 'components/button-link';
+import { Heading } from '../heading/Heading';
+import { ButtonLink } from '../button-link';
 
 export const GetInTouchSection = () => {
   return (

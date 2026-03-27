@@ -15,7 +15,7 @@ import {
   StyledParagraph,
 } from './styles';
 import { slugify } from './slugify';
-import { InfoCallToAction } from 'components/info-call-to-action/InfoCallToAction';
+import { InfoCallToAction } from '../info-call-to-action/InfoCallToAction';
 
 type MarkdownRendererProps = {
   children: React.ReactNode;
