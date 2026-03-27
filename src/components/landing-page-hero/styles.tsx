@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { mb, px, pt, pb, mt } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
 import { Heading } from '../heading/Heading';
@@ -10,25 +10,7 @@ export const Container = styled.section`
 `;
 
 export const GradientOverlay = styled.div`
-  ${({ theme }) =>
-    theme.name === 'lightTheme' &&
-    css`
-      background: linear-gradient(
-        77deg,
-        ${theme.colors.heroGradientStop1} 9%,
-        ${theme.colors.heroGradientStop2} 100%
-      );
-    `};
-
-  ${({ theme }) =>
-    theme.name === 'darkTheme' &&
-    css`
-      background: linear-gradient(
-        77deg,
-        ${theme.colors.heroGradientStop1} 9%,
-        ${theme.colors.heroGradientStop2} 100%
-      );
-    `};
+  background: ${({ theme }) => theme.colors.heroBackground};
 `;
 
 export const ContentWrapper = styled.div`
@@ -59,10 +41,7 @@ export const ContentWrapper = styled.div`
 
 export const StyledHeading = styled(Heading)`
   && {
-    color: ${({ theme }) =>
-      theme.name === 'lightTheme'
-        ? theme.colors.secondaryText
-        : theme.colors.primaryText};
+    color: ${({ theme }) => theme.colors.heroText};
     ${breakpoint('lg')`
       font-size: 3.5rem;
     `};
@@ -72,7 +51,8 @@ export const StyledHeading = styled(Heading)`
 
 export const StyledParagraph = styled(Paragraph)`
   && {
-    color: ${({ theme }) => theme.colors.silver}
+    color: ${({ theme }) => theme.colors.heroParagraph};
+  }
 `;
 
 export const AboutImageWrapper = styled.div`

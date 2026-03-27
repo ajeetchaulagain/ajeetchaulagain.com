@@ -10,16 +10,6 @@ import { IconType } from 'react-icons/lib';
 
 export const socialMediaLinks: Record<string, string | IconType>[] = [
   {
-    url: 'https://www.facebook.com/chaulagain.ajeet',
-    ariaLabel: 'Facebook',
-    IconComponent: FaFacebook,
-  },
-  {
-    url: 'https://twitter.com/ajeetsweb',
-    ariaLabel: 'Twitter',
-    IconComponent: FaTwitter,
-  },
-  {
     url: 'https://www.linkedin.com/in/ajeet-chaulagain/',
     ariaLabel: 'Linkedin',
     IconComponent: FaLinkedinIn,
@@ -30,13 +20,8 @@ export const socialMediaLinks: Record<string, string | IconType>[] = [
     IconComponent: FaGithub,
   },
   {
-    url: 'https://www.instagram.com/chaulagainajeet/',
-    ariaLabel: 'Instagram',
-    IconComponent: FaInstagram,
-  },
-  {
     url: 'https://ko-fi.com/ajeetchaulagain',
-    ariaLabel: 'KoFi',
+    ariaLabel: 'Support me on KoFi',
     IconComponent: FaCoffee,
   },
 ];

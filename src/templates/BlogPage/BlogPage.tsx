@@ -9,12 +9,12 @@ import {
   ContentRenderer,
   MasterLayout,
   AboutJumbotron,
-  NewsLetter,
   HeroBlank,
   Tag,
   StyledGatsbyImage,
   Comments,
   TableOfContents,
+  GetInTouchSection,
 } from 'components';
 import { BlogPostType, BlogPostNode } from 'markdown-types';
 import {
@@ -130,7 +130,7 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
 
         <AboutJumbotron />
         <Comments />
-        <NewsLetter headingProps={{ level: 'h3', size: 'large' }} />
+        <GetInTouchSection />
       </ContentRenderer>
     </MasterLayout>
   );

@@ -45,7 +45,7 @@ export const LandingPageHero = (): JSX.Element => {
               to="/about"
               text="More About Me →"
               variant="text"
-              color="secondary"
+              color="primary"
               size="large"
             />
 

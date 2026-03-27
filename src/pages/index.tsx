@@ -6,7 +6,6 @@ import {
   LandingPageHero,
   ProjectList,
   MasterLayout,
-  NewsLetter,
   SEO,
   ContentRenderer,
   ButtonLink,
@@ -14,6 +13,7 @@ import {
   Paragraph,
   BlogPostCardList,
   HeadingProps,
+  GetInTouchSection,
 } from 'components';
 import { useBlogPostList, useProjectList } from 'hooks';
 import {
@@ -94,7 +94,7 @@ const IndexPage = () => {
       </ContentRenderer>
 
       <ContentRenderer>
-        <NewsLetter />
+        <GetInTouchSection />
       </ContentRenderer>
     </MasterLayout>
   );

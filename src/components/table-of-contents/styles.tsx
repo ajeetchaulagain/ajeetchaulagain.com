@@ -15,9 +15,9 @@ export const MobileTocWrapper = styled.div`
 `;
 
 export const MobileTocDetails = styled.details`
-  padding: 0.6rem 0.4rem;
+  padding: 0.8rem 0rem;
   summary {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.08em;
     color: ${({ theme }) => theme.colors.tocText};
@@ -71,7 +71,7 @@ export const TocWrapper = styled.nav`
 `;
 
 export const TocTitle = styled.p`
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   color: ${({ theme }) => theme.colors.tocText};

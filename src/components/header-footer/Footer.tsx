@@ -4,15 +4,16 @@ import { FooterContainer } from './styles';
 import { GradientOverlay } from '../landing-page-hero/styles';
 import { navItems } from './navItems';
 import {
-  NavMenuWrapper,
   Nav,
   NavItem,
   FooterContentWrapper,
+  FooterRow,
   StyledParagraph,
   SocialMediaLinksWrapper,
 } from './styles';
 import { SocialMediaIcons } from '../social-media-icons/SocialMediaIcons';
 import { Link } from '../link/Link';
+import { ButtonLink } from 'components/button-link';
 
 export const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -25,11 +26,13 @@ export const Footer = () => {
     }
   `);
 
+  const { author } = data.site.siteMetadata;
+
   return (
     <FooterContainer>
       <GradientOverlay>
         <FooterContentWrapper>
-          <NavMenuWrapper>
+          <FooterRow>
             <Nav>
               {navItems.map(({ title, url }) => (
                 <NavItem key={url}>
@@ -39,21 +42,21 @@ export const Footer = () => {
                 </NavItem>
               ))}
             </Nav>
-          </NavMenuWrapper>
-          <SocialMediaLinksWrapper>
-            <SocialMediaIcons />
-          </SocialMediaLinksWrapper>
+
+            <SocialMediaLinksWrapper>
+              <SocialMediaIcons />
+            </SocialMediaLinksWrapper>
+          </FooterRow>
+
           <StyledParagraph>
-            <em>{data.site.siteMetadata.author} © 2020.</em> All rights
-            reserved.
-          </StyledParagraph>
-          <StyledParagraph>
-            Proudly built with
-            <em>
-              {' '}
-              React, Gatsby, GraphQL, Typescript, Styled Components, Netlify and
-              Nodejs
-            </em>
+            © 2020–{new Date().getFullYear()} {author} ·{' '}
+            <ButtonLink
+              to="/design-system"
+              text="Design System →"
+              color="primary"
+              size="small"
+              variant="text"
+            />
           </StyledParagraph>
         </FooterContentWrapper>
       </GradientOverlay>

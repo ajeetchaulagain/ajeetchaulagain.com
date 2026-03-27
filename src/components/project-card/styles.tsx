@@ -26,10 +26,7 @@ export const Paragraph = styled.p`
   font-family: ${({ theme }) => theme.fonts.body};
   ${mb(3)};
   line-height: 1.5;
-  color: ${({ theme }) =>
-    theme.name === 'lightTheme'
-      ? theme.colors.primaryText
-      : theme.colors.lightGrey};
+  color: ${({ theme }) => theme.colors.projectCardText};
 `;
 
 export const ActionWrapper = styled.div`

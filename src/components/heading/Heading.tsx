@@ -74,7 +74,7 @@ const Heading3 = styled.h3<{ size?: HeadingFontSize; type?: FontType }>`
   `};
 `;
 
-const Heading4 = styled.h3<{ size?: HeadingFontSize; type?: FontType }>`
+const Heading4 = styled.h4<{ size?: HeadingFontSize; type?: FontType }>`
   font-size: ${({ size, theme: { headingFontSizes } }) =>
     size ? headingFontSizes[size] : headingFontSizes.medium};
 
@@ -95,6 +95,7 @@ export const Heading = ({ level, children, ...rest }: HeadingProps) => {
       break;
     case 'h4':
       HeadingComponent = Heading4;
+      break;
     default:
       HeadingComponent = Heading1;
       break;

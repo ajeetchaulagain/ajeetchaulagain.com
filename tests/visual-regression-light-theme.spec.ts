@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Visual Regression', () => {
+test.describe('Visual Regression - Light Theme', () => {
   test('Home Page Visual Regression', async ({ page }) => {
     await page.goto('/');
     await expect(page).toHaveScreenshot('home-page.png', { fullPage: true });
@@ -23,11 +23,6 @@ test.describe('Visual Regression', () => {
   test('Blog Page Regression', async ({ page }) => {
     await page.goto('/blog/react-image-gallery');
     await expect(page).toHaveScreenshot('blog-page.png', { fullPage: true });
-  });
-
-  test('Contact Page Regression', async ({ page }) => {
-    await page.goto('/contact');
-    await expect(page).toHaveScreenshot('contact-page.png', { fullPage: true });
   });
 
   test('About Page Regression', async ({ page }) => {

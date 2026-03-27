@@ -37,8 +37,9 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
 
-  // Single template for all assertions
-  snapshotPathTemplate: '{testDir}/__screenshots__/{testFilePath}/{arg}{ext}',
+  // Platform-aware snapshot paths: darwin/ for macOS, linux/ for CI
+  // This prevents cross-platform font rendering differences from breaking tests
+  snapshotPathTemplate: `{testDir}/__screenshots__/${process.platform}/{projectName}/{testFilePath}/{arg}{ext}`,
 
   expect: {
     toHaveScreenshot: {
@@ -46,32 +47,30 @@ export default defineConfig({
     },
   },
 
-  /* Configure projects for major browsers */
+  /* Viewport-based projects aligned to the project's breakpoints:
+   * xs:0, xsm:370, sm:480, md:640, lg:800, xl:992, xxl:1120, xxxl:1200 */
   projects: [
     {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      name: 'mobile',
+      use: {
+        ...devices['Desktop Firefox'],
+        viewport: { width: 375, height: 812 }, // xs / xsm range
+      },
     },
-
-    /* Test against mobile viewports. */
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: { ...devices['Pixel 5'] },
-    // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
-    // },
-
-    /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
-    // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-    // },
+    {
+      name: 'tablet',
+      use: {
+        ...devices['Desktop Firefox'],
+        viewport: { width: 768, height: 1024 }, // md / lg range
+      },
+    },
+    {
+      name: 'desktop',
+      use: {
+        ...devices['Desktop Firefox'],
+        viewport: { width: 1280, height: 800 }, // xl / xxl / xxxl range
+      },
+    },
   ],
 
   /* Run your local dev server before starting the tests */

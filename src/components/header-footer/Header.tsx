@@ -1,5 +1,6 @@
-import React from 'react';
-import Logo from '../../images/logo.svg';
+import React, { useContext } from 'react';
+import GreyLogo from '../../images/logo-grey.svg';
+import WhiteLogo from '../../images/logo-white.svg';
 import {
   HeaderWrapper,
   HeaderContent,
@@ -18,18 +19,19 @@ import { Link } from '../link/Link';
 import { GradientOverlay } from '../landing-page-hero/styles';
 import { Icon } from '../icon/Icon';
 import { useSiteMetadata } from 'hooks';
+import { GlobalStateContext } from 'contexts/GlobalContextProvider';
 
 export const Header = (): JSX.Element => {
   const { title } = useSiteMetadata();
   const [{ url: homePageUrl }, ...navItemsWithoutHomePageLink] = navItems;
-
+  const { theme } = useContext(GlobalStateContext);
   return (
     <HeaderWrapper>
       <GradientOverlay>
         <HeaderContent>
           <LogoWrapper>
             <LogoLink to="/">
-              <Logo />
+              {theme === 'lightTheme' ? <GreyLogo /> : <WhiteLogo />}
               <span>{title}</span>
             </LogoLink>
           </LogoWrapper>
