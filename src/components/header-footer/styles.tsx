@@ -181,7 +181,7 @@ export const FooterRow = styled.div`
   ${mb(3)};
 
   ${Nav} {
-    gap: 2rem;
+    gap: 1.2rem;
     justify-content: flex-start;
 
     ${NavItem} {
