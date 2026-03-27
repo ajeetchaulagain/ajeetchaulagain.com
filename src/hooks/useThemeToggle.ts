@@ -5,6 +5,7 @@ export const useThemeToggle = () => {
 
   const setMode = (mode: string) => {
     window.localStorage.setItem('theme', mode);
+    document.documentElement.setAttribute('data-theme', mode);
     setTheme(mode);
   };
 
@@ -14,7 +15,9 @@ export const useThemeToggle = () => {
 
   useEffect(() => {
     const localTheme = window.localStorage.getItem('theme');
-    localTheme ? setTheme(localTheme) : setTheme('lightTheme');
+    const resolvedTheme = localTheme || 'lightTheme';
+    document.documentElement.setAttribute('data-theme', resolvedTheme);
+    setTheme(resolvedTheme);
   }, []);
 
   return { theme, themeToggler };

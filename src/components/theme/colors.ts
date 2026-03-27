@@ -1,95 +1,106 @@
-export const colors = {
-  white: '#ffffff',
-  light: '#e7e7e7',
-  eerieBlack: '#181818',
-  darkCharcoal: '#333333',
-  darkGrey: '#1f1f1f',
-  primary: '#5c257f',
-  whiteSmoke: '#f3f6f9',
-  whiteCream: '#faf8f2',
-  brightLavender: '#c995eb',
-  primary90: '#5c257ff8',
-  greenBlue90: '#1a75adf8',
-  darkCharcoal90: '#333333f8',
-  darkGrey90: '#1f1f1ff8',
-  oldSilver50: '#85858584',
-  lightGrey: '#999',
-  darkGrey2: '#2c2c2c',
-  blueBell: '#bbb9e3',
-  mughalGreen: '#316531',
-  mantis: '#65be65',
-  honeyDew: '#e6ffec',
-  wageningenGreen15: '#1d3526',
-  silver: '#C8C8C8',
-  slate: '#aaaaaa',
-  charcoalMid: '#555555',
+// ─── Light theme brand ────────────────────────────────────────────────────────
+// Update only these four values to switch the entire light theme brand color.
+const lightBrand = {
+  base: '#EFD2B0', // hero / header / footer background
+  accent: '#908f19', // links, accents, nav hover/active on white
+  heroText: '#222831', // headings and CTAs rendered on the brand background
+  heroParagraph: '#222831', // body text rendered on the brand background
+};
+// ─────────────────────────────────────────────────────────────────────────────
+
+// ─── Dark theme brand ────────────────────────────────────────────────────────
+// Update only these values to switch the entire dark theme brand color.
+const darkBrand = {
+  base: '#1f1f1f', // hero / header / footer background
+  accent: '#81A6C6', // links, hovers, borders, buttons
+  heroText: '#e7e7e7', // headings rendered on the brand background
+  heroParagraph: '#C8C8C8', // body text rendered on the brand background
+};
+// ─────────────────────────────────────────────────────────────────────────────
+
+const shared = {
+  toggleBall: '#e7e7e7',
+  toggleBackground: '#85858584',
 };
 
 export const darkThemeColor = {
-  primaryBackground: colors.eerieBlack,
-  secondaryBackground: colors.darkGrey,
-  tertiaryBackground: colors.darkGrey,
-  quaternaryBackground: colors.darkCharcoal,
-  primaryText: colors.light,
-  secondaryText: colors.darkGrey,
-  brandPrimary: colors.brightLavender,
-  primaryBorder: colors.eerieBlack,
-  secondaryBorder: colors.brightLavender,
-  heroGradientStop1: colors.darkCharcoal90,
-  heroGradientStop2: colors.darkGrey90,
-  brightLavender: colors.brightLavender,
-  lightBackground: colors.light,
-  oldSilver50: colors.oldSilver50,
-  lightGrey: colors.lightGrey,
-  cardBorder: colors.darkGrey2,
-  codeHighlightBackground: colors.wageningenGreen15,
-  codeHighlightBorderColor: colors.mughalGreen,
-  silver: colors.silver,
-  tocText: colors.slate,
+  ...shared,
+
+  // Backgrounds
+  primaryBackground: '#181818',
+  secondaryBackground: darkBrand.base,
+  tertiaryBackground: darkBrand.base,
+  quaternaryBackground: '#333333',
+
+  // Text
+  primaryText: '#e7e7e7',
+  secondaryText: darkBrand.base,
+  projectCardText: '#999',
+  tocText: '#aaaaaa',
+
+  // Brand & accents
+  brandPrimary: darkBrand.accent,
+  heroBackground: '#333333',
+  heroText: darkBrand.heroText,
+  heroParagraph: darkBrand.heroParagraph,
+
+  // Borders
+  primaryBorder: '#181818',
+  secondaryBorder: darkBrand.base,
+  cardBorder: '#2c2c2c',
+
+  // Code blocks
+  codeHighlightBackground: '#1d3526',
+  codeHighlightBorderColor: '#316531',
 };
 
 export const lightThemeColor = {
-  primaryBackground: colors.white,
-  secondaryBackground: colors.whiteCream,
-  tertiaryBackground: colors.whiteSmoke,
-  quaternaryBackground: colors.light,
-  primaryText: colors.darkCharcoal,
-  secondaryText: colors.light,
-  brandPrimary: colors.primary,
-  primaryBorder: colors.light,
-  secondaryBorder: colors.primary,
-  brightLavender: colors.brightLavender,
-  heroGradientStop1: colors.primary90,
-  heroGradientStop2: colors.greenBlue90,
-  lightBackground: colors.light,
-  oldSilver50: colors.oldSilver50,
-  blueBell: colors.blueBell,
-  lightGrey: colors.lightGrey,
-  cardBorder: colors.light,
-  codeHighlightBackground: colors.honeyDew,
-  codeHighlightBorderColor: colors.mantis,
-  silver: colors.silver,
-  tocText: colors.charcoalMid,
+  ...shared,
+  // Backgrounds
+  primaryBackground: '#ffffff',
+  secondaryBackground: '#faf8f2',
+  tertiaryBackground: '#f3f6f9',
+  quaternaryBackground: '#e7e7e7',
+  // Text
+  primaryText: '#333333',
+  secondaryText: '#333333',
+  projectCardText: '#333333',
+  tocText: '#555555',
+
+  // Brand & accents
+  brandPrimary: lightBrand.accent,
+  heroBackground: lightBrand.base,
+  heroText: lightBrand.heroText,
+  heroParagraph: lightBrand.heroParagraph,
+
+  // Borders
+  primaryBorder: '#e7e7e7',
+  secondaryBorder: lightBrand.base,
+  cardBorder: '#e7e7e7',
+
+  // Code blocks
+  codeHighlightBackground: '#e6ffec',
+  codeHighlightBorderColor: '#65be65',
 };
 
 export const lightThemeButtonColors = {
   primary: {
-    background: colors.primary,
-    text: colors.light,
+    background: lightBrand.accent,
+    text: '#ffffff',
   },
   secondary: {
-    background: colors.brightLavender,
-    text: colors.darkCharcoal,
+    background: lightBrand.heroText,
+    text: '#ffffff',
   },
 };
 
 export const darkThemeButtonColors = {
   primary: {
-    background: colors.brightLavender,
-    text: colors.darkCharcoal,
+    background: darkBrand.accent,
+    text: '#333333',
   },
   secondary: {
-    background: colors.brightLavender,
-    text: colors.darkCharcoal,
+    background: darkBrand.accent,
+    text: '#333333',
   },
 };

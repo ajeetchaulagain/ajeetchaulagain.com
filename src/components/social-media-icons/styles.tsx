@@ -48,6 +48,6 @@ export const SocialMediaList = styled.ul`
 export const StyledAnchorLink = styled(Link)`
   &:hover {
     cursor: pointer;
-    color: ${({ theme }) => theme.colors.brightLavender};
+    color: ${({ theme }) => theme.colors.brandPrimary};
   }
 `;

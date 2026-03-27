@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import AboutContent from '../data/markdown/about.md';
-import { mb, mt } from 'styled-components-spacing';
+import { mb } from 'styled-components-spacing';
 import {
   MasterLayout,
-  NewsLetter,
   MarkdownRenderer,
   SEO,
   StyledGatsbyImage,
   ContentRenderer,
   HeroBlank,
+  GetInTouchSection,
 } from 'components';
 import { useAuthorImage, useAboutPageDetails } from 'hooks';
 
@@ -21,10 +21,6 @@ const ImageWrapper = styled.div`
       border-radius: 100%;
     }
   }
-`;
-
-const NewsletterWrapper = styled.div`
-  ${mt(8)};
 `;
 
 const AboutPage = () => {
@@ -41,10 +37,12 @@ const AboutPage = () => {
         <ImageWrapper>
           <StyledGatsbyImage image={gatsbyImageData} alt="about-image" />
         </ImageWrapper>
-        <MarkdownRenderer><AboutContent /></MarkdownRenderer>
-        <NewsletterWrapper>
-          <NewsLetter headingProps={{ level: 'h3', size: 'large' }} />
-        </NewsletterWrapper>
+        <MarkdownRenderer>
+          <AboutContent />
+        </MarkdownRenderer>
+      </ContentRenderer>
+      <ContentRenderer>
+        <GetInTouchSection />
       </ContentRenderer>
     </MasterLayout>
   );

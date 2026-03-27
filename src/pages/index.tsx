@@ -4,9 +4,8 @@ import styled from 'styled-components';
 import { mt } from 'styled-components-spacing';
 import {
   LandingPageHero,
-  // ProjectList, //Project page is temporarily disabled.
+  ProjectList,
   MasterLayout,
-  NewsLetter,
   SEO,
   ContentRenderer,
   ButtonLink,
@@ -14,6 +13,7 @@ import {
   Paragraph,
   BlogPostCardList,
   HeadingProps,
+  GetInTouchSection,
 } from 'components';
 import { useBlogPostList, useProjectList } from 'hooks';
 import {
@@ -78,7 +78,7 @@ const IndexPage = () => {
           size="large"
         />
       </ContentRenderer>
-      {/* <ContentRenderer>
+      <ContentRenderer>
         <Heading level="h2" size="xlarge">
           Projects
         </Heading>
@@ -91,10 +91,10 @@ const IndexPage = () => {
           color="primary"
           size="large"
         />
-      </ContentRenderer> */}
+      </ContentRenderer>
 
       <ContentRenderer>
-        <NewsLetter />
+        <GetInTouchSection />
       </ContentRenderer>
     </MasterLayout>
   );

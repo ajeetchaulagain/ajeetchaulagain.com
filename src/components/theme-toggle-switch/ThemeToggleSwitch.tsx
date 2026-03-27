@@ -5,7 +5,7 @@ import {
   GlobalDispatchContextType,
   GlobalStateContext,
 } from 'contexts/GlobalContextProvider';
-import { Container, Input, Label, Ball } from './styles';
+import { Container, Input, Label, Ball, Tooltip } from './styles';
 
 export const ThemeToggleSwitch = () => {
   const themeToggler = useContext(
@@ -14,8 +14,11 @@ export const ThemeToggleSwitch = () => {
   const { theme } = useContext(GlobalStateContext);
   const checked = theme === 'darkTheme';
 
+  const tooltipText = checked ? 'Switch to light mode' : 'Switch to dark mode';
+
   return (
     <Container>
+      <Tooltip>{tooltipText}</Tooltip>
       <Input
         type="checkbox"
         id="theme-toggle-checkbox"

@@ -3,11 +3,7 @@ import { mb, px, py, ml } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
 
 export const Input = styled.input`
-  border: 2px solid
-    ${({ theme }) =>
-      theme.name === 'lightTheme'
-        ? theme.colors.primaryBorder
-        : theme.colors.oldSilver50};
+  border: 2px solid ${({ theme }) => theme.colors.primaryBorder};
   ${mb(5)};
   ${px(4)}
   ${py(4)}
@@ -45,11 +41,7 @@ export const TextArea = styled.textarea`
   font-size: ${({ theme }) => theme.fontSizes.xmedium};
   font-family: ${({ theme }) => theme.fonts.body};
   color: ${({ theme }) => theme.colors.primaryText};
-  border: 2px solid
-    ${({ theme }) =>
-      theme.name === 'lightTheme'
-        ? theme.colors.primaryBorder
-        : theme.colors.oldSilver50};
+  border: 2px solid ${({ theme }) => theme.colors.primaryBorder};
   background-color: ${({ theme }) =>
     theme.name === 'lightTheme'
       ? theme.colors.primaryBackground
