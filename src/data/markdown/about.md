@@ -24,6 +24,4 @@ Most of my recent commercial experience has been centred around a TypeScript-fir
 
 These are the tools I’ve spent the most time with in production, but I’m more interested in choosing the right approach for the problem than being tied to any specific technology.
 
-I’m interested in roles where I can continue to grow as an engineer and work with teams that value thoughtful engineering, quality, ownership, and continuous improvement. If that resonates, feel free to reach out at chaulagainajeet@gmail.com.
-
-I also use this site to share what I learn along the way — drawing from both side projects and my professional experience.
+I’m interested in roles where I can continue to grow as an engineer and work with teams that value thoughtful engineering, quality, ownership, and continuous improvement. If that resonates, feel free to reach out.

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { mb } from 'styled-components-spacing';
 import {
   MasterLayout,
-  NewsLetter,
+  GetInTouchSection,
   SEO,
   BlogPostCardList,
   ContentRenderer,
@@ -33,7 +33,7 @@ const BlogPage = () => {
         <BlogPostCardList blogs={blogs} />
       </ContentRenderer>
       <ContentRenderer>
-        <NewsLetter />
+        <GetInTouchSection />
       </ContentRenderer>
     </MasterLayout>
   );

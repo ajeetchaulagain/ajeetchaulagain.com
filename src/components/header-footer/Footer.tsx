@@ -4,10 +4,10 @@ import { FooterContainer } from './styles';
 import { GradientOverlay } from '../landing-page-hero/styles';
 import { navItems } from './navItems';
 import {
-  NavMenuWrapper,
   Nav,
   NavItem,
   FooterContentWrapper,
+  FooterRow,
   StyledParagraph,
   SocialMediaLinksWrapper,
 } from './styles';
@@ -25,11 +25,13 @@ export const Footer = () => {
     }
   `);
 
+  const { author } = data.site.siteMetadata;
+
   return (
     <FooterContainer>
       <GradientOverlay>
         <FooterContentWrapper>
-          <NavMenuWrapper>
+          <FooterRow>
             <Nav>
               {navItems.map(({ title, url }) => (
                 <NavItem key={url}>
@@ -39,12 +41,14 @@ export const Footer = () => {
                 </NavItem>
               ))}
             </Nav>
-          </NavMenuWrapper>
-          <SocialMediaLinksWrapper>
-            <SocialMediaIcons />
-          </SocialMediaLinksWrapper>
+
+            <SocialMediaLinksWrapper>
+              <SocialMediaIcons />
+            </SocialMediaLinksWrapper>
+          </FooterRow>
+
           <StyledParagraph>
-            © 2026 {data.site.siteMetadata.author}.
+            © 2020–{new Date().getFullYear()} {author}
           </StyledParagraph>
         </FooterContentWrapper>
       </GradientOverlay>

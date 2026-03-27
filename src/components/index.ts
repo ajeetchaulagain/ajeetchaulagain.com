@@ -7,6 +7,7 @@ export * from './markdown-renderer/MarkdownRenderer';
 export * from './project-list/ProjectList';
 export * from './newsletter/NewsLetter';
 export * from './video-player/VideoPlayer';
+export * from './get-in-touch-section/GetInTouchSection';
 export * from './seo/SEO';
 export * from './gatsby-image/StyledGatsbyImage';
 export * from './blog-post-card-list/BlogPostCardList';

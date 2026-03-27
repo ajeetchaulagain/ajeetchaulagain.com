@@ -1,8 +1,9 @@
 import styled, { DefaultTheme } from 'styled-components';
-import { ml, mb, px, py, pt, pb, mr, mt, p } from 'styled-components-spacing';
+import { ml, mb, px, py, pt, pb, mr, p } from 'styled-components-spacing';
 import breakpoint from 'styled-components-breakpoint';
 import { Paragraph } from '../paragraph/Paragraph';
 import { Link } from '../link/Link';
+import { SocialMediaList } from '../social-media-icons/styles';
 
 export const HeaderWrapper = styled.header`
   font-family: ${({ theme }) => theme.fonts.secondaryHeading};
@@ -73,7 +74,7 @@ export const LogoLink = styled(Link)`
   display: flex;
   align-items: center;
   &:hover {
-    color: ${({ theme }) => theme.colors.lightGreen};
+    color: ${({ theme }) => theme.colors.brandPrimary};
   }
 `;
 
@@ -99,14 +100,14 @@ export const NavItem = styled.li`
   `};
 
   & > a:hover {
-    color: ${({ theme }) => theme.colors.brightLavender};
+    color: ${({ theme }) => theme.colors.brandPrimary};
   }
 
   & > a {
     border-radius: 3px;
     &.activeNavItem {
       color: ${({ theme }: { theme: DefaultTheme }) =>
-        theme.colors.brightLavender};
+        theme.colors.brandPrimary};
       text-decoration: underline;
       text-underline-offset: 0.3rem;
     }
@@ -148,7 +149,7 @@ export const ThemeToggleSwitchWrapper = styled.div`
   `};
 `;
 
-// Footer and its component styles
+// Footer styles
 export const FooterContainer = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.medium};
   font-family: ${({ theme }) => theme.fonts.secondaryHeading};
@@ -159,8 +160,6 @@ export const FooterContainer = styled.div`
 export const FooterContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: 0 auto;
   ${pt(8)};
   ${pb(6)};
@@ -173,18 +172,38 @@ export const FooterContentWrapper = styled.div`
   ${breakpoint('xxl')`
     width: 70rem;
   `};
+`;
 
-  ${NavMenuWrapper} {
-    ${mr(0)}
+export const FooterRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  ${mb(3)};
+
+  ${Nav} {
+    gap: 2rem;
+    justify-content: flex-start;
+
+    ${NavItem} {
+      &:not(:first-child) {
+        margin-left: 0;
+      }
+    }
   }
+
+  ${breakpoint('xs', 'md')`
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  `}
 `;
 
 export const SocialMediaLinksWrapper = styled.div`
-  ${mb(4)};
-  ${mt(6)};
-  ${breakpoint('xs', 'lg')`
-      ${mt(5)};
-  `};
+  ${breakpoint('xs', 'md')`
+    ${SocialMediaList} {
+      justify-content: flex-start;
+    }
+  `}
 `;
 
 export const StyledParagraph = styled(Paragraph)`
@@ -194,7 +213,5 @@ export const StyledParagraph = styled(Paragraph)`
         ? theme.colors.secondaryText
         : theme.colors.primaryText};
     font-size: ${({ theme }) => theme.fontSizes.small};
-    ${mb(1)};
   }
-  text-align: center;
 `;

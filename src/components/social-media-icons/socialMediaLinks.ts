@@ -21,7 +21,7 @@ export const socialMediaLinks: Record<string, string | IconType>[] = [
   },
   {
     url: 'https://ko-fi.com/ajeetchaulagain',
-    ariaLabel: 'KoFi',
+    ariaLabel: 'Support me on KoFi',
     IconComponent: FaCoffee,
   },
 ];
