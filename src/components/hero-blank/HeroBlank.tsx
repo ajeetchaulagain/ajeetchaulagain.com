@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import { py } from 'styled-components-spacing';
 
-export const Container = styled.div`
+const Container = styled.div`
   width: 100%;
 `;
 
