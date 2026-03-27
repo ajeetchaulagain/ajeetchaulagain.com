@@ -37,9 +37,9 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
 
-  // Single template for all assertions
-  snapshotPathTemplate:
-    '{testDir}/__screenshots__/{projectName}/{testFilePath}/{arg}{ext}',
+  // Platform-aware snapshot paths: darwin/ for macOS, linux/ for CI
+  // This prevents cross-platform font rendering differences from breaking tests
+  snapshotPathTemplate: `{testDir}/__screenshots__/${process.platform}/{projectName}/{testFilePath}/{arg}{ext}`,
 
   expect: {
     toHaveScreenshot: {
