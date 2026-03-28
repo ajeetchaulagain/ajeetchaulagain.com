@@ -1,7 +1,7 @@
 ---
 title: 'How to Deploy Your NestJS Application to AWS Lambda Using CDK and GitHub Actions'
 description: 'This tutorial shows you how to build a beautiful and responsive image gallery using React Image Gallery'
-date: '2022-11-27'
+date: '2026-03-29'
 tags:
   [
     'nestjs',
@@ -23,12 +23,16 @@ Deploying a NestJS application to AWS Lambda behind API Gateway sounds straightf
 
 While working on a personal side project, I ran into these challenges firsthand — especially when making NestJS compatible with Lambda’s execution model. In this guide, you’ll learn how to deploy a NestJS application to AWS Lambda using AWS CDK, with deployments fully automated via GitHub Actions.
 
-The final source code containing the NestJS code, along with AWS CDK infrastructure can be found in this repo - [repo.url]
+The final source code containing the NestJS code, along with AWS CDK infrastructure can be found in this repo - [nestjs-serverless-aws-lambda-cdk
+Public
+](https://github.com/ajeetchaulagain/nestjs-serverless-aws-lambda-cdk)
 
 ## What you will learn
 
-- How to adapt NestJS for AWS Lambda
-- How to configure API Gateway and AWS lambda using AWS CDK
+- How to adapt a NestJS application to run in AWS Lambda using `@codegenie/serverless-express`
+- How to define AWS infrastructure (Lambda function, API Gateway) using AWS CDK
+- How to automate deployments with GitHub Actions
+- Best practices for optimizing NestJS performance in a serverless environment
 
 ## Prerequisite
 
@@ -39,7 +43,7 @@ To follow along, you’ll need:
 - An AWS account
 - Basic familiarity with Node.js and NestJS
 
-### Setup a new NestJS project
+## Setup a new NestJS project
 
 Start by creating a new NestJS application using the Nest CLI:
 
@@ -62,7 +66,7 @@ npm run start
 You should see the application running at http://localhost:3000/.
 The default port is configured in src/main.ts
 
-```ts:title=src/main.ts
+```ts:title=src/main.ts {6}{numberLines:true}
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
@@ -75,40 +79,17 @@ bootstrap();
 
 The scaffolded application already has a sample controller (app.controller.ts), service (app.service.ts) and module (app.module.ts). Since the focus of this tutorial is mostly about deployment of NestJS as a serverless, we will not be adding separate endpoint. Rather utilize the same sample endpoint.
 
-The scaffolded application includes a sample controller (`app.controller.ts`), service (`app.service.ts`), and module (`app.module.ts`).
-
-Since the focus of this guide is on deploying NestJS to AWS Lambda, we’ll reuse the existing sample endpoint instead of creating new ones for our testing purpose.
-
-## Adapting NestJS for Lambda [ORG]
-
-By default, NestJS application is designed to run in a a long-lived HTTP server, where the application bootstraps is done once, initializes the dependencies, and continues handling incoming requests.
-However, since AWS Lambda being a serverless compute service that does not require HTTP server and run in different execution model.
-Here are some of the key considreation for Lambda execution model:
-
-- You organize your code in Lambda function, which are invoked per request
-- execution environments are generally stateless and short-lived
-- Application may be re-bootstraped and initialized during cold starts.
-
-Due to this reason of NestJS fefault designg to operate and how lambda executes a code, we need to adapt NestJS to work within the Lambda’s event-driven execution model.
-
-that listens on a certain port, and it isbuild around the concept of long-running application server, where the application initiazation is done once and request handling is continued after that. But we know AWS lambda follows even-drivent model, where functions are invoked per request and execution environment can be short-lived.
-
 ## Adapting NestJS for AWS Lambda
 
 By default, a NestJS application runs on a long-lived HTTP server. It bootstraps once, initializes its dependencies, and continues handling incoming requests.
 
 AWS Lambda, on the other hand, follows an event-driven model. It does not rely on a persistent server and instead executes code per request, with stateless and short-lived environments that may be re-initialized during cold starts.
 
-Because of this difference, NestJS cannot run directly in Lambda without some adaptation.
+Because of this difference, NestJS cannot run directly in Lambda without some adaptation. To make this work, we bootstrap the NestJS application in a way that fits Lambda’s execution model. For this, we use `@codegenie/serverless-express`, which allows a NestJS application to run inside AWS Lambda.
 
-To make this work, we bootstrap the NestJS application in a way that fits Lambda’s execution model. For this, we use `@codegenie/serverless-express`, which allows a NestJS application to run inside AWS Lambda.
+Behind the scenes, it converts the Lambda event into an HTTP request that NestJS can handle, and then transforms the response back into a format Lambda expects.In simple terms, it makes Lambda behave like an HTTP server so that NestJS can run without major changes.
 
-Behind the scenes, it converts the Lambda event into an HTTP request that NestJS can handle, and then transforms the response back into a format Lambda expects.
-
-In simple terms, it makes Lambda behave like an HTTP server so that NestJS can run without major changes.
-
-Now, we understand the need of a additional configuration, lets setup a lambda hander using the pacakge.
-First, install the `@codegenie/serverless-express` package:
+Now, we understand the need of a additional configuration, lets setup a lambda hander using the pacakge. First, install the `@codegenie/serverless-express` package:
 
 ```bash
 npm install @codegenie/serverless-express
@@ -116,7 +97,7 @@ npm install @codegenie/serverless-express
 
 And then create a new file called lambda.ts inside src/ side by side to main.ts file that contains NestJS original bootstrapping logic.
 
-```ts:title=src/lambda.ts {20-38}{numberLines:false}
+```ts:title=src/lambda.ts {20-38}{numberLines:true}
 import { NestFactory } from '@nestjs/core';
 import { ExpressAdapter } from '@nestjs/platform-express';
 import serverlessExpress from '@codegenie/serverless-express';
@@ -168,7 +149,7 @@ export function handler(
 }
 ```
 
-Setting up infrastructure using AWS CDK
+## Setting up infrastructure using AWS CDK
 
 Now that we have the Lambda handler ready to serve our NestJS application, let’s set up the infrastructure using AWS CDK. AWS Cloud Development Kit (CDK) is an Infrastructure as Code (IaC) framework that allows you to define AWS resources using programming languages such as TypeScript, Python, Java, and more. Think of it like this: Instead of writing raw CloudFormation templates, you write code that is synthesized into CloudFormation, which is then used to deploy resources to AWS.
 
@@ -198,16 +179,29 @@ Before we define our infrastructure, it helps to understand a few core CDK conce
 
 In this guide, we’ll define a single stack that provisions our Lambda function, API Gateway and related resources.
 
-## Setting Up the CDK Project
+### Initialising CDK in the project
 
-I chose [AWS CDK](https://docs.aws.amazon.com/cdk/v2/guide/home.html) to define the infrastructure because it lets you write your cloud resources in TypeScript alongside the rest of the project. CDK synthesises your code into a CloudFormation template and handles the deployment.
+Now, you have understood the basics of AWS CDK, lets initialise it in our project. To keep the infrastructure code separate from the nest js source code, you will be going to initilaize the CDK Project into separate subdirectory `infra/`. You will run the following command from the project directory:
 
-To keep infrastructure code separate from application code, initialise the CDK project in an `infra/` subdirectory:
-
-```bash
-$ mkdir infra && cd infra
-$ cdk init app --language typescript
+```tsx
+mkdir infra && cd infra
+npx cdk init app --language typescript
 ```
+
+After running the command, you’ll notice a few new files generated my above initialization code:
+
+.
+├── bin/
+├── lib/
+├── cdk.json
+├── package.json
+└── tsconfig.json
+
+Where,
+
+- bin contains entry point of your CDK app
+- lib/ contains the the stack definition for your infrastructure
+- cdk.json contains configuration for CDK CLI
 
 Once the project is created, install the CDK construct libraries:
 
@@ -217,159 +211,123 @@ $ npm install aws-cdk-lib constructs
 
 You can refer to the [AWS CDK TypeScript documentation](https://docs.aws.amazon.com/cdk/v2/guide/work-with-cdk-typescript.html) for a detailed walkthrough of the project structure and how constructs, stacks, and apps relate to each other.
 
-## Defining the CDK Stack
+### Configuring AWS Credentials (Step by Step)
 
-Now you will define the actual infrastructure: a Lambda function, an HTTP API, and an output with your endpoint URL.
+Before running any AWS CDK commands, you need to configure AWS credentials on your local machine.
 
-Replace the generated stack file in `infra/lib/` with the following:
+This allows AWS to authenticate your requests and perform actions on your behalf — such as deploying CloudFormation stacks and uploading assets.
 
-infra/lib/app-stack.ts
+For example, when you run:
 
-```typescript
-import * as cdk from 'aws-cdk-lib';
+```
+npx cdk bootstrap
+```
+
+your IAM identity needs permissions to create foundational resources like:
+
+- CloudFormation stacks
+- S3 buckets (for storing assets)
+- IAM roles and policies
+
+<InfoCallToAction htmlString="<p>In production environments, it’s best to follow the principle of least privilege, granting only the permissions required for a specific task.</p> However, to keep this guide simple and focused, we’ll use an IAM user with the AdministratorAccess policy attached."/>
+
+Follow these steps to configure AWS credentials:
+
+1. Install AWS CLI
+   - Make sure AWS CLI is installed on your machine. Follow the official installation guide here - https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+
+2. Create a IAM User with Administrator Access and generate a access key:
+   1. Log in to your AWS console
+   2. Navigate to IAM -> Users -> Create User and create user and access key.
+   3. Create a user (e.g., `cdk-bootstrap-admin`)
+   - Attach the **AdministratorAccess** policy
+   - Generate an **access key**
+
+   [Video showing creating user and creating access key will be attached here]
+   Make sure to download the secret key to be used later— you won’t be able to view it again.
+
+3. Run aws configure to setup up credentials for the AWS CLI so it can authenticate your requests.
+
+   ```bash
+   aws configure
+   ```
+
+   You’ll be prompted to enter:
+
+   ```bash
+   AWS Access Key ID:
+   AWS Secret Access Key:
+   Default region name: us-east-1
+   Default output format: json
+   ```
+
+   Paste the access keys you generated in the previous step.
+
+4. Verify Credentials configuration
+   - To confirm aws credentials are configured correctly, run a following aws cli command, that will show the details of your AWS account and IAM user
+
+   ```bash
+   aws sts get-caller-identity
+   ```
+
+   ```bash:title='Output of aws sts get-caller-identity'
+   {
+   "UserId": "UserId",
+   "Account": "AccouontNumber",
+   "Arn": "arn:aws:iam::<AccountNumber>:user/cdk-bootstrap-admin"
+   }
+
+   ```
+
+### Bootstrapping the CDK project
+
+Now that your AWS credentials are configured locally, you’re ready to bootstrap your AWS environment for CDK.
+
+Bootstrapping prepares your AWS account so that AWS CDK can deploy resources on your behalf.
+
+Run the following command in your infra/ directory:
+
+```bash
+npx cdk bootstrap
+```
+
+This command basically creates a foundational one time Cloudfromation stack (called CDKToolkit) in your AWS which sets up required resources such as IAM roles, s3 bucket to upload cloudformation templateds. These resources are needed for future cdk deployments. Note: npx cdk bootstrap is one time process.
+
+### Writing CDK Stack
+
+Now after successful cdk bootstrap, lets write a CDK stack that defines the lambda function. If you navigate to infra/lib directory you will see the infra-stack.ts file created during initialization. Feel free to update your stack name as required, but for the purpose of this guide, I am going to leave stack name as InfraStack.
+
+In your infra-stack.ts file, add the following code:
+
+```ts:title=infra/lib/infra-stack.ts {10-29} {numberLines:true}
+import * as cdk from 'aws-cdk-lib/core';
 import { Construct } from 'constructs';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
-import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
-import * as apigatewayv2 from 'aws-cdk-lib/aws-apigatewayv2';
-import { HttpLambdaIntegration } from 'aws-cdk-lib/aws-apigatewayv2-integrations';
+import * as path from 'path';
 
-export class AppStack extends cdk.Stack {
+export class InfraStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    const nestFunction = new NodejsFunction(this, 'NestJsFunction', {
-      entry: '../src/lambda.ts',
-      handler: 'handler',
+    const nestApiLambda = new lambda.Function(this, 'NestApiLambdaFunction', {
       runtime: lambda.Runtime.NODEJS_20_X,
+      handler: 'dist/lambda.handler', // compiled output of src/lambda.ts
+      code: lambda.Code.fromAsset(path.join(__dirname, '../..'), {
+        exclude: [
+          'node_modules/aws-cdk',
+          'node_modules/aws-cdk-lib',
+          'node_modules/.bin',
+          'infra',
+          'test',
+          '.git',
+        ],
+      }),
       memorySize: 512,
-      timeout: cdk.Duration.seconds(30),
-      bundling: {
-        minify: true,
-        sourceMap: false,
-        externalModules: ['@aws-sdk/*'],
-      },
-      environment: {
-        NODE_ENV: 'production',
-      },
     });
 
-    const httpApi = new apigatewayv2.HttpApi(this, 'NestJsHttpApi', {
-      defaultIntegration: new HttpLambdaIntegration(
-        'NestJsIntegration',
-        nestFunction
-      ),
-    });
-
-    new cdk.CfnOutput(this, 'ApiEndpoint', {
-      value: httpApi.apiEndpoint,
-      description: 'HTTP API endpoint URL',
+    new cdk.CfnOutput(this, 'NestApiLambdaFunctionName', {
+      value: nestApiLambda.functionName,
     });
   }
 }
 ```
-
-`NodejsFunction` uses esbuild under the hood to bundle and transpile your TypeScript into a single Lambda-ready file — no separate build step required.
-
-A few things worth noting about the configuration:
-
-- **`memorySize: 512`** — Lambda allocates CPU proportional to memory. NestJS bootstrap is CPU-bound, so higher memory means faster cold starts. 512 MB is a good starting point.
-- **`timeout: 30`** — The Lambda default is 3 seconds, which is too short for a NestJS cold start. 30 seconds gives enough headroom.
-- **`externalModules: ['@aws-sdk/*']`** — The AWS SDK is already included in the Lambda Node.js 20 runtime. Marking it as external keeps your bundle lean and avoids version conflicts.
-
-> **Note:** The `entry` path in `NodejsFunction` is relative to the `infra/` directory. If your source is at `src/lambda.ts` in the repo root and CDK lives in `infra/`, the correct path is `'../src/lambda.ts'`.
-
-## Deploying the Stack for the First Time
-
-Before deploying, you need to bootstrap CDK in your AWS account once. This provisions an S3 bucket and IAM roles that CDK uses to manage deployments:
-
-```bash
-$ cd infra
-$ cdk bootstrap aws://<your-account-id>/<your-region>
-```
-
-Once bootstrapping is complete, deploy the stack:
-
-```bash
-$ cdk deploy
-```
-
-CDK will show a summary of the changes and prompt for confirmation. After deployment, you will see the API endpoint printed in the output:
-
-```
-✅  AppStack
-
-Outputs:
-AppStack.ApiEndpoint = https://abc123xyz.execute-api.us-east-1.amazonaws.com
-```
-
-Visit the endpoint and confirm your NestJS application responds before moving on.
-
-## Automating Deploys with GitHub Actions
-
-Now let's automate the deployment so every push to `main` triggers a deploy. Create the following workflow file in your repository:
-
-.github/workflows/deploy.yml
-
-```yaml
-name: Deploy
-
-on:
-push:
-branches: - main
-
-jobs:
-deploy:
-name: Deploy to AWS
-runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout source
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-      - name: Install app dependencies
-        run: npm ci
-
-      - name: Install CDK dependencies
-        run: npm ci
-        working-directory: infra
-
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
-
-      - name: Deploy CDK stack
-        run: npx cdk deploy --require-approval never
-        working-directory: infra
-```
-
-Once the file is in place, add your AWS credentials as repository secrets under **Settings → Secrets and variables → Actions**:
-
-- `AWS_ACCESS_KEY_ID`
-- `AWS_SECRET_ACCESS_KEY`
-
-Push to `main` and the Actions tab will show the workflow running. From this point, every merge to `main` deploys automatically.
-
-> For production workloads, I recommend switching to [OIDC-based AWS authentication](https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services) instead of long-lived access keys. It removes a stored secret from your repository and is worth the extra setup time.
-
-## Things I Ran Into
-
-A few issues that added time to this setup the first time around:
-
-**`.env` files are not available in Lambda.** Any environment variable your app reads at runtime needs to be passed through `NodejsFunction.environment` in your stack. For sensitive values like database URLs, I use [AWS SSM Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) and fetch them during `bootstrap()`.
-
-**Decorator metadata flags must be enabled.** NestJS requires `"emitDecoratorMetadata": true` and `"experimentalDecorators": true` in your root `tsconfig.json`. `NodejsFunction` reads your tsconfig automatically — if those flags are missing, dependency injection breaks silently at runtime.
-
-## Conclusion
-
-In this tutorial, you learned how to adapt a NestJS application for AWS Lambda using the cached handler pattern, define the infrastructure with CDK, and automate deployments through GitHub Actions. I hope this guide saves you the trial and error I went through and gives you a solid foundation to build on.
-
-For further reading, I suggest checking out [CDK Pipelines](https://docs.aws.amazon.com/cdk/v2/guide/cdk_pipeline.html) if you need multi-stage deployments with staging and production environments, and [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/chapter-layers.html) if you end up deploying multiple functions that share common dependencies.
