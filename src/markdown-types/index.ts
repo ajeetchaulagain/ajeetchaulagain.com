@@ -10,6 +10,7 @@ export type BlogPostType = {
     tags: string[];
     thumbnail: {
       src: {
+        publicURL: string;
         childImageSharp: {
           gatsbyImageData: IGatsbyImageData;
         };

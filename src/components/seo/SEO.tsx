@@ -10,11 +10,11 @@ type SEOProps = {
   children?: ReactNode;
 };
 
-export const SEO = ({ title, description, pathname, children }: SEOProps) => {
+export const SEO = ({ title, description, pathname, image: propImage, children }: SEOProps) => {
   const {
     title: defaultTitle,
     description: defaultDescription,
-    image,
+    image: defaultImage,
     siteUrl,
     twitterUsername,
   } = useSiteMetadata();
@@ -22,7 +22,7 @@ export const SEO = ({ title, description, pathname, children }: SEOProps) => {
   const seo = {
     title: title ? `${title} | ${defaultTitle}` : defaultTitle,
     description: description || defaultDescription,
-    image: `${siteUrl}${image}`,
+    image: propImage ?? `${siteUrl}${defaultImage}`,
     url: `${siteUrl}${pathname || ``}`,
     twitterUsername,
   };
@@ -53,6 +53,7 @@ export const SEO = ({ title, description, pathname, children }: SEOProps) => {
         content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
       />
 
+      <link rel="icon" type="image/svg+xml" href="/logo-fav.svg" />
       {children}
     </Helmet>
   );

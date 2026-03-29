@@ -29,6 +29,7 @@ import {
 } from './styles';
 import { DateAndTimeComponent, TagsWrapper } from '../styles';
 import useCopyCode from 'hooks/useCopyCode';
+import { useSiteMetadata } from 'hooks/useSiteMetaData';
 
 export const query = graphql`
   query BlogPageQuery($slug: String!) {
@@ -41,6 +42,7 @@ export const query = graphql`
         author
         thumbnail {
           src {
+            publicURL
             childImageSharp {
               gatsbyImageData(layout: CONSTRAINED)
             }
@@ -68,6 +70,7 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
   props
 ): JSX.Element => {
   useCopyCode();
+  const { siteUrl } = useSiteMetadata();
 
   const { next, prev } = props.pageContext;
 
@@ -78,10 +81,11 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
 
   const imageAltText = thumbnail.altText;
   const image = getImage(thumbnail.src);
+  const ogImageSrc = `${siteUrl}${thumbnail.src.publicURL}`;
 
   return (
     <MasterLayout>
-      <SEO title={title} description={description} />
+      <SEO title={title} description={description} image={ogImageSrc} />
       <HeroBlank />
       <ContentRenderer>
         <PostHeaderContainer>

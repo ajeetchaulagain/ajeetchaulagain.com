@@ -1,7 +1,7 @@
 ---
 title: 'A Practical Guide to Running Serverless NestJS on AWS Lambda with AWS CDK and GitHub Actions'
 description: 'A step-by-step guide to deploying a NestJS application to AWS Lambda behind API Gateway using AWS CDK, with deployments automated via GitHub Actions.'
-date: '2026-03-29'
+date: '2026-03-30'
 tags:
   [
     'nestjs',
@@ -19,22 +19,15 @@ thumbnail:
 author: 'Ajeet Chaulagain'
 ---
 
-Deploying a NestJS application to AWS Lambda behind API Gateway sounds straightforward — until you actually try to wire everything together.
+Deploying a NestJS application to AWS Lambda behind API Gateway sounds straightforward — until you start wiring things together.
 
-Between adapting NestJS to a serverless runtime, configuring API Gateway, and setting up infrastructure with AWS CDK, there are several moving parts that can quickly become painful.While working on a personal side project, I ran into these challenges firsthand — especially when making NestJS compatible with Lambda's execution model.
+Between adapting NestJS to a serverless runtime, configuring [API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html), and setting up infrastructure with [AWS CDK](https://docs.aws.amazon.com/cdk/v2/guide/home.html), there are several moving parts that can quickly become messy. While working on a personal side project, I ran into these challenges firsthand — particularly around adapting NestJS to Lambda’s execution model.
 
-In this guide, you'll learn how to deploy a NestJS application to AWS Lambda using AWS CDK, with deployments fully automated via GitHub Actions.
+In this guide, you’ll deploy a NestJS application to AWS Lambda, expose it via _API Gateway_, define the infrastructure using _AWS CDK_, and automate deployments with _GitHub Actions_.
+
+![Simple artchitecture diagram of NestJS deployment in AWS Lambda](../images/nestjs-aws-serverless/nestjs-serverless-lambda-simple-diagram.png)
 
 The complete source code for this project, including the NestJS application and AWS CDK infrastructure, is available on [Github](https://github.com/ajeetchaulagain/nestjs-serverless-aws-lambda-cdk)
-
-## What you will learn
-
-- How to adapt a NestJS application to run in AWS Lambda
-- How to define and manage infrastructure using AWS CDK
-- Packaging application code and dependencies for Lambda
-- How API Gateway routes requests to your application
-- Deploying and validating your stack locally
-- Automating deployments using GitHub Actions
 
 ## Prerequisites
 
@@ -45,9 +38,9 @@ To follow along, you'll need:
 - An AWS account
 - Basic familiarity with Node.js and NestJS
 - Basic familiarity with AWS services and tools (AWS CLI, IAM, Lambda, API Gateway, CloudFormation)
-- A GitHub account (for setting up GitHub Actions)
+- A GitHub account (for setting up Repository, and GitHub Actions)
 
-<InfoCallToAction htmlString="<p>You don't need deep AWS expertise to follow along, but having a rough idea of how IAM, Lambda, and API Gateway fit together will make things easier.</p>"/>
+<InfoCallToAction htmlString="<p>You don't need to be AWS expertise to follow along, but having a rough idea of how Lambda, and API Gateway fit together will make things easier.</p>"/>
 
 ## Set up a new NestJS project
 
@@ -96,7 +89,7 @@ By default, a NestJS application runs on a long-lived HTTP server. It bootstraps
 
 AWS Lambda, on the other hand, follows an _event-driven model_ where code is executed per request in short-lived, stateless environments (with occasional cold starts).
 
-Because of this difference, NestJS cannot run directly in Lambda without some adaptation.To bridge this gap, we use `@codegenie/serverless-express`, which allows a NestJS application to run inside AWS Lambda.
+Because of this difference, NestJS cannot run directly in Lambda without some adaptation.To bridge this gap, we use [@codegenie/serverless-express](https://www.npmjs.com/package/@codegenie/serverless-express), which allows a NestJS application to run inside AWS Lambda.
 
 Under the hood, it:
 
@@ -181,15 +174,15 @@ Now that we have the Lambda handler ready to serve our NestJS application, let's
 The high-level CDK flow looks something like this:
 
 ```bash:noCopy
-👨‍💻 Write CDK Code
-        ↓
-🧪 cdk synth
-        ↓
-📄 CloudFormation Template
-        ↓
-🚀 cdk deploy
-        ↓
-☁️ AWS Resources
+  👨‍💻 Write CDK Code
+          ↓
+  🧪 cdk synth
+          ↓
+  📄 CloudFormation Template
+          ↓
+  🚀 cdk deploy
+          ↓
+  ☁️ AWS Resources
 ```
 
 In practice, CDK makes infrastructure easier to reason about and maintain compared to raw templates.
@@ -256,9 +249,11 @@ Follow these steps to configure AWS credentials:
 
 #### 1. Install AWS CLI
 
-Make sure AWS CLI is installed on your machine. Follow the official installation guide [here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+Make sure AWS CLI is installed on your machine. Follow the [official installation guide](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
 #### 2. Create an IAM user with Administrator Access and generate an access key
+
+Create IAM user with AdministratorAccess policy and generate an access key for it.
 
 1. Log in to your AWS console
 2. Navigate to IAM → Users → Create User
@@ -625,9 +620,9 @@ You adapted NestJS to fit Lambda's execution model, defined your infrastructure 
 A few things this setup gets right out of the box:
 
 - Infrastructure is version-controlled alongside your application code
-- Deployments are automated and reproducible across environments
+- Deployments are automated and consistent, and can be extended to support multiple environments
 - NestJS runs in Lambda without changes to your routing or application logic — the gateway proxies everything through and NestJS handles it internally
 
-From here, you can layer in things like custom domains, environment-specific stacks, and IAM-based authentication on the API Gateway as your requirements grow.
+From here, you can layer in things like custom domains, environment-specific stacks, API Gateway authentication, or move to container-based Lambda deployments if your workloads grow.
 
 Thanks for following along — enjoy the serverless!

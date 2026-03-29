@@ -58,7 +58,15 @@ export const MarkdownRenderer = ({ children }: MarkdownRendererProps) => {
         ul: UnorderedList,
         ol: OrderedList,
         li: ListItem,
-        a: AnchorLink,
+        a: ({
+          href,
+          children,
+          ...props
+        }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
+          <AnchorLink to={href ?? ''} {...(props as object)}>
+            {children}
+          </AnchorLink>
+        ),
         p: StyledParagraph,
         span: Span,
         VideoPlayer,
