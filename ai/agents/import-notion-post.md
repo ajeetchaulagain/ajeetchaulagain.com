@@ -1,4 +1,4 @@
-# publish-notion-post
+# import-notion-post
 
 Converts a Notion page into a production-ready blog post for `ajeetchaulagain.com`.
 
