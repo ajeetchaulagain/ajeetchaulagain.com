@@ -3,8 +3,6 @@
 const lightBrand = {
   base: '#EFD2B0', // hero / header / footer background
   accent: '#908f19', // links, accents, nav hover/active on white
-  heroText: '#222831', // headings and CTAs rendered on the brand background
-  heroParagraph: '#222831', // body text rendered on the brand background
 };
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -13,8 +11,6 @@ const lightBrand = {
 const darkBrand = {
   base: '#1f1f1f', // hero / header / footer background
   accent: '#81A6C6', // links, hovers, borders, buttons
-  heroText: '#e7e7e7', // headings rendered on the brand background
-  heroParagraph: '#C8C8C8', // body text rendered on the brand background
 };
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -41,8 +37,6 @@ export const darkThemeColor = {
   // Brand & accents
   brandPrimary: darkBrand.accent,
   heroBackground: '#333333',
-  heroText: darkBrand.heroText,
-  heroParagraph: darkBrand.heroParagraph,
 
   // Borders
   primaryBorder: '#181818',
@@ -70,8 +64,6 @@ export const lightThemeColor = {
   // Brand & accents
   brandPrimary: lightBrand.accent,
   heroBackground: lightBrand.base,
-  heroText: lightBrand.heroText,
-  heroParagraph: lightBrand.heroParagraph,
 
   // Borders
   primaryBorder: '#e7e7e7',
@@ -88,18 +80,10 @@ export const lightThemeButtonColors = {
     background: lightBrand.accent,
     text: '#ffffff',
   },
-  secondary: {
-    background: lightBrand.heroText,
-    text: '#ffffff',
-  },
 };
 
 export const darkThemeButtonColors = {
   primary: {
-    background: darkBrand.accent,
-    text: '#333333',
-  },
-  secondary: {
     background: darkBrand.accent,
     text: '#333333',
   },

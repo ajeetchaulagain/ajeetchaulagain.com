@@ -33,7 +33,7 @@ export const HeroEyebrow = styled.span`
   display: block;
   font-family: 'Fira Code', monospace;
   font-size: ${({ theme }) => theme.fontSizes.xsmall};
-  color: ${({ theme }) => theme.colors.heroParagraph};
+  color: ${({ theme }) => theme.colors.primaryText};
   letter-spacing: 0.12em;
   text-transform: uppercase;
   opacity: 0.75;
@@ -44,7 +44,7 @@ export const HeroTitle = styled.h1`
   font-family: ${({ theme }) => theme.fonts.primaryHeading};
   font-size: 2.8rem;
   font-weight: ${({ theme }) => theme.fontWeights[7]};
-  color: ${({ theme }) => theme.colors.heroText};
+  color: ${({ theme }) => theme.colors.primaryText};
   line-height: ${({ theme }) => theme.lineHeights.extraCondensed};
   ${mb(4)};
 
@@ -56,7 +56,7 @@ export const HeroTitle = styled.h1`
 export const HeroDescription = styled.p`
   font-family: ${({ theme }) => theme.fonts.body};
   font-size: ${({ theme }) => theme.fontSizes.medium};
-  color: ${({ theme }) => theme.colors.heroParagraph};
+  color: ${({ theme }) => theme.colors.primaryText};
   line-height: ${({ theme }) => theme.lineHeights.condensed};
   max-width: 38rem;
   ${mb(6)};
@@ -71,7 +71,7 @@ export const HeroTagList = styled.div`
 export const HeroTag = styled.span`
   font-family: 'Fira Code', monospace;
   font-size: ${({ theme }) => theme.fontSizes.xsmall};
-  color: ${({ theme }) => theme.colors.heroText};
+  color: ${({ theme }) => theme.colors.primaryText};
   background: rgba(128, 128, 128, 0.15);
   border: 1px solid rgba(128, 128, 128, 0.25);
   border-radius: ${({ theme }) => theme.borderRadius.base};
@@ -169,7 +169,9 @@ export const SwatchCard = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   border-radius: 0.375rem;
   overflow: hidden;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
 
   &:hover {
     transform: translateY(-4px);

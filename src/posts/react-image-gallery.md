@@ -84,7 +84,11 @@ After a minor cleanup is done for the project, to install the react-image-galler
 npm i react-image-gallery
 ```
 
-<InfoCallToAction htmlString="<p>react-image-gallery requires a React version 16.0.0 or later as per the docs.</p>"/>
+<InfoCallToAction>
+
+react-image-gallery requires a React version 16.0.0 or later as per the docs.
+
+</InfoCallToAction>
 
 After installing the package, you need to import the stylesheet required for a package on top of _index.css_ file.
 
@@ -119,7 +123,11 @@ export const images = [
 ];
 ```
 
-<InfoCallToAction htmlString="<p><a href='picsum.photos'>picsum.photos</a> provides the placeholder image with the advanced usage. It supports various query params in the request URL to get the image you need.</p>"/>
+<InfoCallToAction>
+
+[picsum.photos](picsum.photos) provides the placeholder image with the advanced usage. It supports various query params in the request URL to get the image you need.
+
+</InfoCallToAction>
 
 Once data is prepared, you will import the ImageGallery component exported by the package and images you just prepared in App.js file and use it through items props. The _App.js_ file will end up with something like this:
 

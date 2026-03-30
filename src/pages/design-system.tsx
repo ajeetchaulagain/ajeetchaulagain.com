@@ -48,15 +48,11 @@ import { Heading } from '../components/heading/Heading';
 const lightBrandSwatches: SwatchData[] = [
   { token: 'base', hex: lightBrand.base, label: 'Hero / header / footer bg' },
   { token: 'accent', hex: lightBrand.accent, label: 'Links, accents, nav hover' },
-  { token: 'heroText', hex: lightBrand.heroText, label: 'Headings on brand bg' },
-  { token: 'heroParagraph', hex: lightBrand.heroParagraph, label: 'Body on brand bg' },
 ];
 
 const darkBrandSwatches: SwatchData[] = [
   { token: 'base', hex: darkBrand.base, label: 'Hero / header / footer bg' },
   { token: 'accent', hex: darkBrand.accent, label: 'Links, hovers, borders' },
-  { token: 'heroText', hex: darkBrand.heroText, label: 'Headings on brand bg' },
-  { token: 'heroParagraph', hex: darkBrand.heroParagraph, label: 'Body on brand bg' },
 ];
 
 const lightBackgrounds: SwatchData[] = [
@@ -69,8 +65,6 @@ const lightBackgrounds: SwatchData[] = [
 const lightText: SwatchData[] = [
   { token: 'primaryText', hex: lightThemeColor.primaryText, label: 'Body text' },
   { token: 'tocText', hex: lightThemeColor.tocText, label: 'Muted / secondary text' },
-  { token: 'heroText', hex: lightThemeColor.heroText, label: 'Heading on hero' },
-  { token: 'heroParagraph', hex: lightThemeColor.heroParagraph, label: 'Body on hero' },
 ];
 
 const lightBrandTokens: SwatchData[] = [
@@ -96,8 +90,6 @@ const darkBackgrounds: SwatchData[] = [
 const darkText: SwatchData[] = [
   { token: 'primaryText', hex: darkThemeColor.primaryText, label: 'Body text' },
   { token: 'tocText', hex: darkThemeColor.tocText, label: 'Muted / secondary text' },
-  { token: 'heroText', hex: darkThemeColor.heroText, label: 'Heading on hero' },
-  { token: 'heroParagraph', hex: darkThemeColor.heroParagraph, label: 'Body on hero' },
 ];
 
 const darkBrandTokens: SwatchData[] = [
@@ -371,7 +363,7 @@ const DesignSystemPage = () => {
         <SubSectionHeading id="button-link">ButtonLink</SubSectionHeading>
         <LeadParagraph>
           Props: <code>variant</code> (text · contained · outlined) ·{' '}
-          <code>color</code> (primary · secondary) ·{' '}
+          <code>color</code> (primary) ·{' '}
           <code>size</code> (small · medium · large)
         </LeadParagraph>
 
@@ -379,7 +371,6 @@ const DesignSystemPage = () => {
           <ComponentLabel>variant="contained"</ComponentLabel>
           <ComponentRow>
             <ButtonLink to="#" text="Primary" variant="contained" color="primary" size="large" />
-            <ButtonLink to="#" text="Secondary" variant="contained" color="secondary" size="large" />
             <ButtonLink to="#" text="Medium" variant="contained" color="primary" size="medium" />
             <ButtonLink to="#" text="Small" variant="contained" color="primary" size="small" />
           </ComponentRow>
@@ -387,7 +378,6 @@ const DesignSystemPage = () => {
           <ComponentLabel>variant="outlined"</ComponentLabel>
           <ComponentRow>
             <ButtonLink to="#" text="Primary" variant="outlined" color="primary" size="large" />
-            <ButtonLink to="#" text="Secondary" variant="outlined" color="secondary" size="large" />
             <ButtonLink to="#" text="Medium" variant="outlined" color="primary" size="medium" />
             <ButtonLink to="#" text="Small" variant="outlined" color="primary" size="small" />
           </ComponentRow>
@@ -395,7 +385,6 @@ const DesignSystemPage = () => {
           <ComponentLabel>variant="text"</ComponentLabel>
           <ComponentRow>
             <ButtonLink to="#" text="Primary →" variant="text" color="primary" size="large" />
-            <ButtonLink to="#" text="Secondary →" variant="text" color="secondary" size="large" />
             <ButtonLink to="#" text="Medium →" variant="text" color="primary" size="medium" />
             <ButtonLink to="#" text="Small →" variant="text" color="primary" size="small" />
           </ComponentRow>

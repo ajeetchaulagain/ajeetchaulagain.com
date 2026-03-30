@@ -1,25 +1,18 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Icon } from '../icon/Icon';
-import {
-  Container,
-  IconWrapper,
-  ContentWrapper,
-  StyledParagraph,
-} from './styles';
+import { Container, IconWrapper, ContentWrapper } from './styles';
 
-type InfoCallToAction = {
-  htmlString: string;
+type InfoCallToActionProps = {
+  children: ReactNode;
 };
 
-export const InfoCallToAction = ({ htmlString }: InfoCallToAction) => {
+export const InfoCallToAction = ({ children }: InfoCallToActionProps) => {
   return (
     <Container>
       <IconWrapper>
         <Icon iconName="InfoCircle" />
       </IconWrapper>
-      <ContentWrapper>
-        <StyledParagraph dangerouslySetInnerHTML={{ __html: htmlString }} />
-      </ContentWrapper>
+      <ContentWrapper>{children}</ContentWrapper>
     </Container>
   );
 };

@@ -52,10 +52,7 @@ export const Tooltip = styled.span`
   transition: opacity 0.15s ease;
 
   ${breakpoint('xs', 'lg')`
-    top: 50%;
-    left: auto;
-    right: calc(100% + 6px);
-    transform: translateY(-50%);
+    display: none;
   `}
 `;
 

@@ -19,7 +19,11 @@ I assume you have the knowledge of following topics to follow along with this tu
 - _Knowledge of Node.js and NPM (Node Package Manager)_
 - _Postman:_ We will be using it to test the API endpoints
 
-<InfoCallToAction htmlString="<p>Postman is a popular API end point testing application</p>"/>
+<InfoCallToAction>
+
+Postman is a popular API end point testing application
+
+</InfoCallToAction>
 
 ### What you will learn
 
@@ -107,7 +111,11 @@ npm install express
   npm install nodemon
 ```
 
-<InfoCallToAction htmlString="<p><a href='https://www.npmjs.com/package/nodemon'>nodemon</a> is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected..</p>"/>
+<InfoCallToAction>
+
+[nodemon](https://www.npmjs.com/package/nodemon) is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected..
+
+</InfoCallToAction>
 
 5. _Install project dev dependencies:_
 

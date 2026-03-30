@@ -2,7 +2,7 @@ import { ButtonLinkMarkdownType } from 'markdown-types';
 
 export type ButtonVariant = 'text' | 'contained' | 'outlined';
 export type ButtonSize = 'small' | 'medium' | 'large';
-export type ButtonColor = 'primary' | 'secondary';
+export type ButtonColor = 'primary';
 
 type MakeRequired<T, K extends keyof T> = Omit<T, K> & Required<Pick<T, K>>;
 

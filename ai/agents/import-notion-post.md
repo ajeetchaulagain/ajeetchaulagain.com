@@ -125,10 +125,16 @@ Remove `$ ` prefixes from shell commands.
 
 ### Callout / aside blocks
 
-Convert Notion `<aside>` blocks to `<InfoCallToAction>`. Use single quotes inside `htmlString`:
+Convert Notion `<aside>` blocks to `<InfoCallToAction>` using markdown children (blank lines inside the tags trigger MDX markdown parsing):
 
 ```md
-<InfoCallToAction htmlString="<p>Text here. <code>inline code</code> and <a href='url'>links</a>.</p>"/>
+<InfoCallToAction>
+
+Text here with **bold**, `inline code`, and [links](url).
+
+A second paragraph if needed.
+
+</InfoCallToAction>
 ```
 
 ---

@@ -24,6 +24,14 @@ export const BaseStyles = css`
     font-style: inherit;
   }
 
+  /* Inline code */
+  :not(pre) > code {
+    background-color: ${({ theme }) =>
+      theme.colors.quaternaryBackground} !important;
+    border-radius: 2px;
+    padding: 0em 0em !important;
+  }
+
   /* Clear sticky header + mobile TOC bar when jumping to anchored headings */
   h2[id],
   h3[id] {
