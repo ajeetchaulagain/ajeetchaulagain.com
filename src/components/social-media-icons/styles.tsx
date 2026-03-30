@@ -18,6 +18,10 @@ export const Tooltip = styled.span`
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.15s ease;
+
+  ${breakpoint('xs', 'lg')`
+    display: none;
+  `}
 `;
 
 export const ListItem = styled.li`
@@ -25,6 +29,17 @@ export const ListItem = styled.li`
 
   &:hover ${Tooltip} {
     opacity: 1;
+  }
+
+  &:first-child ${Tooltip} {
+    left: 0;
+    transform: none;
+  }
+
+  &:last-child ${Tooltip} {
+    left: auto;
+    right: 0;
+    transform: none;
   }
 `;
 

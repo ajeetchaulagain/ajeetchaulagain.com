@@ -5,10 +5,10 @@ date: '2026-03-30'
 tags:
   [
     'nestjs',
+    'serverless',
     'aws-lambda',
     'aws-apigateway',
     'aws-cdk',
-    'serverless',
     'github-actions',
   ]
 thumbnail:
@@ -376,7 +376,7 @@ In this setup, you're using a few core CDK constructs to define your infrastruct
 - `lambda.LayerVersion`
 - `apigwv2.HttpApi`
 
-In CDK, constructs are the basic building blocks used to model infrastructure. If you haven't come across constructs before, the official docs are worth a quick read: [https://docs.aws.amazon.com/cdk/v2/guide/constructs.html](https://docs.aws.amazon.com/cdk/v2/guide/constructs.html).
+In CDK, constructs are the basic building blocks used to model infrastructure. If you haven't come across constructs before, the official docs are worth a quick read: [AWS CDK Constructs](https://docs.aws.amazon.com/cdk/v2/guide/constructs.html).
 
 Now let's go through the different configuration parts in the code above.
 
@@ -531,7 +531,7 @@ So far, you've been deploying locally using `cdk deploy`. That works well for de
 
 A common approach is to trigger deployments automatically when changes are pushed to the main branch. In this section, we'll keep things simple and use GitHub Actions to automate deployments on every push to `main`. I won't walk through the workflow line by line — the goal here is to get a working setup in place.
 
-If you're new to GitHub Actions, the official docs are a good place to start: [https://docs.github.com/en/actions](https://docs.github.com/en/actions).
+If you're new to GitHub Actions, the official docs are a good place to start[https://docs.github.com/en/actions](https://docs.github.com/en/actions).
 
 Add the following file `.github/workflows/deploy.yml`:
 
@@ -598,8 +598,8 @@ If you see the workflow code, you see it uses GitHub **secrets** and **variables
 
 Make sure you add these in your repository settings. You can follow the official guides:
 
-- Creating repository secrets: [https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets)
-- Creating repository variables: [https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-variables](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-variables)
+- [GitHub docs — Using secrets in workflows](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets)
+- [GitHub docs — Using variables in workflows](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-variables)
 
 **Note:** GitHub masks secret values in logs, so outputs like your API URL (which includes the region) will also be masked and won't be directly clickable. Using `vars` for `AWS_REGION` keeps the output readable and ensures the endpoint URL is visible and usable, while sensitive values remain stored in secrets.
 
