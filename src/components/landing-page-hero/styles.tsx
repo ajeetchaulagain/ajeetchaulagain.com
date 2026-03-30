@@ -41,7 +41,7 @@ export const ContentWrapper = styled.div`
 
 export const StyledHeading = styled(Heading)`
   && {
-    color: ${({ theme }) => theme.colors.heroText};
+    color: ${({ theme }) => theme.colors.primaryText};
     ${breakpoint('lg')`
       font-size: 3.5rem;
     `};
@@ -51,7 +51,7 @@ export const StyledHeading = styled(Heading)`
 
 export const StyledParagraph = styled(Paragraph)`
   && {
-    color: ${({ theme }) => theme.colors.heroParagraph};
+    color: ${({ theme }) => theme.colors.primaryText};
   }
 `;
 

@@ -65,6 +65,21 @@ export const TocWrapper = styled.nav`
   border-radius: ${({ theme }) => theme.borderRadius.base};
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.colors.brandPrimary};
+    border-radius: 100vw;
+    opacity: 0.6;
+  }
+  scrollbar-width: thin;
+  scrollbar-color: ${({ theme }) => theme.colors.brandPrimary} transparent;
+
   @media (min-width: 1380px) {
     display: block;
   }

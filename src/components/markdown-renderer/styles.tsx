@@ -10,6 +10,7 @@ export const AnchorLink = styled(Link)`
   color: ${({ theme }) => theme.colors.brandPrimary};
   text-decoration: underline;
   font-weight: ${({ theme }) => theme.fontWeights[6]};
+  overflow-wrap: break-word;
   :hover {
     text-decoration: none;
   }

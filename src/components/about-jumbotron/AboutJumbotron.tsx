@@ -19,11 +19,14 @@ export const AboutJumbotron = (): JSX.Element => {
       </ImageWrapper>
       <TextContentWrapper>
         <StyledParagraph>
-          Hi, I am Ajeet, a pragmatic software engineer based in Melbourne,
-          Australia. I write an article about
-          <em> modern software development and my side projects</em>. If this
-          site has helped you somehow to learn, I would be grateful if you
-          consider supporting me.
+          Hey — I'm Ajeet, a Software Engineer with commercial experience
+          building and maintaining production systems. I write about
+          <em>
+            {' '}
+            modern software development, side projects, and things I find
+            interesting along the way
+          </em>
+          . If something here saved you time, a coffee is always welcome 😊
         </StyledParagraph>
         <ButtonLink
           to="https://ko-fi.com/ajeetchaulagain"
