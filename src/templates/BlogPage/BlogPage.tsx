@@ -85,7 +85,13 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
 
   return (
     <MasterLayout>
-      <SEO title={title} description={description} image={ogImageSrc} />
+      <SEO
+        title={title}
+        description={description}
+        image={ogImageSrc}
+        type="article"
+        pathname={props.location.pathname}
+      />
       <HeroBlank />
       <ContentRenderer>
         <PostHeaderContainer>

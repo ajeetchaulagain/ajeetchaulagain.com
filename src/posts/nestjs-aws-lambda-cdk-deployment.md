@@ -1,6 +1,6 @@
 ---
-title: 'A Practical Guide to Running Serverless NestJS on AWS Lambda with AWS CDK and GitHub Actions'
-description: 'A step-by-step guide to deploying a NestJS application to AWS Lambda behind API Gateway using AWS CDK, with deployments automated via GitHub Actions.'
+title: 'How to Deploy NestJS to AWS Lambda Using CDK and GitHub Actions'
+description: 'Learn how to deploy a production-ready NestJS app to AWS Lambda — adapt it for the serverless model, define infrastructure with CDK, and automate deploys via GitHub Actions. Full working code included.'
 date: '2026-03-30'
 tags:
   [
@@ -14,7 +14,7 @@ tags:
 thumbnail:
   {
     src: ../images/thumbnails/nestjs-aws-serverless.png,
-    altText: 'NestJS Lambda deployment',
+    altText: 'NestJS application deployed to AWS Lambda architecture diagram',
   }
 author: 'Ajeet Chaulagain'
 ---
@@ -23,17 +23,19 @@ Deploying a NestJS application to AWS Lambda behind API Gateway sounds straightf
 
 Between adapting NestJS to a serverless runtime, configuring [API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html), and setting up infrastructure with [AWS CDK](https://docs.aws.amazon.com/cdk/v2/guide/home.html), there are several moving parts that can quickly become messy. While working on a personal side project, I ran into these challenges firsthand — particularly around adapting NestJS to Lambda’s execution model.
 
-In this guide, you’ll deploy a NestJS application to AWS Lambda, expose it via _API Gateway_, define the infrastructure using _AWS CDK_, and automate deployments with _GitHub Actions_.
+By the end of this guide, you’ll have:
+
+- A NestJS app adapted for Lambda’s execution model using `@codegenie/serverless-express`
+- Infrastructure defined as code: a Lambda function, HTTP API Gateway, provisioned with AWS CDK
+- A GitHub Actions workflow that builds and deploys your stack automatically on every push to `main`
 
 ### ![Simple artchitecture diagram of NestJS deployment in AWS Lambda](../images/nestjs-aws-serverless/nestjs-serverless-lambda-simple-diagram.png)
 
-The complete source code for this project, including the NestJS application and AWS CDK infrastructure, is available on [Github](https://github.com/ajeetchaulagain/nestjs-serverless-aws-lambda-cdk)
+The complete source code is available on [GitHub](https://github.com/ajeetchaulagain/nestjs-serverless-aws-lambda-cdk).
 
 ## Prerequisites
 
-This guide walks through deploying a sample NestJS application to AWS Lambda using CDK and GitHub Actions.
-
-To follow along, you'll need:
+To follow along, you’ll need:
 
 - An AWS account
 - Basic familiarity with Node.js and NestJS
