@@ -94,7 +94,7 @@ const BlogTemplate: React.FC<PageProps<DataProps, PageContextProps>> = (
       />
       <HeroBlank />
       <ContentRenderer>
-        <PostHeaderContainer>
+        <PostHeaderContainer id="introduction">
           <PostHeaderLeftColumn>
             <Heading size="xlarge">{title}</Heading>
 

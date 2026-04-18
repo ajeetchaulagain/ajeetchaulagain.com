@@ -29,7 +29,7 @@ By the end of this guide, you’ll have:
 - Infrastructure defined as code: a Lambda function, HTTP API Gateway, provisioned with AWS CDK
 - A GitHub Actions workflow that builds and deploys your stack automatically on every push to `main`
 
-### ![Simple artchitecture diagram of NestJS deployment in AWS Lambda](../images/nestjs-aws-serverless/nestjs-serverless-lambda-simple-diagram.png)
+![Simple artchitecture diagram of NestJS deployment in AWS Lambda](../images/nestjs-aws-serverless/nestjs-serverless-lambda-simple-diagram.png)
 
 The complete source code is available on [GitHub](https://github.com/ajeetchaulagain/nestjs-serverless-aws-lambda-cdk).
 

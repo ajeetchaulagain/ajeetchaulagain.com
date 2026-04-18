@@ -1,7 +1,7 @@
 import { Paragraph } from 'components/paragraph/Paragraph';
 import styled, { DefaultTheme } from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
-import { mb, mt, ml, pb } from 'styled-components-spacing';
+import { mb, mt, ml, pb, my } from 'styled-components-spacing';
 import { Heading } from '../heading/Heading';
 import { Link } from '../link/Link';
 
@@ -51,8 +51,8 @@ export const OrderedList = styled.ol`
 
 // Fixes for gatsby span wrapper
 export const Span = styled.span`
-  &.gatsby-resp-image-wrapper {
-    margin: 0 !important;
+  & > .gatsby-resp-image-wrapper {
+    ${my(5)};
   }
 `;
 
