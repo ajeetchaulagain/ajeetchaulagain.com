@@ -26,7 +26,11 @@ const TocItems = ({
           onClick={(e) => {
             e.preventDefault();
             onClickItem?.();
-            document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+            if (id === 'introduction') {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+              document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+            }
           }}
         >
           {text}

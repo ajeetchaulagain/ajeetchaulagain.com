@@ -9,15 +9,20 @@ const useTableOfContents = () => {
 
   useEffect(() => {
     const els = Array.from(
-      document.querySelectorAll<HTMLElement>('h2[id], h3[id]')
+      document.querySelectorAll<HTMLElement>('[id="introduction"], h2[id], h3[id]')
     );
 
     setHeadings(
-      els.map((el) => ({
-        id: el.id,
-        text: el.textContent ?? '',
-        level: el.tagName === 'H2' ? 2 : 3,
-      }))
+      els.map((el) => {
+        if (el.id === 'introduction') {
+          return { id: 'introduction', text: 'Introduction', level: 2 as const };
+        }
+        return {
+          id: el.id,
+          text: el.textContent ?? '',
+          level: el.tagName === 'H2' ? 2 : (3 as const),
+        };
+      })
     );
 
     const INITIAL_TOP = 320; // 20rem
@@ -31,7 +36,7 @@ const useTableOfContents = () => {
       // headings, making the captured `els` reference stale detached nodes
       // whose getBoundingClientRect() returns all zeros.
       const liveEls = Array.from(
-        document.querySelectorAll<HTMLElement>('h2[id], h3[id]')
+        document.querySelectorAll<HTMLElement>('[id="introduction"], h2[id], h3[id]')
       );
       let currentId = liveEls[0]?.id ?? '';
       for (const el of liveEls) {
