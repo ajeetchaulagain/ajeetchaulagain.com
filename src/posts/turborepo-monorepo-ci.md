@@ -1,7 +1,7 @@
 ---
 title: 'Inside a 3-app Turborepo monorepo: parallelism, caching, and CI that stays fast'
 description: 'How I structured the ShipWindow monorepo with Turborepo — folder layout, why a monorepo, why Turborepo, and the small config detail that makes CI fast.'
-date: '2026-05-12'
+date: '2026-05-11'
 tags: ['monorepo', 'turborepo', 'devops', 'typescript', 'github-actions']
 thumbnail:
   {
@@ -11,15 +11,17 @@ thumbnail:
 author: 'Ajeet Chaulagain'
 ---
 
-I've been building [ShipWindow](https://shipwindow.dev/) for a few months now — deliberately slowly, with a production mindset from day one. No users yet, but real architecture, real CI, infrastructure-as-code. I've been taking my time with this project, partly because I want to learn from the parts I'd usually rush through.
+I've been building [ShipWindow](https://shipwindow.dev/) for a few months now — _deliberately slowly, with a production mindset from day one._ No users yet, but real architecture, real CI, infrastructure-as-code.
 
-"Ship fast, refactor later" might be the usual call for a side project like this. But I wanted to try balancing it with a production mindset as I went — still shipping, but thinking a bit further ahead while I did.
+"Ship fast, refactor later" might be the usual call for a side project like this. But I wanted to try balancing it with a production mindset as I went — _still shipping, but thinking a bit further ahead while I did._
 
 The result has been a mix. Some of the production-minded choices have paid off — the CI work I'm about to walk through is one of them. This post is mostly about the part that paid off.
 
-CI is where that mindset showed up early. When the project was in its early phase, I had a minimal workflow validating each PR — lint, type-check, and tests running one after another, sequentially. It was fine for the time. But as the project grew, so did the workflow. As of writing this, the same CI runs across 3 apps and 4 packages in around 2 minutes 30 seconds on most pushes — and it's set up to scale with the project rather than slow down as more code lands.
+CI is where that mindset showed up early. When the project was in its early phase, I had a minimal workflow validating each PR — _lint, type-check, and tests_ running one after another, sequentially. It was fine for the time. But as the project grew, so did the workflow. As of writing this, the same CI runs across _3 apps and 4 packages in around 2 minutes 30 seconds on most pushes_ — and it's set up to scale with the project rather than slow down as more code lands.
 
-Three apps, a few shared packages, every push rebuilding everything. You'd expect CI to be slow on a setup like this — that was certainly my starting point. It turned out it doesn't have to be, and the confidence that gives me when merging changes across stacks is honestly the bigger win. I'll walk through how it works, and the decisions that got it there.
+Three apps, a few shared packages, every push rebuilding everything. You'd expect CI to be slow on a setup like this — that was certainly my starting point. It turned out it doesn't have to be, and _the confidence that gives me when merging changes across stacks is honestly the bigger win._ I'll walk through how it works, and the decisions that got it there.
+
+![Simple illustration showing CI Workflow of ShipWindow](../images/turborepo-monorepo-ci/ci-parallel-jobs-illustration.png)
 
 ## The shape of the repo
 
@@ -51,15 +53,15 @@ When I started thinking about ShipWindow's setup, my first instinct was actually
 
 But eventually I was willing to invest that time upfront, knowing it would pay off as the project grew. A few things pushed me in that direction.
 
-**Past experience.** I'd worked in a monorepo on a previous project and it had served me well. I also remembered the alternative — publish a package, bump the version, install, redeploy, every time anything shared changed. Not something I wanted to live through again on a side project where I wanted to move fast without the overhead of versioning and publishing.
+_Past experience._ I'd worked in a monorepo on a previous project and it had served me well. I also remembered the alternative — publish a package, bump the version, install, redeploy, every time anything shared changed. Not something I wanted to live through again on a side project where I wanted to move fast without the overhead of versioning and publishing.
 
-**Atomic refactors.** Shipping solo, I wanted to move quickly without juggling contracts across repos. When I add a new field to a type in `packages/shared-types`, both `apps/web` and `apps/api` get the change in the same PR. No version bump, no broken contracts in production. One PR, done.
+_Atomic refactors._ Shipping solo, I wanted to move quickly without juggling contracts across repos. When I add a new field to a type in `packages/shared-types`, both `apps/web` and `apps/api` get the change in the same PR. No version bump, no broken contracts in production. One PR, done.
 
-**One review, one diff.** Every change shows up against the full picture. If a frontend change needs an API endpoint, both land in the same PR — the contract is visible in one diff, not split across two repos with two CI runs.
+_One review, one diff._ Every change shows up against the full picture. If a frontend change needs an API endpoint, both land in the same PR — the contract is visible in one diff, not split across two repos with two CI runs.
 
-**Shared design tokens stay in sync.** `packages/ui` exports brand colors, components, and CSS tokens. The day I rebrand and edit `brand.css`, every app updates on the next build. No copy-paste, no drift.
+_Shared design tokens stay in sync._ `packages/ui` exports brand colors, components, and CSS tokens. The day I rebrand and edit `brand.css`, every app updates on the next build. No copy-paste, no drift.
 
-Working in a monorepo, **the honest cost is discipline**. Without it, everything starts depending on everything, and you stop knowing what's safe to change. I've worked on a monorepo project before, and it's a pattern I've seen play out — especially if you haven't worked in one before and are still getting your head around it. The discipline lives in being deliberate about what belongs in a shared package versus what stays in an app, and honest about what each package is actually responsible for.
+Working in a monorepo, _the honest cost is discipline_. Without it, everything starts depending on everything, and you stop knowing what's safe to change. I've worked on a monorepo project before, and it's a pattern I've seen play out — especially if you haven't worked in one before and are still getting your head around it. The discipline lives in being deliberate about what belongs in a shared package versus what stays in an app, and honest about what each package is actually responsible for.
 
 ## Why Turborepo
 
@@ -67,7 +69,7 @@ Once I'd decided on a monorepo, the next question was how to actually run things
 
 But workspaces alone doesn't handle task orchestration — what to build first, what to cache, what to skip. For that, build tools like Lerna, Nx, or Turborepo are generally used. They sit on top of workspaces, not in place of them — you use both.
 
-[Turborepo](https://turborepo.dev/) describes itself as _"the build system for JavaScript and TypeScript codebases"_ — and it's maintained by Vercel, which matters here because their free remote cache is one of the reasons I picked it. It's written in Rust, configured through a single `turbo.json` file, and built around the task graph and caching model that most monorepo tools have converged on.
+[Turborepo](https://turborepo.dev/) describes itself as _"the build system for JavaScript and TypeScript codebases"_ — and it's maintained by Vercel, which matters here because _their free remote cache_ is one of the reasons I picked it. It's written in Rust, configured through a single `turbo.json` file, and built around the task graph and caching model that most monorepo tools have converged on.
 
 On a previous project, I worked in a monorepo that used Lerna. I didn't pick it — the project had been set up before I joined — but I lived with it long enough to get a feel for it. Lerna was widely used for JS monorepos at the time.
 
@@ -81,9 +83,9 @@ Turborepo's [Crafting your repository](https://turborepo.dev/docs/crafting-your-
 
 ## The apps and packages
 
-- **`apps/web`** — authenticated dashboard, Next.js 16 App Router
+- **`apps/web`** — authenticated dashboard, [Next.js 16](https://nextjs.org/) App Router
 - **`apps/site`** — landing page, statically rendered except for one server action
-- **`apps/api`** — NestJS backend, ingests GitHub webhooks, hosts auth endpoints
+- **`apps/api`** — [NestJS](https://nestjs.com/) backend, ingests GitHub webhooks, hosts auth endpoints
 
 Each app runs on a different port in dev, deploys to a different platform, and has its own scaling profile.
 
@@ -95,7 +97,7 @@ None of the packages have a publish step. They're consumed through the workspace
 
 ## How Turborepo orchestrates everything
 
-Turborepo's job is to figure out **what work needs doing, in what order, and what can be skipped**. It does all of that based on a single config file at the root of your repo: `turbo.json`.
+Turborepo's job is to figure out _what work needs doing, in what order, and what can be skipped_. It does all of that based on a single config file at the root of your repo: `turbo.json`.
 
 `turbo.json` is where you describe the task graph — what tasks exist, what they depend on, what their inputs and outputs are. Here's a trimmed version of mine:
 
@@ -122,13 +124,13 @@ Turborepo's job is to figure out **what work needs doing, in what order, and wha
 
 A few things in here are doing most of the work:
 
-**`dependsOn: ["^build"]`** — the caret means "build all upstream packages first." So when I run `turbo run build` in `apps/web`, Turbo first builds `packages/ui` and `packages/shared-types`, then `apps/web` itself. I never order tasks manually. Turbo walks the workspace graph for me.
+_`dependsOn: ["^build"]`_ — the caret means "build all upstream packages first." So when I run `turbo run build` in `apps/web`, Turbo first builds `packages/ui` and `packages/shared-types`, then `apps/web` itself. I never order tasks manually. Turbo walks the workspace graph for me.
 
-**The `env` array** — this is the easy one to get wrong. Any environment variable a task reads but doesn't declare here gets silently ignored when Turbo computes the cache key.
+_The `env` array_ — this is the easy one to get wrong. Any environment variable a task reads but doesn't declare here gets silently ignored when Turbo computes the cache key.
 
 This env array was something that troubled me initially. The cache had quietly lied to me more than once before I understood what was happening — CI coming back green when it shouldn't have, stale results being served without anything flagging it.
 
-**The fix:** list every env var your task actually reads to make a cache reliable and predictable.
+_The fix:_ list every env var your task actually reads to make a cache reliable and predictable.
 
 ## Running apps locally
 
@@ -139,7 +141,7 @@ yarn dev                # all apps in parallel
 yarn dev --filter=web   # just one
 ```
 
-The hot reload across packages is what makes the monorepo feel worth it day to day. Change a button in `packages/ui`, and the apps using it update immediately — no build step, no `npm link`, no publish. **It just works.**
+The hot reload across packages is what makes the monorepo feel worth it day to day. Change a button in `packages/ui`, and the apps using it update immediately — no build step, no `npm link`, no publish. _It just works._
 
 Under the hood, Yarn workspaces points each app at the package's actual folder on disk rather than a copy. So edits in `packages/ui` count the same as edits inside the app — the dev server picks them up like any other file change.
 
@@ -149,7 +151,7 @@ If you've worked in a multi-repo setup before, this is the part that quietly jus
 
 Three apps, four packages, lint and type-check and tests on every push. Initially, my CI ran these sequentially — that's just how I'd set it up. While I was just starting out and in the early phase of adding features, it didn't matter much. The project was small, and sequential was simpler to reason about.
 
-The shift to parallel jobs wasn't really about speed. Sequential CI was still fast enough at three apps and a handful of tests. The real reason was headroom for later: as features and tests grow, sequential adds up. Splitting tasks into parallel jobs also keeps the workflow predictable, and lets Turborepo handle the actual task ordering inside each one. That's cleaner than chaining steps in YAML and hoping the order holds.
+The shift to parallel jobs wasn't _really about speed._ Sequential CI was still fast enough at three apps and a handful of tests. The real reason was headroom for later: as features and tests grow, sequential adds up. Splitting tasks into parallel jobs also keeps the workflow predictable, and lets Turborepo handle the actual task ordering inside each one. That's cleaner than chaining steps in YAML and hoping the order holds.
 
 In practice, that means lint, type-check, tests, and cdk synth are each their own [GitHub Actions](https://docs.github.com/en/actions) job, depending on a shared install step. Once install finishes, all four run in parallel.
 
