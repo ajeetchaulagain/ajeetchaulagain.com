@@ -1,11 +1,11 @@
 ---
 title: 'Inside a 3-app Turborepo monorepo: parallelism, caching, and CI that stays fast'
 description: 'How I structured the ShipWindow monorepo with Turborepo — folder layout, why a monorepo, why Turborepo, and the small config detail that makes CI fast.'
-date: '2026-04-28'
-tags: ['monorepo', 'turborepo', 'devops', 'typescript', 'nextjs']
+date: '2026-05-11'
+tags: ['monorepo', 'turborepo', 'devops', 'typescript', 'github-actions']
 thumbnail:
   {
-    src: ../images/thumbnails/image-gallery-icon.png,
+    src: ../images/thumbnails/turbo-repo.png,
     altText: 'Turborepo monorepo CI architecture',
   }
 author: 'Ajeet Chaulagain'
