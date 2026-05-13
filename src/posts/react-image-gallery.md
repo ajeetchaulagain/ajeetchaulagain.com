@@ -22,7 +22,7 @@ _Screenshot of final application:_
 Here is the final source code and demo of the app:
 
 - [View Source code on Github](https://github.com/ajeetchaulagain/react-image-gallery-demo)
-- [View project demo](https://react-image-gallery-demo.ajeetchaulagain.com/)
+- [View project demo](https://react-image-gallery-demo.netlify.app/)
 
 ## Installation and Initial Setup
 
@@ -256,6 +256,6 @@ This is how it looks with above props in place:
 This tutorial gives you a basic idea of leveraging third-party modules like react-image-gallery to build an image gallery with minimal effort. I hope you enjoyed this article about using the react-image-gallery package through this step-by-step guide.
 
 - [View Source code on Github](https://github.com/ajeetchaulagain/react-image-gallery-demo)
-- [View Project Demo](https://react-image-gallery-demo.ajeetchaulagain.com/)
+- [View Project Demo](https://react-image-gallery-demo.netlify.app/)
 - [React Image Gallery npm package](https://www.npmjs.com/package/react-image-gallery)
 - Icons made by [Freepik](https://www.freepik.com) from [www.flaticon.com](https://www.flaticon.com/)
