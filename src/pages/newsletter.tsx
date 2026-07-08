@@ -5,7 +5,7 @@ import {
   NewsLetter,
   SEO,
   HeroBlank,
-  Link,
+  ButtonLink
 } from 'components';
 
 const NewsLetterPage = () => {
@@ -19,7 +19,13 @@ const NewsLetterPage = () => {
         </div>
         <br />
         <p>
-          <Link to="/">Go back to Home</Link>
+          <ButtonLink
+            to="/"
+            text="← Back to home"
+            variant="text"
+            color="primary"
+            size="large"
+          />
         </p>
       </ContentRenderer>
     </MasterLayout>
