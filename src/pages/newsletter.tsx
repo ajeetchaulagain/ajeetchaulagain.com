@@ -20,8 +20,8 @@ const NewsLetterPage = () => {
         <br />
         <p>
           <ButtonLink
-            to="/blog"
-            text="Back to home"
+            to="/"
+            text="← Back to home"
             variant="text"
             color="primary"
             size="large"
